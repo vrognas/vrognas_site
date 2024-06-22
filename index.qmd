@@ -1,0 +1,15 @@
+---
+title: "Viktor Rognås 🌱"
+subtitle: "Pharmacometrician, Teacher, Student, Engineer"
+about:
+    id: about-vrognas
+    template: jolla
+    image: "images/vrognas.png"
+    image-shape: round
+---
+
+[Email me: viktor@vrognas.com](mailto:viktor@vrognas.com)
+
+I am an aspiring scientist, pharmacometrician, and educator.
+I’m currently working on my PhD project: providing a strategy to a reduce the number of subjects needed to support clinical efficacy of an antibiotic against resistant bacteria.
+My goal with this blog is to document my life journey in general, and my PhD journey in particular.

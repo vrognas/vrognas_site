@@ -1,0 +1,93 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Viktor Rognås"
+  favicon: "favicon.png"
+  site-url: https://vrognas.com
+  repo-url: https://github.com/vrognas/vrognas_website
+  image: "images/vrognas.png"
+  reader-mode: true
+  page-navigation: true
+  navbar:
+    pinned: false
+    collapse: true
+    collapse-below: "lg"
+    toggle-position: "left"
+    left:
+      - text: "About"
+        href: index.qmd
+      - text: "CV/Resume"
+        href: cv.qmd
+      - text: "Resources"
+        menu:
+          - text: "Tutorials" # learning
+            href: tutorials.qmd
+          - text: "How-To" # goals
+            href: how-tos.qmd
+          - text: "Explanations" # understanding
+            href: explanations.qmd
+          - text: "References" # information
+            href: references.qmd
+          - text: "test"
+            href: test.qmd
+    tools:
+      - icon: github
+        href: https://github.com/vrognas
+      - icon: linkedin
+        href: https://www.linkedin.com/in/vrognas/
+      - icon: mortarboard
+        href: https://scholar.google.com/citations?user=RBJi1XQAAAAJ
+  sidebar:
+    - title: "About"
+      style: "floating"
+    - title: "CV/Resume"
+      style: "floating"
+    - title: "Tutorials"
+      style: "floating"
+      contents:
+        - text: "Tutorials"
+          href: tutorials.qmd
+    - title: "How-To"
+      style: "floating"
+      contents:
+        - text: "How-To"
+          href: how-tos.qmd
+    - title: "Explanations"
+      style: "floating"
+      contents:
+        - text: "Explanations"
+          href: explanations.qmd
+    - title: "References"
+      style: "floating"
+      contents:
+        - text: "References"
+          href: references.qmd
+    - title: "test"
+      style: "floating"
+      contents:
+        - text: "test"
+          href: test.qmd
+  page-footer:
+    left: "© 2024 Viktor Rognås"
+    center:
+      - text: "About"
+        href: index.qmd
+    right:
+      - icon: github
+        href: https://github.com/vrognas
+      - icon: linkedin
+        href: https://www.linkedin.com/in/vrognas/
+      - icon: mortarboard
+        href: https://scholar.google.com/citations?user=RBJi1XQAAAAJ
+format:
+  html:
+    theme:
+      light: [cosmo, theme-light.scss]
+      dark: [cosmo, theme-dark.scss]
+    css: styles.scss
+    toc: true
+
+
+

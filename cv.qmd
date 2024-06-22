@@ -1,0 +1,74 @@
+---
+title: "CV/Resume"
+---
+
+I am a Pharmacokinetic Assessor at the Swedish Medical Products Agency (Läkemedelsverket).
+
+Alongside my current employment, I am also a PhD student in [Pharmacometrics at Uppsala University](https://farmaci.uu.se/research/pharmacometrics/).   
+
+[My PhD project](https://uac.uu.se/uac-research/colistin-pkpd/) is using statistical models to help overcome [antibiotic resistance](https://www.reactgroup.org/antibiotic-resistance/), and is a part of [Uppsala Antibiotic Center](https://uac.uu.se).  
+
+### Degrees  
+* [**Master of Science in Engineering**](http://www.uu.se/en/admissions/master/selma/studieplan/?planId=405&pKod=TKT2Y&lasar=), _Uppsala University_ (2017)
+  * Master Thesis: [_Customer Based Business Development: Strategic Challenges for a Small Research-Based Spin-Off Enterprise_](http://www.diva-portal.org/smash/get/diva2:1137512/FULLTEXT01.pdf)
+  * Specialization: _Chemical Engineering, Pharmaceutical Science_
+
+* **Bachelor of Science in Technology**, _Uppsala University_ (2014)
+  * Bachelor Thesis: _Market Analysis of Polymorphism- and Salt-screening services_
+  * Major: _Technology_
+  * Minor: _Mathematics_
+
+### Diploma  
+* [**School of Entrepreneurship**](https://cie.uu.se/industrial-engineering-and-management/education/entrepreneurship/), _Uppsala University_ (2017)
+
+### Courses
+
+#### Pharmacometrics 
+
+* Forest plots in practical use: Implementation and interpretation, _Pharmetheus AB_ (2022)
+* Pharmacometric modeling of composite scores outcomes, _Uppsala University_ (2021)
+* Advanced population model building and usage in NONMEM, _Uppsala University_ (2021)
+* Clinical Trials Epidemiology, _Uppsala University_ (2020)
+* Essential Clinical Epidemiology, _Uppsala University_ (2019)
+* Pharmacometric Statistics, _TACA Training_ (2019)
+* Uppsala Pharmacometrics Summer School, _Uppsala University_ (2019)
+* Advanced Methods in NONMEM 7.5, _ICON plc_ (2022)
+* Advanced Methods in NONMEM 7.4, _ICON plc_ (2019)
+* Time-to-event data modelling using Monolix, _University of Cape Town_ (2018)
+* Optimal Designs and Randomization Techniques for Clinical Trials, _Uppsala University_ (2018)
+* The Sheiner-Rowland Advanced Course in Pharmacokinetics and Pharmacodynamics, _Advanced PKPD Sils-Maria_, (2018)
+
+#### Antimicrobial Resistance 
+
+* The Economics of Antibiotics, _Uppsala University_ (2019)
+* Resistance Biology, _Uppsala University_ (2018)
+* Antibiotic Use & Human Behavior, _Uppsala University_ (2018)
+* Antibiotic Resistance in Humans, Animals and the Environment, _Uppsala University_ (2018)
+* Antibiotic resistance: the Silent Tsunami, _Uppsala University_ (2018)
+* Microbiology and Immunology, _Gävle University College_ (2013)
+
+#### Miscellaneous 
+
+* Project Management, _Stockholm University_ (2015)
+* Differential Equations, _University of Colorado Boulder_ (2015)
+* Molecular Cell Biology, _University of Colorado Boulder_ (2015)
+* Nutrition, _University of Colorado Boulder_ (2015)
+* General Psychology, _University of Colorado Boulder_ (2015)
+* Finance and Accounting for Engineering Management, _The Lockheed Martin Engineering Management Program, University of Colorado Boulder_ (2014)
+* Cancer Biology, _University of Skövde_ (2013)
+* Basic Medical Genetics, _Uppsala University_ (2012)
+
+### Awards and Scholarships
+* **The Pharmaceutical Student Union’s Study Council Award for Student Treatment**, _Pharmaceutical Student Union_ (2021)
+
+> During the spring semester of 2020, courses were taught remotely when COVID-19 began to spread in Sweden. Students experienced difficulties with remote work. Viktor approached and understood the students, brought forward their opinions to the ones responsible and stayed after hours to help the students that needed extra help with their individual projects. Thanks to Viktor’s admirable approach, the upcoming courses could be optimized for students.
+
+* **Börjessons äldre**, _Uppsala University_ (2018)  
+
+> "...for male students who are studying towards licentiate or higher degrees, [and] are distinguished by dedication and aptitude..."
+
+* **Linds, Hans**, _Uppsala University_ (2017)
+
+> "... well-mannered male student who has been registered at the Faculty of Medicine at Uppsala University for at least one academic year is awarded by the faculty..."
+
+* **Gahn foundation for students of chemistry**, _Uppsala University_ (2014)
