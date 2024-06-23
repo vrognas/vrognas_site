@@ -28,15 +28,19 @@ Alongside my current employment, I am also a PhD student in [Pharmacometrics at 
 * Forest plots in practical use: Implementation and interpretation, _Pharmetheus AB_ (2022)
 * Pharmacometric modeling of composite scores outcomes, _Uppsala University_ (2021)
 * Advanced population model building and usage in NONMEM, _Uppsala University_ (2021)
-* Clinical Trials Epidemiology, _Uppsala University_ (2020)
-* Essential Clinical Epidemiology, _Uppsala University_ (2019)
 * Pharmacometric Statistics, _TACA Training_ (2019)
 * Uppsala Pharmacometrics Summer School, _Uppsala University_ (2019)
 * Advanced Methods in NONMEM 7.5, _ICON plc_ (2022)
 * Advanced Methods in NONMEM 7.4, _ICON plc_ (2019)
 * Time-to-event data modelling using Monolix, _University of Cape Town_ (2018)
-* Optimal Designs and Randomization Techniques for Clinical Trials, _Uppsala University_ (2018)
 * The Sheiner-Rowland Advanced Course in Pharmacokinetics and Pharmacodynamics, _Advanced PKPD Sils-Maria_, (2018)
+
+#### Biology/Medicine
+
+* Molecular Cell Biology, _University of Colorado Boulder_ (2015)
+* Nutrition, _University of Colorado Boulder_ (2015)
+* Cancer Biology, _University of Skövde_ (2013)
+* Basic Medical Genetics, _Uppsala University_ (2012)
 
 #### Antimicrobial Resistance 
 
@@ -49,14 +53,13 @@ Alongside my current employment, I am also a PhD student in [Pharmacometrics at 
 
 #### Miscellaneous 
 
+* Clinical Trials Epidemiology, _Uppsala University_ (2020)
+* Essential Clinical Epidemiology, _Uppsala University_ (2019)
+* Optimal Designs and Randomization Techniques for Clinical Trials, _Uppsala University_ (2018)
 * Project Management, _Stockholm University_ (2015)
 * Differential Equations, _University of Colorado Boulder_ (2015)
-* Molecular Cell Biology, _University of Colorado Boulder_ (2015)
-* Nutrition, _University of Colorado Boulder_ (2015)
 * General Psychology, _University of Colorado Boulder_ (2015)
 * Finance and Accounting for Engineering Management, _The Lockheed Martin Engineering Management Program, University of Colorado Boulder_ (2014)
-* Cancer Biology, _University of Skövde_ (2013)
-* Basic Medical Genetics, _Uppsala University_ (2012)
 
 ### Awards and Scholarships
 * **The Pharmaceutical Student Union’s Study Council Award for Student Treatment**, _Pharmaceutical Student Union_ (2021)
