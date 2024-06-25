@@ -51,11 +51,15 @@ website:
       contents:
         - text: "Tutorials"
           href: docs/tutorials/index.qmd
-    - title: "How-To"
-      style: "floating"
+    - id: how-tos
+      title: "How-Tos"
+      collapse-level: 1
+      href: docs/how-tos/index.qmd
       contents:
-        - text: "How-To"
+        - section: "How-Tos"
           href: docs/how-tos/index.qmd
+          contents:
+            - docs/how-tos/R/tips-n-tricks.qmd
     - title: "Explanations"
       style: "floating"
       contents:

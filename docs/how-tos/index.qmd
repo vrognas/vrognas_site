@@ -1,5 +1,5 @@
 ---
-title: "How-To"
+title: "How-Tos"
 ---
 
-How-To
+How-Tos
