@@ -8,16 +8,15 @@ execute:
 website:
   title: "Viktor Rognås"
   favicon: "favicon.png"
+  open-graph: true
+  twitter-card: true
   site-url: https://vrognas.com
-  repo-url: https://github.com/vrognas/vrognas_website
+  repo-url: https://github.com/vrognas/vrognas_site
   image: "images/vrognas.png"
   reader-mode: true
   page-navigation: true
+  bread-crumbs: true
   navbar:
-    pinned: false
-    collapse: true
-    collapse-below: "lg"
-    toggle-position: "left"
     left:
       - text: "About"
         href: index.qmd
@@ -62,10 +61,11 @@ website:
       contents:
         - text: "Explanations"
           href: docs/explanations/index.qmd
-    - title: "References"
-      style: "floating"
+    - id: references
+      collapse-level: 1
+      href: docs/references/index.qmd
       contents:
-        - text: "References"
+        - section: "References"
           href: docs/references/index.qmd
     - title: "test"
       style: "floating"
@@ -74,9 +74,6 @@ website:
           href: test.qmd
   page-footer:
     left: "© 2024 Viktor Rognås"
-    center:
-      - text: "About"
-        href: index.qmd
     right:
       - icon: github
         href: https://github.com/vrognas
@@ -89,8 +86,14 @@ format:
     theme:
       light: [cosmo, theme-light.scss]
       dark: [cosmo, theme-dark.scss]
-    css: styles.scss
+    css: styles.css
     toc: true
+    code-copy: true
+    code-overflow: wrap
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px
 
 
 
