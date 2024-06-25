@@ -6,7 +6,7 @@ execute:
   freeze: auto
 
 website:
-  title: "Viktor Rognås"
+  title: "Viktor Rognås 🌱"
   favicon: "favicon.png"
   open-graph: true
   twitter-card: true
