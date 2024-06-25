@@ -1,0 +1,35 @@
+---
+title: "R Tips-n-Tricks"
+---
+
+## Show ALL duplicate values
+
+```r
+df |>
+group_by(ID) |>
+filter(
+  duplicated(COV) |
+  duplicated(COV, fromLast = TRUE)
+)
+```
+
+
+## Find first occurence of a non-NA
+
+```r
+df$col1[which.max(!is.na(col2))]
+```
+
+## Pipe into View(), with title
+
+```r
+df |>
+  filter |>
+  group_by |>
+  View("df")
+````
+
+## Misc
+
+* Use sink() to record output of script
+* Use locate() instead of select(col, everything())
