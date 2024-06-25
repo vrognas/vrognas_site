@@ -1,0 +1,8 @@
+---
+title: "References"
+---
+
+[NONMEM](https://nonmem.iconplc.com/)
+[PsN](https://uupharmacometrics.github.io/PsN/)
+[Xpose](https://xpose.sourceforge.io/)
+[Monolix](https://monolix.lixoft.com/)
