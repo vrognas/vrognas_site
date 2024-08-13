@@ -5,16 +5,16 @@ title: "Disease primer: Skin cancer"
 There are three main types of skin cancer, depending on which cells have turned cancerous:
 
 * Non-melanoma skin cancer (NMSC)
-  * Basal-cell carcinoma (BCC)
+  * **Basal-cell carcinoma (BCC)**
     * Most common (~80% of skin cancers)
-    * Rarely metastasizes
+    * Grows slowly, rarely metastasizes
     * Low mortality
-  * Squamous-cell carcinoma (SCC)
+  * **Squamous-cell carcinoma (SCC)**
     * Medium frequency (~20% of skin cancers)
     * Can spread quickly and metastasize
     * Low mortality
     * Can be cured if caught early
-* Melanoma
+* **Melanoma**
   * Least frequent (~1% of skin cancers)
   * Grows very fast, can spread
   * Highest mortality
@@ -24,11 +24,12 @@ There are three main types of skin cancer, depending on which cells have turned 
 
 #### BCC
 
+Cancer of basal cells in the deepest skin layer (*stratum basale*, or *basal cell layer*).
 Grows slowly, damages nearby tissues.
 
 #### SCC
 
-It is a cancer of *squamous cells*.
+It is a cancer of keratinocytes ("squamous cells") in the next-to-deepest skin layer (*stratum spinosum*, or *squamous cell layer*).
 These cells form on the surface of the skin, on the lining of hollow organs in the body, and on the lining of the respiratory and digestive tracts.
 Also known as **epidermoid carcinoma**.
 
@@ -42,22 +43,50 @@ The cancer can be divided into types depending on the body location:
 
 ### Melanoma
 
+Cacner of melanocytes in e.g. the deepest skin layer, and also the eyes (i.e. wherever you have melanocytes).
+
 ## Typical patient
 
 ### Risk factors
 
-* Over exposure to sunlight
+* Over exposure to sunlight/tanning beds
 * A history of sunburns
-* Fair skin
+* Fair skin & light eye/hair color
+* Genetics
+* Exposure to toxic chemicals
+* Immunosuppresive drugs
+* Arsenic exposure
 
 ## Clinical diagnostics
 
 * Physical examination
 * Biopsy
 
-NMSC stages range from 0 to 4.
+### Grades and stages
 
-Melanoma stages range from 0 to 4.
+The grade of a cancer tells you how much the cancer cells look like normal cells.
+
+#### Number staging
+
+The number stage of a cancer tells you how big it is and whether it has spread.
+Stages range from 0 to 4.
+Stages are defined differently if the cancer is on the eyelid.
+
+BCC doesn't need staging because it's very rare for it to spread.
+
+#### TNM staging for melanoma
+
+TNM stands for Tumour, Node, Metastasis.
+
+* (T)umour
+  * 6 stages
+  * Tumour thickness
+* (N)ode
+  * 4 stages
+  * Describes whether cancer cells are in the nearby lymph nodes.
+* (M)etastasis
+  * 2 stages 
+  * Describes whether the cancer has spread to a different part of the body.
 
 ## Treatment
 
@@ -65,12 +94,20 @@ Melanoma stages range from 0 to 4.
 * Chemotherapy
 * Radiation therapy
 * Laser therapy
-* Drugs
-* Immunotherapy
-  * Ipilimumab
-  * Pembrolizumab
-  * Nivolumab
+* Targeted drugs
+* Checkpoint inhibitors (immunotherapy)
+  * PD-1 inhibitor
+    * Nivolumab (Opdivo)
+    * Pembrolizumab (Keytruda)
+    * Cemiplimab (Libtayo)
+  * PD-L1 inhibitor
+    * Atezolizumab (Tecentriq)
+  * CTLA-4 inhibitor
+    * Ipilimumab (Yervoy)
 
 ## References
 
 * https://en.wikipedia.org/wiki/Squamous-cell_carcinoma
+* https://www.youtube.com/watch?v=WXfb340OEeg
+* https://en.wikipedia.org/wiki/Checkpoint_inhibitor
+* https://www.cancerresearchuk.org/about-cancer/skin-cancer/stages-grades
