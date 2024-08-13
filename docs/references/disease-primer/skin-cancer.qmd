@@ -2,29 +2,31 @@
 title: "Disease primer: Skin cancer"
 ---
 
-There are three main types of skin cancer:
+There are three main types of skin cancer, depending on which cells have turned cancerous:
 
-* Basal-cell carcinoma (BCC)
-  * Most common
-  * Rarely metastasizes
-  * Low mortality
-* Squamous-cell carcinoma (SCC)
-  * Can spread quickly and metastasize
-  * Low mortality
-  * Can be cured if caught early
+* Non-melanoma skin cancer (NMSC)
+  * Basal-cell carcinoma (BCC)
+    * Most common (~80% of skin cancers)
+    * Rarely metastasizes
+    * Low mortality
+  * Squamous-cell carcinoma (SCC)
+    * Medium frequency (~20% of skin cancers)
+    * Can spread quickly and metastasize
+    * Low mortality
+    * Can be cured if caught early
 * Melanoma
-  * Least frequent
-  * Can spread
+  * Least frequent (~1% of skin cancers)
+  * Grows very fast, can spread
   * Highest mortality
   * Can be cured if caught early
 
-BCC and SCC are also known as *Non-melanoma skin cancer* (NMSC).
+### Non-melanoma skin cancer (NMSC)
 
-### BCC
+#### BCC
 
 Grows slowly, damages nearby tissues.
 
-### SCC
+#### SCC
 
 It is a cancer of *squamous cells*.
 These cells form on the surface of the skin, on the lining of hollow organs in the body, and on the lining of the respiratory and digestive tracts.
@@ -44,7 +46,7 @@ The cancer can be divided into types depending on the body location:
 
 ### Risk factors
 
-* Sun exposure
+* Over exposure to sunlight
 * A history of sunburns
 * Fair skin
 
