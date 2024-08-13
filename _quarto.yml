@@ -72,7 +72,9 @@ website:
         - section: "References"
           href: docs/references/index.qmd
         - section: "Disease primers"
-          href: docs/references/disease-primer_rheumatoid-arthritis.qmd
+          href: docs/references/index.qmd
+          contents:
+            - docs/references/disease-primer/rheumatoid-arthritis.qmd
     - title: "test"
       style: "floating"
       contents:
