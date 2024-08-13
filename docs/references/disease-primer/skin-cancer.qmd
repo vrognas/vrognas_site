@@ -111,3 +111,4 @@ TNM stands for Tumour, Node, Metastasis.
 * https://www.youtube.com/watch?v=WXfb340OEeg
 * https://en.wikipedia.org/wiki/Checkpoint_inhibitor
 * https://www.cancerresearchuk.org/about-cancer/skin-cancer/stages-grades
+* https://www.cancerresearchuk.org/about-cancer/melanoma/stages-types/tnm-staging
