@@ -1,0 +1,67 @@
+---
+title: "Disease primer: Rheumatiod Arthritis (RA)"
+---
+
+An auto-immune systemic disease.
+Requires life-long treatment.
+Individual patients with RA appear to have different pathogenic mechanisms, due to different treatment response.
+Two major "types": seropositive and seronegative, with seropositive presenting more severe symptoms.
+
+## Typical patient
+
+* Age 30-70
+* 70% women
+* Symmetrical polyarthritis of hands and feet.
+* Common to have *morning stiffness* lasting more than 30 minutes.
+
+### Risk factors
+
+* First-degree relative with RA
+* Gene HLA-DR
+* Smoking
+* Overweight
+* Infections
+
+## Clinical diagnostics
+
+* Number and location of affected joints
+* Duration of disease >= 6 weeks
+* Acute-phase reactants
+* X-ray for bone erosion
+* Serum samples to determine seropositive/seronegative
+  * Rheumatiod factor (RF)
+  * Anti-citrullinated protein antibodies (ACPAs)
+
+## Treatment
+
+* DMARDs (Disease-Modifying Antirheumatic Drugs)
+  * Conventional
+    * Methotrexate (folate antagonist)
+      * Typical treatment, 33% response rate.
+    * Leflunomide
+    * Sulfasalazine
+    * Hydroxychloroquine
+  * Biologic (either alone or combo with conventionals)
+    * Anti TNF-alpha
+      * Adalimumab
+      * Certolizumab
+      * Etanercept
+      * Golimumab
+      * Infliximab
+    * Anti IL6
+      * Tocilizumab
+      * Sarilumab
+    * B-cell depletion
+      * Rituximab
+    * T-Cell co-stimulatory inhibitor
+      * Abatacept
+  * Targeted synthetic
+    * JAK inhibitor
+      * Tofacitinib
+      * Baricitinib
+      * Upadacitinib
+
+## References
+
+* https://www.nejm.org/doi/full/10.1056/NEJMra2103726
+* https://www.youtube.com/watch?v=e_NZk8nFSPA
