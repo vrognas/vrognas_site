@@ -76,6 +76,8 @@ website:
           contents:
             - text: "Rheumatoid arthritis (RA)"
               href: docs/references/disease-primer/rheumatoid-arthritis.qmd
+            - text: "Skin cancer"
+              href: docs/references/disease-primer/skin-cancer.qmd
     - title: "test"
       style: "floating"
       contents:
