@@ -65,6 +65,9 @@ website:
       contents:
         - section: "Explanations"
           href: docs/explanations/index.qmd
+          contents:
+            - text: "Augmented renal clearance (ARC)"
+              href: docs/explanations/augmented-renal-clearance.qmd
         - section: "Disease primers"
           href: docs/references/index.qmd
           contents:
