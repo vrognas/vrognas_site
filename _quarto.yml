@@ -24,8 +24,8 @@ website:
         href: docs/cv/index.qmd
       - text: "Resources"
         menu:
-          - text: "Tutorials" # learning
-            href: docs/tutorials/index.qmd
+          #- text: "Tutorials" # learning
+          #  href: docs/tutorials/index.qmd
           - text: "How-Tos" # goals
             href: docs/how-tos/index.qmd
           - text: "Explanations" # understanding
@@ -44,12 +44,12 @@ website:
       style: "floating"
     - title: "CV/Resume"
       style: "floating"
-    - id: tutorials
-      title: "Tutorials"
-      style: "floating"
-      contents:
-        - text: "Tutorials"
-          href: docs/tutorials/index.qmd
+    #- id: tutorials
+    #  title: "Tutorials"
+    #  style: "floating"
+    #  contents:
+    #    - text: "Tutorials"
+    #      href: docs/tutorials/index.qmd
     - id: how-tos
       title: "How-Tos"
       collapse-level: 1
