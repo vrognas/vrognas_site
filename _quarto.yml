@@ -46,7 +46,8 @@ website:
       style: "floating"
     - title: "CV/Resume"
       style: "floating"
-    - title: "Tutorials"
+    - id: tutorials
+      title: "Tutorials"
       style: "floating"
       contents:
         - text: "Tutorials"
@@ -60,12 +61,14 @@ website:
           href: docs/how-tos/index.qmd
           contents:
             - docs/how-tos/R/tips-n-tricks.qmd
-    - title: "Explanations"
+    - id: explanations
+      title: "Explanations"
       style: "floating"
       contents:
         - text: "Explanations"
           href: docs/explanations/index.qmd
     - id: references
+      title: "References"
       collapse-level: 1
       href: docs/references/index.qmd
       contents:
@@ -78,11 +81,6 @@ website:
               href: docs/references/disease-primer/rheumatoid-arthritis.qmd
             - text: "Skin cancer"
               href: docs/references/disease-primer/skin-cancer.qmd
-    - title: "test"
-      style: "floating"
-      contents:
-        - text: "test"
-          href: test.qmd
   page-footer:
     left: "© 2024 Viktor Rognås"
     right:
