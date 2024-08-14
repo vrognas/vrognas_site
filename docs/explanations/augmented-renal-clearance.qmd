@@ -10,44 +10,24 @@ Critically ill patients often have rapidly fluctuating renal function.
 
 ARC is most common in critically ill young men.
 
-## ARC in critically ill: an enigmatic concept
+In a study by Andrew Udy et al., 85% of patients with traumatic brain injury who needed saline infusion and vasopressor agents to maintain cerebral perfusion pressure had ARC. Using the timed urinary creatinine clearance method to measure GFR, ARC has been observed in burn patients, those with sepsis, post-surgery, and in ICU settings. Brown et al. recorded a creatinine clearance of 190 ml/min/1.73 m² in critically ill postoperative patients. More recently, Fuster-Lluch et al. reported an ARC incidence of 17.9% in postoperative and polytrauma patients. These patients were younger, had lower APACHE II scores, higher diastolic blood pressures, and higher urine output on the first morning in the ICU.
 
-ARC is defined as estimated GFR > 130 ml/min. In a
-study by Andrew Udy et al. [16], 17 of 20 patients (85%)
-with traumatic brain injury who required saline infusion
-and vasopressor agents to maintain the cerebral perfusion pressure had ARC. Using timed urinary creatinine
-clearance method to measure GFR, ARC was demonstrated in burns [17,18], sepsis [19] and surgery, and in
-ICU patients. Brown et al. [20] recorded a creatinine
-clearance of 190 ml/min/1.73 m2 in a cohort of critically
-ill postoperative patients. Recently, Fuster-Lluch et al. [21]
-reported an incidence of 17.9% in a cohort of postoperative and polytrauma patients, who were younger, with
-lower Acute Physiology And Chronic Health Evaluation
-(APACHE) II scores, higher diastolic blood pressures, and
-higher urine output on the first morning of admission to
-the ICU. Cytokine release from acute injury [22], the innate immune and inflammatory responses to trauma [23],
-and aggressive fluid resuscitation may promote increased
-organ blood flow and enhanced excretory function. The
-importance of the concept is quite obvious. This throws
-light on the doses of renally excreted drugs and may mean
-that standard dosing regimens are inadequate in patients
-with ARC. Baptista et al. [24] examined the performance of four creatinine-based estimation equations in 86
-patients with ARC. This post hoc analysis showed that
-all the better known GFR equations underestimated the
-measured creatinine clearance value. The list below
-illustrates the practical problems in estimating GFR in
-an ICU setup:
+Cytokine release from acute injury, the body's immune and inflammatory responses to trauma, and aggressive fluid resuscitation may all contribute to increased organ blood flow and enhanced excretory function. Understanding ARC is crucial, as it impacts the dosing of renally excreted drugs, potentially making standard dosing regimens insufficient for patients with ARC. Baptista et al. found that commonly used GFR estimation equations underestimated creatinine clearance in patients with ARC.
 
-1. Rapidly fluctuating renal hemodynamics
-2. Both overdosing and underdosing are problems
-when GFR could not be estimated close to accuracy
-3. Constantly changing volume status of the patient
-4. Concept of ARC is not frequently applied in
-calculating GFR leading to inadequate dosing of
-drugs
-5. Commonly used creatinine-based equations are
-flawed in the critical care setting. Ideal methods like
-inulin clearance become impractical in an ICU setup
+Here are the key challenges in estimating GFR in ICU patients:
+
+1. Rapidly changing renal hemodynamics
+2. Risk of both overdosing and underdosing due to inaccurate GFR estimates
+3. Constantly fluctuating patient volume status
+4. ARC is often overlooked in GFR calculations, leading to inadequate drug dosing
+5. Common creatinine-based equations are unreliable in critical care settings, and ideal methods like inulin clearance are impractical in the ICU.
+
+## Ways to deal with ARC in PK modeling
+
+Introduce a scalar above 130 mL/min.
 
 # References
+
+* Kristoffersson et al. (2020) https://doi.org/10.1016/j.cmi.2020.03.016
 * Atkinson (2018) https://doi.org/10.12793/tcp.2018.26.3.111
 * Sunder et al. (2014) https://doi.org/10.1186/2052-0492-2-31
