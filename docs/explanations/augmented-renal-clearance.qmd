@@ -8,12 +8,10 @@ Commonly, renal impairment is studied in drug development.
 In contrast, ARC is when drug elimination is accelerated instead of reduced.
 ARC is most common in critically ill young men.
 Critical illness can caused by e.g. burns or infections.
+Furthermore, critically ill patients often have rapidly fluctuating renal function.
 
-Standard CrCL estimation equations are inaccurate at these high CrCL values.
-
-Critically ill patients often have rapidly fluctuating renal function.
-
-
+Standard CrCL estimation equations like Cockgroft-Gault, MDRD, or CKD-EPI, are inaccurate at these high CrCL values.
+Futhermore, standard CrCL estimation equations were developed for steady-state conditions.
 
 In a study by Andrew Udy et al., 85% of patients with traumatic brain injury who needed saline infusion and vasopressor agents to maintain cerebral perfusion pressure had ARC.
 Using the timed urinary creatinine clearance method to measure GFR, ARC has been observed in burn patients, those with sepsis, post-surgery, and in ICU settings.
