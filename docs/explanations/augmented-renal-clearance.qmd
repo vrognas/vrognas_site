@@ -4,15 +4,26 @@ title: "Augmented Renal Clearance (ARC)"
 
 Augmented renal clearance (ARC) is a term used when a patients' creatinine clearance (CrCL) exceeds 130 mL/min/1.73m^2^.
 
+Commonly, renal impairment is studied in drug development.
+In contrast, ARC is when drug elimination is accelerated instead of reduced.
+ARC is most common in critically ill young men.
+
+
 Standard CrCL estimation equations are inaccurate at these high CrCL values.
 
 Critically ill patients often have rapidly fluctuating renal function.
 
-ARC is most common in critically ill young men.
 
-In a study by Andrew Udy et al., 85% of patients with traumatic brain injury who needed saline infusion and vasopressor agents to maintain cerebral perfusion pressure had ARC. Using the timed urinary creatinine clearance method to measure GFR, ARC has been observed in burn patients, those with sepsis, post-surgery, and in ICU settings. Brown et al. recorded a creatinine clearance of 190 ml/min/1.73 m² in critically ill postoperative patients. More recently, Fuster-Lluch et al. reported an ARC incidence of 17.9% in postoperative and polytrauma patients. These patients were younger, had lower APACHE II scores, higher diastolic blood pressures, and higher urine output on the first morning in the ICU.
 
-Cytokine release from acute injury, the body's immune and inflammatory responses to trauma, and aggressive fluid resuscitation may all contribute to increased organ blood flow and enhanced excretory function. Understanding ARC is crucial, as it impacts the dosing of renally excreted drugs, potentially making standard dosing regimens insufficient for patients with ARC. Baptista et al. found that commonly used GFR estimation equations underestimated creatinine clearance in patients with ARC.
+In a study by Andrew Udy et al., 85% of patients with traumatic brain injury who needed saline infusion and vasopressor agents to maintain cerebral perfusion pressure had ARC.
+Using the timed urinary creatinine clearance method to measure GFR, ARC has been observed in burn patients, those with sepsis, post-surgery, and in ICU settings.
+Brown et al. recorded a creatinine clearance of 190 ml/min/1.73 m² in critically ill postoperative patients.
+More recently, Fuster-Lluch et al. reported an ARC incidence of 17.9% in postoperative and polytrauma patients.
+These patients were younger, had lower APACHE II scores, higher diastolic blood pressures, and higher urine output on the first morning in the ICU.
+
+Cytokine release from acute injury, the body's immune and inflammatory responses to trauma, and aggressive fluid resuscitation may all contribute to increased organ blood flow and enhanced excretory function.
+Understanding ARC is crucial, as it impacts the dosing of renally excreted drugs, potentially making standard dosing regimens insufficient for patients with ARC.
+Baptista et al. found that commonly used GFR estimation equations underestimated creatinine clearance in patients with ARC.
 
 Here are the key challenges in estimating GFR in ICU patients:
 
