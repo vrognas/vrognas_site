@@ -7,7 +7,7 @@ Augmented renal clearance (ARC) is a term used when a patients' creatinine clear
 Commonly, renal impairment is studied in drug development.
 In contrast, ARC is when drug elimination is accelerated instead of reduced.
 ARC is most common in critically ill young men.
-
+Critical illness can caused by e.g. burns or infections.
 
 Standard CrCL estimation equations are inaccurate at these high CrCL values.
 
@@ -36,6 +36,8 @@ Here are the key challenges in estimating GFR in ICU patients:
 ## Ways to deal with ARC in PK modeling
 
 Introduce a scalar above 130 mL/min.
+The idea is that this will estimate, and correct for, the bias of estimating equations in ARC.
+Ofcourse, this assumes that the bias is linear.
 
 # References
 
