@@ -32,8 +32,6 @@ website:
             href: docs/explanations/index.qmd
           - text: "References" # information
             href: docs/references/index.qmd
-          - text: "test"
-            href: test.qmd
     tools:
       - icon: github
         href: https://github.com/vrognas
