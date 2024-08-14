@@ -63,8 +63,15 @@ website:
       title: "Explanations"
       style: "floating"
       contents:
-        - text: "Explanations"
+        - section: "Explanations"
           href: docs/explanations/index.qmd
+        - section: "Disease primers"
+          href: docs/references/index.qmd
+          contents:
+            - text: "Rheumatoid arthritis (RA)"
+              href: docs/references/disease-primer/rheumatoid-arthritis.qmd
+            - text: "Skin cancer"
+              href: docs/references/disease-primer/skin-cancer.qmd
     - id: references
       title: "References"
       collapse-level: 1
