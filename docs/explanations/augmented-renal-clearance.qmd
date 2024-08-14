@@ -2,3 +2,52 @@
 title: "Augmented Renal Clearance (ARC)"
 ---
 
+Augmented renal clearance (ARC) is a term used when a patients' creatinine clearance (CrCL) exceeds 130 mL/min/1.73m^2^.
+
+Standard CrCL estimation equations are inaccurate at these high CrCL values.
+
+Critically ill patients often have rapidly fluctuating renal function.
+
+ARC is most common in critically ill young men.
+
+## ARC in critically ill: an enigmatic concept
+
+ARC is defined as estimated GFR > 130 ml/min. In a
+study by Andrew Udy et al. [16], 17 of 20 patients (85%)
+with traumatic brain injury who required saline infusion
+and vasopressor agents to maintain the cerebral perfusion pressure had ARC. Using timed urinary creatinine
+clearance method to measure GFR, ARC was demonstrated in burns [17,18], sepsis [19] and surgery, and in
+ICU patients. Brown et al. [20] recorded a creatinine
+clearance of 190 ml/min/1.73 m2 in a cohort of critically
+ill postoperative patients. Recently, Fuster-Lluch et al. [21]
+reported an incidence of 17.9% in a cohort of postoperative and polytrauma patients, who were younger, with
+lower Acute Physiology And Chronic Health Evaluation
+(APACHE) II scores, higher diastolic blood pressures, and
+higher urine output on the first morning of admission to
+the ICU. Cytokine release from acute injury [22], the innate immune and inflammatory responses to trauma [23],
+and aggressive fluid resuscitation may promote increased
+organ blood flow and enhanced excretory function. The
+importance of the concept is quite obvious. This throws
+light on the doses of renally excreted drugs and may mean
+that standard dosing regimens are inadequate in patients
+with ARC. Baptista et al. [24] examined the performance of four creatinine-based estimation equations in 86
+patients with ARC. This post hoc analysis showed that
+all the better known GFR equations underestimated the
+measured creatinine clearance value. The list below
+illustrates the practical problems in estimating GFR in
+an ICU setup:
+
+1. Rapidly fluctuating renal hemodynamics
+2. Both overdosing and underdosing are problems
+when GFR could not be estimated close to accuracy
+3. Constantly changing volume status of the patient
+4. Concept of ARC is not frequently applied in
+calculating GFR leading to inadequate dosing of
+drugs
+5. Commonly used creatinine-based equations are
+flawed in the critical care setting. Ideal methods like
+inulin clearance become impractical in an ICU setup
+
+# References
+* Atkinson (2018) https://doi.org/10.12793/tcp.2018.26.3.111
+* Sunder et al. (2014) https://doi.org/10.1186/2052-0492-2-31
