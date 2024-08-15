@@ -30,7 +30,7 @@ website:
             href: docs/how-tos/index.qmd
           - text: "Explanations" # understanding
             href: docs/explanations/index.qmd
-          - text: "References" # information
+          - text: "Tools of the Trade" # information
             href: docs/references/index.qmd
     tools:
       - icon: github
@@ -75,20 +75,13 @@ website:
               href: docs/references/disease-primer/rheumatoid-arthritis.qmd
             - text: "Skin cancer"
               href: docs/references/disease-primer/skin-cancer.qmd
-    - id: references
-      title: "References"
+    - id: tools-of-the-trade
+      title: "Tools of the Trade"
       collapse-level: 1
       href: docs/references/index.qmd
       contents:
-        - section: "References"
+        - section: "Tools of the Trade"
           href: docs/references/index.qmd
-        - section: "Disease primers"
-          href: docs/references/index.qmd
-          contents:
-            - text: "Rheumatoid arthritis (RA)"
-              href: docs/references/disease-primer/rheumatoid-arthritis.qmd
-            - text: "Skin cancer"
-              href: docs/references/disease-primer/skin-cancer.qmd
   page-footer:
     left: "© 2024 Viktor Rognås"
     right:
