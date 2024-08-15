@@ -1,0 +1,45 @@
+---
+title: "Disease primer: Giant cell arteretis"
+---
+
+Also called **temporal arteritis**, because of the frequent involvement of the temporal artery.
+Also known as "cranial arteritis" and "Horton's disease".
+The name (giant cell arteritis) reflects the type of inflammatory cell involved.
+
+It is an inflammatory autoimmune disease of large blood vessels.
+
+This type of arteritis causes the arteries in the head, neck, and arm area to swell to abnormal sizes.
+
+## Typical patient population
+
+* Age over 50, most common around 70
+* ~70% Females
+* Northern European descent
+* Normal life expectancy
+
+## Clinical diagnosis
+
+### Physical exam
+
+* Palpation of the head reveals prominent temporal arteries with or without pulsation.
+* The temporal area may be tender.
+* Decreased pulses may be found throughout the body
+* Evidence of ischemia may be noted on fundal exam.
+* Bruits may be heard over the subclavian and axillary arteries
+
+### Laboratory tests
+
+* Erythrocyte sedimentation rate, an inflammatory marker, > 60 mm/h (normal 1–40 mm/h)
+* C-reactive protein, another inflammatory marker, may be elevated
+* LFTs, liver function tests, are abnormal particularly raised ALP- alkaline phosphatase
+* Platelets may also be elevated
+
+## Treatment
+
+* Corticosteroids
+  * Prednisone
+* Tocilizumab
+
+## References
+
+* https://en.wikipedia.org/wiki/Giant_cell_arteritis
