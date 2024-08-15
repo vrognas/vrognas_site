@@ -1,0 +1,20 @@
+---
+title: Disease primer: Bacterial infection
+---
+
+A bacterial infection is classified according to the site of infection, and sometimes also the source of infection.
+
+* Skin
+* Lung (HAP/VAP or nosocomial pneumonia)
+* IAI
+* BSI
+
+## Sepsis
+
+Sepsis is a special life-threatening state.
+
+The SOFA-score is often used to assess organ failure in septic patients.
+
+### Septic chock
+
+Septic chock is a development of sepsis that is even more severe.
