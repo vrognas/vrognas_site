@@ -73,6 +73,8 @@ website:
           contents:
             - text: "Rheumatoid arthritis (RA)"
               href: docs/references/disease-primer/rheumatoid-arthritis.qmd
+            - text: "Bacterial infection"
+              href: docs/references/disease-primer/bacterial-infection.qmd
             - text: "Skin cancer"
               href: docs/references/disease-primer/skin-cancer.qmd
     - id: tools-of-the-trade
