@@ -73,6 +73,8 @@ website:
           contents:
             - text: "Rheumatoid arthritis (RA)"
               href: docs/references/disease-primer/rheumatoid-arthritis.qmd
+            - text: "Giant cell arteritis (GCA)"
+              href: docs/references/disease-primer/giant-cell-arteritis.qmd
             - text: "Bacterial infection"
               href: docs/references/disease-primer/bacterial-infection.qmd
             - text: "Skin cancer"
