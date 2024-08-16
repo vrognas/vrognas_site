@@ -1,0 +1,6 @@
+---
+title: "Disease Primers"
+---
+
+Disease Primers are a collection of documents that provide a high-level overview of a specific disease.
+They are intended to be a quick reference for medical students, residents, and other healthcare professionals. Each primer includes information on the typical patient, risk factors, clinical diagnostics, and treatment options for the disease.
