@@ -26,8 +26,8 @@ website:
         menu:
           #- text: "Tutorials" # learning
           #  href: docs/tutorials/index.qmd
-          - text: "How-Tos" # goals
-            href: docs/how-tos/index.qmd
+          #- text: "How-Tos" # goals
+          #  href: docs/how-tos/index.qmd
           - text: "Explanations" # understanding
             href: docs/explanations/index.qmd
           - text: "Tools of the Trade" # information
