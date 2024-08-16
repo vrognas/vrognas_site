@@ -51,13 +51,13 @@ website:
           href: docs/disease-primers/index.qmd
           contents:
             - text: "Rheumatoid arthritis (RA)"
-              href: docs/disease-primers/disease-primer/rheumatoid-arthritis.qmd
+              href: docs/disease-primers/rheumatoid-arthritis.qmd
             - text: "Giant cell arteritis (GCA)"
-              href: docs/disease-primers/disease-primer/giant-cell-arteritis.qmd
+              href: docs/disease-primers/giant-cell-arteritis.qmd
             - text: "Bacterial infection"
-              href: docs/disease-primers/disease-primer/bacterial-infection.qmd
+              href: docs/disease-primers/bacterial-infection.qmd
             - text: "Skin cancer"
-              href: docs/disease-primers/disease-primer/skin-cancer.qmd
+              href: docs/disease-primers/skin-cancer.qmd
     - id: concepts
       title: "Concepts"
       collapse-level: 2
