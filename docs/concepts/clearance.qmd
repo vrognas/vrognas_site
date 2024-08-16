@@ -1,0 +1,16 @@
+---
+title: "Clearance (CL)"
+---
+
+Clearance (CL) is a **made-up** pharmacokinetic parameter.
+The fact that it is made-up and has no physical meaning is an important concept to understand.
+What's more, this parameter is near impossible to interpret on its own, but somehow is still common to see in the summary of product characteristics for approved drugs.
+
+A more intuitive parameter is the half-life (t~1/2~), which is the time it takes for the concentration of a drug to decrease by half.
+However, even the half-life has issues in the current state of drug development.
+The half-life of a drug is really only useful if a drug follws one-compartment pharmacokinetics.
+It is rare for modern drugs to follow one-compartment pharmacokinetics.
+
+# References
+
+* 
