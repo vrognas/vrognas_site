@@ -1,9 +1,5 @@
 ---
-title: "Tools of the Trade"
+title: "References"
 subtitle: "All the information you need to learn more about the topics covered on this page."
 ---
 
-* [NONMEM](https://nonmem.iconplc.com/)
-* [PsN](https://uupharmacometrics.github.io/PsN/)
-* [Xpose](https://xpose.sourceforge.io/)
-* [Monolix](https://monolix.lixoft.com/)

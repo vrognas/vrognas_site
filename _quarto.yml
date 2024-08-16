@@ -50,17 +50,16 @@ website:
     #  contents:
     #    - text: "Tutorials"
     #      href: docs/tutorials/index.qmd
-    - id: how-tos
-      title: "How-Tos"
-      collapse-level: 1
-      href: docs/how-tos/index.qmd
-      contents:
-        - section: "How-Tos"
-          href: docs/how-tos/index.qmd
-          contents:
-            - docs/how-tos/R/tips-n-tricks.qmd
+    # - id: how-tos
+    #   title: "How-Tos"
+    #   collapse-level: 1
+    #   href: docs/how-tos/index.qmd
+    #   contents:
+    #     - section: "How-Tos"
+    #       href: docs/how-tos/index.qmd
     - id: explanations
       title: "Explanations"
+      collapse-level: 1
       style: "floating"
       contents:
         - section: "Explanations"
@@ -69,23 +68,25 @@ website:
             - text: "Augmented renal clearance (ARC)"
               href: docs/explanations/augmented-renal-clearance.qmd
         - section: "Disease primers"
-          href: docs/references/index.qmd
+          href: docs/explanations/index.qmd
           contents:
             - text: "Rheumatoid arthritis (RA)"
-              href: docs/references/disease-primer/rheumatoid-arthritis.qmd
+              href: docs/explanations/disease-primer/rheumatoid-arthritis.qmd
             - text: "Giant cell arteritis (GCA)"
-              href: docs/references/disease-primer/giant-cell-arteritis.qmd
+              href: docs/explanations/disease-primer/giant-cell-arteritis.qmd
             - text: "Bacterial infection"
-              href: docs/references/disease-primer/bacterial-infection.qmd
+              href: docs/explanations/disease-primer/bacterial-infection.qmd
             - text: "Skin cancer"
-              href: docs/references/disease-primer/skin-cancer.qmd
+              href: docs/explanations/disease-primer/skin-cancer.qmd
     - id: tools-of-the-trade
       title: "Tools of the Trade"
       collapse-level: 1
-      href: docs/references/index.qmd
+      href: docs/tools-of-the-trade/index.qmd
       contents:
-        - section: "Tools of the Trade"
-          href: docs/references/index.qmd
+        - section: "R"
+          href: docs/tools-of-the-trade/index.qmd
+          contents:
+            - docs/tools-of-the-trade/R/tips-n-tricks.qmd
   page-footer:
     left: "© 2024 Viktor Rognås"
     right:
