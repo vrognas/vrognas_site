@@ -16,6 +16,7 @@ This type of arteritis causes the arteries in the head, neck, and arm area to sw
 * ~70% Females
 * Northern European descent
 * Normal life expectancy
+* 50% also diagnosed with polymyalgia rheumatica (PMR)
 
 ## Clinical diagnosis
 
@@ -38,7 +39,8 @@ This type of arteritis causes the arteries in the head, neck, and arm area to sw
 
 * Corticosteroids
   * Prednisone
-* Tocilizumab
+* IL-6 inhibitors
+  * Tocilizumab
 
 ## References
 
