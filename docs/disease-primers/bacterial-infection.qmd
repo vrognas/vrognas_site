@@ -1,5 +1,5 @@
 ---
-title: "Disease primer: Bacterial infection"
+title: "Disease primer: Bacterial infections"
 ---
 
 A bacterial infection is classified according to the site of infection, and sometimes also the source of infection.
