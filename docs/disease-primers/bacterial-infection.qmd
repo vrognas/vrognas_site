@@ -43,6 +43,7 @@ Septic chock is a development of sepsis that is even more severe.
 
 ## Treatment
 
+* Efficacy of ABX treatment is judged by **signs and symptoms** (Are you feeling better than yesterday?), and the course of **inflammatory markers** (WBC, CRP, PCT)
 * Most infections can be treated in 5–7 days
 * Right treatment gets 90% success, wrong treatment gets 60% success ("90/60 rule")
 * 95% empirical treatment first ("hit hard and hit early" -Paul Erlich), no time to wait for culture results
