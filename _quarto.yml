@@ -31,7 +31,7 @@ website:
           - text: "Concepts"
             href: docs/concepts/index.qmd
           - text: "Tools of the Trade"
-            href: docs/tools/index.qmd
+            href: docs/tools-of-the-trade/index.qmd
     tools:
       - icon: github
         href: https://github.com/vrognas
