@@ -44,7 +44,8 @@ Septic chock is a development of sepsis that is even more severe.
 ## Treatment
 
 * Most infections can be treated in 5–7 days
-* 95% empirical treatment first ("hit hard and hit early" -Paul Erlich)
+* Right treatment gets 90% success, wrong treatment gets 60% success ("90/60 rule")
+* 95% empirical treatment first ("hit hard and hit early" -Paul Erlich), no time to wait for culture results
   1. Focus? (sepsis)
     * Lung > IAI >> Wounds/UTI
   2. Where acquired? Immune deficiency?
@@ -54,6 +55,7 @@ Septic chock is a development of sepsis that is even more severe.
   5. Interactions?
 * Treatment re-evaluation after 3 days
     * 48 h needed to see if ABX works
+    * Empiric treatment should ideally be switched to targeted treatment once culture results are available (2-3 days)
 
 ### What we want to know before treating an infection
 
