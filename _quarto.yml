@@ -85,7 +85,6 @@ website:
           - section: "(L) Antineoplastic & immunomodulating agents"
             contents:
               - section: "Immunosuppressants"
-                href: docs/pharmacopeia/immunology/index.qmd
                 contents:
                 - text: "JAK-inhibitors"
                   href: docs/pharmacopeia/immunology/immunosuppressants/jak-inhibitors.qmd
