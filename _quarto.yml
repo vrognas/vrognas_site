@@ -62,7 +62,7 @@ website:
               href: docs/disease-primers/skin-cancer.qmd
     - id: pharmacopeia
       title: "Pharmacopœia"
-      collapse-level: 2
+      collapse-level: 3
       style: "floating"
       contents:
         - section: "Pharmacopœia"
