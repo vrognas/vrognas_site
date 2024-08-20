@@ -86,6 +86,7 @@ website:
             href: docs/pharamcopeia/immunology/index.qmd
             contents:
               - section: "Immunosuppressants"
+                href: docs/pharmacopeia/immunology/index.qmd
                 - text: "JAK-inhibitors"
                   href: docs/pharmacopeia/immunology/immunosuppressants/jak-inhibitors.qmd
           - text: "(M) MUSCULO-SKELETAL SYSTEM"
