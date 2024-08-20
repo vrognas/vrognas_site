@@ -5,12 +5,16 @@ title: "Disease primer: Bacterial infections"
 A bacterial infection is classified according to the site of infection, and sometimes also the source of infection.
 
 * Skin
-* Lung (HAP/VAP or nosocomial pneumonia)
-  * Pseudomonas not in gut, it is found in shower heads or sinks -> can only infect after ABX trt, when gut flora is compromised.
+* Lung
+  * CAP
+    * Probably Pneumococci, haemophilus influenzae, mycoplasma)
+  * HAP/VAP
+    * Probably S.aureus, P.aeruginosa, enterobacteria
+    * Pseudomonas not in gut, it is found in shower heads or sinks -> can only infect after ABX trt, when gut flora is compromised.
 * IAI
 * BSI
 
-![](docs/disease-primers/images/overview-of-bacterial-infections.jpg)
+![](images/overview-of-bacterial-infections.jpg)
 
 ## Sepsis
 
@@ -23,10 +27,31 @@ The SOFA-score is often used to assess organ failure in septic patients.
 
 Septic chock is a development of sepsis that is even more severe.
 
+## Diagnosis
+
+![](images/abx-biomarkers.jpg)
+
+* Biomarkers not specific
+    * 3 markers + WBC (but unspecific)
+        * CRP (comes late)
+        * PCT (quicker than CRP)
+        * IL-6
+* Microbroth
+    * Accurate + expensive
+* Vitek (turbidity), (will be replaced by MALDI-TOF?)
+    * Not as accurate as microbroth
+
 ## Treatment
 
 * Most infections can be treated in 5–7 days
 * 95% empirical treatment first ("hit hard and hit early" -Paul Erlich)
+  1. Focus? (sepsis)
+    * Lung > IAI >> Wounds/UTI
+  2. Where acquired? Immune deficiency?
+    * "Pneumonia triade"
+  3. Additional risk factors for MDR?
+  4. Co-morbidities?
+  5. Interactions?
 * Treatment re-evaluation after 3 days
     * 48 h needed to see if ABX works
 
@@ -50,14 +75,5 @@ Septic chock is a development of sepsis that is even more severe.
 
 Resistance rates: how many are resistant? In percent.
 
-* Biomarkers not specific
-    * 3 markers + WBC (but unspecific)
-        * CRP (comes late)
-        * PCT (quicker than CRP)
-        * IL-6
-* Microbroth
-    * Accurate + expensive
-* Vitek (turbidity), (will be replaced by MALDI-TOF?)
-    * Not as accurate as microbroth
 * Clinical dogmas: Foreign body infection -> biofilm
 * Immunosuppressive
