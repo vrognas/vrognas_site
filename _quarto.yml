@@ -68,7 +68,7 @@ website:
         - section: "Pharmacopœia"
           href: docs/pharmacopeia/index.qmd
           contents:
-          - text: "(A) Alimetnary tract & metabolism"
+          - text: "(A) Alimentary tract & metabolism"
             href: docs/pharmacopeia/gastrointestinal/index.qmd
           - text: "(B) Blood & blood forming organs"
             href: docs/pharmacopeia/blood/index.qmd
