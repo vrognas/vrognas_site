@@ -27,7 +27,7 @@ website:
           - text: "Disease primers"
             href: docs/disease-primers/index.qmd
           - text: "Pharmacopœia"
-            href: docs/pharmacopeia-pharmacometrica/index.qmd
+            href: docs/pharmacopeia/index.qmd
           - text: "Concepts"
             href: docs/concepts/index.qmd
           - text: "Tools of the Trade"
@@ -66,7 +66,40 @@ website:
       style: "floating"
       contents:
         - section: "Pharmacopœia"
-          href: docs/pharmacopeia-pharmacometrica/index.qmd
+          href: docs/pharmacopeia/index.qmd
+          contents:
+          - text: "(A) ALIMENTARY TRACT AND METABOLISM"
+            href: docs/pharamcopeia/gastrointestinal/index.qmd
+          - text: "(B) BLOOD AND BLOOD FORMING ORGANS"
+            href: docs/pharamcopeia/blood/index.qmd
+          - text: "(C) CARDIOVASCULAR SYSTEM"
+            href: docs/pharamcopeia/cardio/index.qmd
+          - text: "(D) DERMATOLOGICALS"
+            href: docs/pharamcopeia/dermatology/index.qmd
+          - text: "(G) GENITO URINARY SYSTEM AND SEX HORMONES"
+            href: docs/pharamcopeia/urogenital/index.qmd
+          - text: "(H) SYSTEMIC HORMONAL PREPARATIONS, EXCL. SEX HORMONES AND INSULINS"
+            href: docs/pharamcopeia/hormones/index.qmd
+          - text: "(J) ANTIINFECTIVES FOR SYSTEMIC USE"
+            href: docs/pharamcopeia/infections/index.qmd
+          - section: "(L) ANTINEOPLASTIC AND IMMUNOMODULATING AGENTS"
+            href: docs/pharamcopeia/immunology/index.qmd
+            contents:
+              - section: "Immunosuppressants"
+                - text: "JAK-inhibitors"
+                  href: docs/pharmacopeia/immunology/immunosuppressants/jak-inhibitors.qmd
+          - text: "(M) MUSCULO-SKELETAL SYSTEM"
+            href: docs/pharamcopeia/musculo-skeletal/index.qmd
+          - text: "(N) NERVOUS SYSTEM"
+            href: docs/pharamcopeia/neurology/index.qmd
+          - text: "(P) ANTIPARASITIC PRODUCTS, INSECTICIDES AND REPELLENTS"
+            href: docs/pharamcopeia//index.qmd
+          - text: "(R) RESPIRATORY SYSTEM"
+            href: docs/pharamcopeia/respiratory/index.qmd
+          - text: "(S) SENSORY ORGANS"
+            href: docs/pharamcopeia/sensory/index.qmd
+          - text: "(V) VARIOUS"
+            href: docs/pharamcopeia/various/index.qmd
     - id: concepts
       title: "Concepts"
       collapse-level: 2
