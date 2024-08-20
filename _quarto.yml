@@ -125,7 +125,7 @@ website:
           - section: "R"
             contents:
               - text: "Tips-n-tricks"
-                href: docs/tools-of-the-trade/r/tips-n-tricks.qmd
+                href: docs/tools-of-the-trade/r/tips-n-trick.qmd
   page-footer:
     left: "© 2024 Viktor Rognås"
     right:
