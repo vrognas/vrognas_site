@@ -113,6 +113,7 @@ website:
     - id: tools-of-the-trade
       title: "Tools of the Trade"
       collapse-level: 2
+      style: "floating"
       href: docs/tools-of-the-trade/index.qmd
       contents:
         - section: "NONMEM"
