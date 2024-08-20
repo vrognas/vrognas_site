@@ -115,10 +115,12 @@ website:
       collapse-level: 2
       href: docs/tools-of-the-trade/index.qmd
       contents:
-        - section: "R"
-          href: docs/tools-of-the-trade/index.qmd
+        - section: "NONMEM"
           contents:
-            - docs/tools-of-the-trade/R/tips-n-tricks.qmd
+            - docs/tools-of-the-trade/nonmem/tips-n-tricks.qmd
+        - section: "R"
+          contents:
+            - docs/tools-of-the-trade/r/tips-n-tricks.qmd
   page-footer:
     left: "© 2024 Viktor Rognås"
     right:

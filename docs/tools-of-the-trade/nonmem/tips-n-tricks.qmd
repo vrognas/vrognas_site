@@ -1,0 +1,269 @@
+---
+title: "NONMEM Tips-n-Tricks"
+---
+
+log-transform both sides: cognigen.com/nonmem/nm/99apr232002.html
+
+## Model Evaluation
+
+* In Pfizers tutorial (Byon et al. 2013), there is an argument as to not associate OFVs with p-values, and to regard a drop in OFV with ~10
+* Driving individuals? (.phi file)
+    * Sharkplot (ΔOFV = OFV_full - OFV_reduced vs #subjects_removed): compare between runs. Should be able to remove 5 ID without loosing significance.
+* |CWRES|<5 (estimate change ->remove, doesn’t change -> keep)
+* ETA ShrinkageSD < 20% ? (then we can use EBE based diagnostics)
+* EPS ShrinkageSD < 20% ? (then we can look at IPRED vs DV)
+* boxcox ETA: dOFV > -10.827 (p<0.001)
+* VPC
+* QA
+* RSE% considered precise: <30% for theta, <50% for eta
+* Use $COV MATRIX=R for consistency between statistical software.
+* Condition number (CN) – $COV PRINT=E
+    * Calculated differently in different software
+        * In PsN it is calculated as dividing the largest eigenvalue with the smallest
+        * Gabrielsson and Wiener calculates it as log(largest/smallest)
+    * Different guidelines for ill-conditioning
+        * if CN < 10p, where p=number of estimable parameters, then it’s good
+        * There are also references that point to CN<106
+        * <1000; but this seems to relate more to linear models, or PK-models with 3 parameters (CL, V, ka)
+* SIR
+* SADDLE_RESET
+* MCETA
+* NRD = Number of Required Digits
+
+## Notes
+
+* IMPMAP is equivalent to IMP MAPITER=1 MAPINTER=1
+* NONMEM places the low bound equal to 1/100 (or 1/1000) of the initial value even if it is set to zero in the code. You may rerun with lower initial value or put NOTHETABOUNDTEST to the estimation record. /Leonid
+* nonmem_mpi on cluster uses login node as one of worker nodes. If you use mpi, it can be wise to use srun, e.g. srun execute run001.mod
+* Use ”Disease modifying” instead of ”protective”
+* Mixture prior slide 31. Prior+flat prior ”what if we are wrong”. When conflict: up-weights data, downplays history
+* .ets file gets “random sampled ETAs” (less prone to shrinkage)
+* Tab-separated (less likely to be present in the actual data)
+* EXIT(1) istället för p=0 /+1E-15
+* Two-stage approach: Apply a model to each individuals data
+    * Require much data per individual.
+    * OK mean parameters (i.e. typical individual)
+    * But IIV id inflated (also diff ID -> diff model)
+* NONMEM: Apply a model to all individuals data
+* .phi: Individual parameters: φi=μi+ηi, φi=(φ1,…,φn)
+    * phc=Var(phi)
+    * non_mu_ref parameters: φi=ηi
+* PK Studies:
+    * “Intensive studies” (Phase I/II)
+        * Few subjects (homogeneous)
+        * Single dose
+        * Frequent (rich) sampling
+    * “Population studies” (Phase III/IV)
+        * Many subjects (heterogeneous)
+        * Multiple dose
+        * Sparse sampling
+* Time-to-event
+    * Non-parametric: Log-rank test
+    * semi-parametric: Cox
+    * parametric: Weibull, Gompertz, etc
+* Time varying covariate: Specify as “regressor”.
+* When you use F, CMT matters
+* Weibull*COV forces proportional hazard
+* TTE simulations can be done either with a dataset containing all possible event times, or using MTIME
+* Faster parallel NONMEM:
+    * execute -nmfe_options=“[sbatchargs=--threads-per-core=1] -maxlim=2  -parafprint=100”
+    * FILE* should be size 0
+    * FILE07–39 should be size 0 /Gibiansky
+* ETADER=3: Suggestion from Rikard on how to get out of a local minima
+* logistic=expit=inverse logit
+    * logit≈probit(scaled)
+* $MIX NSPOP=3 (from lecture_simultaneous UPSS)
+    * P(1) = THETA(1)
+    * P(2) = (1-P(1))*THETA(2)
+    * P(3) = 1-P(1)-P(2)
+    * NSPOP = 3
+    * $THETA1 (0, THETAI(1), 1)
+    * $THETA2 (0, THETAI(2), 1)
+* Start every dataset with a ”Comment” column, the IGNORE=@ will then ignore a row if there is a text comment!
+* The second column should be a REF column with each line number
+
+## [NMusers] Interactive Control of NONMEM runs
+
+Thank you both for your help,
+I feared that Perl was capturing the keyboard commands, and the sig.exe 
+would sadly not help in my case, because I wanted to use the function in 
+a Linux environment.
+
+But after playing with `sig.exe` a bit, I realized that all it does is 
+creating a file that gives the signal. So by creating the file manually, 
+you can override the whole process.
+
+All you need to do is finding the directory where NONMEM is running 
+(NM_run1 in PSN) and manually create an empty file with a different name 
+according to the desired action. Here's a list:
+
+Print toggle (monitor estimation progress):
+`print.sig`
+
+Paraprint toggle (monitor parallel processing traffic):
+`paraprint.sig`
+
+Next (move on to next estimation mode or next estimation):
+`next.sig`
+
+Stop (end the present run cleanly):
+`stop.sig`
+
+Subject print toggle:
+`subject.sig`
+
+The function I wanted is "Next". NONMEM grinds a couple if iterations 
+more and then it terminates nicely as if the maximum number of function 
+evaluations had been reached.
+
+I hope this info can help others too.
+
+Thank you,
+Paolo
+
+## Random ETA samples:
+
+When used in nonmem 7.5, a recommended example/setup would be (as shown on = 
+page 152 of nm750.pdf) 
+
+```
+$SIZES ISAMPLEMAX=250
+... 
+$EST METHOD=SAEM NBURN=500 NITER=1000 MASSRESET=1 ISAMPLE=2 PRINT=20 NOPRIOR=1 RANMETHOD=P
+$EST METHOD=SAEM NBURN=0 NITER=0 MASSRESET=0 ETASAMPLES=1 ISAMPLE=200 EONLY=1 
+$EST METHOD=IMP NITER=5 MASSRESET=1 ETASAMPLES=0 ISAMPLE=1000 EONLY=1 PRINT=1 MAPITER=0 
+```
+
+/Robert Bauer
+
+## IMP
+
+I am building a relatively complex PKPD model (with 47 parameters and 11 
+differential equations). 
+
+I had problems using FOCE so I am trying this estimation method : 
+
+```
+$EST METHOD=ITS INTERACTION LAPLACE NITER=200 SIG=3 PRINT=1 SIGL=6 NOHABORT 
+CTYPE=3 NUMERICAL SLOW 
+
+$EST METHOD=IMPMAP ISAMPLE=1000 INTERACTION LAPLACE NITER=1000 SIG=3 PRINT=1 
+SIGL=6 NOHABORT CTYPE=3 IACCEPT=0.4 MAPITER=0 RANMETHOD=3S2 
+
+$COV UNCONDITIONAL MATRIX=S TOL=12 SIGL=12 SLOW
+```
+
+The iteration for the ITS step seems to be quite stable with some artefacts: 
+
+```
+iteration 175 OBJ= 4693.4674554341409
+iteration 176 OBJ= 4694.2296104065535
+iteration 177 OBJ= 4693.7753507970829
+iteration 178 OBJ= 4693.9600270372885
+iteration 179 OBJ= 4693.5732455834705
+iteration 180 OBJ= 4693.6386423202493
+iteration 181 OBJ= 4693.6215390721527
+iteration 182 OBJ= 4693.6006496138452
+iteration 183 OBJ= 4693.7877620448235
+iteration 184 OBJ= 4694.1591757809929
+iteration 185 OBJ= 4693.2614956897451
+iteration 186 OBJ= 4693.5641640401127
+iteration 187 OBJ= 4693.5575289919379
+iteration 188 OBJ= 4495.6489907149398
+iteration 189 OBJ= 4693.7711764252363
+iteration 190 OBJ= 4693.6281175153035
+iteration 191 OBJ= 4694.1171774559862
+iteration 192 OBJ= 4693.7908707845536
+iteration 193 OBJ= 4693.7709264605819
+iteration 194 OBJ= 4495.9262902940209
+iteration 195 OBJ= 4693.3321354894242
+iteration 196 OBJ= 4694.3177205227348
+iteration 197 OBJ= 4694.1301486616576
+iteration 198 OBJ= 4694.2898587322170
+iteration 199 OBJ= 4693.8304358341920
+iteration 200 OBJ= 4691.6818293505230
+
+#TERM: 
+OPTIMIZATION WAS NOT COMPLETED 
+```
+
+The IMP step seems less stable : 
+
+```
+iteration 120 OBJ= 4314.8310660241377 eff.= 446. Smpl.= 1000. Fit.= 0.96389
+iteration 121 OBJ= 4326.9079856676717 eff.= 448. Smpl.= 1000. Fit.= 0.96409
+iteration 122 OBJ= 4164.6649529423103 eff.= 479. Smpl.= 1000. Fit.= 0.96392
+iteration 123 OBJ= 4299.9887619753636 eff.= 432. Smpl.= 1000. Fit.= 0.96395
+iteration 124 OBJ= 4303.9571213327054 eff.= 399. Smpl.= 1000. Fit.= 0.96349
+iteration 125 OBJ= 4328.9835950930074 eff.= 417. Smpl.= 1000. Fit.= 0.96423
+iteration 126 OBJ= 4304.3861595488252 eff.= 550. Smpl.= 1000. Fit.= 0.96392
+iteration 127 OBJ= 4291.0862736663648 eff.= 422. Smpl.= 1000. Fit.= 0.96430
+iteration 128 OBJ= 4326.2378678645500 eff.= 407. Smpl.= 1000. Fit.= 0.96409
+iteration 129 OBJ= 4157.5352046539456 eff.= 406. Smpl.= 1000. Fit.= 0.96404
+iteration 130 OBJ= 4332.6894073732456 eff.= 399. Smpl.= 1000. Fit.= 0.96399
+iteration 131 OBJ= 4357.5343346793761 eff.= 493. Smpl.= 1000. Fit.= 0.96414
+
+Convergence achieved 
+
+iteration 131 OBJ= 4336.1893012015007 eff.= 417. Smpl.= 
+1000. Fit.= 0.96369 
+
+#TERM: 
+OPTIMIZATION WAS COMPLETED 
+```
+
+The "unstability" of the IMP step is it usual? NONMEM is completed at the  end.. 
+
+In answer to your question; yes, it is usual to see this "unstability" in the final few iteration OFVs. 
+
+When using the IMP method, I often include two sequential `$EST` commands. The 
+first command will perform optimisation of parameter estimates until a 
+global minimum is found. The second command will then take those parameter 
+estimates and calculate more precise estimates of the objective function 
+value. The second `$EST` command will have a higher `ISAMPLE` to reduce the 
+Monte Carlo noise, and have `ETYPE=1` (no optimisation of parameter values). 
+
+I suspect that the number of samples that you are using may not be enough, 
+giving large Monte Carlo noise in the OFV estimate. I suggest that you 
+perform another run with the parameter values set to their final estimates, 
+and with: 
+
+```
+$EST METHOD=IMP ISAMPLE=10000 INTERACTION LAPLACE NITER=5 SIG=3 PRINT=1 
+SIGL=6 EONLY=1 NOHABORT RANMETHOD=3S2 
+```
+
+The higher number of samples should give a more stable result (although the 
+run time of each iteration will increase significantly). Taking the average 
+OFV of these 5 iterations will give a more accurate estimation of the final 
+OFV. 
+Jon Moss, PhD
+
+## SAEM
+
+http://monolix.lixoft.com/tasks/population-parameter-estimation-using-saem/
+
+## SIGNALS for eg SAEM/IMP
+
+https://www.mail-archive.com/nmusers@globomaxnm.com/msg03990.html
+Find the directory where NONMEM is running (NM_run1 in PsN), and manually create an empty file with a different name according to the desired action.
+Here's a list:
+* Print toggle (monitor estimation progress): print.sig
+* Paraprint toggle (monitor parallel processing traffic): paraprint.sig
+* Next (move on to next estimation mode or next estimation): next.sig
+    * NONMEM grinds a couple if iterations more and then it terminates nicely as if the maximum number of function evaluations had been reached.
+* Stop (end the present run cleanly): stop.sig
+* Subject print toggle: subject.sig
+
+## VPCs
+
+The VPCs central metric are the prediction of data percentiles.
+If you focus on the difference between e.g. the 5th and 95th percentile based on the simulated data you will have a prediction interval, like Bill states.
+If you focus on an individual percentile, but consider the imprecision with which it is derived, often given as a shaded area, then it is like other metrics of imprecision a confidence interval.
+Confidence interval (ci) and prediction interval (pi) for VPC￼
+
+In general, if the serum creatinine rises at 2-3 mg/dl per day then the GFR is near zero.
+
+## University of Maryland
+
+https://ctm.umaryland.edu/#/ms-pharma
