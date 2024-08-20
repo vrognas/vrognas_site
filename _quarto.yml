@@ -26,7 +26,7 @@ website:
         menu:
           - text: "Disease primers"
             href: docs/disease-primers/index.qmd
-          - text: "Pharmacopœia Pharmacometrica"
+          - text: "Pharmacopœia"
             href: docs/pharmacopeia-pharmacometrica/index.qmd
           - text: "Concepts"
             href: docs/concepts/index.qmd
@@ -61,11 +61,11 @@ website:
             - text: "Skin cancers"
               href: docs/disease-primers/skin-cancer.qmd
     - id: pharmacopeia
-      title: "Pharmacopœia Pharmacometrica"
+      title: "Pharmacopœia"
       collapse-level: 2
       style: "floating"
       contents:
-        - section: "Pharmacopœia Pharmacometrica"
+        - section: "Pharmacopœia"
           href: docs/pharmacopeia-pharmacometrica/index.qmd
     - id: concepts
       title: "Concepts"
