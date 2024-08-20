@@ -1,0 +1,36 @@
+---
+title: "Janus Kinase (JAK)-inhibitors"
+---
+
+## Introduction
+
+Janus Kinase (JAK) inhibitors are a class of drugs that target the Janus Kinase family of enzymes.
+Janus Kinases are a family of cytoplasmic tyrosine kinases that transduce cytokine-mediated signals via the JAK-STAT pathway.
+
+The Janus Kinases are:
+
+* JAK1
+* JAK2
+* JAK3
+* TYK2.
+
+Janus kinase inhibitors can be classed in several overlapping classes: they are immunomodulators, they are DMARDs (disease-modifying antirheumatic drugs), and they are a subclass of tyrosine kinase inhibitors.
+
+## Mechanism of action
+
+JAK-inhibitors work by modifying the immune system via cytokine activity inhibition.
+The JAK enzymes interact with the intracellular part of distinct cytokine receptors, and are thus involved in the signaling pathways of multiple pro-inflammatory cytokines, such as IL-2, 4, 7, 9, 13, 15, 17, 21, 23.
+By inhibiting JAK enzymes, JAK inhibitors can modulate the immune response and reduce inflammation.
+JAK inhibitors are used to treat a variety of autoimmune and inflammatory diseases, including rheumatoid arthritis, psoriasis, and inflammatory bowel disease.
+
+
+## Examples of JAK inhibitors
+
+First generation JAK inhibitors:
+
+* Tofacitinib (JAK1/3 inhibitor)
+* Ruxolitinib (JAK1/2 inhibitor)
+
+Second generation JAK inhibitors:
+
+* Upadacitinib (selective for JAK1)
