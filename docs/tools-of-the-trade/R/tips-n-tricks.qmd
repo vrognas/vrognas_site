@@ -4,7 +4,7 @@ title: "R Tips-n-Tricks"
 
 ## Show ALL duplicate values
 
-```{r}
+```r
 df |>
 group_by(ID) |>
 filter(
@@ -15,13 +15,13 @@ filter(
 
 ## Find first occurence of a non-NA
 
-```{r}
+```r
 df$col1[which.max(!is.na(col2))]
 ```
 
 ## Pipe into View(), with title
 
-```{r}
+```r
 df |>
   filter |>
   group_by |>
@@ -34,7 +34,7 @@ df |>
 
 ## Style
 * 80 characters per line
-* 150 lines per script (?)
+* 150 lines per script
 
 ## Misc
 
