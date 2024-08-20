@@ -68,20 +68,20 @@ website:
         - section: "Pharmacopœia"
           href: docs/pharmacopeia/index.qmd
           contents:
-          - text: "(A) Alimentary tract & metabolism"
-            href: docs/pharmacopeia/gastrointestinal/index.qmd
-          - text: "(B) Blood & blood forming organs"
-            href: docs/pharmacopeia/blood/index.qmd
-          - text: "(C) Cardiovascular system"
-            href: docs/pharmacopeia/cardio/index.qmd
-          - text: "(D) Dermatoligicals"
-            href: docs/pharmacopeia/dermatology/index.qmd
-          - text: "(G) Genito urinary system & sex hormones"
-            href: docs/pharmacopeia/urogenital/index.qmd
-          - text: "(H) Systemic hormonal preparations (excl. sex hormones & insulins)"
-            href: docs/pharmacopeia/hormones/index.qmd
-          - text: "(J) Antiinfectives for systemic use"
-            href: docs/pharmacopeia/infections/index.qmd
+          # - text: "(A) Alimentary tract & metabolism"
+          #   href: docs/pharmacopeia/gastrointestinal/index.qmd
+          # - text: "(B) Blood & blood forming organs"
+          #   href: docs/pharmacopeia/blood/index.qmd
+          # - text: "(C) Cardiovascular system"
+          #   href: docs/pharmacopeia/cardio/index.qmd
+          # - text: "(D) Dermatoligicals"
+          #   href: docs/pharmacopeia/dermatology/index.qmd
+          # - text: "(G) Genito urinary system & sex hormones"
+          #   href: docs/pharmacopeia/urogenital/index.qmd
+          # - text: "(H) Systemic hormonal preparations (excl. sex hormones & insulins)"
+          #   href: docs/pharmacopeia/hormones/index.qmd
+          # - text: "(J) Antiinfectives for systemic use"
+          #   href: docs/pharmacopeia/infections/index.qmd
           - section: "(L) Antineoplastic & immunomodulating agents"
             href: docs/pharmacopeia/immunology/index.qmd
             contents:
@@ -90,18 +90,18 @@ website:
                 contents:
                 - text: "JAK-inhibitors"
                   href: docs/pharmacopeia/immunology/immunosuppressants/jak-inhibitors.qmd
-          - text: "(M) Musculo-skeletal system"
-            href: docs/pharmacopeia/musculo-skeletal/index.qmd
-          - text: "(N) Nervous system"
-            href: docs/pharmacopeia/neurology/index.qmd
-          - text: "(P) Antiparasitic products, insecticides & repellents"
-            href: docs/pharmacopeia//index.qmd
-          - text: "(R) Respiratory system"
-            href: docs/pharmacopeia/respiratory/index.qmd
-          - text: "(S) Sensory organs"
-            href: docs/pharmacopeia/sensory/index.qmd
-          - text: "(V) Various"
-            href: docs/pharmacopeia/various/index.qmd
+          # - text: "(M) Musculo-skeletal system"
+          #   href: docs/pharmacopeia/musculo-skeletal/index.qmd
+          # - text: "(N) Nervous system"
+          #   href: docs/pharmacopeia/neurology/index.qmd
+          # - text: "(P) Antiparasitic products, insecticides & repellents"
+          #   href: docs/pharmacopeia//index.qmd
+          # - text: "(R) Respiratory system"
+          #   href: docs/pharmacopeia/respiratory/index.qmd
+          # - text: "(S) Sensory organs"
+          #   href: docs/pharmacopeia/sensory/index.qmd
+          # - text: "(V) Various"
+          #   href: docs/pharmacopeia/various/index.qmd
     - id: concepts
       title: "Concepts"
       collapse-level: 2
