@@ -74,7 +74,7 @@ website:
           #   href: docs/pharmacopeia/blood/index.qmd
           # - text: "(C) Cardiovascular system"
           #   href: docs/pharmacopeia/cardio/index.qmd
-          # - text: "(D) Dermatoligicals"
+          # - text: "(D) Dermatologicals"
           #   href: docs/pharmacopeia/dermatology/index.qmd
           # - text: "(G) Genito urinary system & sex hormones"
           #   href: docs/pharmacopeia/urogenital/index.qmd
