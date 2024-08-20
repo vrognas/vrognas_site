@@ -118,10 +118,12 @@ website:
       contents:
         - section: "NONMEM"
           contents:
-            - docs/tools-of-the-trade/nonmem/tips-n-tricks.qmd
+            - text: "tips-n-tricks"
+              href: docs/tools-of-the-trade/nonmem/tips-n-tricks.qmd
         - section: "R"
           contents:
-            - docs/tools-of-the-trade/r/tips-n-tricks.qmd
+            - text: "Tips-n-tricks"
+              href: docs/tools-of-the-trade/r/tips-n-tricks.qmd
   page-footer:
     left: "© 2024 Viktor Rognås"
     right:
