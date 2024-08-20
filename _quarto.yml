@@ -114,16 +114,18 @@ website:
       title: "Tools of the Trade"
       collapse-level: 2
       style: "floating"
-      href: docs/tools-of-the-trade/index.qmd
       contents:
-        - section: "NONMEM"
+        - section: "Tools of the Trade"
+          href: docs/tools-of-the-trade/index.qmd
           contents:
-            - text: "tips-n-tricks"
-              href: docs/tools-of-the-trade/nonmem/tips-n-tricks.qmd
-        - section: "R"
-          contents:
-            - text: "Tips-n-tricks"
-              href: docs/tools-of-the-trade/r/tips-n-tricks.qmd
+          - section: "NONMEM"
+            contents:
+              - text: "tips-n-tricks"
+                href: docs/tools-of-the-trade/nonmem/tips-n-tricks.qmd
+          - section: "R"
+            contents:
+              - text: "Tips-n-tricks"
+                href: docs/tools-of-the-trade/r/tips-n-tricks.qmd
   page-footer:
     left: "© 2024 Viktor Rognås"
     right:
