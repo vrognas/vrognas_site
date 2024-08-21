@@ -1,0 +1,55 @@
+---
+title: "Guild"
+subtitle: "Get in contact with the community"
+---
+
+# NMMUSERS
+
+To **subscribe** to nmusers, send the following in the body (not the subject line) of an email message to `majordomo@globomaxnm.com`:
+
+```
+subscribe nmusers
+```
+
+This will subscribe the account from which you send the message to the nmusers list.
+
+If you wish to subscribe another address instead (such as a local redistribution list), you can use a command of the form:
+
+```
+subscribe nmusers other-address@your_site.your_net
+```
+
+To **unsubscribe** from nmusers, send the following in the body (not the subject line) of an email message to `majordomo@globomaxnm.com`:
+
+```
+unsubscribe nmusers
+```
+
+This will unsubscribe the account from which you send the message.
+If you are subscribed with some other address, you'll have to send a command of the following form instead:
+
+```
+unsubscribe nmusers other-address@your_site.your_net
+```
+
+If you don't know what address you are subscribed with, you can send the following command to see who else is on the list (assuming that information isn't designated "private" by the owner of the list):
+
+```
+who nmusers
+```
+
+If you want to search non-private lists at this server, you can do that by sending a command like:
+
+```
+which string
+```
+
+This will return a list of all entries on all lists that contain "string".
+
+## NMUSERS posting guidelines
+
+1. Limit 40000 characters (including appending dialog history from previous responses, so truncate if it gets too long)
+2. No attachments
+3. Only text and links
+
+[](https://www.mail-archive.com/nmusers@globomaxnm.com/msg07406.html)
