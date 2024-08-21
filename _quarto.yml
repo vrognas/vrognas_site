@@ -38,8 +38,6 @@ website:
       - icon: mortarboard
         href: https://scholar.google.com/citations?user=RBJi1XQAAAAJ
   sidebar:
-    - title: "About"
-      style: "floating"
     - title: "CV/Resume"
       style: "floating"
     - id: disease-primers
