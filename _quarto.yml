@@ -20,6 +20,8 @@ website:
     left:
       - text: "CV/Resume"
         href: docs/cv/index.qmd
+      - text: "Projects"
+        href: docs/projects/index.qmd
       - text: "Resources"
         menu:
           - text: "Disease primers"
@@ -39,6 +41,8 @@ website:
         href: https://scholar.google.com/citations?user=RBJi1XQAAAAJ
   sidebar:
     - title: "CV/Resume"
+      style: "floating"
+    - title: "Projects"
       style: "floating"
     - id: disease-primers
       title: "Disease primers"
