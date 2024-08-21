@@ -18,8 +18,6 @@ website:
   bread-crumbs: true
   navbar:
     left:
-      - text: "About"
-        href: index.qmd
       - text: "CV/Resume"
         href: docs/cv/index.qmd
       - text: "Resources"
