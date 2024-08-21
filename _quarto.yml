@@ -20,7 +20,7 @@ website:
     left:
       - text: "CV/Resume"
         href: docs/cv/index.qmd
-      - text: "portfolia"
+      - text: "Portfolio"
         href: docs/portfolio/index.qmd
       - text: "Resources"
         menu:
