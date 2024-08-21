@@ -20,8 +20,8 @@ website:
     left:
       - text: "CV/Resume"
         href: docs/cv/index.qmd
-      - text: "Projects"
-        href: docs/projects/index.qmd
+      - text: "portfolia"
+        href: docs/portfolio/index.qmd
       - text: "Resources"
         menu:
           - text: "Disease primers"
@@ -42,7 +42,7 @@ website:
   sidebar:
     - title: "CV/Resume"
       style: "floating"
-    - title: "Projects"
+    - title: "Portfolio"
       style: "floating"
     - id: disease-primers
       title: "Disease primers"

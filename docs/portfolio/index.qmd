@@ -1,0 +1,23 @@
+---
+title: "Portfolio"
+---
+
+## Publications 📚
+
+- [Population pharmacokinetics of colistin and the relation to survival in critically ill patients infected with colistin susceptible and carbapenem-resistant bacteria](https://doi.org/10.1016/j.cmi.2020.03.016)
+- [Colistin Resistance Development Following Colistin-Meropenem Combination Therapy Versus Colistin Monotherapy in Patients With Infections Caused by Carbapenem-Resistant Organisms](https://doi.org/10.1093/cid/ciz1146)
+- [An integrated semi-mechanistic model to predict the outcome of drug-target effects on the erythropoietic system](www.page-meeting.org/?abstract=10044)
+- [Evaluation of IRT-derived disease severity as a predictor of clinical success in critically ill patients with severe antibiotic resistant infections](www.page-meeting.org/?abstract=9803)
+- [Turn-over model characterizing effect of colistin on serum-creatinine in critically ill patients](www.page-meeting.org/?abstract=9869)
+- [Bounded Integer approach to model time-varying SOFA scores from patients with carbapenem resistant infections]www.page-meeting.org/?abstract=9052)
+
+
+## Authored Projects 📝
+
+- [*vscode-nmtran*](https://github.com/vrognas/vscode-nmtran): Boosting Visual Studio Code with NMTRAN (NONMEM) language support
+- [*vmisc*](https://github.com/vrognas/vmisc): A handy toolbox of custom R-functions, crafted over the years
+- [*MPAcolors*](https://github.com/vrognas/MPAcolors): ggplot2-compatible functions for colors used by the Swedish Medical Products Agency (MPA)
+
+## Collaborations 🤝
+
+- [*PharmPy*](https://pharmpy.github.io/latest/index.html): Pioneering tools and libraries for the pharmacometrics community
