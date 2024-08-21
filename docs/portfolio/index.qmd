@@ -9,7 +9,7 @@ title: "Portfolio"
 - [An integrated semi-mechanistic model to predict the outcome of drug-target effects on the erythropoietic system](www.page-meeting.org/?abstract=10044)
 - [Evaluation of IRT-derived disease severity as a predictor of clinical success in critically ill patients with severe antibiotic resistant infections](www.page-meeting.org/?abstract=9803)
 - [Turn-over model characterizing effect of colistin on serum-creatinine in critically ill patients](www.page-meeting.org/?abstract=9869)
-- [Bounded Integer approach to model time-varying SOFA scores from patients with carbapenem resistant infections]www.page-meeting.org/?abstract=9052)
+- [Bounded Integer approach to model time-varying SOFA scores from patients with carbapenem resistant infections](www.page-meeting.org/?abstract=9052)
 
 
 ## Authored Projects 📝
