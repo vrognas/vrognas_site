@@ -37,7 +37,7 @@ Alongside my current employment, I am also pursuing a PhD in Pharmacometrics at 
 
 ## Courses
 
-### Pharmacometrics 
+### Pharmacometrics/Modeling
 
 * Forest plots in practical use: Implementation and interpretation, _Pharmetheus AB_ (2022)
 * Pharmacometric modeling of composite scores outcomes, _Uppsala University_ (2021)
@@ -49,24 +49,30 @@ Alongside my current employment, I am also pursuing a PhD in Pharmacometrics at 
 * Optimal Designs and Randomization Techniques for Clinical Trials, _Uppsala University_ (2018)
 * Time-to-event data modelling using Monolix, _University of Cape Town_ (2018)
 * The Sheiner-Rowland Advanced Course in Pharmacokinetics and Pharmacodynamics, _Advanced PKPD Sils-Maria_, (2018)
+* Pharmacokinetics, _Uppsala University_ (2016)
+* Process Modelling, _Uppsala University_ (2016)
+* Models for Biological Systems, _Uppsala University_ (2016)
+* Chemical Engineering, _Uppsala University_ (2014)
 
 ### Mathematics
-* Differential Equations, _University of Colorado Boulder_ (2015)
-* Linear Algebra and Geometry II, _Uppsala University_ (2013)
-* Linear Algebra and Geometry I, _Uppsala University_ (2011)
-* Probability and Statistics, _Uppsala University_ (2012)
-* Several Variable Calculus, _Uppsala University_ (2012)
-* Single Variable Calculus, _Uppsala University_ (2012)
-* Basic Course in Mathematics, _Uppsala University_ (2011)
 
-### Biology/Medicine
+* Differential Equations, _University of Colorado Boulder_ (2015)
+* Linear Algebra and Geometry, _Uppsala University_ (2013)
+* Probability and Statistics, _Uppsala University_ (2012)
+* Calculus, _Uppsala University_ (2012)
+
+### Biology/Medicine/Pharmacy
 
 * Clinical Trials Epidemiology, _Uppsala University_ (2020)
 * Essential Clinical Epidemiology, _Uppsala University_ (2019)
 * Molecular Cell Biology, _University of Colorado Boulder_ (2015)
 * Nutrition, _University of Colorado Boulder_ (2015)
+* Pharmaceutics, _Uppsala University_ (2015)
+* Drug Formulation and Drug Delivery, _Uppsala University_ (2015)
+* Pharmacology, _Uppsala University_ (2014)
 * Cancer Biology, _University of Skövde_ (2013)
-* Basic Medical Genetics, _Uppsala University_ (2012)
+* Physiology, _Uppsala University_ (2013)
+* Medical Genetics, _Uppsala University_ (2012)
 
 ### Antimicrobial Resistance 
 
@@ -79,20 +85,25 @@ Alongside my current employment, I am also pursuing a PhD in Pharmacometrics at 
 
 ### Chemistry
 
-* Chemical Principles I, _Uppsala University_ (2011)
-* Biochemistry I, _Uppsala University_ (2012)
-* Organic Chemistry I, _Uppsala University_ (2012)
-* Inorganic Chemistry I, _Uppsala University_ (2012)
+* Medicinal Chemistry, _Uppsala University_ (2014)
+* Organic Synthesis, _Uppsala University_ (2016)
+* Synthetic Organic Chemistry, _Uppsala University_ (2013)
+* Spectroscopic Methods for Organic Chemistry, _Uppsala University_ (2015)
+* Polymer Chemistry, _Uppsala University_ (2013)
+* Biochemistry, _Uppsala University_ (2012)
+* Organic Chemistry, _Uppsala University_ (2012)
+* Inorganic Chemistry, _Uppsala University_ (2012)
 * Analytical Chemistry with Data Analysis and Chemometrics, _Uppsala University_ (2013)
 * Physical Chemistry, _Uppsala University_ (2013)
 * Quantum Mechanics and Chemical Bonding, _Uppsala University_ (2013)
 * Chemical Thermodynamics, _Uppsala University_ (2013)
-* Polymer Chemistry, _Uppsala University_ (2013)
+* Chemical Principles, _Uppsala University_ (2011)
 
 ### Miscellaneous 
 
+* Business Development and Entrepreneurship, _Uppsala University_ (2017)
 * Project Management, _Stockholm University_ (2015)
 * General Psychology, _University of Colorado Boulder_ (2015)
 * Finance and Accounting for Engineering Management, _The Lockheed Martin Engineering Management Program, University of Colorado Boulder_ (2014)
-* Scientific Computing II, _Uppsala University_ (2013)
-* Scientific Computing I, _Uppsala University_ (2012)
+* Physics (newtonian), _Uppsala University_ (2013)
+* Scientific Computing, _Uppsala University_ (2013)
