@@ -39,13 +39,13 @@ Alongside my current employment, I am also pursuing a PhD in Pharmacometrics at 
 
 ### Pharmacometrics/Modeling
 
+* Advanced Methods in NONMEM 7.5, _ICON plc_ (2022)
+* Advanced Methods in NONMEM 7.4, _ICON plc_ (2019)
 * Forest plots in practical use: Implementation and interpretation, _Pharmetheus AB_ (2022)
 * Pharmacometric modeling of composite scores outcomes, _Uppsala University_ (2021)
 * Advanced population model building and usage in NONMEM, _Uppsala University_ (2021)
 * Pharmacometric Statistics, _TACA Training_ (2019)
 * Uppsala Pharmacometrics Summer School, _Uppsala University_ (2019)
-* Advanced Methods in NONMEM 7.5, _ICON plc_ (2022)
-* Advanced Methods in NONMEM 7.4, _ICON plc_ (2019)
 * Optimal Designs and Randomization Techniques for Clinical Trials, _Uppsala University_ (2018)
 * Time-to-event data modelling using Monolix, _University of Cape Town_ (2018)
 * The Sheiner-Rowland Advanced Course in Pharmacokinetics and Pharmacodynamics, _Advanced PKPD Sils-Maria_, (2018)
@@ -53,6 +53,7 @@ Alongside my current employment, I am also pursuing a PhD in Pharmacometrics at 
 * Process Modelling, _Uppsala University_ (2016)
 * Models for Biological Systems, _Uppsala University_ (2016)
 * Chemical Engineering, _Uppsala University_ (2014)
+* Scientific Computing, _Uppsala University_ (2013)
 
 ### Mathematics
 
@@ -106,4 +107,3 @@ Alongside my current employment, I am also pursuing a PhD in Pharmacometrics at 
 * General Psychology, _University of Colorado Boulder_ (2015)
 * Finance and Accounting for Engineering Management, _The Lockheed Martin Engineering Management Program, University of Colorado Boulder_ (2014)
 * Physics (newtonian), _Uppsala University_ (2013)
-* Scientific Computing, _Uppsala University_ (2013)
