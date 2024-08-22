@@ -120,7 +120,7 @@ website:
           contents:
           - section: "NONMEM"
             contents:
-              - text: "tips-n-tricks"
+              - text: "Tips-n-tricks"
                 href: docs/tools-of-the-trade/nonmem/nm-tips-n-tricks.qmd
           - section: "R"
             contents:
