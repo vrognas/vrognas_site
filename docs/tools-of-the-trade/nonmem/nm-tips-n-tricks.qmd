@@ -126,7 +126,7 @@ Paolo
 When used in nonmem 7.5, a recommended example/setup would be (as shown on = 
 page 152 of nm750.pdf) 
 
-```
+```default
 $SIZES ISAMPLEMAX=250
 ... 
 $EST METHOD=SAEM NBURN=500 NITER=1000 MASSRESET=1 ISAMPLE=2 PRINT=20 NOPRIOR=1 RANMETHOD=P
