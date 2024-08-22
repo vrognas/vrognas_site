@@ -1,10 +1,10 @@
 ---
-title: "CV/Resume"
+title: "Curriculum Vitae"
 ---
 
-I am a Pharmacokinetic Assessor at the Swedish Medical Products Agency (Läkemedelsverket).
+I work as a Pharmacokinetic Assessor at the [Swedish Medical Products Agency (Läkemedelsverket)](https://www.lakemedelsverket.se/en).
 
-Alongside my current employment, I am also a PhD student in [Pharmacometrics at Uppsala University](https://farmaci.uu.se/research/pharmacometrics/).   
+Alongside my current employment, I am also pursuing a PhD in [Pharmacometrics at Uppsala University](https://farmaci.uu.se/research/pharmacometrics/).   
 
 [My PhD project](https://uac.uu.se/uac-research/colistin-pkpd/) is using statistical models to help overcome [antibiotic resistance](https://www.reactgroup.org/antibiotic-resistance/), and is a part of [Uppsala Antibiotic Center](https://uac.uu.se).  
 
@@ -20,6 +20,22 @@ Alongside my current employment, I am also a PhD student in [Pharmacometrics at 
 
 ### Diploma  
 * [**School of Entrepreneurship**](https://cie.uu.se/industrial-engineering-and-management/education/entrepreneurship/), _Uppsala University_ (2017)
+
+
+### Awards and Scholarships
+* **The Pharmaceutical Student Union’s Study Council Award for Student Treatment**, _Pharmaceutical Student Union_ (2021)
+
+> During the spring semester of 2020, courses were taught remotely when COVID-19 began to spread in Sweden. Students experienced difficulties with remote work. Viktor approached and understood the students, brought forward their opinions to the ones responsible and stayed after hours to help the students that needed extra help with their individual projects. Thanks to Viktor’s admirable approach, the upcoming courses could be optimized for students.
+
+* **Börjessons äldre**, _Uppsala University_ (2018)  
+
+> "...for male students who are studying towards licentiate or higher degrees, [and] are distinguished by dedication and aptitude..."
+
+* **Linds, Hans**, _Uppsala University_ (2017)
+
+> "... well-mannered male student who has been registered at the Faculty of Medicine at Uppsala University for at least one academic year is awarded by the faculty..."
+
+* **Gahn foundation for students of chemistry**, _Uppsala University_ (2014)
 
 ### Courses
 
@@ -60,18 +76,3 @@ Alongside my current employment, I am also a PhD student in [Pharmacometrics at 
 * Differential Equations, _University of Colorado Boulder_ (2015)
 * General Psychology, _University of Colorado Boulder_ (2015)
 * Finance and Accounting for Engineering Management, _The Lockheed Martin Engineering Management Program, University of Colorado Boulder_ (2014)
-
-### Awards and Scholarships
-* **The Pharmaceutical Student Union’s Study Council Award for Student Treatment**, _Pharmaceutical Student Union_ (2021)
-
-> During the spring semester of 2020, courses were taught remotely when COVID-19 began to spread in Sweden. Students experienced difficulties with remote work. Viktor approached and understood the students, brought forward their opinions to the ones responsible and stayed after hours to help the students that needed extra help with their individual projects. Thanks to Viktor’s admirable approach, the upcoming courses could be optimized for students.
-
-* **Börjessons äldre**, _Uppsala University_ (2018)  
-
-> "...for male students who are studying towards licentiate or higher degrees, [and] are distinguished by dedication and aptitude..."
-
-* **Linds, Hans**, _Uppsala University_ (2017)
-
-> "... well-mannered male student who has been registered at the Faculty of Medicine at Uppsala University for at least one academic year is awarded by the faculty..."
-
-* **Gahn foundation for students of chemistry**, _Uppsala University_ (2014)
