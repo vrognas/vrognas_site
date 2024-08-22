@@ -48,11 +48,23 @@ Alongside my current employment, I am also pursuing a PhD in [Pharmacometrics at
 * Uppsala Pharmacometrics Summer School, _Uppsala University_ (2019)
 * Advanced Methods in NONMEM 7.5, _ICON plc_ (2022)
 * Advanced Methods in NONMEM 7.4, _ICON plc_ (2019)
+* Optimal Designs and Randomization Techniques for Clinical Trials, _Uppsala University_ (2018)
 * Time-to-event data modelling using Monolix, _University of Cape Town_ (2018)
 * The Sheiner-Rowland Advanced Course in Pharmacokinetics and Pharmacodynamics, _Advanced PKPD Sils-Maria_, (2018)
 
+#### Mathematics
+* Differential Equations, _University of Colorado Boulder_ (2015)
+* Linear Algebra and Geometry II, _Uppsala University_ (2013)
+* Linear Algebra and Geometry I, _Uppsala University_ (2011)
+* Probability and Statistics, _Uppsala University_ (2012)
+* Several Variable Calculus, _Uppsala University_ (2012)
+* Single Variable Calculus, _Uppsala University_ (2012)
+* Basic Course in Mathematics, _Uppsala University_ (2011)
+
 #### Biology/Medicine
 
+* Clinical Trials Epidemiology, _Uppsala University_ (2020)
+* Essential Clinical Epidemiology, _Uppsala University_ (2019)
 * Molecular Cell Biology, _University of Colorado Boulder_ (2015)
 * Nutrition, _University of Colorado Boulder_ (2015)
 * Cancer Biology, _University of Skövde_ (2013)
@@ -67,12 +79,22 @@ Alongside my current employment, I am also pursuing a PhD in [Pharmacometrics at
 * Antibiotic resistance: the Silent Tsunami, _Uppsala University_ (2018)
 * Microbiology and Immunology, _Gävle University College_ (2013)
 
+#### Chemistry
+
+* Chemical Principles I, _Uppsala University_ (2011)
+* Biochemistry I, _Uppsala University_ (2012)
+* Organic Chemistry I, _Uppsala University_ (2012)
+* Inorganic Chemistry I, _Uppsala University_ (2012)
+* Analytical Chemistry with Data Analysis and Chemometrics, _Uppsala University_ (2013)
+* Physical Chemistry, _Uppsala University_ (2013)
+* Quantum Mechanics and Chemical Bonding, _Uppsala University_ (2013)
+* Chemical Thermodynamics, _Uppsala University_ (2013)
+* Polymer Chemistry, _Uppsala University_ (2013)
+
 #### Miscellaneous 
 
-* Clinical Trials Epidemiology, _Uppsala University_ (2020)
-* Essential Clinical Epidemiology, _Uppsala University_ (2019)
-* Optimal Designs and Randomization Techniques for Clinical Trials, _Uppsala University_ (2018)
 * Project Management, _Stockholm University_ (2015)
-* Differential Equations, _University of Colorado Boulder_ (2015)
 * General Psychology, _University of Colorado Boulder_ (2015)
 * Finance and Accounting for Engineering Management, _The Lockheed Martin Engineering Management Program, University of Colorado Boulder_ (2014)
+* Scientific Computing II, _Uppsala University_ (2013)
+* Scientific Computing I, _Uppsala University_ (2012)
