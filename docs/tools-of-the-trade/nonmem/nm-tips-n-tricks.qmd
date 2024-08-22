@@ -143,7 +143,7 @@ differential equations).
 
 I had problems using FOCE so I am trying this estimation method : 
 
-```
+```default
 $EST METHOD=ITS INTERACTION LAPLACE NITER=200 SIG=3 PRINT=1 SIGL=6 NOHABORT 
 CTYPE=3 NUMERICAL SLOW 
 
@@ -155,7 +155,7 @@ $COV UNCONDITIONAL MATRIX=S TOL=12 SIGL=12 SLOW
 
 The iteration for the ITS step seems to be quite stable with some artefacts: 
 
-```
+```default
 iteration 175 OBJ= 4693.4674554341409
 iteration 176 OBJ= 4694.2296104065535
 iteration 177 OBJ= 4693.7753507970829
@@ -189,7 +189,7 @@ OPTIMIZATION WAS NOT COMPLETED
 
 The IMP step seems less stable : 
 
-```
+```default
 iteration 120 OBJ= 4314.8310660241377 eff.= 446. Smpl.= 1000. Fit.= 0.96389
 iteration 121 OBJ= 4326.9079856676717 eff.= 448. Smpl.= 1000. Fit.= 0.96409
 iteration 122 OBJ= 4164.6649529423103 eff.= 479. Smpl.= 1000. Fit.= 0.96392
