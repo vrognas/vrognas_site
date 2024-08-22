@@ -1,6 +1,6 @@
 ---
 title: "NONMEM Tips-n-Tricks"
-highlight-style: gruvbox
+highlight-style: github
 ---
 
 log-transform both sides: cognigen.com/nonmem/nm/99apr232002.html
