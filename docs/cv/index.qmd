@@ -4,11 +4,9 @@ title: "Curriculum Vitae"
 
 I work as a Pharmacokinetic Assessor at the [Swedish Medical Products Agency (Läkemedelsverket)](https://www.lakemedelsverket.se/en).
 
-Alongside my current employment, I am also pursuing a PhD in [Pharmacometrics at Uppsala University](https://farmaci.uu.se/research/pharmacometrics/).   
+Alongside my current employment, I am also pursuing a PhD in Pharmacometrics at [Uppsala University](https://www.uu.se/en).
 
-[My PhD project](https://uac.uu.se/uac-research/colistin-pkpd/) is using statistical models to help overcome [antibiotic resistance](https://www.reactgroup.org/antibiotic-resistance/), and is a part of [Uppsala Antibiotic Center](https://uac.uu.se).  
-
-### Degrees  
+## Degrees  
 * [**Master of Science in Engineering**](http://www.uu.se/en/admissions/master/selma/studieplan/?planId=405&pKod=TKT2Y&lasar=), _Uppsala University_ (2017)
   * Master Thesis: [_Customer Based Business Development: Strategic Challenges for a Small Research-Based Spin-Off Enterprise_](http://www.diva-portal.org/smash/get/diva2:1137512/FULLTEXT01.pdf)
   * Specialization: _Chemical Engineering, Pharmaceutical Science_
@@ -18,11 +16,11 @@ Alongside my current employment, I am also pursuing a PhD in [Pharmacometrics at
   * Major: _Technology_
   * Minor: _Mathematics_
 
-### Diploma  
+## Diploma  
 * [**School of Entrepreneurship**](https://cie.uu.se/industrial-engineering-and-management/education/entrepreneurship/), _Uppsala University_ (2017)
 
 
-### Awards and Scholarships
+## Awards and Scholarships
 * **The Pharmaceutical Student Union’s Study Council Award for Student Treatment**, _Pharmaceutical Student Union_ (2021)
 
 > During the spring semester of 2020, courses were taught remotely when COVID-19 began to spread in Sweden. Students experienced difficulties with remote work. Viktor approached and understood the students, brought forward their opinions to the ones responsible and stayed after hours to help the students that needed extra help with their individual projects. Thanks to Viktor’s admirable approach, the upcoming courses could be optimized for students.
@@ -37,9 +35,9 @@ Alongside my current employment, I am also pursuing a PhD in [Pharmacometrics at
 
 * **Gahn foundation for students of chemistry**, _Uppsala University_ (2014)
 
-### Courses
+## Courses
 
-#### Pharmacometrics 
+### Pharmacometrics 
 
 * Forest plots in practical use: Implementation and interpretation, _Pharmetheus AB_ (2022)
 * Pharmacometric modeling of composite scores outcomes, _Uppsala University_ (2021)
@@ -52,7 +50,7 @@ Alongside my current employment, I am also pursuing a PhD in [Pharmacometrics at
 * Time-to-event data modelling using Monolix, _University of Cape Town_ (2018)
 * The Sheiner-Rowland Advanced Course in Pharmacokinetics and Pharmacodynamics, _Advanced PKPD Sils-Maria_, (2018)
 
-#### Mathematics
+### Mathematics
 * Differential Equations, _University of Colorado Boulder_ (2015)
 * Linear Algebra and Geometry II, _Uppsala University_ (2013)
 * Linear Algebra and Geometry I, _Uppsala University_ (2011)
@@ -61,7 +59,7 @@ Alongside my current employment, I am also pursuing a PhD in [Pharmacometrics at
 * Single Variable Calculus, _Uppsala University_ (2012)
 * Basic Course in Mathematics, _Uppsala University_ (2011)
 
-#### Biology/Medicine
+### Biology/Medicine
 
 * Clinical Trials Epidemiology, _Uppsala University_ (2020)
 * Essential Clinical Epidemiology, _Uppsala University_ (2019)
@@ -70,7 +68,7 @@ Alongside my current employment, I am also pursuing a PhD in [Pharmacometrics at
 * Cancer Biology, _University of Skövde_ (2013)
 * Basic Medical Genetics, _Uppsala University_ (2012)
 
-#### Antimicrobial Resistance 
+### Antimicrobial Resistance 
 
 * The Economics of Antibiotics, _Uppsala University_ (2019)
 * Resistance Biology, _Uppsala University_ (2018)
@@ -79,7 +77,7 @@ Alongside my current employment, I am also pursuing a PhD in [Pharmacometrics at
 * Antibiotic resistance: the Silent Tsunami, _Uppsala University_ (2018)
 * Microbiology and Immunology, _Gävle University College_ (2013)
 
-#### Chemistry
+### Chemistry
 
 * Chemical Principles I, _Uppsala University_ (2011)
 * Biochemistry I, _Uppsala University_ (2012)
@@ -91,7 +89,7 @@ Alongside my current employment, I am also pursuing a PhD in [Pharmacometrics at
 * Chemical Thermodynamics, _Uppsala University_ (2013)
 * Polymer Chemistry, _Uppsala University_ (2013)
 
-#### Miscellaneous 
+### Miscellaneous 
 
 * Project Management, _Stockholm University_ (2015)
 * General Psychology, _University of Colorado Boulder_ (2015)
