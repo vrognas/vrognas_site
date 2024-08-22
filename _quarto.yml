@@ -140,7 +140,9 @@ format:
     theme:
       light: [cosmo, theme-light.scss]
       dark: [cosmo, theme-dark.scss]
-    highlight-style: dracula
+    highlight-style:
+      light: dracula
+      dark: gruvbox-dark
     css: styles.css
     toc: true
     code-copy: true
