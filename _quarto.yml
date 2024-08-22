@@ -140,6 +140,7 @@ format:
     theme:
       light: [cosmo, theme-light.scss]
       dark: [cosmo, theme-dark.scss]
+    highlight-style: dracula
     css: styles.css
     toc: true
     code-copy: true
