@@ -143,7 +143,7 @@ differential equations).
 
 I had problems using FOCE so I am trying this estimation method : 
 
-```scheme
+```nasm
 $EST METHOD=ITS INTERACTION LAPLACE NITER=200 SIG=3 PRINT=1 SIGL=6 NOHABORT 
 CTYPE=3 NUMERICAL SLOW 
 ; test comment
