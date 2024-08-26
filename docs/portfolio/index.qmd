@@ -2,7 +2,7 @@
 title: "Portfolio"
 ---
 
-## Publications 📚
+## Scientific Work 📚
 
 - [Population pharmacokinetics of colistin and the relation to survival in critically ill patients infected with colistin susceptible and carbapenem-resistant bacteria](https://doi.org/10.1016/j.cmi.2020.03.016)
 - [Colistin Resistance Development Following Colistin-Meropenem Combination Therapy Versus Colistin Monotherapy in Patients With Infections Caused by Carbapenem-Resistant Organisms](https://doi.org/10.1093/cid/ciz1146)
