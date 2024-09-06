@@ -1,0 +1,23 @@
+---
+title: "Disease primer: Lung cancers"
+---
+
+There are three main types of skin cancer, depending on which cells have turned cancerous:
+
+* Small-cell lung cancer (SCLC) ~15% of cases
+* Non-small-cell lung cancer (NSCLC) ~85% of cases
+  * Adenocarcinomas ~40% of cases
+  * Squamous-cell carcinomas ~30% of cases
+  * Large-cell carcinomas ~15% of cases
+* Other rare types
+
+## Diagnosis
+
+Definitive diagnosis of lung cancer requires a biopsy of the suspected tumor be examined by a pathologist under a microscope.
+
+## Treatment
+
+* Surgery
+* Chemotherapy
+* Radiation therapy
+* Targeted drugs
