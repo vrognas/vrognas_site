@@ -4,3 +4,20 @@ title: "Pharmacopœia Pharmacometrica"
 
 This section contains a high-level overview on drugs and their mechanism of action.
 It is organized accoring to [ATC-codes](https://en.wikipedia.org/wiki/Anatomical_Therapeutic_Chemical_Classification_System), apart from antiparasitics (ATC-code P) which is organized under antiinfectives (ATC-code J).
+
+| ATC code   | Contents |
+|:----------:|:--------------------|
+| A | Alimentary tract and metabolism |
+| B | Blood and blood forming organs |
+| C | Cardiovascular system |
+| D | Dermatologicals |
+| G | Genito-urinary system and sex hormones |
+| H | Systemic hormonal preparations, excluding sex hormones and insulins |
+| J | Antiinfectives for systemic use |
+| L | Antineoplastic and immunomodulating agents |
+| M | Musculo-skeletal system |
+| N | Nervous system |
+| P | Antiparasitic products, insecticides and repellents |
+| R | Respiratory system |
+| S | Sensory organs |
+| V | Various |
