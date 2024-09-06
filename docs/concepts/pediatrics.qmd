@@ -9,3 +9,12 @@ Age groups:
 * 7-12 years
 * 13-17 years (adolescents)
 * 18+ years (adults)
+
+Renal maturation (Rhodin et al. 2009)[https://doi.org/10.1007/s00467-008-0997-5]:
+
+maturation = PMA**Hill / (TM_50**Hill + PMA**Hill)
+
+The maturation half-life (TM_50) is fixed to the literature value of 47.7 weeks and the
+Hill exponent to the value of 3.4 (both from Rhodin et al.).
+The distribution (mean, [min-max]) of PMA (weeks) in this study population was (518, [57-1652]).
+Assuming that the time to reach 50% of the maximum renal maturation could be different in pre-term infants, a different value for TM_50 could be estimated for pre-term neonates, if the current model does not describes this sub-group well.
