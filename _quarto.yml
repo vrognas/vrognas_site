@@ -28,7 +28,7 @@ website:
             href: docs/disease-primers/index.qmd
           - text: "Pharmacopœia"
             href: docs/pharmacopeia/index.qmd
-          - text: "Concepts"
+          - text: "Concepts of the Craft"
             href: docs/concepts/index.qmd
           - text: "Tools of the Trade"
             href: docs/tools-of-the-trade/index.qmd
@@ -105,11 +105,11 @@ website:
           # - text: "(V) Various"
           #   href: docs/pharmacopeia/various/index.qmd
     - id: concepts
-      title: "Concepts"
+      title: "Concepts of the Craft"
       collapse-level: 2
       style: "floating"
       contents:
-        - section: "Concepts"
+        - section: "Concepts of the Craft"
           href: docs/concepts/index.qmd
           contents:
             - text: "Augmented renal clearance (ARC)"
