@@ -33,13 +33,12 @@ log-transform both sides: cognigen.com/nonmem/nm/99apr232002.html
 ## Notes
 
 * IMPMAP is equivalent to IMP MAPITER=1 MAPINTER=1
-* NONMEM places the low bound equal to 1/100 (or 1/1000) of the initial value even if it is set to zero in the code. You may rerun with lower initial value or put NOTHETABOUNDTEST to the estimation record. /Leonid
-* nonmem_mpi on cluster uses login node as one of worker nodes. If you use mpi, it can be wise to use srun, e.g. srun execute run001.mod
-* Use ”Disease modifying” instead of ”protective”
+* NONMEM places the low bound equal to 1/100 (or 1/1000) of the initial value even if it is set to zero in the code. You may rerun with lower initial value or put NOTHETABOUNDTEST to the estimation record. (Credit: Leonid Gibiansky)
+* Use ”Disease modifying” instead of ”protective” (Credit: Mats Karlsson)
 * Mixture prior slide 31. Prior+flat prior ”what if we are wrong”. When conflict: up-weights data, downplays history
 * .ets file gets “random sampled ETAs” (less prone to shrinkage)
 * Tab-separated (less likely to be present in the actual data)
-* EXIT(1) istället för p=0 /+1E-15
+* EXIT(1) instead of p=0 /+1E-15 (Credit: Gunnar Yngman)
 * Two-stage approach: Apply a model to each individuals data
     * Require much data per individual.
     * OK mean parameters (i.e. typical individual)
@@ -61,15 +60,15 @@ log-transform both sides: cognigen.com/nonmem/nm/99apr232002.html
     * Non-parametric: Log-rank test
     * semi-parametric: Cox
     * parametric: Weibull, Gompertz, etc
+    * Weibull*COV forces proportional hazard (Credit: Andrew Hooker)
 * Time varying covariate: Specify as “regressor”.
-* When you use F, CMT matters
-* Weibull*COV forces proportional hazard
-* TTE simulations can be done either with a dataset containing all possible event times, or using MTIME
+* When you use F, CMT matters (Credit: Maria Kjellsson)
+* TTE simulations can be done either with a dataset containing all possible event times, or using MTIME (Credit: Joakim Nyberg)
 * Faster parallel NONMEM:
     * execute -nmfe_options=“[sbatchargs=--threads-per-core=1] -maxlim=2  -parafprint=100”
     * FILE* should be size 0
-    * FILE07–39 should be size 0 /Gibiansky
-* ETADER=3: Suggestion from Rikard on how to get out of a local minima
+    * FILE07–39 should be size 0 (Credit: Leonid Gibiansky)
+* ETADER=3: Get out of a local minima (Credit: Rikard Nordgren)
 * logistic=expit=inverse logit
     * logit≈probit(scaled)
 * $MIX NSPOP=3 (from lecture_simultaneous UPSS)
@@ -80,7 +79,7 @@ log-transform both sides: cognigen.com/nonmem/nm/99apr232002.html
     * $THETA1 (0, THETAI(1), 1)
     * $THETA2 (0, THETAI(2), 1)
 * Start every dataset with a ”Comment” column, the IGNORE=@ will then ignore a row if there is a text comment!
-* The second column should be a REF column with each line number
+    * The second column should be a REF column with each line number
 
 ## [NMusers] Interactive Control of NONMEM runs
 
@@ -138,7 +137,7 @@ $ESTIMATION METHOD=SAEM NBURN=0 NITER=0 MASSRESET=0 ETASAMPLES=1 ISAMPLE=200 EON
 $ESTIMATION METHOD=IMP NITER=5 MASSRESET=1 ETASAMPLES=0 ISAMPLE=1000 EONLY=1 PRINT=1 MAPITER=0 
 ```
 
-/Robert Bauer
+(Credit: Robert Bauer)
 
 ## IMP
 
