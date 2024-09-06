@@ -1,0 +1,11 @@
+---
+title: "Pediatrics"
+---
+
+Age groups:
+
+* 0-2 years
+* 3-6 years
+* 7-12 years
+* 13-17 years (adolescents)
+* 18+ years (adults)
