@@ -12,7 +12,7 @@ The Janus Kinases are:
 * JAK1
 * JAK2
 * JAK3
-* TYK2.
+* TYK2
 
 Janus kinase inhibitors can be classed in several overlapping classes: they are immunomodulators, they are DMARDs (disease-modifying antirheumatic drugs), and they are a subclass of tyrosine kinase inhibitors.
 
