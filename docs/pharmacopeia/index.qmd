@@ -3,7 +3,7 @@ title: "Pharmacopœia Pharmacometrica"
 ---
 
 This section contains a high-level overview on drugs and their mechanism of action.
-It is organized accoring to [ATC-codes](https://atcddd.fhi.no/atc_ddd_index/)
+It is organized accoring to [ATC-codes](https://atcddd.fhi.no/atc_ddd_index/).
 
 | ATC code   | Contents |
 |:----------:|:--------------------|
