@@ -49,7 +49,7 @@ df |>
     * gg_miss_upset() (instead of venn diagrams)
     * geom_miss_point() (jitter of missing)
     * bind_shadow()
-    * vis_miss (/Iris)
+    * vis_miss (Credit: Iris Minichmayr)
 * txtProgressBar
     * (single=3)
 * If write files on cluster for use in next step
