@@ -20,8 +20,19 @@ People who have had a recent high-risk exposure and test negative can have a fur
 HIV can be prevented and treated with antiretroviral therapy (ART). Untreated HIV can progress to AIDS, often after many years.
 
 Current ART options are combinations (or "cocktails") consisting of at least three medications belonging to at least two types, or "classes", of antiretroviral agents.
-There are eight classes of antiretroviral agents (ARVs), and over 30 individual drugs: nucleoside/nucleotide reverse transcriptase inhibitors (NRTIs), non-nucleoside reverse transcriptase inhibitors (NNRTIs), protease inhibitors (PIs), integrase inhibitors (INIs), a fusion inhibitor, a CCR5 antagonist, a CD4 T lymphocyte (CD4) post-attachment inhibitor, and a gp120 attachment inhibitor.
+There are eight classes of antiretroviral agents (ARVs), and over 30 individual drugs:
+
+1. Nucleoside/nucleotide reverse transcriptase inhibitors (NRTIs)
+2. Non-nucleoside reverse transcriptase inhibitors (NNRTIs)
+3. Protease inhibitors (PIs)
+4. Integrase inhibitors (INIs)
+5. Fusion inhibitor
+6. CCR5 antagonist
+7. CD4 T lymphocyte (CD4) post-attachment inhibitor
+8. gp120 attachment inhibitor
+
 There are also two drugs, ritonavir (RTV) and cobicistat (COBI) which can be used as pharmacokinetic (PK) enhancers (or boosters) to improve the PK profiles of PIs and the INI elvitegravir.
+
 Depending on the guidelines being followed, initial treatment generally consists of two nucleoside reverse transcriptase inhibitors along with a third ARV, either an INI, an NNRTI, or a PI with a booster.
 
 ## References
