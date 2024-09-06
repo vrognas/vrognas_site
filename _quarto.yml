@@ -56,10 +56,14 @@ website:
               href: docs/disease-primers/rheumatoid-arthritis.qmd
             - text: "Giant cell arteritis (GCA)"
               href: docs/disease-primers/giant-cell-arteritis.qmd
+            - text: "HIV/AIDS"
+              href: docs/disease-primers/hiv.qmd
             - text: "Bacterial infections"
               href: docs/disease-primers/bacterial-infection.qmd
             - text: "Skin cancers"
               href: docs/disease-primers/skin-cancer.qmd
+            - text: "Lung cancers"
+              href: docs/disease-primers/lung-cancer.qmd
     - id: pharmacopeia
       title: "Pharmacopœia"
       collapse-level: 3
