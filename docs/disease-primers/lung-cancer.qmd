@@ -2,14 +2,15 @@
 title: "Disease primer: Lung cancers"
 ---
 
-There are three main types of skin cancer, depending on which cells have turned cancerous:
+There are three main types of two cancer, depending on which cells have turned cancerous:
 
 * Small-cell lung cancer (SCLC) ~15% of cases
 * Non-small-cell lung cancer (NSCLC) ~85% of cases
   * Adenocarcinomas ~40% of cases
   * Squamous-cell carcinomas ~30% of cases
   * Large-cell carcinomas ~15% of cases
-* Other rare types
+
+There are also other, rare types of lung cancer.
 
 ## Diagnosis
 
