@@ -1,0 +1,41 @@
+---
+title: "Clinical Pharmacology Studies"
+---
+
+The concept of "Phases" in clinical drug development originates from the FDA, after WW2.
+Most clinical pharamcology studies are Phase 1 studies, when we learn about the PK of the drug.
+In Phase 2, we learn about the PD of the drug.
+
+## Phase 1 First in Human
+
+* First in human (FIH) PK/PD
+  * Single ascending dose (SAD)
+  * Multiple ascending dose (MAD)
+* Food effect (for oral drugs)
+* Pharmacogenomics (CYP genotyping)
+
+## Phase 2
+
+* Mass Balance/ADME
+* Drug-drug interaction (DDI) in vivo
+* QT study
+* Dose identification
+* Healthy vs Patient PK & PD
+* Relevant special populations
+  * RI
+  * HI
+  * Pediatrics
+  * Elderly
+  * Pregnant
+  * Lactating
+  * Obese
+  * other
+
+## Phase 3
+
+* Bioequivalence (BE), eg between formulations or drug combinations
+* Exposure-efficacy/safety in target population
+
+## References
+
+* 
