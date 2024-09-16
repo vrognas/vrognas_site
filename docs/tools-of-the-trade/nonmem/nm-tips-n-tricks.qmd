@@ -71,13 +71,6 @@ log-transform both sides: cognigen.com/nonmem/nm/99apr232002.html
 * ETADER=3: Get out of a local minima (Credit: Rikard Nordgren)
 * logistic=expit=inverse logit
     * logit≈probit(scaled)
-* $MIX NSPOP=3 (from lecture_simultaneous UPSS)
-    * P(1) = THETA(1)
-    * P(2) = (1-P(1))*THETA(2)
-    * P(3) = 1-P(1)-P(2)
-    * NSPOP = 3
-    * $THETA1 (0, THETAI(1), 1)
-    * $THETA2 (0, THETAI(2), 1)
 * Start every dataset with a ”Comment” column, the IGNORE=@ will then ignore a row if there is a text comment!
     * The second column should be a REF column with each line number
 
@@ -262,9 +255,9 @@ Here's a list:
 The VPCs central metric are the prediction of data percentiles.
 If you focus on the difference between e.g. the 5th and 95th percentile based on the simulated data you will have a prediction interval, like Bill states.
 If you focus on an individual percentile, but consider the imprecision with which it is derived, often given as a shaded area, then it is like other metrics of imprecision a confidence interval.
-Confidence interval (ci) and prediction interval (pi) for VPC￼
+Confidence interval (ci) and prediction interval (pi) for VPC.
 
-In general, if the serum creatinine rises at 2-3 mg/dl per day then the GFR is near zero.
+In general, if the serum creatinine rises at 2–3 mg/dl per day then the GFR is near zero.
 
 ## University of Maryland
 
