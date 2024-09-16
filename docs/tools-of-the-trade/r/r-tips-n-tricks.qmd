@@ -38,22 +38,22 @@ df |>
 
 ## Misc
 
-* Use sink() to record output of script
-* Use locate() instead of select(col, everything())
+* Use `sink()` to record output of script
+* Use `locate()` instead of `select(col, everything())`
 * R-tips
     * https://paulvanderlaken.com/2018/05/21/r-tips-and-tricks/
     * https://guiastrennec.gitbooks.io/r-notes/content/
 * latticeExtra (package)
 * naniar (package)
-    * gg_miss_var()
-    * gg_miss_upset() (instead of venn diagrams)
-    * geom_miss_point() (jitter of missing)
-    * bind_shadow()
-    * vis_miss (Credit: Iris Minichmayr)
+    * `gg_miss_var()`
+    * `gg_miss_upset()` (instead of venn diagrams)
+    * `geom_miss_point()` (jitter of missing)
+    * `bind_shadow()`
+    * `vis_miss()` (Credit: Iris Minichmayr)
 * txtProgressBar
     * (single=3)
 * If write files on cluster for use in next step
-    * sys.sleep(3)
+    * `sys.sleep(3)`
 * Bang Bang – How to program with dplyr
     * https://www.statworx.com/de/blog/bang-bang-how-to-program-with-dplyr/
 * Fundamentals of Data Visualization, Claus O. Wilke
@@ -61,15 +61,15 @@ df |>
 * David Robinson:
     * libr
     * ggplot:
-        * theme_set(theme_bw())
-        * mutate(a_col = fct_reorder(a_col, by)) %>% ggplot()
-        * ggplot(aes(fill = x)) + theme(legend.position = “none”)
-        * expand_limits(y = 0) #to include 0 on the y axis
-        * scale_y_continuous(labels = scales::dollar_format())
-            * scales:: percent_format()
-        * ggplot(label=a_column) plotly::ggplotly(ggplot_object)
-* library(Hmisc, include.only = '%nin%')
-    * use %in% to make 1==NA equal FALSE and not NA
+        * `theme_set(theme_bw())`
+        * `mutate(a_col = fct_reorder(a_col, by)) %>% ggplot()`
+        * `ggplot(aes(fill = x)) + theme(legend.position = “none”)`
+        * `expand_limits(y = 0) #to include 0 on the y axis`
+        * `scale_y_continuous(labels = scales::dollar_format())`
+            * `scales::percent_format()`
+        * `ggplot(label=a_column)` `plotly::ggplotly(ggplot_object)`
+* `library(Hmisc, include.only = '%nin%')`
+    * use `%in%` to make `1==NA` equal `FALSE` and not `NA`
     * Also check for NAs
-        * any: NA %in% vector
-        * sum: vector %in% NA %>% sum
+        * any: `NA %in% vector`
+        * sum: `vector %in% NA %>% sum`
