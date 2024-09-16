@@ -13,7 +13,7 @@ Pediatric (chronological) age groups:
 
 `Corrected gestational age[weeks] = PNA[weeks] - (40 - GA[weeks])`
 
-![Pediaric age. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, post-natal age](pediatric-age.png)
+![Pediatric age. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, post-natal age](pediatric-age.png)
 
 Renal maturation [Rhodin et al. 2009](https://doi.org/10.1007/s00467-008-0997-5):
 
