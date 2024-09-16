@@ -2,19 +2,22 @@
 title: "Pediatrics"
 ---
 
-Age groups (PNA):
+Pediatric (chronological) age groups:
 
-* 0-2 years
-* 3-6 years
-* 7-12 years
-* 13-17 years (adolescents)
-* 18+ years (adults)
+* Neonates: birth–⁠27 days (corrected gestational age*)
+* Infants: 28 days–1 years
+* Children: 2–5 years
+* Children: 6–12 years
+* Adolescents 13–⁠17 years
+* Adults: 18+ years
+
+`Corrected gestational age[weeks] = PNA[weeks] - (40 - GA[weeks])`
 
 ![Pediaric age](pediatric-age.png)
 
 Renal maturation (Rhodin et al. 2009)[https://doi.org/10.1007/s00467-008-0997-5]:
 
-maturation = PMA**Hill / (TM_50**Hill + PMA**Hill)
+`maturation = PMA**Hill / (TM_50**Hill + PMA**Hill)`
 
 The maturation half-life (TM_50) is fixed to the literature value of 47.7 weeks and the
 Hill exponent to the value of 3.4 (both from Rhodin et al.).
