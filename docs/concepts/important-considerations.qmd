@@ -19,9 +19,9 @@ title: Important considerations
 ## Reviewing models
 * Does my conclusion align with the authors?
 * Questions NGN (eNGiNe)
- * Need-to-know: Will affect conclusion (MO)
- * Good-to-know: Could affect conclusion (OC)
- * Nice-to-know: Won't affect conclusion (avoid)
+ * Need-to-know: Will affect conclusion (Major objection)
+ * Good-to-know: Could affect conclusion (Other concern)
+ * Nice-to-know: Won't affect conclusion (avoid asking this question)
 
 ## References
 
