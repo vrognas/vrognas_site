@@ -24,5 +24,7 @@ Hill-exponent to the value of 3.4 (both from Rhodin et al.).
 The distribution (mean, [min-max]) of PMA (weeks) in this study population was (518, [57-1652]).
 Assuming that the time to reach 50% of the maximum renal maturation could be different in pre-term infants, a different value for $\text{TM}_{50}$ could be estimated for pre-term neonates, if the current model does not describes this sub-group well.
 
+![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full term infant with a PMA of 40 weeks](pediatric-gfr.png)
+
 If an indication can be assumed to behave similarly in an adult and a pediatric population, PK extrapolation can be used.
 Pediatric exposure should then be comparable to adult exposure.
