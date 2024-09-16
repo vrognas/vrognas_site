@@ -2,13 +2,15 @@
 title: "Pediatrics"
 ---
 
-Age groups:
+Age groups (PNA):
 
 * 0-2 years
 * 3-6 years
 * 7-12 years
 * 13-17 years (adolescents)
 * 18+ years (adults)
+
+![Pediaric age](pediatric-age.png)
 
 Renal maturation (Rhodin et al. 2009)[https://doi.org/10.1007/s00467-008-0997-5]:
 
