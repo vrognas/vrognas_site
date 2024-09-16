@@ -17,7 +17,7 @@ $$\text{Corrected gestational age}_\text{weeks} = \text{PNA}_\text{weeks} - (40 
 
 Renal maturation [Rhodin et al. 2009](https://doi.org/10.1007/s00467-008-0997-5):
 
-$$\text{maturation} = \text{PMA}^\text{Hill} / (\text{TM}_{50}^\text{Hill\text{ + \text{PMA}^\text{Hill})$$
+$$\text{maturation} = \text{PMA}^\text{Hill} / (\text{TM}_{50}^\text{Hill}\text{ + \text{PMA}^\text{Hill})$$
 
 The maturation half-life ($\text{TM}_{50}$) is fixed to the literature value of 47.7 weeks and the
 Hill-exponent to the value of 3.4 (both from Rhodin et al.).
