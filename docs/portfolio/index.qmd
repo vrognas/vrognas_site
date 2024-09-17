@@ -50,7 +50,8 @@ The final model structure (Figure 1) consisted of a transit-compartment structur
 
 1. The formation of erythroid precursors in the bone marrow
 2. The progression of precursors into immature and mature RET and release into the blood depending on the IRF
-3. The maturation of RET to RBC in blood, and (iv) the dynamics of RBC in blood.
+3. The maturation of RET to RBC in blood
+4. The dynamics of RBC in blood
 
 In addition, the Hb content inside the RBC was described by means of a parallel chain.
 
@@ -61,6 +62,13 @@ In addition, the Hb content inside the RBC was described by means of a parallel 
 The predictive performance of the integrated model was found to be adequate (Figure 2).
 
 ![](images/figure-2.png)
+
+Simulated drug-target mechanisms:
+
+**Mechanism A:** Inhibition of Hb production (BTP-like effect)  
+**Mechanism B:** Inhibition of RET-precursor production  
+**Mechanism C:** Inhibition of RET-precursor differentiation  
+**Mechanism D:** Inhibition of Hb-driven feedback (D1) and inhibition of Hb production (D2)  
 
 ![](images/figure-3.png)
 
