@@ -24,6 +24,11 @@ title: "Portfolio"
 
 * Homeostatic feedback stimulates the production of new RBCs to compensate for the decreased Hb concentrations
 
+### Objectives
+
+1. **To expand a previously developed semi-mechanistic model of erythropoiesis**
+2. **To predict the downstream outcome of hypothetical drug-target interactions on different stages of erythropoiesis and Hb production**
+
 ### Methods
 
 * Haematological biomarker data were available from 62 healthy male and female subjects
@@ -38,11 +43,6 @@ title: "Portfolio"
   * Assumed 120 days treatment with a dose corresponding to ½ and 2x AUC~50~ of BTP, i.e. ~20% and ~40% inhibition of pathway, respectively
 
 * NONMEM v7.4.3, PsN v4.9.3, Improve v2.5.1-5. Simulations were performed in mrgsolve v1.0.3.
-
-### Objectives
-
-1. **To expand a previously developed semi-mechanistic model of erythropoiesis**
-2. **To predict the downstream outcome of hypothetical drug-target interactions on different stages of erythropoiesis and Hb production**
 
 ### Results
 
