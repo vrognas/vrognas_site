@@ -7,103 +7,123 @@ I work as a Pharmacokinetic Assessor at the [Swedish Medical Products Agency (L�
 Alongside my current employment, I am also pursuing a PhD in Pharmacometrics at [Uppsala University](https://www.uu.se/en).
 
 ## Degrees  
-* [**Master of Science in Engineering**](http://www.uu.se/en/admissions/master/selma/studieplan/?planId=405&pKod=TKT2Y&lasar=), _Uppsala University_ (2017)
-  * Master Thesis: [_Customer Based Business Development: Strategic Challenges for a Small Research-Based Spin-Off Enterprise_](http://www.diva-portal.org/smash/get/diva2:1137512/FULLTEXT01.pdf)
-  * Specialization: _Chemical Engineering, Pharmaceutical Science_
+* [**Master of Science in Engineering**](http://www.uu.se/en/admissions/master/selma/studieplan/?planId=405&pKod=TKT2Y&lasar=), *Uppsala University* (2017)
+  * Master Thesis: [*Customer Based Business Development: Strategic Challenges for a Small Research-Based Spin-Off Enterprise*](http://www.diva-portal.org/smash/get/diva2:1137512/FULLTEXT01.pdf)
+  * Specialization: *Chemical Engineering, Pharmaceutical Science*
 
-* **Bachelor of Science in Technology**, _Uppsala University_ (2014)
-  * Bachelor Thesis: _Market Analysis of Polymorphism- and Salt-screening services_
-  * Major: _Technology_
-  * Minor: _Mathematics_
+* **Bachelor of Science in Technology**, *Uppsala University* (2014)
+  * Bachelor Thesis: *Market Analysis of Polymorphism- and Salt-screening services*
+  * Major: *Technology*
+  * Minor: *Mathematics*
 
-## Diploma  
-* [**School of Entrepreneurship**](https://cie.uu.se/industrial-engineering-and-management/education/entrepreneurship/), _Uppsala University_ (2017)
+### Diploma  
+* [**School of Entrepreneurship**](https://cie.uu.se/industrial-engineering-and-management/education/entrepreneurship/), *Uppsala University* (2017)
 
+## Projects
+
+### Scientific Work 📚
+
+- [Population pharmacokinetics of colistin and the relation to survival in critically ill patients infected with colistin susceptible and carbapenem-resistant bacteria](https://doi.org/10.1016/j.cmi.2020.03.016)
+- [Colistin Resistance Development Following Colistin-Meropenem Combination Therapy Versus Colistin Monotherapy in Patients With Infections Caused by Carbapenem-Resistant Organisms](https://doi.org/10.1093/cid/ciz1146)
+- [An integrated semi-mechanistic model to predict the outcome of drug-target effects on the erythropoietic system](https://www.page-meeting.org/?abstract=10044)
+- [Evaluation of IRT-derived disease severity as a predictor of clinical success in critically ill patients with severe antibiotic resistant infections](https://www.page-meeting.org/?abstract=9803)
+- [Turn-over model characterizing effect of colistin on serum-creatinine in critically ill patients](https://www.page-meeting.org/?abstract=9869)
+- [Bounded Integer approach to model time-varying SOFA scores from patients with carbapenem resistant infections](https://www.page-meeting.org/?abstract=9052)
+
+### Software Projects 📝
+
+- [*vscode-nmtran*](https://github.com/vrognas/vscode-nmtran): Extending Visual Studio Code with NMTRAN (NONMEM) language support
+- [*vmisc*](https://github.com/vrognas/vmisc): A handy toolbox of custom R-functions, crafted over the years
+- [*MPAcolors*](https://github.com/vrognas/MPAcolors): ggplot2-compatible functions for colors used by the Swedish Medical Products Agency (MPA)
+
+#### Contributions 🤝
+
+- [*PharmPy*](https://pharmpy.github.io/latest/index.html): Pioneering tools and libraries for the pharmacometrics community
 
 ## Awards and Scholarships
-* **The Pharmaceutical Student Union’s Study Council Award for Student Treatment**, _Pharmaceutical Student Union_ (2021)
+* **The Pharmaceutical Student Union’s Study Council Award for Student Treatment**, *Pharmaceutical Student Union* (2021)
 
 > During the spring semester of 2020, courses were taught remotely when COVID-19 began to spread in Sweden. Students experienced difficulties with remote work. Viktor approached and understood the students, brought forward their opinions to the ones responsible and stayed after hours to help the students that needed extra help with their individual projects. Thanks to Viktor’s admirable approach, the upcoming courses could be optimized for students.
 
-* **Börjessons äldre**, _Uppsala University_ (2018)  
+* **Börjessons äldre**, *Uppsala University* (2018)  
 
 > "...for male students who are studying towards licentiate or higher degrees, [and] are distinguished by dedication and aptitude..."
 
-* **Linds, Hans**, _Uppsala University_ (2017)
+* **Linds, Hans**, *Uppsala University* (2017)
 
 > "... well-mannered male student who has been registered at the Faculty of Medicine at Uppsala University for at least one academic year is awarded by the faculty..."
 
-* **Gahn foundation for students of chemistry**, _Uppsala University_ (2014)
+* **Gahn Foundation for Students of Chemistry**, *Uppsala University* (2014)
 
 ## Courses
 
 ### Pharmacometrics/Modeling/Engineering
 
-* Advanced Methods in NONMEM 7.5, _ICON plc_ (2022)
-* Advanced Methods in NONMEM 7.4, _ICON plc_ (2019)
-* Forest plots in practical use: Implementation and interpretation, _Pharmetheus AB_ (2022)
-* Pharmacometric modeling of composite scores outcomes, _Uppsala University_ (2021)
-* Advanced population model building and usage in NONMEM, _Uppsala University_ (2021)
-* Pharmacometric Statistics, _TACA Training_ (2019)
-* Uppsala Pharmacometrics Summer School, _Uppsala University_ (2019)
-* Optimal Designs and Randomization Techniques for Clinical Trials, _Uppsala University_ (2018)
-* Time-to-event data modelling using Monolix, _University of Cape Town_ (2018)
-* The Sheiner-Rowland Advanced Course in Pharmacokinetics and Pharmacodynamics, _Advanced PKPD Sils-Maria_, (2018)
-* Pharmacokinetics, _Uppsala University_ (2016)
-* Process Modelling, _Uppsala University_ (2016)
-* Models for Biological Systems, _Uppsala University_ (2016)
-* Chemical Engineering, _Uppsala University_ (2014)
-* Scientific Computing, _Uppsala University_ (2013)
+* Advanced Methods in NONMEM 7.5, *ICON plc* (2022)
+* Advanced Methods in NONMEM 7.4, *ICON plc* (2019)
+* Forest plots in practical use: Implementation and interpretation, *Pharmetheus AB* (2022)
+* Pharmacometric modeling of composite scores outcomes, *Uppsala University* (2021)
+* Advanced population model building and usage in NONMEM, *Uppsala University* (2021)
+* Pharmacometric Statistics, *TACA Training* (2019)
+* Uppsala Pharmacometrics Summer School, *Uppsala University* (2019)
+* Optimal Designs and Randomization Techniques for Clinical Trials, *Uppsala University* (2018)
+* Time-to-event data modelling using Monolix, *University of Cape Town* (2018)
+* The Sheiner-Rowland Advanced Course in Pharmacokinetics and Pharmacodynamics, *Advanced PKPD Sils-Maria*, (2018)
+* Pharmacokinetics, *Uppsala University* (2016)
+* Process Modelling, *Uppsala University* (2016)
+* Models for Biological Systems, *Uppsala University* (2016)
+* Chemical Engineering, *Uppsala University* (2014)
+* Scientific Computing, *Uppsala University* (2013)
 
 ### Mathematics
 
-* Differential Equations, _University of Colorado Boulder_ (2015)
-* Linear Algebra and Geometry, _Uppsala University_ (2013)
-* Probability and Statistics, _Uppsala University_ (2012)
-* Calculus, _Uppsala University_ (2012)
+* Differential Equations, *University of Colorado Boulder* (2015)
+* Linear Algebra and Geometry, *Uppsala University* (2013)
+* Probability and Statistics, *Uppsala University* (2012)
+* Calculus, *Uppsala University* (2012)
 
 ### Biology/Medicine/Pharmacy
 
-* Clinical Trials Epidemiology, _Uppsala University_ (2020)
-* Essential Clinical Epidemiology, _Uppsala University_ (2019)
-* Molecular Cell Biology, _University of Colorado Boulder_ (2015)
-* Nutrition, _University of Colorado Boulder_ (2015)
-* Pharmaceutics, _Uppsala University_ (2015)
-* Drug Formulation and Drug Delivery, _Uppsala University_ (2015)
-* Pharmacology, _Uppsala University_ (2014)
-* Cancer Biology, _University of Skövde_ (2013)
-* Physiology, _Uppsala University_ (2013)
-* Medical Genetics, _Uppsala University_ (2012)
+* Clinical Trials Epidemiology, *Uppsala University* (2020)
+* Essential Clinical Epidemiology, *Uppsala University* (2019)
+* Molecular Cell Biology, *University of Colorado Boulder* (2015)
+* Nutrition, *University of Colorado Boulder* (2015)
+* Pharmaceutics, *Uppsala University* (2015)
+* Drug Formulation and Drug Delivery, *Uppsala University* (2015)
+* Pharmacology, *Uppsala University* (2014)
+* Cancer Biology, *University of Skövde* (2013)
+* Physiology, *Uppsala University* (2013)
+* Medical Genetics, *Uppsala University* (2012)
 
 ### Antimicrobial Resistance 
 
-* The Economics of Antibiotics, _Uppsala University_ (2019)
-* Resistance Biology, _Uppsala University_ (2018)
-* Antibiotic Use & Human Behavior, _Uppsala University_ (2018)
-* Antibiotic Resistance in Humans, Animals and the Environment, _Uppsala University_ (2018)
-* Antibiotic resistance: the Silent Tsunami, _Uppsala University_ (2018)
-* Microbiology and Immunology, _Gävle University College_ (2013)
+* The Economics of Antibiotics, *Uppsala University* (2019)
+* Resistance Biology, *Uppsala University* (2018)
+* Antibiotic Use & Human Behavior, *Uppsala University* (2018)
+* Antibiotic Resistance in Humans, Animals and the Environment, *Uppsala University* (2018)
+* Antibiotic resistance: the Silent Tsunami, *Uppsala University* (2018)
+* Microbiology and Immunology, *Gävle University College* (2013)
 
 ### Chemistry
 
-* Medicinal Chemistry, _Uppsala University_ (2014)
-* Organic Synthesis, _Uppsala University_ (2016)
-* Synthetic Organic Chemistry, _Uppsala University_ (2013)
-* Spectroscopic Methods for Organic Chemistry, _Uppsala University_ (2015)
-* Polymer Chemistry, _Uppsala University_ (2013)
-* Biochemistry, _Uppsala University_ (2012)
-* Organic Chemistry, _Uppsala University_ (2012)
-* Inorganic Chemistry, _Uppsala University_ (2012)
-* Analytical Chemistry with Data Analysis and Chemometrics, _Uppsala University_ (2013)
-* Physical Chemistry, _Uppsala University_ (2013)
-* Quantum Mechanics and Chemical Bonding, _Uppsala University_ (2013)
-* Chemical Thermodynamics, _Uppsala University_ (2013)
-* Chemical Principles, _Uppsala University_ (2011)
+* Medicinal Chemistry, *Uppsala University* (2014)
+* Organic Synthesis, *Uppsala University* (2016)
+* Synthetic Organic Chemistry, *Uppsala University* (2013)
+* Spectroscopic Methods for Organic Chemistry, *Uppsala University* (2015)
+* Polymer Chemistry, *Uppsala University* (2013)
+* Biochemistry, *Uppsala University* (2012)
+* Organic Chemistry, *Uppsala University* (2012)
+* Inorganic Chemistry, *Uppsala University* (2012)
+* Analytical Chemistry with Data Analysis and Chemometrics, *Uppsala University* (2013)
+* Physical Chemistry, *Uppsala University* (2013)
+* Quantum Mechanics and Chemical Bonding, *Uppsala University* (2013)
+* Chemical Thermodynamics, *Uppsala University* (2013)
+* Chemical Principles, *Uppsala University* (2011)
 
 ### Miscellaneous 
 
-* Business Development and Entrepreneurship, _Uppsala University_ (2017)
-* Project Management, _Stockholm University_ (2015)
-* General Psychology, _University of Colorado Boulder_ (2015)
-* Finance and Accounting for Engineering Management, _The Lockheed Martin Engineering Management Program, University of Colorado Boulder_ (2014)
-* Physics (newtonian), _Uppsala University_ (2013)
+* Business Development and Entrepreneurship, *Uppsala University* (2017)
+* Project Management, *Stockholm University* (2015)
+* General Psychology, *University of Colorado Boulder* (2015)
+* Finance and Accounting for Engineering Management, *The Lockheed Martin Engineering Management Program, University of Colorado Boulder* (2014)
+* Physics (newtonian), *Uppsala University* (2013)
