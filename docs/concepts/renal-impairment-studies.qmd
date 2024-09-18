@@ -2,13 +2,13 @@
 title: "Renal Impairment (RI) studies"
 ---
 
-|RI groups|GFR (mL/min)|
-|:---|:---|
-|Normal|>90|
-|Mild|60-90|
-|Moderate|30-60|
-|Severe (differs between FDA and EMA)|<30 not requiring dialysis (EMA)|
-|ESRD (differs between FDA and EMA)|<15 reqiuring dialysis|
+| RI severity | GFR (mL/min) |
+| :---------- | :----------- |
+| Normal      | > 90         |
+| Mild        | 60--90       |
+| Moderate    | 30--60       |
+| Severe (differs between FDA and EMA)| < 30, not requiring dialysis (EMA)|
+| ESRD (differs between FDA and EMA)| < 15, requiring dialysis|
 
 Studies:
 
