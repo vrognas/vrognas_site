@@ -12,7 +12,7 @@ No obvious marker exists for characterising hepatic function with respect to pre
 Therefore, dose recommendations may not be as accurate for HI as they can be for RI.
 Therefore, one of the primary aims of studies in patients with HI might be to identify patients at risk.
 
-Taking elimination characteristics into account, the sponsor should consider which type(s) of hepatic conditions are likely to affect the pharmacokinetics and should focus on including subjects with abnormalities in relevant markers.
+Taking elimination characteristics into account, the sponsor should consider which type(s) of hepatic conditions are likely to affect the PK and should focus on including subjects with abnormalities in relevant markers.
 
 The Child-Pugh classification (@tbl-cp) is the most widely used and is one way of categorising hepatic function.
 Hepatic function decreases with age, but due to the high capacity of the liver this is considered not to change the pharmacokinetics to a clinically relevant extent.
