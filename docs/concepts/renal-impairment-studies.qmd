@@ -1,0 +1,28 @@
+---
+title: "Renal Impairment (RI) studies"
+---
+
+|RI groups|GFR (mL/min)|
+|:---|:---|
+|Normal|>90|
+|Mild|60-90|
+|Moderate|30-60|
+|Severe (differs between FDA and EMA)|<30 not requiring dialysis (EMA)|
+|ESRD (differs between FDA and EMA)|<15 reqiuring dialysis|
+
+Studies:
+
+Full or reduced.
+Subjects "HV", apart from the RI.
+Full: All RI groups
+Reduced: Only Normal, severe, and ESRD.
+
+6-8 subjects in each RI group.
+This gives 80% power to detect plus/minus 40% change in exposure.
+
+When:
+Almost all small molecules.
+Biologics <69 kDa
+
+When not:
+mAbs (>69 kDa)
