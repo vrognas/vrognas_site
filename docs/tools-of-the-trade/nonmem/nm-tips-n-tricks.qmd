@@ -149,10 +149,10 @@ Here's a list:
 
 | Action | Description | Filename |
 | :--- | :--- | :--- |
-| Print toggle | monitor estimation progress | `print.sig` |
-| Paraprint toggle | monitor parallel processing traffic | `paraprint.sig` |
-| Next | move on to next estimation mode or next estimation. NONMEM grinds a couple of iterations more and then it terminates nicely as if the maximum number of function evaluations had been reached. | `next.sig` |
-| Stop | end the present run cleanly | `stop.sig` |
+| Print toggle | Monitor estimation progress | `print.sig` |
+| Paraprint toggle | Monitor parallel processing traffic | `paraprint.sig` |
+| Next | Move on to next estimation mode or next estimation. NONMEM grinds a couple of iterations more and then it terminates nicely as if the maximum number of function evaluations had been reached. | `next.sig` |
+| Stop | End the present run cleanly | `stop.sig` |
 | Subject print toggle | | `subject.sig` |
 
 
