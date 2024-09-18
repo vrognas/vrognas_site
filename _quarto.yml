@@ -112,6 +112,12 @@ website:
         - section: "Concepts of the Craft"
           href: docs/concepts/index.qmd
           contents:
+          - section: "Elimination"
+            contents:
+            - text: "Hepatic impairment (HI)"
+              href: docs/concepts/hepatic-impairment-studies.qmd
+            - text: "Renal impairment (RI)"
+              href: docs/concepts/renal-impairment-studies.qmd
             - text: "Augmented renal clearance (ARC)"
               href: docs/concepts/augmented-renal-clearance.qmd
     - id: tools-of-the-trade
