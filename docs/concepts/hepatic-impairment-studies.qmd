@@ -1,3 +1,62 @@
 ---
 title: "Hepatic Impairment (HI) studies"
 ---
+
+A pharmacokinetic (PK) study in subjects with hepatic impairment (HI) is recommended when:
+
+* The drug is likely to be used in patients with HI and
+* HI is likely to significantly alter the PK (especially metabolism and biliary excretion) of the drug and/or its active metabolites and
+* A posology adjustment may be needed for such patients taking into account the PK/PD relationship.
+
+No obvious marker exists for characterising hepatic function with respect to prediction of drug elimination capacity, in contrast to renal impairment (RI).
+Therefore, dose recommendations may not be as accurate for HI as they can be for RI.
+Therefore, one of the primary aims of studies in patients with HI might be to identify patients at risk.
+
+Taking elimination characteristics into account, the sponsor should consider which type(s) of hepatic conditions are likely to affect the pharmacokinetics and should focus on including subjects with abnormalities in relevant markers.
+
+The Child-Pugh classification (@tbl-cp) is the most widely used and is one way of categorising hepatic function.
+Hepatic function decreases with age, but due to the high capacity of the liver this is considered not to change the pharmacokinetics to a clinically relevant extent.
+Liver disease, however, is known to be a common cause of altered PK of drugs.
+
+| Assessment                                 | 1 point    | 2 points      | 3 points   |
+| :----------------------------------------- | :--------- | :------------ | :--------- |
+| Total serum bilirubin, μmol/L [mg/dL]      | < 34 [< 2] | 34--50 [2--3] | > 50 [> 3] |
+| Serum albumin, g/dL                        | > 3.5      | 2.8--3.5      | < 2.8      |
+| PT (*or INR, not both*), prolongation (s)  | < 4.0      | 4.0--6.0      | > 6.0      |
+| INR (*or PT, not both*)                    | < 1.7      | 1.7--2.3      | > 2.3      |
+| Ascites                                    | None       | Mild (or suppressed with medication) | Moderate--severe (or refractory) |
+| Hepatic encephalopathy                     | None       | Moderate (Grade 1--2)   | Severe (Grade 3--4) |
+
+: Child-Pugh. PT, Prothrombin time; INR, International Normalized Ratio. {#tbl-cp tbl-colwidths="[25, 25, 25, 25]"}
+
+The *prothrombin time* (PT), along with its derived measures of *prothrombin ratio* (PR) and *international normalized ratio* (INR) (@eq-inr), is an assay for evaluating the extrinsic pathway and common pathway of coagulation.
+
+$$
+\text{INR}= \left(\frac{\text{PT}_\text{test}}{\text{PT}_\text{normal}}\right)^\text{ISI}
+$$ {#eq-inr}
+
+*Ascites* is the abnormal build-up of fluid in the abdomen.
+
+*Hepatic encephalopathy* (HE) is an altered level of consciousness as a result of liver failure.
+The severity of HE is graded with the West Haven Criteria (@tbl-he); this is based on the level of impairment of autonomy, changes in consciousness, intellectual function, behavior, and dependence on therapy.
+
+| Grade | Description |
+| :---: | :---------- |
+|   0   | No obvious changes other than a potentially mild decrease in intellectual ability and coordination |
+|   1   | Trivial lack of awareness; euphoria or anxiety; shortened attention span; impaired performance of addition or subtraction |
+|   2   | Lethargy or apathy; minimal disorientation for time or place; subtle personality change; inappropriate behaviour |
+|   3   | Somnolence to semistupor, but responsive to verbal stimuli; confusion; gross disorientation |
+|   4   | Coma |
+
+: West Haven Criteria for Hepatic encephalopathy (HE) {#tbl-he tbl-colwidths="[10, 90]"}
+
+HI is categorised into groups (@tbl-hi).
+Even subjects with a normal hepatic function are given a total score of 5 points (since each variable gives a score of 1 point even within the normal range) and would consequently be classified as having mild HI.
+
+| Group | Severity | Total Child-Pugh Score|
+| :---: |:-------- | :-------------------- |
+| A     | Mild     | 5--6                  |
+| B     | Moderate | 7--9                  |
+| C     | Severe   | 10--15                |
+
+: Hepatic impairment groups {#tbl-hi}
