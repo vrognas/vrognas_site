@@ -2,11 +2,17 @@
 title: "Curriculum Vitae"
 ---
 
-I work as a Pharmacokinetic Assessor at the [Swedish Medical Products Agency (Läkemedelsverket)](https://www.lakemedelsverket.se/en).
+I work as a Pharmacometric Assessor at the [Swedish Medical Products Agency (Läkemedelsverket)](https://www.lakemedelsverket.se/en).
 
 Alongside my current employment, I am also pursuing a PhD in Pharmacometrics at [Uppsala University](https://www.uu.se/en).
 
-## Degrees  
+## Experience
+
+* Pharmacometric Assessor, [*Swedish Medical Products Agency (Läkemedelsverket)*](https://www.lakemedelsverket.se/en) (Nov 2023–present)
+* Intern in Clinical Pharmacometrics, [*F. Hoffmann-La Roche Ltd*](https://www.roche.com) (Sep 2021–Feb 2022)
+
+## Degrees
+
 * [**Master of Science in Engineering**](http://www.uu.se/en/admissions/master/selma/studieplan/?planId=405&pKod=TKT2Y&lasar=), *Uppsala University* (2017)
   * Master Thesis: [*Customer Based Business Development: Strategic Challenges for a Small Research-Based Spin-Off Enterprise*](http://www.diva-portal.org/smash/get/diva2:1137512/FULLTEXT01.pdf)
   * Specialization: *Chemical Engineering, Pharmaceutical Science*
@@ -16,7 +22,8 @@ Alongside my current employment, I am also pursuing a PhD in Pharmacometrics at 
   * Major: *Technology*
   * Minor: *Mathematics*
 
-### Diploma  
+### Diploma
+
 * [**School of Entrepreneurship**](https://cie.uu.se/industrial-engineering-and-management/education/entrepreneurship/), *Uppsala University* (2017)
 
 ## Projects
@@ -41,6 +48,7 @@ Alongside my current employment, I am also pursuing a PhD in Pharmacometrics at 
 - [*PharmPy*](https://pharmpy.github.io/latest/index.html): Pioneering tools and libraries for the pharmacometrics community
 
 ## Awards and Scholarships
+
 * **The Pharmaceutical Student Union’s Study Council Award for Student Treatment**, *Pharmaceutical Student Union* (2021)
 
 > During the spring semester of 2020, courses were taught remotely when COVID-19 began to spread in Sweden. Students experienced difficulties with remote work. Viktor approached and understood the students, brought forward their opinions to the ones responsible and stayed after hours to help the students that needed extra help with their individual projects. Thanks to Viktor’s admirable approach, the upcoming courses could be optimized for students.
