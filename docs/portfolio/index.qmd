@@ -14,15 +14,11 @@ title: "Portfolio"
 
 ### Introduction
 
-* Target-related effects of investigational drugs may lead to clinical efficacy but also safety concerns if the target is also expressed elsewhere
-
-* **Bitopertin (BTP)** is a specific inhibitor of the glycine type 1 transporter (GlyT1), a transporter known to control extracellular levels of the neurotransmitter glycine in the brain, and was initially intended to be developed for psychiatric indications
-
-* The GlyT1 transporter is also expressed on erythroid cells and its inhibition leads to a decreased **haemoglobin (Hb)** synthesis within erythrocyte precursors due to reduced availability of glycine for the heme synthesis
-
-* As a consequence, **reticulocytes (RET)** with reduced Hb content are released into the blood, and Hb blood concentrations gradually decrease with a delay corresponding to the **red blood cell (RBC)** lifespan
-
-* Homeostatic feedback stimulates the production of new RBCs to compensate for the decreased Hb concentrations
+Target-related effects of investigational drugs may lead to clinical efficacy but also safety concerns if the target is also expressed elsewhere.
+**Bitopertin (BTP)** is a specific inhibitor of the glycine type 1 transporter (GlyT1), a transporter known to control extracellular levels of the neurotransmitter glycine in the brain, and was initially intended to be developed for psychiatric indications.
+The GlyT1 transporter is also expressed on erythroid cells and its inhibition leads to a decreased **hemoglobin (Hb)** synthesis within erythrocyte precursors due to reduced availability of glycine for the heme synthesis.
+As a consequence, **reticulocytes (RET)** with reduced Hb content are released into the blood, and Hb blood concentrations gradually decrease with a delay corresponding to the **red blood cell (RBC)** lifespan.
+Homeostatic feedback stimulates the production of new RBCs to compensate for the decreased Hb concentrations.
 
 ### Objectives
 
@@ -31,22 +27,19 @@ title: "Portfolio"
 
 ### Methods
 
-* Haematological biomarker data were available from 62 healthy male and female subjects
-  * 10, 30, or 60 mg of BTP or placebo QD for 120 days + 120 days follow-up
+Hematological biomarker data were available from 62 healthy male and female subjects.
+Subjects received either 10, 30, or 60 mg of BTP or placebo QD for 120 days + 120 days follow-up.
+A previously developed model was used as a starting point to build a more generalised erythropoiesis model.
+The inhibitory effect of BTP on Hb synthesis was assumed to be driven by individual AUC~ss~.
+The model was fitted simultaneously to cell count data (RBC, RET, and **immature reticulocyte fraction [IRF]**), as well as **mean corpuscular Hb (MCH)**, ensuring steady-state baseline conditions.
+The framework was used to simulate the inhibitory effect that hypothetical compounds would have when interacting with specific pathways of the erythropoiesis system.
+Assumed 120 days treatment with a dose corresponding to ½ and 2x AUC~50~ of BTP, i.e. ~20% and ~40% inhibition of pathway, respectively.
 
-* A previously developed model was used as a starting point to build a more generalised erythropoiesis model
-  * The inhibitory effect of BTP on Hb synthesis was assumed to be driven by individual AUC~ss~
-
-* The model was fitted simultaneously to cell count data (RBC, RET, and **immature reticulocyte fraction [IRF]**), as well as **mean corpuscular Hb (MCH)**, ensuring steady-state baseline conditions
-
-* The framework was used to simulate the inhibitory effect that hypothetical compounds would have when interacting with specific pathways of the erythropoiesis system
-  * Assumed 120 days treatment with a dose corresponding to ½ and 2x AUC~50~ of BTP, i.e. ~20% and ~40% inhibition of pathway, respectively
-
-* NONMEM v7.4.3, PsN v4.9.3, Improve v2.5.1-5. Simulations were performed in mrgsolve v1.0.3.
+NONMEM v7.4.3, PsN v4.9.3, Improve v2.5.1-5. Simulations were performed in mrgsolve v1.0.3.
 
 ### Results
 
-The final model structure (Figure 1) consisted of a transit-compartment structure describing:
+The final model structure (@fig-1) consisted of a transit-compartment structure describing:
 
 1. The formation of erythroid precursors in the bone marrow
 2. The progression of precursors into immature and mature RET and release into the blood depending on the IRF
@@ -55,13 +48,26 @@ The final model structure (Figure 1) consisted of a transit-compartment structur
 
 In addition, the Hb content inside the RBC was described by means of a parallel chain.
 
-![](images/figure-1.png)
+![Graphical representation of the integrated semi-mechanistic model.](images/figure-1.png){#fig-1}
 
-![](images/table-1.png)
+All model parameters (@tbl-1) were estimated with good precision (relative standard error <9% for fixed effects, and < 18% for random effects).
+Correlation between all inter-individual variability parameters estimated (not shown).
 
-The predictive performance of the integrated model was found to be adequate (Figure 2).
+| Parameter | Description | Estimate | Units | IIV (%CV) |
+| :-------- | :---------- | -------: | :---- | :-------- |
+| LS~RBC~   | Lifespan of RBC | 125 | days | 28.0 |
+| RBC~0~    | Baseline MCH | 29.8 | pg | 4.82 |
+| RBC~0~    | Baseline RBC for males | 4.91 | 10^12^/L | 5.34 |
+|           | Baseline RBC for females | 4.32 |  |  |
+| RET~0~    | Baseline RET | 39.8 | 10^9^/L | 26.0 |
+| IRF       | Immature reticulocyte fraction | 4.71 | % | 32.0 |
+| FDB       | Feedback term (driven by hemoglobin relative change from baseline using a exponential function) | 2.42 | - | - |
 
-![](images/figure-2.png)
+: Model parameters estimates. CV: coefficient of variation, IIV: inter-individual variability. {#tbl-1}
+
+The predictive performance of the integrated model was found to be adequate (@fig-2).
+
+![Visual predictive check of the four response variables IRF, MCH, RBC, and RET, that were used in a simultaneous fit of the model. Shaded areas: 90% Cl for simulated median, 5th and 95th percentiles. Symbols and lines: observed data with respective quantiles. The patterns of response are well captured, despite the large variability on the reticulocyte related data (RET, IRF).](images/figure-2.png){#fig-2}
 
 Simulated drug-target mechanisms:
 
@@ -70,13 +76,13 @@ Simulated drug-target mechanisms:
 **Mechanism C:** Inhibition of RET-precursor differentiation  
 **Mechanism D:** Inhibition of Hb-driven feedback (D1) and inhibition of Hb production (D2)  
 
-![](images/figure-3.png)
+![Simulated outcome of hypothetical drug-target interactions for mechanisms A–D following 120 days of treatment in 2000 males. The thick lines represent the median, and the shaded area the 90% prediction interval which reflects inter-individual variability. The horizontal dashed lines represent baselines in the absence of drug effect.](images/figure-3.png){#fig-3}
 
 ### Conclusion
 
 * An integrated semi-mechanistic population pharmacokinetic-pharmacodynamic model was developed to describe the process of erythropoiesis
 
-* Simulations of hypothetical drug-target effects on different stages of erythropoiesis and Hb production (Figure 3) illustrated the influence of the assumed mechanism of action of compounds on the haematological response
+* Simulations of hypothetical drug-target effects on different stages of erythropoiesis and Hb production (@fig-3) illustrated the influence of the assumed mechanism of action of compounds on the hematological response
 
 
 * Combining this integrated model framework with mechanistic understanding from other experiments can be used to inform decision making in drug development
