@@ -14,6 +14,10 @@ However, even if the half-life is more intuitive, it is not very useful during t
 The half-life of a drug is really only useful if a drug follws one-compartment pharmacokinetics.
 It is rare for modern drugs to follow one-compartment pharmacokinetics.
 
+## Renal CL
+
+In general, if the serum creatinine rises at 2–3 mg/dl per day then the GFR is near zero.
+
 # References
 
 * 
