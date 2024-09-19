@@ -2,22 +2,48 @@
 title: "Pediatrics"
 ---
 
-Pediatric (chronological) age groups:
+The use of model informed drug development (MIDD) approaches in pediatric drug development is highly recommended due to:
 
-* Neonates: birth–⁠27 days (corrected gestational age*)
-* Infants: 28 days–1 years
-* Children: 2–5 years
-* Children: 6–12 years
-* Adolescents 13–⁠17 years
-* Adults: 18+ years
+* Practical and ethical limitations in data collection.
+* Ability to quantify the effects of growth and maturation by leveraging data from literature and older patients.
 
-$$\text{Corrected gestational age}_\text{weeks} = \text{PNA}_\text{weeks} - (40 - \text{GA}_\text{weeks})$$
+The most relevant covariate to influence PK in pediatric patients is considered to be **body weight** accounting for size differences, in addition to **age** (@fig-age) in the youngest pediatric patients to account for maturation of drug eliminating processes (see @eq-maturation).
 
-![Pediatric age. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, post-natal age](pediatric-age.png)
+Relevant predefined exposure metrics should be presented graphically versus body weight and age on a continuous scale (@fig-cov).
+If the drug is indicated to be used in the age range below one year, exposure vs body weight and age should be depicted in an additional separate figure focused on children 0--1 year of age.
 
-Renal maturation [Rhodin et al. 2009](https://doi.org/10.1007/s00467-008-0997-5):
+![Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions) for children from the NHANES database using 2 mg/kg BID for patients <8 years, and 1.6 mg/kg BID for patients ≥8 years with 100 mg BID maximum dose (*top*), or 2 mg/kg BID with 100 mg BID maximum dose for all patients (*bottom*). The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated paediatric patients. The *horizontal grey band* encompasses 90% of the simulated adult patients receiving 100 mg BID. [Schoemaker et al. (2017)](https://doi.org/10.1007/s00228-017-2230-6).](pediatric-cov.png){#fig-cov}
 
-$$\text{maturation} = \text{PMA}^\text{Hill} / (\text{TM}_{50}^\text{Hill} + \text{PMA}^\text{Hill})$$
+If different doses are proposed for bands of weight or/and age, exposure ranges predicted for the proposed doses for the subsets of the pediatric population should be visualized as boxplots (@fig-box).
+The reference range in the adult population (median and outer percentiles of observed or simulated data) should be given additionally (@fig-box).
+The same statistics should be presented numerically in tables.
+
+![Adult reference range (5^th^--95^th^ percentiles and median) highlighted in the background.](pediatric-box.png){#fig-box}
+
+![Pediatric age. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, post-natal age](pediatric-age.png){#fig-age}
+
+Approximate pediatric age groups:
+
+* Neonates: birth--27 days (corrected gestational age, @eq-cga)
+    * Preterm
+    * Term
+* Infants: 28 days--23 months
+* Early childhood: 2--5 years
+* Middle childhood: 6--11 years
+* Adolescents 12--⁠17 years
+    * PK often similar to adults
+* Adults: >18 years
+    * Acts as reference
+
+$$
+\text{Corrected gestational age}_\text{weeks} = \text{PNA}_\text{weeks} - (40 - \text{GA}_\text{weeks})
+$${#eq-cga}
+
+Renal maturation, [Rhodin et al. (2009)](https://doi.org/10.1007/s00467-008-0997-5):
+
+$$
+\text{maturation} = \text{PMA}^\text{Hill} / (\text{TM}_{50}^\text{Hill} + \text{PMA}^\text{Hill})
+$$ {#eq-maturation}
 
 The maturation half-life ($\text{TM}_{50}$) is fixed to the literature value of 47.7 weeks and the
 Hill-exponent to the value of 3.4 (both from Rhodin et al.).
@@ -27,4 +53,29 @@ Assuming that the time to reach 50% of the maximum renal maturation could be dif
 ![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full term infant with a PMA of 40 weeks](pediatric-gfr.png)
 
 If an indication can be assumed to behave similarly in an adult and a pediatric population, PK extrapolation can be used.
-Pediatric exposure should then be comparable to adult exposure.
+The relevant PK metric(s) linked to efficacy and safety and the exposure-response relationship should first be established in adults.
+Pediatric PK should then be comparable to adult PK.
+
+## Allometry
+
+::: {.callout-tip title="Fix or estimate?"}
+Fix exponents if you don't have pediatric PK data.
+Fix AND estimate them if you *have* pediatric PK data.
+:::
+
+In neonates the maturation level of eliminating organs influences the estimates and in adults the body composition will affect them.
+It is often the case that the data generated in the context of a pediatric development program are too limited to conclude on whether the estimates of the allometric exponents are in fact different from the theoretical values.
+MSWP considers the use of fixed exponents both scientifically justified and practical when developing popPK models in children.
+
+::: {.callout-important}
+Don't use allometric exponents estimated using adult data for pediatric PK models.
+:::
+
+In lower ages (**< 2 years**) there are also maturation functions (@eq-maturation) that come into play.
+For these pediatric patients it is **important to include maturation function(s)** to describe pediatric PK.
+
+Due to high correlation between body weight and age in pediatric patients, **maturation functions and allometric exponents should not be estimated simultaneously** ([Bonate (1999)](https://doi.org/10.1023/a:1018828709196)).
+
+## References
+
+1. [EMA M&S QA](https://www.ema.europa.eu/en/human-regulatory-overview/research-and-development/scientific-guidelines/clinical-pharmacology-and-pharmacokinetics/modelling-and-simulation-questions-and-answers)
