@@ -54,37 +54,53 @@ Weibull\*COV *forces* proportional hazard (Credit: Andrew Hooker)
 
 In general, always start with FOCE, then turn to EM.
 For example, if LAPLACE causes issues, go to EM.
+When building a relatively complex PKPD model (e.g. 47 parameters and 11 
+differential equations), there can be issues using FOCE so an EM-method is warranted.
 
 #### Classical methods
 
-* SADDLE_RESET
-* MCETA (most important during first iterations)
-    * If MCETA ends up in local minima, increase value, or:
+Classical methods want to be "statistically fair" to all possibilities.
+
+##### Robustness
+
+* `SADDLE_RESET=1`
+* `MCETA` (most important during first iterations)
+    * If `MCETA` ends up in local minima, increase value, or:
 
 ```verilog
 $ESTIMATION METHOD=1 MCETA=1000 MAXEVAL=200
 $ESTIMATION METHOD=1 MCETA=1    MAXEVAL=9999
 ```
 
-##### FO
+##### Reproducibility
 
-##### FOCE
+* `RANMETHOD=4P`
+* `SEED=123456789`
 
-##### LAPLACE
+##### First-order conditional estimation (FOCE)
+
+Always use the `FAST` option, tehre are very few cases where `FAST` is suboptimal.
+
+:::{.callout-note}
+The `FAST` option uses MU-modeling to be effective.
+:::
 
 #### EM-methods
 
-##### ITS
+##### Reproducibility
 
-##### IMP
+* `RANMETHOD=3S2P`
+* `SEED=123456789`
 
+##### Iterative two-stage (ITS)
+
+##### Importance sampling (IMP)
+
+* `RANMETHOD=S2` can use fewer IMSAMPLEs for IMP
 * `METHOD=IMPMAP` is equivalent to `METHOD=IMP MAPITER=1 MAPINTER=1`
+* `CINTERVAL=1` is fine for IMP
 
-
-###### Instability of importance samping (IMP)
-
-When building a relatively complex PKPD model (e.g. 47 parameters and 11 
-differential equations), there can be issues using `FOCE` so an EM-method is warranted.
+###### Stochastic noise
 
 ```verilog
 $ESTIMATION METHOD=ITS
@@ -178,18 +194,19 @@ OPTIMIZATION WAS COMPLETED
 If `eff.` divided by `Smpl.` is not approximately equal to `IACCEPT`, then tweak something.
 
 `Fit.` tells you how Gaussian the profile is.
-If `Fit.` is approximately 1, you might as well use `FOCE`.
-If `Fit.` is more like 0.6, then `IMP` is a good choice.
+If `Fit.` is approximately 1, you might as well use FOCE.
+If `Fit.` is more like 0.6, then IMP is a good choice.
 :::
 
 It is not unusual to see this large Monte Carlo noise in the OFV estimate.
 It indicates that the number of samples (`ISAMPLE`) may not be high enough.
 
 ::: {.callout-tip}
-When using the `IMP` method, it is adviced to include two sequential `$ESTIMATION` records.
+When using the IMP method, it is adviced to include two sequential `$ESTIMATION` records.
 The first record will perform optimization of parameter estimates until a global minimum is found.
 The second record will then take those parameter estimates and calculate more precise estimates of the objective function value.
 The second `$ESTIMATION` command will have a higher `ISAMPLE` to reduce the Monte Carlo noise, and have `EONLY=1` (no optimization of population parameters).
+`IMP EONLY=1` needs a few iterations to stabilize because of internal processes
 :::
 
 In this case, perform another run with the parameter values set to their final estimates, and with: 
@@ -223,6 +240,7 @@ Do not compare IMP and FOCE OFVs
 
 * For binary data
 * SAEM is like a search light, dose not need as large of a starting density ("umbrella") as IMP.
+* CINTERVAL: ~10--100
 
 [http://monolix.lixoft.com/tasks/population-parameter-estimation-using-saem/](http://monolix.lixoft.com/tasks/population-parameter-estimation-using-saem/)
 
@@ -243,12 +261,13 @@ Do not compare IMP and FOCE OFVs
 
 ### Faster parallel NONMEM:
 
-```zsh
-execute -nmfe_options="[sbatchargs=--threads-per-core=1] -maxlim=2  -parafprint=100"
-```
+`--threads-per-core=1`: Do not hyperthread.  
+`FILE07–39` should be size 0; in fact, `FILE*` should be size 0.
+Therefore, use `--maxlim=3`: Do not use diskspace (slow).  
 
-`FILE*` should be size 0.  
-`FILE07–39` should be size 0. (Credit: Leonid Gibiansky)
+```zsh
+execute -nmfe_options="[sbatchargs=--threads-per-core=1] -maxlim=3  -parafprint=100"
+```
 
 ## Model Evaluation
 
@@ -343,11 +362,10 @@ Here's a list:
 
 ## Random ETA samples:
 
-When used in nonmem 7.5, a recommended example/setup would be (as shown on page 152 of nm750.pdf) 
+When used in nonmem 7.5, a recommended example/setup would be (as shown on page 152 of nm750.pdf)
 
 ```verilog
 $SIZES ISAMPLEMAX=250
-
 ... 
 
 $ESTIMATION METHOD=SAEM
