@@ -61,7 +61,7 @@ differential equations), there can be issues using FOCE so an EM-method is warra
 
 Classical methods want to be "statistically fair" to all possibilities.
 
-##### Robustness
+##### Robustness {#sec-classical-robustness}
 
 * `SADDLE_RESET=1`
 * `MCETA` (most important during first iterations)
@@ -304,7 +304,7 @@ Compare iOFV values in the `.phi`-file between runs.
 1. Sharkplot (ΔOFV (= OFV~full~ - OFV~reduced~) vs #subjects~removed~)
 2. Should be able to remove 5 subjects without loosing significance.
 
-#### Outlying observations
+#### Outlying observations {#sec-outliers}
 
 Do a sensitivity analysis for outliers (|CWRES| < 5).
 
@@ -400,6 +400,39 @@ $ESTIMATION METHOD=IMP
 ## University of Maryland
 
 [https://ctm.umaryland.edu/#/ms-pharma](https://ctm.umaryland.edu/#/ms-pharma)
+
+## Error messages
+
+### EXIT OCCURS DURING SEARCH FOR ETA
+
+```verilog
+0PRED EXIT CODE = 1
+0INDIVIDUAL NO.       4   ID= 4.00000000000000E+00   (WITHIN-INDIVIDUAL) DATA 
+REC NO.   2
+THETA=
+  1.00E-03   5.00E-01   1.00E+01   1.00E+01   1.00E-01   1.00E+01   1.00E+00
+OCCURS DURING SEARCH FOR ETA AT INITIAL VALUE, ETA=0
+F OR DERIVATIVE RETURNED BY PRED IS INFINITE (INF) OR NOT A NUMBER (NAN).
+ Elapsed estimation time in seconds:     0.00
+```
+
+This is a generic error message, nothing informative except indicates that there are some numerical problems.
+Often this is related to the outliers (@sec-outliers), so it helps to clean the data.
+
+Things to try:
+
+* Change ADVAN (6 to 13, if this is differential equations model).
+* Change `TOL` in `$SUBROUTINES` record.
+* Change `SIGL` and `NSIG` in `$ESTIMATION`.
+* Change initial estimates
+    * To something else within a realistic range.
+    * To the values of the previous model.
+    * If this is a complex model, try to start with something simpler, like linear, and use the output as initial estimates, and also look for outliers.
+    * Increase initial estimate of RUV.
+* Sometimes `MCETA=1000` in `$ESTIMATION` records helps with this message (@sec-classical-robustness).
+* Add IIV on RUV.
+
+([Credit: Leonid Gibiansky](https://www.mail-archive.com/nmusers@globomaxnm.com/msg08915.html))
 
 ::: {.callout-note}
 
