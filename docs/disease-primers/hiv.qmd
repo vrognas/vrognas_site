@@ -2,11 +2,24 @@
 title: "Disease primer: Human immunodeficiency virus (HIV)"
 ---
 
-Human immunodeficiency virus (HIV) is a virus that attacks the body’s immune system. Acquired immunodeficiency syndrome (AIDS) occurs at the most advanced stage of infection.
+The *human immunodeficiency viruses* (**HIV**) are two species of Lentivirus (a subgroup of retrovirus) that infect humans.
+Over time, they cause *acquired immunodeficiency syndrome* (**AIDS**), a condition in which progressive failure of the immune system allows life-threatening opportunistic infections and cancers to thrive.
+Without treatment, the average survival time after infection with HIV is estimated to be 9--11 years, depending on the HIV subtype.
 
-HIV targets the body’s white blood cells, weakening the immune system. This makes it easier to get sick with diseases like tuberculosis, infections and some cancers.
+The subtypes of HIV include two main subtypes, known as HIV type 1 (**HIV-1**) and HIV type 2 (**HIV-2**)
 
-## Diagnosis
+### HIV-1
+
+HIV-1 infection results in chronic activation of the immune system and a subsequent gradual loss of CD4+ T cells, eventually leading to AIDS.
+One of the predictors for HIV-1 disease progression is the level of HIV-1 RNA in the blood (i.e., viral load).
+The aim of treatment of HIV-1 infection is therefore to suppress, and subsequently maintain, the HIV-1 viral load to levels that are at least below the limit of detection of most commonly used assays (50 copies/mL of blood).
+HIV-1 is a rapidly replicating virus, with an error-prone Reverse Transcriptase (RT).
+Mutations in the viral genome occur randomly when the virus replicates, with an estimated mutation rate of approximately one nucleotide mutation per replicative cycle.
+Many HIV variants are simultaneously present in each infected individual, which is also described as “quasispecies,”.
+Resistance-associated mutations (RAMs) can rapidly be selected when there is selection pressure due to e.g. too low concentrations of antiviral drugs.
+Often, resistance to drugs in a certain ARV class results in cross-resistance to other drugs in that same class.  
+
+## Clinical presentation, diagnosis
 
 * Rapid diagnostic tests that provide same-day results.
 
@@ -15,9 +28,17 @@ In most cases, people develop antibodies to HIV within 28 days of infection.
 During this time, people are in the so-called “window period” when they have low levels of antibodies which cannot be detected by many rapid tests, but they may still transmit HIV to others.
 People who have had a recent high-risk exposure and test negative can have a further test after 28 days.
 
+The symptoms of HIV vary depending on the stage of infection.
+Though people living with HIV tend to be most infectious in the first few months after being infected, many are unaware of their status until the later stages.
+In the first few weeks after initial infection people may experience no symptoms or an influenza-like illness including fever, headache, rash, or sore throat.
+As the infection progressively weakens the immune system, they can develop other signs and symptoms, such as swollen lymph nodes, weight loss, fever, diarrhoea, and cough.
+Without treatment, they could also develop severe illnesses such as tuberculosis, cryptococcal meningitis, severe bacterial infections, and cancers such as lymphomas and Kaposi's sarcoma.
+
+Children may have more rapid disease progression and accelerated damage of the developing immune system compared to adults, with higher viral loads and less effective immunological responses to HIV infection than adults.
+
 ## Treatment
 
-HIV can be prevented and treated with antiretroviral therapy (ART). Untreated HIV can progress to AIDS, often after many years.
+HIV can be prevented and treated with *antiretroviral therapy* (**ART**). Untreated HIV can progress to AIDS, often after many years.
 
 Current ART options are combinations (or "cocktails") consisting of at least three medications belonging to at least two types, or "classes", of antiretroviral agents.
 There are eight classes of antiretroviral agents (ARVs), and over 30 individual drugs:
@@ -31,7 +52,7 @@ There are eight classes of antiretroviral agents (ARVs), and over 30 individual 
 7. CD4 T lymphocyte (CD4) post-attachment inhibitor
 8. gp120 attachment inhibitor
 
-There are also two drugs, ritonavir (RTV) and cobicistat (COBI) which can be used as pharmacokinetic (PK) enhancers (or boosters) to improve the PK profiles of PIs and the INI elvitegravir.
+There are also two drugs, ritonavir (RTV) and cobicistat (COBI) which can be used as PK-enhancers ("boosters") to improve the PK profiles of PIs and the INI elvitegravir.
 
 Depending on the guidelines being followed, initial treatment generally consists of two nucleoside reverse transcriptase inhibitors along with a third ARV, either an INI, an NNRTI, or a PI with a booster.
 
