@@ -12,15 +12,15 @@ The most relevant covariate to influence PK in pediatric patients is considered 
 Relevant predefined exposure metrics should be presented graphically versus body weight and age on a continuous scale (@fig-cov).
 If the drug is indicated to be used in the age range below one year, exposure vs body weight and age should be depicted in an additional separate figure focused on children 0--1 year of age.
 
-![Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions) for children from the NHANES database using 2 mg/kg BID for patients <8 years, and 1.6 mg/kg BID for patients ≥8 years with 100 mg BID maximum dose (*top*), or 2 mg/kg BID with 100 mg BID maximum dose for all patients (*bottom*). The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated paediatric patients. The *horizontal grey band* encompasses 90% of the simulated adult patients receiving 100 mg BID. [Schoemaker et al. (2017)](https://doi.org/10.1007/s00228-017-2230-6).](pediatric-cov.png){#fig-cov}
+![Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions) for children from the NHANES database using 2 mg/kg BID for patients <8 years, and 1.6 mg/kg BID for patients ≥8 years with 100 mg BID maximum dose (*top*), or 2 mg/kg BID with 100 mg BID maximum dose for all patients (*bottom*). The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated paediatric patients. The *horizontal grey band* encompasses 90% of the simulated adult patients receiving 100 mg BID. [Schoemaker et al. (2017)](https://doi.org/10.1007/s00228-017-2230-6).](images/pediatric-cov.png){#fig-cov}
 
 If different doses are proposed for bands of weight or/and age, exposure ranges predicted for the proposed doses for the subsets of the pediatric population should be visualized as boxplots (@fig-box).
 The reference range in the adult population (median and outer percentiles of observed or simulated data) should be given additionally (@fig-box).
 The same statistics should be presented numerically in tables.
 
-![Adult reference range (5^th^--95^th^ percentiles and median) highlighted in the background.](pediatric-box.png){#fig-box}
+![Adult reference range (5^th^--95^th^ percentiles and median) highlighted in the background.](images/pediatric-box.png){#fig-box}
 
-![Pediatric age. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, post-natal age](pediatric-age.png){#fig-age}
+![Pediatric age. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, post-natal age](images/pediatric-age.png){#fig-age}
 
 Approximate pediatric (chronologial) age groups:
 
@@ -53,7 +53,7 @@ The maturation half-life (TM~50~) is fixed to the literature value of 47.7 weeks
 The distribution (mean, [min--max]) of PMA (weeks) in this study population was (518, [57--1652]).
 Assuming renal maturation time differs in pre-term infants, a separate TM~50~ value could be estimated for them if the current model poorly describes this subgroup.
 
-![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full term infant with a PMA of 40 weeks](pediatric-gfr.png){#fig-gfr}
+![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full term infant with a PMA of 40 weeks](images/pediatric-gfr.png){#fig-gfr}
 
 ## Extrapolation
 
@@ -72,14 +72,14 @@ These models may be independent from the adult models if there's adequate data, 
 A previously developed adult PK model can be extrapolated to pediatric patients using allometry, which relates volume of distribution and clearance to body size.
 Volume of distribution scales proportionally with body size (@lst-v), while clearance scales less proportionally (@lst-cl).
 
-```verilog {#lst-v}
-TVV = THETA(1)
-V = TVV * (WT/70)**1
+```verilog {#lst-v lst-cap="Allometric scaling for Volume"}
+V = THETA(1) * EXP(ETA(1))
+V = V * (WT / 70)**1 ; Allometric scaling
 ```
 
-```verilog {#lst-cl}
-TVCL = THETA(1)
-CL = TVV * (WT/70)**0.75
+```verilog {#lst-cl lst-cap="Allometric scaling for Clearance"}
+CL = THETA(1) * EXP(ETA(1))
+CL = CL * (WT / 70)**0.75 ; Allometric scaling
 ```
 
 This theory has been studied and applied with various animal species and human subjects across a wide range of compounds.
