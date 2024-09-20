@@ -22,12 +22,12 @@ The same statistics should be presented numerically in tables.
 
 ![Pediatric age. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, post-natal age](pediatric-age.png){#fig-age}
 
-Approximate pediatric age groups:
+Approximate pediatric (chronologial) age groups:
 
 * Neonates: birth--27 days (corrected gestational age, @eq-cga)
     * Preterm
     * Term
-* Infants: 28 days--23 months
+* Infants: 28 days--1 year
 * Early childhood: 2--5 years
 * Middle childhood: 6--11 years
 * Adolescents 12--⁠17 years
@@ -35,9 +35,13 @@ Approximate pediatric age groups:
 * Adults: >18 years
     * Acts as reference
 
+:::{.callout-note}
+A pediatric patient that is 17.9 years old belongs to the adolescent age group, until the 18^th^ birthday.
+:::
+
 $$
 \text{Corrected gestational age}_\text{weeks} = \text{PNA}_\text{weeks} - (40 - \text{GA}_\text{weeks})
-$${#eq-cga}
+$$ {#eq-cga}
 
 Renal maturation, [Rhodin et al. (2009)](https://doi.org/10.1007/s00467-008-0997-5):
 
@@ -45,18 +49,39 @@ $$
 \text{maturation} = \text{PMA}^\text{Hill} / (\text{TM}_{50}^\text{Hill} + \text{PMA}^\text{Hill})
 $$ {#eq-maturation}
 
-The maturation half-life ($\text{TM}_{50}$) is fixed to the literature value of 47.7 weeks and the
-Hill-exponent to the value of 3.4 (both from Rhodin et al.).
-The distribution (mean, [min-max]) of PMA (weeks) in this study population was (518, [57-1652]).
-Assuming that the time to reach 50% of the maximum renal maturation could be different in pre-term infants, a different value for $\text{TM}_{50}$ could be estimated for pre-term neonates, if the current model does not describes this sub-group well.
+The maturation half-life (TM~50~) is fixed to the literature value of 47.7 weeks and the Hill-exponent to the value of 3.4 (both from Rhodin et al.).
+The distribution (mean, [min--max]) of PMA (weeks) in this study population was (518, [57--1652]).
+Assuming renal maturation time differs in pre-term infants, a separate TM~50~ value could be estimated for them if the current model poorly describes this subgroup.
 
-![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full term infant with a PMA of 40 weeks](pediatric-gfr.png)
+![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full term infant with a PMA of 40 weeks](pediatric-gfr.png){#fig-gfr}
+
+## Extrapolation
 
 If an indication can be assumed to behave similarly in an adult and a pediatric population, PK extrapolation can be used.
 The relevant PK metric(s) linked to efficacy and safety and the exposure-response relationship should first be established in adults.
 Pediatric PK should then be comparable to adult PK.
 
-## Allometry
+The plan is to predict exposure in a pediatric age group, collect data, refine predictions for the next younger group, and repeat.
+The extrapolation generally includes a population PK model and exposure response models.
+These models may be independent from the adult models if there's adequate data, or they may be developed in combination with the adult data.
+
+### Allometry
+
+A previously developed adult PK model can be extrapolated to pediatric patients using allometry, which relates volume of distribution and clearance to body size.
+Volume of distribution scales proportionally with body size (@lst-v), while clearance scales less proportionally (@lst-cl).
+
+```verilog {lst-v}
+TVV = THETA(1)
+V = TVV * (WT/70)**1
+```
+
+```verilog {lst-cl}
+TVCL = THETA(1)
+CL = TVV * (WT/70)**0.75
+```
+
+This theory has been studied and applied with various animal species and human subjects across a wide range of compounds.
+With the exception of some targeted therapies and large molecule biologics, the theory has proven to be robust and reliable.
 
 ::: {.callout-tip title="Fix or estimate?"}
 Fix exponents if you don't have pediatric PK data.
@@ -64,7 +89,7 @@ Fix AND estimate them if you *have* pediatric PK data.
 :::
 
 In neonates the maturation level of eliminating organs influences the estimates and in adults the body composition will affect them.
-It is often the case that the data generated in the context of a pediatric development program are too limited to conclude on whether the estimates of the allometric exponents are in fact different from the theoretical values.
+Data from pediatric development programs are often too limited to confirm whether allometric exponents differ from theoretical values.
 MSWP considers the use of fixed exponents both scientifically justified and practical when developing popPK models in children.
 
 ::: {.callout-important}
@@ -75,6 +100,10 @@ In lower ages (**< 2 years**) there are also maturation functions (@eq-maturatio
 For these pediatric patients it is **important to include maturation function(s)** to describe pediatric PK.
 
 Due to high correlation between body weight and age in pediatric patients, **maturation functions and allometric exponents should not be estimated simultaneously** ([Bonate (1999)](https://doi.org/10.1023/a:1018828709196)).
+
+### Method
+
+In pediatric patients, we want to start with a **clinically relevant dose**.
 
 ## References
 
