@@ -57,7 +57,9 @@ Assuming renal maturation time differs in pre-term infants, a separate TM~50~ va
 
 ## Extrapolation
 
-If an indication can be assumed to behave similarly in an adult and a pediatric population, PK extrapolation can be used.
+If an indication can be assumed to behave similarly in an adult and a pediatric population, PK extrapolation ("bridging") can be used.
+This is a clinical question, and there could be cicumstances where a dedicated pediatric study is warranted (e.g. safety concerns or clinical presentation of the disease).
+
 The relevant PK metric(s) linked to efficacy and safety and the exposure-response relationship should first be established in adults.
 Pediatric PK should then be comparable to adult PK.
 
@@ -70,12 +72,12 @@ These models may be independent from the adult models if there's adequate data, 
 A previously developed adult PK model can be extrapolated to pediatric patients using allometry, which relates volume of distribution and clearance to body size.
 Volume of distribution scales proportionally with body size (@lst-v), while clearance scales less proportionally (@lst-cl).
 
-```verilog {lst-v}
+```verilog {#lst-v}
 TVV = THETA(1)
 V = TVV * (WT/70)**1
 ```
 
-```verilog {lst-cl}
+```verilog {#lst-cl}
 TVCL = THETA(1)
 CL = TVV * (WT/70)**0.75
 ```
@@ -83,7 +85,7 @@ CL = TVV * (WT/70)**0.75
 This theory has been studied and applied with various animal species and human subjects across a wide range of compounds.
 With the exception of some targeted therapies and large molecule biologics, the theory has proven to be robust and reliable.
 
-::: {.callout-tip title="Fix or estimate?"}
+::: {.callout-tip title="Fix exponents, or estimate?"}
 Fix exponents if you don't have pediatric PK data.
 Fix AND estimate them if you *have* pediatric PK data.
 :::
