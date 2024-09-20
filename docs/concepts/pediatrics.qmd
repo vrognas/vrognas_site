@@ -1,11 +1,137 @@
 ---
-title: "Pediatrics"
+title: "Pediatric extrapolation"
 ---
 
 The use of model informed drug development (MIDD) approaches in pediatric drug development is highly recommended due to:
 
 * Practical and ethical limitations in data collection.
 * Ability to quantify the effects of growth and maturation by leveraging data from literature and older patients.
+
+If an indication can be assumed to behave similarly in an adult and a pediatric population, PK extrapolation ("bridging") can be used.
+This is a clinical question, and there could be cicumstances where a dedicated pediatric study is warranted (e.g. safety concerns or clinical presentation of the disease).
+
+The relevant PK metric(s) linked to efficacy and safety and the exposure-response relationship should first be established in adults.
+In pediatric patients, we want to start with a **clinically relevant dose**.
+Pediatric PK should then be comparable to adult PK.
+
+The plan is to predict exposure in a pediatric age group, collect data, refine predictions for the next younger group, and repeat.
+The extrapolation generally includes a population PK model and exposure response models.
+These models may be independent from the adult models if there's adequate data, or they may be developed in combination with the adult data.
+
+## Allometric scaling
+
+A previously developed adult PK model can be extrapolated to pediatric patients using allometry, which relates volume of distribution and clearance to body size.
+Volume of distribution scales proportionally with body size (@lst-v), while clearance scales less proportionally (@lst-cl).
+Allometric scaling should not be used on rate constants.
+Researchers have studied and applied this theory across various animal species and human subjects using a wide range of compounds.
+It has proven robust and reliable, except in some targeted therapies and large molecule biologics.
+
+### Step 1: Refit the Final Adult Data with Allometric Exponents
+
+Scale each volume parameter, including central volume and peripheral volumes.
+
+```verilog {#lst-v lst-cap="Allometric scaling for Volume"}
+V1 = THETA(1) * EXP(ETA(1))
+V1 = V1 * (WT / 70)**1 ; Allometric scaling
+
+V2 = THETA(2) * EXP(ETA(2))
+V2 = V2 * (WT / 70)**1 ; Allometric scaling
+```
+Scale each clearance parameter, including total clearance (CL) and inter-compartmental clearance values such as Q.
+
+```verilog {#lst-cl lst-cap="Allometric scaling for Clearance"}
+CL = THETA(1) * EXP(ETA(1))
+CL = CL * (WT / 70)**0.75 ; Allometric scaling
+
+Q = THETA(2) * EXP(ETA(2))
+Q = Q * (WT / 70)**0.75 ; Allometric scaling
+```
+
+::: {.callout-note title="Fix exponents, or estimate?"}
+Fix exponents if you don't have pediatric PK data.
+Fix AND estimate them if you *have* pediatric PK data.
+Do a sensitivity analysis: How do the exposure predictions change?
+:::
+
+The new model should give slightly different estimates for the volume and clearance parameters, but the diagnostics should be quite similar.
+
+If your model already includes WT as a covariate, perhaps centered on the median WT instead of 70 kilograms, replace it with the standard allometric exponents [@lst-v; @lst-cl].
+Estimated exponents based on median WT can skew results when extrapolating beyond the observed range.
+
+By converting to the standard WT of 70 kg and using standard exponent values, you leverage over 50 years of experience from other compounds when simulating outside adult data.
+Additionally, if AGE or WT is included elsewhere in the model, remove these covariates.
+They could cause problems with extrapolation after refitting the model with standard allometric exponents.
+
+::: {.callout-caution}
+Allometric scaling may not be valid at extreme body weights.
+:::
+
+#### Maturation
+
+In neonates the maturation level of eliminating organs influences the estimates and in adults the body composition will affect them.
+Data from pediatric development programs are often too limited to confirm whether allometric exponents differ from theoretical values.
+MSWP considers the use of fixed exponents both scientifically justified and practical when developing popPK models in children.
+
+::: {.callout-important}
+Do not use allometric exponents estimated using adult data for pediatric PK models.
+:::
+
+In lower ages (**< 2 years**) there are also maturation functions (@eq-maturation) that come into play.
+For these pediatric patients it is **important to include maturation function(s)** to describe pediatric PK.
+
+Due to high correlation between body weight and age in pediatric patients, **maturation functions and allometric exponents should not be estimated simultaneously** ([Bonate (1999)](https://doi.org/10.1023/a:1018828709196)).
+
+### Step 2: Prepare a Data Set with Pediatric Simulation Subjects
+
+Use either NHANES (US subjects 2--18 years), or a growth chart (e.g. WHO).
+The WHO data is preferred for non-US studies or for pediatric patients less than 2 years of age.
+
+::: {.callout-caution}
+Because NHANES involves sampling individual subjects, there may be limited data in certain categories---especially for younger patients.
+NHANES has limited data for younger age groups.
+Therefore, for younger patients---usually those under 2 years of age, but sometimes under 6---it’s better to use the CDC or WHO growth charts instead.
+:::
+
+Create at least 250 simulation subjects in each age group of interest.
+Age groups are described in @sec-age.
+You can adjust these age groups based on the disease condition or target patient population.
+
+The growth charts provide the distribution of WT for various ages and statures of children.
+To create a simulation subject:
+
+1. Generate a uniform distribution of ages in each age-group, with the desired number of subjects.
+2. Create 250 simulated male subjects and 250 female subjects in the same age-group (e.g., 12--18 years).
+3. For each of these 500 subjects, identify the mean and standard deviation for WT based on their specific AGE and SEX.
+4. Randomly sample a single WT using the mean and standard deviation from the growth chart.
+
+This process creates a set of simulation subjects with WT, age-group, and SEX.
+
+::: {.callout-tip}
+Save this dataset for use in future PK simulations.
+:::
+
+### Step 3: Simulate Exposures and Estimate Target Pediatric Doses
+
+Randomly sample ETAs (in e.g. R) to calculate the individual PK-parameters for each simulation subject.
+The WT will be used in the calculation of the V- and CL-parameters
+Then, using the simulated individual PK-parameters, the appropriate dosing regimen is simulated using the adult clinical dose amount and the exposure metrics are calculated.
+
+The exposure for each age group is calculated and compared to the reference exposure for adults.
+
+Dose~ped,optimal~ = Dose~adult~ / (AUC~ped~ / AUC~adult~)
+
+Adjust Dose~ped,optimal~ to a feasible amount (Dose~ped,adjusted~).
+Rerun the simulations with the new dose and compare the simulated AUC~ped~ to the observed AUC~adult~.
+
+It is expected that Dose~ped,optimal~ will be different for each age group.
+
+Often plots that show the distribution of AUC~ped~ along with the distribution of AUC~adult~ or simulated values from individual adult subjects using the final popPK model using box-plots can be useful.
+
+The plot with all age groups receiving the adult clinical dose can be contrasted with a plot with age groups using Dose~ped,adjusted~.
+
+In addition, once you collect some data from pediatric patients, you can overlay the observed pediatric exposure measures with the simulated distributions to identify how well your model predicted the pediatric exposure.
+
+## How to present results
 
 The most relevant covariate to influence PK in pediatric patients is considered to be **body weight** accounting for size differences, in addition to **age** (@fig-age) in the youngest pediatric patients to account for maturation of drug eliminating processes (see @eq-maturation).
 
@@ -19,6 +145,8 @@ The reference range in the adult population (median and outer percentiles of obs
 The same statistics should be presented numerically in tables.
 
 ![Adult reference range (5^th^--95^th^ percentiles and median) highlighted in the background.](images/pediatric-box.png){#fig-box}
+
+## Age groups {#sec-age}
 
 ![Pediatric age. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, post-natal age](images/pediatric-age.png){#fig-age}
 
@@ -54,58 +182,6 @@ The distribution (mean, [min--max]) of PMA (weeks) in this study population was 
 Assuming renal maturation time differs in pre-term infants, a separate TM~50~ value could be estimated for them if the current model poorly describes this subgroup.
 
 ![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full term infant with a PMA of 40 weeks](images/pediatric-gfr.png){#fig-gfr}
-
-## Extrapolation
-
-If an indication can be assumed to behave similarly in an adult and a pediatric population, PK extrapolation ("bridging") can be used.
-This is a clinical question, and there could be cicumstances where a dedicated pediatric study is warranted (e.g. safety concerns or clinical presentation of the disease).
-
-The relevant PK metric(s) linked to efficacy and safety and the exposure-response relationship should first be established in adults.
-Pediatric PK should then be comparable to adult PK.
-
-The plan is to predict exposure in a pediatric age group, collect data, refine predictions for the next younger group, and repeat.
-The extrapolation generally includes a population PK model and exposure response models.
-These models may be independent from the adult models if there's adequate data, or they may be developed in combination with the adult data.
-
-### Allometry
-
-A previously developed adult PK model can be extrapolated to pediatric patients using allometry, which relates volume of distribution and clearance to body size.
-Volume of distribution scales proportionally with body size (@lst-v), while clearance scales less proportionally (@lst-cl).
-
-```verilog {#lst-v lst-cap="Allometric scaling for Volume"}
-V = THETA(1) * EXP(ETA(1))
-V = V * (WT / 70)**1 ; Allometric scaling
-```
-
-```verilog {#lst-cl lst-cap="Allometric scaling for Clearance"}
-CL = THETA(1) * EXP(ETA(1))
-CL = CL * (WT / 70)**0.75 ; Allometric scaling
-```
-
-This theory has been studied and applied with various animal species and human subjects across a wide range of compounds.
-With the exception of some targeted therapies and large molecule biologics, the theory has proven to be robust and reliable.
-
-::: {.callout-tip title="Fix exponents, or estimate?"}
-Fix exponents if you don't have pediatric PK data.
-Fix AND estimate them if you *have* pediatric PK data.
-:::
-
-In neonates the maturation level of eliminating organs influences the estimates and in adults the body composition will affect them.
-Data from pediatric development programs are often too limited to confirm whether allometric exponents differ from theoretical values.
-MSWP considers the use of fixed exponents both scientifically justified and practical when developing popPK models in children.
-
-::: {.callout-important}
-Don't use allometric exponents estimated using adult data for pediatric PK models.
-:::
-
-In lower ages (**< 2 years**) there are also maturation functions (@eq-maturation) that come into play.
-For these pediatric patients it is **important to include maturation function(s)** to describe pediatric PK.
-
-Due to high correlation between body weight and age in pediatric patients, **maturation functions and allometric exponents should not be estimated simultaneously** ([Bonate (1999)](https://doi.org/10.1023/a:1018828709196)).
-
-### Method
-
-In pediatric patients, we want to start with a **clinically relevant dose**.
 
 ## References
 
