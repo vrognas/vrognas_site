@@ -7,18 +7,101 @@ The use of model informed drug development (MIDD) approaches in pediatric drug d
 * Practical and ethical limitations in data collection.
 * Ability to quantify the effects of growth and maturation by leveraging data from literature and older patients.
 
+## Pediatric PK studies
+
+Relative bioavailability comparisons of pediatric formulations with the adult oral formulation typically should be done in adults.
+PK studies in the pediatric population are generally conducted in patients with the disease.
+
+For drugs with linear PK in adults, a single-dose in pediatric patients may be enough for dose selection.
+Sparse sampling in multidose clinical studies could confirm these findings.
+However, if adults exhibit dose- or time-dependent PK or PD---steady-state studies are necessary.
+
+Most dosing recommendations for pediatric medicinal products are based on mg/kg of body weight, up to a maximum adult dose.
+Although surface-area-guided dosing might be preferred, measuring height or length---especially in infants and small children---is often prone to errors.
+For medications with a narrow therapeutic window, such as those used in oncology, surface-area-guided dosing may be necessary.
+
+### Perinatal Age Terminology
+
+Perinatal is the period of time when you become pregnant and up to a year after giving birth.
+The terminology used around pediatric age is commonly inconsistent.
+The terminology described here is based on current best practices.
+Relating age to last menstrual period is done because most women know when their last period began but not when ovulation occurred.
+As long as menstrual dates are remembered accurately, this method of estimating the date of delivery is reliable (@fig-age-term; @tbl-age-term).
+
+![Perinatal Age Terminology. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, postnatal age](images/pediatric-age.png){#fig-age-term}
+
+| Term  | Abbreviation | Comment |
+| :---- | :----------: | :------ |
+| Gestational (or "menstrual") age  | GA | Used when describing the age of a neonate. A 28-week, 5-day neonate is considered a 28-week neonate. |
+| Postnatal (or "chronologial") age | PNA | Time since birth | Days, weeks, months, years |
+| Postmenstrual age | PMA | Applied from 0--1 years of chronological age. A 33-week, 1-day GA infant who is 10 weeks, 5 days PNA would have a PMA of 43 weeks, 6 days. |
+| Corrected (or "adjusted") [gestational] age | CGA | Time since *expected date of delivery* (see @eq-cga). Used to describe children up to 3 years of age who were born preterm. |
+| Conceptional age | | Time between conception and birth. Very accurate for *in-vitro* fertilization. **Should not be used**. |
+
+: Age Terminology During the Perinatal Period {#tbl-age-term tbl-colwidths="[30, 10, 60]"}
+
+Methods of determining GA should be clearly stated so that the variability inherent in these estimations can be considered when outcomes are interpreted.
+The convention for calculating GA when the date of conception is known is to add 2 weeks to the conceptional age.
+CGA is PNA reduced by the number of weeks born before 40 weeks of gestation (@eq-cga).
+
+$$
+\text{Corrected gestational age}_\text{weeks} = \text{PNA}_\text{weeks} - (40 - \text{GA}_\text{weeks})
+$$ {#eq-cga}
+
+### Age Classification of Pediatric Patients {#sec-age}
+
+Any classification of the pediatric population into age groups is to some extent **arbitrary**, but a classification such as the one below provides a basis for thinking about study design in pediatric patients (@tbl-age-group).
+The identification of which ages to study should be medicinal **product-specific and justified**.
+Dividing the pediatric population into many age groups might needlessly increase the number of patients required.
+Sometimes, it may be more appropriate to collect data over broad age ranges and examine the effect of age as a continuous covariate.
+
+::: {.callout-warning}
+In longer term studies, pediatric patients may move from one age category to another.
+The study design and statistical plans should prospectively take into account changing numbers of patients within a given age group.
+:::
+
+| Group | Age  | Comment |
+| :---- | :--- | :------ |
+| Preterm neonates | birth--27 days (CGA, @eq-cga) | |
+| Term neonates    | birth--27 days (CGA, @eq-cga) | Preterm (GA <39 weeks), Term (GA [39--41] weeks) |
+| Infants          | 28 days--23 months | |
+| Children         | 2--11 years | |
+| Adolescents      | 12--⁠18 years | PK often similar to adults. |
+| Adults           | >18 years | Acts as reference |
+
+: Approximate pediatric age groups. "Neonates" = "newborn infants". {#tbl-age-group}
+
+:::{.callout-note}
+A pediatric patient that is 17.9 years old belongs to the adolescent age group, until the 18^th^ birthday.
+:::
+
+Renal maturation, [Rhodin et al. (2009)](https://doi.org/10.1007/s00467-008-0997-5):
+
+$$
+\text{Maturation} = \frac{\text{PMA}^\text{Hill}}{\text{TM}_{50}^\text{Hill} + \text{PMA}^\text{Hill}}
+$$ {#eq-maturation}
+
+The maturation half-life (TM~50~) is fixed to the literature value of 47.7 weeks and the Hill-exponent to the value of 3.4 (both from Rhodin et al.).
+The distribution (mean, [min--max]) of PMA (weeks) in this study population was (518, [57--1652]).
+Assuming renal maturation time differs in pre-term infants, a separate TM~50~ value could be estimated for them if the current model poorly describes this subgroup.
+
+![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full term infant with a PMA of 40 weeks](images/pediatric-gfr.png){#fig-gfr}
+
+## PK extrapolation
+
+Whether PK-extrapolation is doable or not, is ultimately a clinical question.
 If an indication can be assumed to behave similarly in an adult and a pediatric population, PK extrapolation ("bridging") can be used.
-This is a clinical question, and there could be cicumstances where a dedicated pediatric study is warranted (e.g. safety concerns or clinical presentation of the disease).
+However, there could be cicumstances where a dedicated pediatric study is warranted (e.g. safety concerns or clinical presentation of the disease).
 
 The relevant PK metric(s) linked to efficacy and safety and the exposure-response relationship should first be established in adults.
 In pediatric patients, we want to start with a **clinically relevant dose**.
 Pediatric PK should then be comparable to adult PK.
 
-The plan is to predict exposure in a pediatric age group, collect data, refine predictions for the next younger group, and repeat.
+The plan is to predict exposure in a pediatric age group (@tbl-age-group), collect data, refine predictions for the next younger group, and repeat.
 The extrapolation generally includes a population PK model and exposure response models.
 These models may be independent from the adult models if there's adequate data, or they may be developed in combination with the adult data.
 
-## Allometric scaling
+### Allometric scaling for PK
 
 A previously developed adult PK model can be extrapolated to pediatric patients using allometry, which relates volume of distribution and clearance to body size.
 Volume of distribution scales proportionally with body size (@lst-v), while clearance scales less proportionally (@lst-cl).
@@ -26,7 +109,7 @@ Allometric scaling should not be used on rate constants.
 Researchers have studied and applied this theory across various animal species and human subjects using a wide range of compounds.
 It has proven robust and reliable, except in some targeted therapies and large molecule biologics.
 
-### Step 1: Refit the Final Adult Data with Allometric Exponents
+#### Step 1: Refit the Final Adult Data with Allometric Exponents
 
 Scale each volume parameter, including central volume and peripheral volumes.
 
@@ -47,7 +130,7 @@ Q = THETA(2) * EXP(ETA(2))
 Q = Q * (WT / 70)**0.75 ; Allometric scaling
 ```
 
-::: {.callout-note title="Fix exponents, or estimate?"}
+::: {.callout-tip title="Fix exponents, or estimate?"}
 Fix exponents if you don't have pediatric PK data.
 Fix AND estimate them if you *have* pediatric PK data.
 Do a sensitivity analysis: How do the exposure predictions change?
@@ -66,7 +149,7 @@ They could cause problems with extrapolation after refitting the model with stan
 Allometric scaling may not be valid at extreme body weights.
 :::
 
-#### Maturation
+##### Maturation
 
 In neonates the maturation level of eliminating organs influences the estimates and in adults the body composition will affect them.
 Data from pediatric development programs are often too limited to confirm whether allometric exponents differ from theoretical values.
@@ -81,7 +164,7 @@ For these pediatric patients it is **important to include maturation function(s)
 
 Due to high correlation between body weight and age in pediatric patients, **maturation functions and allometric exponents should not be estimated simultaneously** ([Bonate (1999)](https://doi.org/10.1023/a:1018828709196)).
 
-### Step 2: Prepare a Data Set with Pediatric Simulation Subjects
+#### Step 2: Prepare a Data Set with Pediatric Simulation Subjects
 
 Use either NHANES (US subjects 2--18 years), or a growth chart (e.g. WHO).
 The WHO data is preferred for non-US studies or for pediatric patients less than 2 years of age.
@@ -92,8 +175,7 @@ NHANES has limited data for younger age groups.
 Therefore, for younger patients---usually those under 2 years of age, but sometimes under 6---it’s better to use the CDC or WHO growth charts instead.
 :::
 
-Create at least 250 simulation subjects in each age group of interest.
-Age groups are described in @sec-age.
+Create at least 250 simulation subjects in each age group of interest (@tbl-age-group).
 You can adjust these age groups based on the disease condition or target patient population.
 
 The growth charts provide the distribution of WT for various ages and statures of children.
@@ -104,85 +186,49 @@ To create a simulation subject:
 3. For each of these 500 subjects, identify the mean and standard deviation for WT based on their specific AGE and SEX.
 4. Randomly sample a single WT using the mean and standard deviation from the growth chart.
 
-This process creates a set of simulation subjects with WT, age-group, and SEX.
+This process creates a set of simulation subjects with WT, age group, and SEX.
 
 ::: {.callout-tip}
 Save this dataset for use in future PK simulations.
 :::
 
-### Step 3: Simulate Exposures and Estimate Target Pediatric Doses
+#### Step 3: Simulate Exposures and Estimate Target Pediatric Doses
 
 Randomly sample ETAs (in e.g. R) to calculate the individual PK-parameters for each simulation subject.
-The WT will be used in the calculation of the V- and CL-parameters
-Then, using the simulated individual PK-parameters, the appropriate dosing regimen is simulated using the adult clinical dose amount and the exposure metrics are calculated.
+The WT will be used in the calculation of the V- and CL-parameters.
+Then, using the individual PK-parameters, the appropriate dosing regimen is simulated using the adult clinical dose.
+The exposure for each pediatric age group is calculated and compared to the reference exposure for adults.
+Assuming dose-proportional PK, the optimal pediatric dose can be calculated:
+$$
+\text{Dose}_{\text{pediatric, optimal}} = \frac{\text{Dose}_{\text{adult, observed}}}{\text{AUC}_{\text{pediatric, simulated}}/\text{AUC}_{\text{adult, observed}}}
+$$ {#eq-ped-dose}
 
-The exposure for each age group is calculated and compared to the reference exposure for adults.
+Adjust Dose~pediatric,optimal~ to a feasible amount (Dose~pediatric,adjusted~).
+Rerun the simulations with the new dose and compare AUC~pediatric,simulated~ to AUC~adult,observed~.
+It is expected that Dose~pediatric,optimal~ will be different for each age group (@tbl-age-group).
 
-Dose~ped,optimal~ = Dose~adult~ / (AUC~ped~ / AUC~adult~)
+### How to present results from a PK extrapolation
 
-Adjust Dose~ped,optimal~ to a feasible amount (Dose~ped,adjusted~).
-Rerun the simulations with the new dose and compare the simulated AUC~ped~ to the observed AUC~adult~.
+The plot with all age groups receiving the adult clinical dose can be contrasted with a plot with age groups using Dose~pediatric,adjusted~.
+If you have peditric data, you can overlay observed pediatric exposure with the simulated distributions to identify how well your model predicted the pediatric exposure.
 
-It is expected that Dose~ped,optimal~ will be different for each age group.
-
-Often plots that show the distribution of AUC~ped~ along with the distribution of AUC~adult~ or simulated values from individual adult subjects using the final popPK model using box-plots can be useful.
-
-The plot with all age groups receiving the adult clinical dose can be contrasted with a plot with age groups using Dose~ped,adjusted~.
-
-In addition, once you collect some data from pediatric patients, you can overlay the observed pediatric exposure measures with the simulated distributions to identify how well your model predicted the pediatric exposure.
-
-## How to present results
-
-The most relevant covariate to influence PK in pediatric patients is considered to be **body weight** accounting for size differences, in addition to **age** (@fig-age) in the youngest pediatric patients to account for maturation of drug eliminating processes (see @eq-maturation).
+The most relevant covariate to influence PK in pediatric patients is considered to be **body weight** accounting for size differences, and **age** (@fig-age-term) in the youngest pediatric patients to account for maturation of drug eliminating processes (see @eq-maturation).
 
 Relevant predefined exposure metrics should be presented graphically versus body weight and age on a continuous scale (@fig-cov).
 If the drug is indicated to be used in the age range below one year, exposure vs body weight and age should be depicted in an additional separate figure focused on children 0--1 year of age.
 
 ![Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions) for children from the NHANES database using 2 mg/kg BID for patients <8 years, and 1.6 mg/kg BID for patients ≥8 years with 100 mg BID maximum dose (*top*), or 2 mg/kg BID with 100 mg BID maximum dose for all patients (*bottom*). The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated paediatric patients. The *horizontal grey band* encompasses 90% of the simulated adult patients receiving 100 mg BID. [Schoemaker et al. (2017)](https://doi.org/10.1007/s00228-017-2230-6).](images/pediatric-cov.png){#fig-cov}
 
-If different doses are proposed for bands of weight or/and age, exposure ranges predicted for the proposed doses for the subsets of the pediatric population should be visualized as boxplots (@fig-box).
+Often plots that show the distribution of AUC~pediatric,simulated~ along with the distribution of AUC~adult,observed~ or simulated values from individual adult subjects using the final popPK model using box-plots can be useful (@fig-box).
+If different doses are proposed for bands of weight or/and age, exposure ranges predicted for the proposed doses for the subsets of the pediatric population should be visualized as box-plots (@fig-box).
 The reference range in the adult population (median and outer percentiles of observed or simulated data) should be given additionally (@fig-box).
-The same statistics should be presented numerically in tables.
+**The same statistics should be presented numerically in tables.**
 
 ![Adult reference range (5^th^--95^th^ percentiles and median) highlighted in the background.](images/pediatric-box.png){#fig-box}
 
-## Age groups {#sec-age}
-
-![Pediatric age. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, post-natal age](images/pediatric-age.png){#fig-age}
-
-Approximate pediatric (chronologial) age groups:
-
-* Neonates: birth--27 days (corrected gestational age, @eq-cga)
-    * Preterm
-    * Term
-* Infants: 28 days--1 year
-* Early childhood: 2--5 years
-* Middle childhood: 6--11 years
-* Adolescents 12--⁠17 years
-    * PK often similar to adults
-* Adults: >18 years
-    * Acts as reference
-
-:::{.callout-note}
-A pediatric patient that is 17.9 years old belongs to the adolescent age group, until the 18^th^ birthday.
-:::
-
-$$
-\text{Corrected gestational age}_\text{weeks} = \text{PNA}_\text{weeks} - (40 - \text{GA}_\text{weeks})
-$$ {#eq-cga}
-
-Renal maturation, [Rhodin et al. (2009)](https://doi.org/10.1007/s00467-008-0997-5):
-
-$$
-\text{maturation} = \text{PMA}^\text{Hill} / (\text{TM}_{50}^\text{Hill} + \text{PMA}^\text{Hill})
-$$ {#eq-maturation}
-
-The maturation half-life (TM~50~) is fixed to the literature value of 47.7 weeks and the Hill-exponent to the value of 3.4 (both from Rhodin et al.).
-The distribution (mean, [min--max]) of PMA (weeks) in this study population was (518, [57--1652]).
-Assuming renal maturation time differs in pre-term infants, a separate TM~50~ value could be estimated for them if the current model poorly describes this subgroup.
-
-![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full term infant with a PMA of 40 weeks](images/pediatric-gfr.png){#fig-gfr}
-
 ## References
 
-1. [EMA M&S QA](https://www.ema.europa.eu/en/human-regulatory-overview/research-and-development/scientific-guidelines/clinical-pharmacology-and-pharmacokinetics/modelling-and-simulation-questions-and-answers)
+1. [ICH E11(R1) (2017)](https://database.ich.org/sites/default/files/E11_R1_Addendum.pdf)
+2. [ICH E11A (2024)](https://database.ich.org/sites/default/files/ICH_E11A_Guideline_Step4_2024_0821.pdf)
+3. [EMA M&S QA (2023)](https://www.ema.europa.eu/en/human-regulatory-overview/research-and-development/scientific-guidelines/clinical-pharmacology-and-pharmacokinetics/modelling-and-simulation-questions-and-answers)
+4. [American Academy of Pediatrics: Committee on Fetus and Newborn (2004)](https://doi.org/10.1542/peds.2004-1915)
