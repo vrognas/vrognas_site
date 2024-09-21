@@ -75,18 +75,6 @@ The study design and statistical plans should prospectively take into account ch
 A pediatric patient that is 17.9 years old belongs to the adolescent age group, until the 18^th^ birthday.
 :::
 
-Renal maturation, [Rhodin et al. (2009)](https://doi.org/10.1007/s00467-008-0997-5):
-
-$$
-\text{Maturation} = \frac{\text{PMA}^\text{Hill}}{\text{TM}_{50}^\text{Hill} + \text{PMA}^\text{Hill}}
-$$ {#eq-maturation}
-
-The maturation half-life (TM~50~) is fixed to the literature value of 47.7 weeks and the Hill-exponent to the value of 3.4 (both from Rhodin et al.).
-The distribution (mean, [min--max]) of PMA (weeks) in this study population was (518, [57--1652]).
-Assuming renal maturation time differs in pre-term infants, a separate TM~50~ value could be estimated for them if the current model poorly describes this subgroup.
-
-![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full term infant with a PMA of 40 weeks](images/pediatric-gfr.png){#fig-gfr}
-
 ## PK extrapolation
 
 Whether PK-extrapolation is doable or not, is ultimately a clinical question.
@@ -136,6 +124,10 @@ Fix AND estimate them if you *have* pediatric PK data.
 Do a sensitivity analysis: How do the exposure predictions change?
 :::
 
+::: {.callout-important}
+Do not use allometric exponents estimated using adult data for pediatric PK models.
+:::
+
 The new model should give slightly different estimates for the volume and clearance parameters, but the diagnostics should be quite similar.
 
 If your model already includes WT as a covariate, perhaps centered on the median WT instead of 70 kilograms, replace it with the standard allometric exponents [@lst-v; @lst-cl].
@@ -155,14 +147,27 @@ In neonates the maturation level of eliminating organs influences the estimates 
 Data from pediatric development programs are often too limited to confirm whether allometric exponents differ from theoretical values.
 MSWP considers the use of fixed exponents both scientifically justified and practical when developing popPK models in children.
 
-::: {.callout-important}
-Do not use allometric exponents estimated using adult data for pediatric PK models.
-:::
+In lower ages (**< 2 years**) there are also maturation functions that come into play.
+For these pediatric patients it is **important to include maturation function(s)** to describe pediatric PK (@lst-cl-mat).
 
-In lower ages (**< 2 years**) there are also maturation functions (@eq-maturation) that come into play.
-For these pediatric patients it is **important to include maturation function(s)** to describe pediatric PK.
+```verilog {#lst-cl-mat lst-cap="Renal maturation, [Rhodin et al. (2009)](https://doi.org/10.1007/s00467-008-0997-5). PMA from the input data."}
+CLR = THETA(1) * EXP(ETA(1))
+CLR = CLR * (WT / 70)**0.75 ; Allometric scaling
 
+TM_50 = 47.7
+Hill = 3.4
+CLR = CLR * PMA**Hill / (TM_50**Hill + PMA**Hill) ; Maturation
+```
+
+The maturation half-life (TM~50~) is fixed to the literature value of 47.7 weeks and the Hill-exponent to the value of 3.4 (both from Rhodin et al.).
+The distribution (mean, [min--max]) of PMA (weeks) in this study population was (518, [57--1652]).
+Assuming renal maturation time differs in pre-term infants, a separate TM~50~ value could be estimated for them if the current model poorly describes this subgroup.
+
+![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full term infant with a PMA of 40 weeks](images/pediatric-gfr.png){#fig-gfr}
+
+::: {.callout-caution}
 Due to high correlation between body weight and age in pediatric patients, **maturation functions and allometric exponents should not be estimated simultaneously** ([Bonate (1999)](https://doi.org/10.1023/a:1018828709196)).
+:::
 
 #### Step 2: Prepare a Data Set with Pediatric Simulation Subjects
 
