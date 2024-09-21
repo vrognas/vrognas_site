@@ -65,7 +65,7 @@ The study design and statistical plans should prospectively take into account ch
 | Preterm neonates | birth--27 days (CGA, @eq-cga) | |
 | Term neonates    | birth--27 days (CGA, @eq-cga) | Preterm (GA <39 weeks), Term (GA [39--41] weeks) |
 | Infants          | 28 days--23 months | |
-| Children         | 2--11 years | |
+| Children         | 2--11 years | This group is often divided into 2--5 years, and 6--11 years.|
 | Adolescents      | 12--⁠18 years | PK often similar to adults. |
 | Adults           | >18 years | Acts as reference |
 
