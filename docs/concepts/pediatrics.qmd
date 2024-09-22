@@ -69,7 +69,7 @@ The study design and statistical plans should prospectively take into account ch
 | Adolescents      | 12--⁠18 years | PK often similar to adults. |
 | Adults           | >18 years | Acts as reference |
 
-: Approximate pediatric age groups. "Neonates" = "newborn infants". {#tbl-age-group}
+: Approximate pediatric age groups. Neonates = "newborn infants". {#tbl-age-group}
 
 :::{.callout-note}
 A pediatric patient that is 17.9 years old belongs to the adolescent age group, until the 18^th^ birthday.
