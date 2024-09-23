@@ -204,6 +204,7 @@ The WT will be used in the calculation of the V- and CL-parameters.
 Then, using the individual PK-parameters, the appropriate dosing regimen is simulated using the adult clinical dose.
 The exposure for each pediatric age group is calculated and compared to the reference exposure for adults.
 Assuming dose-proportional PK, the optimal pediatric dose can be calculated:
+
 $$
 \text{Dose}_{\text{pediatric, optimal}} = \frac{\text{Dose}_{\text{adult, observed}}}{\text{AUC}_{\text{pediatric, simulated}}/\text{AUC}_{\text{adult, observed}}}
 $$ {#eq-ped-dose}
@@ -217,7 +218,7 @@ It is expected that Dose~pediatric,optimal~ will be different for each age group
 The plot with all age groups receiving the adult clinical dose can be contrasted with a plot with age groups using Dose~pediatric,adjusted~.
 If you have peditric data, you can overlay observed pediatric exposure with the simulated distributions to identify how well your model predicted the pediatric exposure.
 
-The most relevant covariate to influence PK in pediatric patients is considered to be **body weight** accounting for size differences, and **age** (@fig-age-term) in the youngest pediatric patients to account for maturation of drug eliminating processes (see @eq-maturation).
+The most relevant covariate to influence PK in pediatric patients is considered to be **body weight** accounting for size differences, and **age** (@fig-age-term) in the youngest pediatric patients to account for maturation of drug eliminating processes (see @lst-cl-mat).
 
 Relevant predefined exposure metrics should be presented graphically versus body weight and age on a continuous scale (@fig-cov).
 If the drug is indicated to be used in the age range below one year, exposure vs body weight and age should be depicted in an additional separate figure focused on children 0--1 year of age.
