@@ -3,7 +3,12 @@ title: "Disease primer: Human immunodeficiency virus (HIV)"
 ---
 
 The **human immunodeficiency viruses* (HIV)** are two species of Lentivirus (a subgroup of retrovirus) that infect humans.
-Over time, they cause **acquired immunodeficiency syndrome (AIDS)**, a condition in which progressive failure of the immune system allows life-threatening opportunistic infections and cancers to thrive.
+Unlike most other viruses, it is cells of the immune system that the HIV particles infect.
+The viral particles primarily infect cells called ‘CD4 helper T cells’.
+The HIV virus is passed through bodily fluid exchange, typically during intercourse.
+Over time (often up to seven years without therapy), the number of CD4 helper T cells drops so low that they are almost undetectable in the blood, weakening the immune response to infection from other pathogens.
+This is what makes untreated HIV lead to **acquired immunodeficiency syndrome (AIDS)**.
+Without the CD4 helper T cells, eventually, a simple cold or bacterial infection can be fatal.
 Without treatment, the average survival time after infection with HIV is estimated to be 9--11 years, depending on the HIV subtype.
 
 The subtypes of HIV include two main subtypes, known as **HIV type 1 (HIV-1)** and **HIV type 2 (HIV-2)**.
@@ -24,25 +29,29 @@ HIV-2 viruses are generally considered to be less virulent and less transmissibl
 
 ## Clinical presentation, diagnosis
 
-* Rapid diagnostic tests that provide same-day results.
+### Rapid diagnostic tests that provide same-day results.
 
 Most widely used HIV diagnostic tests detect antibodies produced by a person as part of their immune response to fight HIV.
 In most cases, people develop antibodies to HIV within 28 days of infection.
 During this time, people are in the so-called “window period” when they have low levels of antibodies which cannot be detected by many rapid tests, but they may still transmit HIV to others.
 People who have had a recent high-risk exposure and test negative can have a further test after 28 days.
 
-The symptoms of HIV vary depending on the stage of infection.
-Though people living with HIV tend to be most infectious in the first few months after being infected, many are unaware of their status until the later stages.
-In the first few weeks after initial infection people may experience no symptoms or an influenza-like illness including fever, headache, rash, or sore throat.
+HIV is like a lot of other viruses in as much that the initial symptoms are flu-like.
+This may include fever, headache, sore throat, swollen glands, a rash, or generally feeling drained.
+Not everyone reacts the same way to an infection of HIV, and symptoms may initially be subtle.
 As the infection progressively weakens the immune system, they can develop other signs and symptoms, such as swollen lymph nodes, weight loss, fever, diarrhoea, and cough.
-Without treatment, they could also develop severe illnesses such as tuberculosis, cryptococcal meningitis, severe bacterial infections, and cancers such as lymphomas and Kaposi's sarcoma.
-
+Your immune system then kicks in and the symptoms go away—so it can be easy to miss.
+Though people living with HIV tend to be most infectious in the first few months after being infected, many are unaware of their status until the later stages.
+People can go years(!) without knowing they are infected.
 Children may have more rapid disease progression and accelerated damage of the developing immune system compared to adults, with higher viral loads and less effective immunological responses to HIV infection than adults.
 
 ## Treatment
 
 HIV can be prevented and treated with **antiretroviral therapy (ART)**.
-Untreated HIV can progress to AIDS, often after many years.
+An HIV positive person today who is on effective treatment can live as long and be as healthy as a person who does not have HIV.
+With treatment, the viral load in patients can be reduced and maintained at such a low level, the risk of transmitting the virus to someone else can be almost eliminated.
+However, it is a life-long infection as it’s impossible to clear it from your system, even when treated with drugs that target the virus.
+
 Resistance-associated mutations (RAMs) can rapidly be selected when there is selection pressure due to e.g. too low concentrations of antiviral drugs.
 Often, resistance to drugs in a certain ARV class results in cross-resistance to other drugs in that same class.
 
@@ -68,3 +77,4 @@ Depending on the guidelines being followed, initial treatment generally consists
 ## References
 
 * https://www.who.int/news-room/fact-sheets/detail/hiv-aids
+* https://www.science.org.au/curious/people-medicine/hiv
