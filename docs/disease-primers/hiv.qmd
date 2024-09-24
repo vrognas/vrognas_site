@@ -2,7 +2,7 @@
 title: "Disease primer: Human immunodeficiency virus (HIV)"
 ---
 
-The **human immunodeficiency viruses* (HIV)** are two species of Lentivirus (a subgroup of retrovirus) that infect humans.
+The **human immunodeficiency viruses (HIV)** are two species of Lentivirus (a subgroup of retrovirus) that infect humans.
 Unlike most other viruses, it is cells of the immune system that the HIV particles infect.
 The viral particles primarily infect cells called ‘CD4 helper T cells’.
 The HIV virus is passed through bodily fluid exchange, typically during intercourse.
