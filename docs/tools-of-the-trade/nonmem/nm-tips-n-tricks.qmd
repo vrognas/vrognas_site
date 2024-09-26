@@ -39,6 +39,8 @@ If samples are taken on in the absorption-phase (pre-C~max~), around C~max~, and
 * **Always code with MU-modeling** if possible.
 * **Always add an ETA**, even if you don't intend to use it; then fix it to 0. This allows for easy estimation of the variability in case you need it, without changing the code.
 * Avoid temporary variables in the `$DES`-block. The more code you have there, the slower your model will run.
+* Proportional RUV is usually only needed if your measurement covers more than 3 orders of magnitude.
+    * PD biomarkers usually only cover 1--2 orders of magnitude, so only additive RUV is needed.
 
 ### Time-to-event
 
