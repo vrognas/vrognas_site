@@ -38,6 +38,7 @@ If samples are taken on in the absorption-phase (pre-C~max~), around C~max~, and
 * Use `EXIT(1)` instead of `p=0 /+1E-15` (Credit: Gunnar Yngman)
 * **Always code with MU-modeling** if possible.
 * **Always add an ETA**, even if you don't intend to use it; then fix it to 0. This allows for easy estimation of the variability in case you need it, without changing the code.
+* Avoid temporary variables in the `$DES`-block. The more code you have there, the slower your model will run.
 
 ### Time-to-event
 
