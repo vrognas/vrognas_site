@@ -35,7 +35,9 @@ If samples are taken on in the absorption-phase (pre-C~max~), around C~max~, and
 * When you use `F`, `CMT` matters (Credit: Maria Kjellsson)
 * `ETADER=3`: Get out of a local minima (Credit: Rikard Nordgren)
 * Use `$COVARIANCE MATRIX=R` for consistency between statistical software.
-* `EXIT(1)` instead of `p=0 /+1E-15` (Credit: Gunnar Yngman)
+* Use `EXIT(1)` instead of `p=0 /+1E-15` (Credit: Gunnar Yngman)
+* **Always code with MU-modeling** if possible.
+* **Always add an ETA**, even if you don't intend to use it; then fix it to 0. This allows for easy estimation of the variability in case you need it, without changing the code.
 
 ### Time-to-event
 
