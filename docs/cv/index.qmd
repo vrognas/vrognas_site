@@ -2,13 +2,12 @@
 title: "Curriculum Vitae"
 ---
 
-I work as a Pharmacometric Assessor at the [Swedish Medical Products Agency (Läkemedelsverket)](https://www.lakemedelsverket.se/en).
-
-Alongside my current employment, I am also pursuing a PhD in Pharmacometrics at [Uppsala University](https://www.uu.se/en).
+I am currently pursuing a PhD in Pharmacometrics at [Uppsala University](https://www.uu.se/en).
 
 ## Experience
 
-* **Pharmacometric Assessor**, [*Swedish Medical Products Agency (Läkemedelsverket)*](https://www.lakemedelsverket.se/en) (Nov 2023–present)
+* **Pharmacometric Assessor**, [*Swedish Medical Products Agency (Läkemedelsverket)*](https://www.lakemedelsverket.se/en) (Nov 2023–Oct 2024)
+* **Systems developer (Python)**, [*Pharmpy*](https://pharmpy.github.io/latest/index.html) (Feb–Oct 2023)
 * **Clinical Pharmacometrician Intern**, [*F. Hoffmann-La Roche Ltd*](https://www.roche.com) (Sep 2021–Feb 2022)
 
 ## Degrees
