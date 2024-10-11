@@ -29,7 +29,7 @@ Septic chock is a development of sepsis that is even more severe.
 
 ## Diagnosis
 
-![](images/abx-biomarkers.jpg)
+![https://doi.org/10.1515/labm.1999.23.5.263](images/abx-biomarkers.jpg)
 
 * Biomarkers not specific
     * 3 markers + WBC (but unspecific)
