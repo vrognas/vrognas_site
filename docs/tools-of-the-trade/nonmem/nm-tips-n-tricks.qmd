@@ -59,8 +59,8 @@ Weibull\*COV *forces* proportional hazard (Credit: Andrew Hooker)
 
 In general, always start with FOCE, then turn to EM.
 For example, if LAPLACE causes issues, go to EM.
-When building a relatively complex PKPD model (e.g. 47 parameters and 11 
-differential equations), there can be issues using FOCE so an EM-method is warranted.
+When building a relatively complex PKPD model (e.g. 47 parameters and 11 differential equations), there can be issues using FOCE so an EM-method is warranted.
+See [Bach et al. (2021)](https://doi.org/10.1007/s10928-021-09753-0) for a case study of FOCE vs EM-methods.
 
 #### Classical methods
 
