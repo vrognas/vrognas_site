@@ -31,11 +31,13 @@ Septic chock is a development of sepsis that is even more severe.
 
 The progression of an infectious disease can be divided into five periods, which are related to the number of pathogen particles and the severity of signs and symptoms (@fig-stages).
 
-1. Incubation
-2. Prodromal
-3. Illness
-4. Decline
-5. Convalescence
+|   #   | Period/Phase/Stage | Time | Description |
+| :---: | :----------------- | :--- | :---------- |
+|   1   | Incubation         |      |             |
+|   2   | Prodromal          |      |             |
+|   3   | Illness            |      |             |
+|   4   | Decline            |      |             |
+|   5   | Convalescence      |      |             |
 
 ![](images/infection-stages.jpg){#fig-stages}
 
