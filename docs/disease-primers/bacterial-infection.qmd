@@ -14,22 +14,34 @@ A bacterial infection is classified according to the site of infection, and some
 * IAI
 * BSI
 
-![](images/overview-of-bacterial-infections.jpg)
+![](images/overview-of-bacterial-infections.jpg){#fig-bacteria}
 
-## Sepsis
+### Sepsis
 
 Sepsis is a special life-threatening state.
 Occurs rarely in UTI, mostly in lung infections.
 
 The SOFA-score is often used to assess organ failure in septic patients.
 
-### Septic chock
+#### Septic chock
 
 Septic chock is a development of sepsis that is even more severe.
 
+## Periods of disease
+
+The progression of an infectious disease can be divided into five periods, which are related to the number of pathogen particles and the severity of signs and symptoms (@fig-stages).
+
+1. Incubation
+2. Prodromal
+3. Illness
+4. Decline
+5. Convalescence
+
+![](images/infection-stages.jpg){#fig-stages}
+
 ## Diagnosis
 
-![[Meisner M., (1999)](https://doi.org/10.1515/labm.1999.23.5.263)](images/abx-biomarkers.jpg)
+![[Meisner M., (1999)](https://doi.org/10.1515/labm.1999.23.5.263)](images/abx-biomarkers.jpg){#fig-biomarkers}
 
 * Biomarkers not specific
     * 3 markers + WBC (but unspecific)
