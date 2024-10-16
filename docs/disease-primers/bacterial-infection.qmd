@@ -32,13 +32,15 @@ Septic chock is a development of sepsis that is even more severe.
 The progression of an infectious disease can be divided into five periods, which are related to the number of pathogen particles and the severity of signs and symptoms (@fig-stages).
 Infectious diseases can be contagious during all five of the periods of disease.
 
-|   #   | Period/Phase/Stage | Time | Description |
-| :---: | :----------------- | :--- | :---------- |
-|   1   | Incubation         | Days--Years | Pathogen multiplies. No signs or symptoms. |
-|   2   | Prodromal          |      | Pathogeon multiplies. General signs and symptoms.            |
-|   3   | Illness            |      | Most severe and specific signs and symptoms            |
-|   4   | Decline            |      | Pathogen numbers decline. Signs and symptoms decline. Immune system weakened, suceptibility to secondary infection. |
-|   5   | Convalescence      |      | Patient return to normal function. Some permament damage might have occured. |
+|   #   | Period/Phase/Stage | Description |
+| :---: | :----------------- | :---------- |
+|   1   | Incubation         | Pathogen multiplies. No signs or symptoms. |
+|   2   | Prodromal          | Pathogeon multiplies. General signs and symptoms.            |
+|   3   | Illness            | Most severe and specific signs and symptoms            |
+|   4   | Decline            | Pathogen numbers decline. Signs and symptoms decline. Immune system weakened, suceptibility to secondary infection. |
+|   5   | Convalescence      | Patient return to normal function. Some permament damage might have occured. |
+
+: Periods of disease. {tbl-colwidths="[10,20,70]"}
 
 ![](images/infection-stages.jpg){#fig-stages}
 
