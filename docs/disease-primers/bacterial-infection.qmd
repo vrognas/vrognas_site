@@ -1,9 +1,12 @@
 ---
 title: "Disease primer: Bacterial infections"
 ---
+
 For an infectious agent, **infectivity** refers to the proportion of exposed persons who become infected.
 **Pathogenicity** refers to the proportion of infected individuals who develop clinically apparent disease.
 **Virulence** refers to the proportion of clinically apparent cases that are severe or fatal.
+The disease process may never progress to clinically apparent illness, or result in illness that ranges from mild to severe or fatal. This range is called the **spectrum of disease**.
+Ultimately, the disease process ends either in recovery, disability or death.
 
 A bacterial infection is classified according to the site of infection, and sometimes also the source of infection.
 
