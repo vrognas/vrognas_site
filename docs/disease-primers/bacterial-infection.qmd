@@ -1,6 +1,9 @@
 ---
 title: "Disease primer: Bacterial infections"
 ---
+For an infectious agent, **infectivity** refers to the proportion of exposed persons who become infected.
+**Pathogenicity** refers to the proportion of infected individuals who develop clinically apparent disease.
+**Virulence** refers to the proportion of clinically apparent cases that are severe or fatal.
 
 A bacterial infection is classified according to the site of infection, and sometimes also the source of infection.
 
@@ -31,17 +34,19 @@ Septic chock is a development of sepsis that is even more severe.
 
 The progression of an infectious disease can be divided into five periods, which are related to the number of pathogen particles and the severity of signs and symptoms (@fig-stages).
 Infectious diseases can be contagious during all five of the periods of disease.
-Stages might overlap.
 
 |   #   | Period/Phase/Stage | Description |
 | :---: | :----------------- | :---------- |
 |   1   | Incubation/latency | Pathogen replicates. No signs or symptoms. |
-|   2   | Prodromal          | Pathogeon replicates. General signs and symptoms. Immunesystem active. |
-|   3   | Illness            | Most severe and characteristic signs and symptoms. **Usual time of diagnosis early in this period.** |
+|   2   | Prodromal (subclinical disease) | Pathogeon replicates. General signs and symptoms. Immunesystem active. |
+|   3   | Illness (clinical disease) | Most severe and characteristic signs and symptoms. **Usual time of diagnosis early in this period.** |
 |   4   | Decline            | Pathogen particle-count declines. Signs and symptoms improve. Immune system possibly weakened---suceptibility to secondary infection. |
 |   5   | Convalescence      | Patient return to normal function. Signs and symptoms resolve. Some permament damage might have occured. |
 
 : Periods of disease. {tbl-colwidths="[10,20,70]"}
+
+Stages might overlap.
+The onset of symptoms marks the transition from subclinical to clinical disease.
 
 ![](images/infection-stages.jpg){#fig-stages}
 
