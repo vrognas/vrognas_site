@@ -35,9 +35,9 @@ Stages might overlap.
 
 |   #   | Period/Phase/Stage | Description |
 | :---: | :----------------- | :---------- |
-|   1   | Incubation         | Pathogen replicates. No signs or symptoms. |
+|   1   | Incubation/latency | Pathogen replicates. No signs or symptoms. |
 |   2   | Prodromal          | Pathogeon replicates. General signs and symptoms. Immunesystem active. |
-|   3   | Illness            | Most severe and characteristic signs and symptoms. |
+|   3   | Illness            | Most severe and characteristic signs and symptoms. **Usual time of diagnosis early in this period.** |
 |   4   | Decline            | Pathogen particle-count declines. Signs and symptoms improve. Immune system possibly weakened---suceptibility to secondary infection. |
 |   5   | Convalescence      | Patient return to normal function. Signs and symptoms resolve. Some permament damage might have occured. |
 
