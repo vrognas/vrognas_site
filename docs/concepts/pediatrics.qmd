@@ -7,24 +7,10 @@ The use of *model informed drug development* (MIDD) approaches in pediatric drug
 * Practical and ethical limitations in data collection.
 * Ability to quantify the effects of growth and maturation by leveraging data from literature and older patients.
 
-## Pediatric PK studies
 
-Relative bioavailability comparisons of pediatric formulations with the adult oral formulation typically should be done in adults.
-PK studies in the pediatric population are generally conducted in patients with the disease.
+## Pediatric Age Terminology
 
-For drugs with linear PK in adults, a single-dose in pediatric patients may be enough for dose selection.
-Sparse sampling in multidose clinical studies could confirm these findings.
-However, if adults exhibit dose- or time-dependent PK or PD---steady-state studies are necessary.
-
-Most dosing recommendations for pediatric medicinal products are based on mg/kg of body weight, up to a maximum adult dose.
-Although surface-area-guided dosing might be preferred, measuring height or length---especially in infants and small children---is often prone to errors.
-For medications with a narrow therapeutic window, such as those used in oncology, surface-area-guided dosing may be necessary.
-
-### Perinatal Age Terminology
-
-Perinatal is the period of time when you become pregnant and up to a year after giving birth.
-The terminology used around pediatric age is commonly inconsistent.
-The terminology described here is based on current best practices.
+The terminology used around pediatric age is commonly **inconsistent**.
 Relating age to last menstrual period is done because most women know when their last period began but not when ovulation occurred.
 As long as menstrual dates are remembered accurately, this method of estimating the date of delivery is reliable (@fig-age-term; @tbl-age-term).
 
@@ -62,18 +48,31 @@ The study design and statistical plans should prospectively take into account ch
 
 | Group | Age  | Comment |
 | :---- | :--- | :------ |
-| Preterm neonates | birth--27 days (CGA, @eq-cga) | |
-| Term neonates    | birth--27 days (CGA, @eq-cga) | Preterm (GA <39 weeks), Term (GA [39--41] weeks) |
+| Preterm neonates | birth--27 days (CGA, @eq-cga) | < 39 weeks gestation |
+| Term neonates    | birth--27 days (CGA, @eq-cga) | 39--41 weeks gestation |
 | Infants          | 28 days--23 months | |
-| Children         | 2--11 years | This group is often divided into 2--5 years, and 6--11 years.|
-| Adolescents      | 12--⁠18 years | PK often similar to adults. |
-| Adults           | >18 years | Acts as reference |
+| Children         | 2--11 years | Often divided into 2--5 years, and 6--11 years.|
+| Adolescents      | 12--⁠17 years | PK often similar to adults. |
+| Adults           | ≥18 years | Acts as reference. |
 
 : Approximate pediatric age groups. Neonates = "newborn infants". {#tbl-age-group}
 
 :::{.callout-note}
 A pediatric patient that is 17.9 years old belongs to the adolescent age group, until the 18^th^ birthday.
 :::
+
+## Pediatric PK studies
+
+Relative bioavailability comparisons of pediatric formulations with the adult oral formulation typically should be done in adults.
+PK studies in the pediatric population are generally conducted {in patients with the disease.
+
+For drugs with linear PK in adults, a single-dose in pediatric patients may be enough for dose selection.
+Sparse sampling in multidose clinical studies could confirm these findings.
+However, if adults exhibit dose- or time-dependent PK or PD---steady-state studies are necessary.
+
+Most dosing recommendations for pediatric medicinal products are based on mg/kg of body weight, up to a maximum adult dose.
+Although surface-area-guided dosing might be preferred, measuring height or length---especially in infants and young children---is often prone to errors.
+For medications with a narrow therapeutic window, such as those used in oncology, surface-area-guided dosing may be necessary.
 
 ## PK extrapolation
 
