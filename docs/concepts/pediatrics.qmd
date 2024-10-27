@@ -1,5 +1,5 @@
 ---
-title: "Pediatric extrapolation"
+title: "Pediatric Pharmacometrics"
 ---
 
 The use of *model informed drug development* (MIDD) approaches in pediatric drug development is highly recommended due to:
