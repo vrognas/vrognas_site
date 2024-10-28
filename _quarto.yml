@@ -121,6 +121,8 @@ website:
               href: docs/concepts/renal-impairment-studies.qmd
             - text: "Augmented renal clearance (ARC)"
               href: docs/concepts/augmented-renal-clearance.qmd
+          - Text: "Clinical studies"
+            href: docs/concepts/clinpharm-studies.qmd
           - text: "Pediatrics"
             href: docs/concepts/pediatrics.qmd
     - id: tools-of-the-trade
