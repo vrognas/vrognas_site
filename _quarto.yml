@@ -113,6 +113,7 @@ website:
           href: docs/concepts/index.qmd
           contents:
           - section: "Elimination"
+            href: docs/concepts/clearance.qmd
             contents:
             - text: "Hepatic impairment (HI)"
               href: docs/concepts/hepatic-impairment-studies.qmd
