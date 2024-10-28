@@ -20,14 +20,14 @@ As long as menstrual dates are remembered accurately, this method of estimating 
 | :---- | :----------: | :------ |
 | Gestational (or "menstrual") age  | GA | Used when describing the age of a neonate. A 28-week, 5-day neonate is considered a 28-week neonate. |
 | Postnatal (or "chronologial") age | PNA | Time since birth | Days, weeks, months, years |
-| Postmenstrual age | PMA | Applied from 0--1 years of chronological age. A 33-week, 1-day GA infant who is 10 weeks, 5 days PNA would have a PMA of 43 weeks, 6 days. |
-| Corrected (or "adjusted") [gestational] age | CGA | Time since *expected date of delivery* (see @eq-cga). Used to describe children up to 3 years of age who were born preterm. |
+| Postmenstrual age | PMA | Applied from 0--1 years of chronological age. A 33-week, 1-day GA infant who is 10 weeks, 5 days PNA would have a PMA of 43 weeks, 6 days. |
+| Corrected (or "adjusted") [gestational] age | CGA | Time since *expected date of delivery* (see @eq-cga). Used to describe children up to 3 years of age who were born preterm. |
 | Conceptional age | | Time between conception and birth. Very accurate for *in-vitro* fertilization. **Should not be used**. |
 
 : Age Terminology During the Perinatal Period {#tbl-age-term tbl-colwidths="[30, 10, 60]"}
 
 Methods of determining GA should be clearly stated so that the variability inherent in these estimations can be considered when outcomes are interpreted.
-The convention for calculating GA when the date of conception is known is to add 2 weeks to the conceptional age.
+The convention for calculating GA when the date of conception is known is to add 2 weeks to the conceptional age.
 CGA is PNA reduced by the number of weeks born before 40 weeks of gestation (@eq-cga).
 
 $$
@@ -48,17 +48,17 @@ The study design and statistical plans should prospectively take into account ch
 
 | Group | Age  | Comment |
 | :---- | :--- | :------ |
-| Preterm neonates | birth--27 days (CGA, @eq-cga) | < 39 weeks gestation |
-| Term neonates    | birth--27 days (CGA, @eq-cga) | 39--41 weeks gestation |
-| Infants          | 28 days--23 months | |
-| Children         | 2--11 years | Often divided into 2--5 years, and 6--11 years.|
-| Adolescents      | 12--⁠17 years | PK often similar to adults. |
-| Adults           | ≥18 years | Acts as reference. |
+| Preterm neonates | birth--27 days (CGA, @eq-cga) | < 39 weeks gestation |
+| Term neonates    | birth--27 days (CGA, @eq-cga) | 39--41 weeks gestation |
+| Infants          | 28 days--23 months | |
+| Children         | 2--11 years | Often divided into 2--5 years, and 6--11 years.|
+| Adolescents      | 12--⁠17 years | PK often similar to adults. |
+| Adults           | ≥ 18 years | Acts as reference. |
 
 : Approximate pediatric age groups. Neonates = "newborn infants". {#tbl-age-group}
 
 :::{.callout-note}
-A pediatric patient that is 17.9 years old belongs to the adolescent age group, until the 18^th^ birthday.
+A pediatric patient that is 17.9 years old belongs to the adolescent age group, until the 18^th^ birthday.
 :::
 
 ## Pediatric PK studies
@@ -129,10 +129,10 @@ Do not use allometric exponents estimated using adult data for pediatric PK mode
 
 The new model should give slightly different estimates for the volume and clearance parameters, but the diagnostics should be quite similar.
 
-If your model already includes WT as a covariate, perhaps centered on the median WT instead of 70 kilograms, replace it with the standard allometric exponents [@lst-v; @lst-cl].
+If your model already includes WT as a covariate, perhaps centered on the median WT instead of 70 kg, replace it with the standard allometric exponents [@lst-v; @lst-cl].
 Estimated exponents based on median WT can skew results when extrapolating beyond the observed range.
 
-By converting to the standard WT of 70 kg and using standard exponent values, you leverage over 50 years of experience from other compounds when simulating outside adult data.
+By converting to the standard WT of 70 kg and using standard exponent values, you leverage over 50 years of experience from other compounds when simulating outside adult data.
 Additionally, if AGE or WT is included elsewhere in the model, remove these covariates.
 They could cause problems with extrapolation after refitting the model with standard allometric exponents.
 
@@ -170,8 +170,8 @@ Due to high correlation between body weight and age in pediatric patients, **mat
 
 #### Step 2: Prepare a Data Set with Pediatric Simulation Subjects
 
-Use either NHANES (US subjects 2--18 years), or a growth chart (e.g. WHO).
-The WHO data is preferred for non-US studies or for pediatric patients less than 2 years of age.
+Use either NHANES (US subjects 2--18 years), or a growth chart (e.g. WHO).
+The WHO data is preferred for non-US studies or for pediatric patients less than 2 years of age.
 
 ::: {.callout-caution}
 Because NHANES involves sampling individual subjects, there may be limited data in certain categories---especially for younger patients.
@@ -186,7 +186,7 @@ The growth charts provide the distribution of WT for various ages and statures o
 To create a simulation subject:
 
 1. Generate a uniform distribution of ages in each age-group, with the desired number of subjects.
-2. Create 250 simulated male subjects and 250 female subjects in the same age-group (e.g., 12--18 years).
+2. Create 250 simulated male subjects and 250 female subjects in the same age-group (e.g., 12--18 years).
 3. For each of these 500 subjects, identify the mean and standard deviation for WT based on their specific AGE and SEX.
 4. Randomly sample a single WT using the mean and standard deviation from the growth chart.
 
@@ -220,7 +220,7 @@ If you have peditric data, you can overlay observed pediatric exposure with the 
 The most relevant covariate to influence PK in pediatric patients is considered to be **body weight** accounting for size differences, and **age** (@fig-age-term) in the youngest pediatric patients to account for maturation of drug eliminating processes (see @lst-cl-mat).
 
 Relevant predefined exposure metrics should be presented graphically versus body weight and age on a continuous scale (@fig-cov).
-If the drug is indicated to be used in the age range below one year, exposure vs body weight and age should be depicted in an additional separate figure focused on children 0--1 year of age.
+If the drug is indicated to be used in the age range below one year, exposure vs body weight and age should be depicted in an additional separate figure focused on children 0--1 year of age.
 
 ![Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions) for children from the NHANES database using 2 mg/kg BID for patients <8 years, and 1.6 mg/kg BID for patients ≥8 years with 100 mg BID maximum dose (*top*), or 2 mg/kg BID with 100 mg BID maximum dose for all patients (*bottom*). The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated paediatric patients. The *horizontal grey band* encompasses 90% of the simulated adult patients receiving 100 mg BID. [Schoemaker et al. (2017)](https://doi.org/10.1007/s00228-017-2230-6).](images/pediatric-cov.png){#fig-cov}
 
