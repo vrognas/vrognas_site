@@ -11,13 +11,8 @@ What's more, CL is near impossible to interpret on its own, but somehow is still
 
 A more intuitive parameter is the half-life (t~1/2~), which is the time it takes for the concentration of a drug to decrease by half.
 However, even if the half-life is more intuitive, it is not very useful during the current state of modern drug developement.
-The half-life of a drug is really only useful if a drug follws one-compartment pharmacokinetics.
-It is rare for modern drugs to follow one-compartment pharmacokinetics.
+The half-life of a drug is really only useful if a drug follows one-compartment PK, which is rare for modern drugs.
 
-## Renal CL
+## Renal CL (excretion)
 
-In general, if the serum creatinine rises at 2–3 mg/dl per day then the GFR is near zero.
-
-# References
-
-* 
+In general, if the serum creatinine rises at 2--3 mg/dl per day then the GFR is near zero.
