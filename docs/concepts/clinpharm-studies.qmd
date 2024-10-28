@@ -3,10 +3,15 @@ title: "Clinical Pharmacology Studies"
 ---
 
 The concept of "Phases" in clinical drug development originates from the FDA, after WW2.
-Most clinical pharamcology studies are Phase 1 studies, when we learn about the PK of the drug.
-In Phase 2, we learn about the PD of the drug.
+Most clinical pharmacology studies are Phase 1 studies, when we **learn** about the PK of the drug.
+In Phase 2, we **learn** about the PD of the drug.
+In Phase 3, we **confirm** our efficacy and safety hypotheses in the target population.
 
-## Phase 1 First in Human
+![Clinical pharmacology in drug development and evaluation.](images/clinpharm-studies.jpg){#fig-clinpharm-studies}
+
+![Timing of human pharmacology studies.](images/pharmacology-studies.png){#fig-pharmacology-studies}
+
+## Phase 1: First in Human
 
 * First in human (FIH) PK/PD
   * Single ascending dose (SAD)
@@ -22,8 +27,8 @@ In Phase 2, we learn about the PD of the drug.
 * Dose identification
 * Healthy vs Patient PK & PD
 * Relevant special populations
-  * RI
-  * HI
+  * Renal impairment (RI)
+  * Hepatic impairment (HI)
   * Pediatrics
   * Elderly
   * Pregnant
@@ -35,7 +40,3 @@ In Phase 2, we learn about the PD of the drug.
 
 * Bioequivalence (BE), eg between formulations or drug combinations
 * Exposure-efficacy/safety in target population
-
-## References
-
-* 
