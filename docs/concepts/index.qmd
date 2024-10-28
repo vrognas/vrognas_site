@@ -6,7 +6,9 @@ Concepts of the Craft are a collection of documents that provide a high-level ov
 They are intended to be a quick reference.
 Each concept includes information on the definition, use cases, and implementation details for the concept.
 
-## Impact
+## Important considerations
+
+### Impact of a model
 
 * What is the modeling used for? (e.g., bridging, dose, SmPC parameters?)
   * Does the aim align with the conclusion?
@@ -20,7 +22,7 @@ Each concept includes information on the definition, use cases, and implementati
 
 * Exposure-response is generally non-informative if only one dose-level is given, even if weight-adjusted
 
-## Reviewing models
+### Reviewing models
 * Does my conclusion align with the authors?
 * Questions NGN (eNGiNe)
  * Need-to-know: Will affect conclusion (Major objection)
