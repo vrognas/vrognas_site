@@ -5,3 +5,29 @@ title: "Concepts of the Craft"
 Concepts of the Craft are a collection of documents that provide a high-level overview of a specific concept in the field of pharmacometrics.
 They are intended to be a quick reference.
 Each concept includes information on the definition, use cases, and implementation details for the concept.
+
+## Impact
+
+* What is the modeling used for? (e.g., bridging, dose, SmPC parameters?)
+  * Does the aim align with the conclusion?
+* What data is available?
+  * Rich data
+  * Sparse data
+* What is the structural model?
+  * Reasonable parameter estimates and RSE's?
+  * Graphical evaluation (VPC first)
+  * Covariate evaluation
+
+* Exposure-response is generally non-informative if only one dose-level is given, even if weight-adjusted
+
+## Reviewing models
+* Does my conclusion align with the authors?
+* Questions NGN (eNGiNe)
+ * Need-to-know: Will affect conclusion (Major objection)
+ * Good-to-know: Could affect conclusion (Other concern)
+ * Nice-to-know: Won't affect conclusion (avoid asking this question)
+
+## References
+
+* Musuamba et al., 2021, https://doi.org/10.1002/psp4.12669
+* Skottheim Rusten & Musuamba, 2021, https://doi.org/10.1002/psp4.12708
