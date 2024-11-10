@@ -6,9 +6,9 @@ I am currently pursuing a PhD in Pharmacometrics at [Uppsala University](https:/
 
 ## Experience
 
-* **Pharmacometric Assessor**, [*Swedish Medical Products Agency (Läkemedelsverket)*](https://www.lakemedelsverket.se/en) (Nov 2023–Oct 2024)
-* **Systems developer (Python)**, [*Pharmpy*](https://pharmpy.github.io/latest/index.html) (Feb–Oct 2023)
-* **Clinical Pharmacometrician Intern**, [*F. Hoffmann-La Roche Ltd*](https://www.roche.com) (Sep 2021–Feb 2022)
+* **Pharmacometric Assessor**, [*Swedish Medical Products Agency (Läkemedelsverket)*](https://www.lakemedelsverket.se/en) (Nov 2023--Oct 2024)
+* **Systems developer (Python)**, [*Pharmpy*](https://pharmpy.github.io/latest/index.html) (Feb--Oct 2023)
+* **Clinical Pharmacometrician Intern**, [*F. Hoffmann-La Roche Ltd*](https://www.roche.com) (Sep 2021--Feb 2022)
 
 ## Degrees
 
