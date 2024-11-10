@@ -91,7 +91,7 @@ website:
               - section: "Immunosuppressants"
                 contents:
                 - text: "JAK-inhibitors"
-                  href: docs/pharmacopeia/immunology/immunosuppressants/jak-inhibitors.qmd
+                  href: docs/pharmacopeia/L_immunology/immunosuppressants/jak-inhibitors.qmd
           # - text: "(M) Musculo-skeletal system"
           #   href: docs/pharmacopeia/musculo-skeletal/index.qmd
           # - text: "(N) Nervous system"
