@@ -7,6 +7,9 @@ The use of *model informed drug development* (MIDD) approaches in pediatric drug
 * Practical and ethical limitations in data collection.
 * Ability to quantify the effects of growth and maturation by leveraging data from literature and older patients.
 
+Children are not small adults.
+
+![Children are not small adults](images/small-adult.png){#fig-small-adult}
 
 ## Pediatric Age Terminology
 
