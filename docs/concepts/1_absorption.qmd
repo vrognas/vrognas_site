@@ -9,3 +9,5 @@ title: "The Absorption Concept"
 There are two pharmacokinetic parameters that quantifies drug absorption.
 *Bioavailability* (**F**) quantifies the *extent* of absorption.
 **k~a~** quantifies the *rate* of absorption.
+
+![](images/absorption.png){#fig-absorption}
