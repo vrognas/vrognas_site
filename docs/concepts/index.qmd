@@ -10,14 +10,14 @@ Each concept includes information on the definition, use cases, and implementati
 
 ### Impact of a model
 
-* What is the modeling used for? (e.g., bridging, dose, SmPC parameters?)
-  * Does the aim align with the conclusion?
+* What is the modeling used for? (e.g., bridging, dose, SmPC^[Summary of Product Characteristics] parameters?)
+  * Does the conclusion align with the aim?
 * What data is available?
   * Rich data
   * Sparse data
 * What is the structural model?
-  * Reasonable parameter estimates and RSE's?
-  * Graphical evaluation (VPC first)
+  * Reasonable parameter estimates and RSE^[Relative standard error]'s?
+  * Graphical evaluation (VPC^[Visual Predictive Check] first)
   * Covariate evaluation
 
 * Exposure-response is generally non-informative if only one dose-level is given, even if weight-adjusted
@@ -25,9 +25,9 @@ Each concept includes information on the definition, use cases, and implementati
 ### Reviewing models
 * Does my conclusion align with the authors?
 * Questions NGN (eNGiNe)
- * Need-to-know: Will affect conclusion (Major objection)
- * Good-to-know: Could affect conclusion (Other concern)
- * Nice-to-know: Won't affect conclusion (avoid asking this question)
+  * Need-to-know: Will affect conclusion (Major objection)
+  * Good-to-know: Could affect conclusion (Other concern)
+  * Nice-to-know: Won't affect conclusion (avoid asking this question)
 
 ## References
 
