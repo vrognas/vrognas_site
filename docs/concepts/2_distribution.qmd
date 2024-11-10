@@ -6,4 +6,23 @@ title: "The Distribution Concept"
 # Work in Progress
 :::
 
-The pharmacokinetic parameter that quantifies drug distribution, is called *volume* (V).
+The pharmacokinetic parameter that quantifies drug distribution, is called *volume of distribution* (V~d~).
+
+In general, a lipophilic drug will have a large V~d~, and a hydrophilic drug will have a small V~d~.
+Drugs can also be substrates to various transporters that impact V~d~.
+
+![
+  Reversible processes affecting the total amount of drug on each side of a biological membrane permeable only to the un-ionized free form of a drug.
+  Some binding of both the un-ionized and ionized forms may occur, but depending on the specific drug, one form usually predominates (the un-ionized form is preferentially bound in the case of narcotic analgesics).
+  Similarly, at active receptor sites, one form of the drug usually is effective and the other is not (a or b).
+  A very high affinity of the drug for pharmacologically inactive binding sites in tissues or a large partitioning of a lipophillic drug into lipids creates a sink for drug accumulation in tissue and limits the free drug concentration, which determines the number of drug-receptor complexes formed and the intensity of drug action.
+  Extensive binding and partitioning in tissue creates a large tissue distribution volume.
+](images/distribution.png){#fig-distribution}
+
+Typical physiological valoumes for a 70 kg adult:
+
+* V~plasma~ ≈ 3 L
+* V~it~ ≈ 12 L
+* V~water,extracellular~ ≈ 16 L
+* V~cells~ ≈ 27 L
+* V~water,total~ ≈ 42 L
