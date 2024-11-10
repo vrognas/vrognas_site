@@ -1,6 +1,12 @@
 ---
-title: "Clearance (CL)"
+title: "The Elimination Concept"
 ---
+
+::: {.callout-caution}
+# Work in Progress
+:::
+
+The pharmacokinetic parameter that quantifies drug elimination, is called *clearance* (CL).
 
 CL describes the relationship between concentration and the rate of elimination of drug from the body.
 Note that elimination and clearance are NOT the same thing.
@@ -11,7 +17,11 @@ What's more, CL is near impossible to interpret on its own, but somehow is still
 
 A more intuitive parameter is the half-life (t~1/2~), which is the time it takes for the concentration of a drug to decrease by half.
 However, even if the half-life is more intuitive, it is not very useful during the current state of modern drug developement.
-The half-life of a drug is really only useful if a drug follows one-compartment PK, which is rare for modern drugs.
+The half-life of a drug is really only useful if a drug follows one-compartment PK with linear elimination, which is rare for modern drugs.
+
+A better way to illustrate drug elimination, would be through typical PK predictions, and/or simulations.
+In the therapeutic context of the drug, what elimination characteristics would be clinically useful to understand?
+These characteristics can be quantified through deterministic predictions (no variability) or stochastic simulations (with variability).
 
 ## Renal CL (excretion)
 
