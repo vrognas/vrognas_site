@@ -13,6 +13,8 @@ Note that elimination and clearance are NOT the same thing.
 
 On a related note, the fact that CL is **made-up** and has no physical meaning is an important concept to understand.
 CL is more a consequence of the underlying mathematics of pharmacokinetics than a real biological process.
+A number of experimental observations in the late 1960s, early 1970s, could not be explained by the pharmacokinetic theory available at the time.
+Researchers used concepts from the oil industry to explain the clearence of drug from the body.
 What's more, CL is near impossible to interpret on its own, but somehow is still common to see in the summary of product characteristics for approved drugs.
 
 A more intuitive parameter is the half-life (t~1/2~), which is the time it takes for the concentration of a drug to decrease by half.
@@ -22,6 +24,11 @@ The half-life of a drug is really only useful if a drug follows one-compartment 
 A better way to illustrate drug elimination, would be through typical PK predictions, and/or simulations.
 In the therapeutic context of the drug, what elimination characteristics would be clinically useful to understand?
 These characteristics can be quantified through deterministic predictions (no variability) or stochastic simulations (with variability).
+
+## Hepatic CL (metabolism)
+
+The liver can convert substances into metabolites.
+This generally makes a more water soluble substance that can be excreted through the kidneys.
 
 ## Renal CL (excretion)
 
