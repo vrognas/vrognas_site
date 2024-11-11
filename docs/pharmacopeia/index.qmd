@@ -22,4 +22,4 @@ It is organized according to [ATC-codes](https://atcddd.fhi.no/atc_ddd_index/).
 | S | Sensory organs |
 | V | Various |
 
-: Anatomical Therapeutic Chemical Classification System {#tbl-atc tbl-colwidths="[10, 90]"}
+: Anatomical Therapeutic Chemical (ATC) Classification System {#tbl-atc tbl-colwidths="[10, 90]"}
