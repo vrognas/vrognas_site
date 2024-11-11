@@ -1,0 +1,11 @@
+---
+title: "Antibiotics"
+---
+
+![](images/antibiotic-classes.png){#fig-antibiotic-classes}
+
+## Resistance
+
+* MDR: >= 1 agent, in >= 3 classes
+* XDR: >= 1 agent, in >= (all but 2) classes
+* PDR: all agents, in all classes
