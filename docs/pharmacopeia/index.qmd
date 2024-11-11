@@ -5,8 +5,8 @@ title: "Pharmacopœia Pharmacometrika"
 This section contains a high-level overview on drug classes and their mechanism of action.
 It is organized according to [ATC-codes](https://atcddd.fhi.no/atc_ddd_index/).
 
-| ATC code   | Contents |
-|:----------:|:--------------------|
+| ATC code | Contents |
+| :------: | :------- |
 | A | Alimentary tract and metabolism |
 | B | Blood and blood forming organs |
 | C | Cardiovascular system |
@@ -21,3 +21,5 @@ It is organized according to [ATC-codes](https://atcddd.fhi.no/atc_ddd_index/).
 | R | Respiratory system |
 | S | Sensory organs |
 | V | Various |
+
+: Anatomical Therapeutic Chemical Classification System {#tbl-atc tbl-colwidths="[10, 90]"}
