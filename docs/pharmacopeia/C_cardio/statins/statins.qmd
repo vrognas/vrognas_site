@@ -1,0 +1,8 @@
+---
+title: "Statins"
+---
+
+Statins (or **HMG-CoA reductase inhibitors**) are a class of medications that reduce illness and mortality in people who are at high risk of cardiovascular disease.
+
+Statins act by competitively inhibiting HMG-CoA reductase.
+By inhibiting HMG-CoA reductase, statins block the pathway for synthesizing cholesterol in the liver.
