@@ -1,0 +1,5 @@
+---
+title: "Disease primer: Tuberculosis"
+---
+
+![](images/otuberculosis.png){#fig-tuberculosis}
