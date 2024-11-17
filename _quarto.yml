@@ -87,6 +87,8 @@ website:
           contents:
           - text: "Antibiotics"
             href: docs/pharmacopeia/J_infections/antibiotics/antibiotics.qmd
+          - text: "Antivirals"
+            href: docs/pharmacopeia/J_infections/antivirals/antivirals.qmd
         - section: "(L) Antineoplastic & immunomodulating agents"
           contents:
             - section: "Immunosuppressants"
