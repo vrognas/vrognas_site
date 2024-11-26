@@ -141,7 +141,11 @@ website:
             href: docs/concepts/pediatrics.qmd
           - section: "Modeling"
             contents:
-              - text: "Time-to-event"
+              - text: "Continuous data"
+                href: docs/concepts/modeling/cts.qmd
+              - text: "Categorical data"
+                href: docs/concepts/modeling/cat.qmd
+              - text: "Time-to-event data"
                 href: docs/concepts/modeling/tte.qmd
     - id: tools-of-the-trade
       title: "Tools of the Trade"
