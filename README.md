@@ -29,7 +29,3 @@ The website serves as a central hub for:
 ## Contributing
 
 Feedback and contributions are welcome! Please open an issue or submit a pull request if you have suggestions.
-
-## License
-
-This repository is licensed under the MIT License. See the `LICENSE` file for details.
