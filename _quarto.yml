@@ -24,12 +24,14 @@ website:
         href: docs/portfolio/index.qmd
       - text: "Resources"
         menu:
-          - text: "Disease primers"
-            href: docs/disease-primers/index.qmd
-          - text: "Pharmacopœia"
-            href: docs/pharmacopeia/index.qmd
           - text: "Concepts of the Craft"
             href: docs/concepts/index.qmd
+          - text: "Modeling Methods"
+            href: docs/modeling/index.qmd
+          - text: "Pathology Primers"
+            href: docs/disease-primers/index.qmd
+          - text: "Pharmacopœia Pharmacometrika"
+            href: docs/pharmacopeia/index.qmd
           - text: "Tools of the Trade"
             href: docs/tools-of-the-trade/index.qmd
     tools:
@@ -139,14 +141,17 @@ website:
               href: docs/concepts/augmented-renal-clearance.qmd
           - text: "Pediatrics"
             href: docs/concepts/pediatrics.qmd
-          - section: "Modeling"
-            contents:
-              - text: "Continuous data"
-                href: docs/concepts/modeling/cts.qmd
-              - text: "Categorical data"
-                href: docs/concepts/modeling/cat.qmd
-              - text: "Time-to-event data"
-                href: docs/concepts/modeling/tte.qmd
+    - id: modeling
+      title: "Pharmacometric Modeling Strategies"
+      collapse-level: 2
+      style: floating
+      contents:
+        - text: "Continuous data"
+          href: docs/modeling/cts.qmd
+        - text: "Categorical data"
+          href: docs/modeling/cat.qmd
+        - text: "Time-to-event data"
+          href: docs/modeling/tte.qmd
     - id: tools-of-the-trade
       title: "Tools of the Trade"
       collapse-level: 2

@@ -1,0 +1,290 @@
+---
+title: "Time-to-event analysis"
+code-overflow: scroll
+code-fold: true
+---
+
+*Time-to-event* (TTE) analysis (or "survival analysis") is a collection of statistical procedures for data analysis for which the outcome variable of interest is time until an event occurs.
+**Events are things that happen at a particular time.**
+More than one occurence of the same event can be considered in the same analysis.
+These are called *recurrent events*.
+Analyzing this type of data is commonly called a ***repeated time-to-event*** (RTTE) analysis.
+Additionally, more than one type of event can occur.
+For example, death from any of several causes.
+However, since you can die only once^[unless you're a cat], we refer to the probabilities of these events as ***competing risks***.
+Competing risk analysis is an extension of TTE.
+An even further extension is ***multi-state analysis***, in which both competing and non-competing events can be included.
+
+## Theory
+
+The survivor function and the hazard function which are in essence opposed concepts.
+The survivor function focuses on surviving whereas the hazard function focuses on failing, given survival up to a certain time point.
+
+### Hazard
+
+Understanding what the hazard means is at the heart of TTE analysis.
+The biological basis for events may be expressed quantitatively in terms of a hazard function.
+The hazard function models baseline survival.
+Like an elimination rate constant, *k~e~*, the hazard is simply a proportionality constant connecting amount to elimination.
+
+$$
+h(t)=\frac{f(t)}{S(t)}=-\frac{d}{d t} \ln S(t)=-\frac{S^{\prime}(t)}{S(t)}
+$$ {#eq-haz}
+
+
+The hazard has exactly the same meaning as *k~e~*---the proportionality constant relating people who are alive to the death rate.
+Hazards, exactly like elimination rate constants, have units of 1/time.
+Thus, **the hazard is a rate**, not a probability.
+Despite the name, the elimination rate constant may not be constant, and the same goes for hazards.
+
+### Survival
+
+The survivor function (@eq-surv) is calculated from the integral of the hazard with respect to time---a quantity called the cumulative hazard (@eq-cumhaz).
+The cumulative hazard is sometimes known as the "risk".
+
+$$
+H(t)=\int_0^t h(u) d u=-\log (S(t))
+$$ {#eq-cumhaz}
+
+$$
+S(t) = P(T > t) = \int_{t}^\infty f(u)\,du = e^{-H(t)}
+$$ {#eq-surv}
+
+### Cumulative distribution
+
+The probability of individual having an event before, or at, time t.
+
+$$
+F(t) = P(T \le t) = 1 - S(t)
+$$ {#eq-cdf}
+
+### Probability density
+
+The likelihood of observing an event at a particular time is predicted by the probability density function (PDF).
+When the exact time of the event is observed, the likelihood is the product of the survivor function and the hazard at that time (@eq-pdf).
+
+$$
+f(t) = S(t) \times h(t) = -\frac{d S(t)}{dt}=\frac{d}{dt} F(t)
+$$ {#eq-pdf}
+
+When the hazard is constant, the shape of the PDF is exponential.
+
+In real life, the time of zero is at entry into a clinical study, and it is unrealistic to imagine that at exactly that instant, the hazard of an event such as death plunges to zero.
+
+## Models
+
+The Cox model is the most widely used survival model in the health sciences, but it is not the only model available.
+A key reason why the Cox model is widely popular is that it does not rely on distributional assumptions for the outcome.
+Also, an estimation of the baseline hazard is not necessary for the estimation of a hazard ratio because the baseline hazard cancels in the calculation.
+
+In pharmacometrics we often use *parametric survival models*.
+A parametric survival model is one in which the survival time (the outcome) is assumed to follow a known distribution, and the parameters of this distribution is modelled.
+
+Survival estimates obtained from parametric survival models typically yield plots more consistent with a theoretical survival curve.
+If the investigator is comfortable with the underlying distributional assumption, then parameters can be estimated that completely specify the survival and hazard functions.
+This simplicity and completeness are the main appeals of using a parametric approach.
+
+::: {.callout-note}
+The hazard function is not specified in a Cox model.
+However, it is not assumed constant.
+:::
+
+Distributions commonly used for parametric survival models are:
+
+| Distribution | S(t) | h~0~(t) | PH | AFT |
+| :----------- | :--- | :--- | :---: | :---: |
+| Exponential  | $e^{-\lambda t}$ | $\lambda$ | $\lambda = e^{\beta_0 + \beta_n \mathrm{COV}_n}$ | $\lambda = e^{-(\alpha_0 + \alpha_n \mathrm{COV}_n)}$ |
+| Weibull      | $e^{-\lambda t^\gamma}$ | $\frac{\gamma}{\lambda} (\frac{t}{\lambda})^{\gamma - 1}$ | | |
+| Gompertz     | $e^{-\frac{\lambda}{\gamma}(e^{\gamma t - 1})}$ | $\lambda e^{\gamma t}, 0 \le t, \lambda > 0$ | | |
+| Log logistic | $\frac{1}{1 + \lambda t^\gamma}$ | $\frac{\lambda \gamma t^{\gamma - 1}}{1 + \lambda t^\gamma}, 0 \le t, \gamma > 0$ | | ✅ |
+| Log normal   | | $\frac{(\sigma t \sqrt{2 \pi})^{-1} e^{-(\frac{1}{2}Z^2)}}{1 - \Phi(Z)}, Z = \frac{\ln{t} - \mu}{\sigma}$ | | ✅ |
+| Generalized gamma | | | | |
+
+: Common parametric survival models {#tbl-age-term tbl-colwidths="[30, 20, 40, 5, 5]"}
+
+  * Weibull reduces to the exponential if $\gamma = 1$
+  * Weibull and lognormal are special cases of the generalized gamma
+  * The lognormal model has a hazard and survival function that can only be expressed in terms of integrals.
+    * The shape of the lognormal distribution is very similar to the log-logistic distribution and yields similar model results.
+
+::: {.callout-tip}
+
+# Gotcha
+
+* $\lambda$ is sometimes called the "scale" parameter, and is typically is reparameterized in terms of covariates and regression parameters (see below)
+* $\gamma$ is sometimes called the "shape" parameter
+
+For example: $\lambda = e^{\beta_0 + \beta_n \mathrm{COV}_n}$, where $\beta_n$ are the regression parameters, and $\mathrm{COV}_n$ are covariates.
+:::
+
+<details>
+  <summary>NONMEM code: Exponential distribution</summary>
+  
+  ```verilog
+  $SUBROUTINES ADVAN=6
+  $MODEL COMP=(HAZARD) ; Comartment for integration of hazard
+  
+  $PK
+  
+  SCALE = THETA(1) * EXP(ETA(1)) ; constant hazard
+  
+  $DES
+  
+  DADT(1) = SCALE ; Integration of hazard
+  
+  $ERROR
+  
+  IF (NEWIND < 2) OLDCHZ = 0
+  CHZ = A(1) - OLDCHZ
+  OLDCHZ = A(1) ; For each ID, cum hazard from previous obs. to new obs.
+  
+  SUR = EXP(-CHZ) ; Survival function
+  
+  HAZNOW = SCALE
+  
+  IF (DV == 0) Y = SUR ; Censored event
+  IF (DV == 1) Y = SUR * HAZNOW ; Event
+  
+  $ESTIMATION METHOD=0 LIKELIHOOD
+  ```
+</details>
+
+<details>
+  <summary>NONMEM code: Weibull distribution</summary>
+  
+  ```verilog
+  $SUBROUTINES ADVAN=6
+  $MODEL COMP=(HAZARD) ; Comartment for integration of hazard
+  
+  $PK
+  
+  ; For RTTE, time of previous event
+  ; For TTE TP is always 0
+  IF (NEWIND < 2) TP = 0
+
+  SCALE = THETA(1) * EXP(ETA(1))
+  SHAPE = THETA(2)
+  
+  $DES
+  
+  DEL = 1E-6
+  DADT(1) = SCALE * SHAPE * (SCALE * (T - TP) + DEL)**(SHAPE - 1) ; Integration of hazard
+  
+  $ERROR
+  
+  IF (NEWIND < 2) OLDCHZ = 0
+  CHZ = A(1) - OLDCHZ
+  OLDCHZ = A(1) ; For each ID, cum hazard from previous obs. to new obs.
+  
+  SUR = EXP(-CHZ) ; Survival function
+  
+  HAZNOW = SCALE * SHAPE * (SCALE * (TIME - TP) + DEL)**(SHAPE - 1)
+  
+  IF (DV == 0) Y = SUR ; Censored event
+  IF (DV == 1) Y = SUR * HAZNOW ; Event
+  
+  $ESTIMATION METHOD=0 LIKELIHOOD
+  ```
+</details>
+
+The power of the hazard function becomes evident in pharmacometric applications when factors changing the hazard vary with time.
+An example would be if drug treatment influenced the hazard.
+The effects of the drug will depend on concentration and thus, the hazard in the drug-treated arm will vary with the time course of drug concentration.
+
+When there are no time-varying covariates involved, there is often an analytical solution to obtain the cumulative hazard, and from that, it is easy to predict the survivor function and the PDF.
+For more flexible hazard functions involving time-varying covariates, analytical solutions are not usually available.
+With software like NONMEM that is able to numerically integrate the hazard function, there is no restriction on the way the hazard is expressed^[Except the user needs to ensure that the hazard does not go negative.].
+
+### Proportional hazard (PH)
+
+The underlying assumption for PH models is that the **effect of covariates is multiplicative (proportional) with respect to the hazard**.
+
+The PH assumption is applicable for a comparison of hazards.
+
+### Accelerated failure time (AFT)
+
+The underlying assumption for AFT models is that the **effect of covariates is multiplicative (proportional) with respect to survival time**.
+It either stretches or contracts survival time
+
+The AFT assumption is applicable for a comparison of survival times.
+Many parametric models are acceleration failure time (AFT) models in which survival time is modeled as a function of predictor variables.
+
+The **acceleration factor** is the key measure of association obtained in an AFT model.
+It allows the investigator to evaluate the effect of predictor variables on survival time just as the hazard ratio allows the evaluation of predictor variables on the hazard.
+The acceleration factor is a ratio of survival times corresponding to any fixed value of S(t).
+For AFT models, this ratio of survival times is assumed constant for all fixed values of S(t).
+Although the hazard ratio is a more familiar measure of association for health scientists, the acceleration factor has an intuitive appeal, particularly for describing the efficacy of a treatment on survival.
+
+An acceleration factor greater than one for the effect of an exposure implies that being exposed is beneficial to survival whereas a hazard ratio greater than one implies being exposed is harmful to survival (and vice versa).
+
+### Frailty
+
+Frailty accounts for unobserved heterogeneity.
+
+## Landmark analysis
+
+Landmark analysis is used to **correct for immortal time bias**.
+This bias is inherent in the analysis of time-to-event outcome between **groups determined during study follow-up**.^[Dafni U. Landmark Analysis at the 25-Year Landmark Point. Circ Cardiovasc Qual Outcomes. 2011;4:363-371.]
+This method was originally proposed to evaluate the association between treatment response and survival^[Anderson JR, Cain KC, Gelber RD. Analysis of survival by tumor response. J Clin Oncol. 1983;1:710–719.], or to allow for groupings based on any covariate whose value is not known at baseline.
+
+Looking at @fig-landmark-1, an incorrect approach would be to classify Subject 1 as a non-responder and Subjects 2 and 3 as responders (as is the case at six months) and then compare the survival between these two groups.
+
+![
+  Response times for three hypothetical subjects.
+  Time of response indicated with a square.
+  Dashed lines represent time the subject has not responded to treatment;
+  solid lines denote the time during which the subject has responded.
+](images/landmark-1.png){#fig-landmark-1}
+
+That is, "responders" and "nonresponders" are compared with regard to survival from the start of the study.
+This assumes that Subjects 2 and 3 responded to treatment immediately.
+However, **response status (group assignment) is unknown at baseline**.
+That is, all subjects begin the study as non-responders and do not become responders until later.
+**Responders are (by definition) guaranteed to survive at least until the time of response.**
+Classifying groups in this way leads to **immortal time bias.**
+
+### How to perform landmark analysis
+
+The landmark method analyzes survival based on patient response at a fixed time after starting therapy, called the "landmark".
+Any subjects who were lost to follow-up or died prior to this time point are excluded from further analysis.
+Subjects are then grouped by their response status at the landmark.
+Any subject who has not responded by the landmark time is classiﬁed as a non-responder, even if that subject later responds to treatment.
+This approach estimates survival from the landmark, based on response status at that time.
+
+It is commonly used in clinical trials to classify patients into **groups based on events during follow-up**, such as receiving a treatment, stopping medication, or switching treatment.
+
+Two examples of this process:
+
+* In @fig-landmark-2, a landmark time of two months post-treatment is chosen.
+Subjects 1 and 2 are then classiﬁed as non-responders because neither subject has responded to treatment at that time.
+Note that even though Subject 2 will later go on to respond to treatment, to avoid the immortal time bias, Subject 2 must be considered to be a non-responder due to his or her status at the landmark time.
+Subject 3 responded to treatment prior to the landmark time and is thus classiﬁed as a responder.
+
+![
+  Classiﬁcation of hypothetical subjects according to status at landmark.
+  Subjects are classiﬁed as either responders (red) or non-responders (blue) based on their status at the landmark time.
+](images/landmark-2.png){#fig-landmark-2}
+
+* As can be seen in @fig-landmark-3, selecting a different landmark time (here, four months post-treatment) may change the classiﬁcation of some subjects.
+In this example, the later landmark allows Subject 2 enough time to respond to treatment, leading to this subject being placed in the responder group.
+
+![
+  Classiﬁcation of hypothetical subjects according to status at landmark.
+  Subjects are classiﬁed as either responders (red) or non-responders (blue) based on their status at the landmark time.
+](images/landmark-3.png){#fig-landmark-3}
+
+Once the landmark has been chosen, any ineligible subjects have been excluded, and subjects have been classiﬁed according to their status at the landmark time, the usual survival analysis methods are applied.
+The results of these methods are interpreted as usual, with the important caveat that conclusions are only generalizable to subjects who have survived until the landmark time.
+
+To avoid bias, the landmark should be chosen before data analysis begins and ideally should correspond to a clinically meaningful period of time.
+When the choice of landmark time is not obvious, the data should be analyzed using multiple landmark times in order to determine the sensitivity of the ﬁndings to the choice of landmark.
+
+**An alternative to landmark analysis is to allow the value of the covariate indicating treatment response to vary over time.
+This is doable using pharmacometric software such as NONMEM.
+This does not require any subjects or events to be excluded from the analysis.
+Is also avoids both the problem of selecting a landmark time and any misclassiﬁcation errors.
+**
+
+## References
+
+* [Morgan CJ (2019). Landmark analysis: A primer.](doi:10.1007/s12350-019-01624-z)

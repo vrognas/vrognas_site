@@ -1,0 +1,9 @@
+---
+title: "Pharmacometric Modeling Strategies"
+---
+
+* Logistic regression
+* Composite scores
+  * IRT
+  * BI
+  * PO
