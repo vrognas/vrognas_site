@@ -2,8 +2,30 @@
 title: "Pharmacometric Modeling Strategies"
 ---
 
-* Logistic regression
-* Composite scores
-  * IRT
-  * BI
-  * PO
+## Important considerations
+
+### Impact of a model
+
+* What is the modeling used for? (e.g., bridging, dose, SmPC^[Summary of Product Characteristics] parameters?)
+  * Does the conclusion align with the aim?
+* What data is available?
+  * Rich data
+  * Sparse data
+* What is the structural model?
+  * Reasonable parameter estimates and RSE^[Relative standard error]'s?
+  * Graphical evaluation (VPC^[Visual Predictive Check] first)
+  * Covariate evaluation
+
+* Exposure-response is generally non-informative if only one dose-level is given, even if weight-adjusted
+
+### Reviewing models
+* Does my conclusion align with the authors?
+* Questions NGN (eNGiNe)
+  * Need-to-know: Will affect conclusion (Major objection)
+  * Good-to-know: Could affect conclusion (Other concern)
+  * Nice-to-know: Won't affect conclusion (avoid asking this question)
+
+## References
+
+* Musuamba et al., 2021, https://doi.org/10.1002/psp4.12669
+* Skottheim Rusten & Musuamba, 2021, https://doi.org/10.1002/psp4.12708
