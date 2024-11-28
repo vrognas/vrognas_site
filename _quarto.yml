@@ -142,10 +142,13 @@ website:
           - text: "Pediatrics"
             href: docs/concepts/pediatrics.qmd
     - id: modeling
-      title: "Pharmacometric Modeling Strategies"
+      title: "Modeling Methods"
       collapse-level: 2
       style: floating
       contents:
+      - section: "Modeling Methods"
+        href: docs/modeling/index.qmd
+        contents:
         - text: "Continuous data"
           href: docs/modeling/cts.qmd
         - text: "Categorical data"
