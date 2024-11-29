@@ -89,32 +89,40 @@ The hazard function is not specified in a Cox model.
 However, it is not assumed constant.
 :::
 
-Distributions commonly used for parametric survival models are:
+Distributions commonly used for parametric survival models in pharmacometrics are:
 
 | Distribution | S(t) | h~0~(t) | PH | AFT |
 | :----------- | :--- | :--- | :---: | :---: |
-| Exponential  | $e^{-\lambda t}$ | $\lambda$ | $\lambda = e^{\beta_0 + \beta_n \mathrm{COV}_n}$ | $\lambda = e^{-(\alpha_0 + \alpha_n \mathrm{COV}_n)}$ |
-| Weibull      | $e^{-\lambda t^\gamma}$ | $\frac{\gamma}{\lambda} (\frac{t}{\lambda})^{\gamma - 1}$ | | |
+| Exponential  | $e^{-\lambda t}$ | $\lambda$ | $\lambda = e^{\beta_0 + \sum \beta_n \mathrm{COV}_n}$ | $\lambda = e^{-(\alpha_0 + \sum \alpha_n \mathrm{COV}_n)}$ |
+| Weibull^[Pronounced "Veibull", with "v" as in "very"]      | $e^{-\rho t^\gamma}$ | $\rho \gamma (\rho t)^{\gamma - 1}$ | | |
 | Gompertz     | $e^{-\frac{\lambda}{\gamma}(e^{\gamma t - 1})}$ | $\lambda e^{\gamma t}, 0 \le t, \lambda > 0$ | | |
-| Log logistic | $\frac{1}{1 + \lambda t^\gamma}$ | $\frac{\lambda \gamma t^{\gamma - 1}}{1 + \lambda t^\gamma}, 0 \le t, \gamma > 0$ | | ✅ |
-| Log normal   | | $\frac{(\sigma t \sqrt{2 \pi})^{-1} e^{-(\frac{1}{2}Z^2)}}{1 - \Phi(Z)}, Z = \frac{\ln{t} - \mu}{\sigma}$ | | ✅ |
+| Log-logistic | | $\frac{\lambda \gamma t^{\gamma - 1}}{1 + \lambda t^\gamma}, 0 \le t, \gamma > 0$ | | ✅ |
+| Generalized log-logistic | $\frac{1}{1 + \lambda t^\gamma}$ | $\frac{\rho \gamma (\rho t)^{\gamma - 1}}{1 + (\lambda t)^\gamma}, 0 \le t, \gamma > 0$ | | ✅ |
+| Log-normal   | | $\frac{(\sigma t \sqrt{2 \pi})^{-1} e^{-(\frac{1}{2}Z^2)}}{1 - \Phi(Z)}, Z = \frac{\ln{t} - \mu}{\sigma}$ | | ✅ |
 | Generalized gamma | | | | |
 
-: Common parametric survival models {#tbl-age-term tbl-colwidths="[30, 20, 40, 5, 5]"}
+: Common parametric survival models. {#tbl-dist tbl-colwidths="[20, 20, 40, 10, 10]"}
 
-  * Weibull reduces to the exponential if $\gamma = 1$
-  * Weibull and lognormal are special cases of the generalized gamma
-  * The lognormal model has a hazard and survival function that can only be expressed in terms of integrals.
-    * The shape of the lognormal distribution is very similar to the log-logistic distribution and yields similar model results.
+* $\lambda$ is sometimes called the ["scale" parameter](https://en.wikipedia.org/wiki/Scale_parameter). It stretches/shrinks a distribution. Typically, it is reparameterized in terms of covariates COV~n~ and regression parameters $\beta_n$: $\lambda = e^{\beta_0 + \sum \beta_n \mathrm{COV}_n}$.
+* $\gamma$ is sometimes called the ["shape" (or "form") parameter](https://en.wikipedia.org/wiki/Shape_parameter); for Weibull it is also sometimes called "slope".
+* $\rho = \frac{1}{\lambda}$ is sometimes called the ["rate" (or "inverse scale") parameter](https://en.wikipedia.org/wiki/Scale_parameter#Rate_parameter).
+* In other fields, a ["location" parameter](https://en.wikipedia.org/wiki/Location_parameter) $\mu$ is sometimes seen. This shifts the distribution along the t-axis as $t - \mu$. In pharmacometrics this is not helpful, since the distribution should always start at the start of the study, $t_\text{start} \equiv 0$. Thus, $\mu = 0$, and is not displayed.
 
 ::: {.callout-tip}
 
 # Gotcha
 
-* $\lambda$ is sometimes called the "scale" parameter, and is typically is reparameterized in terms of covariates and regression parameters (see below)
-* $\gamma$ is sometimes called the "shape" parameter
+The Weibull distribution has [several parameterizations](https://en.wikipedia.org/wiki/Weibull_distribution). The one displayed in @tbl-dist is the most common in pharmacometrics due to favorable numerical properties.
 
-For example: $\lambda = e^{\beta_0 + \beta_n \mathrm{COV}_n}$, where $\beta_n$ are the regression parameters, and $\mathrm{COV}_n$ are covariates.
+The `survival` package in R uses the same parameterization.
+Interestingly, base-R uses the "standard" parameterization with scale parameters instead of rates.
+:::
+
+::: {.callout-note}
+* Weibull reduces to the exponential if $\gamma = 1$.
+* Weibull and lognormal are special cases of the generalized gamma.
+* The lognormal model can only be expressed in terms of integrals.
+* The shape of the lognormal distribution is very similar to the log-logistic distribution and yields similar model results.
 :::
 
 <details>
@@ -217,9 +225,29 @@ Although the hazard ratio is a more familiar measure of association for health s
 
 An acceleration factor greater than one for the effect of an exposure implies that being exposed is beneficial to survival whereas a hazard ratio greater than one implies being exposed is harmful to survival (and vice versa).
 
+### Adding covariates
+
+There are four approaches to modelling survival data with covariates^[[Rodríguez G. (2010)](https://grodri.github.io/survival/ParametricSurvival.pdf)]:
+
+* Parametric Families
+* Accelerated Life
+* Proportional Hazards
+* Proportional Odds
+
+Typically in pharmacometrics, we use the Proportional Hazards approach (@eq-cov).
+In this approach, we assume that the effect of the covariates is to increase or decrease the hazard by a proportionate amount at all durations.
+
+$$
+h(t, \mathrm{COV}) = h_0(t) e^{\sum \beta_n \mathrm{COV}_n}
+$$ {#eq-cov}
+
+Where h~0~(t) is the baseline hazard function.
+
 ### Frailty
 
 Frailty accounts for unobserved heterogeneity.
+This can be modelled using a ETA in NONMEM, using the same approach as adding a covariate.
+This can be viewed as adding all possible covariates, even unobserved ones.
 
 ## Landmark analysis
 
