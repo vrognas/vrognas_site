@@ -8,6 +8,4 @@ about:
     image-shape: round
 ---
 
-On this site you can find resources on the pharmacometric craft.
-
-Email me: [**viktor.rognas@gmail.com**](mailto:viktor.rognas@gmail.com)
+[**viktor.rognas@gmail.com**](mailto:viktor.rognas@gmail.com)
