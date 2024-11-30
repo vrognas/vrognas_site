@@ -24,6 +24,8 @@ website:
         href: docs/portfolio/index.qmd
       - text: "Resources"
         menu:
+          - text: "Auxiliary Arts"
+            href: docs/aux/index.qmd
           - text: "Concepts of the Craft"
             href: docs/concepts/index.qmd
           - text: "Modeling Methods"
@@ -171,6 +173,24 @@ website:
             contents:
               - text: "Tips-n-tricks"
                 href: docs/tools-of-the-trade/r/r-tips-n-tricks.qmd
+    - id: aux
+      title: "Auxiliary Arts"
+      collapse-level: 2
+      style: "floating"
+      contents:
+        - section: "Auxiliary Arts"
+          href: docs/aux/index.qmd
+          contents:
+          - text: "Presentation Technique"
+            href: docs/aux/presentation.qmd
+          - text: "Self Management"
+            href: docs/aux/self-mgmt.qmd
+          - text: "Data Visualization"
+            href: docs/aux/data-viz.qmd
+          - text: "Writing Tactics"
+            href: docs/aux/writing-tactics.qmd
+          - text: "Math Intuition"
+            href: docs/aux/math-intuition.qmd
   page-footer:
     left: "© 2024 Viktor Rognås"
     right:
