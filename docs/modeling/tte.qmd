@@ -238,7 +238,7 @@ Typically in pharmacometrics, we use the Proportional Hazards approach (@eq-cov)
 In this approach, we assume that the effect of the covariates is to increase or decrease the hazard by a proportionate amount at all durations.
 
 $$
-h(t, \mathrm{COV}) = h_0(t) e^{\sum \beta_n \mathrm{COV}_n}
+h(t, \text{COV}) = h_0(t) e^{\sum \beta_n \text{COV}_n}
 $$ {#eq-cov}
 
 Where h~0~(t) is the baseline hazard function.
