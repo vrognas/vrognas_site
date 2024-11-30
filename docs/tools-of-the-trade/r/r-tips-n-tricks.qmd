@@ -2,7 +2,36 @@
 title: "R Tips-n-Tricks"
 ---
 
-## Show ALL duplicate values
+## Useful/interesting R packages
+
+* validate
+* lemon
+* naniar
+    * `gg_miss_var()`
+    * `gg_miss_upset()` (instead of venn diagrams)
+    * `geom_miss_point()` (jitter of missing)
+    * `bind_shadow()`
+    * `vis_miss()` (Credit: Iris Minichmayr)
+* ggpmisc (linear regression equation)
+* ggstatplot
+* ”future” — r-package for cluster and parallell in r
+* ”furrr” — future:ize the purrr-functions
+* Targets
+* Renv
+* Roxygen2
+* Usethis
+* Devtools
+* latticeExtra
+* tidymodels
+    * [A Gentle Introduction to tidymodels](https://rviews.rstudio.com/2019/06/19/a-gentle-intro-to-tidymodels/)
+
+### Max Kuhn Keynote on tidymodels
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ATcG_BBiFYQ?si=kLnxdNIYQ4AmhlDY&amp;start=23368" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Useful functions
+
+### Show ALL duplicate values
 
 ```r
 df |>
@@ -13,13 +42,13 @@ filter(
 )
 ```
 
-## Find first occurence of a non-NA
+### Find first occurence of a non-NA
 
 ```r
 df$col1[which.max(!is.na(col2))]
 ```
 
-## Pipe into View(), with title
+### Pipe into View(), with title
 
 ```r
 df |>
@@ -30,9 +59,10 @@ df |>
 ## Rmarkdown
 
 * ref.label=c()
-    * https://bookdown.org/yihui/rmarkdown-cookbook/reuse-chunks.html#ref-label
+    * [](https://bookdown.org/yihui/rmarkdown-cookbook/reuse-chunks.html#ref-label)
 
-## Style
+## R-Style
+
 * 80 characters per line
 * 150 lines per script
 
@@ -41,23 +71,18 @@ df |>
 * Use `sink()` to record output of script
 * Use `locate()` instead of `select(col, everything())`
 * R-tips
-    * https://paulvanderlaken.com/2018/05/21/r-tips-and-tricks/
-    * https://guiastrennec.gitbooks.io/r-notes/content/
-* latticeExtra (package)
-* naniar (package)
-    * `gg_miss_var()`
-    * `gg_miss_upset()` (instead of venn diagrams)
-    * `geom_miss_point()` (jitter of missing)
-    * `bind_shadow()`
-    * `vis_miss()` (Credit: Iris Minichmayr)
+    * [Paul van der Laken](https://paulvanderlaken.com/2018/05/21/r-tips-and-tricks/)
+    * [Benjamin Guiastrennec](https://guiastrennec.gitbooks.io/r-notes/content/)
+
+
 * txtProgressBar
     * (single=3)
 * If write files on cluster for use in next step
     * `sys.sleep(3)`
 * Bang Bang – How to program with dplyr
-    * https://www.statworx.com/de/blog/bang-bang-how-to-program-with-dplyr/
+    * [Markus Berroth: How to program with dplyr (2019)](https://www.statworx.com/de/blog/bang-bang-how-to-program-with-dplyr/)
 * Fundamentals of Data Visualization, Claus O. Wilke
-    * https://serialmentor.com/dataviz/
+    * [serialmentor.com](https://serialmentor.com/dataviz/)
 * David Robinson:
     * libr
     * ggplot:
