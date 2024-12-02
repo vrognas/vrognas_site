@@ -2,6 +2,10 @@
 title: "Categorical data"
 ---
 
+:::{.callout-caution}
+# Under construction
+:::
+
 * Logistic regression
 * Composite scores
   * IRT
