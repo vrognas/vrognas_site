@@ -181,16 +181,16 @@ website:
         - section: "Auxiliary Arts"
           href: docs/aux/index.qmd
           contents:
+          - text: "Data Visualization"
+            href: docs/aux/data-viz.qmd
+          - text: "Math Intuition"
+            href: docs/aux/math-intuition.qmd
           - text: "Presentation Technique"
             href: docs/aux/presentation.qmd
           - text: "Self Management"
             href: docs/aux/self-mgmt.qmd
-          - text: "Data Visualization"
-            href: docs/aux/data-viz.qmd
           - text: "Writing Tactics"
             href: docs/aux/writing-tactics.qmd
-          - text: "Math Intuition"
-            href: docs/aux/math-intuition.qmd
   page-footer:
     left: "© 2024 Viktor Rognås"
     right:
