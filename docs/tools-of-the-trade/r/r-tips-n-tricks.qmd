@@ -2,6 +2,10 @@
 title: "R Tips-n-Tricks"
 ---
 
+## How to transfer your library when updating R
+
+[https://rstats.wtf/maintaining-r.html#how-to-transfer-your-library-when-updating-r](https://rstats.wtf/maintaining-r.html#how-to-transfer-your-library-when-updating-r)
+
 ## Useful/interesting R packages
 
 * validate
@@ -98,3 +102,5 @@ df |>
     * Also check for NAs
         * any: `NA %in% vector`
         * sum: `vector %in% NA %>% sum`
+
+![](./images/dist-func.png)
