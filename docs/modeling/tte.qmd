@@ -4,6 +4,10 @@ code-overflow: scroll
 code-fold: true
 ---
 
+:::{.callout-caution}
+# Under construction
+:::
+
 *Time-to-event* (TTE) analysis (or "survival analysis") is a collection of statistical procedures for data analysis for which the outcome variable of interest is time until an event occurs.
 **Events are things that happen at a particular time.**
 More than one occurence of the same event can be considered in the same analysis.
