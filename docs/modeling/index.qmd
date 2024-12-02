@@ -2,6 +2,26 @@
 title: "Pharmacometric Modeling Strategies"
 ---
 
+:::{.callout-caution}
+# Under construction
+:::
+
+## Alternatives in PKPD modelling
+
+* Assume a PK model
+  * Estimate PK and PD parameters in a simultaneous fit (SIM)
+  * Estimate PK parameters first and then fit PD
+    * Condition on individual PK parameter estimates
+      * Assume no error in parameters (IPP = Individual PK Parameters)
+      * Account for error in parameters (IPPSE = Individual PK Parameters Standard Error)*
+    * Fix population PK parameters
+      * Include individual PK data (PPP&D = Population PK Parameters & Data)**
+      * Don’t include individual PK data (PPP = Population PK Parameters)
+
+*LaCroix et al., JPKPD 39:177–193, 2012  
+**Wade and Karlsson, PAGE 1999  
+Abbreviations in Zhang et al 2003  
+
 ## Important considerations
 
 ### Impact of a model
