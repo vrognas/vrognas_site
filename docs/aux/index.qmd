@@ -5,3 +5,9 @@ title: "Auxiliary Arts"
 :::{.callout-caution}
 # Under construction
 :::
+
+## General Coding Practices
+
+Create and share beautiful images of your source code.
+
+[https://carbon.now.sh](https://carbon.now.sh)
