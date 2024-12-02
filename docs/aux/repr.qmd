@@ -1,0 +1,65 @@
+---
+title: "Reproducible Research"
+---
+
+:::{.callout-caution}
+# Under construction
+:::
+
+Messy folder: är alla modeller och tables och .lst-filer etc i samma mapp då?
+Vad om undermappar till tex ”pk”, en för ”base model” och en annan undermapp för ”covariate model”?
+
+* Naming
+    * Name folders using only A-Z, a-z, 0-9, -, _.
+    * Start folder names with a number for sorting purposes.
+* Alltid MU-reference, ifall det behövs em-metoder
+    * Testa alla estimeringsmetoder?
+* Scripta alla plottar
+* Rmarkdown scriptad rapport
+    * R.version
+    * rstudioapi::versionInfo()
+    * .packages()
+    * devtools::session_info(pkgs = "attached")
+* Use git
+    * Do not track (messy) model development in git
+        * git history becomes too messy otherwise
+        * Use rsync if needed
+    * Track the Rmd-file for the report
+        * This tracks the models. The models are still in the “messy” folder.
+            * base_model <- run25.mod
+            * covariate_model <- run63.mod
+            * final_model <- run67.mod
+            * simulation_model <- run68.mod
+        * Runrecord
+            * runno
+            * based on
+            * ofv
+            * dofv
+            * condition number (CN)
+    * Do not track produced PDFs in git
+
+Folder structure:
+* model
+    * pk
+        * .mod
+    * pd
+        * .mod
+* report
+    * 1a
+        * .tex
+        * .pdf
+    * 1b
+        * .tex
+        * .pdf
+    * 1
+        * .tex
+        * .pdf
+* data
+    * raw_data
+    * dat1.R
+    * dat1.csv
+    * dat2.R
+    * dat2.csv
+* presentation
+    * slides.pptx
+

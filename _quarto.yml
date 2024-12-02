@@ -187,6 +187,8 @@ website:
             href: docs/aux/math-intuition.qmd
           - text: "Presentation Technique"
             href: docs/aux/presentation.qmd
+          - text: "Reproducible Research"
+            href: docs/aux/repr.qmd
           - text: "Self Management"
             href: docs/aux/self-mgmt.qmd
           - text: "Writing Tactics"
