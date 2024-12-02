@@ -6,6 +6,15 @@ title: "Self Management"
 # Under construction
 :::
 
+## Use the right metric
+
+One reason some academic writers get lost is that they have been piling up words without knowing what they want to say or why they are saying it.
+This often happens when word count or pages produced is our chosen productivity measure.
+We academics can ramble on for pages, sounding profound without saying much of anything.
+Good editors, and good readers, will call us on this.
+So feeling lost can be a sign that we aren't writing thoughtfully even though we are meeting our goals for number of words or pages written.
+Try shifting to a different productivity metric: time spent or points made or progress on through-line can serve as a measure for each session's progress.
+
 ## Productivity/effectiveness Tips ’n’ tricks
 
 * Take regular breaks.
@@ -21,7 +30,6 @@ title: "Self Management"
 > Better to be in the arena getting stomped by the bull, than it is to be up in the stands, or out in the parking lot.
 
 ## Getting things done
-
 
 * Ppl have 100-200 next actions ar any one time
 * Project: anything you are comited to finish within next few weeks/months that take more than one step to finish
