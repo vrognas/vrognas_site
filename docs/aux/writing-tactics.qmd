@@ -5,3 +5,69 @@ title: "Writing Tactics"
 :::{.callout-caution}
 # Under construction
 :::
+
+
+## Write/read a paper/article
+
+### Write
+
+Consult recent articles in target journal!
+
+![](./images/writing.png)
+￼
+Frontload your argument
+
+#### Introduction
+
+1. General background/problem
+2. Specific focus/problem
+3. Why is the specific problem unresolved?
+4. My idea (sell it as obvious)
+5. Hypothesis
+6. Aim/objectives
+
+#### Discussion
+
+1. Recap; Summarize findings. ”Long abstract of Introduction and Results”.
+2. Findings in context of previous research. Three implications max.
+    1. How does your story add to the conversation?
+    2. How have you filled the gap?
+3. Remaining issues, eg: How does the design limit your contribution? Directions for future research
+
+#### Conclusion
+
+1. What’s the key lesson from your story?
+2. What is the inevitable story-in-waiting?
+
+#### Abstract: after paper is done
+
+1. A conference abstract should be a coherent stand-alone piece. By simply copy-pasting sentences from different sections of a manuscript, you risk having a disjointed and incoherent abstract.
+2. DO NOT USE ALL CAPS FOR YOUR ABSTRACT TITLE.
+3. Minimize the use of acronyms. If you absolutely must use acronyms:
+    * Do not include acronyms in your title unless it’s one that EVERYONE in the field will know.
+    * Define every acronym before you use it. Don't assume that others will know what you mean.
+    * Do not recreate (new) acronyms for a phrase when one already exists and is conventionally used.
+    * Do not use more than 2 acronyms in a sentence.
+4. Provide a brief description of existing literature and explain the novelty of the current work in your intro.
+5. State your goals for the study in the last sentence of your abstract intro. This will help orient reviewers as they go through your methods and results.
+6. Summarize your key findings in the first sentence of your discussion/conclusions. This lets reviewers know what you want them to take away from your study.
+7. Include figures and quantitative descriptions/statistics in your results that clearly support your big picture conclusions.
+8. Most important, remember that reviewers may not be an expert in your specific research topic. Prepare your abstract so that any researcher in your general field will be able to follow along and understand your key findings.
+9. https://www.youtube.com/watch?v=w5Cy2mjBxQw
+
+### Typography
+
+practicaltypography.com
+typewolf.com
+prowebtype.com
+https://www.supremo.co.uk/typeterms/
+
+### Read
+
+If you cannot write; read.
+
+If interesting, proceed to next.
+1. Title + keywords
+2. Abstract + conclusion
+3. Discussion
+4. Methods
