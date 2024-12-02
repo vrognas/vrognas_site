@@ -5,3 +5,34 @@ title: "Math Intuition"
 :::{.callout-caution}
 # Under construction
 :::
+
+## Common statistical tests are linear models
+
+![https://lindeloev.github.io/tests-as-linear/](./images/linear-tests.png)
+
+## Understanding *e*
+
+The number *e* is the base amount of growth shared by all continually growing processes.
+The number *e* merges Rate and Time.
+When we write:
+
+$$
+e^x
+$$
+
+the variable *x* is a combination of rate and time.
+
+$$
+x = \text{rate} \times \text{time}
+$$
+
+So, our general formula becomes:
+
+$$
+\text{growth} = e^x = e^{r t}
+$$
+
+The number *e* is about continuous growth.
+Intuitively, $e^x$ means:
+
+* How much growth do I get after after *x* units of time (and 100% continuous growth)
