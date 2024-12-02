@@ -1,0 +1,77 @@
+---
+title: "Email like a Boss"
+---
+
+:::{.callout-caution}
+# Under construction
+:::
+
+## Email
+
+> Sorry I'm writing a long email, but I did not have time to write a short one
+
+* Remove all notifications about new email.
+  * You're not the President of the United States who needs to react to a nuclear threat. Emails/calls can always wait a few minutes.
+* Agree on email response times e.g. one/two business days
+* Never send emails outside office hours
+  * Many modern email clinets now have a "Send Later" functionality. Use it.
+
+### How to read email
+
+* Read email in batches.
+  * Schedule reading at least once per day, what works for you.
+* Strive for "inbox zero"^[an empty inbox]---every day.
+  * The inbox is for emails you have have decided what to do with yet.
+* ~30sec to process every email
+* If you open an email---make a decision.
+  * Action required (takes ≤2 min^[or other amount that works for you])? **Do it now**
+  * Action required (takes >2 min)? **Schedule it**
+  * Action required (but waiting for something/someone)? **Set a reminder**
+  * Action not required? **Archive**
+    * Other emails go into the archive. Also all emails that required action go into the archive after action is taken.
+    * I've found that just archiving all emails is more efficient than spending time to sort them into subfolder. When you want a certain email, just search for it.
+* In general: Do not answer mails that you've been CC'ed on.
+
+### How to write email
+
+![](./images/email.jpg)
+
+* Write your emails backwards
+  * Write your receivers last.
+* Keep email short, clear, and on topic.
+  * Mind your language.
+  * Aim for maximum 5 sentences.
+  * [ChatGPT](chat.openai.com) can help to make emails more coherent, consise, and to the point.
+* Summarize message and action-points in the beginning of an email.
+* New topic? New email.
+* Make subject lines accurate
+  * Action: 
+  * Info:
+  * Question:
+  * Feedback: 
+* CC can be viewed as ”For your information”
+  * If you put someone in CC, you don't expect them to answer. It is either not actionable for them, or not directly related to them.
+* Don't overuse CC. Everybody does not need to know everything.
+* ”EOM” at end of subject line for short messages. Also FYI or AR (action required) at beginning of subject.
+* (Almost) never use "Reply All".
+  * Want fewer emails? Send fewer emails.
+
+:::{.callout-tip}
+# CC & BCC
+
+**CC = “carbon copy”.**
+Back in the days before internet and email, in order to create a copy of the letter you were writing, you had to place carbon paper between the one you were writing on and the paper that was going to be your copy.
+
+**BCC = “blind carbon copy.”**
+It’s called blind carbon copy because the other recipients won’t be able to see that someone else has been sent a copy of the email.
+While you can see a list of recipients when CC is used, that’s not the case with BCC.
+No one ever sees the BCC list.
+A BCC can reply to the sender, but other recipients can't send to BCC recipient with "reply all".
+:::
+
+#### Do not use email for these situations
+
+* When you require a quick answer (call them or go face-to-face instead)
+* When you want to give negative feedback (go face-to-face instead)
+* When you need to deliver bad news (go face-to-face instead)
+* When you are angry/emotional (write a draft and send later instead)
