@@ -6,13 +6,22 @@ title: "Self Management"
 # Under construction
 :::
 
-## Getting things done
+## Productivity/effectiveness Tips ’n’ tricks
+
+* Take regular breaks.
+    * Use a variant of the pomodoro-method eg work in units of 45min focused work followed by 15min break.
+* Plan only ~75% of your working time to allow for unforeseen things.
+* Plan, then do, then re-evaluate your plan
+* Schedule important things, and force yourself to stick to the schedule
 
 5 % Strategy  
 15 % Position  
 80 % Action  
 
 > Better to be in the arena getting stomped by the bull, than it is to be up in the stands, or out in the parking lot.
+
+## Getting things done
+
 
 * Ppl have 100-200 next actions ar any one time
 * Project: anything you are comited to finish within next few weeks/months that take more than one step to finish
