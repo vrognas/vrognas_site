@@ -1,19 +1,10 @@
 ---
-title: "Comunication & Presentation Technique"
+title: "Presentation Techniques"
 ---
 
 :::{.callout-caution}
 # Under construction
 :::
-
-## Email
-
-* CC can be viewed as ”For your information”
-  * Person in CC not expected to answer. Not actionable for them or not directly related to them.
-* ~30sec to process every email
-* Make subject lines accurate
-* ”EOM” at end of subject line for short messages. Also FYI or AR (action required) at beginning of subject.
-* Agree on email response times eg one/two business days
 
 ## Pitch (to investors):
 
@@ -24,9 +15,3 @@ title: "Comunication & Presentation Technique"
 5. Competition (and why you’re better)
 6. Financials (amount needed, use and returning how much by when)
 7. Close with the ”The Ask” (Get to further discussion)
-
-## Negotiation
-
-* As low as possible: 65 –> 85 –> 95 –> 100
-* As high as possible: 155 -> 120 -> 105 -> 100
-* End on odd number
