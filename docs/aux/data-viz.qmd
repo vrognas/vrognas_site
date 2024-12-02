@@ -5,3 +5,41 @@ title: "Data Visualization"
 :::{.callout-caution}
 # Under construction
 :::
+
+[data-to-viz.com](https://www.data-to-viz.com)
+
+## Label line ends in time series with ggplot2^[https://drsimonj.svbtle.com/label-line-ends-in-time-series-with-ggplot2]
+
+```r
+library(tidyverse)
+
+d <- Orange %>% 
+  as_tibble()
+
+d_ends <- d %>% 
+  group_by(Tree) %>% 
+  top_n(1, age) %>% 
+  pull(circumference)
+
+d %>% 
+  ggplot(aes(age, circumference, color = Tree)) +
+    geom_line(size = 2, alpha = .8) +
+    theme_minimal() +
+    scale_x_continuous(expand = c(0, 0)) +
+    scale_y_continuous(sec.axis = sec_axis(~., breaks = d_ends)) +
+    ggtitle("Orange trees getting bigger with age",
+            subtitle = "Based on the Orange data set in R") +
+    labs(x = "Days old", y = "Circumference (mm)")
+```
+
+![](./images/line-end-label.png)
+
+## Scientific figures
+
+biorender.com
+reactome.org/icon-lib
+bioicons.com
+healthicons.org
+scidraw.io
+undraw.co
+smart.servier.com
