@@ -6,11 +6,32 @@ title: "Math Intuition"
 # Under construction
 :::
 
-## Common statistical tests are linear models
+## Updated mental models
 
-![https://lindeloev.github.io/tests-as-linear/](./images/linear-tests.png)
+Numbers aren’t just a count; a better viewpoint is a *position on a line*.
+This position can be negative ($-1$), between other numbers ($\sqrt{2}$), or in another dimension ($i$).
 
-## Understanding *e*
+Arithmetic became a general way to transform a number.
+Addition is sliding along the number line ($+ 3$ means slide 3 to the right) and multiplication is scaling ( $\times 3$ means scale it up 3 times).
+
+Mathematically, the exponent function does this:
+
+$$
+\mathrm{original} \times \mathrm{growth}^{\mathrm{duration}} = \mathrm{new}
+$$
+
+or
+$$
+\mathrm{growth}^{\mathrm{duration}} = \frac{\mathrm{new}}{\mathrm{original}}
+$$
+
+| Operation | Old concept | New concept |
+| :--- | :--- | :--- |
+| Addition | Repeated counting | Sliding |
+| Multiplication | Repeated addition | Scaling |
+| Exponents | Repeated multiplication | Growth for amount of time |
+
+### Understanding *e*
 
 The number *e* is the base amount of growth shared by all continually growing processes.
 The number *e* merges Rate and Time.
@@ -36,3 +57,7 @@ The number *e* is about continuous growth.
 Intuitively, $e^x$ means:
 
 * How much growth do I get after after *x* units of time (and 100% continuous growth)
+
+## Common statistical tests are linear models
+
+![https://lindeloev.github.io/tests-as-linear/](./images/linear-tests.png)
