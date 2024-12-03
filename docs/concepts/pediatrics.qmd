@@ -196,7 +196,7 @@ To create a simulation subject:
 
 This process creates a set of simulation subjects with WT, age group, and SEX.
 
-::: {.callout-tip}
+::: {.callout-note}
 Save this dataset for use in future PK simulations.
 :::
 
