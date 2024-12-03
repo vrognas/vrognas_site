@@ -189,7 +189,7 @@ website:
             contents:
             - text: "Presentation Technique"
               href: docs/aux/presentation.qmd
-            - text: "Emails"
+            - text: "Email"
               href: docs/aux/email.qmd
             - text: "Meetings"
               href: docs/aux/meetings.qmd
