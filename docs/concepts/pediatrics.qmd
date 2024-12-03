@@ -41,7 +41,8 @@ Dividing the pediatric population into many age groups might needlessly increase
 Sometimes, it may be more appropriate to collect data over broad age ranges and examine the effect of age as a continuous covariate.
 
 ::: {.callout-warning}
-In longer term studies, pediatric patients may move from one age category to another.
+# In longer term studies, pediatric patients may move from one age category to another.
+
 The study design and statistical plans should prospectively take into account changing numbers of patients within a given age group.
 :::
 
@@ -58,9 +59,8 @@ The study design and statistical plans should prospectively take into account ch
 
 :::{.callout-note}
 
-# Age grouping
+# A pediatric patient that is 17.9 years old belongs to the adolescent age group, until the 18^th^ birthday.
 
-A pediatric patient that is 17.9 years old belongs to the adolescent age group, until the 18^th^ birthday.
 :::
 
 ## Pediatric PK studies
@@ -128,7 +128,7 @@ Do a sensitivity analysis: How do the exposure predictions change?
 :::
 
 ::: {.callout-important}
-Do not use allometric exponents estimated using adult data for pediatric PK models.
+# Do not use allometric exponents estimated using adult data for pediatric PK models.
 :::
 
 The new model should give slightly different estimates for the volume and clearance parameters, but the diagnostics should be quite similar.
@@ -140,8 +140,8 @@ By converting to the standard WT of 70 kg and using standard exponent values, y
 Additionally, if AGE or WT is included elsewhere in the model, remove these covariates.
 They could cause problems with extrapolation after refitting the model with standard allometric exponents.
 
-::: {.callout-caution}
-Allometric scaling may not be valid at extreme body weights.
+::: {.callout-warning}
+# Allometric scaling may not be valid at extreme body weights.
 :::
 
 ##### Maturation
@@ -168,7 +168,7 @@ Assuming renal maturation time differs in pre-term infants, a separate TM~50~ va
 
 ![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full term infant with a PMA of 40 weeks](images/pediatric-gfr.png){#fig-gfr}
 
-::: {.callout-caution}
+::: {.callout-warning}
 Due to high correlation between body weight and age in pediatric patients, **maturation functions and allometric exponents should not be estimated simultaneously** ([Bonate (1999)](https://doi.org/10.1023/a:1018828709196)).
 :::
 
@@ -177,9 +177,10 @@ Due to high correlation between body weight and age in pediatric patients, **mat
 Use either NHANES (US subjects 2--18 years), or a growth chart (e.g. WHO).
 The WHO data is preferred for non-US studies or for pediatric patients less than 2 years of age.
 
-::: {.callout-caution}
+::: {.callout-warning}
+# NHANES has limited data for younger age groups.
+
 Because NHANES involves sampling individual subjects, there may be limited data in certain categories---especially for younger patients.
-NHANES has limited data for younger age groups.
 Therefore, for younger patients---usually those under 2 years of age, but sometimes under 6---it’s better to use the CDC or WHO growth charts instead.
 :::
 
@@ -197,7 +198,7 @@ To create a simulation subject:
 This process creates a set of simulation subjects with WT, age group, and SEX.
 
 ::: {.callout-note}
-Save this dataset for use in future PK simulations.
+# Save this dataset for use in future PK simulations.
 :::
 
 #### Step 3: Simulate Exposures and Estimate Target Pediatric Doses
