@@ -57,6 +57,9 @@ The study design and statistical plans should prospectively take into account ch
 : Approximate pediatric age groups. Neonates = "newborn infants". {#tbl-age-group}
 
 :::{.callout-note}
+
+# Age grouping
+
 A pediatric patient that is 17.9 years old belongs to the adolescent age group, until the 18^th^ birthday.
 :::
 
@@ -116,7 +119,9 @@ Q = THETA(2) * EXP(ETA(2))
 Q = Q * (WT / 70)**0.75 ; Allometric scaling
 ```
 
-::: {.callout-tip title="Fix exponents, or estimate?"}
+::: {.callout-note}
+# Fix exponents, or estimate?
+
 Fix exponents if you don't have pediatric PK data.
 Fix AND estimate them if you *have* pediatric PK data.
 Do a sensitivity analysis: How do the exposure predictions change?
@@ -232,6 +237,8 @@ The reference range in the adult population (median and outer percentiles of obs
 
 ## PD extrapolation
 
+Unlike PK, PD models are disease- and therapy-specific, making direct extrapolation challenging.
+
 Response and PD models from adults may not apply to children.
 This is because children and adults have different physiology that PD-wise cannot be easilly extrapolated.
 Children are not small adults (@fig-small-adult).
@@ -244,9 +251,11 @@ Babies are still developing, which can be visualized in part the relationship be
 
 Unless there's clinical efficacy data in pediatric patients, be very cautious to extrapolate response or PD models from adults to pediatric patients.
 
-However, if required, you could consider estimating a higher sensitivity for children than adults.
-That would mean decreasing the EC50 for an E-max model.
-This would be a conservative approach to not overdose a pediatric patient.
+Considerations include:
+
+* Ontogeny of drug targets: Maturation of biological systems may alter response.
+* Sensitivity adjustments: Use conservative parameters (e.g., lower EC~50~).
+* Clinical caution: Without pediatric data, PD extrapolations are empirical.
 
 ## References
 
