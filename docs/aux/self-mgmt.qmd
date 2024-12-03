@@ -38,5 +38,12 @@ Try shifting to a different productivity metric: time spent or points made or pr
 
 * Get your life back to widgets, but you have to define the widgets. ”Draft” instead of ”write” (crappy and still win)
 * ”If you actually captured your thoughts the first time you had them, you’d be surprised how few you have”
-* If you are not doing the weekly review, you are doing it all the time, but not really doing it. Finish the thinking!
-* Winston Churchill: freedom from order. Discipline equals freedom.
+* If you are not doing the Weekly Review, you are doing it all the time, but not really doing it. Finish the thinking!
+* Winston Churchill: Freedom from order. Jock Willink: Discipline equals freedom.
+
+## Project Square
+
+Why
+
+Scope (What) - Resources (money/people) (Who)  
+Quality (How) - Time (When)
