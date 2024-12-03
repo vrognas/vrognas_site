@@ -2,10 +2,6 @@
 title: "Email like a Boss"
 ---
 
-:::{.callout-caution}
-# Under construction
-:::
-
 * Remove all notifications about new email.
   * You're not the President of the United States who needs to react to a nuclear threat. Emails/calls can always wait a few minutes.
 * Agree on email response times e.g. one/two business days
@@ -33,26 +29,43 @@ title: "Email like a Boss"
 
 > Sorry I'm writing a long email, but I did not have time to write a short one.
 
-1. Start with jotting down what you want to say in the body of the email. If it is a really short message, consider using only the subject line, ending it with "EOM" (End of Message).
+1. Start with **jotting down** what you want to say in the body of the email. If it is a really short message, consider using only the subject line, ending it with "EOM" (End of Message).
 * Keep email short, clear, and on topic.
   * [ChatGPT](chat.openai.com) can help to make emails more coherent, consise, and to the point.
-  * Aim for maximum 5 sentences, if it is longer than that, email is probably not the right way to communicate.
+  * A good rule of thumb is to aim for max 5 sentences. If it is longer than that, email is probably not the right way to communicate.
+  * AVOID CAPITAL LETTERS
+  * Avoid irony and sarcasm
+  * Do not use more than one exclamation mark!!!!!!! Same goes for the question mark???? And dots........ (what you want here is the *ellipsis* "...").
   * Mind your language. Avoid profanity. Be polite, and not overly apologetic (see @fig-email). Use abbreviations, symbols, and emojis sparingly.
+
+:::{.callout-note}
+# Note on emojis
+
+Emojis are meant to convey emotion in writing.
+Correctly used, they are irreplaceable in making sure your message is read in the intended tone of voice, even in professional email.
+:::
 
 ![](images/email.jpg){#fig-email}
 
-2. Next, summarize message and action-points in the beginning of an email.
-3. Write an accurate subject line.
+2. Next, **summarize** message and action-points in the beginning of an email.
+3. Write an accurate (and short) **subject line**.
 * Consider starting your subject lines with a word such as:
   * Action: 
   * Info/FYI: 
   * Question: 
   * Feedback: 
-4.  Add the recipients after you've written the email, that way you don't accidentally send an unfinished email.
 
 :::{.callout-tip}
-New topic? New email.
+# Stick to one topic
+
+**New topic? New email.**
+
+Do *not* take the opportunity to discuss a little bit of this and that.
 :::
+
+4.  **Add the recipients** after you've written the email, that way you don't accidentally send an unfinished email.
+5. **Read through** the email once (yes, once is enough), and correct any obvious mistakes.
+6. **Hit send!** (or "Send Later" if you work outside office hours)
 
 * CC can be viewed as ”For your information”
   * If you put someone in CC, you don't expect them to answer. It is either not actionable for them, or not directly related to them.
