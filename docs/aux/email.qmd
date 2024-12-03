@@ -6,23 +6,18 @@ title: "Email like a Boss"
 # Under construction
 :::
 
-## Email
-
-> Sorry I'm writing a long email, but I did not have time to write a short one
-
 * Remove all notifications about new email.
   * You're not the President of the United States who needs to react to a nuclear threat. Emails/calls can always wait a few minutes.
 * Agree on email response times e.g. one/two business days
 * Never send emails outside office hours
-  * Many modern email clinets now have a "Send Later" functionality. Use it.
+  * Many modern email clients now have a "Send Later" functionality. Use it if you work ouside office hours.
 
-### How to read email
+## Read email in batches
 
-* Read email in batches.
-  * Schedule reading at least once per day, what works for you.
+* Schedule reading at least once per day, what works for you.
+  * Expect ~30sec to process every email(=decide what to do with it, see below).
 * Strive for "inbox zero"^[an empty inbox]---every day.
   * The inbox is for emails you have have decided what to do with yet.
-* ~30sec to process every email
 * If you open an email---make a decision.
   * Action required (takes ≤2 min^[or other amount that works for you])? **Do it now**
   * Action required (takes >2 min)? **Schedule it**
@@ -31,30 +26,37 @@ title: "Email like a Boss"
     * Other emails go into the archive. Also all emails that required action go into the archive after action is taken.
     * I've found that just archiving all emails is more efficient than spending time to sort them into subfolder. When you want a certain email, just search for it.
 * In general: Do not answer mails that you've been CC'ed on.
+* (Almost) never use "Reply All".
+  * Want fewer emails? Send fewer emails.
 
-### How to write email
+## Write your email backwards
 
-![](./images/email.jpg)
+> Sorry I'm writing a long email, but I did not have time to write a short one.
 
-* Write your emails backwards
-  * Write your receivers last.
+1. Start with jotting down what you want to say in the body of the email. If it is a really short message, consider using only the subject line, ending it with "EOM" (End of Message).
 * Keep email short, clear, and on topic.
-  * Mind your language.
-  * Aim for maximum 5 sentences.
   * [ChatGPT](chat.openai.com) can help to make emails more coherent, consise, and to the point.
-* Summarize message and action-points in the beginning of an email.
-* New topic? New email.
-* Make subject lines accurate
+  * Aim for maximum 5 sentences, if it is longer than that, email is probably not the right way to communicate.
+  * Mind your language. Avoid profanity. Be polite, and not overly apologetic (see @fig-email). Use abbreviations, symbols, and emojis sparingly.
+
+![](images/email.jpg){#fig-email}
+
+2. Next, summarize message and action-points in the beginning of an email.
+3. Write an accurate subject line.
+* Consider starting your subject lines with a word such as:
   * Action: 
-  * Info:
-  * Question:
+  * Info/FYI: 
+  * Question: 
   * Feedback: 
+4.  Add the recipients after you've written the email, that way you don't accidentally send an unfinished email.
+
+:::{.callout-tip}
+New topic? New email.
+:::
+
 * CC can be viewed as ”For your information”
   * If you put someone in CC, you don't expect them to answer. It is either not actionable for them, or not directly related to them.
 * Don't overuse CC. Everybody does not need to know everything.
-* ”EOM” at end of subject line for short messages. Also FYI or AR (action required) at beginning of subject.
-* (Almost) never use "Reply All".
-  * Want fewer emails? Send fewer emails.
 
 :::{.callout-tip}
 # CC & BCC
@@ -69,7 +71,7 @@ No one ever sees the BCC list.
 A BCC can reply to the sender, but other recipients can't send to BCC recipient with "reply all".
 :::
 
-#### Do not use email for these situations
+## Do not use email for these situations
 
 * When you require a quick answer (call them or go face-to-face instead)
 * When you want to give negative feedback (go face-to-face instead)
