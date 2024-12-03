@@ -7,10 +7,6 @@ The use of *model informed drug development* (MIDD) approaches in pediatric drug
 * Practical and ethical limitations in data collection.
 * Ability to quantify the effects of growth and maturation by leveraging data from literature and older patients.
 
-Children are not small adults.
-
-![Children are not small adults](images/small-adult.png){#fig-small-adult}
-
 ## Pediatric Age Terminology
 
 The terminology used around pediatric age is commonly **inconsistent**.
@@ -233,6 +229,24 @@ The reference range in the adult population (median and outer percentiles of obs
 **The same statistics should be presented numerically in tables.**
 
 ![Adult reference range (5^th^--95^th^ percentiles and median) highlighted in the background.](images/pediatric-box.png){#fig-box}
+
+## PD extrapolation
+
+Response and PD models from adults may not apply to children.
+This is because children and adults have different physiology that PD-wise cannot be easilly extrapolated.
+Children are not small adults (@fig-small-adult).
+
+![Children are not small adults](images/small-adult.png){#fig-small-adult}
+
+Babies are still developing, which can be visualized in part the relationship between the size of their head and the lengths of their arms is changing as the babies grow and become adults (See video below).
+
+{{< video videos/hands-over-head.mp4 >}}
+
+Unless there's clinical efficacy data in pediatric patients, be very cautious to extrapolate response or PD models from adults to pediatric patients.
+
+However, if required, you could consider estimating a higher sensitivity for children than adults.
+That would mean decreasing the EC50 for an E-max model.
+This would be a conservative approach to not overdose a pediatric patient.
 
 ## References
 
