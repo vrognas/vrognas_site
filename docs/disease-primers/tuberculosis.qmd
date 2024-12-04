@@ -1,5 +1,40 @@
 ---
-title: "Disease primer: Tuberculosis"
+title: "Disease primer: Tuberculosis (TB)"
 ---
 
-![](images/tuberculosis.png){#fig-tuberculosis}
+## What is TB?
+
+![](images/tb-1.png){#fig-tb-1}
+
+Tuberculosis (TB) is a bacterial disease which usually affects the lungs.
+In many cases it is symptomless (latent TB), but can progress to active disease which kills around half of those affected if left untreated.
+
+![](images/tb-2.png){#fig-tb-2}
+
+### Drug resistant TB
+
+Myobacterium tuberculosis divides more slowly than most bacteria, making development of antibiotic resistance more likely (@fig-tb-amr-1).
+In addition, the mycolic acids in its cell wall limit the effectiveness of some antibiotics.
+
+![](images/tb-amr-1.png){#fig-tb-amr-1}
+
+![](images/tb-amr-2.png){#fig-tb-amr-2}
+
+## What are the symptoms?
+
+![Symptoms for TB.](images/tb-symptoms.png){#fig-tb-symptoms}
+
+## What are the treatments?
+
+Active TB is treated by taking several antibiotics for six to nine months.
+The four drugs shown in @fig-tb-trt-1 are commonly used first line drugs in treatment regimes.
+
+![First line TB drugs.](images/tb-trt-1.png){#fig-tb-trt-1}
+
+Tuberculosis that is resistant to first line drugs (@fig-tb-trt-1) must be treated with second line drugs (@fig-tb-trt-2).
+These can include drugs that are usually less effective, which have toxic side effects, or which are unavailable in developing countries.
+Streptomycin was formerly considered a first line drug, but is now used less due to increased cases of resistance to its effects.
+
+![Second line TB drugs.](images/tb-trt-2.png){#fig-tb-trt-2}
+
+![License](images/license.png){#fig-license}
