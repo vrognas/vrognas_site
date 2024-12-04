@@ -41,7 +41,7 @@ Dividing the pediatric population into many age groups might needlessly increase
 Sometimes, it may be more appropriate to collect data over broad age ranges and examine the effect of age as a continuous covariate.
 
 ::: {.callout-warning}
-# In longer term studies, pediatric patients may move from one age category to another.
+# In longer studies, pediatric patients may move from one age category to another
 
 The study design and statistical plans should prospectively take into account changing numbers of patients within a given age group.
 :::
@@ -58,45 +58,43 @@ The study design and statistical plans should prospectively take into account ch
 : Approximate pediatric age groups. Neonates = "newborn infants". {#tbl-age-group}
 
 :::{.callout-note}
-
-# A pediatric patient that is 17.9 years old belongs to the adolescent age group, until the 18^th^ birthday.
-
+# A 17.9 year old belongs to the adolescent age group, until the 18^th^ birthday
 :::
 
 ## Pediatric PK studies
 
-Relative bioavailability comparisons of pediatric formulations with the adult oral formulation typically should be done in adults.
-PK studies in the pediatric population are generally conducted {in patients with the disease.
+Relative bioavailability comparisons of pediatric and adult formulations should typically be performed in adults.
+PK studies in the pediatric population are generally conducted in patients with the disease.
 
-For drugs with linear PK in adults, a single-dose in pediatric patients may be enough for dose selection.
+For drugs with linear PK in adults, a single-dose in pediatric patients may be sufficient for dose selection.
 Sparse sampling in multidose clinical studies could confirm these findings.
-However, if adults exhibit dose- or time-dependent PK or PD---steady-state studies are necessary.
+However, steady-state studies are necessary if adults exhibit dose- or time-dependent PK or PD.
 
-Most dosing recommendations for pediatric medicinal products are based on mg/kg of body weight, up to a maximum adult dose.
-Although surface-area-guided dosing might be preferred, measuring height or length---especially in infants and young children---is often prone to errors.
-For medications with a narrow therapeutic window, such as those used in oncology, surface-area-guided dosing may be necessary.
+Pediatric dosing is typically based on mg/kg body weight, up to the maximum adult dose.
+Although surface area-guided dosing might be preferred, measuring the height or length, especially in infants and young children, is often prone to errors.
+For medications with a narrow therapeutic window, such as those used in oncology, surface area-guided dosing may be necessary.
 
 ## PK extrapolation
 
-Whether PK-extrapolation is doable or not, is ultimately a clinical question.
-If an indication can be assumed to behave similarly in an adult and a pediatric population, PK extrapolation ("bridging") can be used.
-However, there could be cicumstances where a dedicated pediatric study is warranted (e.g. safety concerns or clinical presentation of the disease).
+Whether PK extrapolation is feasible or not, is ultimately a clinical question.
+If an indication can be assumed to behave similarly in adult and pediatric populations, PK extrapolation ("bridging") can be used.
+However, there could be cases in which a dedicated pediatric study is warranted (e.g., safety concerns or clinical presentation of the disease).
 
 The relevant PK metric(s) linked to efficacy and safety and the exposure-response relationship should first be established in adults.
 In pediatric patients, we want to start with a **clinically relevant dose**.
-Pediatric PK should then be comparable to adult PK.
+Pediatric PK should then be comparable to that of adults.
 
 The plan is to predict exposure in a pediatric age group (@tbl-age-group), collect data, refine predictions for the next younger group, and repeat.
-The extrapolation generally includes a population PK model and exposure response models.
-These models may be independent from the adult models if there's adequate data, or they may be developed in combination with the adult data.
+Extrapolation generally includes a population PK model and exposure-response models.
+These models may be independent of adult models if there are adequate data or they may be developed in combination with adult data.
 
 ### Allometric scaling for PK
 
 A previously developed adult PK model can be extrapolated to pediatric patients using allometry, which relates volume of distribution and clearance to body size.
+Researchers have studied and applied this theory across various animal species and human subjects using a wide range of compounds ([Boxenbaum (1982)](https://doi.org/10.1007/bf01062336)).
 Volume of distribution scales proportionally with body size (@lst-v), while clearance scales less proportionally (@lst-cl).
-Allometric scaling should not be used on rate constants.
-Researchers have studied and applied this theory across various animal species and human subjects using a wide range of compounds.
 It has proven robust and reliable, except in some targeted therapies and large molecule biologics.
+Allometric scaling should not be used on rate constants.
 
 #### Step 1: Refit the Final Adult Data with Allometric Exponents
 
@@ -128,7 +126,7 @@ Do a sensitivity analysis: How do the exposure predictions change?
 :::
 
 ::: {.callout-important}
-# Do not use allometric exponents estimated using adult data for pediatric PK models.
+# Do not use allometric exponents estimated using adult data for pediatric PK models
 :::
 
 The new model should give slightly different estimates for the volume and clearance parameters, but the diagnostics should be quite similar.
@@ -141,7 +139,7 @@ Additionally, if AGE or WT is included elsewhere in the model, remove these cova
 They could cause problems with extrapolation after refitting the model with standard allometric exponents.
 
 ::: {.callout-warning}
-# Allometric scaling may not be valid at extreme body weights.
+# Allometric scaling may not be valid at extreme body weights
 :::
 
 ##### Maturation
@@ -169,7 +167,9 @@ Assuming renal maturation time differs in pre-term infants, a separate TM~50~ va
 ![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full term infant with a PMA of 40 weeks](images/pediatric-gfr.png){#fig-gfr}
 
 ::: {.callout-warning}
-Due to high correlation between body weight and age in pediatric patients, **maturation functions and allometric exponents should not be estimated simultaneously** ([Bonate (1999)](https://doi.org/10.1023/a:1018828709196)).
+# Maturation functions and allometric exponents should not be estimated simultaneously
+
+This is due to high correlation between body weight and age in pediatric patients ([Bonate (1999)](https://doi.org/10.1023/a:1018828709196)).
 :::
 
 #### Step 2: Prepare a Data Set with Pediatric Simulation Subjects
@@ -178,7 +178,7 @@ Use either NHANES (US subjects 2--18 years), or a growth chart (e.g. WHO).
 The WHO data is preferred for non-US studies or for pediatric patients less than 2 years of age.
 
 ::: {.callout-warning}
-# NHANES has limited data for younger age groups.
+# NHANES has limited data for younger age groups
 
 Because NHANES involves sampling individual subjects, there may be limited data in certain categories---especially for younger patients.
 Therefore, for younger patients---usually those under 2 years of age, but sometimes under 6---it’s better to use the CDC or WHO growth charts instead.
@@ -198,7 +198,7 @@ To create a simulation subject:
 This process creates a set of simulation subjects with WT, age group, and SEX.
 
 ::: {.callout-note}
-# Save this dataset for use in future PK simulations.
+# Save this dataset for use in future PK simulations
 :::
 
 #### Step 3: Simulate Exposures and Estimate Target Pediatric Doses
@@ -227,7 +227,7 @@ The most relevant covariate to influence PK in pediatric patients is considered 
 Relevant predefined exposure metrics should be presented graphically versus body weight and age on a continuous scale (@fig-cov).
 If the drug is indicated to be used in the age range below one year, exposure vs body weight and age should be depicted in an additional separate figure focused on children 0--1 year of age.
 
-![Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions) for children from the NHANES database using **2 mg/kg BID for patients <8 years, and 1.6 mg/kg BID for patients ≥8 years with 100 mg BID maximum dose (*top*)**, or **2 mg/kg BID with 100 mg BID maximum dose for all patients (*bottom*)**. The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated paediatric patients. The *horizontal gray band* encompasses 90% of the simulated adult patients receiving 100 mg BID. [Schoemaker et al. (2017)](https://doi.org/10.1007/s00228-017-2230-6).](images/pediatric-cov.png){#fig-cov}
+![Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions). The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated pediatric patients. The *horizontal gray band* encompasses 90% of the simulated adult patients receiving 100 mg BID. [Schoemaker et al. (2017)](https://doi.org/10.1007/s00228-017-2230-6).](images/pediatric-cov.png){#fig-cov}
 
 Often plots that show the distribution of AUC~pediatric,simulated~ along with the distribution of AUC~adult,observed~ or simulated values from individual adult subjects using the final popPK model using box-plots can be useful (@fig-box).
 If different doses are proposed for bands of weight or/and age, exposure ranges predicted for the proposed doses for the subsets of the pediatric population should be visualized as box-plots (@fig-box).
