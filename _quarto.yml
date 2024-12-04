@@ -31,7 +31,7 @@ website:
           - text: "Modeling Methods"
             href: docs/modeling/index.qmd
           - text: "Pathology Primers"
-            href: docs/disease-primers/index.qmd
+            href: docs/pathology-primers/index.qmd
           - text: "Pharmacopœia Pharmacometrika"
             href: docs/pharmacopeia/index.qmd
           - text: "Tools of the Trade"
@@ -48,33 +48,33 @@ website:
       style: "floating"
     - title: "Portfolio"
       style: "floating"
-    - id: disease-primers
+    - id: pathology-primers
       title: "Pathology primers"
       collapse-level: 2
       style: "floating"
       contents:
         - section: "Pathology primers"
-          href: docs/disease-primers/index.qmd
+          href: docs/pathology-primers/index.qmd
           contents:
             - text: "Rheumatoid arthritis (RA)"
-              href: docs/disease-primers/rheumatoid-arthritis.qmd
+              href: docs/pathology-primers/rheumatoid-arthritis.qmd
             - text: "Giant cell arteritis (GCA)"
-              href: docs/disease-primers/giant-cell-arteritis.qmd
+              href: docs/pathology-primers/giant-cell-arteritis.qmd
             - section: "Viral infections"
               contents:
                 - text: "HIV/AIDS"
-                  href: docs/disease-primers/hiv.qmd
+                  href: docs/pathology-primers/hiv.qmd
             - section: "Bacterial infections"
-              href: docs/disease-primers/bacterial-infection.qmd
+              href: docs/pathology-primers/bacterial-infection.qmd
               contents:
               - text: "Tuberculosis"
-                href: docs/disease-primers/tuberculosis.qmd
+                href: docs/pathology-primers/tuberculosis.qmd
             - section: "Cancer"
               contents:
               - text: "Skin cancers"
-                href: docs/disease-primers/skin-cancer.qmd
+                href: docs/pathology-primers/skin-cancer.qmd
               - text: "Lung cancers"
-                href: docs/disease-primers/lung-cancer.qmd
+                href: docs/pathology-primers/lung-cancer.qmd
     - id: pharmacopeia
       title: "Pharmacopœia"
       collapse-level: 3
