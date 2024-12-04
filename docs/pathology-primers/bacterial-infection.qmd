@@ -13,14 +13,16 @@ Ultimately, the disease process ends either in recovery, disability or death.
 A bacterial infection is classified according to the site of infection, and sometimes also the source of infection.
 
 * Skin
-* Lung
-  * CAP
+  * Acute bacterial skin and skin structure snfection (ABSSSI)
+* Lungs
+  * Community-acquired oneumonia (CAP)
     * Probably Pneumococci, haemophilus influenzae, mycoplasma)
-  * HAP/VAP
-    * Probably S.aureus, P.aeruginosa, enterobacteria
-    * Pseudomonas not in gut, it is found in shower heads or sinks -> can only infect after ABX trt, when gut flora is compromised.
-* IAI
-* BSI
+  * Hospital-acquired/ventilator-associated pneumonia (HAP/VAP)
+    * Probably *S.aureus*, *P.aeruginosa*, *Enterobacteria*
+    * *Pseudomonas* not in gut, it is found in shower heads or sinks -> can only infect after antibiotic treatment, when gut flora is compromised.
+* Intra-abdominal infection (IAI)
+* Blood-stream infection (BSI)
+* Urinary-tract infection (UTI)
 
 ![Overview of bacterial infections.](images/bac-inf_overview.jpg){#fig-overview}
 
@@ -45,7 +47,7 @@ Infectious diseases can be contagious during all five of the periods of disease.
 |   #   | Period/Phase/Stage | Description |
 | :---: | :----------------- | :---------- |
 |   1   | Incubation/latency | Pathogen replicates. No signs or symptoms. |
-|   2   | Prodromal (subclinical disease) | Pathogeon replicates. General signs and symptoms. Immunesystem active. |
+|   2   | Prodromal (subclinical disease) | Pathogeon replicates. General signs and symptoms. Immune system active. |
 |   3   | Illness (clinical disease) | Most severe and characteristic signs and symptoms. **Usual time of diagnosis early in this period.** |
 |   4   | Decline            | Pathogen particle-count declines. Signs and symptoms improve. Immune system possibly weakened---suceptibility to secondary infection. |
 |   5   | Convalescence      | Patient return to normal function. Signs and symptoms resolve. Some permament damage might have occured. |
@@ -73,40 +75,39 @@ The onset of symptoms marks the transition from subclinical to clinical disease.
 
 ## How can it be treated?
 
-* Efficacy of ABX treatment is judged by **signs and symptoms** (Are you feeling better than yesterday?), and the course of **inflammatory markers** (WBC, CRP, PCT)
-* Most infections can be treated in 5–7 days
-* Right treatment gets 90% success, wrong treatment gets 60% success ("90/60 rule")
-* 95% empirical treatment first ("hit hard and hit early" -Paul Erlich), no time to wait for culture results
-  1. Focus? (sepsis)
-    * Lung > IAI >> Wounds/UTI
-  2. Where acquired? Immune deficiency?
-    * "Pneumonia triade"
-  3. Additional risk factors for MDR?
-  4. Co-morbidities?
-  5. Interactions?
-* Treatment re-evaluation after 3 days
-    * 48 h needed to see if ABX works
-    * Empiric treatment should ideally be switched to targeted treatment once culture results are available (2-3 days)
+> "Hit hard and hit early" -Paul Erlich
+
+In almost all cases, an empirical treatment is used first.
+There no time to wait for culture results.
+The "right" treatment gets 90% success, "wrong" treatment gets 60% success (known as the **"90/60 rule"**).
+
+Most infections can be treated in 5--7 days.
 
 ### What we want to know before treating an infection
 
 1. Probable infection source
-    1. History
-    2. Examination (lab tests, x-ray, CT-scan)
-2. Probable bacteria & antibiotic susceptibility
-    1. Medical training
-    2. Local epidemiology
+    * History
+    * Examination (lab tests, X-ray, CT-scan)
+2. Probable bacteria & antibiotic susceptibility (see e.g. @fig-overview)
+    * Medical training
+    * Local epidemiology
+    * Resistance rates: How many percent are resistant?
 3. Individual resistance risk
-    1. Previous infection with resistant bacteria
-    2. Recent travel
-    3. Hospitalization or antibiotics
+    * Previous infection with resistant bacteria
+    * Recent travel
+    * Hospitalization or antibiotics
 4. Other considerations
-    1. Allergy
-    2. Other drugs (interaction risk)
-    3. Co-morbidities
-    4. PK
-
-Resistance rates: how many are resistant? In percent.
+    * Allergy
+    * Other drugs (interaction risk)
+    * Co-morbidities
+    * PK
 
 * Clinical dogmas: Foreign body infection -> biofilm
 * Immunosuppressive
+
+### After initial treatment
+
+* Treatment re-evaluation after 3 days
+    * 48 hours needed to evaluate antibiotic efficacy
+    * The efficacy of antibiotic treatment is judged by **signs and symptoms** (Are you feeling better than yesterday?), and the course of **inflammatory markers** (WBC, CRP, PCT)
+* Empiric treatment should ideally be switched to targeted treatment once culture results are available (2--3 days)
