@@ -2,6 +2,10 @@
 title: "Hepatic Impairment (HI) studies"
 ---
 
+:::{.callout-caution}
+# Under construction
+:::
+
 A pharmacokinetic (PK) study in subjects with hepatic impairment (HI) is recommended when:
 
 * The drug is likely to be used in patients with HI and

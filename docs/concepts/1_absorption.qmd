@@ -2,8 +2,8 @@
 title: "The Absorption Concept"
 ---
 
-::: {.callout-caution}
-# Work in Progress
+:::{.callout-caution}
+# Under construction
 :::
 
 There are two pharmacokinetic parameters that quantifies drug absorption.

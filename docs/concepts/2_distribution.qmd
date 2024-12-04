@@ -2,8 +2,8 @@
 title: "The Distribution Concept"
 ---
 
-::: {.callout-caution}
-# Work in Progress
+:::{.callout-caution}
+# Under construction
 :::
 
 The pharmacokinetic parameter that quantifies drug distribution, is called *volume of distribution* (V~d~).
