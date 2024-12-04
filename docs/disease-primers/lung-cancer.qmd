@@ -1,5 +1,5 @@
 ---
-title: "Disease primer: Lung cancers"
+title: "Lung cancer"
 ---
 
 ## What is lung cancer?

@@ -1,8 +1,8 @@
 ---
-title: "Disease Primers"
+title: "Pathology Primers"
 ---
 
-Disease Primers are a collection of documents that provide a high-level overview of a specific disease.
+Pathology Primers are a collection of documents that provide a high-level overview of a specific disease.
 They are intended to be a quick reference for medical students, residents, and other healthcare professionals. Each primer includes information on the typical patient, risk factors, clinical diagnostics, and treatment options for the disease.
 
 They typically follow this structure:

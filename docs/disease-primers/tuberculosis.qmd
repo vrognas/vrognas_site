@@ -1,5 +1,5 @@
 ---
-title: "Disease primer: Tuberculosis (TB)"
+title: "Tuberculosis (TB)"
 ---
 
 ## What is TB?

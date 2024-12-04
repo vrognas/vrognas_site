@@ -1,5 +1,5 @@
 ---
-title: "Disease primer: Bacterial infections"
+title: "Bacterial infections"
 ---
 
 ## What are bacterial infections?
@@ -22,7 +22,7 @@ A bacterial infection is classified according to the site of infection, and some
 * IAI
 * BSI
 
-![](images/overview-of-bacterial-infections.jpg){#fig-bacteria}
+![](images/bac-inf_overview.jpg.jpg){#fig-overview}
 
 ### Sepsis
 
@@ -55,11 +55,11 @@ Infectious diseases can be contagious during all five of the periods of disease.
 Stages might overlap.
 The onset of symptoms marks the transition from subclinical to clinical disease.
 
-![](images/infection-stages.jpg){#fig-stages}
+![](images/bac-inf_stages.jpg){#fig-stages}
 
 ## Diagnosis
 
-![[Meisner M., (1999)](https://doi.org/10.1515/labm.1999.23.5.263)](images/abx-biomarkers.jpg){#fig-biomarkers}
+![[Meisner M., (1999)](https://doi.org/10.1515/labm.1999.23.5.263)](images/bac-inf_biomarkers.jpg){#fig-biomarkers}
 
 * Biomarkers not specific
     * 3 markers + WBC (but unspecific)
