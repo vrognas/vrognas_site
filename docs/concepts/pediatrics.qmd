@@ -241,7 +241,7 @@ The reference range in the adult population (median and outer percentiles of obs
 Unlike PK, PD models are disease- and therapy-specific, making direct extrapolation challenging.
 
 Response and PD models from adults may not apply to children.
-This is because children and adults have different physiology that PD-wise cannot be easilly extrapolated.
+This is because children and adults have different physiology that PD-wise cannot be easily extrapolated.
 Children are not small adults (@fig-small-adult).
 
 ![Children are not small adults](images/small-adult.png){#fig-small-adult}
