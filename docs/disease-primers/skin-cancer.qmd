@@ -2,6 +2,8 @@
 title: "Disease primer: Skin cancers"
 ---
 
+## What is Skin Cancer?
+
 There are three main types of skin cancer, depending on which cells have turned cancerous:
 
 * Non-melanoma skin cancer (NMSC)
@@ -43,9 +45,10 @@ The cancer can be divided into types depending on the body location:
 
 ### Melanoma
 
-Cacner of melanocytes in e.g. the deepest skin layer, and also the eyes (i.e. wherever you have melanocytes).
+Cancer of melanocytes in e.g. the deepest skin layer, and also the eyes (i.e. wherever you have melanocytes).
 
-## Typical patient
+
+## What are the symptoms?
 
 ### Risk factors
 
@@ -57,7 +60,7 @@ Cacner of melanocytes in e.g. the deepest skin layer, and also the eyes (i.e. wh
 * Immunosuppresive drugs
 * Arsenic exposure
 
-## Clinical diagnostics
+## Diagnosis
 
 * Physical examination
 * Biopsy
@@ -88,7 +91,7 @@ TNM stands for Tumour, Node, Metastasis.
   * 2 stages 
   * Describes whether the cancer has spread to a different part of the body.
 
-## Treatment
+## How can it be treated?
 
 * Surgery
 * Chemotherapy

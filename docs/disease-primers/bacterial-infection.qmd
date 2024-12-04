@@ -2,6 +2,8 @@
 title: "Disease primer: Bacterial infections"
 ---
 
+## What are bacterial infections?
+
 For an infectious agent, **infectivity** refers to the proportion of exposed persons who become infected.
 **Pathogenicity** refers to the proportion of infected individuals who develop clinically apparent disease.
 **Virulence** refers to the proportion of clinically apparent cases that are severe or fatal.
@@ -33,7 +35,9 @@ The SOFA-score is often used to assess organ failure in septic patients.
 
 Septic chock is a development of sepsis that is even more severe.
 
-## Periods of disease
+## Symptoms
+
+### Periods of disease
 
 The progression of an infectious disease can be divided into five periods, which are related to the number of pathogen particles and the severity of signs and symptoms (@fig-stages).
 Infectious diseases can be contagious during all five of the periods of disease.
@@ -67,7 +71,7 @@ The onset of symptoms marks the transition from subclinical to clinical disease.
 * Vitek (turbidity), (will be replaced by MALDI-TOF?)
     * Not as accurate as microbroth
 
-## Treatment
+## How can it be treated?
 
 * Efficacy of ABX treatment is judged by **signs and symptoms** (Are you feeling better than yesterday?), and the course of **inflammatory markers** (WBC, CRP, PCT)
 * Most infections can be treated in 5–7 days

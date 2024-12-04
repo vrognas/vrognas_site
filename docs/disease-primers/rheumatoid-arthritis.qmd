@@ -2,17 +2,12 @@
 title: "Disease primer: Rheumatiod Arthritis (RA)"
 ---
 
+## What is RA?
+
 An auto-immune systemic disease.
 Requires life-long treatment.
 Individual patients with RA appear to have different pathogenic mechanisms, due to different treatment response.
 Two major "types": seropositive and seronegative, with seropositive presenting more severe symptoms.
-
-## Typical patient
-
-* Age 30-70
-* 70% women
-* Symmetrical polyarthritis of hands and feet.
-* Common to have *morning stiffness* lasting more than 30 minutes.
 
 ### Risk factors
 
@@ -22,7 +17,16 @@ Two major "types": seropositive and seronegative, with seropositive presenting m
 * Overweight
 * Infections
 
-## Clinical diagnostics
+## What are the symptoms?
+
+### Typical patient
+
+* Age 30-70
+* 70% women
+* Symmetrical polyarthritis of hands and feet.
+* Common to have *morning stiffness* lasting more than 30 minutes.
+
+## Diagnosis
 
 * Number and location of affected joints
 * Duration of disease >= 6 weeks
@@ -32,7 +36,7 @@ Two major "types": seropositive and seronegative, with seropositive presenting m
   * Rheumatiod factor (RF)
   * Anti-citrullinated protein antibodies (ACPAs)
 
-## Treatment
+## How can it be treated?
 
 * DMARDs (Disease-Modifying Antirheumatic Drugs)
   * Conventional

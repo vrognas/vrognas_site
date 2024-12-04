@@ -24,7 +24,7 @@ In addition, the mycolic acids in its cell wall limit the effectiveness of some 
 
 ![Symptoms for TB.](images/tb-symptoms.png){#fig-tb-symptoms}
 
-## What are the treatments?
+## How can it be treated?
 
 Active TB is treated by taking several antibiotics for six to nine months.
 The four drugs shown in @fig-tb-trt-1 are commonly used first line drugs in treatment regimes.

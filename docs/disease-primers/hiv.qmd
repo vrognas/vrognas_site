@@ -2,6 +2,8 @@
 title: "Disease primer: Human immunodeficiency virus (HIV)"
 ---
 
+## What is HIV?
+
 The **human immunodeficiency viruses (HIV)** are two species of Lentivirus (a subgroup of retrovirus) that infect humans.
 Unlike most other viruses, it is cells of the immune system that the HIV particles infect.
 The viral particles primarily infect cells called ‘CD4 helper T cells’.
@@ -27,14 +29,7 @@ HIV-1 infection results in chronic activation of the immune system and a subsequ
 
 HIV-2 viruses are generally considered to be less virulent and less transmissible than HIV-1 M group viruses, although HIV-2 is also known to still cause AIDS.
 
-## Clinical presentation, diagnosis
-
-### Rapid diagnostic tests that provide same-day results.
-
-Most widely used HIV diagnostic tests detect antibodies produced by a person as part of their immune response to fight HIV.
-In most cases, people develop antibodies to HIV within 28 days of infection.
-During this time, people are in the so-called “window period” when they have low levels of antibodies which cannot be detected by many rapid tests, but they may still transmit HIV to others.
-People who have had a recent high-risk exposure and test negative can have a further test after 28 days.
+## What are the symptoms?
 
 HIV is like a lot of other viruses in as much that the initial symptoms are flu-like.
 This may include fever, headache, sore throat, swollen glands, a rash, or generally feeling drained.
@@ -45,7 +40,15 @@ Though people living with HIV tend to be most infectious in the first few months
 People can go years(!) without knowing they are infected.
 Children may have more rapid disease progression and accelerated damage of the developing immune system compared to adults, with higher viral loads and less effective immunological responses to HIV infection than adults.
 
-## Treatment
+## Diagnosis
+
+Rapid diagnostic tests that provide same-day results are used.
+Most widely used HIV diagnostic tests detect antibodies produced by a person as part of their immune response to fight HIV.
+In most cases, people develop antibodies to HIV within 28 days of infection.
+During this time, people are in the so-called “window period” when they have low levels of antibodies which cannot be detected by many rapid tests, but they may still transmit HIV to others.
+People who have had a recent high-risk exposure and test negative can have a further test after 28 days.
+
+## How can it be treated?
 
 HIV can be prevented and treated with **antiretroviral therapy (ART)**.
 An HIV positive person today who is on effective treatment can live as long and be as healthy as a person who does not have HIV.

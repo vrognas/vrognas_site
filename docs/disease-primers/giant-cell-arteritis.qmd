@@ -1,6 +1,8 @@
 ---
-title: "Disease primer: Giant cell arteretis"
+title: "Disease primer: Giant cell arteretis (GCA)"
 ---
+
+## What is GCA?
 
 Also called **temporal arteritis**, because of the frequent involvement of the temporal artery.
 Also known as "cranial arteritis" and "Horton's disease".
@@ -8,9 +10,11 @@ The name (giant cell arteritis) reflects the type of inflammatory cell involved.
 
 It is an inflammatory autoimmune disease of large blood vessels.
 
+## Wha tre the symptoms?
+
 This type of arteritis causes the arteries in the head, neck, and arm area to swell to abnormal sizes.
 
-## Typical patient population
+### Typical patient population
 
 * Age over 50, most common around 70
 * ~70% Females
@@ -18,7 +22,7 @@ This type of arteritis causes the arteries in the head, neck, and arm area to sw
 * Normal life expectancy
 * 50% also diagnosed with polymyalgia rheumatica (PMR)
 
-## Clinical diagnosis
+## Diagnosis
 
 ### Physical exam
 
@@ -35,7 +39,7 @@ This type of arteritis causes the arteries in the head, neck, and arm area to sw
 * LFTs, liver function tests, are abnormal particularly raised ALP- alkaline phosphatase
 * Platelets may also be elevated
 
-## Treatment
+## How can it be treated?
 
 * Corticosteroids
   * Prednisone

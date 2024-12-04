@@ -2,6 +2,8 @@
 title: "Disease primer: Lung cancers"
 ---
 
+## What is lung cancer?
+
 There are three main types of two cancer, depending on which cells have turned cancerous:
 
 * Small-cell lung cancer (SCLC) ~15% of cases
@@ -12,11 +14,13 @@ There are three main types of two cancer, depending on which cells have turned c
 
 There are also other, rare types of lung cancer.
 
-## Diagnosis
+## What are the symptoms?
+
+### Diagnosis
 
 Definitive diagnosis of lung cancer requires a biopsy of the suspected tumor be examined by a pathologist under a microscope.
 
-## Treatment
+## How can it be treated?
 
 * Surgery
 * Chemotherapy
