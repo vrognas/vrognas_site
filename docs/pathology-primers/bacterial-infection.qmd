@@ -22,7 +22,7 @@ A bacterial infection is classified according to the site of infection, and some
 * IAI
 * BSI
 
-![](images/bac-inf_overview.jpg){#fig-overview}
+![Overview of bacterial infections.](images/bac-inf_overview.jpg){#fig-overview}
 
 ### Sepsis
 
