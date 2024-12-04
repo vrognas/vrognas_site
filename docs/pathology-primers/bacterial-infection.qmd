@@ -59,7 +59,7 @@ The onset of symptoms marks the transition from subclinical to clinical disease.
 
 ## Diagnosis
 
-![[Meisner M., (1999)](https://doi.org/10.1515/labm.1999.23.5.263)](images/bac-inf_biomarkers.jpg){#fig-biomarkers}
+![Kinetic profiles of different biomarkeres of bacterial infection. Adapted from [Meisner M., (1999)](https://doi.org/10.1515/labm.1999.23.5.263)](images/bac-inf_biomarkers.jpg){#fig-biomarkers}
 
 * Biomarkers not specific
     * 3 markers + WBC (but unspecific)
