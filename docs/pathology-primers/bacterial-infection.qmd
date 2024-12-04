@@ -55,7 +55,7 @@ Infectious diseases can be contagious during all five of the periods of disease.
 Stages might overlap.
 The onset of symptoms marks the transition from subclinical to clinical disease.
 
-![](images/bac-inf_periods.jpg){#fig-periods}
+![Periods of disease.](images/bac-inf_periods.jpg){#fig-periods}
 
 ## Diagnosis
 
