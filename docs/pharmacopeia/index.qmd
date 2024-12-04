@@ -2,8 +2,8 @@
 title: "Pharmacopœia Pharmacometrika"
 ---
 
-This section contains a high-level overview on drug classes and their mechanism of action.
-It is organized according to [ATC-codes](https://atcddd.fhi.no/atc_ddd_index/).
+This section contains a high-level overview on selected drug classes and their mechanism of action.
+It is organized according to [ATC-codes](https://atcddd.fhi.no/atc_ddd_index/) in @tbl-atc below.
 
 | ATC code | Contents |
 | :------: | :------- |
