@@ -37,4 +37,4 @@ Streptomycin was formerly considered a first line drug, but is now used less due
 
 ![Second line TB drugs.](images/tb-trt-2.png){#fig-tb-trt-2}
 
-![License](images/license.png){#fig-license}
+![License](images/tb-lic.png){#fig-tb-lic}
