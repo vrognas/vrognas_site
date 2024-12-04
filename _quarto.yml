@@ -49,11 +49,11 @@ website:
     - title: "Portfolio"
       style: "floating"
     - id: disease-primers
-      title: "Disease primers"
+      title: "Pathology primers"
       collapse-level: 2
       style: "floating"
       contents:
-        - section: "Disease primers"
+        - section: "Pathology primers"
           href: docs/disease-primers/index.qmd
           contents:
             - text: "Rheumatoid arthritis (RA)"
