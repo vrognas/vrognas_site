@@ -220,9 +220,9 @@ It is expected that Dose~pediatric,optimal~ will be different for each age group
 ### How to present results from a PK extrapolation
 
 The plot with all age groups receiving the adult clinical dose can be contrasted with a plot with age groups using Dose~pediatric,adjusted~.
-If you have peditric data, you can overlay observed pediatric exposure with the simulated distributions to identify how well your model predicted the pediatric exposure.
+If you have pediatric data, you can overlay observed pediatric exposure with the simulated distributions to identify how well your model predicted the pediatric exposure.
 
-The most relevant covariate to influence PK in pediatric patients is considered to be **body weight** accounting for size differences, and **age** (@fig-age-term) in the youngest pediatric patients to account for maturation of drug eliminating processes (see @lst-cl-mat).
+The most relevant covariate influencing PK in pediatric patients is **body weight** accounting for size differences, and **age** (@fig-age-term) in the youngest pediatric patients to account for maturation of drug eliminating processes (see @lst-cl-mat).
 
 Relevant predefined exposure metrics should be presented graphically versus body weight and age on a continuous scale (@fig-cov).
 If the drug is indicated to be used in the age range below one year, exposure vs body weight and age should be depicted in an additional separate figure focused on children 0--1 year of age.
