@@ -6,16 +6,13 @@ title: "Reproducible Research"
 # Under construction
 :::
 
-Messy folder: är alla modeller och tables och .lst-filer etc i samma mapp då?
-Vad om undermappar till tex ”pk”, en för ”base model” och en annan undermapp för ”covariate model”?
-
 * Naming
     * Name folders using only A-Z, a-z, 0-9, -, _.
     * Start folder names with a number for sorting purposes.
-* Alltid MU-reference, ifall det behövs em-metoder
-    * Testa alla estimeringsmetoder?
-* Scripta alla plottar
-* Rmarkdown scriptad rapport
+* Always MU-reference, in case EM-methods are needed
+    * Test all estimation methods
+* Script all plots
+* Quarto-scripted report
     * R.version
     * rstudioapi::versionInfo()
     * .packages()
@@ -62,4 +59,3 @@ Folder structure:
     * dat2.csv
 * presentation
     * slides.pptx
-
