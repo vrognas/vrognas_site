@@ -216,6 +216,8 @@ format:
     highlight-style: github
     css: styles.css
     toc: true
+    bibliography: refs.bib
+    csl: clinical-microbiology-and-infection.csl
     code-copy: true
     code-overflow: wrap
     grid:
