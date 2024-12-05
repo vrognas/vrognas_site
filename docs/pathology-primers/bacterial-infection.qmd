@@ -8,13 +8,13 @@ For an infectious agent, **infectivity** refers to the proportion of exposed per
 **Pathogenicity** refers to the proportion of infected individuals who develop clinically apparent disease.
 **Virulence** refers to the proportion of clinically apparent cases that are severe or fatal.
 The disease process may never progress to clinically apparent illness, or result in illness that ranges from mild to severe or fatal. This range is called the **spectrum of disease**.
-Ultimately, the disease process ends either in recovery, disability or death.
+Ultimately, the disease process ends either in recovery, disability or death (see @fig-periods).
 
-A bacterial infection is classified according to the site of infection, and sometimes also the source of infection.
+A bacterial infection is classified according to the site of infection, and sometimes also the source of infection (see @fig-overview). Some examples include:
 
-* Skin
-  * Acute bacterial skin and skin structure snfection (ABSSSI)
-* Lungs
+* Skin infections
+  * Acute bacterial skin and skin structure infection (ABSSSI)
+* Lung infections
   * Community-acquired oneumonia (CAP)
     * Probably Pneumococci, haemophilus influenzae, mycoplasma)
   * Hospital-acquired/ventilator-associated pneumonia (HAP/VAP)
@@ -24,7 +24,7 @@ A bacterial infection is classified according to the site of infection, and some
 * Blood-stream infection (BSI)
 * Urinary-tract infection (UTI)
 
-![Overview of bacterial infections.](images/bac-inf_overview.jpg){#fig-overview}
+![Overview of bacterial infections. Typical pathogens are listed for each site of infection.](images/bac-inf_overview.jpg){#fig-overview}
 
 ### Sepsis
 
@@ -57,11 +57,11 @@ Infectious diseases can be contagious during all five of the periods of disease.
 Stages might overlap.
 The onset of symptoms marks the transition from subclinical to clinical disease.
 
-![Periods of disease.](images/bac-inf_periods.jpg){#fig-periods}
+![Periods of disease. This particular figure shows a complete recovery after illness. One can also imagine cases where the severity of symptoms never completely go back to baseline (a disability), or a case where the curves are truncated earlier in time (a death). Indeed, the time-scale is arbitrary here, as is the distance in time between the different periods. The periods of disease could even overlap in some diseases, adding to the complexity.](images/bac-inf_periods.jpg){#fig-periods}
 
 ## Diagnosis
 
-![Kinetic profiles of different biomarkeres of bacterial infection. Adapted from [Meisner M., (1999)](https://doi.org/10.1515/labm.1999.23.5.263)](images/bac-inf_biomarkers.jpg){#fig-biomarkers}
+![Typical plasma concentration-time profiles of different biomarkers of bacterial infections. Adapted from [Meisner M., (1999)](https://doi.org/10.1515/labm.1999.23.5.263)](images/bac-inf_biomarkers.jpg){#fig-biomarkers}
 
 * Biomarkers not specific
     * 3 markers + WBC (but unspecific)
