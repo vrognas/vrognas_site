@@ -32,7 +32,7 @@ Frontload your argument
 2. Findings in context of previous research. Three implications max.
     1. How does your story add to the conversation?
     2. How have you filled the gap?
-3. Remaining issues, eg: How does the design limit your contribution? Directions for future research
+3. Remaining issues, e.g.: How does the design limit your contribution? Directions for future research
 
 #### Conclusion
 
@@ -53,14 +53,15 @@ Frontload your argument
 6. Summarize your key findings in the first sentence of your discussion/conclusions. This lets reviewers know what you want them to take away from your study.
 7. Include figures and quantitative descriptions/statistics in your results that clearly support your big picture conclusions.
 8. Most important, remember that reviewers may not be an expert in your specific research topic. Prepare your abstract so that any researcher in your general field will be able to follow along and understand your key findings.
-9. https://www.youtube.com/watch?v=w5Cy2mjBxQw
+
+{{< video https://www.youtube.com/watch?v=w5Cy2mjBxQw >}}
 
 ### Typography
 
-practicaltypography.com
-typewolf.com
-prowebtype.com
-https://www.supremo.co.uk/typeterms/
+practicaltypography.com  
+typewolf.com  
+prowebtype.com  
+https://www.supremo.co.uk/typeterms/  
 
 ### Read
 
