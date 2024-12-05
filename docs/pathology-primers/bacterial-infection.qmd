@@ -61,7 +61,7 @@ The onset of symptoms marks the transition from subclinical to clinical disease.
 
 ## Diagnosis
 
-![Typical plasma concentration-time profiles of different biomarkers of bacterial infections. Adapted from [Meisner M., (1999)](https://doi.org/10.1515/labm.1999.23.5.263)](images/bac-inf_biomarkers.jpg){#fig-biomarkers}
+![Typical plasma concentration-time profiles of different biomarkers of bacterial infections. Adapted from Meisner M., (1999) @meisnerProcalcitoninErfahrungenMit1999](images/bac-inf_biomarkers.jpg){#fig-biomarkers}
 
 * Biomarkers not specific
     * 3 markers + WBC (but unspecific)
@@ -111,3 +111,8 @@ Most infections can be treated in 5--7 days.
     * 48 hours needed to evaluate antibiotic efficacy
     * The efficacy of antibiotic treatment is judged by **signs and symptoms** (Are you feeling better than yesterday?), and the course of **inflammatory markers** (WBC, CRP, PCT)
 * Empiric treatment should ideally be switched to targeted treatment once culture results are available (2--3 days)
+
+## References
+
+::: {#refs}
+:::
