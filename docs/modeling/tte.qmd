@@ -89,6 +89,8 @@ If the investigator is comfortable with the underlying distributional assumption
 This simplicity and completeness are the main appeals of using a parametric approach.
 
 ::: {.callout-note}
+# Note on hazard function in a Cox model
+
 The hazard function is not specified in a Cox model.
 However, it is not assumed constant.
 :::
@@ -101,7 +103,7 @@ Distributions commonly used for parametric survival models in pharmacometrics ar
 | Weibull^[Pronounced "Veibull", with "v" as in "very"]      | $e^{-\rho t^\gamma}$ | $\rho \gamma (\rho t)^{\gamma - 1}$ | | |
 | Gompertz     | $e^{-\frac{\lambda}{\gamma}(e^{\gamma t - 1})}$ | $\lambda e^{\gamma t}, 0 \le t, \lambda > 0$ | | |
 | Log-logistic | | $\frac{\lambda \gamma t^{\gamma - 1}}{1 + \lambda t^\gamma}, 0 \le t, \gamma > 0$ | | ✅ |
-| Generalized log-logistic | $\frac{1}{1 + \lambda t^\gamma}$ | $\frac{\rho \gamma (\rho t)^{\gamma - 1}}{1 + (\lambda t)^\gamma}, 0 \le t, \gamma > 0$ | | ✅ |
+| Generalized log-logistic[@khanGeneralizedLoglogisticProportional2016] | $\frac{1}{1 + \lambda t^\gamma}$ | $\frac{\rho \gamma (\rho t)^{\gamma - 1}}{1 + (\lambda t)^\gamma}, 0 \le t, \gamma > 0$ | ✅ | ✅ |
 | Log-normal   | | $\frac{(\sigma t \sqrt{2 \pi})^{-1} e^{-(\frac{1}{2}Z^2)}}{1 - \Phi(Z)}, Z = \frac{\ln{t} - \mu}{\sigma}$ | | ✅ |
 | Generalized gamma | | | | |
 
@@ -114,7 +116,7 @@ Distributions commonly used for parametric survival models in pharmacometrics ar
 
 ::: {.callout-tip}
 
-# Gotcha
+# Weibull parameterization
 
 The Weibull distribution has [several parameterizations](https://en.wikipedia.org/wiki/Weibull_distribution). The one displayed in @tbl-dist is the most common in pharmacometrics due to favorable numerical properties.
 
@@ -123,6 +125,8 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
 :::
 
 ::: {.callout-note}
+# Notes
+
 * Weibull reduces to the exponential if $\gamma = 1$.
 * Weibull and lognormal are special cases of the generalized gamma.
 * The lognormal model can only be expressed in terms of integrals.
@@ -207,6 +211,27 @@ When there are no time-varying covariates involved, there is often an analytical
 For more flexible hazard functions involving time-varying covariates, analytical solutions are not usually available.
 With software like NONMEM that is able to numerically integrate the hazard function, there is no restriction on the way the hazard is expressed^[Except the user needs to ensure that the hazard does not go negative.].
 
+:::{.callout-tip}
+# Evaluate Weibull appropriateness
+
+The Weibull model also has another key property: the log(–log) of S(t) is linear with the log of time.
+This allows a graphical evaluation of the appropriateness of a Weibull model by plotting the log negative log of the Kaplan–Meier survival estimates against the log of time.
+
+To see this linear relationship: start with the Weibull survival function $S(t) = e^{-\lambda t^p}$, take the log of $S(t)$, multiply by negative one, and take the log again.
+For the Weibull distribution, the $\ln{-\ln{S(t)}}$ is a linear function of $\ln{t}$ with slope *p* and intercept $p \ln{\lambda}$.
+If the slope equals one then *t* follows an exponential distribution.
+
+Possible results:
+
+1. Parallel straight lines: Weibull, PH, and AFT assumptions hold
+2. Parallel straight lines with slope of 1: Exponential. PH and AFT
+3. Parallel but not straight lines: PH but not Weibull, not AFT (can use Cox model)
+4. Not parallel and not straight: Not Weibull, PH violated
+5. Not parallel but straight lines: Weibull holds, but PH and AFT violated, different *p*
+
+The key points are that **straight lines support the Weibull assumption and parallel curves support the PH assumption**.
+:::
+
 ### Proportional hazard (PH)
 
 The underlying assumption for PH models is that the **effect of covariates is multiplicative (proportional) with respect to the hazard**.
@@ -255,8 +280,8 @@ This can be viewed as adding all possible covariates, even unobserved ones.
 
 ## Landmark analysis
 
-Landmark analysis is used to **correct for immortal time bias**.
-This bias is inherent in the analysis of time-to-event outcome between **groups determined during study follow-up**.^[Dafni U. Landmark Analysis at the 25-Year Landmark Point. Circ Cardiovasc Qual Outcomes. 2011;4:363-371.]
+Landmark analysis is used to **correct for immortal time bias** [@morganLandmarkAnalysisPrimer2019].
+This bias is inherent in the analysis of time-to-event outcome between **groups determined during study follow-up** [@dafniLandmarkAnalysis25Year2011].
 This method was originally proposed to evaluate the association between treatment response and survival^[Anderson JR, Cain KC, Gelber RD. Analysis of survival by tumor response. J Clin Oncol. 1983;1:710–719.], or to allow for groupings based on any covariate whose value is not known at baseline.
 
 Looking at @fig-landmark-1, an incorrect approach would be to classify Subject 1 as a non-responder and Subjects 2 and 3 as responders (as is the case at six months) and then compare the survival between these two groups.
@@ -311,7 +336,8 @@ The results of these methods are interpreted as usual, with the important caveat
 To avoid bias, the landmark should be chosen before data analysis begins and ideally should correspond to a clinically meaningful period of time.
 When the choice of landmark time is not obvious, the data should be analyzed using multiple landmark times in order to determine the sensitivity of the ﬁndings to the choice of landmark.
 
-**An alternative to landmark analysis is to allow the value of the covariate indicating treatment response to vary over time.
+**
+An alternative to landmark analysis is to allow the value of the covariate indicating treatment response to vary over time.
 This is doable using pharmacometric software such as NONMEM.
 This does not require any subjects or events to be excluded from the analysis.
 Is also avoids both the problem of selecting a landmark time and any misclassiﬁcation errors.
@@ -319,4 +345,5 @@ Is also avoids both the problem of selecting a landmark time and any misclassi�
 
 ## References
 
-* [Morgan CJ (2019). Landmark analysis: A primer.](doi:10.1007/s12350-019-01624-z)
+::: {#refs}
+:::
