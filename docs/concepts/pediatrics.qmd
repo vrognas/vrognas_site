@@ -11,7 +11,7 @@ The use of *model informed drug development* (MIDD) approaches in pediatric drug
 
 The terminology used around pediatric age is commonly **inconsistent**.
 Relating age to last menstrual period is done because most women know when their last period began but not when ovulation occurred.
-As long as menstrual dates are remembered accurately, this method of estimating the date of delivery is reliable (@fig-age-term; @tbl-age-term).
+As long as menstrual dates are remembered accurately, this method of estimating the date of delivery is reliable (@fig-age-term; @tbl-age-term) [@committeeonfetusandnewbornAgeTerminologyPerinatal2004].
 
 ![Perinatal Age Terminology. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, postnatal age](images/pediatric-age.png){#fig-age-term}
 
@@ -23,7 +23,7 @@ As long as menstrual dates are remembered accurately, this method of estimating 
 | Corrected (or "adjusted") [gestational] age | CGA | Time since *expected date of delivery* (see @eq-cga). Used to describe children up to 3 years of age who were born preterm. |
 | Conceptional age | | Time between conception and birth. Very accurate for *in-vitro* fertilization. **Should not be used**. |
 
-: Age Terminology During the Perinatal Period {#tbl-age-term tbl-colwidths="[30, 10, 60]"}
+: Age Terminology During the Perinatal Period {#tbl-age-term tbl-colwidths="[30, 5, 65]"}
 
 Methods of determining GA should be clearly stated so that the variability inherent in these estimations can be considered when outcomes are interpreted.
 The convention for calculating GA when the date of conception is known is to add 2 weeks to the conceptional age.
@@ -41,7 +41,7 @@ Dividing the pediatric population into many age groups might needlessly increase
 Sometimes, it may be more appropriate to collect data over broad age ranges and examine the effect of age as a continuous covariate.
 
 ::: {.callout-warning}
-# In longer studies, pediatric patients may move from one age category to another
+# In longer studies, pediatric patients could move from one age category to another
 
 The study design and statistical plans should prospectively take into account changing numbers of patients within a given age group.
 :::
@@ -91,7 +91,7 @@ These models may be independent of adult models if there are adequate data or th
 ### Allometric scaling for PK
 
 A previously developed adult PK model can be extrapolated to pediatric patients using allometry, which relates volume of distribution and clearance to body size.
-Researchers have studied and applied this theory across various animal species and human subjects using a wide range of compounds ([Boxenbaum (1982)](https://doi.org/10.1007/bf01062336)).
+Researchers have studied and applied this theory across various animal species and human subjects using a wide range of compounds [@boxenbaumInterspeciesScalingAllometry1982].
 Volume of distribution scales proportionally with body size (@lst-v), while clearance scales less proportionally (@lst-cl).
 It has proven robust and reliable, except in some targeted therapies and large molecule biologics.
 Allometric scaling should not be used on rate constants.
@@ -151,7 +151,7 @@ MSWP considers the use of fixed exponents both scientifically justified and prac
 In lower ages (**< 2 years**) there are also maturation functions that come into play.
 For these pediatric patients it is **important to include maturation function(s)** to describe pediatric PK (@lst-cl-mat).
 
-```verilog {#lst-cl-mat lst-cap="Renal maturation, [Rhodin et al. (2009)](https://doi.org/10.1007/s00467-008-0997-5). PMA from the input data."}
+```verilog {#lst-cl-mat lst-cap="Renal maturation [@rhodinHumanRenalFunction2009]. PMA from the input data."}
 CLR = THETA(1) * EXP(ETA(1))
 CLR = CLR * (WT / 70)**0.75 ; Allometric scaling
 
@@ -160,7 +160,7 @@ Hill = 3.4
 CLR = CLR * PMA**Hill / (TM_50**Hill + PMA**Hill) ; Maturation
 ```
 
-The maturation half-life (TM~50~) is fixed to the literature value of 47.7 weeks and the Hill-exponent to the value of 3.4 (both from Rhodin et al.).
+The maturation half-life (TM~50~) is fixed to the literature value of 47.7 weeks and the Hill-exponent to the value of 3.4 [@rhodinHumanRenalFunction2009].
 The distribution (mean, [min--max]) of PMA (weeks) in this study population was (518, [57--1652]).
 Assuming renal maturation time differs in pre-term infants, a separate TM~50~ value could be estimated for them if the current model poorly describes this subgroup.
 
@@ -169,7 +169,7 @@ Assuming renal maturation time differs in pre-term infants, a separate TM~50~ va
 ::: {.callout-warning}
 # Maturation functions and allometric exponents should not be estimated simultaneously
 
-This is due to high correlation between body weight and age in pediatric patients ([Bonate (1999)](https://doi.org/10.1023/a:1018828709196)).
+This is due to high correlation between body weight and age in pediatric patients [@bonateEffectCollinearityParameter1999].
 :::
 
 #### Step 2: Prepare a Data Set with Pediatric Simulation Subjects
@@ -227,7 +227,7 @@ The most relevant covariate influencing PK in pediatric patients is **body weigh
 Relevant predefined exposure metrics should be presented graphically versus body weight and age on a continuous scale (@fig-cov).
 If the drug is indicated to be used in the age range below one year, exposure vs body weight and age should be depicted in an additional separate figure focused on children 0--1 year of age.
 
-![Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions). The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated pediatric patients. The *horizontal gray band* encompasses 90% of the simulated adult patients receiving 100 mg BID. [Schoemaker et al. (2017)](https://doi.org/10.1007/s00228-017-2230-6).](images/pediatric-cov.png){#fig-cov}
+![Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions). The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated pediatric patients. The *horizontal gray band* encompasses 90% of the simulated adult patients receiving 100 mg BID [@schoemakerBrivaracetamPopulationPharmacokinetics2017].](images/pediatric-cov.png){#fig-cov}
 
 Often plots that show the distribution of AUC~pediatric,simulated~ along with the distribution of AUC~adult,observed~ or simulated values from individual adult subjects using the final popPK model using box-plots can be useful (@fig-box).
 If different doses are proposed for bands of weight or/and age, exposure ranges predicted for the proposed doses for the subsets of the pediatric population should be visualized as box-plots (@fig-box).
@@ -263,7 +263,6 @@ Considerations include:
 1. [ICH E11(R1) (2017)](https://database.ich.org/sites/default/files/E11_R1_Addendum.pdf)
 2. [ICH E11A (2024)](https://database.ich.org/sites/default/files/ICH_E11A_Guideline_Step4_2024_0821.pdf)
 3. [EMA M&S QA (2023)](https://www.ema.europa.eu/en/human-regulatory-overview/research-and-development/scientific-guidelines/clinical-pharmacology-and-pharmacokinetics/modelling-and-simulation-questions-and-answers)
-4. [American Academy of Pediatrics: Committee on Fetus and Newborn (2004)](https://doi.org/10.1542/peds.2004-1915)
 
 ::: {#refs}
 :::
