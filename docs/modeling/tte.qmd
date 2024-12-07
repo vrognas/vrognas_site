@@ -105,7 +105,6 @@ Distributions commonly used for parametric survival models in pharmacometrics ar
 | Log-logistic | $\frac{\rho \gamma(\rho t)^{\gamma - 1}}{1 + (\rho t)^\gamma}, 0 \le t, \gamma > 0$ | ❌ | ✅ |
 | Generalized log-logistic^[If $\kappa = \rho$ then this reduces to the log-logistic.] [@khanGeneralizedLoglogisticProportional2016] | $\frac{\rho \gamma (\rho t)^{\gamma - 1}}{1 + (\kappa t)^\gamma}, (t; \rho; \kappa; \gamma) > 0$ | ✅ | ❌ |
 | Log-normal   | $\frac{(\sigma t \sqrt{2 \pi})^{-1} e^{-(\frac{1}{2}Z^2)}}{1 - \Phi(Z)}, Z = \frac{\ln{t} - \mu}{\sigma}$ | ❌ | ✅ |
-| Generalized gamma | | | |
 
 : Hazard functions of common parametric survival models. {#tbl-dist tbl-colwidths="[30, 50, 10, 10]"}
 
