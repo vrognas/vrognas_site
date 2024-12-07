@@ -97,17 +97,23 @@ However, it is not assumed constant.
 
 Distributions commonly used for parametric survival models in pharmacometrics are:
 
-| Distribution | S(t) | h~0~(t) | PH | AFT |
+| Distribution | h~0~(t) | PH | AFT |
 | :----------- | :--- | :--- | :---: | :---: |
-| Exponential  | $e^{-\lambda t}$ | $\lambda$ | $\lambda = e^{\beta_0 + \sum \beta_n \mathrm{COV}_n}$ | $\lambda = e^{-(\alpha_0 + \sum \alpha_n \mathrm{COV}_n)}$ |
-| Weibull^[Pronounced "Veibull", with "v" as in "very"]      | $e^{-\rho t^\gamma}$ | $\rho \gamma (\rho t)^{\gamma - 1}$ | | |
-| Gompertz     | $e^{-\frac{\lambda}{\gamma}(e^{\gamma t - 1})}$ | $\lambda e^{\gamma t}, 0 \le t, \lambda > 0$ | | |
-| Log-logistic | | $\frac{\lambda \gamma t^{\gamma - 1}}{1 + \lambda t^\gamma}, 0 \le t, \gamma > 0$ | | ✅ |
-| Generalized log-logistic[@khanGeneralizedLoglogisticProportional2016] | $\frac{1}{1 + \lambda t^\gamma}$ | $\frac{\rho \gamma (\rho t)^{\gamma - 1}}{1 + (\lambda t)^\gamma}, 0 \le t, \gamma > 0$ | ✅ | ✅ |
-| Log-normal   | | $\frac{(\sigma t \sqrt{2 \pi})^{-1} e^{-(\frac{1}{2}Z^2)}}{1 - \Phi(Z)}, Z = \frac{\ln{t} - \mu}{\sigma}$ | | ✅ |
-| Generalized gamma | | | | |
+| Exponential  | $\lambda$ | $\lambda = e^{\beta_0}$ | $\lambda = e^{-\alpha_0}$ |
+| Weibull^[Pronounced "Veibull", with "v" as in "very"] | $\rho \gamma (\rho t)^{\gamma - 1}$ | ✅ | ✅ |
+| Gompertz     | $\lambda e^{\gamma t}, 0 \le t, \lambda > 0$ | | |
+| Log-logistic | $\frac{\rho \gamma(\rho t)^{\gamma - 1}}{1 + (\rho t)^\gamma}, 0 \le t, \gamma > 0$ | ❌ | ✅ |
+| Generalized log-logistic^[If $\kappa = \rho$ then this reduces to the log-logistic.] [@khanGeneralizedLoglogisticProportional2016] | $\frac{\rho \gamma (\rho t)^{\gamma - 1}}{1 + (\kappa t)^\gamma}, (t; \rho; \kappa; \gamma) > 0$ | ✅ | ❌ |
+| Log-normal   | $\frac{(\sigma t \sqrt{2 \pi})^{-1} e^{-(\frac{1}{2}Z^2)}}{1 - \Phi(Z)}, Z = \frac{\ln{t} - \mu}{\sigma}$ | ❌ | ✅ |
+| Generalized gamma | | | |
 
-: Common parametric survival models. {#tbl-dist tbl-colwidths="[20, 20, 40, 10, 10]"}
+: Hazard functions of common parametric survival models. {#tbl-dist tbl-colwidths="[30, 50, 10, 10]"}
+
+::: {.callout-note}
+# If we use NONMEM, we don't need to specify S(t)
+
+The survivor function S(t) is calculated numerically, see @eq-surv.
+:::
 
 * $\lambda$ is sometimes called the ["scale" parameter](https://en.wikipedia.org/wiki/Scale_parameter). It stretches/shrinks a distribution. Typically, it is reparameterized in terms of covariates COV~n~ and regression parameters $\beta_n$: $\lambda = e^{\beta_0 + \sum \beta_n \mathrm{COV}_n}$.
 * $\gamma$ is sometimes called the ["shape" (or "form") parameter](https://en.wikipedia.org/wiki/Shape_parameter); for Weibull it is also sometimes called "slope".
@@ -267,10 +273,10 @@ Typically in pharmacometrics, we use the Proportional Hazards approach (@eq-cov)
 In this approach, we assume that the effect of the covariates is to increase or decrease the hazard by a proportionate amount at all durations.
 
 $$
-h(t, \text{COV}) = h_0(t) e^{\sum \beta_n \text{COV}_n}
+h(t, \text{COV}) = h_0(t) \times e^{\sum \beta_n \text{COV}_n}
 $$ {#eq-cov}
 
-Where h~0~(t) is the baseline hazard function.
+Where h~0~(t) is the baseline hazard function (see @tbl-dist).
 
 ### Frailty
 
