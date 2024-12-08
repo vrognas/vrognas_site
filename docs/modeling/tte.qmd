@@ -99,25 +99,30 @@ Distributions commonly used for parametric survival models in pharmacometrics ar
 
 | Distribution | h~0~(t) | PH | AFT |
 | :----------- | :--- | :--- | :---: | :---: |
-| Exponential  | $\lambda$ | $\lambda = e^{\beta_0}$ | $\lambda = e^{-\alpha_0}$ |
-| Weibull^[Pronounced "Veibull", with "v" as in "very"] | $\rho \gamma (\rho t)^{\gamma - 1}$ | ✅ | ✅ |
-| Gompertz     | $\lambda e^{\gamma t}, 0 \le t, \lambda > 0$ | ✅ | ❌ |
-| Log-logistic | $\frac{\rho \gamma(\rho t)^{\gamma - 1}}{1 + (\rho t)^\gamma}, 0 \le t, \gamma > 0$ | ❌ | ✅ |
-| Generalized log-logistic^[If $\kappa = \rho$ then this reduces to the log-logistic.] [@khanGeneralizedLoglogisticProportional2016] | $\frac{\rho \gamma (\rho t)^{\gamma - 1}}{1 + (\kappa t)^\gamma}, (t; \rho; \kappa; \gamma) > 0$ | ✅ | ❌ |
+| Exponential  | $\sigma$ | $\sigma = e^{\beta_0}$ | $\sigma = e^{-\alpha_0}$ |
+| Gompertz     | $\sigma e^{\lambda t}, 0 \le t, \sigma > 0$ | ✅ | ❌ |
+| Weibull^[Pronounced "Veibull", with "v" as in "very"] | $\rho \lambda (\rho t)^{\lambda - 1}$ | ✅ | ✅ |
 | Log-normal^[The shape of the lognormal distribution is very similar to the log-logistic distribution and yields similar model results. @kleinbaumSurvivalAnalysisSelfLearning2012] | $\frac{(\sigma t \sqrt{2 \pi})^{-1} e^{-(\frac{1}{2}Z^2)}}{1 - \Phi(Z)}, Z = \frac{\ln{t} - \mu}{\sigma}$ | ❌ | ✅ |
+| Log-logistic | $\frac{\rho \lambda(\rho t)^{\lambda - 1}}{1 + (\rho t)^\lambda}, 0 \le t, \lambda > 0$ | ❌ | ✅ |
+| Generalized log-logistic^[If $\kappa = \rho$ then this reduces to the log-logistic.] [@khanGeneralizedLoglogisticProportional2016] | $\frac{\rho \lambda (\rho t)^{\lambda - 1}}{1 + (\kappa t)^\lambda}, (t; \rho; \kappa; \lambda) > 0$ | ✅ | ❌ |
 
 : Hazard functions of common parametric survival models. {#tbl-dist tbl-colwidths="[30, 50, 10, 10]"}
 
 ::: {.callout-note}
 # If we use NONMEM, we don't need to specify S(t)
 
-The survivor function S(t) is calculated numerically, see @eq-surv.
+The survivor function S(t) can be calculated numerically, see @eq-surv.
 :::
 
-* $\lambda$ is sometimes called the ["scale" parameter](https://en.wikipedia.org/wiki/Scale_parameter). It stretches/shrinks a distribution. Typically, it is reparameterized in terms of covariates COV~n~ and regression parameters $\beta_n$: $\lambda = e^{\beta_0 + \sum \beta_n \mathrm{COV}_n}$.
-* $\gamma$ is sometimes called the ["shape" (or "form") parameter](https://en.wikipedia.org/wiki/Shape_parameter); for Weibull it is also sometimes called "slope".
-* $\rho = \frac{1}{\lambda}$ is sometimes called the ["rate" (or "inverse scale") parameter](https://en.wikipedia.org/wiki/Scale_parameter#Rate_parameter).
-* In other fields, a ["location" parameter](https://en.wikipedia.org/wiki/Location_parameter) $\mu$ is sometimes seen. This shifts the distribution along the t-axis as $t - \mu$. In pharmacometrics this is not helpful, since the distribution should always start at the start of the study, $t_\text{start} \equiv 0$. Thus, $\mu = 0$, and is not displayed.
+* $\sigma$ is sometimes called the ["scale" parameter](https://en.wikipedia.org/wiki/Scale_parameter).
+It stretches/shrinks a distribution (c.f. standard devation in a normal distribution).
+Typically, it is reparameterized in terms of covariates COV~n~ and regression parameters $\beta_n$: $\sigma = e^{\beta_0 + \sum \beta_n \mathrm{COV}_n}$.
+* $\lambda$ is sometimes called the ["shape" (or "form") parameter](https://en.wikipedia.org/wiki/Shape_parameter); for Weibull it is also sometimes called "slope".
+* $\rho = \frac{1}{\sigma}$ is sometimes called the ["rate" (or "inverse scale") parameter](https://en.wikipedia.org/wiki/Scale_parameter#Rate_parameter).
+* A ["location" parameter](https://en.wikipedia.org/wiki/Location_parameter) $\mu$ is sometimes seen.
+This shifts the distribution along the t-axis as $t - \mu$ (c.f. mean in a normal distribution).
+In pharmacometrics this is usually not needed, since the distribution should always start at the start of the study, $t_\text{start} \equiv 0$.
+Thus, $\mu = 0$, and is not displayed.
 
 ::: {.callout-tip}
 
@@ -132,8 +137,8 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
 ::: {.callout-note}
 # Notes
 
-* Weibull reduces to the exponential if $\gamma = 1$.
-* Weibull and lognormal are special cases of the generalized gamma.
+* Weibull reduces to the exponential if $\lambda = 1$.
+* Weibull and lognormal are special cases of the generalized lambda.
 * The lognormal model can only be expressed in terms of integrals.
 * The shape of the lognormal distribution is very similar to the log-logistic distribution and yields similar model results.
 :::
@@ -189,7 +194,9 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
   $DES
   
   DEL = 1E-6
-  DADT(1) = SCALE * SHAPE * (SCALE * (T - TP) + DEL)**(SHAPE - 1) ; Integration of hazard
+  TX = T + DEL
+
+  DADT(1) = SCALE * SHAPE * (SCALE * (TX - TP))**(SHAPE - 1) ; Integration of hazard
   
   $ERROR
   
@@ -208,6 +215,54 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
   ```
 </details>
 
+<details>
+  <summary>NONMEM code: Lognormal distribution</summary>
+  
+  ```verilog
+  $SUBROUTINES ADVAN=6
+  $MODEL COMP=(HAZARD) ; Comartment for integration of hazard
+  
+  $PK
+
+  SCALE = THETA(1) * EXP(ETA(1)) ; Sigma/Standard deviation
+  LOCATION = THETA(2) ; Mu/Mean
+  
+  $DES
+  
+  DEL = 1E-6 ; to avoid log(0)
+  TX  = T + DEL
+
+  Z = (LOG(TX) - LOCATION) / SCALE
+  
+  ;  PHI() is a builtin NONMEM function
+  DADT(1) = (EXP(-(0.5 * Z**2)) / (SCALE * TX * SQRT(2 * PI))) / (1 - PHI(Z)) ; Integration of hazard.
+  
+  $ERROR
+  
+  IF (NEWIND < 2) OLDCHZ = 0
+  CHZ = A(1) - OLDCHZ
+  OLDCHZ = A(1) ; For each ID, cum hazard from previous obs. to new obs.
+  
+  SUR = EXP(-CHZ) ; Survival function
+  
+  DELX = 1E-6 ; to avoid log(0)
+  TIMX = TIME + X
+  
+  ZX = (LOG(TIMX) - LOCATION) / SCALE
+  HAZNOW = (EXP(-(0.5 * ZX**2)) / (SCALE * TIMX * SQRT(2 * PI))) / (1 - PHI(ZX))
+  
+  IF (DV == 0) Y = SUR ; Censored event
+  IF (DV == 1) Y = SUR * HAZNOW ; Event
+
+  $THETA (0, 1, Inf) ; Scale
+  $THETA (0, 2, Inf) ; Location
+  
+  $OMEGA 0 FIX ; placeholder
+
+  $ESTIMATION METHOD=0 LIKELIHOOD
+  ```
+</details>
+
 The power of the hazard function becomes evident in pharmacometric applications when factors changing the hazard vary with time.
 An example would be if drug treatment influenced the hazard.
 The effects of the drug will depend on concentration and thus, the hazard in the drug-treated arm will vary with the time course of drug concentration.
@@ -222,8 +277,8 @@ With software like NONMEM that is able to numerically integrate the hazard funct
 The Weibull model also has another key property: the log(–log) of S(t) is linear with the log of time.
 This allows a graphical evaluation of the appropriateness of a Weibull model by plotting the log negative log of the Kaplan–Meier survival estimates against the log of time.
 
-To see this linear relationship: start with the Weibull survival function $S(t) = e^{-\lambda t^p}$, take the log of $S(t)$, multiply by negative one, and take the log again.
-For the Weibull distribution, the $\ln{-\ln{S(t)}}$ is a linear function of $\ln{t}$ with slope *p* and intercept $p \ln{\lambda}$.
+To see this linear relationship: start with the Weibull survival function $S(t) = e^{-\sigma t^p}$, take the log of $S(t)$, multiply by negative one, and take the log again.
+For the Weibull distribution, the $\ln{-\ln{S(t)}}$ is a linear function of $\ln{t}$ with slope *p* and intercept $p \ln{\sigma}$.
 If the slope equals one then *t* follows an exponential distribution.
 
 Possible results:
