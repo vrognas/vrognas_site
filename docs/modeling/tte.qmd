@@ -104,7 +104,7 @@ Distributions commonly used for parametric survival models in pharmacometrics ar
 | Weibull^[Pronounced "Veibull", with "v" as in "very"] | $\rho \lambda (\rho t)^{\lambda - 1}$ | ✅ | ✅ |
 | Log-normal^[The shape of the lognormal distribution is very similar to the log-logistic distribution and yields similar model results. @kleinbaumSurvivalAnalysisSelfLearning2012] | $\frac{(t \sigma \sqrt{2 \pi})^{-1} e^{-(\frac{Z^2}{2})}}{1 - \Phi(Z)}, Z = \frac{\ln{t} - \mu}{\sigma}$ | ❌ | ✅ |
 | Log-logistic | $\frac{\rho \lambda(\rho t)^{\lambda - 1}}{1 + (\rho t)^\lambda}, 0 \le t, \lambda > 0$ | ❌ | ✅ |
-| Generalized log-logistic^[If $\kappa = \rho$ then this reduces to the log-logistic.] [@khanGeneralizedLoglogisticProportional2016] | $\frac{\rho \lambda (\rho t)^{\lambda - 1}}{1 + (\kappa t)^\lambda}, (t; \rho; \kappa; \lambda) > 0$ | ✅ | ❌ |
+| Generalized log-logistic^[If $\rho_1 = \rho_2$ then this reduces to the log-logistic.] [@khanGeneralizedLoglogisticProportional2016] | $\frac{\rho_1 \lambda (\rho_1 t)^{\lambda - 1}}{1 + (\rho_2 t)^\lambda}, (t; \rho_1; \rho_2; \lambda) > 0$ | ✅ | ❌ |
 
 : Hazard functions of common parametric survival models. {#tbl-dist tbl-colwidths="[30, 50, 10, 10]"}
 
@@ -283,17 +283,17 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
   
   $PK
 
-  RATE    = THETA(1) * EXP(ETA(1))
-  SHAPE_1 = THETA(2)
-  SHAPE_2 = THETA(3) ; If equal to SHAPE_1, then reduces to log-logistic
+  RATE_1 = THETA(1) * EXP(ETA(1))
+  RATE_2 = THETA(2) ; If equal to RATE_1, then reduces to log-logistic
+  SHAPE  = THETA(3)
   
   $DES
   
   DEL = 1E-6 ; to avoid log(0)
   TX  = T + DEL
 
-  DADT(1) = (RATE * SHAPE_1 * ((RATE * TX)**(SHAPE_1 - 1))) / &
-  (1 + (SHAPE_2 * TX)**SHAPE_1)
+  DADT(1) = (RATE_1 * SHAPE * ((RATE_1 * TIMX)**(SHAPE - 1))) / &
+  (1 + (RATE_2 * TIMX)**SHAPE)
 
   $ERROR
   
@@ -306,15 +306,15 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
   DELX = 1E-6 ; to avoid log(0)
   TIMX = TIME + X
 
-  HAZNOW = (RATE * SHAPE_1 * ((RATE * TIMX)**(SHAPE_1 - 1))) / &
-  (1 + (SHAPE_2 * TIMX)**SHAPE_1)
+  HAZNOW = (RATE_1 * SHAPE * ((RATE_1 * TIMX)**(SHAPE - 1))) / &
+  (1 + (RATE_2 * TIMX)**SHAPE)
   
   IF (DV == 0) Y = SUR ; Censored event
   IF (DV == 1) Y = SUR * HAZNOW ; Event
 
-  $THETA (-Inf,  1, Inf) ; Rate
-  $THETA (-Inf, -2, Inf) ; Shape 1
-  $THETA (-Inf, -1, Inf) ; Shape 2, unique to the generalized form of log-logistic
+  $THETA (-Inf,  1, Inf) ; Rate 1
+  $THETA (-Inf, -2, Inf) ; Rate 2, unique to the generalized form of log-logistic
+  $THETA (-Inf, -1, Inf) ; Shape
   
   $OMEGA 0 FIX ; placeholder
 
