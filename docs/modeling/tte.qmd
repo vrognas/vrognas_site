@@ -102,7 +102,7 @@ Distributions commonly used for parametric survival models in pharmacometrics ar
 | Exponential  | $\sigma$ | $\sigma = e^{\beta_0}$ | $\sigma = e^{-\alpha_0}$ |
 | Gompertz     | $\sigma e^{\lambda t}, 0 \le t, \sigma > 0$ | ✅ | ❌ |
 | Weibull^[Pronounced "Veibull", with "v" as in "very"] | $\rho \lambda (\rho t)^{\lambda - 1}$ | ✅ | ✅ |
-| Log-normal^[The shape of the lognormal distribution is very similar to the log-logistic distribution and yields similar model results. @kleinbaumSurvivalAnalysisSelfLearning2012] | $\frac{(\sigma t \sqrt{2 \pi})^{-1} e^{-(\frac{1}{2}Z^2)}}{1 - \Phi(Z)}, Z = \frac{\ln{t} - \mu}{\sigma}$ | ❌ | ✅ |
+| Log-normal^[The shape of the lognormal distribution is very similar to the log-logistic distribution and yields similar model results. @kleinbaumSurvivalAnalysisSelfLearning2012] | $\frac{(t \sigma \sqrt{2 \pi})^{-1} e^{-(\frac{Z^2}{2})}}{1 - \Phi(Z)}, Z = \frac{\ln{t} - \mu}{\sigma}$ | ❌ | ✅ |
 | Log-logistic | $\frac{\rho \lambda(\rho t)^{\lambda - 1}}{1 + (\rho t)^\lambda}, 0 \le t, \lambda > 0$ | ❌ | ✅ |
 | Generalized log-logistic^[If $\kappa = \rho$ then this reduces to the log-logistic.] [@khanGeneralizedLoglogisticProportional2016] | $\frac{\rho \lambda (\rho t)^{\lambda - 1}}{1 + (\kappa t)^\lambda}, (t; \rho; \kappa; \lambda) > 0$ | ✅ | ❌ |
 
@@ -446,6 +446,11 @@ There are four approaches to modelling survival data with covariates^[[Rodrígue
 
 Typically in pharmacometrics, we use the Proportional Hazards approach (@eq-cov).
 In this approach, we assume that the effect of the covariates is to increase or decrease the hazard by a proportionate amount at all durations.
+
+The standard lognormal and log-logistic distributions are not closed under proportional hazards.
+That is, if you try to impose a proportional hazards (PH) assumption of covariate effects on a lognormal baseline function, the resulting distribution need not be lognormal.
+
+https://stats.stackexchange.com/questions/600557/how-to-parameterize-covariates-in-parametric-time-to-event-model-lognormal-dist
 
 $$
 h(t, \text{COV}) = h_0(t) \times e^{\sum \beta_n \text{COV}_n}
