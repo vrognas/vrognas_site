@@ -101,10 +101,10 @@ Distributions commonly used for parametric survival models in pharmacometrics ar
 | :----------- | :--- | :--- | :---: | :---: |
 | Exponential  | $\lambda$ | $\lambda = e^{\beta_0}$ | $\lambda = e^{-\alpha_0}$ |
 | Weibull^[Pronounced "Veibull", with "v" as in "very"] | $\rho \gamma (\rho t)^{\gamma - 1}$ | ✅ | ✅ |
-| Gompertz     | $\lambda e^{\gamma t}, 0 \le t, \lambda > 0$ | | |
+| Gompertz     | $\lambda e^{\gamma t}, 0 \le t, \lambda > 0$ | ✅ | ❌ |
 | Log-logistic | $\frac{\rho \gamma(\rho t)^{\gamma - 1}}{1 + (\rho t)^\gamma}, 0 \le t, \gamma > 0$ | ❌ | ✅ |
 | Generalized log-logistic^[If $\kappa = \rho$ then this reduces to the log-logistic.] [@khanGeneralizedLoglogisticProportional2016] | $\frac{\rho \gamma (\rho t)^{\gamma - 1}}{1 + (\kappa t)^\gamma}, (t; \rho; \kappa; \gamma) > 0$ | ✅ | ❌ |
-| Log-normal   | $\frac{(\sigma t \sqrt{2 \pi})^{-1} e^{-(\frac{1}{2}Z^2)}}{1 - \Phi(Z)}, Z = \frac{\ln{t} - \mu}{\sigma}$ | ❌ | ✅ |
+| Log-normal^[The shape of the lognormal distribution is very similar to the log-logistic distribution and yields similar model results. @kleinbaumSurvivalAnalysisSelfLearning2012] | $\frac{(\sigma t \sqrt{2 \pi})^{-1} e^{-(\frac{1}{2}Z^2)}}{1 - \Phi(Z)}, Z = \frac{\ln{t} - \mu}{\sigma}$ | ❌ | ✅ |
 
 : Hazard functions of common parametric survival models. {#tbl-dist tbl-colwidths="[30, 50, 10, 10]"}
 
@@ -237,11 +237,39 @@ Possible results:
 The key points are that **straight lines support the Weibull assumption and parallel curves support the PH assumption**.
 :::
 
+
+:::{.callout-tip}
+# Evaluate log-logistic appropriateness
+
+The log-logistic assumption can be graphically evaluated by plotting $\ln{\frac{1-S(t)}{S(t)}}$ against $\ln{t}$ where $S(t)$ are the Kaplan–Meier survival estimates.
+If survival time follows a loglogistic distribution, then the resulting plots should be a straight line of slope $p$.
+
+Possible results:
+
+1. Straight lines: log-logistic assumption holds
+2. Parallel curves: PO assumption holds
+3. Parallel straight lines: log-logistic, PO, and AFT assumptions hold
+:::
+
 ### Proportional hazard (PH)
 
 The underlying assumption for PH models is that the **effect of covariates is multiplicative (proportional) with respect to the hazard**.
 
 The PH assumption is applicable for a comparison of hazards.
+
+### Non-proportional hazard (NPH)
+
+Several scenarios can lead to NPH.
+For example:
+
+* Delayed treatment effect
+* Diminishing treatment effect
+* Crossing hazards
+
+### Proportional odds (PO)
+
+A PO survival model is a model in which the survival odds ratio is assumed to remain constant over time.
+This is analogous to a PH model where the hazard ratio (HR) is assumed constant over time.
 
 ### Accelerated failure time (AFT)
 
