@@ -147,12 +147,12 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
   <summary>NONMEM code: Exponential distribution</summary>
   
   ```verilog
-  $SUBROUTINES ADVAN=6
+  $SUBROUTINES ADVAN=13
   $MODEL COMP=(HAZARD) ; Comartment for integration of hazard
   
   $PK
   
-  SCALE = THETA(1) * EXP(ETA(1)) ; constant hazard
+  SCALE = EXP(THETA(1)) * EXP(ETA(1)) ; constant hazard
   
   $DES
   
@@ -171,6 +171,10 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
   IF (DV == 0) Y = SUR ; Censored event
   IF (DV == 1) Y = SUR * HAZNOW ; Event
   
+  $THETA (-Inf, 1, Inf) ; Scale
+  
+  $OMEGA 0 FIX ; placeholder
+
   $ESTIMATION METHOD=0 LIKELIHOOD
   ```
 </details>
@@ -179,7 +183,7 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
   <summary>NONMEM code: Weibull distribution</summary>
   
   ```verilog
-  $SUBROUTINES ADVAN=6
+  $SUBROUTINES ADVAN=13
   $MODEL COMP=(HAZARD) ; Comartment for integration of hazard
   
   $PK
@@ -188,15 +192,15 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
   ; For TTE TP is always 0
   IF (NEWIND < 2) TP = 0
 
-  SCALE = THETA(1) * EXP(ETA(1))
-  SHAPE = THETA(2)
+  RATE  = EXP(THETA(1)) * EXP(ETA(1))
+  SHAPE = EXP(THETA(2))
   
   $DES
   
   DEL = 1E-6
   TX = T + DEL
 
-  DADT(1) = SCALE * SHAPE * (SCALE * (TX - TP))**(SHAPE - 1) ; Integration of hazard
+  DADT(1) = RATE * SHAPE * (RATE * (TX - TP))**(SHAPE - 1) ; Integration of hazard
   
   $ERROR
   
@@ -206,11 +210,16 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
   
   SUR = EXP(-CHZ) ; Survival function
   
-  HAZNOW = SCALE * SHAPE * (SCALE * (TIME - TP) + DEL)**(SHAPE - 1)
+  HAZNOW = RATE * SHAPE * (RATE * (TIME - TP) + DEL)**(SHAPE - 1)
   
   IF (DV == 0) Y = SUR ; Censored event
   IF (DV == 1) Y = SUR * HAZNOW ; Event
   
+  $THETA (-Inf, 1, Inf) ; Rate
+  $THETA (-Inf, 2, Inf) ; Location
+  
+  $OMEGA 0 FIX ; placeholder
+
   $ESTIMATION METHOD=0 LIKELIHOOD
   ```
 </details>
@@ -219,13 +228,13 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
   <summary>NONMEM code: Lognormal distribution</summary>
   
   ```verilog
-  $SUBROUTINES ADVAN=6
+  $SUBROUTINES ADVAN=13
   $MODEL COMP=(HAZARD) ; Comartment for integration of hazard
   
   $PK
 
-  SCALE = THETA(1) * EXP(ETA(1)) ; Sigma/Standard deviation
-  LOCATION = THETA(2) ; Mu/Mean
+  SCALE = EXP(THETA(1)) * EXP(ETA(1)) ; Sigma/Standard deviation
+  LOCATION = EXP(THETA(2)) ; Mu/Mean
   
   $DES
   
@@ -234,8 +243,9 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
 
   Z = (LOG(TX) - LOCATION) / SCALE
   
-  ;  PHI() is a builtin NONMEM function
-  DADT(1) = (EXP(-(0.5 * Z**2)) / (SCALE * TX * SQRT(2 * PI))) / (1 - PHI(Z)) ; Integration of hazard.
+  ; Integration of hazard.
+  DADT(1) = (EXP(-(0.5 * Z**2)) / (SCALE * TX * SQRT(2 * PI))) / &
+            (1 - PHI(Z)) ; PHI() is a builtin NONMEM function
   
   $ERROR
   
@@ -249,17 +259,100 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
   TIMX = TIME + X
   
   ZX = (LOG(TIMX) - LOCATION) / SCALE
-  HAZNOW = (EXP(-(0.5 * ZX**2)) / (SCALE * TIMX * SQRT(2 * PI))) / (1 - PHI(ZX))
+  HAZNOW = (EXP(-(0.5 * ZX**2)) / (SCALE * TIMX * SQRT(2 * PI))) / &
+           (1 - PHI(ZX))
   
   IF (DV == 0) Y = SUR ; Censored event
   IF (DV == 1) Y = SUR * HAZNOW ; Event
 
-  $THETA (0, 1, Inf) ; Scale
-  $THETA (0, 2, Inf) ; Location
+  $THETA (-Inf, 1, Inf) ; Scale
+  $THETA (-Inf, 2, Inf) ; Location
   
   $OMEGA 0 FIX ; placeholder
 
   $ESTIMATION METHOD=0 LIKELIHOOD
+  ```
+</details>
+
+<details>
+  <summary>NONMEM code: (Generalized) log-logistic distribution</summary>
+  
+  ```verilog
+  $SUBROUTINES ADVAN=13
+  $MODEL COMP=(HAZARD) ; Comartment for integration of hazard
+  
+  $PK
+
+  RATE    = THETA(1) * EXP(ETA(1))
+  SHAPE_1 = THETA(2)
+  SHAPE_2 = THETA(3) ; If equal to SHAPE_1, then reduces to log-logistic
+  
+  $DES
+  
+  DEL = 1E-6 ; to avoid log(0)
+  TX  = T + DEL
+
+  DADT(1) = (RATE * SHAPE_1 * ((RATE * TX)**(SHAPE_1 - 1))) / &
+  (1 + (SHAPE_2 * TX)**SHAPE_1)
+
+  $ERROR
+  
+  IF (NEWIND < 2) OLDCHZ = 0
+  CHZ = A(1) - OLDCHZ
+  OLDCHZ = A(1) ; For each ID, cum hazard from previous obs. to new obs.
+  
+  SUR = EXP(-CHZ) ; Survival function
+  
+  DELX = 1E-6 ; to avoid log(0)
+  TIMX = TIME + X
+
+  HAZNOW = (RATE * SHAPE_1 * ((RATE * TIMX)**(SHAPE_1 - 1))) / &
+  (1 + (SHAPE_2 * TIMX)**SHAPE_1)
+  
+  IF (DV == 0) Y = SUR ; Censored event
+  IF (DV == 1) Y = SUR * HAZNOW ; Event
+
+  $THETA (-Inf,  1, Inf) ; Rate
+  $THETA (-Inf, -2, Inf) ; Shape 1
+  $THETA (-Inf, -1, Inf) ; Shape 2, unique to the generalized form of log-logistic
+  
+  $OMEGA 0 FIX ; placeholder
+
+  $ESTIMATION METHOD=0 LIKELIHOOD
+  ```
+</details>
+
+<details>
+  <summary>NONMEM code: TTE simulation for VPC</summary>
+  
+  ```verilog
+  $SUBROUTINES ADVAN=13
+  $MODEL COMP=(HAZARD) ; Comartment for integration of hazard
+  ...
+  $ERROR
+  ...
+  IF (DV == 0) Y = SUR ; Censored event
+  IF (DV == 1) Y = SUR * HAZNOW ; Event
+
+  EOS = 28 ; End of Study, TIME
+
+;------------For Simulation----------------
+  IF (ICALL == 4) THEN
+      IF (NEWIND < 2) THEN
+        CALL RANDOM (2,R)
+      ENDIF
+      DV  = 0
+      TTE = 0
+    IF (TIME == EOS) TTE = 1 ; right-censor
+    IF (R > SUR) THEN
+      DV  = 1
+      TTE = 1
+    ENDIF
+  ENDIF
+  
+  ...
+
+  $SIMULATION (7840) (1305 UNIFORM) ONLYSIMULATION NOPREDICTION
   ```
 </details>
 
