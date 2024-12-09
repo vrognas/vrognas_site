@@ -2,87 +2,116 @@
 title: "Portfolio"
 ---
 
-## [*NMTRAN (NONMEM) language extension for Visual Studio Code*](https://github.com/vrognas/vscode-nmtran)
+:::{.callout-tip}
+# Click on images to enlarge them
+:::
+
+## Software
+
+### [VSCode extension for NMTRAN (NONMEM)](https://github.com/vrognas/vscode-nmtran)
+
+![](https://img.shields.io/github/license/vrognas/vscode-nmtran)
+![](https://img.shields.io/visual-studio-marketplace/azure-devops/installs/total/vrognas.nmtran)
+
+A [Visual Studio Code](https://code.visualstudio.com/) [extension](https://marketplace.visualstudio.com/VSCode) written in **TypeScript**, adding support for the NMTRAN language used in [**NONMEM**](https://www.iconplc.com/solutions/technologies/nonmem/) control streams.
+
+#### Programmatic Language Features
+
+* Diagnostics
+* Code completion proposals
+* Hover info
+
+#### Declarative Language Features
+
+* Comment toggling using the VS Code command `Toggle Line Comment` 
+* Folding (by control records)
+* Bracket matching
+* Bracket autoclosing
+* Bracket autosurrounding
+
+##### Syntax Highlighting
+
+By tokenization according to [TextMate 1.5.1 naming conventions](https://macromates.com/manual/en/language_grammars#naming_conventions)
+
+![](images/demo_syntax-highlight.png)
+
+##### Snippet Completion
 
 ![](images/demo_advan-snippets.gif)
 
-## [An integrated semi-mechanistic model to predict the outcome of drug-target effects on the erythropoietic system](https://www.page-meeting.org/?abstract=10044)
+###### Selection of available snippets
 
-**Viktor&nbsp;Rognås, Franziska&nbsp;Schaedeli&nbsp;Stark, Maddalena&nbsp;Marchesi, Hanna&nbsp;Silber&nbsp;Baumann, João&nbsp;A.&nbsp;Abrantes**
+* Subroutine selection
+  * ADVAN and TRANS
+* Modify `$DATA` on-the-fly (Credit: Simon Buatois)
+* RUV (normal or log-scale)
+  * RUV_add
+  * RUV_prop
+  * RUV_addprop
+* Creating an Xpose-friendly `$TABLE` scaffold (just type $TABLE).
+* MIXTURE-models (just type $MIX)
+  * 2-way mixture model
+  * 3-way mixture model
+* Including IIV on a parameter that is bound between 0 and 1 (type logit_iiv).
+* Baseline modeling (B1, B2, B3, B4) [Dansirikul et al., 2008](https://doi.org/10.1007/s10928-008-9088-2)
+* BQL modeling (M3) [Beal, 2001](https://doi.org/10.1023/a:1012299115260)
 
-*Roche Pharma Research and Early Development, Roche Innovation Center Basel, Basel, Switzerland*
+## Science
 
-### Introduction
+### Population pharmacokinetics of colistin and the relation to survival in critically ill patients infected with colistin susceptible and carbapenem-resistant bacteria
 
-Target-related effects of investigational drugs may lead to clinical efficacy but also safety concerns if the target is also expressed elsewhere.
-**Bitopertin (BTP)** is a specific inhibitor of the glycine type 1 transporter (GlyT1), a transporter known to control extracellular levels of the neurotransmitter glycine in the brain, and was initially intended to be developed for psychiatric indications.
-The GlyT1 transporter is also expressed on erythroid cells and its inhibition leads to a decreased **hemoglobin (Hb)** synthesis within erythrocyte precursors due to reduced availability of glycine for the heme synthesis.
-As a consequence, **reticulocytes (RET)** with reduced Hb content are released into the blood, and Hb blood concentrations gradually decrease with a delay corresponding to the **red blood cell (RBC)** lifespan.
-Homeostatic feedback stimulates the production of new RBCs to compensate for the decreased Hb concentrations.
+Kristoffersson AN^\*^, **Rognås V^\*^**, Brill MJE^\*^, et al. (^\*^shared first authorship)
 
-### Objectives
+*Clin Microbiol Infect* (2020)
 
-1. **To expand a previously developed semi-mechanistic model of erythropoiesis**
-2. **To predict the downstream outcome of hypothetical drug-target interactions on different stages of erythropoiesis and Hb production**
+[https://doi.org/10.1016/j.cmi.2020.03.016](https://doi.org/10.1016/j.cmi.2020.03.016)
 
-### Methods
+#### Objectives
 
-Hematological biomarker data were available from 62 healthy male and female subjects.
-Subjects received either 10, 30, or 60 mg of BTP or placebo QD for 120 days + 120 days follow-up.
-A previously developed model was used as a starting point to build a more generalised erythropoiesis model.
-The inhibitory effect of BTP on Hb synthesis was assumed to be driven by individual AUC~ss~.
-The model was fitted simultaneously to cell count data (RBC, RET, and **immature reticulocyte fraction [IRF]**), as well as **mean corpuscular Hb (MCH)**, ensuring steady-state baseline conditions.
-The framework was used to simulate the inhibitory effect that hypothetical compounds would have when interacting with specific pathways of the erythropoiesis system.
-Assumed 120 days treatment with a dose corresponding to ½ and 2x AUC~50~ of BTP, i.e. ~20% and ~40% inhibition of pathway, respectively.
+The aim was to analyse the population pharmacokinetics of colistin and to explore the
+relationship between colistin exposure and time to death.
 
-NONMEM v7.4.3, PsN v4.9.3, Improve v2.5.1-5. Simulations were performed in mrgsolve v1.0.3.
+#### Methods
 
-### Results
+Patients included in the AIDA randomized controlled trial were treated with colistin for severe infections caused by carbapenem-resistant Gram-negative bacteria.
+All subjects received a 9 million units (MU) loading dose, followed by a 4.5 MU twice daily maintenance dose, with dose reduction if creatinine clearance (CrCL) <50 mL/min.
+Individual colistin exposures were estimated from the developed population pharmacokinetic model and an optimized two-sample per patient sampling design.
+Time to death was evaluated in a **parametric survival analysis**.
 
-The final model structure (@fig-1) consisted of a transit-compartment structure describing:
+#### Results
 
-1. The formation of erythroid precursors in the bone marrow
-2. The progression of precursors into immature and mature RET and release into the blood depending on the IRF
-3. The maturation of RET to RBC in blood
-4. The dynamics of RBC in blood
+Out of 406 randomized patients, 349 contributed pharmacokinetic data.
+The median (90% range) colistin plasma concentration was 0.44 (0.14--1.59) mg/L at 15 minutes after the end of first infusion.
+In samples drawn 10 h after a maintenance dose, concentrations were >2 mg/L in 94% (195/208) and 44% (38/87) of patients with CrCL ≤120 mL/min, and > 120 ml/min, respectively.
+Colistin methanesulfonate sodium (CMS) and colistin clearances were strongly dependent on CrCL.
+High colistin exposure to MIC ratio was associated with increased hazard of death in the multivariate analysis (adjusted hazard ratio (95% CI): 1.07 (1.03--1.12)).
+Other significant predictors included SOFA score at baseline (HR 1.24 (1.19--1.30) per score increase), age and Acinetobacter or Pseudomonas as index pathogen.
 
-In addition, the Hb content inside the RBC was described by means of a parallel chain.
+#### Discussion
 
-![Graphical representation of the integrated semi-mechanistic model.](images/figure-1.png){#fig-1}
+The population pharmacokinetic model predicted that >90% of the patients had colistin concentrations >2 mg/L at steady state, but only 66% at 4 hr after start of treatment.
+High colisti nexposure was associated with poor kidney function, and was not related to a prolonged survival.
 
-All model parameters (@tbl-1) were estimated with good precision (relative standard error <9% for fixed effects, and < 18% for random effects).
-Correlation between all inter-individual variability parameters estimated (not shown).
+### Turn-over model characterizing effect of colistin on serum-creatinine in critically ill patients
 
-| Parameter | Description | Estimate | Units | IIV (%CV) |
-| :-------- | :---------- | -------: | :---- | :-------- |
-| LS~RBC~   | Lifespan of RBC | 125 | days | 28.0 |
-| RBC~0~    | Baseline MCH | 29.8 | pg | 4.82 |
-| RBC~0~    | Baseline RBC for males | 4.91 | 10^12^/L | 5.34 |
-|           | Baseline RBC for females | 4.32 |  |  |
-| RET~0~    | Baseline RET | 39.8 | 10^9^/L | 26.0 |
-| IRF       | Immature reticulocyte fraction | 4.71 | % | 32.0 |
-| FDB       | Feedback term (driven by hemoglobin relative change from baseline using a exponential function) | 2.42 | - | - |
+**Rognås V** et al.
 
-: Model parameters estimates. CV: coefficient of variation, IIV: inter-individual variability. {#tbl-1}
+[https://www.page-meeting.org/default.asp?abstract=9869](https://www.page-meeting.org/default.asp?abstract=9869)
 
-The predictive performance of the integrated model was found to be adequate (@fig-2).
+![](images/phd-2-scr.png)
 
-![Visual predictive check of the four response variables IRF, MCH, RBC, and RET, that were used in a simultaneous fit of the model. Shaded areas: 90% Cl for simulated median, 5th and 95th percentiles. Symbols and lines: observed data with respective quantiles. The patterns of response are well captured, despite the large variability on the reticulocyte related data (RET, IRF).](images/figure-2.png){#fig-2}
+### Bounded integer approach to model time-varying SOFA scores from patients with carbapenem resistant infections
 
-Simulated drug-target mechanisms:
+**Rognås V** et al.
 
-**Mechanism A:** Inhibition of Hb production (BTP-like effect)  
-**Mechanism B:** Inhibition of RET-precursor production  
-**Mechanism C:** Inhibition of RET-precursor differentiation  
-**Mechanism D:** Inhibition of Hb-driven feedback (D1) and inhibition of Hb production (D2)  
+[https://www.page-meeting.org/default.asp?abstract=9052](https://www.page-meeting.org/default.asp?abstract=9052)
 
-![Simulated outcome of hypothetical drug-target interactions for mechanisms A–D following 120 days of treatment in 2000 males. The thick lines represent the median, and the shaded area the 90% prediction interval which reflects inter-individual variability. The horizontal dashed lines represent baselines in the absence of drug effect.](images/figure-3.png){#fig-3}
+![](images/phd-3-bi.png)
 
-### Conclusion
+### An integrated semi-mechanistic model to predict the outcome of drug-target effects on the erythropoietic system
 
-* An integrated semi-mechanistic population pharmacokinetic-pharmacodynamic model was developed to describe the process of erythropoiesis
+**Rognås V** et al.
 
-* Simulations of hypothetical drug-target effects on different stages of erythropoiesis and Hb production (@fig-3) illustrated the influence of the assumed mechanism of action of compounds on the hematological response
+[https://www.page-meeting.org/?abstract=10044](https://www.page-meeting.org/?abstract=10044)
 
-
-* Combining this integrated model framework with mechanistic understanding from other experiments can be used to inform decision making in drug development
+![](images/phd-4-ery.png)
