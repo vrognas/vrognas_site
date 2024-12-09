@@ -215,6 +215,7 @@ format:
       dark: [cosmo, theme-dark.scss]
     highlight-style: github
     css: styles.css
+    lightbox: true
     toc: true
     bibliography: refs.bib
     csl: clinical-microbiology-and-infection.csl
