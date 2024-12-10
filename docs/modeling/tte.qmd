@@ -8,18 +8,26 @@ code-fold: true
 # Under construction
 :::
 
-*Time-to-event* (TTE) analysis (or "survival analysis") is a collection of statistical procedures for data analysis for which the outcome variable of interest is time until an event occurs.
-**Events are things that happen at a particular time.**
-More than one occurence of the same event can be considered in the same analysis.
-These are called *recurrent events*.
-Analyzing this type of data is commonly called a ***repeated time-to-event*** (RTTE) analysis.
-Additionally, more than one type of event can occur.
-For example, death from any of several causes.
-However, since you can die only once^[unless you're a cat], we refer to the probabilities of these events as ***competing risks***.
-Competing risk analysis is an extension of TTE.
-An even further extension is ***multi-state analysis***, in which both competing and non-competing events can be included.
+*Time-to-event (TTE) analysis*, also known as *survival analysis*, is a set of statistical methods focusing on the time until an event occurs.
+A key feature of TTE data is that **not all subjects need to experience the event** by the end of the observation period, resulting in *censored data*, which these methods are designed to handle.
+
+**Events are outcomes that happen at a specific point in time.**
+
+When the same event can occur multiple times for the same subject, these repeated occurrences are known as **recurrent events**, and analyzing them is called **repeated time-to-event (RTTE)** analysis.
+
+In some scenarios, multiple types of events can occur and must be considered simultaneously.
+For example, when evaluating death from different causes, each cause represents a **mutually exclusive event** that can only happen once, leading to **competing risks**.
+Competing risk analysis extends standard TTE methods to account for these mutually exclusive events.
+
+An even further extension is **multi-state analysis**, which can accommodate **both competing and non-competing events** and model transitions between various states over time.
 
 ## Theory
+
+:::{.callout-tip}
+# Key takeaway
+
+Hazard is a rate, not a probability.
+:::
 
 The survivor function and the hazard function which are in essence opposed concepts.
 The survivor function focuses on surviving whereas the hazard function focuses on failing, given survival up to a certain time point.
