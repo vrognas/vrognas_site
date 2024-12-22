@@ -47,3 +47,15 @@ Why
 
 Scope (What) - Resources (money/people) (Who)  
 Quality (How) - Time (When)
+
+## Prioritization
+
+* Risk matrix (Impact/probability)
+
+* Priority matrix (Important/Urgent)
+
+* SWOT/TOWS
+
+* Fokus on the *task*, not the solution
+
+* Law of pi: everything takes at least 3.14 times longer than you think.
