@@ -6,10 +6,45 @@ title: "The Absorption Concept"
 # Under construction
 :::
 
-There are two pharmacokinetic parameters that quantifies drug absorption.
-*Bioavailability* (**F**) quantifies the *extent* of absorption.
-**k~a~** quantifies the *rate* of absorption.
+## Overview
 
-![](images/absorption.png){#fig-absorption}
+Drug absorption can be characterized by **two** pharmacokinetic parameters:
 
-![](images/enterohepatic-recirculation.png){#fig-enterohepatic-recirculation}
+- **Bioavailability (F)** quantifies the **extent** of absorption.
+- **k<sub>a</sub>** quantifies the **rate** of absorption.
+
+## Definition
+
+The oral bioavailability (F) of a drug is determined by three factors:
+
+$$
+F = F_{a} \times F_{g} \times F_{h},
+$$ {#eq-bioavailability}
+
+where  
+* F~a~ is the fraction of drug absorbed,  
+* F~g~ is the fraction escaping gut-wall metabolism, and  
+* F~h~ is the fraction escaping hepatic extraction.
+
+See @eq-bioavailability and @fig-absorption for an illustration of these processes.
+
+![Oral absorption.](images/absorption.png){#fig-absorption}
+
+@fig-enterohepatic-recirculation depicts enterohepatic recirculation, which can also influence bioavailability.
+If a drug exhibits enterohepatic recirculation, it is common to see two or more absorption "peaks".
+
+![Enterohepatic recirculation.](images/enterohepatic-recirculation.png){#fig-enterohepatic-recirculation}
+
+## Modeling
+
+Each component in the bioavailability equation can vary due to drug-specific physicochemical properties or physiological factors.
+In turn, these variations can contribute to inter-individual variability (IIV) in **F**.
+
+When **intravenous (IV) data** is unavailable for modeling oral pharmacokinetic (PK) data, a common practice is to attribute the IIV associated with **F** to the **apparent clearance (CL/F)** and **apparent volume of distribution (V/F)** parameters.
+By doing so, any correlation between these two parameters can also be estimated.
+
+Alternatively, one can directly introduce an IIV on **F** by fixing its value to 1 (renaming it *F~rel~*, "rel" for "relative") and estimating the inter-individual variability in **F~rel~** itself.
+While this approach may not always improve predictive performance, it can be valuable if:
+
+- **F-specific covariates** are suspected, or  
+- **Residual unexplained variability (RUV)** must be accounted for in future simulations.
