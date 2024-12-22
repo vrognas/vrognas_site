@@ -15,3 +15,14 @@ title: "Presentation Techniques"
 5. Competition (and why you’re better)
 6. Financials (amount needed, use and returning how much by when)
 7. Close with the ”The Ask” (Get to further discussion)
+
+## Presenting PMx science
+
+Ppt:
+1. Intro
+2. Conclusion (pause for questions, to guide the rest of the presentation) **"tell ’em what you’re gonna tell ’em"**
+3. Results (that support conclusion) **"tell ’em"**
+4. Conclusion **"tell ’em what you told ’em"**
+5. Many backup slides on details e.g., methods, demographic tables, graphics on study design, details on exclusion, PK sampling, etc.
+
+Minimize text
