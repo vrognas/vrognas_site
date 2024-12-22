@@ -13,18 +13,16 @@ title: "Pharmacometric Modeling Strategies"
   * Estimate PK parameters first and then fit PD
     * Condition on individual PK parameter estimates
       * Assume no error in parameters (IPP = Individual PK Parameters)
-      * Account for error in parameters (IPPSE = Individual PK Parameters Standard Error)*
+      * Account for error in parameters (IPPSE = Individual PK Parameters Standard Error) [@lacroixEvaluationIPPSEAlternative2012]
     * Fix population PK parameters
-      * Include individual PK data (PPP&D = Population PK Parameters & Data)**
+      * Include individual PK data (PPP&D = Population PK Parameters & Data)
       * Don’t include individual PK data (PPP = Population PK Parameters)
 
-*LaCroix et al., JPKPD 39:177–193, 2012  
-**Wade and Karlsson, PAGE 1999  
-Abbreviations in Zhang et al 2003  
+Abbreviations in Zhang et al 2003 [@zhangSimultaneousVsSequential2003]  
 
 ## Important considerations
 
-### Impact of a model
+### Impact of a model [@musuambaScientificRegulatoryEvaluation2021; @skottheimrustenScientificRegulatoryEvaluation2021]
 
 * What is the modeling used for? (e.g., bridging, dose, SmPC^[Summary of Product Characteristics] parameters?)
   * Does the conclusion align with the aim?
@@ -45,7 +43,17 @@ Abbreviations in Zhang et al 2003
   * Good-to-know: Could affect conclusion (Other concern)
   * Nice-to-know: Won't affect conclusion (avoid asking this question)
 
+## Terminology
+
+### Parsimony
+
+The idea that comparing two models, the model with fewer parameters is preferrable, given that all else is equal.
+
+### Shrinkage
+
+A metric which quantifies how much individual estimates regress towards the population mean under the given sampling schedule [@savicImportanceShrinkageEmpirical2009].
+
 ## References
 
-* Musuamba et al., 2021, https://doi.org/10.1002/psp4.12669
-* Skottheim Rusten & Musuamba, 2021, https://doi.org/10.1002/psp4.12708
+::: {#refs}
+:::
