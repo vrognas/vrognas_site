@@ -8,30 +8,41 @@ title: "R Tips-n-Tricks"
 
 ## Useful/interesting R packages
 
-* validate
-* lemon
-* naniar
+### Modeling
+
+* [nonmem2mrgsolve](https://github.com/Andy00000000000/nonmem2mrgsolve)
+* tidymodels
+    * [A Gentle Introduction to tidymodels](https://rviews.rstudio.com/2019/06/19/a-gentle-intro-to-tidymodels/)
+
+#### Max Kuhn Keynote on tidymodels
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ATcG_BBiFYQ?si=kLnxdNIYQ4AmhlDY&amp;start=23368" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Plotting
+
+* [validate](https://github.com/data-cleaning/validate)
+* [lemon](https://github.com/stefanedwards/lemon)
+* [naniar](https://naniar.njtierney.com)
     * `gg_miss_var()`
     * `gg_miss_upset()` (instead of venn diagrams)
     * `geom_miss_point()` (jitter of missing)
     * `bind_shadow()`
     * `vis_miss()` (Credit: Iris Minichmayr)
-* ggpmisc (linear regression equation)
-* ggstatplot
-* ”future” — r-package for cluster and parallell in r
-* ”furrr” — future:ize the purrr-functions
+* [ggpmisc](https://docs.r4photobiology.info/ggpmisc/)
+  * Linear regression equation
+* [ggstatplot](https://indrajeetpatil.github.io/ggstatsplot/)
+* [latticeExtra](http://latticeextra.r-forge.r-project.org)
+  * Manipulate [Xpose4](https://uupharmacometrics.github.io/xpose4/reference/xpose4-package.html) plots
+
+### Development
+
 * Targets
 * Renv
 * Roxygen2
 * Usethis
 * Devtools
-* latticeExtra
-* tidymodels
-    * [A Gentle Introduction to tidymodels](https://rviews.rstudio.com/2019/06/19/a-gentle-intro-to-tidymodels/)
-
-### Max Kuhn Keynote on tidymodels
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ATcG_BBiFYQ?si=kLnxdNIYQ4AmhlDY&amp;start=23368" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+* ”future” — r-package for cluster and parallell in r
+* ”furrr” — future:ize the purrr-functions
 
 ## Useful functions
 
