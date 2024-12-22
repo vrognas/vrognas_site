@@ -157,6 +157,8 @@ website:
           href: docs/modeling/cat.qmd
         - text: "Time-to-event data"
           href: docs/modeling/tte.qmd
+        - text: "Priors"
+          href: docs/modeling/priors.qmd
     - id: tools-of-the-trade
       title: "Tools of the Trade"
       collapse-level: 2

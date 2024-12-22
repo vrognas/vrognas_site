@@ -1,0 +1,38 @@
+---
+title: "Priors"
+---
+
+:::{.callout-caution}
+# Under construction
+:::
+
+Building population pharmacokinetic (PopPK) models can be hard when the data is limited, such as when only trough concentrations (C~trough~) are available.
+In these cases, prior PopPK models from earlier studies can help.
+
+We can use parameters from previous models as a starting point.
+By allowing some flexibility, this method improves predictions.
+It also stabilizes the results, reduces variability between individuals, and fits the new data better than fixing parameter values.
+However, if the new population differs from the one in the earlier study, accuracy may be affected.
+
+PopPK analysis estimates how drugs are absorbed, distributed, and eliminated in the body, along with differences between individuals.
+When the data is too sparse, it may not be possible to estimate all the parameters.
+The `$PRIOR` control record in NONMEM allows us to use parameters from prior models to estimate some or all parameters, instead of fixing them or adding more data.
+This is a common and efficient approach, especially in special populations.
+
+When using `$PRIOR`, it is important to check how closely the results match the earlier model and how sensitive the estimates are to the prior values.
+Covariates (factors like age or weight) can either come directly from the prior model *(a priori)* or be added later for parameters estimated without prior input *(a posteriori)*.
+
+Adding a prior to a Maximum Likelihood Estimation would technically convert these into a mode a posteriori (MAP) estimation of the population parameters, even though this term does not show up on the NONMEM report.
+
+The main advantages lay in the rapidity and stability of the runs.
+
+| Abbreviation | Description |
+| :--- | :--- |
+| NWPRI | Normal Inverse-Wishart Prior |
+| O^P^ | Penalty function on the OFV |
+| O^S^ | OFV on the sparse data |
+| TNPRI | Twice Normal ("Normal-Normal") Prior |
+
+## References
+
+* Chan Kwong AHP, Calvier EAM, Fabre D, Gattacceca F, Khier S. Prior information for population pharmacokinetic and pharmacokinetic/pharmacodynamic analysis: overview and guidance with a focus on the NONMEM PRIOR subroutine. J Pharmacokinet Pharmacodyn. 2020;47(5):431-46. DOI: 10.1007/s10928-020-09695-z
