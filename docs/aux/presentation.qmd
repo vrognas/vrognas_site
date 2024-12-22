@@ -6,6 +6,10 @@ title: "Presentation Techniques"
 # Under construction
 :::
 
+# First: Plan
+
+The absolute first thing you need to understand about your talk, is **who** you will be talking to.
+
 ## Pitch (to investors):
 
 1. ”Punch in the nose” PIN
@@ -25,4 +29,52 @@ Ppt:
 4. Conclusion **"tell ’em what you told ’em"**
 5. Many backup slides on details e.g., methods, demographic tables, graphics on study design, details on exclusion, PK sampling, etc.
 
-Minimize text
+# Second: Design
+
+* Minimize text
+* Max 5 bullet points per slide (if you use slides)
+* *You* are the presentation, not the slide deck.
+  * The focus of the audience should be on *you*
+  * Use the ability to shut off the slide deck (turn screen black or white), when it is not needed.
+* Focus the audience attention with clever use of blurr and colored boxes.
+* If you need a laser pointer, your slide is probably too detailed/messy.
+* Stick to a color theme.
+  * Make the colors mean something across all slides.
+
+# Third: Practice
+
+## Practice your talk
+
+* Go through your talk a couple of times.
+  * Read it out loud, as you would in a real situation.
+* If you want, record yourself and watch the recording.
+
+## Go to the venue where you will talk.
+
+* Where will you be?
+* Will your slides be seen from the backmost row?
+* Will you need a microphone?
+* Will you need some other equipment, like an extension cord, some adapter?
+* If you will be recorded, where can you move so you don't go out of picture?
+
+* If presenting "offline", what projector will you be using, and how will the slides look like on that specific projector, in that specific room, at that specific time of the day (ie lighting conditions).
+
+
+# Fourth: Deliver
+
+## Right before
+
+* Silence your phone.
+* Go to the bathroom.
+
+## During
+
+* Talk to one person at a time, not the entire crowd.
+  * Look him/her in the eyes, explain your point, then switch person.
+* Trust your self. The audience wants you too succeed, and they are interested in what you have to say.
+
+# Fifth: Aftermath
+
+* Seek feedback.
+* Reflect on feedback.
+* Share your talk online.
