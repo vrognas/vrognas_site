@@ -36,3 +36,6 @@ The main advantages lay in the rapidity and stability of the runs.
 ## References
 
 * Chan Kwong AHP, Calvier EAM, Fabre D, Gattacceca F, Khier S. Prior information for population pharmacokinetic and pharmacokinetic/pharmacodynamic analysis: overview and guidance with a focus on the NONMEM PRIOR subroutine. J Pharmacokinet Pharmacodyn. 2020;47(5):431-46. DOI: 10.1007/s10928-020-09695-z
+
+::: {#refs}
+:::
