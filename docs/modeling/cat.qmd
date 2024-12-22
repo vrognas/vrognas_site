@@ -6,8 +6,26 @@ title: "Categorical data"
 # Under construction
 :::
 
-* Logistic regression
+## Binary
+
+### Logistic regression
+
+Logistic regression is used to model binary data.
+It is often used for eg E-R or dropout modeling.
+
+E-R relationships of dichotomous endpoints based on logistic regression can be reliably assessed even in the presence of high shrinkage in the pharmacokinetic exposure metric [1,2].
+
+## Ordinal data
+
 * Composite scores
   * IRT
   * BI
   * PO
+
+## References
+
+1. PAGE 31 (2023) Abstr 10663 [https://www.page-meeting.org/?abstract=10663]
+2. PAGE 32 (2024) Abstr 11183 [https://www.page-meeting.org/?abstract=11183]
+
+::: {#refs}
+:::
