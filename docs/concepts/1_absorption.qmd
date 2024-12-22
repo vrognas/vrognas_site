@@ -48,3 +48,7 @@ While this approach may not always improve predictive performance, it can be val
 
 - **F-specific covariates** are suspected, or  
 - **Residual unexplained variability (RUV)** must be accounted for in future simulations.
+
+## References
+
+* [Brochot et al. (2024), *Comparison of Common Methodologies for Accounting for IIV for Oral Bioavailability in the Absence of Intravenous Data*](https://www.page-meeting.org/default.asp?abstract=11260)
