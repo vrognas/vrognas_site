@@ -32,4 +32,27 @@ This generally makes a more water soluble substance that can be excreted through
 
 ## Renal CL (excretion)
 
+Kidney function is often checked using GFR (glomerular filtration rate) estimating equations.
+These equations use endogenous biomarkers, like creatinine and cystatin C, along with age, sex, and weight, to estimate how well the kidneys work.
+
+There are many equations for estimating GFR, some of these are designed for specific populations.
+The estimated GFR from these equations are usually similar.
+However, differences appear at high GFR levels, especially when the values go above 150 mL/min/1.73 m^2^, a condition called augmented renal clearance.
+
+The most recommended equation right now is the 2021 version of the CKD-EPI formula [@inkerNewCreatinineCystatin2021]. This version does not consider race (@eq-ckd-epi-2021).
+
+**CKD-EPI (2021) expressed as a single equation:**
+$$
+\text{eGFR} = 142 \times \text{min}(\frac{\text{Scr}}{K}, 1)^{\alpha} \times \text{max}(\frac{\text{Scr}}{K}, 1)^{-1.200} \times 0.9938^{\text{Age}} \times 1.012 [\text{if female}]
+$$ {#eq-ckd-epi-2021}
+
+| Abbreviations | Units | Description |
+| :------------ | :--- | :--- |
+| eGFR | mL/min/1.73 m^2^ | Estimated glomerular filtration rate |
+| Scr  | mg/dL | Serum creatinine (standardized) |
+| $K$ | | 0.7 (females) or 0.9 (males) |
+| $\alpha$ | | -0.241 (females) or -0.302 (males) |
+| min() | | indicates the minimum of $\frac{\text{Scr}}{K}$ or 1 |
+| max() | | indicates the maximum of $\frac{\text{Scr}}{K}$ or 1 |
+
 In general, if the serum creatinine rises at 2--3 mg/dl per day then the GFR is near zero.
