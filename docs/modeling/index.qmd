@@ -6,20 +6,6 @@ title: "Pharmacometric Modeling Strategies"
 # Under construction
 :::
 
-## Alternatives in PKPD modelling
-
-* Assume a PK model
-  * Estimate PK and PD parameters in a simultaneous fit (SIM)
-  * Estimate PK parameters first and then fit PD
-    * Condition on individual PK parameter estimates
-      * Assume no error in parameters (IPP = Individual PK Parameters)
-      * Account for error in parameters (IPPSE = Individual PK Parameters Standard Error) [@lacroixEvaluationIPPSEAlternative2012]
-    * Fix population PK parameters
-      * Include individual PK data (PPP&D = Population PK Parameters & Data)
-      * Don’t include individual PK data (PPP = Population PK Parameters)
-
-Abbreviations in Zhang et al 2003 [@zhangSimultaneousVsSequential2003]  
-
 ## Important considerations
 
 ### Impact of a model [@musuambaScientificRegulatoryEvaluation2021; @skottheimrustenScientificRegulatoryEvaluation2021]
@@ -42,6 +28,39 @@ Abbreviations in Zhang et al 2003 [@zhangSimultaneousVsSequential2003]
   * Need-to-know: Will affect conclusion (Major objection)
   * Good-to-know: Could affect conclusion (Other concern)
   * Nice-to-know: Won't affect conclusion (avoid asking this question)
+
+## Pharmacometric Modeling Strategies
+
+### Using PopPK Models for a New Indication
+
+1. Start with an Existing Model: You have a population pharmacokinetic (PopPK) model for Drug X used in Indication A.
+2. Gather New Data: New data is collected for Drug X in a different setting, Indication B.
+3. Evaluate the Existing Model: Test the current PopPK model with the new data from Indication B without making any changes.
+4. Assess Model Fit
+  * If the model fits well: Use the existing model to estimate individual drug exposure.
+  * If the model does not fit well: Update the PopPK model by combining the old data with the new data.
+    * If the old data is unavailable, perhaps a prior can be used.
+5. Re-evaluate the Updated Model
+  * If the updated model fits the new data well: Use it to estimate individual drug exposure.
+  * If it still doesn’t fit: Add more covariates, e.g. indication.
+6. Refine the Model if Needed
+  * If the updated model still doesn’t fit well: Consider improving the basic structure of the model to better capture the drug’s behavior.
+
+By following these steps, you can effectively use an existing PopPK model for a new Indication setting, ensuring accurate estimates of drug exposure.
+
+### Alternatives in PKPD modelling
+
+* Assume a PK model
+  * Estimate PK and PD parameters in a simultaneous fit (SIM)
+  * Estimate PK parameters first and then fit PD
+    * Condition on individual PK parameter estimates
+      * Assume no error in parameters (IPP = Individual PK Parameters)
+      * Account for error in parameters (IPPSE = Individual PK Parameters Standard Error) [@lacroixEvaluationIPPSEAlternative2012]
+    * Fix population PK parameters
+      * Include individual PK data (PPP&D = Population PK Parameters & Data)
+      * Don’t include individual PK data (PPP = Population PK Parameters)
+
+Abbreviations in Zhang et al 2003 [@zhangSimultaneousVsSequential2003]  
 
 ## Terminology
 
