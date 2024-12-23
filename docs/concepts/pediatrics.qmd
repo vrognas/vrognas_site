@@ -146,7 +146,7 @@ They could cause problems with extrapolation after refitting the model with stan
 
 In neonates the maturation level of eliminating organs influences the estimates and in adults the body composition will affect them.
 Data from pediatric development programs are often too limited to confirm whether allometric exponents differ from theoretical values.
-MSWP considers the use of fixed exponents both scientifically justified and practical when developing popPK models in children.
+EMA MWP (Methodology Working Party) considers the use of fixed exponents both scientifically justified and practical when developing popPK models in children.
 
 In lower ages (**< 2 years**) there are also maturation functions that come into play.
 For these pediatric patients it is **important to include maturation function(s)** to describe pediatric PK (@lst-cl-mat).
@@ -174,13 +174,13 @@ This is due to high correlation between body weight and age in pediatric patient
 
 #### Step 2: Prepare a Data Set with Pediatric Simulation Subjects
 
-Use either NHANES (US subjects 2--18 years), or a growth chart (e.g. WHO).
+Use either [NHANES](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023) (US subjects 2--18 years), or a growth chart (e.g. WHO).
 The WHO data is preferred for non-US studies or for pediatric patients less than 2 years of age.
 
 ::: {.callout-warning}
-# NHANES has limited data for younger age groups
+# [NHANES](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023) has limited data for younger age groups
 
-Because NHANES involves sampling individual subjects, there may be limited data in certain categories---especially for younger patients.
+Because [NHANES](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023) involves sampling individual subjects, there may be limited data in certain categories---especially for younger patients.
 Therefore, for younger patients---usually those under 2 years of age, but sometimes under 6---it’s better to use the CDC or WHO growth charts instead.
 :::
 
@@ -263,6 +263,7 @@ Considerations include:
 1. [ICH E11(R1) (2017)](https://database.ich.org/sites/default/files/E11_R1_Addendum.pdf)
 2. [ICH E11A (2024)](https://database.ich.org/sites/default/files/ICH_E11A_Guideline_Step4_2024_0821.pdf)
 3. [EMA M&S QA (2023)](https://www.ema.europa.eu/en/human-regulatory-overview/research-and-development/scientific-guidelines/clinical-pharmacology-and-pharmacokinetics/modelling-and-simulation-questions-and-answers)
+4. [National Health and Nutrition Examination Survey (NHANES)](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023)
 
 ::: {#refs}
 :::
