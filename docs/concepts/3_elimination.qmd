@@ -56,3 +56,13 @@ $$ {#eq-ckd-epi-2021}
 | max() | | indicates the maximum of $\frac{\text{Scr}}{K}$ or 1 |
 
 In general, if the serum creatinine rises at 2--3 mg/dl per day then the GFR is near zero.
+
+
+## Modeling
+
+Ususally, elimination is modeled using a first-order elimination rate, meaning that the rate of elimination depends on the current drug concentration.
+
+## References
+
+::: {#refs}
+:::
