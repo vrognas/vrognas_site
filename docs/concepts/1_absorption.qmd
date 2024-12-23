@@ -37,6 +37,8 @@ If a drug exhibits enterohepatic recirculation, it is common to see two or more 
 
 ## Modeling
 
+### Bioavailability
+
 Each component in the bioavailability equation can vary due to drug-specific physicochemical properties or physiological factors.
 In turn, these variations can contribute to inter-individual variability (IIV) in **F**.
 
