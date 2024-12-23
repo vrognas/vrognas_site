@@ -26,3 +26,13 @@ Typical physiological valoumes for a 70 kg adult:
 * V~water,extracellular~ ≈ 16 L
 * V~cells~ ≈ 27 L
 * V~water,total~ ≈ 42 L
+
+## Modeling
+
+The distribution of drug is often modeled using *compartments*.
+The most common distribution models are one and two-compartment models.
+
+## References
+
+::: {#refs}
+:::
