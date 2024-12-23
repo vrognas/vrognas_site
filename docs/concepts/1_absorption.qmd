@@ -52,3 +52,6 @@ While this approach may not always improve predictive performance, it can be val
 ## References
 
 * [Brochot et al. (2024), *Comparison of Common Methodologies for Accounting for IIV for Oral Bioavailability in the Absence of Intravenous Data*](https://www.page-meeting.org/default.asp?abstract=11260)
+
+::: {#refs}
+:::
