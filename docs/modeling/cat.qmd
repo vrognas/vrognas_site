@@ -15,6 +15,15 @@ It is often used for eg E-R or dropout modeling.
 
 E-R relationships of dichotomous endpoints based on logistic regression can be reliably assessed even in the presence of high shrinkage in the pharmacokinetic exposure metric [1,2].
 
+::: {.callout-note}
+
+# Which exposure metric should be used in E-R?
+
+Ususally, just try all of them (e.g., C~avg~, C~trough~, C~max~), and choose the best one (lowest AIC).
+They are most of the time highly correlated (>0.95), i.e., any of them can be used.
+
+:::
+
 ## Ordinal data
 
 * Composite scores
