@@ -1,0 +1,29 @@
+---
+title: "Modeling variability"
+---
+
+:::{.callout-caution}
+# Under construction
+:::
+
+## Inter-individual variability
+
+IIV, ETA, OMEGA
+
+## Inter-occasion variability
+
+IOV, ETA, OMEGA
+
+## Residual variability
+
+RUV, EPS, SGIMA
+
+* Homoscedasticity (additive error)
+* Heteroscedasticity (proportional error)
+
+Slope-intercept model
+
+## References
+
+::: {#refs}
+:::

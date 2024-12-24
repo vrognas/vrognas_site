@@ -151,14 +151,24 @@ website:
       - section: "Modeling Methods"
         href: docs/modeling/index.qmd
         contents:
-        - text: "Continuous data"
-          href: docs/modeling/cts.qmd
-        - text: "Categorical data"
-          href: docs/modeling/cat.qmd
-        - text: "Time-to-event data"
-          href: docs/modeling/tte.qmd
+        - text: "PK"
+          href: docs/modeling/pk/pk.qmd
+        - text: "PD"
+          href: docs/modeling/pd/pd.qmd
+        - text: "PKPD/E-R"
+          href: docs/modeling/pkpd/pkpd.qmd
+        - text: "Time-to-event"
+          href: docs/modeling/tte/tte.qmd
+        - section: "Goodness-of-fit"
+          contents:
+          - text: "Continuous data"
+            href: docs/modeling/gof/gof-cts.qmd
+          - text: "Categorical data"
+            href: docs/modeling/gof/gof-cat.qmd
         - text: "Priors"
           href: docs/modeling/priors.qmd
+        - text: "Variability"
+          href: docs/modeling/variability.qmd
     - id: tools-of-the-trade
       title: "Tools of the Trade"
       collapse-level: 2

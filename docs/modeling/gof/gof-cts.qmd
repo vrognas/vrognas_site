@@ -1,0 +1,38 @@
+---
+title: "Goodness-of-fit for continuous data"
+---
+
+:::{.callout-caution}
+# Under construction
+:::
+
+The graphs are broadly separated into two categories: prediction-based (basic) and simulation-based tools.
+
+### Prediction-based evaluation
+
+#### Population-based graphs
+
+| Graphs | What does it assess? |
+| :----- | :------------------- |
+| **DV vs. PRED** | Trends may suggest a modification of **structural model**, **RUV model** or **IIV model**. |
+| **CWRES vs (TIME, PRED)** | Trends may suggest a modification of **structural model**, **RUV model**, or **IIV model**. Trends by conditioning on covariates suggest including covariates. |
+| **CWRES vs COV** | Trends suggest **including covariates** or changing the **covariate model**. |
+
+: Various evaluation graphs in nonlinear mixed effect model aand proposal for a core set of evaluation graphs {#tbl-gof-pop tbl-colwidths="[25, 75]"}
+
+#### Individual-based graphs
+
+| Graphs | What does it assess? |
+| :--- | :--- |
+| Individual fits: **(DV, PRED, IPRED) vs TIME** | Expect evenly distributed observation around the individual predicted curve, not spot-on predictions (indication of overfit). This diagnostic is not useful for sparse data. |
+| **DV vs IPRED** | Only evaluates **strutural model and RUV**, not IIV. |
+| **IWRES vs (TIME, IPRED)** | **Evaluates RUV**. A cone-shaped graph of IWRES vs IPRED suggests a change in the error model. |
+| **ETAx vs ETAy** | Prefer random sampling of ETAs from posterior distribution. Correlation between EBE suggests including **correlation between random effects** unless data are sparse. |
+| **ETA vs COV** | Trends between EBE and covariates suggest **including covariates** or changing the **covariate model**. |
+
+: Various evaluation graphs in nonlinear mixed effect model aand proposal for a core set of evaluation graphs {#tbl-gof-ind tbl-colwidths="[25, 75]"}
+
+### Simulation-based evaluation
+
+(pc)VPC: Trends may suggest a modification of the structural model, the residual error model, or the parameter variability model.
+Trends when conditioning on covariates suggest including covariates or changing the covariate model.

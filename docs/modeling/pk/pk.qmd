@@ -1,0 +1,62 @@
+---
+title: "PopPK Modeling Strategies"
+---
+
+:::{.callout-caution}
+# Under construction
+:::
+
+## General PopPK models
+
+### Absorption models
+
+#### Bioavailability
+
+Each component in the bioavailability equation can vary due to drug-specific physicochemical properties or physiological factors.
+In turn, these variations can contribute to inter-individual variability (IIV) in **F**.
+
+When **intravenous (IV) data** is unavailable for modeling oral pharmacokinetic (PK) data, a common practice is to attribute the IIV associated with **F** to the **apparent clearance (CL/F)** and **apparent volume of distribution (V/F)** parameters.
+By doing so, any correlation between these two parameters can also be estimated.
+
+Alternatively, one can directly introduce an IIV on **F** by fixing its value to 1 (renaming it *F~rel~*, "rel" for "relative") and estimating the inter-individual variability in **F~rel~** itself.
+While this approach may not always improve predictive performance, it can be valuable if:
+
+- **F-specific covariates** are suspected, or  
+- **Residual unexplained variability (RUV)** must be accounted for in future simulations.
+
+### Distribution models
+
+The distribution of drug is often modeled using *compartments*.
+The most common distribution models are one and two-compartment models.
+
+### Elimination models
+
+Ususally, elimination is modeled using a first-order elimination rate, meaning that the rate of elimination depends on the current drug concentration.
+
+## Specific PopPK models
+
+* Monoclonal antibodies: TMDD models and their approximations
+
+## Using PopPK Models for a New Indication
+
+1. Start with an Existing Model: You have a population pharmacokinetic (PopPK) model for Drug X used in Indication A.
+2. Gather New Data: New data is collected for Drug X in a different setting, Indication B.
+3. Evaluate the Existing Model: Test the current PopPK model with the new data from Indication B without making any changes.
+4. Assess Model Fit
+  * If the model fits well: Use the existing model to estimate individual drug exposure.
+  * If the model does not fit well: Update the PopPK model by combining the old data with the new data.
+    * If the old data is unavailable, perhaps a prior can be used.
+5. Re-evaluate the Updated Model
+  * If the updated model fits the new data well: Use it to estimate individual drug exposure.
+  * If it still doesn’t fit: Add more covariates, e.g. indication.
+6. Refine the Model if Needed
+  * If the updated model still doesn’t fit well: Consider improving the basic structure of the model to better capture the drug’s behavior.
+
+By following these steps, you can effectively use an existing PopPK model for a new Indication setting, ensuring accurate estimates of drug exposure.
+
+## References
+
+* [Brochot et al. (2024), *Comparison of Common Methodologies for Accounting for IIV for Oral Bioavailability in the Absence of Intravenous Data*](https://www.page-meeting.org/default.asp?abstract=11260)
+
+::: {#refs}
+:::

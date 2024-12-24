@@ -1,10 +1,24 @@
 ---
-title: "Categorical data"
+title: "PKPD or Exposure-Response modeling"
 ---
 
 :::{.callout-caution}
 # Under construction
 :::
+
+## PKPD modeling strategies
+
+* Assume a PK model
+  * Estimate PK and PD parameters in a simultaneous fit (SIM)
+  * Estimate PK parameters first and then fit PD
+    * Condition on individual PK parameter estimates
+      * Assume no error in parameters (IPP = Individual PK Parameters)
+      * Account for error in parameters (IPPSE = Individual PK Parameters Standard Error) [@lacroixEvaluationIPPSEAlternative2012]
+    * Fix population PK parameters
+      * Include individual PK data (PPP&D = Population PK Parameters & Data)
+      * Don’t include individual PK data (PPP = Population PK Parameters)
+
+Abbreviations in Zhang et al 2003 [@zhangSimultaneousVsSequential2003]  
 
 ## Binary
 

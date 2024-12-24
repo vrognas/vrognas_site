@@ -35,25 +35,7 @@ If a drug exhibits enterohepatic recirculation, it is common to see two or more 
 
 ![Enterohepatic recirculation.](images/enterohepatic-recirculation.png){#fig-enterohepatic-recirculation}
 
-## Modeling
-
-### Bioavailability
-
-Each component in the bioavailability equation can vary due to drug-specific physicochemical properties or physiological factors.
-In turn, these variations can contribute to inter-individual variability (IIV) in **F**.
-
-When **intravenous (IV) data** is unavailable for modeling oral pharmacokinetic (PK) data, a common practice is to attribute the IIV associated with **F** to the **apparent clearance (CL/F)** and **apparent volume of distribution (V/F)** parameters.
-By doing so, any correlation between these two parameters can also be estimated.
-
-Alternatively, one can directly introduce an IIV on **F** by fixing its value to 1 (renaming it *F~rel~*, "rel" for "relative") and estimating the inter-individual variability in **F~rel~** itself.
-While this approach may not always improve predictive performance, it can be valuable if:
-
-- **F-specific covariates** are suspected, or  
-- **Residual unexplained variability (RUV)** must be accounted for in future simulations.
-
 ## References
-
-* [Brochot et al. (2024), *Comparison of Common Methodologies for Accounting for IIV for Oral Bioavailability in the Absence of Intravenous Data*](https://www.page-meeting.org/default.asp?abstract=11260)
 
 ::: {#refs}
 :::
