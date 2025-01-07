@@ -5,3 +5,5 @@ title: "Concepts of the Craft"
 This section is a collection of documents that provide a high-level overview of a specific concept in the field of pharmacometrics.
 They are intended to be a quick reference.
 Each concept includes information on the definition, use cases, and implementation details for the concept.
+
+![](images/index_concepts.png)

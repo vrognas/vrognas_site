@@ -19,3 +19,5 @@ subtitle: "All the information you need to learn more about the topics covered o
 * [LaTeX](https://www.latex-project.org/)
 * [Git](https://git-scm.com/)
 * [GitHub](https://github.com/)
+
+![](images/index_tools.png)

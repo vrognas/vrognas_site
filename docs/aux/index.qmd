@@ -11,3 +11,5 @@ title: "Auxiliary Arts"
 Create and share beautiful images of your source code.
 
 [https://carbon.now.sh](https://carbon.now.sh)
+
+![](images/index_aux.png)

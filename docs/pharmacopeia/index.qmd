@@ -23,3 +23,5 @@ It is organized according to [ATC-codes](https://atcddd.fhi.no/atc_ddd_index/) i
 | V | Various |
 
 : Anatomical Therapeutic Chemical (ATC) Classification System {#tbl-atc tbl-colwidths="[10, 90]"}
+
+![](images/index_pharmacopeia.png)

@@ -43,3 +43,5 @@ A metric which quantifies how much individual estimates regress towards the popu
 
 ::: {#refs}
 :::
+
+![](images/index_modeling.png)
