@@ -68,7 +68,13 @@ https://www.supremo.co.uk/typeterms/
 If you cannot write; read.
 
 If interesting, proceed to next.
+
 1. Title + keywords
 2. Abstract + conclusion
 3. Discussion
 4. Methods
+
+## References
+
+::: {#refs}
+:::
