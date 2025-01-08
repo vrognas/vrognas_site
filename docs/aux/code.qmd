@@ -1,0 +1,96 @@
+---
+title: "Coding Practices"
+---
+
+:::{.callout-caution}
+# Under construction
+:::
+
+## Coding
+
+### R
+
+#### Naming
+
+#### Style
+
+tidyverse style guide
+
+### NONMEM
+
+* Always MU-reference, in case EM-methods are needed.
+  * Test all estimation methods.
+
+#### Naming
+
+Use descriptive variable names in snake_case or SCREAMING_SNAKE_CASE, not generic ones.
+Try to make them as concise as possible.
+
+```verilog
+P = THETA(1) ; Don't do this
+probability_no_event = THETA(1) ; Better
+prob_no_event = THETA(1) ; Best
+```
+
+#### Style
+
+Always spell out the control record in full, i.e., no abbreviations.
+
+```verilog
+$COVARIANCE ; Like this
+$COV ; Not like this
+```
+
+Always use a newline before a control record.
+
+Always use a newline after the following control records: `$PRED`, `$PK`, `$DES`, `$ERROR`.
+
+```verilog
+$PK
+
+A = 1
+
+$ERROR
+
+Y = DV
+
+```
+
+Control records that can be written on a single line, or only consists of options (e.g. `$ESTIMATION`), does not need a newline after the control record.
+
+```verilog
+$PROBLEM dummy
+
+$INPUT ID TIME DV EVID
+
+$PK
+
+A = 1
+
+$ERROR
+
+Y = DV
+
+$ESTIMATION METHOD=1
+
+$COVARIANCE MATRIX=R
+```
+
+Separate all math operators by spaces, except exponentials.
+
+```verilog
+A = 1 + 4 - 3 * 5 / 8**3
+```
+No space between function name and parentheses.
+
+```verilog
+LOG(A)
+```
+
+An IF-statement is not a function, so use a space (and indentation):
+
+```verilog
+IF (A > B) THEN
+  1+1
+ENDIF
+```
