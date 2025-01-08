@@ -6,56 +6,64 @@ title: "Reproducible Research"
 # Under construction
 :::
 
-* Naming
-    * Name folders using only A-Z, a-z, 0-9, -, _.
-    * Start folder names with a number for sorting purposes.
-* Always MU-reference, in case EM-methods are needed
-    * Test all estimation methods
-* Script all plots
-* Quarto-scripted report
-    * R.version
-    * rstudioapi::versionInfo()
-    * .packages()
-    * devtools::session_info(pkgs = "attached")
-* Use git
-    * Do not track (messy) model development in git
-        * git history becomes too messy otherwise
-        * Use rsync if needed
-    * Track the Rmd-file for the report
-        * This tracks the models. The models are still in the “messy” folder.
-            * base_model <- run25.mod
-            * covariate_model <- run63.mod
-            * final_model <- run67.mod
-            * simulation_model <- run68.mod
-        * Runrecord
-            * runno
-            * based on
-            * ofv
-            * dofv
-            * condition number (CN)
-    * Do not track produced PDFs in git
+## Naming
 
-Folder structure:
+* Name files/folders using only A-Z, a-z, 0-9, -, _.
+  * Start folder names with a number for sorting purposes.
+* In general, use kebab-case for naming (easier to read than snake_case).
+  * If there are multiple parts to a name (e.g., a description, a date, and an author), use snake_case to separate between parts, and kebab-case within the parts (e.g., `descriptive-name_2025-01-08_viktor-rognas.ext`)
+
+## Coding
+
+* Always MU-reference, in case EM-methods are needed.
+  * Test all estimation methods.
+* Script all plots.
+* Quarto-scripted report.
+  * `R.version`
+  * `rstudioapi::versionInfo()`
+  * `.packages()`
+  * `devtools::session_info(pkgs = "attached")`
+
+### Use version control (git or svn)
+
+* Do not track model development in git, it is too messy, which messes with the git history.
+  * Use `rsync` if needed
+  * Track the Rmd-file for the report
+  * This tracks the models. The models are still in the "messy" folder.
+    * base_model <- run25.mod
+    * covariate_model <- run63.mod
+    * final_model <- run67.mod
+    * simulation_model <- run68.mod
+  * Runrecord
+    * runno
+    * based on
+    * OFV
+    * dOFV
+    * Condition number (CN)
+* Do not track produced PDFs in git
+
+## Folder structure:
+
 * model
-    * pk
-        * .mod
-    * pd
-        * .mod
+  * pk
+    * .mod
+  * pd
+    * .mod
 * report
-    * 1a
-        * .tex
-        * .pdf
-    * 1b
-        * .tex
-        * .pdf
-    * 1
-        * .tex
-        * .pdf
+  * 1a
+    * .tex
+    * .pdf
+  * 1b
+    * .tex
+    * .pdf
+  * 1
+    * .tex
+    * .pdf
 * data
-    * raw_data
-    * dat1.R
-    * dat1.csv
-    * dat2.R
-    * dat2.csv
+  * raw_data
+  * dat1.R
+  * dat1.csv
+  * dat2.R
+  * dat2.csv
 * presentation
-    * slides.pptx
+  * slides.pptx
