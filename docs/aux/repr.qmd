@@ -6,24 +6,6 @@ title: "Reproducible Research"
 # Under construction
 :::
 
-## Naming
-
-* Name files/folders using only A-Z, a-z, 0-9, -, _.
-  * Start folder names with a number for sorting purposes.
-* In general, use kebab-case for naming (easier to read than snake_case).
-  * If there are multiple parts to a name (e.g., a description, a date, and an author), use snake_case to separate between parts, and kebab-case within the parts (e.g., `descriptive-name_2025-01-08_viktor-rognas.ext`)
-
-## Coding
-
-* Always MU-reference, in case EM-methods are needed.
-  * Test all estimation methods.
-* Script all plots.
-* Quarto-scripted report.
-  * `R.version`
-  * `rstudioapi::versionInfo()`
-  * `.packages()`
-  * `devtools::session_info(pkgs = "attached")`
-
 ### Use version control (git or svn)
 
 * Do not track model development in git, it is too messy, which messes with the git history.
@@ -41,6 +23,13 @@ title: "Reproducible Research"
     * dOFV
     * Condition number (CN)
 * Do not track produced PDFs in git
+
+## File/folder naming
+
+* Name files/folders using only A-Z, a-z, 0-9, -, _.
+  * Start folder names with a number for sorting purposes.
+* In general, use kebab-case for naming (easier to read than snake_case).
+  * If there are multiple parts to a name (e.g., a description, a date, and an author), use snake_case to separate between parts, and kebab-case within the parts (e.g., `descriptive-name_2025-01-08_viktor-rognas.ext`)
 
 ## Folder structure:
 
@@ -67,3 +56,21 @@ title: "Reproducible Research"
   * dat2.csv
 * presentation
   * slides.pptx
+
+## Coding
+
+### R
+
+* Script all plots.
+* Quarto-scripted report.
+  * `R.version`
+  * `rstudioapi::versionInfo()`
+  * `.packages()`
+  * `devtools::session_info(pkgs = "attached")`
+
+### NONMEM
+
+When using Monte-Carlo estimation methods (e.g., `SAEM`, `IMP`, or `FOCE MCETA)`), always specify the `SEED` option and `RANMETHOD=P`.
+Also, it is recommended to specify the `RANMETHOD` option accordingy:
+* For `SAEM` and `IMP`: `RANMETHOD=3S2P`
+* For `MCETA: `RANMETHOD=4P` (`$SIMULATION` uses this method by default)
