@@ -6,10 +6,77 @@ title: "Antibiotics"
 # Under construction
 :::
 
-![](images/antibiotic-classes.png){#fig-antibiotic-classes}
+Antibacterials (@fig-antibiotic-classes) are drugs used to treat bacterial infections.
+We often use the words *antimicrobials*, *antibacterials*, and *antibiotics* for these compounds.
+They are similar terms, but each has a specific meaning:
+
+- **Antimicrobials** target all kinds of microorganisms, such as bacteria, fungi, viruses, and protozoa.
+- **Antibacterials** only act on bacteria. They include both antibiotics and some common disinfectants.
+- **Antibiotics** are **naturally produced** by microorganisms and kill or inhibit other microorganisms, mainly bacteria.
+
+The term "antibiotic" comes from the Greek words *anti* ("against") and *biotikos* ("concerning life").
+Strictly speaking, antibiotics refers only to naturally produced substances, and not synthetic or semi-synthetic types (e.g., quinolones).
+However, it is commonly used interchangeably with antibacterials.
+
+## How do antibiotics work?
+
+Antibiotics interfere with vital processes in bacterial cells.
+They may kill the bacteria (bactericidal) or stop their growth (bacteriostatic).
+
+### Bactericidal and bacteriostatic antibiotics
+
+**Bactericidal** antibiotics kill bacteria.
+**Bacteriostatic** antibiotics prevent bacteria from multiplying.
+The immune system then clears the infection.
+
+### Antibiotic targets in bacteria
+
+Different classes of antibiotics act on different parts of bacterial cells.
+They mainly target:
+
+1. The cell wall or membranes surrounding the cell.
+2. The DNA and RNA production machinery.
+3. The protein production machinery (ribosomes and related proteins).
+
+These structures do not exist in human or animal cells, so antibiotics typically do not harm our cells.
+However, side effects can still occur.
+
+![Types and classes of antibacterials.](images/antibiotic-classes.png){#fig-antibiotic-classes}
+
+### Narrow-spectrum and broad-spectrum antibiotics
+
+Some antibiotics have a **narrow** spectrum, meaning they act on only certain groups of bacteria.
+Others are **broad** spectrum and affect many bacterial species.
+Narrow-spectrum antibiotics are often preferred since they leave non-disease causing bacteria alone.
+However, broad-spectrum antibiotics are sometimes used when doctors are unsure of the exact bacteria causing the infection.
 
 ## Resistance
 
-* MDR: >= 1 agent, in >= 3 classes
-* XDR: >= 1 agent, in >= (all but 2) classes
-* PDR: all agents, in all classes
+Antibiotic resistance is a bacterias ability to survive the effects of an antibiotic.
+In the presence of the antibiotic, resistant bacteria live and multiply.
+Clinically, resistance means the bacterium can grow at drug exposures reached during standard treatment, leading to treatment failure.
+
+Bacteria gain resistance through:
+
+1. **Mutations** in their own DNA.
+2. **Horizontal gene transfer**, where they acquire DNA from other bacteria.
+
+If the new trait offers an advantage, the bacterium may pass it on to future generations or spread it through horizontal transfer.
+Resistant bacteria travel through food, water, global trade, or human travel.
+
+AMR Terminology:
+
+- **MDR**: Resistant to ≥1 agent in ≥3 classes  
+- **XDR**: Resistant to ≥1 agent in all but 2 classes
+- **PDR**: Resistant to all agents in all classes
+
+## PD-targets (indices)
+
+Time-dependent or concentration-dependent effect.
+
+* AUC/MIC
+* Cmax/MIC
+* time above MIC
+
+Decided by plotting log-kill against AUC, and fitting a non-linear regression.
+Highest R^2 decides the index.
