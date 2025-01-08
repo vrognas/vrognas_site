@@ -1,5 +1,5 @@
 ---
-title: "Antibiotics"
+title: "Antibacterials"
 ---
 
 :::{.callout-caution}
@@ -18,37 +18,37 @@ The term "antibiotic" comes from the Greek words *anti* ("against") and *biotiko
 Strictly speaking, antibiotics refers only to naturally produced substances, and not synthetic or semi-synthetic types (e.g., quinolones).
 However, it is commonly used interchangeably with antibacterials.
 
-## How do antibiotics work?
+## How do antibacterials work?
 
-Antibiotics interfere with vital processes in bacterial cells.
+Antibacterials interfere with vital processes in bacterial cells.
 They may kill the bacteria (bactericidal) or stop their growth (bacteriostatic).
 
-### Bactericidal and bacteriostatic antibiotics
+### Bactericidal and bacteriostatic antibacterials
 
-**Bactericidal** antibiotics kill bacteria.
-**Bacteriostatic** antibiotics prevent bacteria from multiplying.
+**Bactericidal** antibacterials kill bacteria.
+**Bacteriostatic** antibacterials prevent bacteria from multiplying.
 The immune system then clears the infection.
 
 ### Antibiotic targets in bacteria
 
-Different classes of antibiotics act on different parts of bacterial cells.
+Different classes of antibacterials act on different parts of bacterial cells.
 They mainly target:
 
 1. The cell wall or membranes surrounding the cell.
 2. The DNA and RNA production machinery.
 3. The protein production machinery (ribosomes and related proteins).
 
-These structures do not exist in human or animal cells, so antibiotics typically do not harm our cells.
+These structures do not exist in human or animal cells, so antibacterials typically do not harm our cells.
 However, side effects can still occur.
 
 ![Types and classes of antibacterials.](images/abx-classes.png){#fig-abx-classes}
 
-### Narrow-spectrum and broad-spectrum antibiotics
+### Narrow-spectrum and broad-spectrum antibacterials
 
-Some antibiotics have a **narrow** spectrum, meaning they act on only certain groups of bacteria.
+Some antibacterials have a **narrow** spectrum, meaning they act on only certain groups of bacteria.
 Others are **broad** spectrum and affect many bacterial species.
-Narrow-spectrum antibiotics are often preferred since they leave non-disease causing bacteria alone.
-However, broad-spectrum antibiotics are sometimes used when doctors are unsure of the exact bacteria causing the infection.
+Narrow-spectrum antibacterials are often preferred since they leave non-disease causing bacteria alone.
+However, broad-spectrum antibacterials are sometimes used when doctors are unsure of the exact bacteria causing the infection.
 
 ## Resistance
 
