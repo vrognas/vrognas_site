@@ -9,7 +9,7 @@ subtitle: "Get in contact with the community"
 
 # Mailing Lists
 
-* NMMUSERS
+* NMUSERS
 
 # Communities
 
@@ -17,9 +17,12 @@ subtitle: "Get in contact with the community"
 
 # Conferences
 
-* PAGE (annualy late june)
+* [PAGE](https://www.page-meeting.org) (annualy late june)
 * ACoP
-* Uppsala-Stockholm Pharmacometrics (bianually spring/fall)
+* [PAGANZ](https://www.paganz.org)
+* WCoP
+* [Stockholm-Uppsala Pharmacometrics](https://www.sup-meeting.se) (bianually spring/fall)
+* BeNeLux PMx
 
 # Journals
 
