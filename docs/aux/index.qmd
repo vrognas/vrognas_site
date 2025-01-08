@@ -6,6 +6,8 @@ title: "Auxiliary Arts"
 # Under construction
 :::
 
+Auxiliary arts are skills in areas that are related to being a professional.
+
 ## General Coding Practices
 
 Create and share beautiful images of your source code.
