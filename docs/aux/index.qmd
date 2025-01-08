@@ -7,5 +7,6 @@ title: "Auxiliary Arts"
 :::
 
 Auxiliary arts are skills in areas that are related to being a professional.
+These skills are often interdisciplinary and can significantly contribute to personal and professional development.
 
 ![](images/index_aux.png)
