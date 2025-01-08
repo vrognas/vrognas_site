@@ -36,7 +36,10 @@ title: "Email like a Boss"
   * AVOID CAPITAL LETTERS
   * Avoid irony and sarcasm
   * Do not use more than one exclamation mark!!!!!!! Same goes for the question mark???? And dots........ (what you want here is the *ellipsis* "...").
-  * Mind your language. Avoid profanity. Be polite, and not overly apologetic (see @fig-email). Use abbreviations, symbols, and emojis sparingly.
+  * Mind your language.
+    * Avoid profanity.
+    * Be polite, and not overly apologetic (see @fig-email).
+    * Use abbreviations, symbols, and emojis sparingly.
 
 :::{.callout-note}
 # Note on emojis
@@ -63,23 +66,23 @@ Correctly used, they are irreplaceable in making sure your message is read in th
 Do *not* take the opportunity to discuss a little bit of this and that.
 :::
 
-4.  **Add the recipients** after you've written the email, that way you don't accidentally send an unfinished email.
-5. **Read through** the email once (yes, once is enough), and correct any obvious mistakes.
+4. **Read through** the email once (yes, once is enough), and correct any obvious mistakes.
+5. **Add the recipients** after you've written the email, that way you don't accidentally send an unfinished email.
 6. **Hit send!** (or "Send Later" if you work outside office hours)
 
 * CC can be viewed as ”For your information”
-  * If you put someone in CC, you don't expect them to answer. It is either not actionable for them, or not directly related to them.
+  * If you put someone in CC, don't expect them to answer. It is either not actionable for them, or not directly related to them.
 * Don't overuse CC. Everybody does not need to know everything.
 
 :::{.callout-tip}
 # CC & BCC
 
-**CC = “carbon copy”.**
+**CC = "carbon copy".**
 Back in the days before internet and email, in order to create a copy of the letter you were writing, you had to place carbon paper between the one you were writing on and the paper that was going to be your copy.
 
-**BCC = “blind carbon copy.”**
-It’s called blind carbon copy because the other recipients won’t be able to see that someone else has been sent a copy of the email.
-While you can see a list of recipients when CC is used, that’s not the case with BCC.
+**BCC = "blind carbon copy."**
+It’s called *blind* carbon copy because the other recipients won't be able to see that someone else has been sent a copy of the email.
+While you can see a list of recipients when CC is used, that's not the case with BCC.
 No one ever sees the BCC list.
 A BCC can reply to the sender, but other recipients can't send to BCC recipient with "reply all".
 :::
