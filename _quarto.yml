@@ -207,6 +207,8 @@ website:
               href: docs/aux/meetings.qmd
           - text: "Reproducible Research"
             href: docs/aux/repr.qmd
+          - text: "Coding Practices"
+            href: docs/aux/code.qmd
           - text: "Self Management"
             href: docs/aux/self-mgmt.qmd
           - text: "Writing Tactics"
