@@ -96,8 +96,8 @@ website:
         #   href: docs/pharmacopeia/H_hormones/index.qmd
         - section: "(J) Antiinfectives for systemic use"
           contents:
-          - text: "Antibiotics"
-            href: docs/pharmacopeia/J_infections/antibiotics/antibiotics.qmd
+          - text: "Antibacterials"
+            href: docs/pharmacopeia/J_infections/antibacterials/antibacterials.qmd
           - text: "Antivirals"
             href: docs/pharmacopeia/J_infections/antivirals/antivirals.qmd
         - section: "(L) Antineoplastic & immunomodulating agents"
