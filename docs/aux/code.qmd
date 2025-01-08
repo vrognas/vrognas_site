@@ -8,6 +8,10 @@ title: "Coding Practices"
 
 ## Coding
 
+Create and share beautiful images of your source code.
+
+[https://carbon.now.sh](https://carbon.now.sh)
+
 ### R
 
 #### Naming
@@ -94,3 +98,8 @@ IF (A > B) THEN
   1+1
 ENDIF
 ```
+
+## References
+
+::: {#refs}
+:::
