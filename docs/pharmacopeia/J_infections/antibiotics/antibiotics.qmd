@@ -6,7 +6,7 @@ title: "Antibiotics"
 # Under construction
 :::
 
-Antibacterials (@fig-antibiotic-classes) are drugs used to treat bacterial infections.
+Antibacterials (@fig-abx-classes) are drugs used to treat bacterial infections.
 We often use the words *antimicrobials*, *antibacterials*, and *antibiotics* for these compounds.
 They are similar terms, but each has a specific meaning:
 
@@ -41,7 +41,7 @@ They mainly target:
 These structures do not exist in human or animal cells, so antibiotics typically do not harm our cells.
 However, side effects can still occur.
 
-![Types and classes of antibacterials.](images/antibiotic-classes.png){#fig-antibiotic-classes}
+![Types and classes of antibacterials.](images/abx-classes.png){#fig-abx-classes}
 
 ### Narrow-spectrum and broad-spectrum antibiotics
 
