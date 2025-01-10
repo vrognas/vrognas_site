@@ -224,6 +224,7 @@ website:
         href: https://scholar.google.com/citations?user=RBJi1XQAAAAJ
 format:
   html:
+    include-in-header: seo.html
     theme:
       light: [cosmo, theme-light.scss]
       dark: [cosmo, theme-dark.scss]
