@@ -7,6 +7,7 @@ title: "Data Visualization"
 :::
 
 [data-to-viz.com](https://www.data-to-viz.com)
+[dataviz-inspiration](https://www.dataviz-inspiration.com)
 
 ## Label line ends in time series with ggplot2^[https://drsimonj.svbtle.com/label-line-ends-in-time-series-with-ggplot2]
 
@@ -43,3 +44,10 @@ healthicons.org
 scidraw.io
 undraw.co
 smart.servier.com
+
+### Writing Alt Text for Data Visualization
+
+You probably can’t write text that conveys the entire meaning of a chart.
+But, that doesn’t mean that you shouldn’t try.
+
+![https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81](images/alt-text.png)
