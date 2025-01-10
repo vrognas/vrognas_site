@@ -18,16 +18,24 @@ Create and share beautiful images of your source code.
 
 https://indrajeetpatil.github.io/second-hardest-cs-thing/
 
+https://style.tidyverse.org/syntax.html#sec-objectnames
+
 How good a name is can be assessed by how detailed the accompanying comment needs to be.
 
 Good names:
 * Precise (but not too long)
+* Concise
+* Meaningful
 * Consistent
 * Difficult to misinterpret
 * Distinguishable
 * Searchable (i.e. updateable)
 * Pronounceable
 * Honor conventions (e.g. *n* for count)
+
+Generally, variable names should be nouns and function names should be verbs.
+
+Variable and function names should use only lowercase letters, numbers, and _.
 
 :::{.callout-note}
 # Example of coding standards adopted in OSP organization
@@ -65,16 +73,24 @@ Unlike regular functions, long names are less problematic for test functions bec
 * they are not called repeatedly throughout the codebase
 :::
 
+If you find yourself attempting to cram data into variable names (e.g. `model_2018`, `model_2019`, `model_2020`), consider using a list or data frame instead.
+
 Using generic names can improve code readability, but *only* if language or domain customs are followed.
 However, even when you think you need generic names, you are better off using descriptive names.
 
 * In type names, avoid using *class*, *data*, *object*, and *type* (e.g. bad: `classShape`, good: `Shape`)
-* In function names, avoid using *be*, *do*, *perform*, etc. (e.g. bad: `doAddition()`, good: `add()`)
 * But important details should be kept (e.g. okay: `child_height`, better: `child_height_cm`)
+
+##### Booleans or indicators
 
 Boolean variable names should convey what true or false values represent.
 In general, use positive terms for Booleans since they are easier to process.
 But if the variable is only ever used in its false version (e.g. `is_volcano_inactive`), the negative version can be easier to work with.
+
+##### Functions
+
+Strive to use verbs for function names.
+Avoid using *be*, *do*, *perform*, etc. (e.g. bad: `doAddition()`, good: `add()`)
 
 #### Style
 
@@ -140,21 +156,35 @@ $ESTIMATION METHOD=1
 $COVARIANCE MATRIX=R
 ```
 
-Separate all math operators by spaces, except exponentials.
+Separate all infix operators by spaces, except exponentials.
 
 ```verilog
 A = 1 + 4 - 3 * 5 / 8**3
 ```
-No space between function name and parentheses.
+
+Adding extra spaces is ok if it improves alignment of `=`.
+
+Do not put spaces inside or outside parentheses for regular function calls.
 
 ```verilog
+; Good
 LOG(A)
+
+; Bad
+LOG (A)
+LOG( A )
 ```
 
-An IF-statement is not a function, so use a space (and indentation):
+Place a space before and after () when used with `IF`.
 
 ```verilog
+; Good
 IF (A > B) THEN
+  1+1
+ENDIF
+
+; Bad
+IF(A > B) THEN
   1+1
 ENDIF
 ```
