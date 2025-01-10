@@ -16,6 +16,66 @@ Create and share beautiful images of your source code.
 
 #### Naming
 
+https://indrajeetpatil.github.io/second-hardest-cs-thing/
+
+How good a name is can be assessed by how detailed the accompanying comment needs to be.
+
+Good names:
+* Precise (but not too long)
+* Consistent
+* Difficult to misinterpret
+* Distinguishable
+* Searchable (i.e. updateable)
+* Pronounceable
+* Honor conventions (e.g. *n* for count)
+
+:::{.callout-note}
+# Example of coding standards adopted in OSP organization
+
+* Use all ALL_CAPS for constant variables (`public const double PI = 3.14;`)
+* Prefix private/protected member variable with _ (`private int _currentDebt`)
+* Use Pascal Casing for class names (`public class GlobalAccounting`)
+* Use Pascal Casing for public and protected method name (`public void GetRevenues()`)
+* Use Camel Casing for private method name (`private int balanceBooks()`)
+
+:::
+
+```r
+# not ideal - too imprecise
+d
+
+# okay - can use more precision
+days
+
+# good - middle ground
+days_since_last_accident
+
+# not ideal - unnecessarily precise
+days_since_last_accident_floor_4_lab_23
+
+...
+```
+
+:::{.callout-note}
+Don’t hesitate to choose lengthy names for **test** functions.
+
+Unlike regular functions, long names are less problematic for test functions because
+
+* they are not visible or accessible to the users
+* they are not called repeatedly throughout the codebase
+:::
+
+Using generic names can improve code readability, but *only* if language or domain customs are followed.
+However, even when you think you need generic names, you are better off using descriptive names.
+
+* In type names, avoid using *class*, *data*, *object*, and *type* (e.g. bad: `classShape`, good: `Shape`)
+* In function names, avoid using *be*, *do*, *perform*, etc. (e.g. bad: `doAddition()`, good: `add()`)
+* But important details should be kept (e.g. okay: `child_height`, better: `child_height_cm`)
+
+Boolean variable names should convey what true or false values represent.
+In general, use positive terms for Booleans since they are easier to process.
+But if the variable is only ever used in its false version (e.g. `is_volcano_inactive`), the negative version can be easier to work with.
+
 #### Style
 
 tidyverse style guide
