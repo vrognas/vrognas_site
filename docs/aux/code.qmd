@@ -33,9 +33,8 @@ Good names:
 * Pronounceable
 * Honor conventions (e.g. *n* for count)
 
-Generally, variable names should be nouns and function names should be verbs.
-
-Variable and function names should use only lowercase letters, numbers, and _.
+Use **snake_case** for variable/object and function names.
+Variable/object names should be **nouns** and function names should be **verbs**.
 
 :::{.callout-note}
 # Example of coding standards adopted in OSP organization
@@ -49,19 +48,21 @@ Variable and function names should use only lowercase letters, numbers, and _.
 :::
 
 ```r
-# not ideal - too imprecise
-d
+# bad
+t
 
-# okay - can use more precision
+# Not ideal - too imprecise
+time
+
+# Okay - can use more precision
 days
 
-# good - middle ground
-days_since_last_accident
+# Good - middle ground
+days_since_last_dose
 
-# not ideal - unnecessarily precise
-days_since_last_accident_floor_4_lab_23
+# Not ideal - unnecessarily precise
+days_since_last_dose_floor_4_lab_23
 
-...
 ```
 
 :::{.callout-note}
