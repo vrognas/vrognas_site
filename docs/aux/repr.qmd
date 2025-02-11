@@ -33,29 +33,38 @@ title: "Reproducible Research"
 
 ## Folder structure:
 
-* model
-  * pk
-    * .mod
-  * pd
-    * .mod
-* report
-  * 1a
-    * .tex
-    * .pdf
-  * 1b
-    * .tex
-    * .pdf
-  * 1
-    * .tex
-    * .pdf
-* data
-  * raw_data
-  * dat1.R
-  * dat1.csv
-  * dat2.R
-  * dat2.csv
-* presentation
-  * slides.pptx
+```r
+project/
+  - README.md       # Project description
+  - input/
+    - data/         # All input data files
+      - raw_data/   # Untouched original data files
+        - raw_data.csv
+      - dat1.csv
+      - dat2.csv
+  - R/              # R-scripts
+      - dat1.R
+      - dat2.R
+  - NONMEM/
+    - model/        # Model files
+      - pk/
+        - run001.mod
+      - pd/
+        - run002.mod
+  - output/         # Results
+    - report/
+      - 1a/
+        - .tex
+        - .pdf
+      - 1b/
+        - .tex
+        - .pdf
+      - 1/
+        - .tex
+        - .pdf
+    - presentation/ # Communication
+      - slides.pptx
+```
 
 ## Coding
 
