@@ -4,14 +4,15 @@ title: "Pediatric Pharmacometrics"
 
 The use of *model informed drug development* (MIDD) approaches in pediatric drug development is highly recommended due to:
 
-* Practical and ethical limitations in data collection.
-* Ability to quantify the effects of growth and maturation by leveraging data from literature and older patients.
+* Practical and ethical **limitations in data collection**.
+* Ability to **quantify the effects of growth and maturation** by leveraging data from literature and older patients.
 
 ## Pediatric age terminology
 
-The terminology used around pediatric age is commonly <span class="red-underline">**inconsistent**</span>.
-Relating age to last menstrual period is done because most women know when their last period began but not when ovulation occurred.
-As long as menstrual dates are remembered accurately, this method of estimating the date of delivery is reliable (@fig-age-term; @tbl-age-term) [@committeeonfetusandnewbornAgeTerminologyPerinatal2004].
+Pediatric age terminology is commonly <span class="red-underline">**inconsistent**</span>.
+When patients are very young, age is often related to the mothers last menstrual period.
+This is done because most women know when their last period began but not when ovulation occurred.
+This method of estimating the date of delivery is reliable as long as menstrual dates are remembered accurately (@fig-age-term; @tbl-age-term) [@committeeonfetusandnewbornAgeTerminologyPerinatal2004].
 
 ![Perinatal Age Terminology. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, postnatal age](images/pediatric-age.png){#fig-age-term}
 
@@ -35,9 +36,9 @@ $$ {#eq-cga}
 
 ### Age classification of pediatric patients {#sec-age}
 
-Any classification of the pediatric population into age groups is to some extent <span class="red-underline">**arbitrary**</span>, but a classification such as the one below provides a basis for thinking about study design in pediatric patients (@tbl-age-group).
-The identification of which ages to study should be medicinal **product-specific and justified**.
-Dividing the pediatric population into many age groups might needlessly increase the number of patients required.
+Age classifications are to some extent <span class="red-underline">**arbitrary**</span>, but a classification such as the one in @tbl-age-group provides a basis for thinking about study design.
+The identification of **which ages to study should be medicinal product-specific and <span class="red-underline">justified</span>**.
+Too many age groups might needlessly increase the number of patients required.
 Sometimes, it may be more appropriate to collect data over broad age ranges and examine the effect of age as a continuous covariate.
 
 ::: {.callout-warning}
