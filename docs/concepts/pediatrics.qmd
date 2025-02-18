@@ -7,9 +7,9 @@ The use of *model informed drug development* (MIDD) approaches in pediatric drug
 * Practical and ethical limitations in data collection.
 * Ability to quantify the effects of growth and maturation by leveraging data from literature and older patients.
 
-## Pediatric Age Terminology
+## Pediatric age terminology
 
-The terminology used around pediatric age is commonly **inconsistent**.
+The terminology used around pediatric age is commonly <span class="red-underline">**inconsistent**</span>.
 Relating age to last menstrual period is done because most women know when their last period began but not when ovulation occurred.
 As long as menstrual dates are remembered accurately, this method of estimating the date of delivery is reliable (@fig-age-term; @tbl-age-term) [@committeeonfetusandnewbornAgeTerminologyPerinatal2004].
 
@@ -21,7 +21,7 @@ As long as menstrual dates are remembered accurately, this method of estimating 
 | Postnatal (or "chronologial") age | PNA | Time since birth | Days, weeks, months, years |
 | Postmenstrual age | PMA | Applied from 0--1 years of chronological age. A 33-week, 1-day GA infant who is 10 weeks, 5 days PNA would have a PMA of 43 weeks, 6 days. |
 | Corrected (or "adjusted") [gestational] age | CGA | Time since *expected date of delivery* (see @eq-cga). Used to describe children up to 3 years of age who were born preterm. |
-| Conceptional age | | Time between conception and birth. Very accurate for *in-vitro* fertilization. **Should not be used**. |
+| Conceptional age | | Time between conception and birth. Very accurate for *in-vitro* fertilization. <span class="red-underline">**Should not be used**.</span> |
 
 : Age Terminology During the Perinatal Period {#tbl-age-term tbl-colwidths="[30, 5, 65]"}
 
@@ -33,9 +33,9 @@ $$
 \text{Corrected gestational age}_\text{weeks} = \text{PNA}_\text{weeks} - (40 - \text{GA}_\text{weeks})
 $$ {#eq-cga}
 
-### Age Classification of Pediatric Patients {#sec-age}
+### Age classification of pediatric patients {#sec-age}
 
-Any classification of the pediatric population into age groups is to some extent **arbitrary**, but a classification such as the one below provides a basis for thinking about study design in pediatric patients (@tbl-age-group).
+Any classification of the pediatric population into age groups is to some extent <span class="red-underline">**arbitrary**</span>, but a classification such as the one below provides a basis for thinking about study design in pediatric patients (@tbl-age-group).
 The identification of which ages to study should be medicinal **product-specific and justified**.
 Dividing the pediatric population into many age groups might needlessly increase the number of patients required.
 Sometimes, it may be more appropriate to collect data over broad age ranges and examine the effect of age as a continuous covariate.
@@ -96,7 +96,7 @@ Volume of distribution scales proportionally with body size (@lst-v), while clea
 It has proven robust and reliable, except in some targeted therapies and large molecule biologics.
 Allometric scaling should not be used on rate constants.
 
-#### Step 1: Refit the Final Adult Data with Allometric Exponents
+#### Step 1: Refit the final adult data with allometric exponents
 
 Scale each volume parameter, including central volume and peripheral volumes.
 
@@ -149,7 +149,7 @@ Data from pediatric development programs are often too limited to confirm whethe
 EMA MWP (Methodology Working Party) considers the use of fixed exponents both scientifically justified and practical when developing popPK models in children.
 
 In lower ages (**< 2 years**) there are also maturation functions that come into play.
-For these pediatric patients it is **important to include maturation function(s)** to describe pediatric PK (@lst-cl-mat).
+For these pediatric patients it is <span class="red-underline">**important to include maturation function(s)**</span> to describe pediatric PK (@lst-cl-mat).
 
 ```verilog {#lst-cl-mat lst-cap="Renal maturation [@rhodinHumanRenalFunction2009]. PMA from the input data."}
 CLR = THETA(1) * EXP(ETA(1))
@@ -172,7 +172,7 @@ Assuming renal maturation time differs in pre-term infants, a separate TM~50~ va
 This is due to high correlation between body weight and age in pediatric patients [@bonateEffectCollinearityParameter1999].
 :::
 
-#### Step 2: Prepare a Data Set with Pediatric Simulation Subjects
+#### Step 2: Prepare a data set with pediatric simulation subjects
 
 Use either [NHANES](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023) (US subjects 2--18 years), or a growth chart (e.g. WHO).
 The WHO data is preferred for non-US studies or for pediatric patients less than 2 years of age.
@@ -201,7 +201,7 @@ This process creates a set of simulation subjects with WT, age group, and SEX.
 # Save this dataset for use in future PK simulations
 :::
 
-#### Step 3: Simulate Exposures and Estimate Target Pediatric Doses
+#### Step 3: Simulate exposures and estimate target pediatric doses
 
 Randomly sample ETAs (in e.g. R) to calculate the individual PK-parameters for each simulation subject.
 The WT will be used in the calculation of the V- and CL-parameters.
