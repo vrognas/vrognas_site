@@ -6,6 +6,12 @@ title: "Reproducible Research"
 # Under construction
 :::
 
+* **Reproducibility** is defined as obtaining consistent results using the same data and code as the original study (synonymous with computational reproducibility).
+* **Replicability** means obtaining consistent results across studies aimed at answering the same scientific question using new data or other new computational methods.
+
+[Reproducibility and Replicability in Research](https://www.nationalacademies.org/news/2019/09/reproducibility-and-replicability-in-research)
+
+
 ### Use version control (git or svn)
 
 * Do not track model development in git, it is too messy, which messes with the git history.
