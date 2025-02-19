@@ -77,9 +77,9 @@ Pediatric dosing is typically based on mg/kg body weight, up to the maximum adul
 Although surface area-guided dosing might be preferred, measuring the height or length, especially in infants and young children, is often prone to errors.
 For medications with a narrow therapeutic window, such as those used in oncology, surface area-guided dosing may be necessary.
 
-## PK extrapolation
+## PK extrapolation is often feasible
 
-Whether PK extrapolation is feasible or not, is ultimately a clinical question.
+Whether PK extrapolation is feasible or not, is **ultimately a clinical question**.
 If an indication can be assumed to behave similarly in adult and pediatric populations, PK extrapolation ("bridging") can be used.
 However, there could be cases in which a dedicated pediatric study is warranted (e.g., safety concerns or clinical presentation of the disease).
 
@@ -91,7 +91,7 @@ The plan is to predict exposure in a pediatric age group (@tbl-age-group), colle
 Extrapolation generally includes a population PK model and exposure-response models.
 These models may be independent of adult models if there are adequate data or they may be developed in combination with adult data.
 
-### Allometric scaling for PK
+### Allometric scaling
 
 A previously developed adult PK model can be extrapolated to pediatric patients using allometry, which relates volume of distribution and clearance to body size.
 Researchers have studied and applied this theory across various animal species and human subjects using a wide range of compounds [@boxenbaumInterspeciesScalingAllometry1982].
@@ -239,7 +239,7 @@ The reference range in the adult population (median and outer percentiles of obs
 
 ![Adult reference range (5^th^--95^th^ percentiles and median) highlighted in the background.](images/pediatric-box.png){#fig-box}
 
-## PD extrapolation
+## PD extrapolation is often not feasible
 
 Unlike PK, PD models are disease- and therapy-specific, making direct extrapolation challenging.
 Thus, **response (E-R) and PD models from adults may not apply to children**.
