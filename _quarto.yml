@@ -243,3 +243,4 @@ format:
     crossref:
       lst-prefix: "Code"
       lst-title: "Code"
+    fig-cap-location: margin
