@@ -10,11 +10,7 @@ The use of *model informed drug development* (MIDD) approaches in pediatric drug
 ## Pediatric age terminology
 
 Pediatric age terminology is commonly <span class="red-underline">**inconsistent**</span>.
-When patients are very young, age is often related to the mothers last menstrual period.
-This is done because most women know when their last period began but not when ovulation occurred.
-This method of estimating the date of delivery is reliable as long as menstrual dates are remembered accurately (@fig-age-term; @tbl-age-term) [@committeeonfetusandnewbornAgeTerminologyPerinatal2004].
-
-![Perinatal Age Terminology. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, postnatal age](images/pediatric-age.png){#fig-age-term}
+However, the terminology in @tbl-age-term is generally accepted [@committeeonfetusandnewbornAgeTerminologyPerinatal2004].
 
 | Term  | Abbreviation | Comment |
 | :---- | :----------: | :------ |
@@ -24,9 +20,15 @@ This method of estimating the date of delivery is reliable as long as menstrual 
 | Corrected (or "adjusted") [gestational] age | CGA | Time since *expected date of delivery* (see @eq-cga). Used to describe children up to 3 years of age who were born preterm. |
 | Conceptional age | | Time between conception and birth. Very accurate for *in-vitro* fertilization. <span class="red-underline">**Should not be used**.</span> |
 
-: Age Terminology During the Perinatal Period {#tbl-age-term tbl-colwidths="[30, 5, 65]"}
+: Age terminology during the perinatal period {#tbl-age-term tbl-colwidths="[30, 5, 65]"}
 
-Methods of determining GA should be clearly stated so that the variability inherent in these estimations can be considered when outcomes are interpreted.
+When patients are very young, age is often related to the mothers last menstrual period.
+This is done because most women know when their last period began but not when ovulation occurred.
+This method of estimating the date of delivery is reliable as long as menstrual dates are remembered accurately (@fig-age-term).
+
+![Perinatal Age Terminology. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, postnatal age](images/pediatric-age.png){#fig-age-term}
+
+**Methods of determining GA should be <span class="red-underline">clearly stated</span>** so that the variability inherent in these estimations can be considered when outcomes are interpreted.
 The convention for calculating GA when the date of conception is known is to add 2 weeks to the conceptional age.
 CGA is PNA reduced by the number of weeks born before 40 weeks of gestation (@eq-cga).
 
@@ -36,15 +38,15 @@ $$ {#eq-cga}
 
 ### Age classification of pediatric patients {#sec-age}
 
-Age classifications are to some extent <span class="red-underline">**arbitrary**</span>, but a classification such as the one in @tbl-age-group provides a basis for thinking about study design.
+Age groups are to some extent <span class="red-underline">**arbitrary**</span>, but a classification such as the one in @tbl-age-group provides a basis for thinking about study design.
 The identification of **which ages to study should be medicinal product-specific and <span class="red-underline">justified</span>**.
 Too many age groups might needlessly increase the number of patients required.
 Sometimes, it may be more appropriate to collect data over broad age ranges and examine the effect of age as a continuous covariate.
 
 ::: {.callout-warning}
-# In longer studies, pediatric patients could move from one age category to another
+# In longer studies, patients could change age group!
 
-The study design and statistical plans should prospectively take into account changing numbers of patients within a given age group.
+The study design and statistical plans should consider changing numbers of patients within a given age group, as patients grow older.
 :::
 
 | Group | Age  | Comment |
@@ -198,7 +200,7 @@ To create a simulation subject:
 
 This process creates a set of simulation subjects with WT, age group, and SEX.
 
-::: {.callout-note}
+::: {.callout-tip}
 # Save this dataset for use in future PK simulations
 :::
 
@@ -240,18 +242,16 @@ The reference range in the adult population (median and outer percentiles of obs
 ## PD extrapolation
 
 Unlike PK, PD models are disease- and therapy-specific, making direct extrapolation challenging.
+Thus, **response (E-R) and PD models from adults may not apply to children**.
+This is because children and adults have different physiology that PD-wise cannot be easily extrapolated (@fig-small-adult).
 
-Response and PD models from adults may not apply to children.
-This is because children and adults have different physiology that PD-wise cannot be easily extrapolated.
-Children are not small adults (@fig-small-adult).
-
-![Children are not small adults](images/small-adult.png){#fig-small-adult}
+![Children are not small adults. They have quite different physiology when you look closer. However, this mostly has implications for PD, not so much for PK.](images/small-adult.png){#fig-small-adult}
 
 Babies are still developing, which can be visualized in part the relationship between the size of their head and the lengths of their arms is changing as the babies grow and become adults (See video below).
 
 {{< video videos/hands-over-head.mp4 >}}
 
-Unless there's clinical efficacy data in pediatric patients, be very cautious to extrapolate response or PD models from adults to pediatric patients.
+**<span class="red-underline">Unless there's clinical efficacy data in pediatric patients, be very cautious to extrapolate response or PD models from adults to pediatric patients.</span>**
 
 Considerations include:
 
