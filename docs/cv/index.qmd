@@ -2,10 +2,13 @@
 title: "Curriculum Vitae"
 ---
 
-I am currently pursuing a PhD in Pharmacometrics at [Uppsala University](https://www.uu.se/en).
+I am currently working as a Data Scientist at [qPharmetra](https://www.qpharmetra.com), while pursuing a PhD in Pharmacometrics at [Uppsala University](https://www.uu.se/en).
 
 ## Experience
 
+
+
+* **Data Scientist**, [*qPharmetra*](https://www.qpharmetra.com) (Mar 2025--*present*)
 * **Pharmacometric Assessor**, [*Swedish Medical Products Agency (Läkemedelsverket)*](https://www.lakemedelsverket.se/en) (Nov 2023--Oct 2024)
 * **Systems developer (Python)**, [*Pharmpy*](https://pharmpy.github.io/latest/index.html) (Feb--Oct 2023)
 * **Clinical Pharmacometrician Intern**, [*F. Hoffmann-La Roche Ltd*](https://www.roche.com) (Sep 2021--Feb 2022)
@@ -102,7 +105,7 @@ I am currently pursuing a PhD in Pharmacometrics at [Uppsala University](https:/
 * Physiology, *Uppsala University* (2013)
 * Medical Genetics, *Uppsala University* (2012)
 
-### Antimicrobial Resistance 
+#### Antimicrobial Resistance 
 
 * The Economics of Antibiotics, *Uppsala University* (2019)
 * Resistance Biology, *Uppsala University* (2018)
