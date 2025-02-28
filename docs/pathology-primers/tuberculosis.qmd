@@ -8,54 +8,97 @@ title: "Tuberculosis (TB)"
 
 ## What is TB?
 
-![](images/tb-1.png){#fig-tb-1}
+Tuberculosis (TB) is an infectious disease caused by **bacteria** (*Mycobacterium tuberculosis*) that usually affects the **lungs**, but can also affect other organs.
+TB spreads through airborne droplets when people with TB cough, sneeze or spit.
+About 25% of the global population is estimated to have been infected with TB bacteria.
+Those who are infected but free of disease cannot spread it.
+About 7.5% of people infected with TB will eventually get symptoms and develop TB disease.
+If left untreated, active TB disease kills around 50% of those affected.
 
-Tuberculosis (TB) is a bacterial disease which usually affects the lungs, but cn also affect other organs.
-Transmitted via airborne droplets.
-In many cases it is symptomless (latent/dormant TB) (around 25% of global population has this), but can progress to active disease which kills around half of those affected if left untreated.
+*Mycobacterium tuberculosis* has been suggested to exist in three states, showcased in @fig-mtb-model (Clewe et al. 2016).
 
-![](images/tb-2.png){#fig-tb-2}
-
-### Different bacterial states
-
-dormant=non-multiplying
-multiplying
+![Pharmacodynamic model for different states of *Mycobacterium tuberculosis*. NB unidirectional from fast to non-multiplying ("dormant"). Clewe et al. (2016).](images/mtb-model.png){#fig-mtb-model}
 
 ### Drug resistant TB
 
-Myobacterium tuberculosis divides more slowly than most bacteria, making development of antibiotic resistance more likely (@fig-tb-amr-1).
+*Myobacterium tuberculosis* divides more slowly (~q18h) than most bacteria, making development of antibiotic resistance more likely.
 In addition, the mycolic acids in its cell wall limit the effectiveness of some antibiotics.
 
-![](images/tb-amr-1.png){#fig-tb-amr-1}
+**MDR-TB** has been defined as <span class="red-underline">**resistance to rifampicin plus isoniazid**</span>.
 
-![](images/tb-amr-2.png){#fig-tb-amr-2}
+Extensively drug-resistant TB (**XDR-TB**) describes resistance to at least one fluoroquinolone as well as bedaquiline and/or linezolid and/or a second-line injectable in addition to rifampicin and isoniazid.
 
 ## What are the symptoms?
 
-![Symptoms for TB.](images/tb-symptoms.png){#fig-tb-symptoms}
+* Coughing 😮‍💨
+* Weight loss 📉
+* Chest pains 😧
+* Fatigue 😩
+* Fever 🤒
+* Loss of apetite 🍽️
 
-## How can it be treated?
+### Typical patient population
 
-* Delamanid
+### Risk factors
 
-Active TB is treated with several antibiotics for a minimum of 6 months.
-The four drugs shown in @fig-tb-trt-1 are commonly used first line drugs in treatment regimes.
-Streptomycin was formerly considered a first line drug, but is now used less due to increased cases of resistance to its effects.
+## Diagnosis
 
-![First line TB drugs.](images/tb-trt-1.png){#fig-tb-trt-1}
+A sputum sample is collected and tested using the **Xpert MTB/RIF Ultra assay** (Cepheid, Sunnyvale, USA).
+This diagnoses TB and the detects rifampicin resistance.
 
-### Drug-sensitive TB (6 months of treatment)
+## How can TB be treated?
 
-* 2 months: isoniazid, rifampicin, pyrazinamide, ethambutol (HRZE)
-* 4 months: isoniazid, rifampicin (HR)
+Tuberculosis is preventable and curable.
+Active pulmonary TB is treated with <span class="red-underline">**several antibiotics for a minimum of 6 months**</span>.
 
-### MDR-TB (6--18 months of treatment)
+### Drug-susceptible TB (DS-TB) (6 months of treatment)
 
-Tuberculosis that is resistant to first line drugs (@fig-tb-trt-1) must be treated with second line drugs (@fig-tb-trt-2).
-These can include drugs that are usually less effective, which have toxic side effects, or which are unavailable in developing countries.
+1. **2 months**: isoniazid, rifampicin, pyrazinamide, ethambutol (HRZE)
+2. **4 months**: isoniazid, rifampicin (HR)
 
-![Second line TB drugs.](images/tb-trt-2.png){#fig-tb-trt-2}
+Such a regimen is also spelled as **2HRZE/4HR**, meaning 2 months of HRZE treatment followed by 4 months of HR treatment.
 
-* 6 months: bedaquiline, pretomanid, linezolid, moxifloxacin (BPaLM)
+:::{.callout-note}
+# 12% of cases are resistant to at least rifampicin
+:::
 
-![License](images/tb-lic.png){#fig-tb-lic}
+For **children** (3 mo -- 16 y), **2HRZ(E)/2HR** should be used.
+
+### Multi-drug/rifampicin resistant TB (MDR/RR-TB) (6--18 months of treatment)
+
+* **6 months**: bedaquiline, pretomanid, linezolid, moxifloxacin (BPaLM)
+
+The second-line treatment contains bedaquiline, levofloxacin/moxifloxacin, ethionamide, ethambutol, isoniazid, pyrazinamide and clofazimine (all-oral regimen) administered for up to 9 months.
+
+### Drug characteristics
+
+#### Bedaquiline
+
+  *  f~b~ ≈ 99%
+  * Food effect
+  * CYP3A4 metabolism
+  * Most common adverse events: QTc-prolongation, and hepatotoxicity
+
+#### Linezolid
+
+  * Highly variable PK
+  * Inhibits its own CL
+  * F ≈ 100%
+  * No food effect
+  * "non-enzymatic metabolism"
+  * Known toxicity at higher doses and/or longer durations
+
+#### Rifampicin
+
+Old drug.
+
+  * Strong enzyme inducer of enzymes and pumps, it thus induces its own CL
+  * Also saturable biliary excretion -> higher than dose-prop exposures -> F is dose dependent.
+
+# References
+
+* WHO consolidated guidelines on TB. 2022. *https://iris.who.int/bitstream/handle/10665/353829/9789240048126-eng.pdf*
+
+* IOV high if >= iiv (Ref Holford et al, safe and effective variability)
+
+* Clewe O, Aulin L, Hu Y, Coates ARM, Simonsson USH. A multistate tuber- culosis pharmacometric model: a framework for studying anti-tubercular drug effects in vitro. J Antimicrob Chemother. 2016 Apr;71(4):964–74
