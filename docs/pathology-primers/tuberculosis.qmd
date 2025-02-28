@@ -10,10 +10,16 @@ title: "Tuberculosis (TB)"
 
 ![](images/tb-1.png){#fig-tb-1}
 
-Tuberculosis (TB) is a bacterial disease which usually affects the lungs.
-In many cases it is symptomless (latent TB), but can progress to active disease which kills around half of those affected if left untreated.
+Tuberculosis (TB) is a bacterial disease which usually affects the lungs, but cn also affect other organs.
+Transmitted via airborne droplets.
+In many cases it is symptomless (latent/dormant TB) (around 25% of global population has this), but can progress to active disease which kills around half of those affected if left untreated.
 
 ![](images/tb-2.png){#fig-tb-2}
+
+### Different bacterial states
+
+dormant=non-multiplying
+multiplying
 
 ### Drug resistant TB
 
@@ -30,19 +36,26 @@ In addition, the mycolic acids in its cell wall limit the effectiveness of some 
 
 ## How can it be treated?
 
-* Bedaquiline
 * Delamanid
-* Pretonamid
 
-Active TB is treated by taking several antibiotics for six to nine months.
+Active TB is treated with several antibiotics for a minimum of 6 months.
 The four drugs shown in @fig-tb-trt-1 are commonly used first line drugs in treatment regimes.
+Streptomycin was formerly considered a first line drug, but is now used less due to increased cases of resistance to its effects.
 
 ![First line TB drugs.](images/tb-trt-1.png){#fig-tb-trt-1}
 
+### Drug-sensitive TB (6 months of treatment)
+
+* 2 months: isoniazid, rifampicin, pyrazinamide, ethambutol (HRZE)
+* 4 months: isoniazid, rifampicin (HR)
+
+### MDR-TB (6--18 months of treatment)
+
 Tuberculosis that is resistant to first line drugs (@fig-tb-trt-1) must be treated with second line drugs (@fig-tb-trt-2).
 These can include drugs that are usually less effective, which have toxic side effects, or which are unavailable in developing countries.
-Streptomycin was formerly considered a first line drug, but is now used less due to increased cases of resistance to its effects.
 
 ![Second line TB drugs.](images/tb-trt-2.png){#fig-tb-trt-2}
+
+* 6 months: bedaquiline, pretomanid, linezolid, moxifloxacin (BPaLM)
 
 ![License](images/tb-lic.png){#fig-tb-lic}
