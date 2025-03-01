@@ -92,4 +92,4 @@ A BCC can reply to the sender, but other recipients can't send to BCC recipient 
 * When you require a quick answer (call them or go face-to-face instead)
 * When you want to give negative feedback (go face-to-face instead)
 * When you need to deliver bad news (go face-to-face instead)
-* When you are angry/emotional (write a draft and send later instead)
+* When you are emotional (write a draft and send later instead)
