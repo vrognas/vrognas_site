@@ -8,13 +8,21 @@ title: "Tuberculosis (TB)"
 
 ## What is TB?
 
-Tuberculosis (TB) is an infectious disease caused by **bacteria** (*Mycobacterium tuberculosis*) that usually affects the **lungs**, but can also affect other organs.
+Tuberculosis (TB) is an infectious disease caused by **bacteria** (*Mycobacterium tuberculosis*).
+While TB usually affects the lungs, it can also involve the kidneys, brain, spine and skin.
 TB spreads through airborne droplets when people with TB cough, sneeze or spit.
 About 25% of the global population is estimated to have been infected with TB bacteria.
-Those who are infected but free of disease cannot spread it.
+**Those who are infected but free of disease <span class="red-underline">cannot spread it.**</span>
 About 7.5% of people infected with TB will eventually get symptoms and develop TB disease.
 If left untreated, active TB disease kills around 50% of those affected.
 
+:::{.callout-note}
+# TB and HIV
+
+People living with HIV are ~16 times more likely to fall ill with TB disease than people without HIV.
+TB is the leading cause of death among people with HIV.
+HIV and TB form a lethal combination, each speeding the other's progress.
+:::
 *Mycobacterium tuberculosis* has been suggested to exist in three states, showcased in @fig-mtb-model (Clewe et al. 2016).
 
 ![Pharmacodynamic model for different states of *Mycobacterium tuberculosis*. NB unidirectional from fast to non-multiplying ("dormant"). Clewe et al. (2016).](images/mtb-model.png){#fig-mtb-model}
@@ -30,31 +38,62 @@ Extensively drug-resistant TB (**XDR-TB**) describes resistance to at least one 
 
 ## What are the symptoms?
 
-* Coughing 😮‍💨
-* Weight loss 📉
-* Chest pains 😧
+The symptoms people get depend on which part of the body is affected by TB.
+
+* Prolonged cough (sometimes with blood) 😮‍💨
+* Chest pain 😧
+* Weakness
 * Fatigue 😩
+* Weight loss 📉
 * Fever 🤒
 * Loss of apetite 🍽️
 
 ### Typical patient population
 
+Low- and middle-income countries.
+About half of all people with TB can be found in 8 countries:
+
+* Bangladesh
+* China
+* India
+* Indonesia
+* Nigeria
+* Pakistan
+* Philippines
+* South Africa
+
 ### Risk factors
+
+* Diabetes (high blood sugar)
+* Weakened immune system (e.g. HIV/AIDS)
+* Malnourishment
+* Tobacco use
+* Harmful use of alcohol
 
 ## Diagnosis
 
 A sputum sample is collected and tested using the **Xpert MTB/RIF Ultra assay** (Cepheid, Sunnyvale, USA).
 This diagnoses TB and the detects rifampicin resistance.
 
+TB is particularly difficult to diagnose in children.
+
 ## How can TB be treated?
 
 Tuberculosis is preventable and curable.
+Treatment is recommended for both TB infection and disease.
 Active pulmonary TB is treated with <span class="red-underline">**several antibiotics for a minimum of 6 months**</span>.
+
+The most common antibiotics used are:
+
+* isoniazid (H)
+* rifampicin (R)
+* pyrazinamide (Z)
+* ethambutol (E)
 
 ### Drug-susceptible TB (DS-TB) (6 months of treatment)
 
-1. **2 months**: isoniazid, rifampicin, pyrazinamide, ethambutol (HRZE)
-2. **4 months**: isoniazid, rifampicin (HR)
+1. **2 months**: isoniazid, rifampicin, pyrazinamide, ethambutol (2HRZE)
+2. **4 months**: isoniazid, rifampicin (4HR)
 
 Such a regimen is also spelled as **2HRZE/4HR**, meaning 2 months of HRZE treatment followed by 4 months of HR treatment.
 
@@ -98,7 +137,5 @@ Old drug.
 # References
 
 * WHO consolidated guidelines on TB. 2022. *https://iris.who.int/bitstream/handle/10665/353829/9789240048126-eng.pdf*
-
-* IOV high if >= iiv (Ref Holford et al, safe and effective variability)
 
 * Clewe O, Aulin L, Hu Y, Coates ARM, Simonsson USH. A multistate tuber- culosis pharmacometric model: a framework for studying anti-tubercular drug effects in vitro. J Antimicrob Chemother. 2016 Apr;71(4):964–74
