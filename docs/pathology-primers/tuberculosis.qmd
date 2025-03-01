@@ -25,7 +25,7 @@ HIV and TB form a lethal combination, each speeding the other's progress.
 :::
 *Mycobacterium tuberculosis* has been suggested to exist in three states, showcased in @fig-mtb-model (Clewe et al. 2016).
 
-![Pharmacodynamic model for different states of *Mycobacterium tuberculosis*. NB unidirectional from fast to non-multiplying ("dormant"). Clewe et al. (2016).](images/mtb-model.png){#fig-mtb-model}
+![Pharmacodynamic model for different states of *Mycobacterium tuberculosis*. NB unidirectional from fast to non-multiplying ("dormant"). Clewe et al. (2016).](images/mtb-model.avif){#fig-mtb-model}
 
 ### Drug resistant TB
 
@@ -41,8 +41,8 @@ Extensively drug-resistant TB (**XDR-TB**) describes resistance to at least one 
 The symptoms people get depend on which part of the body is affected by TB.
 
 * Prolonged cough (sometimes with blood) 😮‍💨
-* Chest pain 😧
-* Weakness
+* Chest pain 🫁💥
+* Weakness 😩
 * Fatigue 😩
 * Weight loss 📉
 * Fever 🤒

@@ -2,20 +2,25 @@
 title: "Pathology Primers"
 ---
 
-Pathology Primers are a collection of documents that provide a high-level overview of a specific disease.
-They are intended to be a quick reference for medical students, residents, and other healthcare professionals. Each primer includes information on the typical patient, risk factors, clinical diagnostics, and treatment options for the disease.
+Each primer provides a concise, high-level summary of a disease relevant to pharmacometricians, focusing on biomarkers, drug regimens, and modeling approaches.
 
-They typically follow this structure:
+Typical structure for disease "XYZ":
 
-1. What is X?
-  * Commonly used PD-models
-2. What are the symptoms?
+1. What is XYZ?
+  * Disease definition & pathophysiology
+  * Commonly used Pharmacodynamic (PD) Models (e.g., disease progression models, target engagement)
+2. Patient characteristics
   * Typical patient population
-  * Risk factors
-3. Diagnosis
-4. How can it be treated?
+  * Risk factors & disease progression indicators
+3. Diagnosis & biomarkers
+  * Key Clinical Biomarkers (e.g., lab values, thresholds, imaging)
+  * Disease Severity Classification (if applicable, e.g., staging systems)
+4. How can XYZ be treated?
   * Treatment aim (PD-targets)
-  * Drug regimens
+  * Common Drug Classes & Regimens
+    * Mechanism of Action (MoA)
+    * First-line vs. second-line treatments
+    * Dose Adjustments (e.g., renal/liver impairment, pediatrics)
   * Commonly used PK-models
 
-![](images/index_pathology.png)
+![](images/index_pathology.avif)

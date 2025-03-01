@@ -24,7 +24,7 @@ A bacterial infection is classified according to the site of infection, and some
 * Blood-stream infection (BSI)
 * Urinary-tract infection (UTI)
 
-![Overview of bacterial infections. Typical pathogens are listed for each site of infection.](images/bac-inf_overview.jpg){#fig-overview}
+![Overview of bacterial infections. Typical pathogens are listed for each site of infection.](images/bac-inf_overview.avif){#fig-overview}
 
 ### Sepsis
 
@@ -61,7 +61,7 @@ The onset of symptoms marks the transition from subclinical to clinical disease.
 
 ## Diagnosis
 
-![Typical plasma concentration-time profiles of different biomarkers of bacterial infections. Adapted from Meisner M., (1999) @meisnerProcalcitoninErfahrungenMit1999](images/bac-inf_biomarkers.jpg){#fig-biomarkers}
+![Typical plasma concentration-time profiles of different biomarkers of bacterial infections. Adapted from Meisner M., (1999) @meisnerProcalcitoninErfahrungenMit1999](images/bac-inf_biomarkers.avif){#fig-biomarkers}
 
 * Biomarkers not specific
     * 3 markers + WBC (but unspecific)
