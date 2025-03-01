@@ -8,10 +8,13 @@ They are intended to be a quick reference for medical students, residents, and o
 They typically follow this structure:
 
 1. What is X?
+  * Commonly used PD-models
 2. What are the symptoms?
   * Typical patient population
   * Risk factors
 3. Diagnosis
 4. How can it be treated?
+  * Drug regimens
+  * Commonly used PK-models
 
 ![](images/index_pathology.png)
