@@ -4,6 +4,16 @@ title: "Skin cancer"
 
 ## What is skin cancer?
 
+Skin cancer begins in the skin's top layer --- the epidermis.
+The epidermis is a thin layer that provides a protective cover of skin cells that your body continually sheds.
+The epidermis contains three main types of cells:
+
+* **Squamous cells** lie just below the outer surface and function as the skin's inner lining.
+* **Basal cells**, make skin cells that keep pushing older cells toward the surface. As new cells move up, they become squamous cells.
+* **Melanocytes** --- which produce melanin, the pigment that gives skin its normal color — are located in the lower part of your epidermis. Melanocytes produce more melanin when you're in the sun to help protect the deeper layers of your skin.
+
+Where the skin cancer begins determines its type and the treatment options.
+
 There are **three main types** of skin cancer, depending on which cells have turned cancerous:
 
 * Non-melanoma skin cancer (NMSC)
@@ -22,7 +32,7 @@ There are **three main types** of skin cancer, depending on which cells have tur
   * Highest mortality
   * Can be cured if caught early
 
-![](images/skin-cancers.avif)
+![**BCC** begins in the basal cells. **SCC** starts in the squamous cells. **Melanoma** comes from the melanocytes.](images/skin-cancers.avif)
 
 ### Non-melanoma skin cancer (NMSC)
 
