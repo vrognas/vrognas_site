@@ -1,6 +1,6 @@
 ---
-title: "Viktor Rognås 🌱"
-subtitle: "Artisan Pharmacometric Engineer"
+title: "Viktor Rognås"
+subtitle: "Pharmacometric Engineer"
 about:
     id: about-vrognas
     template: jolla

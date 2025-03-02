@@ -6,7 +6,7 @@ execute:
   freeze: auto
 
 website:
-  title: "Viktor Rognås 🌱"
+  title: "🌱 Viktor Rognås"
   favicon: "favicon.png"
   open-graph: true
   twitter-card: true
@@ -214,7 +214,7 @@ website:
           - text: "Writing Tactics"
             href: docs/aux/writing-tactics.qmd
   page-footer:
-    left: "© 2024 Viktor Rognås"
+    left: "© 2025 Viktor Rognås"
     right:
       - icon: github
         href: https://github.com/vrognas
