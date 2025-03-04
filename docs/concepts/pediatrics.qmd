@@ -68,9 +68,9 @@ The study design and statistical plans should consider changing numbers of patie
 
 Using the Fenton (2013) growth chart (https://doi.org/10.1186/1471-2431-13-59).
 
-bBW: birth body weight
-AGA: Appropriate for gestational age
-SGA: Small for gestational age
+* bBW: birth body weight
+* AGA: Appropriate for gestational age
+* SGA: Small for gestational age
 
 ## Pediatric PK studies
 
