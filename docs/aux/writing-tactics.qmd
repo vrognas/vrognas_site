@@ -13,7 +13,7 @@ title: "Writing Tactics"
 
 Consult recent articles in target journal!
 
-![](./images/writing.png)
+![](images/writing.png)
 ￼
 Frontload your argument
 
@@ -55,6 +55,8 @@ Frontload your argument
 8. Most important, remember that reviewers may not be an expert in your specific research topic. Prepare your abstract so that any researcher in your general field will be able to follow along and understand your key findings.
 
 {{< video https://www.youtube.com/watch?v=w5Cy2mjBxQw >}}
+
+![](images/nature-abstract.jpeg)
 
 ### Typography
 
