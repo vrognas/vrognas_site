@@ -205,14 +205,14 @@ website:
               href: docs/aux/email.qmd
             - text: "Meetings"
               href: docs/aux/meetings.qmd
+            - text: "Writing Tactics"
+              href: docs/aux/writing-tactics.qmd
           - text: "Reproducible Research"
             href: docs/aux/repr.qmd
           - text: "Coding Practices"
             href: docs/aux/code.qmd
           - text: "Self Management"
             href: docs/aux/self-mgmt.qmd
-          - text: "Writing Tactics"
-            href: docs/aux/writing-tactics.qmd
   page-footer:
     left: "© 2025 Viktor Rognås"
     right:
