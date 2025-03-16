@@ -36,3 +36,12 @@ The graphs are broadly separated into two categories: prediction-based (basic) a
 
 (pc)VPC: Trends may suggest a modification of the structural model, the residual error model, or the parameter variability model.
 Trends when conditioning on covariates suggest including covariates or changing the covariate model.
+
+#### Explanation of pcVPC
+
+A Prediction-Corrected Visual Predictive Check (pcVPC) addresses limitations of conventional VPCs by **correcting for predictable sources of variability**, allowing clearer detection of model issues.
+
+More specifically, a pcVPC **normalizes the dependent variable** (e.g., drug concentration) based on the **typical population prediction** for each bin.
+This correction **removes the influence of variability due to independent variables**.
+
+This is especially important when **data includes large variations in covariates** (e.g., dose), or when adaptive dosing strategies are applied.
