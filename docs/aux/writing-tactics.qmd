@@ -65,6 +65,41 @@ typewolf.com
 prowebtype.com  
 https://www.supremo.co.uk/typeterms/  
 
+## Figures
+
+Ideally, each figure should answer only **one question**.
+You may have performed multiple independent experiments to answer one research question.
+The results of these independent experiments can be combined into a multi-panel figure, with one overarching declarative title.
+
+### How to write a figure caption
+
+Figure captions should be standalone, i.e., descriptive enough to be understood without having to refer to the main text.
+
+Effective captions typically include the following elements:
+
+
+1. A **declarative title**, i.e. the main conclusion of the figure. Can be in bold font.
+
+2. A **brief description of the methods** necessary to understand the figure without having to refer to the main text
+
+3. **Statistical information** (avrage, range, sample sizes, number of replicates, asterisks denoting P-values, statistical tests, etc.)
+
+4. Explanations of what any different markers represent. If possible, describe the figure elements in a legend and not in the caption
+
+5. Definitions of any abbreviations
+
+6. References to any table where data was
+given.
+
+DO NOT simply restate information already given in the figure or analysis of the data.
+
+### Writing Alt Text for Data Visualization
+
+You probably can’t write text that conveys the entire meaning of a chart.
+But, that doesn’t mean that you shouldn’t try.
+
+![https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81](images/alt-text.png)
+
 ### Read
 
 If you cannot write; read.
