@@ -6,10 +6,48 @@ title: "Data Visualization"
 # Under construction
 :::
 
+## General interpretation checklist
+
+### Study Design & Population
+
+* Is the **study design** informative (powered) enough for the intended analysis?
+* Is the **study population** relevant for the intended inference?
+
+### Data Selection & Management
+
+* Are all relevant **data available** for the analysis?
+* Are all data collected with the appropriate level of **exactness and completeness**?
+* Are the data in the model independent (**low correlation**)?
+* Are there available **data that were not included** in the analysis?
+* How were the parameters included?
+  * Based on a full model approach (FFEM) or **statistical significance** (e.g., SCM)?
+* Are there **parameters that were omitted** from the analysis?
+* Are there parts of the analysis that are **not shown**? Why?
+* How were the values to visualize **chosen**?
+
+### Data Integrity & Bias
+
+* Are there potential biases introduced by **non-random patient dropouts**?
+* Will the **model parameterization** impact the interpretation?
+* Will the handling of **missing data** impact the interpretation?
+
+### Statistical Clarity & Rationale
+
+* How was the **uncertainty** assessed?
+* Is the width of the confidence interval clear?
+* How was the reference/baseline chosen and computed?
+* Is there an objective rationale for the width of the reference area?
+
+## Tables
+
+[https://clauswilke.com/dataviz/figure-titles-captions.html#tables](https://clauswilke.com/dataviz/figure-titles-captions.html#tables)
+
+## Figures
+
 [data-to-viz.com](https://www.data-to-viz.com)
 [dataviz-inspiration](https://www.dataviz-inspiration.com)
 
-## Label line ends in time series with ggplot2^[https://drsimonj.svbtle.com/label-line-ends-in-time-series-with-ggplot2]
+### Label line ends in time series with ggplot2^[https://drsimonj.svbtle.com/label-line-ends-in-time-series-with-ggplot2]
 
 ```r
 library(tidyverse)
@@ -35,7 +73,7 @@ d %>%
 
 ![](./images/line-end-label.png)
 
-## Scientific figures
+### Scientific figures
 
 biorender.com
 reactome.org/icon-lib
