@@ -39,9 +39,9 @@ Trends when conditioning on covariates suggest including covariates or changing 
 
 #### Explanation of pcVPC
 
-A Prediction-Corrected Visual Predictive Check (pcVPC) addresses limitations of conventional VPCs by **correcting for predictable sources of variability**, allowing clearer detection of model issues.
+A Prediction-Corrected Visual Predictive Check (pcVPC) addresses limitations of conventional VPCs by **correcting for predictable sources of variability**, allowing clearer detection of model misspecification.
 
-More specifically, a pcVPC **normalizes the dependent variable** (e.g., drug concentration) based on the **typical population prediction** for each bin.
-This correction **removes the influence of variability due to independent variables**.
+More specifically, a pcVPC **divides (normalizes) the dependent variable** by the **population prediction** for each bin.
+This correction removes the influence of variability due to independent variables.
 
 This is especially important when **data includes large variations in covariates** (e.g., dose), or when adaptive dosing strategies are applied.
