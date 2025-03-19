@@ -7,3 +7,8 @@ title: "CDISC data standards"
 :::
 
 ![](images/cdisc.png){#fig-cdisc}
+
+* **SEND:** Tabulation for animal studies
+* **CDASH:** collection for clinical studies
+* **SDTMIG:** tabulation for clinical studies
+* **ADaM:** Analysis for clinical studies
