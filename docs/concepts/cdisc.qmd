@@ -12,3 +12,91 @@ title: "CDISC data standards"
 * **CDASH:** collection for clinical studies
 * **SDTMIG:** tabulation for clinical studies
 * **ADaM:** Analysis for clinical studies
+
+## SEND
+
+**SEND:** The Standard for Exchange of Nonclinical Data Implementation Guide (SENDIG) is based on the SDTM and guides users on the organization, structure, and format of standard nonclinical study tabulation datasets for exchange between organizations or to be submitted to a regulatory authority.
+The following videos introduce you to the SENDIG and the SDTM, which used together serve as a map that orients you on how your data fits into the standard.
+
+## CDASH
+
+## SDTMIG
+
+## ADaM
+
+## General Observation Classes
+
+### Interventions
+
+* Concomitant medications
+* Exposure (EX)
+* Substance use
+
+### Events
+
+* Adverse event
+* Disposition
+* Medical history
+* Protocol deviation
+* Clinical event
+
+### Findings
+
+* ECG
+* Questionnaire
+* Incl/Excl
+* SubjChar
+* Labs
+* Vital sign
+* Physical exam
+* Drug accountability
+* PK concentrations
+* PK parameters
+* Microbiological specimen
+* Microbiological susceptibility
+
+### Special purpose
+
+* Demographics
+* Comments
+* Subject elements
+* Subject visits
+
+## SDTM variables
+
+### Identifier
+
+* STUDYID
+* DOMAIN
+* USUBJID
+* --SEQ
+
+### Topic
+
+Contain the focus of the observation.
+
+* --TRT
+* --TERM
+* --TESTCD
+
+### Qualifier
+
+Provide additional information about the topic variables.
+
+* Grouping
+* Result
+* Synonym
+* Record
+* Variable
+
+### Timing
+
+Describes the timing of the observation.
+
+* Date/times
+* Study days
+* Durations
+* Intervals
+* Visits
+* Time points
+* Relative times
