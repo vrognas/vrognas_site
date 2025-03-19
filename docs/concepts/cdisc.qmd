@@ -9,8 +9,8 @@ title: "CDISC data standards"
 ![](images/cdisc.png){#fig-cdisc}
 
 * **SEND:** Tabulation for animal studies
-* **CDASH:** collection for clinical studies
-* **SDTMIG:** tabulation for clinical studies
+* **CDASH:** Collection for clinical studies
+* **SDTMIG:** Tabulation for clinical studies
 * **ADaM:** Analysis for clinical studies
 
 ## SEND
@@ -22,7 +22,14 @@ The following videos introduce you to the SENDIG and the SDTM, which used togeth
 
 ## SDTMIG
 
-## ADaM
+## ADaM: Analysis Data Model
+
+### ADaM Standard data structures
+
+* **ADSL:** Subject-level analysis dataset
+* **BDS:** Basic data structure
+* **OCCDS:** Occurrence data structure
+* ADaM Other data structure
 
 ## General Observation Classes
 
@@ -46,11 +53,11 @@ The following videos introduce you to the SENDIG and the SDTM, which used togeth
 * Questionnaire
 * Incl/Excl
 * SubjChar
-* Labs
-* Vital sign
+* Labs (LB)
+* Vital sign (VS)
 * Physical exam
 * Drug accountability
-* PK concentrations
+* PK concentrations (PC)
 * PK parameters
 * Microbiological specimen
 * Microbiological susceptibility
