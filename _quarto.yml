@@ -143,6 +143,8 @@ website:
               href: docs/concepts/augmented-renal-clearance.qmd
           - text: "Pediatrics"
             href: docs/concepts/pediatrics.qmd
+          - text: "Clinical data standards (CDISC)"
+            href: docs/concepts/cdisc.qmd
     - id: modeling
       title: "Modeling Methods"
       collapse-level: 2
