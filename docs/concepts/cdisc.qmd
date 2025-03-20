@@ -36,39 +36,65 @@ For each domain, variables are classified as *required*, *expected*, or *permiss
 
 #### Interventions
 
-* Concomitant medications
-* Exposure (**EX**)
-* Substance use
+* Procedure agents (AG)
+* Concomitant/prior medications (CM)
+* Exposure (EX)
+* Exposure as collected (EC)
+* Meal data (ML)
+* Procedures (PR)
+* Substance use (SU)
 
 #### Events
 
-* Adverse event
-* Disposition
-* Medical history
-* Protocol deviation
-* Clinical event
+* Adverse events (AE)
+* Biospecimen events (BE)
+* Clinical events (CE)
+* Disposition (DS)
+* Healthcare encounters (HO)
+* Medical history (MH)
+* Protocol deviations (DV)
 
 #### Findings
 
-* ECG
-* Questionnaire
-* Incl/Excl
-* SubjChar
-* Labs (**LB**)
-* Vital sign (**VS**)
-* Physical exam
-* Drug accountability
-* PK concentrations (**PC**)
-* PK parameters
+* Product/drug accountability (DA)
+* Death details (DD)
+* ECG test results (EG)
+* Inclusion/Exclusion criteria not met (IE)
+* Biospecimen Findings (BS)
+* Cell Phenotype Findings (CP)
+* Genomics Findings (GF)
+* Immunogenicity Specimen Assessments (IS)
+* Laboratory test results (**LB**)
 * Microbiological specimen
 * Microbiological susceptibility
+* Microscopic Findings (MI)
+* PK concentrations (**PC**)
+* PK parameters
+* Morphology (MO)
+* Cardiovascular System Findings (CV)
+* Musculoskeletal System Findings (MK)
+* Nervous System Findings (NV)
+* Ophthalmic Examinations (OE)
+* Reproductive System Findings (RP)
+* Respiratory System Findings (RE)
+* Urinary System Findings (UR)
+* Physical Examination (PE)
+* Functional Tests (FT)
+* Questionnaires (QS)
+* Disease Response and Clin Classification (RS)
+* Subject Characteristics (SC)
+* Subject Status (SS)
+* Tumor/Lesion Identification (TU)
+* Tumor/Lesion Results (TR)
+* Vital signs (**VS**)
 
 #### Special purpose
 
-* Demographics
-* Comments
-* Subject elements
-* Subject visits
+* Comments (CO)
+* Demographics (DM)
+* Subject elements (SE)
+* Subject disease milestones (SM)
+* Subject visits (SV)
 
 ### SDTM variables
 
