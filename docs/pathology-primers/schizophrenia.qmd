@@ -1,0 +1,89 @@
+---
+title: "Schizophrenia"
+---
+
+:::{.callout-caution}
+# Under construction
+:::
+
+## What is Schizophrenia?
+
+### Disease definition & pathophysiology
+
+Schizophrenia is a chronic neuropsychiatric disorder characterized by altered perception of reality, cognitive dysfunction, and impaired emotional regulation.
+Pathophysiology involves dysregulated dopamine neurotransmission, particularly hyperactivity in mesolimbic pathways (causing positive symptoms) and hypoactivity in mesocortical pathways (causing negative and cognitive symptoms).
+Glutamate and serotonin dysregulation are also involved.
+
+### Commonly used Pharmacodynamic (PD) Models
+
+- Dopamine receptor occupancy models predicting clinical response.
+- Disease progression models capturing symptom severity over time (PANSS scale).
+- Indirect-response models describing symptom modulation by antipsychotics (delayed treatment response).
+
+---
+
+## Patient characteristics
+
+### Typical patient population
+
+Schizophrenia commonly emerges during late adolescence to early adulthood (16--30 years).
+Incidence is slightly higher in males, with earlier onset compared to females.
+Global prevalence is about 0.5--1%.
+
+### Risk factors & disease progression indicators
+
+Risk factors include genetics (family history), prenatal complications, neurodevelopmental disturbances, substance use (especially cannabis), and psychosocial stressors.
+Indicators of disease progression include severity of positive and negative symptoms, cognitive deficits, level of functioning, and frequency of psychotic relapses.
+
+---
+
+## Diagnosis & biomarkers
+
+### Key Clinical Biomarkers
+
+Diagnosis is primarily clinical, based on symptom presentation and patient history (DSM-5 criteria).
+Biomarkers are limited, but neuroimaging (MRI, PET) may show structural brain changes or altered dopamine receptor activity.
+No specific laboratory tests currently exist for schizophrenia diagnosis.
+
+### Disease Severity Classification
+
+Severity often assessed by clinical scales such as the Positive and Negative Syndrome Scale (PANSS):
+
+- Mild: PANSS total score ~58--74
+- Moderate: PANSS total score ~75--94
+- Severe: PANSS total score ≥95
+
+---
+
+## How can Schizophrenia be treated?
+
+### Treatment aim (PD-targets)
+
+Main therapeutic aim is symptom reduction through modulation of neurotransmitter imbalance, primarily targeting dopamine (D2 receptors) and serotonin (5-HT2A receptors).
+
+### Common Drug Classes & Regimens
+
+#### First-generation (typical) antipsychotics *(historically first-line, now less preferred)*
+
+Examples include Haloperidol, Chlorpromazine.
+
+**MoA:** Strong dopamine D2 receptor antagonism reduces positive symptoms but carries high risk of extrapyramidal side effects.
+
+#### Second-generation (atypical) antipsychotics *(current first-line treatment)*
+
+Examples include Risperidone, Olanzapine, Quetiapine, Aripiprazole, Clozapine (reserved for treatment-resistant cases).
+
+**MoA:** Mixed serotonin (5-HT2A) and dopamine D2 receptor antagonism; improves negative and cognitive symptoms, with lower risk of extrapyramidal side effects.
+
+#### Dose Adjustments
+
+Dose adjustments typically required for renal or hepatic impairment.
+Dose initiation and titration vary according to tolerability.
+Lower starting doses recommended in elderly patients or patients sensitive to side effects.
+Pediatric use is limited and requires cautious dose adjustment.
+
+### Commonly used PK-models
+
+- Population PK models describing variability in exposure due to genetic factors (CYP2D6, CYP3A4 polymorphisms), smoking status, and patient demographics.
+- One- or two-compartment models for antipsychotics.
+- PK-PD models linking antipsychotic exposure (plasma levels, receptor occupancy) to changes in PANSS scores or side-effect incidence.
