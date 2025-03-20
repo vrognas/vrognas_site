@@ -8,15 +8,23 @@ title: "CDISC data standards"
 
 ![](images/cdisc.png){#fig-cdisc}
 
-# Study data tabulation model (SDTM)
+## SEND
+
+**SEND:** The Standard for Exchange of Nonclinical Data Implementation Guide (SENDIG) is based on the SDTM and guides users on the organization, structure, and format of standard nonclinical study tabulation datasets for exchange between organizations or to be submitted to a regulatory authority.
+The following videos introduce you to the SENDIG and the SDTM, which used together serve as a map that orients you on how your data fits into the standard.
+
+## Study data tabulation model (SDTM)
 
 **SDTM** is the overarching model from which multiple implementations are based:
 
-* **SENDIG:** Non-clinical
-* **SDTMIG:** Clinical
-* **TAUGs:** Therapeutic area user guides
+* **SENDIG:** Non-clinical data.
+* **SDTMIG:** Clinical data.
+* **TAUGs:** Therapeutic area user guides. Data related to specific disease areas.
 
-## General Observation Classes
+All the implementations, as well as SDTM itself, has version numbers.
+The implementations are always based upon one SDTM version.
+
+### General Observation Classes
 
 There are three general observation classes: *Intervantions*, *Events*, and *Findings*.
 There is also a fourth observation class: *Special purpose*.
@@ -24,13 +32,13 @@ Further, observation classes are grouped into **domains**, organized around a pa
 Each "domain" is essentially a separate dataset, e.g., EX is its own dataset containing exposure (dosing) data.
 For each domain, variables are classified as *required*, *expected*, or *permissible*.
 
-### Interventions
+#### Interventions
 
 * Concomitant medications
 * Exposure (**EX**)
 * Substance use
 
-### Events
+#### Events
 
 * Adverse event
 * Disposition
@@ -38,7 +46,7 @@ For each domain, variables are classified as *required*, *expected*, or *permiss
 * Protocol deviation
 * Clinical event
 
-### Findings
+#### Findings
 
 * ECG
 * Questionnaire
@@ -53,23 +61,23 @@ For each domain, variables are classified as *required*, *expected*, or *permiss
 * Microbiological specimen
 * Microbiological susceptibility
 
-### Special purpose
+#### Special purpose
 
 * Demographics
 * Comments
 * Subject elements
 * Subject visits
 
-## SDTM variables
+### SDTM variables
 
-### Identifier
+#### Identifier
 
 * STUDYID
 * DOMAIN
 * USUBJID
 * --SEQ
 
-### Topic
+#### Topic
 
 Contain the focus of the observation.
 
@@ -77,7 +85,7 @@ Contain the focus of the observation.
 * --TERM
 * --TESTCD
 
-### Qualifier
+#### Qualifier
 
 Provide additional information about the topic variables.
 
@@ -87,7 +95,7 @@ Provide additional information about the topic variables.
 * Record
 * Variable
 
-### Timing
+#### Timing
 
 Describes the timing of the observation.
 
@@ -98,11 +106,6 @@ Describes the timing of the observation.
 * Visits
 * Time points
 * Relative times
-
-## SEND
-
-**SEND:** The Standard for Exchange of Nonclinical Data Implementation Guide (SENDIG) is based on the SDTM and guides users on the organization, structure, and format of standard nonclinical study tabulation datasets for exchange between organizations or to be submitted to a regulatory authority.
-The following videos introduce you to the SENDIG and the SDTM, which used together serve as a map that orients you on how your data fits into the standard.
 
 ## ADaM: Analysis Data Model
 
