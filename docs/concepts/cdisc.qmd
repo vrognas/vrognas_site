@@ -13,26 +13,28 @@ CDISC standards: SEND, SDTM, CDASH, ADaM
 ## SEND
 
 **SEND:** The Standard for Exchange of Nonclinical Data Implementation Guide (SENDIG) is based on the SDTM and guides users on the organization, structure, and format of standard nonclinical study tabulation datasets for exchange between organizations or to be submitted to a regulatory authority.
-The following videos introduce you to the SENDIG and the SDTM, which used together serve as a map that orients you on how your data fits into the standard.
+The following videos introduce you to the SENDIG and the SDTM, which, together, serve as a map that orients you to how your data fits into the standard.
 
 ## Study data tabulation model (SDTM)
 
-**SDTM** is the overarching model from which multiple implementations are based:
+**SDTM** is the overarching model on which multiple implementations are based:
 
 * **SENDIG:** Non-clinical data.
 * **SDTMIG:** Clinical data.
 * **TAUGs:** Therapeutic area user guides. Data related to specific disease areas.
 
-All the implementations, as well as SDTM itself, has version numbers.
-The implementations are always based upon one SDTM version.
+All the implementations, as well as SDTM itself, have version numbers.
+The implementations are always based on one SDTM version.
 
 ### General Observation Classes
 
-There are three general observation classes: *Intervantions*, *Events*, and *Findings*.
+There are three general observation classes: *Interventions*, *Events*, and *Findings*.
 There is also a fourth observation class: *Special purpose*.
 Further, observation classes are grouped into **domains**, organized around a particular topic. 
-Each "domain" is essentially a separate dataset, e.g., EX is its own dataset containing exposure (dosing) data.
-For each domain, variables are classified as *required*, *expected*, or *permissible*.
+Each "domain" is essentially a separate dataset; for example, EX can be a dataset containing exposure (dosing) data.
+The distinction between domain and dataset is most clearly seen in cases where a general observation class domain is split into multiple datasets in a submission.
+Typical examples are splitting the Laboratory Test Results (LB) domain due to size, splitting the Questionnaires (QS) domain by questionnaire, and splitting the Findings About Events or Interventions (FA) domain by parent domain.
+Variables are classified as *required*, *expected*, or *permissible* for each domain.
 
 #### Interventions
 
@@ -60,33 +62,35 @@ For each domain, variables are classified as *required*, *expected*, or *permiss
 * Death details (DD)
 * ECG test results (EG)
 * Inclusion/Exclusion criteria not met (IE)
-* Biospecimen Findings (BS)
-* Cell Phenotype Findings (CP)
-* Genomics Findings (GF)
-* Immunogenicity Specimen Assessments (IS)
+* Biospecimen findings (BS)
+* Cell phenotype findings (CP)
+* Genomics findings (GF)
+* Immunogenicity specimen assessments (IS)
 * Laboratory test results (**LB**)
-* Microbiological specimen
-* Microbiological susceptibility
-* Microscopic Findings (MI)
+* Microbiology specimen (MB)
+* Microbiology susceptibility (MS)
+* Microscopic findings (MI)
 * PK concentrations (**PC**)
-* PK parameters
+* PK parameters (**PP**)
 * Morphology (MO)
-* Cardiovascular System Findings (CV)
-* Musculoskeletal System Findings (MK)
-* Nervous System Findings (NV)
-* Ophthalmic Examinations (OE)
-* Reproductive System Findings (RP)
-* Respiratory System Findings (RE)
-* Urinary System Findings (UR)
-* Physical Examination (PE)
-* Functional Tests (FT)
+* Cardiovascular system findings (CV)
+* Musculoskeletal system findings (MK)
+* Nervous system findings (NV)
+* Ophthalmic examinations (OE)
+* Reproductive system findings (RP)
+* Respiratory system findings (RE)
+* Urinary system findings (UR)
+* Physical examination (PE)
+* Functional tests (FT)
 * Questionnaires (QS)
-* Disease Response and Clin Classification (RS)
-* Subject Characteristics (SC)
-* Subject Status (SS)
-* Tumor/Lesion Identification (TU)
-* Tumor/Lesion Results (TR)
+* Disease response and clinical classification (RS)
+* Subject characteristics (SC)
+* Subject status (SS)
+* Tumor/lesion identification (TU)
+* Tumor/lesion results (TR)
 * Vital signs (**VS**)
+* Findings about events or interventions (FA)
+* Skin response (SR)
 
 #### Special purpose
 
@@ -115,7 +119,7 @@ Contain the focus of the observation.
 
 #### Qualifier
 
-Provide additional information about the topic variables.
+Qualifiers provide additional information about the topic variables.
 
 * Grouping
 * Result
@@ -157,7 +161,8 @@ All ADaM variable names must be no more than 8 characters in length, start with 
 
 ADaM adheres to a principle of harmonization known as "same name, same meaning, same values."
 
-In general, if an SDTM character variable is converted to a numeric variable in an ADaM dataset, then it should be named as it is in the SDTM dataset with an "**N**" suffix added.
+Generally, suppose an SDTM character variable is converted to a numeric variable in an ADaM dataset.
+In that case, it should be named as it is in the SDTM dataset with an "**N**" suffix added.
 
 In a pair of corresponding variables (e.g., TRTP and TRTPN), the primary or most commonly used variable does not have the suffix or extension (i.e., **N** for numeric or **C** for character).
 The relevant suffix is used only on the name of the secondary member of the variable pair.
