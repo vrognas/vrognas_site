@@ -8,35 +8,23 @@ title: "CDISC data standards"
 
 ![](images/cdisc.png){#fig-cdisc}
 
-* **SEND:** Tabulation for animal studies
-* **CDASH:** Collection for clinical studies
+# Study data tabulation model (SDTM)
+
+**SDTM** is the overarching model from which multiple implementations are based:
+
+* **SENDIG:** Non-clinical
 * **SDTMIG:** Tabulation for clinical studies
-* **ADaM:** Analysis for clinical studies
-
-## SEND
-
-**SEND:** The Standard for Exchange of Nonclinical Data Implementation Guide (SENDIG) is based on the SDTM and guides users on the organization, structure, and format of standard nonclinical study tabulation datasets for exchange between organizations or to be submitted to a regulatory authority.
-The following videos introduce you to the SENDIG and the SDTM, which used together serve as a map that orients you on how your data fits into the standard.
-
-## CDASH
-
-## SDTMIG
-
-## ADaM: Analysis Data Model
-
-### ADaM Standard data structures
-
-* **ADSL:** Subject-level analysis dataset
-* **BDS:** Basic data structure
-* **OCCDS:** Occurrence data structure
-* ADaM Other data structure
+* **Medical devices**
+* **TAUGs:** Therapeutic area user guides
 
 ## General Observation Classes
+
+This is how SDTM groups data.
 
 ### Interventions
 
 * Concomitant medications
-* Exposure (EX)
+* Exposure (**EX**)
 * Substance use
 
 ### Events
@@ -53,11 +41,11 @@ The following videos introduce you to the SENDIG and the SDTM, which used togeth
 * Questionnaire
 * Incl/Excl
 * SubjChar
-* Labs (LB)
-* Vital sign (VS)
+* Labs (**LB**)
+* Vital sign (**VS**)
 * Physical exam
 * Drug accountability
-* PK concentrations (PC)
+* PK concentrations (**PC**)
 * PK parameters
 * Microbiological specimen
 * Microbiological susceptibility
@@ -107,3 +95,113 @@ Describes the timing of the observation.
 * Visits
 * Time points
 * Relative times
+
+## SEND
+
+**SEND:** The Standard for Exchange of Nonclinical Data Implementation Guide (SENDIG) is based on the SDTM and guides users on the organization, structure, and format of standard nonclinical study tabulation datasets for exchange between organizations or to be submitted to a regulatory authority.
+The following videos introduce you to the SENDIG and the SDTM, which used together serve as a map that orients you on how your data fits into the standard.
+
+## ADaM: Analysis Data Model
+
+https://www.cdisc.org/system/files/members/standard/foundational/ADaMIG_v1.3.pdf
+
+### ADaM Standard data structures
+
+* **ADSL:** Subject-level analysis dataset
+  * One record per subject
+* **BDS:** Basic data structure
+  * One (or more) record per subject/parameter/timepoint
+* **OCCDS:** Occurrence data structure
+  * Designed for counting occurrences
+* ADaM Other data structure
+
+### ADaM variable conventions
+
+####  General variable conventions
+
+All ADaM variable names must be no more than 8 characters in length, start with a letter (not underscore), and be composed only of letters (A--Z), underscore ( _ ), and numerals (0--9).
+
+ADaM adheres to a principle of harmonization known as "same name, same meaning, same values."
+
+In general, if an SDTM character variable is converted to a numeric variable in an ADaM dataset, then it should be named as it is in the SDTM dataset with an "**N**" suffix added.
+
+In a pair of corresponding variables (e.g., TRTP and TRTPN), the primary or most commonly used variable does not have the suffix or extension (i.e., **N** for numeric or **C** for character).
+The relevant suffix is used only on the name of the secondary member of the variable pair.
+
+Variables whose names end in **FL** are character flag (or indicator) variables.
+
+Variables whose names end in **GR*y***, **G*y***, or **CAT*y*** are grouping variables, where "*y*" refers to the grouping scheme or algorithm (not the category within the grouping).
+
+It is recommended that producer-defined grouping or categorization variables begin with the name of the variable being grouped and end in **GR*y*** (e.g., variable ABCGR*y* is a character description of a grouping or categorization of the values from the ABC variable for analysis purposes).
+
+ #### Timing variable conventions
+
+Variables whose names end in **DT** are numeric dates.
+
+Variables whose names end in **DTM** are numeric datetimes.
+
+Variables whose names end in **TM** are numeric times.
+
+Names of timing **start variables** end with an **S** followed by the characters indicating the type of timing (i.e., SDT, STM, SDTM).
+
+Names of timing **end variables** end with an **E** followed by the characters indicating the type of timing (i.e., EDT, ETM, EDTM)
+
+Variables whose names end in **DY** are relative day variables.
+
+#### Variable naming fragments
+
+| Fragment | Notes |
+| :------- | :---- |
+| GR*y* | Grouping variables |
+| G*y* | Abbreviation of GR*y* |
+| FL | Flag/indicator |
+| DT | Numeric date |
+| TM | Numeric time |
+| DTM | Numeric datetime |
+| DTF | Date imputation flag |
+| TMF | Time imputation flag |
+| DY | Relative days (does not include day 0) |
+
+| Fragment | Notes |
+| :------- | :---- |
+| BL | Baseline |
+| CHG | Change |
+| FU | Follow-up |
+| OT | On treatment |
+| RU | Run-in |
+| SC | Screening |
+| TA | Taper |
+| TI | Titer |
+| U | Units |
+| WA | Washout |
+|  |  |
+
+### ADSL variables
+
+| Variable | Notes |
+| :------- | :---- |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+
+| Variable | Notes |
+| :------- | :---- |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+
+### BDS variables
+
+### Analysis-enabling variables
+
