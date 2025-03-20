@@ -8,6 +8,8 @@ title: "CDISC data standards"
 
 ![](images/cdisc.png){#fig-cdisc}
 
+CDISC standards: SEND, SDTM, CDASH, ADaM
+
 ## SEND
 
 **SEND:** The Standard for Exchange of Nonclinical Data Implementation Guide (SENDIG) is based on the SDTM and guides users on the organization, structure, and format of standard nonclinical study tabulation datasets for exchange between organizations or to be submitted to a regulatory authority.
