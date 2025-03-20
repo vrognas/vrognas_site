@@ -14,13 +14,15 @@ title: "CDISC data standards"
 
 * **SENDIG:** Non-clinical
 * **SDTMIG:** Clinical
-* **Medical devices**
 * **TAUGs:** Therapeutic area user guides
 
 ## General Observation Classes
 
-This is how SDTM groups data.
-Each observation class is essentially a separate dataset, e.g., EX is its own dataset.
+There are three general observation classes: *Intervantions*, *Events*, and *Findings*.
+There is also a fourth observation class: *Special purpose*.
+Further, observation classes are grouped into **domains**, organized around a particular topic. 
+Each "domain" is essentially a separate dataset, e.g., EX is its own dataset containing exposure (dosing) data.
+For each domain, variables are classified as *required*, *expected*, or *permissible*.
 
 ### Interventions
 
