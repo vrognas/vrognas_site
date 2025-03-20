@@ -20,6 +20,7 @@ title: "CDISC data standards"
 ## General Observation Classes
 
 This is how SDTM groups data.
+Each observation class is essentially a separate dataset, e.g., EX is its own dataset.
 
 ### Interventions
 
