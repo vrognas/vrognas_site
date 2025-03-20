@@ -13,7 +13,7 @@ title: "CDISC data standards"
 **SDTM** is the overarching model from which multiple implementations are based:
 
 * **SENDIG:** Non-clinical
-* **SDTMIG:** Tabulation for clinical studies
+* **SDTMIG:** Clinical
 * **Medical devices**
 * **TAUGs:** Therapeutic area user guides
 
