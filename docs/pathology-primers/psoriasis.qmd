@@ -1,0 +1,96 @@
+---
+title: "Psoriasis"
+---
+
+:::{.callout-caution}
+# Under construction
+:::
+
+## What is Psoriasis?
+
+### Disease definition & pathophysiology
+
+Psoriasis is a chronic, immune-mediated inflammatory skin disorder.
+It involves rapid proliferation of keratinocytes, dysfunctional epidermal differentiation, and infiltration by immune cells (T-helper cells, dendritic cells, neutrophils).
+Key inflammatory mediators driving psoriasis include cytokines like TNF-α, IL-17, and IL-23.
+
+### Commonly used Pharmacodynamic (PD) Models
+- Disease progression models (e.g., turnover models for plaque development and resolution)
+- Indirect response models (cytokine-driven inflammatory response)
+- Target engagement models (cytokine suppression, receptor occupancy models for biologics)
+
+## Patient characteristics
+
+### Typical patient population
+
+- Commonly presents in adults aged 15–35 and 50–60 years
+- Equal prevalence among genders
+- Worldwide prevalence approximately 2–3%
+
+### Risk factors & disease progression indicators
+
+- Family history and genetic predisposition (e.g., HLA-Cw6 allele)
+- Environmental triggers: infections, stress, medications, trauma
+- Comorbidities: psoriatic arthritis, cardiovascular disease, metabolic syndrome
+- Disease progression indicated by extent/severity of skin involvement and responsiveness to initial therapies
+
+## Diagnosis & biomarkers
+
+### Key Clinical Biomarkers
+
+- Clinical evaluation of skin lesions (plaque thickness, erythema, scaling)
+- Imaging rarely used, except to evaluate psoriatic arthritis (MRI, X-ray)
+- Non-specific inflammation markers (CRP, ESR) sometimes elevated
+
+### Disease Severity Classification
+
+- **Psoriasis Area and Severity Index (PASI):**
+  - Mild: PASI < 10  
+  - Moderate-to-severe: PASI ≥ 10
+- **Body Surface Area (BSA) involvement:**
+  - Mild: <3%, Moderate: 3–10%, Severe: >10%
+- Physician Global Assessment (PGA) commonly used
+
+## How can Psoriasis be treated?
+
+### Treatment aim (PD-targets)
+
+- Suppression of inflammation, reduction of epidermal hyperproliferation, and normalization of immune dysregulation
+- Primary targets: TNF-α, IL-17, IL-23, IL-12 pathways
+
+### Common Drug Classes & Regimens
+
+#### Topical Agents *(first-line for mild psoriasis)*
+
+- Corticosteroids, Vitamin D analogs (calcipotriol), Retinoids (tazarotene)  
+**MoA:** Anti-inflammatory and antiproliferative actions on keratinocytes
+
+#### Phototherapy *(moderate disease or resistant cases)*
+
+- UVB therapy, PUVA (psoralen + UVA)  
+**MoA:** Induces apoptosis of activated immune cells, reduces keratinocyte proliferation
+
+#### Systemic treatments (oral) *(moderate-to-severe psoriasis)*
+
+- Methotrexate, Cyclosporine, Acitretin  
+**MoA:** Immunosuppressive, anti-inflammatory, antiproliferative effects
+
+#### Biologic therapies *(moderate-to-severe psoriasis, second-line after systemic therapies)*
+
+- **TNF-α inhibitors:** Adalimumab, Etanercept, Infliximab
+- **IL-17 inhibitors:** Secukinumab, Ixekizumab, Brodalumab
+- **IL-23 inhibitors:** Guselkumab, Risankizumab, Tildrakizumab
+- **IL-12/23 inhibitor:** Ustekinumab  
+**MoA:** Targeted suppression of specific inflammatory cytokines
+
+#### Dose Adjustments
+
+- Biologics usually dosed by body weight, minimal adjustments required for renal/hepatic impairment
+- Methotrexate and Cyclosporine require renal and hepatic dose adjustments
+- Pediatric dosing based on weight and disease severity
+
+### Commonly used PK-models
+
+- One- or two-compartment pharmacokinetic models (particularly for biologics)
+- Population PK-models incorporating covariates (body weight, immunogenicity, PASI scores)
+- Exposure-response models linking drug concentration/exposure to PASI improvement
