@@ -1,0 +1,103 @@
+---
+title: "Diabetes"
+---
+
+:::{.callout-caution}
+# Under construction
+:::
+
+## What is Diabetes?
+
+### Disease definition & pathophysiology
+
+Diabetes mellitus is a chronic metabolic disorder characterized by hyperglycemia resulting from impaired insulin secretion, insulin action, or both.  
+Two main types exist: Type 1 diabetes (T1DM) involves autoimmune destruction of pancreatic beta-cells, leading to absolute insulin deficiency.  
+Type 2 diabetes (T2DM) is characterized by insulin resistance combined with progressive beta-cell dysfunction, influenced by genetic, lifestyle, and environmental factors.
+
+### Commonly used Pharmacodynamic (PD) Models
+
+- Glucose-insulin homeostasis models (minimal model, insulin-glucose feedback models).
+- Disease progression models describing beta-cell function decline over time (HbA1c progression).
+- Indirect-response or target-engagement models evaluating insulin secretion or sensitivity.
+
+---
+
+## Patient characteristics
+
+### Typical patient population
+
+T1DM commonly presents in childhood or adolescence (<20 years), though adult-onset is possible.  
+T2DM usually appears after age 40 but increasingly occurs earlier due to rising obesity rates.  
+T2DM is more prevalent, accounting for >90% of diabetes cases globally.
+
+### Risk factors & disease progression indicators
+
+Risk factors for T1DM include genetics and autoimmunity.  
+T2DM risk factors include obesity, sedentary lifestyle, poor diet, family history, age, hypertension, and dyslipidemia.  
+Disease progression indicated by rising HbA1c, decreasing beta-cell function (lower insulin secretion), increasing insulin requirements, and presence of diabetes complications (retinopathy, nephropathy, neuropathy).
+
+---
+
+## Diagnosis & biomarkers
+
+### Key Clinical Biomarkers
+
+Diagnosis relies primarily on blood glucose criteria:
+- Fasting plasma glucose (FPG) ≥126 mg/dL (≥7.0 mmol/L)
+- 2-hour plasma glucose ≥200 mg/dL (≥11.1 mmol/L) after oral glucose tolerance test (OGTT)
+- HbA1c ≥6.5%
+- Random plasma glucose ≥200 mg/dL (≥11.1 mmol/L) with classical symptoms
+
+HbA1c is key for monitoring glycemic control over time.
+
+### Disease Severity Classification
+
+Severity often described by glycemic control level and presence of complications:
+- Well-controlled: HbA1c <7%
+- Moderately controlled: HbA1c 7--8.5%
+- Poorly controlled: HbA1c >8.5%
+
+---
+
+## How can Diabetes be treated?
+
+### Treatment aim (PD-targets)
+
+The main treatment aims are normalization of blood glucose, preservation of beta-cell function, and reduction of long-term diabetic complications.  
+PD-targets include insulin secretion, insulin sensitivity, glucose absorption, and renal glucose excretion.
+
+### Common Drug Classes & Regimens
+
+#### Insulin *(mandatory in T1DM, second-line or advanced-stage T2DM)*
+
+- **Rapid-acting (lispro, aspart, glulisine), long-acting (glargine, detemir, degludec):**  
+  - **MoA:** Directly reduces blood glucose by stimulating glucose uptake into tissues.
+
+#### Oral anti-diabetic agents *(first-line in T2DM)*
+
+- **Biguanides (Metformin):**  
+  - **MoA:** Reduces hepatic glucose production, improves insulin sensitivity.
+
+- **Sulfonylureas (Gliclazide, Glimepiride):**  
+  - **MoA:** Stimulates pancreatic insulin secretion.
+
+- **SGLT2 inhibitors (Empagliflozin, Dapagliflozin):**  
+  - **MoA:** Increases renal glucose excretion by blocking glucose reabsorption.
+
+- **GLP-1 receptor agonists (Semaglutide, Liraglutide, Dulaglutide):**  
+  - **MoA:** Enhances insulin secretion, suppresses glucagon secretion, promotes weight loss.
+
+- **DPP-4 inhibitors (Sitagliptin, Linagliptin):**  
+  - **MoA:** Enhances endogenous GLP-1 activity, improving insulin secretion.
+
+#### Dose Adjustments
+
+Dose adjustments needed based on renal function (especially Metformin, SGLT2 inhibitors, GLP-1 agonists, insulin).  
+Pediatric insulin dosing tailored by weight, glucose response, and age.  
+Elderly patients often require lower or more cautious dosing due to hypoglycemia risk.
+
+### Commonly used PK-models
+
+- Population PK models describing insulin kinetics and dynamics, considering factors like body weight, renal function, and insulin resistance.
+- Physiologically-based PK (PBPK) models used to characterize absorption and disposition of oral anti-diabetic drugs.
+- PK-PD models linking drug exposure to glycemic endpoints (HbA1c, fasting glucose), insulin sensitivity, and beta-cell function.
