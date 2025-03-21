@@ -6,9 +6,55 @@ title: "CDISC data standards"
 # Under construction
 :::
 
+**CDISC** stands for *Clinical Data Interchange Standards Consortium*.
+CDISC provides several interrelated standards, each addressing a specific stage of the data lifecycle @fig-cdisc.
+Each standard has an Implementation Guide (IG) that shows exactly how to apply that standard practically, e.g. SDTMIG for SDTM.
+All the implementations have version numbers that are important to keep track of.
+
 ![](images/cdisc.png){#fig-cdisc}
 
-CDISC standards: SEND, SDTM, CDASH, ADaM
+```{mermaid}
+graph TD
+    %% Define nodes
+    CDASH[/"📝 CDASH: Data Collection (CRF)"/] 
+    SDTM[/"📂 SDTM: Submission Datasets"/] 
+    ADaM[/"📊 ADaM: Analysis Datasets"/] 
+    SEND[/"🐁 SEND: Nonclinical Datasets"/]
+
+    %% Define Implementation Guides
+    CDASH -->|"Implemented via"| CDASHIG[("CDASH Implementation Guide")]
+    SDTM -->|"Implemented via"| SDTMIG[("SDTM Implementation Guide")]
+    ADaM -->|"Implemented via"| ADaMIG[("ADaM Implementation Guide")]
+    SEND -->|"Implemented via"| SENDIG[("SEND Implementation Guide")]
+
+    %% Workflow connections
+    CDASH -->|"Standardizes raw data collection"| SDTM
+    SDTM -->|"Provides traceability & consistency"| ADaM
+    CDASH -->|"Nonclinical studies use similar approach"| SEND
+```
+
+## SEND (Standard for Exchange of Nonclinical Data)
+
+SEND mirrors SDTM but for non-clinical (animal) studies, describing how data is organized.
+
+## CDASH (Clinical Data Acquisition Standards Harmonization)
+
+CDASH standardizes how data are entered into *case report forms (CRFs)* at clinical sites.
+
+## SDTM (Study Data Tabulation Model)
+
+SDTM organizes the data from CDASH into submission-ready datasets.
+It includes different **domains/datasets** (e.g., exposure, and lab-values) and controlled terminology (e.g., how to name variables).
+
+## ADaM (Analysis Data Model)
+
+ADaM standardizes how to organize data so that is as close as possible to be ready for statistical analysis.
+It contains derived datasets used for tables, listings, figures.
+Like SDTM it is organized into different **domains/datasets**, each with its specific setup.
+
+
+
+
 
 ## SEND
 
@@ -16,12 +62,6 @@ CDISC standards: SEND, SDTM, CDASH, ADaM
 The following videos introduce you to the SENDIG and the SDTM, which, together, serve as a map that orients you to how your data fits into the standard.
 
 ## Study data tabulation model (SDTM)
-
-**SDTM** is the overarching model on which multiple implementations are based:
-
-* **SENDIG:** Non-clinical data.
-* **SDTMIG:** Clinical data.
-* **TAUGs:** Therapeutic area user guides. Data related to specific disease areas.
 
 All the implementations, as well as SDTM itself, have version numbers.
 The implementations are always based on one SDTM version.
