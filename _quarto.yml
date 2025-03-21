@@ -126,8 +126,6 @@ website:
         - section: "Concepts of the Craft"
           href: docs/concepts/index.qmd
           contents:
-          - text: "Clinical studies"
-            href: docs/concepts/clinpharm-studies.qmd
           - text: "Absorption"
             href: docs/concepts/1_absorption.qmd
           - text: "Distribution"
@@ -143,8 +141,11 @@ website:
               href: docs/concepts/augmented-renal-clearance.qmd
           - text: "Pediatrics"
             href: docs/concepts/pediatrics.qmd
-          - text: "Data standards"
-            href: docs/concepts/cdisc.qmd
+          - text: "Clinical studies"
+            href: docs/concepts/clinpharm-studies.qmd
+            contents:
+            - text: "Data standards"
+              href: docs/concepts/cdisc.qmd
     - id: modeling
       title: "Modeling Methods"
       collapse-level: 2
