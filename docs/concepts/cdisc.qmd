@@ -37,7 +37,7 @@ Each "domain" is usually a separate dataset; for example, EX can be a dataset co
 However, a domain can also be split into multiple datasets.
 A typical example is splitting the Laboratory Test Results (LB) domain due to size.
 
-| General Observation Class | Domain Name                                 | Domain Abbreviation |
+| Observation Class         | Domain Name                                 | Domain Abbreviation |
 | :------------------------ | :------------------------------------------ | :-----------------: |
 | **Interventions**         | Procedure agents                            | `AG`                |
 |                           | Concomitant/prior medications               | `CM`                |
@@ -86,7 +86,7 @@ A typical example is splitting the Laboratory Test Results (LB) domain due to si
 |                           | Vital signs                                 | `VS`                |
 |                           | Findings about events or interventions      | `FA`                |
 |                           | Skin response                               | `SR`                |
-| **Special Purpose** *(not a general observation class)* | Comments      | `CO`                |
+| **Special Purpose**       | Comments                                    | `CO`                |
 |                           | Demographics                                | `DM`                |
 |                           | Subject elements                            | `SE`                |
 |                           | Subject disease milestones                  | `SM`                |
@@ -173,7 +173,7 @@ Variables whose names end in **GR*y***, **G*y***, or **CAT*y*** are grouping var
 
 It is recommended that producer-defined grouping or categorization variables begin with the name of the variable being grouped and end in **GR*y*** (e.g., variable ABCGR*y* is a character description of a grouping or categorization of the values from the ABC variable for analysis purposes).
 
- #### Timing variable conventions
+#### Timing variable conventions
 
 Variables whose names end in **DT** are numeric dates.
 
@@ -213,7 +213,6 @@ Variables whose names end in **DY** are relative day variables.
 | TI | Titer |
 | U | Units |
 | WA | Washout |
-|  |  |
 
 ### ADSL variables
 
