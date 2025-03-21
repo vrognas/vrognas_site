@@ -11,96 +11,92 @@ CDISC provides several interrelated standards, each addressing a specific stage 
 Each standard has an Implementation Guide (IG) that shows exactly how to apply that standard practically, e.g. SDTMIG for SDTM.
 All the implementations have version numbers that are important to keep track of.
 
+CDISC also provides TAUGs (Therapeutic Area User Guides).
+A TAUG is a document providing guidance on applying CDISC standards to a specific therapeutic area (oncology, diabetes, CNS, etc.).
+
 ![](images/cdisc.png){#fig-cdisc}
 
-## SEND (Standard for Exchange of Nonclinical Data)
+## CDASH
 
-SEND mirrors SDTM but for non-clinical (animal) studies, describing how data is organized.
+CDASH (Clinical Data Acquisition Standards Harmonization) standardizes how data are entered into *case report forms (CRFs)* at clinical sites.
 
-## CDASH (Clinical Data Acquisition Standards Harmonization)
+## SDTM
 
-CDASH standardizes how data are entered into *case report forms (CRFs)* at clinical sites.
-
-## SDTM (Study Data Tabulation Model)
-
-SDTM organizes the data from CDASH into submission-ready datasets.
+SDTM (Study Data Tabulation Model) organizes the data from CDASH into submission-ready datasets.
 It includes different **domains/datasets** (e.g., exposure, and lab-values) and controlled terminology (e.g., how to name variables).
 
 ### General Observation Classes
 
+General Observation Classes are high-level classifications within SDTM that group domains based on the type of data they contain.
+
 There are three general observation classes: *Interventions*, *Events*, and *Findings*.
 There is also a fourth observation class: *Special purpose*.
-Further, observation classes are grouped into **domains**, organized around a particular topic. 
-Each "domain" is essentially a separate dataset; for example, EX can be a dataset containing exposure (dosing) data.
-The distinction between domain and dataset is most clearly seen in cases where a general observation class domain is split into multiple datasets in a submission.
-Typical examples are splitting the Laboratory Test Results (LB) domain due to size, splitting the Questionnaires (QS) domain by questionnaire, and splitting the Findings About Events or Interventions (FA) domain by parent domain.
-Variables are classified as *required*, *expected*, or *permissible* for each domain.
 
-#### Interventions
+Observation classes are then grouped into **domains**, organized around a particular topic.
+Each "domain" is usually a separate dataset; for example, EX can be a dataset containing exposure (dosing) data.
+However, a domain can also be split into multiple datasets.
+A typical example is splitting the Laboratory Test Results (LB) domain due to size.
 
-* Procedure agents (AG)
-* Concomitant/prior medications (CM)
-* Exposure (EX)
-* Exposure as collected (EC)
-* Meal data (ML)
-* Procedures (PR)
-* Substance use (SU)
+| General Observation Class | Domain Name                                 | Domain Abbreviation |
+| :------------------------ | :------------------------------------------ | :-----------------: |
+| **Interventions**         | Procedure agents                            | `AG`                |
+|                           | Concomitant/prior medications               | `CM`                |
+|                           | Exposure                                    | `EX`                |
+|                           | Exposure as collected                       | `EC`                |
+|                           | Meal data                                   | `ML`                |
+|                           | Procedures                                  | `PR`                |
+|                           | Substance use                               | `SU`                |
+| **Events**                | Adverse events                              | `AE`                |
+|                           | Biospecimen events                          | `BE`                |
+|                           | Clinical events                             | `CE`                |
+|                           | Disposition                                 | `DS`                |
+|                           | Healthcare encounters                       | `HO`                |
+|                           | Medical history                             | `MH`                |
+|                           | Protocol deviations                         | `DV`                |
+| **Findings**              | Product/drug accountability                 | `DA`                |
+|                           | Death details                               | `DD`                |
+|                           | ECG test results                            | `EG`                |
+|                           | Inclusion/Exclusion criteria not met        | `IE`                |
+|                           | Biospecimen findings                        | `BS`                |
+|                           | Cell phenotype findings                     | `CP`                |
+|                           | Genomics findings                           | `GF`                |
+|                           | Immunogenicity specimen assessments         | `IS`                |
+|                           | Laboratory test results                     | `LB`                |
+|                           | Microbiology specimen                       | `MB`                |
+|                           | Microbiology susceptibility                 | `MS`                |
+|                           | Microscopic findings                        | `MI`                |
+|                           | PK concentrations                           | `PC`                |
+|                           | PK parameters                               | `PP`                |
+|                           | Morphology                                  | `MO`                |
+|                           | Cardiovascular system findings              | `CV`                |
+|                           | Musculoskeletal system findings             | `MK`                |
+|                           | Nervous system findings                     | `NV`                |
+|                           | Ophthalmic examinations                     | `OE`                |
+|                           | Reproductive system findings                | `RP`                |
+|                           | Respiratory system findings                 | `RE`                |
+|                           | Urinary system findings                     | `UR`                |
+|                           | Physical examination                        | `PE`                |
+|                           | Functional tests                            | `FT`                |
+|                           | Questionnaires                              | `QS`                |
+|                           | Disease response and clinical classification| `RS`                |
+|                           | Subject characteristics                     | `SC`                |
+|                           | Subject status                              | `SS`                |
+|                           | Tumor/lesion identification                 | `TU`                |
+|                           | Tumor/lesion results                        | `TR`                |
+|                           | Vital signs                                 | `VS`                |
+|                           | Findings about events or interventions      | `FA`                |
+|                           | Skin response                               | `SR`                |
+| **Special Purpose** *(not a general observation class)* | Comments      | `CO`                |
+|                           | Demographics                                | `DM`                |
+|                           | Subject elements                            | `SE`                |
+|                           | Subject disease milestones                  | `SM`                |
+|                           | Subject visits                              | `SV`                |
 
-#### Events
-
-* Adverse events (AE)
-* Biospecimen events (BE)
-* Clinical events (CE)
-* Disposition (DS)
-* Healthcare encounters (HO)
-* Medical history (MH)
-* Protocol deviations (DV)
-
-#### Findings
-
-* Product/drug accountability (DA)
-* Death details (DD)
-* ECG test results (EG)
-* Inclusion/Exclusion criteria not met (IE)
-* Biospecimen findings (BS)
-* Cell phenotype findings (CP)
-* Genomics findings (GF)
-* Immunogenicity specimen assessments (IS)
-* Laboratory test results (**LB**)
-* Microbiology specimen (MB)
-* Microbiology susceptibility (MS)
-* Microscopic findings (MI)
-* PK concentrations (**PC**)
-* PK parameters (**PP**)
-* Morphology (MO)
-* Cardiovascular system findings (CV)
-* Musculoskeletal system findings (MK)
-* Nervous system findings (NV)
-* Ophthalmic examinations (OE)
-* Reproductive system findings (RP)
-* Respiratory system findings (RE)
-* Urinary system findings (UR)
-* Physical examination (PE)
-* Functional tests (FT)
-* Questionnaires (QS)
-* Disease response and clinical classification (RS)
-* Subject characteristics (SC)
-* Subject status (SS)
-* Tumor/lesion identification (TU)
-* Tumor/lesion results (TR)
-* Vital signs (**VS**)
-* Findings about events or interventions (FA)
-* Skin response (SR)
-
-#### Special purpose
-
-* Comments (CO)
-* Demographics (DM)
-* Subject elements (SE)
-* Subject disease milestones (SM)
-* Subject visits (SV)
+: General observation classes in SDTM. {#tbl-goc}
 
 ### SDTM variables
+
+Variables are classified as *required*, *expected*, or *permissible* for each domain.
 
 #### Identifier
 
@@ -139,9 +135,9 @@ Describes the timing of the observation.
 * Time points
 * Relative times
 
-## ADaM (Analysis Data Model)
+## ADaM
 
-ADaM takes SDTM data and transforms it into datasets suitable for statistical analysis.
+ADaM (Analysis Data Model) takes SDTM data and transforms it into datasets suitable for statistical analysis.
 It contains derived datasets used for tables, listings, figures.
 Like SDTM it is organized into different **domains/datasets**, each with its specific setup.
 
@@ -248,3 +244,6 @@ Variables whose names end in **DY** are relative day variables.
 
 ### Analysis-enabling variables
 
+## SEND
+
+SEND (Standard for Exchange of Nonclinical Data) mirrors SDTM but for non-clinical (animal) studies, describing how data is organized.
