@@ -13,26 +13,6 @@ All the implementations have version numbers that are important to keep track of
 
 ![](images/cdisc.png){#fig-cdisc}
 
-```{mermaid}
-graph TD
-    %% Define nodes
-    CDASH[/"📝 CDASH: Data Collection (CRF)"/] 
-    SDTM[/"📂 SDTM: Submission Datasets"/] 
-    ADaM[/"📊 ADaM: Analysis Datasets"/] 
-    SEND[/"🐁 SEND: Nonclinical Datasets"/]
-
-    %% Define Implementation Guides
-    CDASH -->|"Implemented via"| CDASHIG[("CDASH Implementation Guide")]
-    SDTM -->|"Implemented via"| SDTMIG[("SDTM Implementation Guide")]
-    ADaM -->|"Implemented via"| ADaMIG[("ADaM Implementation Guide")]
-    SEND -->|"Implemented via"| SENDIG[("SEND Implementation Guide")]
-
-    %% Workflow connections
-    CDASH -->|"Standardizes raw data collection"| SDTM
-    SDTM -->|"Provides traceability & consistency"| ADaM
-    CDASH -->|"Nonclinical studies use similar approach"| SEND
-```
-
 ## SEND (Standard for Exchange of Nonclinical Data)
 
 SEND mirrors SDTM but for non-clinical (animal) studies, describing how data is organized.
@@ -45,26 +25,6 @@ CDASH standardizes how data are entered into *case report forms (CRFs)* at clini
 
 SDTM organizes the data from CDASH into submission-ready datasets.
 It includes different **domains/datasets** (e.g., exposure, and lab-values) and controlled terminology (e.g., how to name variables).
-
-## ADaM (Analysis Data Model)
-
-ADaM standardizes how to organize data so that is as close as possible to be ready for statistical analysis.
-It contains derived datasets used for tables, listings, figures.
-Like SDTM it is organized into different **domains/datasets**, each with its specific setup.
-
-
-
-
-
-## SEND
-
-**SEND:** The Standard for Exchange of Nonclinical Data Implementation Guide (SENDIG) is based on the SDTM and guides users on the organization, structure, and format of standard nonclinical study tabulation datasets for exchange between organizations or to be submitted to a regulatory authority.
-The following videos introduce you to the SENDIG and the SDTM, which, together, serve as a map that orients you to how your data fits into the standard.
-
-## Study data tabulation model (SDTM)
-
-All the implementations, as well as SDTM itself, have version numbers.
-The implementations are always based on one SDTM version.
 
 ### General Observation Classes
 
@@ -179,7 +139,11 @@ Describes the timing of the observation.
 * Time points
 * Relative times
 
-## ADaM: Analysis Data Model
+## ADaM (Analysis Data Model)
+
+ADaM takes SDTM data and transforms it into datasets suitable for statistical analysis.
+It contains derived datasets used for tables, listings, figures.
+Like SDTM it is organized into different **domains/datasets**, each with its specific setup.
 
 https://www.cdisc.org/system/files/members/standard/foundational/ADaMIG_v1.3.pdf
 
