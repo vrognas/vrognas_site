@@ -72,7 +72,82 @@ project/
       - slides.pptx
 ```
 
-## Coding
+## Coding: language agnostic
+
+### Function naming
+
+Strive to use **verbs** for function names: `to`, `add`, `remove`, `do`, `get`, `make`, `take`, `find`, `use`, `call`, `try`, `have`, `has`, `give`, `ask`, `go`, `put`, `let`, `help`, `move`, `turn`, `run`, `hold`, `write`, `read`, `include`, `set`, `change`, `watch`, `stop`, `start`, `create`, `open`, `close`, `save`, `build`, `wait`, `require`, `kill`, `pull`, `push`, `pass`, `stay`, etc...
+
+Use (lower) **camelCase** for self-defined functions that are not to be exported outside your project.
+
+Class names on the other hand should use **Pascal Casing**.
+
+This is to make it a clear distiction between self-defined and imported functions.
+
+```r
+# Class
+
+Parameter <- R6Class("Parameter", ....)
+
+# Variable
+
+parameterToDelete <- ...
+
+# Method and function
+
+performSimulation <- function (...)
+```
+
+:::{.callout-note}
+# Don’t hesitate to choose lengthy names for test functions.
+
+Unlike regular functions, long names are less problematic for test functions because
+
+* They are not visible or accessible to the users
+* They are not called repeatedly throughout the codebase
+:::
+
+### Variable naming
+
+Variable names should be **nouns**.
+
+True constant variables should use **ALL_CAPS Casing**.
+
+```r
+# Constant variables
+
+DEFAULT_PERCENTILE <- 0.5
+```
+
+Names for **Boolean variables or functions** should make clear what `true` and `false` <span class="red-underline">**mean**</span>. This can be done using prefixes (`is`, `has`, `can`, etc)
+
+```r
+# not great
+if (child) {
+  if (parentSupervision) {
+    watchHorrorMovie <- TRUE
+  }
+}
+
+# better
+if (isChild) {
+  if (hasParentSupervision) {
+    canWatchHorrorMovie <- TRUE
+  }
+}
+```
+
+Use positive terms for Booleans since they are easier to process.
+
+```r
+# double negation - difficult
+is_firewall_disabled <- FALSE
+
+# better
+is_firewall_enabled <- TRUE
+```
+
+## Coding: language specific
 
 ### R
 
