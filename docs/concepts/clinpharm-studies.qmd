@@ -19,13 +19,59 @@ In Phase 3, we **confirm** our efficacy and safety hypotheses in the target popu
 
 ## Phase 1: First in Human
 
+PK data obtained in various Phase 1 studies are often included in our PopPK and NCA analyses. Most Phase 1 studies are nicely controlled and provide clean sdtm input datasets (client dependent). Even if there is only an NCA planned for a Phase I study, an analysis dataset suitable for PopPK analyses will be created. Examples of study types include: 
+
 * First in human (FIH) PK/PD
-  * Single ascending dose (SAD)
-  * Multiple ascending dose (MAD)
+  * Single ascending dose (SAD): SAD/SRD (Single Ascending/Rising Dose) Study: In an SAD study, subjects receive a single dose of the investigational drug, at one dose level, with dose escalation in subsequent cohorts. Studies are typically well controlled. PK as well as Safety and/or PD can be of interest. 
+  * Multiple ascending dose (MAD): MAD/MRD (Multiple Ascending/Rising Dose) Study: Similar to SAD however, each subject received multiple doses at one dose level. On some dosing occasions, only pre-dose samples might be taken. If safety requires, subjects can be up-titrated and/or tapered to a certain dose level. 
 * Food effect (for oral drugs)
 * Pharmacogenomics (CYP genotyping)
 
+## DM Points of interest in SAD/MAD Studies 
+
+* In combined SAD-MAD studies subjects might be allowed to participate in both parts. In those cases, make sure to add a PERIOD/PART covariate and calculate TIME/TAD/TAFD for each study part. 
+* Dosing information can come in different forms (EX or EC domain):
+  * one record for each dose (e.g. 14 days, BID dosing results in 28 records per subject with dosing date/time)
+  * records with from/until dosing date information; actual dosing time of the last one or two previous doses before a sample is recorded separately (or even in another domain like PC or SUPPEX)
+  * Missed doses are sometimes not well documented; extra information can be included in SUPPEX domain. 
+
+Renal/Hepatic Impairment Study: Participants enrolled in renal/hepatic impairment studies are typically separated into parallel cohorts with varying degrees of renal impairment (normal, mild, moderate, severe) as determined by estimated glomerular filtration rate (eGFR) or other renal function markers (derived or included in data).
+Similarly, participants with different stages of hepatic impairment (normal, mild, moderate, severe) may be separated based on assessments of liver function tests and clinical criteria.
+For safety reasons the dose given in the moderately/severely impaired groups may be lower than for other groups. PK/PD and safety can be of interest. 
+
+Food Effect Study: In a food effect study, participants typically receive two single doses, one fasted and one after a meal (fed) with a washout period between the two doses to ensure that the drug from the first dose is no longer present.
+A subject in this case serves as its own control.
+The order in which participants receive the drug under each condition may be randomized to reduce bias.
+The study can also be set up in a cross-over design where both sequences of the conditions are observed for each subject (first sequence is fasted-fed and the second sequence is fed- fasted). 
+
+## DM points of attention in Food Effect Study
+
+* PERIOD, TREATMENT and SEQUENCE columns should be added to the dataset.
+* Check if all drug from the first dose actually left the body (predose concentration of second dose should be BLQ).
+* Calculate the time  after last dose (TAD) for predose samples of the second and subsequent periods relative to the correct dosing event (e.g for PopPK relative to the previous dose, for NCA relative to the next dose)
+
+Drug-Drug Interaction (DDI) Study: A DDI study is used to evaluate the effect of administering the investigational drug alone versus in combination with another drug.
+Several study designs are possible in a DDI study including parallel groups or crossover design with a washout period to ensure that the study drugs are completely eliminated and concentrations return to BLQ before the second treatment period.
+The study can have either single dose or multi-dose administration. 
+
+## DM points of attention in DDI 
+
+* PERIOD, TREATMENT and SEQUENCE columns should be added
+* Check if all drug from the first dose actually left the body (predose concentration of second dose should be BLQ)
+* Calculate the time  after last dose (TAD) for predose samples of the second and subsequent periods relative to the correct dosing event (e.g for PopPK relative to the previous dose, for NCA relative to the next dose)
+
+ADME (Absorption-Distribution-Metabolism-Excretion) Study: ADME studies assess the disposition of a drug in the body.
+These studies are often conducted as single-dose, open-label trials in a controlled clinical setting, analyzing the drug in biological matrices like plasma, urine, and feces.
+To accurately track drug elimination, a small amount of a radioactive form of the drug is typically administered, enabling precise measurement of its excretion.
+Often, these studies include the identification and characterization of drug metabolites.
+
+## DM points of attention in ADME
+
+* Volume of urine and weight of feces as well as the collection period should be collected and added to the dataset (for calculation of amount excreted)
+
 ## Phase 2
+
+Phase II/III studies are performed in patients and often consist of separate study parts/cohorts to investigate multiple scenarios in one study (e.g. different patient populations). In most cases PD measurements will be part of the analysis (and should be included in the analysis dataset to enable PK-PD evaluations). The study design can be very diverse. 
 
 * Mass Balance/ADME
 * Drug-drug interaction (DDI) in vivo
@@ -46,3 +92,10 @@ In Phase 3, we **confirm** our efficacy and safety hypotheses in the target popu
 
 * Bioequivalence (BE), eg between formulations or drug combinations
 * Exposure-efficacy/safety in target population
+
+
+## DM points of attention in Phase II/III studies
+
+* Phase II/III studies are less controlled, resulting in unrecorded dosing times, missing laboratory measurements, etc.
+* (Temporary) dose reductions/”holidays” can be implemented for individual patients due to safety issues.
+* In most cases only dosing times of actually occurring doses taken prior to a PK/PD sample are documented.
