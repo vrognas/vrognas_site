@@ -33,17 +33,17 @@ $$
 | Multiplication | Repeated addition | Scaling |
 | Exponents | Repeated multiplication | Growth for amount of time |
 
-#### Understanding *e*
+#### Understanding $e$ (it's about *growth*)
 
-The number *e* is the base amount of growth shared by all continually growing processes.
-The number *e* merges Rate and Time.
+The number $e$ is the base amount of growth shared by *all* continually growing processes.
+The number $e$ merges Rate and Time.
 When we write:
 
 $$
 e^x
 $$
 
-The variable $x$ is a combination of rate and time.
+The variable $x$ is actually a combination of *rate* and *time*.
 
 $$
 x = \text{rate} \times \text{time}
@@ -59,6 +59,14 @@ The number $e$ is about continuous growth.
 Intuitively, $e^x$ means:
 
 * How much growth do I get after after $x$ units of time (and 100% continuous growth)
+
+100% continuous growth means that, at any given time, the rate of change is always equal to our current value.
+Or more mathy: (d/dx)*(e^x) = e^x
+
+#### Understanding $ln()$ (it's about *time*)
+
+* $e^x$ lets us plug in **time** and get growth.
+* $ln(x)$ lets us plug in **growth** and get the **time it would take**.
 
 ## Statistics
 
