@@ -6,6 +6,10 @@ title: "Modeling Methods"
 # Under construction
 :::
 
+> Model-based analysis is more an art than a science. -Lewis B. Sheiner, MD
+
+> All models are wrong, but some are useful. -George E. P. Box, PhD
+
 ## Important considerations
 
 ### Impact of a model [@musuambaScientificRegulatoryEvaluation2021; @skottheimrustenScientificRegulatoryEvaluation2021]
