@@ -44,17 +44,18 @@ Non-robust models may yield misleading results or parameter instability if assum
 
 **Misspecification:** Misspecification occurs when a model's mathematical structure or assumptions differ significantly from the underlying data-generating process.
 
-**Overfitting:** The model fits training data so well that it fails on new data (poor generalization).
-
-**Identifiability:** Whether parameters can be uniquely estimated from the data.
-Lack of identifiability means multiple parameter combinations yield the same likelihood.
-
 :::{.callout-note}
 It is reasonable to assume that there will always be *some* model misspecification.
 We recall:
 
 > All models are wrong, but some are useful. -George E. P. Box, PhD
+
 :::
+
+**Overfitting:** The model fits training data so well that it fails on new data (poor generalization).
+
+**Identifiability:** Whether parameters can be uniquely estimated from the data.
+Lack of identifiability means multiple parameter combinations yield the same likelihood.
 
 **Bias-variance tradeoff:** Balancing a model’s simplicity (high bias, low variance) versus complexity (low bias, high variance) to optimize predictive accuracy.
 
