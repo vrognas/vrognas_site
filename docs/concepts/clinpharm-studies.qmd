@@ -72,7 +72,8 @@ A simplified application of this view to clinical drug development would break d
 
 Data from Phase 1 studies are typically well-controlled and provide clean SDTM input datasets.
 
-* "First in human" (FIH) PK
+##### "First in human" (FIH) PK
+
   * Single ascending dose (SAD)
     * Subjects receive a **single dose** of the investigational drug at **one dose level**, with dose escalation in subsequent cohorts.
     * PK, safety, and/or PD can be of interest. 
@@ -80,27 +81,47 @@ Data from Phase 1 studies are typically well-controlled and provide clean SDTM i
     * Like SAD, but each subject receives **multiple doses** at **one dose level**.
     * On some dosing occasions, only pre-dose samples might be taken.
     * Dose-adjustment rules can be in place to achieve desirable safety/efficacy.
-* Food effect (for oral drugs)
-  * Typically, a cross-over (fed/fasted), randomized, single-dose (one for each period) in healthy participants.
+
+:::{.callout-note}
+# Combined SAD-MAD studies
+
+SAD and MAD studies can be combined under one study, and subjects can participate in both.
+:::
+
+##### Food effect (for oral drugs)
+
+* Typically, a cross-over (fed/fasted), randomized, single-dose (one for each period) in healthy participants.
   * Similar to bioequivalence (BE) studies.
-* Drug-drug interaction (DDI) *in vivo*
+
+##### Drug-drug interaction (DDI) *in vivo*
+
   * Evaluate the effect of co-administration with another drug.
   * Several study designs are possible in a DDI study, including parallel groups or cross-over designs.
   * The study can have either single-dose or multi-dose administration. 
-* Mass Balance/ADME
+
+##### Mass Balance/ADME
+
   * Usually single-dose, open-label trials.
   * Small, radiolabeled dose to accurately track drug elimination in biological matrices (blood, plasma, urine, feces).
   * Often include metabolite identification and characterization.
   * Record the volume of urine, feces' weight, and collection duration for accurate excretion calculations.
-* Bioequivalence (BE)
+
+##### Bioequivalence (BE)
+
   * Typically, a cross-over randomized, single-dose (one for each period) in healthy participants.
   * Between formulations or drug combinations.
   * Evaluate the rate (Cmax and Tmax) and extent (AUC) of absorption
-* (T)QT study
+
+##### (T)QT study
+
   * Identifies medicines that prolong QT and thus need more thorough ECG monitoring in Phase 3 pivotal trials.
-* Pharmacogenomics (CYP genotyping)
+
+##### Pharmacogenomics (CYP genotyping)
+
   * Often include metabolite identification and characterization.
-* Relevant special populations
+
+##### Relevant special populations
+
   * Renal impairment (RI)
     * Subjects are typically separated into parallel cohorts with varying degrees of impairment (normal, mild, moderate, severe).
     * Impairment is often determined by estimated glomerular filtration rate (eGFR), preferably not using Cockgroft-Gault.
@@ -115,12 +136,6 @@ Data from Phase 1 studies are typically well-controlled and provide clean SDTM i
   * Lactating
   * Obese
   * Other
-
-:::{.callout-note}
-# Combined SAD-MAD studies
-
-SAD and MAD studies can be combined under one study, and subjects can participate in both.
-:::
 
 #### Phase 2: Therapeutic exploratory
 
