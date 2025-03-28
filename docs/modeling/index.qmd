@@ -33,28 +33,24 @@ title: "Modeling Methods"
 
 ## Terminology
 
-### Parsimony
+**Parsimony:** The idea is that comparing two models, the model with fewer parameters is preferable, given that all else is equal.
 
-The idea is that comparing two models, the model with fewer parameters is preferable, given that all else is equal.
-
-### Shrinkage
-
-Shrinkage quantifies how much individual estimates regress towards the population mean under the given sampling schedule [@savicImportanceShrinkageEmpirical2009].
+**Shrinkage:** Shrinkage quantifies how much individual estimates regress towards the population mean under the given sampling schedule [@savicImportanceShrinkageEmpirical2009].
 It also measures the amount of information on a parameter in the current data used to estimate it.
 
-### Robustness
-
-Robustness describes a model’s ability to perform reliably under varying assumptions or when faced with unusual or extreme data points.
+**Robustness:** Robustness describes a model’s ability to perform reliably under varying assumptions or when faced with unusual or extreme data points.
 Robust models produce stable parameter estimates even if underlying assumptions (normality, independence, linearity, etc.) are not perfectly met.
 Non-robust models may yield misleading results or parameter instability if assumptions are violated.
 
-### Misspecification
+**Misspecification:** Misspecification occurs when a model's mathematical structure or assumptions differ significantly from the underlying data-generating process.
 
-Misspecification occurs when a model's mathematical structure or assumptions differ significantly from the underlying data-generating process.
+**Overfitting:** The model fits training data so well that it fails on new data (poor generalization).
 
+**Identifiability:** Whether parameters can be uniquely estimated from the data.
+Lack of identifiability means multiple parameter combinations yield the same likelihood.
 
 :::{.callout-note}
-It is reasonable to assume, that there will always be *some* model misspecification.
+It is reasonable to assume that there will always be *some* model misspecification.
 We recall:
 
 > All models are wrong, but some are useful. -George E. P. Box, PhD
