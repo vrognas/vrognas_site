@@ -8,22 +8,69 @@ title: "Clinical Pharmacology Studies"
 * How can Modeling help in each phase?
 :::
 
-The concept of "Phases" in clinical drug development originates from the FDA, after WW2.
-Most clinical pharmacology studies are Phase 1 studies, when we **learn** about the PK of the drug.
+## A short history of clinical trial "phases"
+
+Prompted by the thalidomide tragedy, the 1962 Kefauver-Harris Amendments to the U.S. Federal Food, Drug, and Cosmetic Act introduced a "proof-of-efficacy" requirement.
+This led the Food and Drug Administration (FDA) to introduce structured "phases" in clinical research, delineating the progression from initial human testing to comprehensive evaluations of therapeutic effectiveness. 
+
+Previously, drug companies only had to show their new products were safe.
+The way drugs were investigated, a physician from the company would go out in the community with some samples and say to the doctor, "I've got this new drug for so-and-so. Here are some samples. Try it out and let us know how you like it".
+They would receive a letter from him stating, "I tried it out on eight patients, and they all got along fine."
+
+## General Clinical Study Design
+
+* **P**opulation
+  * Inclusion/Exclusion criteria
+  * Number of subjects (sample size)
+* **I**ntervention
+  * What is given? (Drug/Food, Formulation, Dose) when (regimen), and how (route)?
+  * Randomization and balance between arms
+  * Blinding
+  * Adaptive, cross-over/parallel-group (Study type)
+* **C**ontrol
+  * What is the control group?
+  * Placebo, standard-of-care, active comparator?
+* **O**utcome
+  * What is being measured (Covariates, PK, Clinical/pharmacological outcomes), when (Sampling/visit schedule, baseline and/or time-varying), and how?
+* **T**ime
+  * For how long does the study continue?
+  * Run-in, active treatment, washout, follow-up periods
+
+## Phases of drug development
+
+The concept of "Phases" in clinical drug development originates from the FDA after WW2.
+Most clinical pharmacology studies are Phase 1 studies, during which we **learn** about the drug's PK.
 In Phase 2, we **learn** about the PD of the drug.
 In Phase 3, we **confirm** our efficacy and safety hypotheses in the target population.
+
+George Box views scientific progress as consisting of and requiring alternating steps of induction and deduction: the former is learning from experience, and the latter is confirmation of what has been learned.
+A simplified application of this view to clinical drug development, which I define as first in humans to approval, would break development into two major learn-confirm cycles.
+
+* First cycle (Proof-of-Concept)
+  * Phase 1: **Learn** what is the tolerated dose? (Max tolerated dose?)
+  * Phase 2a: **Confirm** that this dose has the promise of efficacy in a selected group of patients. (Is that dose efficacious?)
+* Decision point: Is there a sufficiently positive indication of efficacy (and lack of toxicity) to justify further development? (Go/No go)
+* Second cycle
+  * Phase 2b: **Learn** how to use the drug in representative patients to make acceptable benefits/risks likely. (Effect on patients?)
+  * Phase 3/4: **Confirm** in a large and representative patient population that acceptable benefit/risk is achieved. (Acceptable B/R-ratio?)
+* Approval is Granted.
 
 ![Clinical pharmacology in drug development and evaluation.](images/clinpharm-studies.jpg){#fig-clinpharm-studies}
 
 ![Timing of human pharmacology studies.](images/pharmacology-studies.png){#fig-pharmacology-studies}
 
-## Phase 1: First in Human
+## Phase 1: Human pharmacology
 
-PK data obtained in various Phase 1 studies are often included in our PopPK and NCA analyses. Most Phase 1 studies are nicely controlled and provide clean sdtm input datasets (client dependent). Even if there is only an NCA planned for a Phase I study, an analysis dataset suitable for PopPK analyses will be created. Examples of study types include: 
+Data from Phase 1 studies are typically well-controlled and provide clean SDTM input datasets.
 
-* First in human (FIH) PK/PD
-  * Single ascending dose (SAD): SAD/SRD (Single Ascending/Rising Dose) Study: In an SAD study, subjects receive a single dose of the investigational drug, at one dose level, with dose escalation in subsequent cohorts. Studies are typically well controlled. PK as well as Safety and/or PD can be of interest. 
-  * Multiple ascending dose (MAD): MAD/MRD (Multiple Ascending/Rising Dose) Study: Similar to SAD however, each subject received multiple doses at one dose level. On some dosing occasions, only pre-dose samples might be taken. If safety requires, subjects can be up-titrated and/or tapered to a certain dose level. 
+* "First in human" (FIH) PK
+  * Single ascending dose (SAD)
+    * Subjects receive a **single dose** of the investigational drug at **one dose level**, with dose escalation in subsequent cohorts.
+    * PK, safety, and/or PD can be of interest. 
+  * Multiple ascending dose (MAD)
+    * Like SAD, but each subject receives **multiple doses** at **one dose level**.
+    * On some dosing occasions, only pre-dose samples might be taken.
+    * Dose-adjustment rules can be in place to achieve desirable safety/efficacy.
 * Food effect (for oral drugs)
 * Pharmacogenomics (CYP genotyping)
 
@@ -69,15 +116,30 @@ Often, these studies include the identification and characterization of drug met
 
 * Volume of urine and weight of feces as well as the collection period should be collected and added to the dataset (for calculation of amount excreted)
 
-## Phase 2
+## Phase 2: Therapeutic exploratory
 
-Phase II/III studies are performed in patients and often consist of separate study parts/cohorts to investigate multiple scenarios in one study (e.g. different patient populations). In most cases PD measurements will be part of the analysis (and should be included in the analysis dataset to enable PK-PD evaluations). The study design can be very diverse. 
+Phase II/III studies are performed on patients and often consist of separate study parts/cohorts to investigate multiple scenarios in one study (e.g., different patient populations). In most cases, PD measurements will be part of the analysis (and should be included in the analysis dataset to enable PK-PD evaluations). The study design can be very diverse. 
 
 * Mass Balance/ADME
 * Drug-drug interaction (DDI) in vivo
 * QT study
 * Dose identification
 * Healthy vs Patient PK & PD
+
+## Phase 3: Therapeutic confirmatory
+
+* Bioequivalence (BE), e.g., between formulations or drug combinations
+* Exposure-efficacy/safety in the target population
+
+
+## DM points of attention in Phase II/III studies
+
+* Phase II/III studies are less controlled, resulting in unrecorded dosing times, missing laboratory measurements, etc.
+* (Temporary) dose reductions/”holidays” can be implemented for individual patients due to safety issues.
+* In most cases, only dosing times of occurring doses taken before a PK/PD sample are documented.
+
+## Phase 4: Post-approval
+
 * Relevant special populations
   * Renal impairment (RI)
   * Hepatic impairment (HI)
@@ -86,16 +148,4 @@ Phase II/III studies are performed in patients and often consist of separate stu
   * Pregnant
   * Lactating
   * Obese
-  * other
-
-## Phase 3
-
-* Bioequivalence (BE), eg between formulations or drug combinations
-* Exposure-efficacy/safety in target population
-
-
-## DM points of attention in Phase II/III studies
-
-* Phase II/III studies are less controlled, resulting in unrecorded dosing times, missing laboratory measurements, etc.
-* (Temporary) dose reductions/”holidays” can be implemented for individual patients due to safety issues.
-* In most cases only dosing times of actually occurring doses taken prior to a PK/PD sample are documented.
+  * Other
