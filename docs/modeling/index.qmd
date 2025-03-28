@@ -8,8 +8,6 @@ title: "Modeling Methods"
 
 > Model-based analysis is more an art than a science. -Lewis B. Sheiner, MD
 
-> All models are wrong, but some are useful. -George E. P. Box, PhD
-
 ## Important considerations
 
 ### Impact of a model [@musuambaScientificRegulatoryEvaluation2021; @skottheimrustenScientificRegulatoryEvaluation2021]
@@ -37,11 +35,30 @@ title: "Modeling Methods"
 
 ### Parsimony
 
-The idea that comparing two models, the model with fewer parameters is preferrable, given that all else is equal.
+The idea is that comparing two models, the model with fewer parameters is preferable, given that all else is equal.
 
 ### Shrinkage
 
-A metric which quantifies how much individual estimates regress towards the population mean under the given sampling schedule [@savicImportanceShrinkageEmpirical2009].
+Shrinkage quantifies how much individual estimates regress towards the population mean under the given sampling schedule [@savicImportanceShrinkageEmpirical2009].
+It also measures the amount of information on a parameter in the current data used to estimate it.
+
+### Robustness
+
+Robustness describes a model’s ability to perform reliably under varying assumptions or when faced with unusual or extreme data points.
+Robust models produce stable parameter estimates even if underlying assumptions (normality, independence, linearity, etc.) are not perfectly met.
+Non-robust models may yield misleading results or parameter instability if assumptions are violated.
+
+### Misspecification
+
+Misspecification occurs when a model's mathematical structure or assumptions differ significantly from the underlying data-generating process.
+
+
+:::{.callout-note}
+It is reasonable to assume, that there will always be *some* model misspecification.
+We recall:
+
+> All models are wrong, but some are useful. -George E. P. Box, PhD
+:::
 
 ## References
 
