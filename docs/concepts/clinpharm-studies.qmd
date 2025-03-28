@@ -47,7 +47,7 @@ In Phase 3, we **confirm** our efficacy and safety hypotheses in the target popu
 George Box views scientific progress as consisting of and requiring alternating steps of induction and deduction: the former is learning from experience, and the latter confirms what has been learned.
 A simplified application of this view to clinical drug development would break development into two learn-confirm cycles @fig-cycles.
 
-![Drug Development Double Diamond.](images/learn-confirm-cycles){#fig-cycles}
+![A "Double Diamond" illustrating the two learn-confirm cycles of clinical drug development. After the first cycle, a point is reached where further development is decided upon. Finally, the drug is approved.](images/learn-confirm-cycles){#fig-cycles}
 
 * First cycle (Proof-of-Concept)
   * Phase 1: **Learn** what is the tolerated dose? (Max tolerated dose?)
