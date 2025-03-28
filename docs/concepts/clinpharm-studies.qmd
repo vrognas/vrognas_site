@@ -36,7 +36,7 @@ This led the FDA to introduce structured "phases" in clinical research, describi
 
 Previously, drug companies only had to show their new products were safe.
 The way drugs were investigated, a physician from the company would go out in the community with some samples and say to the doctor, "I've got this new drug for so-and-so. Here are some samples. Try it out and let us know how you like it".
-They would receive a letter from him stating, "I tried it out on eight patients, and they all got along fine."
+They would then receive a letter from him stating, "I tried it out on eight patients, and they all got along fine."
 
 ### An overview of clinical trial "phases"
 
@@ -44,8 +44,10 @@ Most clinical pharmacology studies are Phase 1 studies, during which we **learn
 In Phase 2, we **learn** about the PD of the drug.
 In Phase 3, we **confirm** our efficacy and safety hypotheses in the target population.
 
-George Box views scientific progress as consisting of and requiring alternating steps of induction and deduction: the former is learning from experience, and the latter is confirmation of what has been learned.
-A simplified application of this view to clinical drug development, which I define as first in humans to approval, would break development into two major learn-confirm cycles.
+George Box views scientific progress as consisting of and requiring alternating steps of induction and deduction: the former is learning from experience, and the latter confirms what has been learned.
+A simplified application of this view to clinical drug development would break development into two learn-confirm cycles @fig-cycles.
+
+![Drug Development Double Diamond.](images/learn-confirm-cycles){#fig-cycles}
 
 * First cycle (Proof-of-Concept)
   * Phase 1: **Learn** what is the tolerated dose? (Max tolerated dose?)
@@ -54,7 +56,9 @@ A simplified application of this view to clinical drug development, which I defi
 * Second cycle
   * Phase 2b: **Learn** how to use the drug in representative patients to make acceptable benefits/risks likely. (Effect on patients?)
   * Phase 3/4: **Confirm** in a large and representative patient population that acceptable benefit/risk is achieved. (Acceptable B/R-ratio?)
-* Approval is Granted.
+* Approval is granted.
+
+### Studies within the phases
 
 ![Clinical pharmacology in drug development and evaluation.](images/clinpharm-studies.jpg){#fig-clinpharm-studies}
 
@@ -77,20 +81,20 @@ Data from Phase 1 studies are typically well-controlled and provide clean SDTM i
 
 ###### DM Points of interest in SAD/MAD Studies 
 
-* In combined SAD-MAD studies subjects might be allowed to participate in both parts. In those cases, make sure to add a PERIOD/PART covariate and calculate TIME/TAD/TAFD for each study part. 
+* In combined SAD-MAD studies, subjects can participate in both parts. Add a PERIOD/PART covariate and calculate TIME/TAD/TAFD for each study part in those cases. 
 * Dosing information can come in different forms (EX or EC domain):
-  * one record for each dose (e.g. 14 days, BID dosing results in 28 records per subject with dosing date/time)
+  * one record for each dose (e.g., 14 days, BID dosing results in 28 records per subject with dosing date/time)
   * records with from/until dosing date information; actual dosing time of the last one or two previous doses before a sample is recorded separately (or even in another domain like PC or SUPPEX)
-  * Missed doses are sometimes not well documented; extra information can be included in SUPPEX domain. 
+  * Missed doses are sometimes not well documented; extra information can be included in the SUPPEX domain. 
 
 Renal/Hepatic Impairment Study: Participants enrolled in renal/hepatic impairment studies are typically separated into parallel cohorts with varying degrees of renal impairment (normal, mild, moderate, severe) as determined by estimated glomerular filtration rate (eGFR) or other renal function markers (derived or included in data).
 Similarly, participants with different stages of hepatic impairment (normal, mild, moderate, severe) may be separated based on assessments of liver function tests and clinical criteria.
-For safety reasons the dose given in the moderately/severely impaired groups may be lower than for other groups. PK/PD and safety can be of interest. 
+For safety reasons, the dose given in the moderately/severely impaired groups may be lower than for other groups. PK/PD and safety can be of interest. 
 
-Food Effect Study: In a food effect study, participants typically receive two single doses, one fasted and one after a meal (fed) with a washout period between the two doses to ensure that the drug from the first dose is no longer present.
-A subject in this case serves as its own control.
+Food Effect Study: In a food effect study, participants typically receive two single doses, one fasted and one after a meal (fed), with a washout period between the two doses to ensure that the drug from the first dose is no longer present.
+A subject, in this case, serves as its own control.
 The order in which participants receive the drug under each condition may be randomized to reduce bias.
-The study can also be set up in a cross-over design where both sequences of the conditions are observed for each subject (first sequence is fasted-fed and the second sequence is fed- fasted). 
+The study can also be set up in a cross-over design, where both sequences of the conditions are observed for each subject (the first sequence is fasted-fed, and the second sequence is fed-fasted). 
 
 ##### DM points of attention in Food Effect Study
 
