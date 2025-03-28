@@ -32,7 +32,7 @@ title: "Clinical Pharmacology Studies"
 ### A short history of clinical trial "phases"
 
 Prompted by the thalidomide tragedy, the 1962 *Kefauver-Harris Amendments* to the *U.S. Federal Food, Drug, and Cosmetic Act* introduced a "proof-of-efficacy" requirement.
-This led the FDA to introduce structured "phases" in clinical research, delineating the progression from initial human testing to comprehensive evaluations of therapeutic effectiveness. 
+This led the FDA to introduce structured "phases" in clinical research, describing the progression from First-in-Human trials to confirmatory pivotal trials.
 
 Previously, drug companies only had to show their new products were safe.
 The way drugs were investigated, a physician from the company would go out in the community with some samples and say to the doctor, "I've got this new drug for so-and-so. Here are some samples. Try it out and let us know how you like it".
