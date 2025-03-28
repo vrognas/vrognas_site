@@ -72,7 +72,7 @@ A simplified application of this view to clinical drug development would break d
 
 Data from Phase 1 studies are typically well-controlled and provide clean SDTM input datasets.
 
-##### "First in human" (FIH) PK
+##### 👨‍⚕️"First in human" (FIH) PK
 
   * Single ascending dose (SAD)
     * Subjects receive a **single dose** of the investigational drug at **one dose level**, with dose escalation in subsequent cohorts.
@@ -88,39 +88,39 @@ Data from Phase 1 studies are typically well-controlled and provide clean SDTM i
 SAD and MAD studies can be combined under one study, and subjects can participate in both.
 :::
 
-##### Food effect (for oral drugs)
+##### 🍝Food effect (for oral drugs)
 
 * Typically, a cross-over (fed/fasted), randomized, single-dose (one for each period) in healthy participants.
   * Similar to bioequivalence (BE) studies.
 
-##### Drug-drug interaction (DDI) *in vivo*
+##### 💊+💊 Drug-drug interaction (DDI) *in vivo*
 
   * Evaluate the effect of co-administration with another drug.
   * Several study designs are possible in a DDI study, including parallel groups or cross-over designs.
   * The study can have either single-dose or multi-dose administration. 
 
-##### Mass Balance/ADME
+##### ☢️ Mass Balance/ADME
 
   * Usually single-dose, open-label trials.
   * Small, radiolabeled dose to accurately track drug elimination in biological matrices (blood, plasma, urine, feces).
   * Often include metabolite identification and characterization.
   * Record the volume of urine, feces' weight, and collection duration for accurate excretion calculations.
 
-##### Bioequivalence (BE)
+##### 💊=💊 Bioequivalence (BE)
 
   * Typically, a cross-over randomized, single-dose (one for each period) in healthy participants.
   * Between formulations or drug combinations.
   * Evaluate the rate (Cmax and Tmax) and extent (AUC) of absorption
 
-##### (T)QT study
+##### 💓 (T)QT study
 
   * Identifies medicines that prolong QT and thus need more thorough ECG monitoring in Phase 3 pivotal trials.
 
-##### Pharmacogenomics (CYP genotyping)
+##### 🧬 Pharmacogenomics (CYP genotyping)
 
   * Often include metabolite identification and characterization.
 
-##### Relevant special populations
+##### 👩‍👦 Special populations
 
   * Renal impairment (RI)
     * Subjects are typically separated into parallel cohorts with varying degrees of impairment (normal, mild, moderate, severe).
@@ -143,8 +143,8 @@ Phase II/III studies are performed on patients and often consist of separate stu
 In most cases, PD measurements will be part of the analysis (and should be included in the analysis dataset to enable PK-PD evaluations). The study design can be very diverse. 
 Phase II/III studies are less controlled than Phase 1, resulting in unrecorded dosing times, missing laboratory measurements, etc.
 
-* Healthy vs Patient PK/PD
-* Dose-response
+* 🤒 Healthy vs Patient PK/PD
+* 📈 Dose-response
   * Typically randomized parallel group studies
   * Three or more dosage levels, one of which may be zero (placebo).
   * Including one or more doses of an existing medicine as a control may also be helpful.
