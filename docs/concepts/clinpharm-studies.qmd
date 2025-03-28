@@ -8,15 +8,6 @@ title: "Clinical Pharmacology Studies"
 * How can Modeling help in each phase?
 :::
 
-## A short history of clinical trial "phases"
-
-Prompted by the thalidomide tragedy, the 1962 *Kefauver-Harris Amendments* to the *U.S. Federal Food, Drug, and Cosmetic Act* introduced a "proof-of-efficacy" requirement.
-This led the FDA to introduce structured "phases" in clinical research, delineating the progression from initial human testing to comprehensive evaluations of therapeutic effectiveness. 
-
-Previously, drug companies only had to show their new products were safe.
-The way drugs were investigated, a physician from the company would go out in the community with some samples and say to the doctor, "I've got this new drug for so-and-so. Here are some samples. Try it out and let us know how you like it".
-They would receive a letter from him stating, "I tried it out on eight patients, and they all got along fine."
-
 ## General Clinical Study Design
 
 * **P**opulation
@@ -38,7 +29,17 @@ They would receive a letter from him stating, "I tried it out on eight patients,
 
 ## Phases of drug development
 
-The concept of "Phases" in clinical drug development originates from the FDA after WW2.
+### A short history of clinical trial "phases"
+
+Prompted by the thalidomide tragedy, the 1962 *Kefauver-Harris Amendments* to the *U.S. Federal Food, Drug, and Cosmetic Act* introduced a "proof-of-efficacy" requirement.
+This led the FDA to introduce structured "phases" in clinical research, delineating the progression from initial human testing to comprehensive evaluations of therapeutic effectiveness. 
+
+Previously, drug companies only had to show their new products were safe.
+The way drugs were investigated, a physician from the company would go out in the community with some samples and say to the doctor, "I've got this new drug for so-and-so. Here are some samples. Try it out and let us know how you like it".
+They would receive a letter from him stating, "I tried it out on eight patients, and they all got along fine."
+
+### An overview of clinical trial "phases"
+
 Most clinical pharmacology studies are Phase 1 studies, during which we **learn** about the drug's PK.
 In Phase 2, we **learn** about the PD of the drug.
 In Phase 3, we **confirm** our efficacy and safety hypotheses in the target population.
@@ -59,7 +60,7 @@ A simplified application of this view to clinical drug development, which I defi
 
 ![Timing of human pharmacology studies.](images/pharmacology-studies.png){#fig-pharmacology-studies}
 
-## Phase 1: Human pharmacology
+#### Phase 1: Human pharmacology
 
 Data from Phase 1 studies are typically well-controlled and provide clean SDTM input datasets.
 
@@ -74,7 +75,7 @@ Data from Phase 1 studies are typically well-controlled and provide clean SDTM i
 * Food effect (for oral drugs)
 * Pharmacogenomics (CYP genotyping)
 
-## DM Points of interest in SAD/MAD Studies 
+###### DM Points of interest in SAD/MAD Studies 
 
 * In combined SAD-MAD studies subjects might be allowed to participate in both parts. In those cases, make sure to add a PERIOD/PART covariate and calculate TIME/TAD/TAFD for each study part. 
 * Dosing information can come in different forms (EX or EC domain):
@@ -91,7 +92,7 @@ A subject in this case serves as its own control.
 The order in which participants receive the drug under each condition may be randomized to reduce bias.
 The study can also be set up in a cross-over design where both sequences of the conditions are observed for each subject (first sequence is fasted-fed and the second sequence is fed- fasted). 
 
-## DM points of attention in Food Effect Study
+##### DM points of attention in Food Effect Study
 
 * PERIOD, TREATMENT and SEQUENCE columns should be added to the dataset.
 * Check if all drug from the first dose actually left the body (predose concentration of second dose should be BLQ).
@@ -101,7 +102,7 @@ Drug-Drug Interaction (DDI) Study: A DDI study is used to evaluate the effect of
 Several study designs are possible in a DDI study including parallel groups or crossover design with a washout period to ensure that the study drugs are completely eliminated and concentrations return to BLQ before the second treatment period.
 The study can have either single dose or multi-dose administration. 
 
-## DM points of attention in DDI 
+##### DM points of attention in DDI 
 
 * PERIOD, TREATMENT and SEQUENCE columns should be added
 * Check if all drug from the first dose actually left the body (predose concentration of second dose should be BLQ)
@@ -112,11 +113,11 @@ These studies are often conducted as single-dose, open-label trials in a control
 To accurately track drug elimination, a small amount of a radioactive form of the drug is typically administered, enabling precise measurement of its excretion.
 Often, these studies include the identification and characterization of drug metabolites.
 
-## DM points of attention in ADME
+##### DM points of attention in ADME
 
 * Volume of urine and weight of feces as well as the collection period should be collected and added to the dataset (for calculation of amount excreted)
 
-## Phase 2: Therapeutic exploratory
+#### Phase 2: Therapeutic exploratory
 
 Phase II/III studies are performed on patients and often consist of separate study parts/cohorts to investigate multiple scenarios in one study (e.g., different patient populations). In most cases, PD measurements will be part of the analysis (and should be included in the analysis dataset to enable PK-PD evaluations). The study design can be very diverse. 
 
@@ -126,19 +127,19 @@ Phase II/III studies are performed on patients and often consist of separate stu
 * Dose identification
 * Healthy vs Patient PK & PD
 
-## Phase 3: Therapeutic confirmatory
+#### Phase 3: Therapeutic confirmatory
 
 * Bioequivalence (BE), e.g., between formulations or drug combinations
 * Exposure-efficacy/safety in the target population
 
 
-## DM points of attention in Phase II/III studies
+##### DM points of attention in Phase II/III studies
 
 * Phase II/III studies are less controlled, resulting in unrecorded dosing times, missing laboratory measurements, etc.
 * (Temporary) dose reductions/”holidays” can be implemented for individual patients due to safety issues.
 * In most cases, only dosing times of occurring doses taken before a PK/PD sample are documented.
 
-## Phase 4: Post-approval
+#### Phase 4: Post-approval
 
 * Relevant special populations
   * Renal impairment (RI)
