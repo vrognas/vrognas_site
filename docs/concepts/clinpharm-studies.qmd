@@ -80,18 +80,24 @@ Data from Phase 1 studies are typically well-controlled and provide clean SDTM i
     * Like SAD, but each subject receives **multiple doses** at **one dose level**.
     * On some dosing occasions, only pre-dose samples might be taken.
     * Dose-adjustment rules can be in place to achieve desirable safety/efficacy.
-* In combined SAD-MAD studies, subjects can participate in both parts.
 * Food effect (for oral drugs)
-  * Typically, a cross-over two-period (fed/fasted) design is used, with a single dose for each period.
+  * Typically, a cross-over (fed/fasted), randomized, single-dose (one for each period) in healthy participants.
+  * Similar to bioequivalence (BE) studies.
 * Drug-drug interaction (DDI) *in vivo*
-  * evaluate the effect of administering the investigational drug alone versus in combination with another drug.
-  * Several study designs are possible in a DDI study, including parallel groups or crossover designs with a washout period to ensure that the study drugs are completely eliminated and concentrations return to BLQ before the second treatment period.
+  * Evaluate the effect of co-administration with another drug.
+  * Several study designs are possible in a DDI study, including parallel groups or cross-over designs.
   * The study can have either single-dose or multi-dose administration. 
 * Mass Balance/ADME
   * Usually single-dose, open-label trials.
   * Small, radiolabeled dose to accurately track drug elimination in biological matrices (blood, plasma, urine, feces).
   * Often include metabolite identification and characterization.
   * Record the volume of urine, feces' weight, and collection duration for accurate excretion calculations.
+* Bioequivalence (BE)
+  * Typically, a cross-over randomized, single-dose (one for each period) in healthy participants.
+  * Between formulations or drug combinations.
+  * Evaluate the rate (Cmax and Tmax) and extent (AUC) of absorption
+* (T)QT study
+  * Identifies medicines that prolong QT and thus need more thorough ECG monitoring in Phase 3 pivotal trials.
 * Pharmacogenomics (CYP genotyping)
   * Often include metabolite identification and characterization.
 * Relevant special populations
@@ -110,25 +116,33 @@ Data from Phase 1 studies are typically well-controlled and provide clean SDTM i
   * Obese
   * Other
 
+:::{.callout-note}
+# Combined SAD-MAD studies
+
+SAD and MAD studies can be combined under one study, and subjects can participate in both.
+:::
+
 #### Phase 2: Therapeutic exploratory
 
-Phase II/III studies are performed on patients and often consist of separate study parts/cohorts to investigate multiple scenarios in one study (e.g., different patient populations). In most cases, PD measurements will be part of the analysis (and should be included in the analysis dataset to enable PK-PD evaluations). The study design can be very diverse. 
+Phase II/III studies are performed on patients and often consist of separate study parts/cohorts to investigate multiple scenarios (e.g., different patient populations) in one study.
+In most cases, PD measurements will be part of the analysis (and should be included in the analysis dataset to enable PK-PD evaluations). The study design can be very diverse. 
+Phase II/III studies are less controlled than Phase 1, resulting in unrecorded dosing times, missing laboratory measurements, etc.
 
-* QT study
-* Dose identification
-* Healthy vs Patient PK & PD
+* Healthy vs Patient PK/PD
+* Dose-response
+  * Typically randomized parallel group studies
+  * Three or more dosage levels, one of which may be zero (placebo).
+  * Including one or more doses of an existing medicine as a control may also be helpful.
+  * As a rule, PoC is tested at the maximum tolerated doses (MTD) or maximal administered dose if MTD was not defined.
+  * Identify a reasonable starting (minimum effective) dose, ideally with specific adjustments.
+  * Identify response-guided stepwise dose adjustment (titration), and the intervals at which they should be taken.
+  * Identify a dose, or a response (desirable or undesirable), beyond which titration should not ordinarily be attempted because of lack of further benefit or an unacceptable increase in undesirable effect.
+  * Identify optimal dose
 
 #### Phase 3: Therapeutic confirmatory
 
-* Bioequivalence (BE), e.g., between formulations or drug combinations
-* Exposure-efficacy/safety in the target population
-
-
-##### DM points of attention in Phase II/III studies
-
-* Phase II/III studies are less controlled, resulting in unrecorded dosing times, missing laboratory measurements, etc.
-* (Temporary) dose reductions/”holidays” can be implemented for individual patients due to safety issues.
-* In most cases, only dosing times of occurring doses taken before a PK/PD sample are documented.
+* PK and Exposure-Response (efficacy/safety) in the target population
 
 #### Phase 4: Post-approval
 
+Post-approval studies can, e.g., be studies in new indications.
