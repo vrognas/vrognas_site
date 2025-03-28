@@ -27,6 +27,10 @@ title: "Clinical Pharmacology Studies"
   * For how long does the study continue?
   * Run-in, active treatment, washout, follow-up periods
 
+:::{.callout-tip}
+If cross-over design with washout-period, always check that the predose concentration of the second dose is BLQ.
+:::
+
 ## Phases of drug development
 
 ### A short history of clinical trial "phases"
@@ -76,57 +80,40 @@ Data from Phase 1 studies are typically well-controlled and provide clean SDTM i
     * Like SAD, but each subject receives **multiple doses** at **one dose level**.
     * On some dosing occasions, only pre-dose samples might be taken.
     * Dose-adjustment rules can be in place to achieve desirable safety/efficacy.
+* In combined SAD-MAD studies, subjects can participate in both parts.
 * Food effect (for oral drugs)
+  * Typically, a cross-over two-period (fed/fasted) design is used, with a single dose for each period.
+* Drug-drug interaction (DDI) *in vivo*
+  * evaluate the effect of administering the investigational drug alone versus in combination with another drug.
+  * Several study designs are possible in a DDI study, including parallel groups or crossover designs with a washout period to ensure that the study drugs are completely eliminated and concentrations return to BLQ before the second treatment period.
+  * The study can have either single-dose or multi-dose administration. 
+* Mass Balance/ADME
+  * Usually single-dose, open-label trials.
+  * Small, radiolabeled dose to accurately track drug elimination in biological matrices (blood, plasma, urine, feces).
+  * Often include metabolite identification and characterization.
+  * Record the volume of urine, feces' weight, and collection duration for accurate excretion calculations.
 * Pharmacogenomics (CYP genotyping)
-
-###### DM Points of interest in SAD/MAD Studies 
-
-* In combined SAD-MAD studies, subjects can participate in both parts. Add a PERIOD/PART covariate and calculate TIME/TAD/TAFD for each study part in those cases. 
-* Dosing information can come in different forms (EX or EC domain):
-  * one record for each dose (e.g., 14 days, BID dosing results in 28 records per subject with dosing date/time)
-  * records with from/until dosing date information; actual dosing time of the last one or two previous doses before a sample is recorded separately (or even in another domain like PC or SUPPEX)
-  * Missed doses are sometimes not well documented; extra information can be included in the SUPPEX domain. 
-
-Renal/Hepatic Impairment Study: Participants enrolled in renal/hepatic impairment studies are typically separated into parallel cohorts with varying degrees of renal impairment (normal, mild, moderate, severe) as determined by estimated glomerular filtration rate (eGFR) or other renal function markers (derived or included in data).
-Similarly, participants with different stages of hepatic impairment (normal, mild, moderate, severe) may be separated based on assessments of liver function tests and clinical criteria.
-For safety reasons, the dose given in the moderately/severely impaired groups may be lower than for other groups. PK/PD and safety can be of interest. 
-
-Food Effect Study: In a food effect study, participants typically receive two single doses, one fasted and one after a meal (fed), with a washout period between the two doses to ensure that the drug from the first dose is no longer present.
-A subject, in this case, serves as its own control.
-The order in which participants receive the drug under each condition may be randomized to reduce bias.
-The study can also be set up in a cross-over design, where both sequences of the conditions are observed for each subject (the first sequence is fasted-fed, and the second sequence is fed-fasted). 
-
-##### DM points of attention in Food Effect Study
-
-* PERIOD, TREATMENT and SEQUENCE columns should be added to the dataset.
-* Check if all drug from the first dose actually left the body (predose concentration of second dose should be BLQ).
-* Calculate the time  after last dose (TAD) for predose samples of the second and subsequent periods relative to the correct dosing event (e.g for PopPK relative to the previous dose, for NCA relative to the next dose)
-
-Drug-Drug Interaction (DDI) Study: A DDI study is used to evaluate the effect of administering the investigational drug alone versus in combination with another drug.
-Several study designs are possible in a DDI study including parallel groups or crossover design with a washout period to ensure that the study drugs are completely eliminated and concentrations return to BLQ before the second treatment period.
-The study can have either single dose or multi-dose administration. 
-
-##### DM points of attention in DDI 
-
-* PERIOD, TREATMENT and SEQUENCE columns should be added
-* Check if all drug from the first dose actually left the body (predose concentration of second dose should be BLQ)
-* Calculate the time  after last dose (TAD) for predose samples of the second and subsequent periods relative to the correct dosing event (e.g for PopPK relative to the previous dose, for NCA relative to the next dose)
-
-ADME (Absorption-Distribution-Metabolism-Excretion) Study: ADME studies assess the disposition of a drug in the body.
-These studies are often conducted as single-dose, open-label trials in a controlled clinical setting, analyzing the drug in biological matrices like plasma, urine, and feces.
-To accurately track drug elimination, a small amount of a radioactive form of the drug is typically administered, enabling precise measurement of its excretion.
-Often, these studies include the identification and characterization of drug metabolites.
-
-##### DM points of attention in ADME
-
-* Volume of urine and weight of feces as well as the collection period should be collected and added to the dataset (for calculation of amount excreted)
+  * Often include metabolite identification and characterization.
+* Relevant special populations
+  * Renal impairment (RI)
+    * Subjects are typically separated into parallel cohorts with varying degrees of impairment (normal, mild, moderate, severe).
+    * Impairment is often determined by estimated glomerular filtration rate (eGFR), preferably not using Cockgroft-Gault.
+    * For safety reasons, the dose given to the moderately/severely impaired groups may be lower than that given to the other groups.
+    * PK/PD and safety can be of interest. 
+  * Hepatic impairment (HI)
+    * Similar to RI studies.
+    * Impairment is often determined by Child-Pugh scores or (in oncology) NCI-ODWG scores.
+  * Pediatrics
+  * Elderly
+  * Pregnant
+  * Lactating
+  * Obese
+  * Other
 
 #### Phase 2: Therapeutic exploratory
 
 Phase II/III studies are performed on patients and often consist of separate study parts/cohorts to investigate multiple scenarios in one study (e.g., different patient populations). In most cases, PD measurements will be part of the analysis (and should be included in the analysis dataset to enable PK-PD evaluations). The study design can be very diverse. 
 
-* Mass Balance/ADME
-* Drug-drug interaction (DDI) in vivo
 * QT study
 * Dose identification
 * Healthy vs Patient PK & PD
@@ -145,12 +132,3 @@ Phase II/III studies are performed on patients and often consist of separate stu
 
 #### Phase 4: Post-approval
 
-* Relevant special populations
-  * Renal impairment (RI)
-  * Hepatic impairment (HI)
-  * Pediatrics
-  * Elderly
-  * Pregnant
-  * Lactating
-  * Obese
-  * Other
