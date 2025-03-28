@@ -56,6 +56,8 @@ We recall:
 > All models are wrong, but some are useful. -George E. P. Box, PhD
 :::
 
+**Bias-variance tradeoff:** Balancing a model’s simplicity (high bias, low variance) versus complexity (low bias, high variance) to optimize predictive accuracy.
+
 ## References
 
 ::: {#refs}
