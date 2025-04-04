@@ -274,7 +274,8 @@ Considerations include:
 1. [ICH E11(R1) (2017)](https://database.ich.org/sites/default/files/E11_R1_Addendum.pdf)
 2. [ICH E11A (2024)](https://database.ich.org/sites/default/files/ICH_E11A_Guideline_Step4_2024_0821.pdf)
 3. [EMA M&S QA (2023)](https://www.ema.europa.eu/en/human-regulatory-overview/research-and-development/scientific-guidelines/clinical-pharmacology-and-pharmacokinetics/modelling-and-simulation-questions-and-answers)
-4. [National Health and Nutrition Examination Survey (NHANES)](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023)
+4. [EMA PIP QA (2025)](https://www.ema.europa.eu/en/human-regulatory-overview/research-development/paediatric-medicines-research-development/paediatric-investigation-plans/paediatric-investigation-plans-questions-answers)
+5. [National Health and Nutrition Examination Survey (NHANES)](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023)
 
 ::: {#refs}
 :::
