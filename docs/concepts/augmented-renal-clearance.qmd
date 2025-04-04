@@ -2,8 +2,7 @@
 title: "Augmented Renal Clearance (ARC)"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 Augmented renal clearance (ARC) is a term used when a patients' creatinine clearance (CrCL) exceeds 130 mL/min/1.73 m^2^.

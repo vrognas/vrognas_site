@@ -2,8 +2,7 @@
 title: "CDISC data standards"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 **CDISC** stands for *Clinical Data Interchange Standards Consortium*.

@@ -4,8 +4,7 @@ code-overflow: scroll
 code-fold: true
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 *Time-to-event (TTE) analysis*, also known as *survival analysis*, is a set of statistical methods focusing on the time until an event occurs.

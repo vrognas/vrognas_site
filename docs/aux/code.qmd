@@ -2,8 +2,7 @@
 title: "Coding Practices"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 ## Coding

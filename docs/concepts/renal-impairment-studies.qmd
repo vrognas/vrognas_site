@@ -2,8 +2,7 @@
 title: "Renal Impairment (RI) studies"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 | RI severity | GFR (mL/min) |

@@ -2,8 +2,7 @@
 title: "Pharmacodynamic (response) modeling"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 ## Types of responses

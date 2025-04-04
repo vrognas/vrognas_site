@@ -2,8 +2,7 @@
 title: "Git (Version control)"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 ## How to Write a Git Commit Message

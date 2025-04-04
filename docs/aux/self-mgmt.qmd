@@ -2,8 +2,7 @@
 title: "Self Management"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 ## Use the right metric

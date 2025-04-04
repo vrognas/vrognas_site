@@ -2,8 +2,7 @@
 title: "Goodness-of-fit for continuous data"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 The graphs are broadly separated into two categories: prediction-based (basic) and simulation-based tools.

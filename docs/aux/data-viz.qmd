@@ -2,8 +2,7 @@
 title: "Data Visualization"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 ## General interpretation checklist

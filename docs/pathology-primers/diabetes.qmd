@@ -2,8 +2,7 @@
 title: "Diabetes"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 ## What is Diabetes?

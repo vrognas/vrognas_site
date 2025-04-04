@@ -2,8 +2,7 @@
 title: "PopPK Modeling Strategies"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 ## General PopPK models

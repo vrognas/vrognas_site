@@ -2,8 +2,7 @@
 title: "Meeting Best Practices"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 A-energy vs B/C-energy

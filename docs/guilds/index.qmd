@@ -3,8 +3,7 @@ title: "Guilds"
 subtitle: "Get in contact with the community"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 # Mailing Lists

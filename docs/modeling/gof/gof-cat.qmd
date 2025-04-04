@@ -2,8 +2,7 @@
 title: "Goodness-of-fit for categorical data"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 ## Binary

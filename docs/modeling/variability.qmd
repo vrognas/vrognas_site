@@ -2,8 +2,7 @@
 title: "Modeling variability"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 ## Inter-individual variability

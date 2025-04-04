@@ -2,8 +2,7 @@
 title: "Writing Tactics"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 

@@ -2,8 +2,7 @@
 title: "Math Intuition"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 ## Mathematics

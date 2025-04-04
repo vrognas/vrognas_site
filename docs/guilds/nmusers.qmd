@@ -2,8 +2,7 @@
 title: "NMusers"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 # NMMUSERS

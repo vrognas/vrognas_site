@@ -2,8 +2,7 @@
 title: "Antivirals"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 ![](images/antivirals.png){#fig-antivirals}

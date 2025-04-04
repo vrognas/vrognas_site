@@ -2,8 +2,7 @@
 title: "The Absorption Concept"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 ## Overview

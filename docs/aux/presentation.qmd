@@ -2,8 +2,7 @@
 title: "Presentation Techniques"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 # First: Plan

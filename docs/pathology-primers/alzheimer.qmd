@@ -2,8 +2,7 @@
 title: "Alzheimer's disease"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 ## What is Alzheimer’s Disease?

@@ -2,8 +2,7 @@
 title: "Antibacterials"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 Antibacterials (@fig-abx-classes) are drugs used to treat bacterial infections.

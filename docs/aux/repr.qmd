@@ -2,8 +2,7 @@
 title: "Reproducible Research"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 * **Reproducibility** is defined as obtaining consistent results using the same data and code as the original study (synonymous with computational reproducibility).

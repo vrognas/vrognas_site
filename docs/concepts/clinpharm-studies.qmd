@@ -2,8 +2,7 @@
 title: "Clinical Pharmacology Studies"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 
 * How can Modeling help in each phase?
 :::

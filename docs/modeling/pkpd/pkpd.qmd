@@ -2,8 +2,7 @@
 title: "PKPD or Exposure-Response modeling"
 ---
 
-:::{.callout-caution}
-# Under construction
+:::{.callout-caution title="Under construction"}
 :::
 
 ## PKPD modeling strategies
