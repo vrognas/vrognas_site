@@ -3,15 +3,22 @@ title: "Antibacterials"
 ---
 
 :::{.callout-caution title="Under construction"}
+* Triangle: Host(immune system)--pathogen--drug
+* Time-kill *in vitro*
+* *in vivo* models
+  * Mouse thigh/lung
+    * Neutropenic or immuno-competent
+  * Dose fractionatioc
+  * 1 CFU per animal (homogenization)
 :::
 
 Antibacterials (@fig-abx-classes) are drugs used to treat bacterial infections.
 We often use the words *antimicrobials*, *antibacterials*, and *antibiotics* for these compounds.
 They are similar terms, but each has a specific meaning:
 
-- **Antimicrobials** target all kinds of microorganisms, such as bacteria, fungi, viruses, and protozoa.
-- **Antibacterials** only act on bacteria. They include both antibiotics and some common disinfectants.
-- **Antibiotics** are **naturally produced** by microorganisms and kill or inhibit other microorganisms, mainly bacteria.
+* **Antimicrobials** target all kinds of microorganisms, such as bacteria, fungi, viruses, and protozoa.
+* **Antibacterials** only act on bacteria. They include both antibiotics and some common disinfectants.
+* **Antibiotics** are **naturally produced** by microorganisms and kill or inhibit other microorganisms, mainly bacteria.
 
 The term "antibiotic" comes from the Greek words *anti* ("against") and *biotikos* ("concerning life").
 Strictly speaking, antibiotics refers only to naturally produced substances, and not synthetic or semi-synthetic types (e.g., quinolones).
@@ -20,13 +27,11 @@ However, it is commonly used interchangeably with antibacterials.
 ## How do antibacterials work?
 
 Antibacterials interfere with vital processes in bacterial cells.
-They may kill the bacteria (bactericidal) or stop their growth (bacteriostatic).
 
-### Bactericidal and bacteriostatic antibacterials
+* **Bactericidal** antibacterials kill bacteria.
+* **Bacteriostatic** antibacterials prevent bacteria from multiplying.
 
-**Bactericidal** antibacterials kill bacteria.
-**Bacteriostatic** antibacterials prevent bacteria from multiplying.
-The immune system then clears the infection.
+The host's immune system then clears the remaining infecting pathogens.
 
 ### Antibiotic targets in bacteria
 
@@ -69,13 +74,42 @@ AMR Terminology:
 - **XDR**: Resistant to ≥1 agent in all but 2 classes
 - **PDR**: Resistant to all agents in all classes
 
+### MIC
+
 ## PD-targets (indices)
+
+Links unbound abx PK to abx PD.
 
 Time-dependent or concentration-dependent effect.
 
-* AUC/MIC
-* Cmax/MIC
-* time above MIC
+* *f*AUC/MIC
+* *f*C~max~/MIC
+* Time above MIC (*f*T~>MIC~)
 
-Decided by plotting log-kill against AUC, and fitting a non-linear regression.
+Decided by plotting log-kill against AUC, and fitting a non-linear (sigmoid) regression.
 Highest R^2 decides the index.
+
+:::{.callout-warning}
+R^2 is used by convention, even though it's not suitable for non-linear regressions.
+:::
+
+| Class       | PKPD-index    |
+| :---------- | :------------ |
+| Beta-lactam | *f*T~>MIC~    |
+|  | *f*C~max~/MIC |
+|  | *f*AUC/MIC    |
+
+### Model-based approaches
+
+* Longitudinal vs single time-point
+
+## Modeling
+
+Triangle: Host-pathogen-drug
+
+## References
+
+1. [EMA: PKPD for antibiotics](https://www.ema.europa.eu/en/use-pharmacokinetics-pharmacodynamics-development-antibacterial-medicinal-products-scientific-guideline)
+
+::: {#refs}
+:::
