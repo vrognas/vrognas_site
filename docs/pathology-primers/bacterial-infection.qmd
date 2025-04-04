@@ -92,6 +92,7 @@ Most infections can be treated in 5--7 days.
     * Medical training
     * Local epidemiology
     * Resistance rates: How many percent are resistant?
+      * ESKAPE
 3. Individual resistance risk
     * Previous infection with resistant bacteria
     * Recent travel
