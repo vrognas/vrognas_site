@@ -3,13 +3,13 @@ title: "Antibacterials"
 ---
 
 :::{.callout-caution title="Under construction"}
-* Triangle: Host(immune system)--pathogen--drug
 * Time-kill *in vitro*
 * *in vivo* models
   * Mouse thigh/lung
     * Neutropenic or immuno-competent
-  * Dose fractionatioc
+  * Dose fractionation
   * 1 CFU per animal (homogenization)
+* Nielsen-model (susceptible--resistant strains)
 :::
 
 Antibacterials (@fig-abx-classes) are drugs used to treat bacterial infections.
@@ -24,6 +24,8 @@ The term "antibiotic" comes from the Greek words *anti* ("against") and *biotiko
 Strictly speaking, antibiotics refers only to naturally produced substances, and not synthetic or semi-synthetic types (e.g., quinolones).
 However, it is commonly used interchangeably with antibacterials.
 
+![Types and classes of antibacterials.](images/abx-classes.png){#fig-abx-classes}
+
 ## How do antibacterials work?
 
 Antibacterials interfere with vital processes in bacterial cells.
@@ -32,6 +34,8 @@ Antibacterials interfere with vital processes in bacterial cells.
 * **Bacteriostatic** antibacterials prevent bacteria from multiplying.
 
 The host's immune system then clears the remaining infecting pathogens.
+
+![Drug-Bug-Host disease triangle.](images/bug-drug-host_disease-triangle.png){#fig-triangle}
 
 ### Antibiotic targets in bacteria
 
@@ -45,7 +49,6 @@ They mainly target:
 These structures do not exist in human or animal cells, so antibacterials typically do not harm our cells.
 However, side effects can still occur.
 
-![Types and classes of antibacterials.](images/abx-classes.png){#fig-abx-classes}
 
 ### Narrow-spectrum and broad-spectrum antibacterials
 
@@ -68,23 +71,27 @@ Bacteria gain resistance through:
 If the new trait offers an advantage, the bacterium may pass it on to future generations or spread it through horizontal transfer.
 Resistant bacteria travel through food, water, global trade, or human travel.
 
-AMR Terminology:
+AMR terminology:
 
 - **MDR**: Resistant to ≥1 agent in ≥3 classes  
 - **XDR**: Resistant to ≥1 agent in all but 2 classes
 - **PDR**: Resistant to all agents in all classes
 
-### MIC
+### Resistance measurement: MIC
 
-## PD-targets (indices)
+## Translating antibiotic PKPD
 
-Links unbound abx PK to abx PD.
+Preclinical antibiotic studies provide essential PKPD information to help select effective clinical dosing regimens.
+There are two main approaches:
 
-Time-dependent or concentration-dependent effect.
+### Index-based approaches
 
-* *f*AUC/MIC
-* *f*C~max~/MIC
-* Time above MIC (*f*T~>MIC~)
+The classical method links <span class="red-underline">**unbound**</span> antibiotic PK to the MIC.
+Depending on the antimicrobial class, three relevant indices are traditionally described:
+
+* ***f*AUC/MIC**: Exposure-dependent effect.
+* ***f*C~max~/MIC**: Concentration-dependent effect.
+* ***f*T~>MIC~**: Time above MIC. Time-dependent effect.
 
 Decided by plotting log-kill against AUC, and fitting a non-linear (sigmoid) regression.
 Highest R^2 decides the index.
@@ -93,19 +100,34 @@ Highest R^2 decides the index.
 R^2 is used by convention, even though it's not suitable for non-linear regressions.
 :::
 
-| Class       | PKPD-index    |
-| :---------- | :------------ |
-| Beta-lactam | *f*T~>MIC~    |
-|  | *f*C~max~/MIC |
-|  | *f*AUC/MIC    |
+These indices help set efficacy targets based on outcomes like bacterial stasis or log reductions in bacterial count.
+Dose fractionation studies identify which index best predicts efficacy, and simulations then predict outcomes in diverse patient populations.
+The Probability of Target Attainment (PTA) guides clinical dose selection and determines susceptibility breakpoints.
+
+However, limitations of PK/PD indices include:
+
+* Simplification using a single metric and MIC
+* Ignoring bacterial dynamics (rate of killing, regrowth, resistance)
+* Limited applicability to antibiotic combinations
 
 ### Model-based approaches
 
-* Longitudinal vs single time-point
+Model-informed Drug Development (MIDD) incorporates longitudinal data, capturing bacterial dynamics better than indices alone.
+PKPD models developed from *in vitro* experiments predict *in vivo* outcomes and clinical efficacy.
+Steps include:
 
-## Modeling
+1. Building initial models from *in vitro* data (static time-kill studies)
+2. Refining models with dynamic *in vitro* and mouse studies
+3. Integrating human PK data for simulations to predict clinical outcomes
 
-Triangle: Host-pathogen-drug
+This approach considers variability in bacterial dynamics across strains, doses, and patient populations.
+
+### Impact of the immune system
+
+The immune response significantly influences antibiotic efficacy.
+Most antibiotic studies occur in neutropenic models, isolating antibiotic effects but overlooking immune interactions.
+Immune variability among patients impacts real-world efficacy.
+Incorporating immune response data into PKPD models may enhance the translation of preclinical findings to clinical practice, especially in patients with varying degrees of immunocompetence.
 
 ## References
 
