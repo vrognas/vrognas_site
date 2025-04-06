@@ -1,13 +1,12 @@
 ---
-title: "Clinical Pharmacology Studies"
+title: "Clinical pharmacology studies"
 ---
 
 :::{.callout-caution title="Under construction"}
-
 * How can Modeling help in each phase?
 :::
 
-## General Clinical Study Design
+## General clinical study design
 
 * **P**opulation
   * Inclusion/Exclusion criteria
@@ -119,7 +118,7 @@ SAD and MAD studies can be combined under one study, and subjects can participat
 
   * Often include metabolite identification and characterization.
 
-##### 👩‍👦 Special populations
+##### 🚮 Organ dysfunction PK
 
   * Renal impairment (RI)
     * Subjects are typically separated into parallel cohorts with varying degrees of impairment (normal, mild, moderate, severe).
@@ -129,12 +128,6 @@ SAD and MAD studies can be combined under one study, and subjects can participat
   * Hepatic impairment (HI)
     * Similar to RI studies.
     * Impairment is often determined by Child-Pugh scores or (in oncology) NCI-ODWG scores.
-  * Pediatrics
-  * Elderly
-  * Pregnant
-  * Lactating
-  * Obese
-  * Other
 
 #### Phase 2: Therapeutic exploratory
 
@@ -142,8 +135,12 @@ Phase II/III studies are performed on patients and often consist of separate stu
 In most cases, PD measurements will be part of the analysis (and should be included in the analysis dataset to enable PK-PD evaluations). The study design can be very diverse. 
 Phase II/III studies are less controlled than Phase 1, resulting in unrecorded dosing times, missing laboratory measurements, etc.
 
-* 🤒 Healthy vs Patient PK/PD
-* 📈 Dose-response
+##### 🤒 Healthy vs Patient PK/PD
+
+* Proof-of-Concept (PoC)
+
+##### 📈 Dose-response
+
   * Typically randomized parallel group studies
   * Three or more dosage levels, one of which may be zero (placebo).
   * Including one or more doses of an existing medicine as a control may also be helpful.
@@ -152,6 +149,15 @@ Phase II/III studies are less controlled than Phase 1, resulting in unrecorded d
   * Identify response-guided stepwise dose adjustment (titration), and the intervals at which they should be taken.
   * Identify a dose, or a response (desirable or undesirable), beyond which titration should not ordinarily be attempted because of lack of further benefit or an unacceptable increase in undesirable effect.
   * Identify optimal dose
+
+##### 👩‍👦 Special populations
+
+  * Pediatrics
+  * Elderly
+  * Pregnant
+  * Lactating
+  * Obese
+  * Other
 
 #### Phase 3: Therapeutic confirmatory
 
