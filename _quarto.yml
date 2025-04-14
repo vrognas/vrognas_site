@@ -32,7 +32,7 @@ website:
             href: docs/modeling/index.qmd
           - text: "Pathology Primers"
             href: docs/pathology-primers/index.qmd
-          - text: "Pharmacopœia Pharmacometrika"
+          - text: "Pharmacopœia"
             href: docs/pharmacopeia/index.qmd
           - text: "Tools of the Trade"
             href: docs/tools-of-the-trade/index.qmd
@@ -50,7 +50,7 @@ website:
       style: "floating"
     - id: pathology-primers
       title: "Pathology primers"
-      collapse-level: 2
+      collapse-level: 1
       style: "floating"
       contents:
         - section: "Pathology primers"
@@ -77,47 +77,876 @@ website:
                 href: docs/pathology-primers/lung-cancer.qmd
     - id: pharmacopeia
       title: "Pharmacopœia"
-      collapse-level: 3
+      collapse-level: 2
       style: "floating"
       contents:
         - text: "Pharmacopœia"
           href: docs/pharmacopeia/index.qmd
-        # - text: "(A) Alimentary tract & metabolism"
-        #   href: docs/pharmacopeia/A_gastrointestinal/index.qmd
-        # - text: "(B) Blood & blood forming organs"
-        #   href: docs/pharmacopeia/B_blood/index.qmd
-        # - text: "(C) Cardiovascular system"
-        #   href: docs/pharmacopeia/C_cardio/index.qmd
-        # - text: "(D) Dermatologicals"
-        #   href: docs/pharmacopeia/D_dermatology/index.qmd
-        # - text: "(G) Genito urinary system & sex hormones"
-        #   href: docs/pharmacopeia/G_urogenital/index.qmd
-        # - text: "(H) Systemic hormonal preparations (excl. sex hormones & insulins)"
-        #   href: docs/pharmacopeia/H_hormones/index.qmd
-        - section: "(J) Antiinfectives for systemic use"
           contents:
-          - text: "Antibacterials"
-            href: docs/pharmacopeia/J_infections/antibacterials/antibacterials.qmd
-          - text: "Antivirals"
-            href: docs/pharmacopeia/J_infections/antivirals/antivirals.qmd
-        - section: "(L) Antineoplastic & immunomodulating agents"
-          contents:
-            - section: "Immunosuppressants"
-              contents:
-              - text: "JAK-inhibitors"
-                href: docs/pharmacopeia/L_immunology/immunosuppressants/jak-inhibitors.qmd
-        # - text: "(M) Musculo-skeletal system"
-        #   href: docs/pharmacopeia/M_musculo-skeletal/index.qmd
-        # - text: "(N) Nervous system"
-        #   href: docs/pharmacopeia/N_neurology/index.qmd
-        # - text: "(P) Antiparasitic products, insecticides & repellents"
-        #   href: docs/pharmacopeia/P/index.qmd
-        # - text: "(R) Respiratory system"
-        #   href: docs/pharmacopeia/R_respiratory/index.qmd
-        # - text: "(S) Sensory organs"
-        #   href: docs/pharmacopeia/S_sensory/index.qmd
-        # - text: "(V) Various"
-        #   href: docs/pharmacopeia/V_various/index.qmd
+          # - section: "(A) Alimentary tract and metabolism"
+          #   href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/index.qmd
+          #   contents:
+          #     - section: "(01) Stomatological preparations"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A01_stomatological-preparations/index.qmd
+          #       contents:
+          #         - text: "(A) Stomatological preparations"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A01_stomatological-preparations/A01A_stomatological-preparations/index.qmd
+          #     - section: "(02) Drugs for acid related disorders"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A02_drugs-for-acid-related-disorders/index.qmd
+          #       contents:
+          #         - text: "(A) Antacids"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A02_drugs-for-acid-related-disorders/A02A_antacids/index.qmd
+          #         - text: "(B) Drugs for peptic ulcer and Gastro-Oesophageal Reflux Disease (GORD)"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A02_drugs-for-acid-related-disorders/A02B_drugs-for-peptic-ulcer-and-gastro-oesophageal-reflux-disease-gord/index.qmd
+          #         - text: "(C) Other drugs for acid related disorders"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A02_drugs-for-acid-related-disorders/A02X_other-drugs-for-acid-related-disorders/index.qmd
+          #     - section: "(03) Drugs for functional gastrointestinal disorders"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A03_drugs-for-functional-gastrointestinal-disorders/index.qmd
+          #       contents:
+          #         - text: "(A) Drugs for functional gastrointestinal disorders"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A03_drugs-for-functional-gastrointestinal-disorders/A03A_drugs-for-functional-gastrointestinal-disorders/index.qmd
+          #         - text: "(B) Belladonna and derivatives, plain"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A03_drugs-for-functional-gastrointestinal-disorders/A03B_belladonna-and-derivatives-plain/index.qmd
+          #         - text: "(C) Antispasmodics in combination with psycholeptics"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A03_drugs-for-functional-gastrointestinal-disorders/A03C_antispasmodics-in-combination-with-psycholeptics/index.qmd
+          #         - text: "(D) Antispasmodics in combination with analgesics"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A03_drugs-for-functional-gastrointestinal-disorders/A03D_antispasmodics-in-combination-with-analgesics/index.qmd
+          #         - text: "(E) Antispasmodics and anticholinergics in combination with other drugs"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A03_drugs-for-functional-gastrointestinal-disorders/A03E_antispasmodics-and-anticholinergics-in-combination-with-other-drugs/index.qmd
+          #         - text: "(F) Propulsives"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A03_drugs-for-functional-gastrointestinal-disorders/A03F_propulsives/index.qmd
+          #     - section: "(04) Antiemetics and antinauseants"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A04_antiemetics-and-antinauseants/index.qmd
+          #       contents:
+          #         - text: "(A) Antiemetics and antinauseants"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A04_antiemetics-and-antinauseants/A04A_antiemetics-and-antinauseants/index.qmd
+          #     - section: "(05) Bile and liver therapy"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A05_bile-and-liver-therapy/index.qmd
+          #       contents:
+          #         - text: "(A) Bile therapy"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A05_bile-and-liver-therapy/A05A_bile-therapy/index.qmd
+          #         - text: "(A) Liver therapy, lipotropics"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A05_bile-and-liver-therapy/A05B_liver-therapy-lipotropics/index.qmd
+          #         - text: "(A) Drugs for bile therapy and lipotropics in combination"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A05_bile-and-liver-therapy/A05C_drugs-for-bile-therapy-and-lipotropics-in-combination/index.qmd
+          #     - section: "(06) Drugs for constipation"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A06_drugs-for-constipation/index.qmd
+          #       contents:
+          #         - text: "(A) Drugs for constipation"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A06_drugs-for-constipation/A06A_drugs-for-constipation/index.qmd
+          #     - section: "(07) Antidiarrheals, intestinal antiinflammatory/antiinfective agents"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A07_antidiarrheals-intestinal-antiinflammatoryantiinfective-agents/index.qmd
+          #       contents:
+          #         - text: "(A) Intestinal antiinfectives"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A07_antidiarrheals-intestinal-antiinflammatoryantiinfective-agents/A07A_intestinal-antiinfectives/index.qmd
+          #         - text: "(B) Intestinal adsorbents"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A07_antidiarrheals-intestinal-antiinflammatoryantiinfective-agents/A07B_intestinal-adsorbents/index.qmd
+          #         - text: "(C) Electrolytes with carbohydrates"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A07_antidiarrheals-intestinal-antiinflammatoryantiinfective-agents/A07C_electrolytes-with-carbohydrates/index.qmd
+          #         - text: "(D) Antipropulsives"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A07_antidiarrheals-intestinal-antiinflammatoryantiinfective-agents/A07D_antipropulsives/index.qmd
+          #         - text: "(E) Intestinal antiinflammatory agents"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A07_antidiarrheals-intestinal-antiinflammatoryantiinfective-agents/A07E_intestinal-antiinflammatory-agents/index.qmd
+          #         - text: "(F) Antidiarrheal microorganisms"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A07_antidiarrheals-intestinal-antiinflammatoryantiinfective-agents/A07F_antidiarrheal-microorganisms/index.qmd
+          #         - text: "(X) Other antidiarrheals"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A07_antidiarrheals-intestinal-antiinflammatoryantiinfective-agents/A07X_other-antidiarrheals/index.qmd
+          #     - section: "(08) Antiobesity preparations, excl. diet products"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A08_antiobesity-preparations-excl-diet-products/index.qmd
+          #       contents:
+          #         - text: "(A) Antiobesity preparations, excl. diet products"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A08_antiobesity-preparations-excl-diet-products/A08A_antiobesity-preparations-excl-diet-products/index.qmd
+          #     - section: "(09) Digestives, incl. enzymes"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A09_digestives-incl-enzymes/index.qmd
+          #       contents:
+          #         - text: "(A) Digestives, incl. enzymes"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A09_digestives-incl-enzymes/A09A_digestives-incl-enzymes/index.qmd
+          #     - section: "(10) Drugs used in diabetes"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A10_drugs-used-in-diabetes/index.qmd
+          #       contents:
+          #         - text: "(A) Insulins and analogues"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A10_drugs-used-in-diabetes/A10A_insulins-and-analogues/index.qmd
+          #         - text: "(B) Blood glucose lowering drugs, excl. insulins"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A10_drugs-used-in-diabetes/A10B_blood-glucose-lowering-drugs-excl-insulins/index.qmd
+          #         - text: "(X) Other drugs used in diabetes"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A10_drugs-used-in-diabetes/A10X_other-drugs-used-in-diabetes/index.qmd
+          #     - section: "(11) Vitamins"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A11_vitamins/index.qmd
+          #       contents:
+          #         - text: "(A) Multivitamins, combinations"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A11_vitamins/A11A_multivitamins-combinations/index.qmd
+          #         - text: "(B) Multivitamins, plain"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A11_vitamins/A11B_multivitamins-plain/index.qmd
+          #         - text: "(C) Vitamin A and D, incl. combinations of the two"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A11_vitamins/A11C_vitamin-a-and-d-incl-combinations-of-the-two/index.qmd
+          #         - text: "(D) Vitamin B1, plain and in combination with vitamin B6 and B12"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A11_vitamins/A11D_vitamin-b1-plain-and-in-combination-with-vitamin-b6-and-b12/index.qmd
+          #         - text: "(E) Vitamin B-complex, incl. combinations"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A11_vitamins/A11E_vitamin-b-complex-incl-combinations/index.qmd
+          #         - text: "(G) Ascorbic acid (vitamin C), incl. combinations"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A11_vitamins/A11G_ascorbic-acid-vitamin-c-incl-combinations/index.qmd
+          #         - text: "(H) Other plain vitamin preparations"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A11_vitamins/A11H_other-plain-vitamin-preparations/index.qmd
+          #         - text: "(J) Other vitamin products, combinations"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A11_vitamins/A11J_other-vitamin-products-combinations/index.qmd
+          #     - section: "(12) Mineral supplements"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A12_mineral-supplements/index.qmd
+          #       contents:
+          #         - text: "(A) Calcium"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A12_mineral-supplements/A12A_calcium/index.qmd
+          #         - text: "(B) Potassium"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A12_mineral-supplements/A12B_potassium/index.qmd
+          #         - text: "(C) Other mineral supplements"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A12_mineral-supplements/A12C_other-mineral-supplements/index.qmd
+          #     - section: "(13) Tonics"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A13_tonics/index.qmd
+          #       contents:
+          #         - text: "(A) Tonics"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A13_tonics/A13A_tonics/index.qmd
+          #     - section: "(14) Anabolic agents for systemic use"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A14_anabolic-agents-for-systemic-use/index.qmd
+          #       contents:
+          #         - text: "(A) Anabolic steroids"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A14_anabolic-agents-for-systemic-use/A14A_anabolic-steroids/index.qmd
+          #         - text: "(B) Other anabolic agents"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A14_anabolic-agents-for-systemic-use/A14B_other-anabolic-agents/index.qmd
+          #     - text: "(15) Appetite stimulants"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A15_appetite-stimulants/index.qmd
+          #     - section: "(16) Other alimentary tract and metabolism products"
+          #       href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A16_other-alimentary-tract-and-metabolism-products/index.qmd
+          #       contents:
+          #         - text: "(A) Other alimentary tract and metabolism products"
+          #           href: docs/pharmacopeia/A_alimentary-tract-and-metabolism/A16_other-alimentary-tract-and-metabolism-products/A16A_other-alimentary-tract-and-metabolism-products/index.qmd
+          # - section: "(B) Blood and blood forming organs"
+          #   href: docs/pharmacopeia/B_blood-and-blood-forming-organs/index.qmd
+          #   contents:
+          #     - section: "(01) Antithrombotic agents"
+          #       href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B01_antithrombotic-agents/index.qmd
+          #       contents:
+          #         - text: "(A) Antithrombotic agents"
+          #           href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B01_antithrombotic-agents/B01A_antithrombotic-agents/index.qmd
+          #     - section: "(02) Antihemorrhagics"
+          #       href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B02_antihemorrhagics/index.qmd
+          #       contents:
+          #         - text: "(A) Antifibrinolytics"
+          #           href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B02_antihemorrhagics/B02A_antifibrinolytics/index.qmd
+          #         - text: "(B) Vitamin K and other hemostatics"
+          #           href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B02_antihemorrhagics/B02B_vitamin-k-and-other-hemostatics/index.qmd
+          #     - section: "(03) Antianemic preparations"
+          #       href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B03_antianemic-preparations/index.qmd
+          #       contents:
+          #         - text: "(A) Iron preparations"
+          #           href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B03_antianemic-preparations/B03A_iron-preparations/index.qmd
+          #         - text: "(B) Vitamin B12 and folic acid"
+          #           href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B03_antianemic-preparations/B03B_vitamin-b12-and-folic-acid/index.qmd
+          #         - text: "(X) Other antianemic preparations"
+          #           href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B03_antianemic-preparations/B03X_other-antianemic-preparations/index.qmd
+          #     - section: "(05) Blood substitutes and perfusion solutions"
+          #       href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B05_blood-substitutes-and-perfusion-solutions/index.qmd
+          #       contents:
+          #         - text: "(A) Blood and related products"
+          #           href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B05_blood-substitutes-and-perfusion-solutions/B05A_blood-and-related-products/index.qmd
+          #         - text: "(B) I.V. solutions"
+          #           href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B05_blood-substitutes-and-perfusion-solutions/B05B_iv-solutions/index.qmd
+          #         - text: "(C) Irrigating solutions"
+          #           href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B05_blood-substitutes-and-perfusion-solutions/B05C_irrigating-solutions/index.qmd
+          #         - text: "(D) Peritoneal dialytics"
+          #           href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B05_blood-substitutes-and-perfusion-solutions/B05D_peritoneal-dialytics/index.qmd
+          #         - text: "(X) I.V. solution additives"
+          #           href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B05_blood-substitutes-and-perfusion-solutions/B05X_iv-solution-additives/index.qmd
+          #         - text: "(Z) Hemodialytics and hemofiltrates"
+          #           href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B05_blood-substitutes-and-perfusion-solutions/B05Z_hemodialytics-and-hemofiltrates/index.qmd
+          #     - section: "(06) Other hematological agents"
+          #       href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B06_other-hematological-agents/index.qmd
+          #       contents:
+          #         - text: "(A) Other hematological agents"
+          #           href: docs/pharmacopeia/B_blood-and-blood-forming-organs/B06_other-hematological-agents/B06A_other-hematological-agents/index.qmd
+          # - section: "(C) Cardiovascular system"
+          #   href: docs/pharmacopeia/C_cardiovascular-system/index.qmd
+          #   contents:
+          #     - section: "(01) Cardiac therapy"
+          #       href: docs/pharmacopeia/C_cardiovascular-system/C01_cardiac-therapy/index.qmd
+          #       contents:
+          #         - text: "(A) Cardiac glycosides"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C01_cardiac-therapy/C01A_cardiac-glycosides/index.qmd
+          #         - text: "(B) Antiarrhythmics, class I and III"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C01_cardiac-therapy/C01B_antiarrhythmics-class-i-and-iii/index.qmd
+          #         - text: "(C) Cardiac stimulants excl. cardiac glycosides"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C01_cardiac-therapy/C01C_cardiac-stimulants-excl-cardiac-glycosides/index.qmd
+          #         - text: "(D) Vasodilators used in cardiac diseases"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C01_cardiac-therapy/C01D_vasodilators-used-in-cardiac-diseases/index.qmd
+          #         - text: "(E) Other cardiac preparations"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C01_cardiac-therapy/C01E_other-cardiac-preparations/index.qmd
+          #     - section: "(02) Antihypertensives"
+          #       href: docs/pharmacopeia/C_cardiovascular-system/C02_antihypertensives/index.qmd
+          #       contents:
+          #         - text: "(A) Antiadrenergic agents, centrally acting"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C02_antihypertensives/C02A_antiadrenergic-agents-centrally-acting/index.qmd
+          #         - text: "(B) Antiadrenergic agents, ganglion-blocking"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C02_antihypertensives/C02B_antiadrenergic-agents-ganglion-blocking/index.qmd
+          #         - text: "(C) Antiadrenergic agents, peripherally acting"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C02_antihypertensives/C02C_antiadrenergic-agents-peripherally-acting/index.qmd
+          #         - text: "(D) Arteriolar smooth muscle, agents acting on"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C02_antihypertensives/C02D_arteriolar-smooth-muscle-agents-acting-on/index.qmd
+          #         - text: "(K) Other antihypertensives"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C02_antihypertensives/C02K_other-antihypertensives/index.qmd
+          #         - text: "(L) Antihypertensives and diuretics in combination"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C02_antihypertensives/C02L_antihypertensives-and-diuretics-in-combination/index.qmd
+          #         - text: "(N) Combinations of antihypertensives in ATC-Group C02"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C02_antihypertensives/C02N_combinations-of-antihypertensives-in-atc-gr-c02/index.qmd
+          #     - section: "(03) Diuretics"
+          #       href: docs/pharmacopeia/C_cardiovascular-system/C03_diuretics/index.qmd
+          #       contents:
+          #         - text: "(A) Low-ceiling diuretics, thiazides"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C03_diuretics/C03A_low-ceiling-diuretics-thiazides/index.qmd
+          #         - text: "(B) Low-ceiling diuretics, excl. thiazides"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C03_diuretics/C03B_low-ceiling-diuretics-excl-thiazides/index.qmd
+          #         - text: "(C) High-ceiling diuretics"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C03_diuretics/C03C_high-ceiling-diuretics/index.qmd
+          #         - text: "(D) Aldosterone antagonists and other potassium-sparing agents"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C03_diuretics/C03D_aldosterone-antagonists-and-other-potassium-sparing-agents/index.qmd
+          #         - text: "(E) Diuretics and potassium-sparing agents in combination"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C03_diuretics/C03E_diuretics-and-potassium-sparing-agents-in-combination/index.qmd
+          #         - text: "(X) Other diuretics"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C03_diuretics/C03X_other-diuretics/index.qmd
+          #     - section: "(04) Peripheral vasodilators"
+          #       href: docs/pharmacopeia/C_cardiovascular-system/C04_peripheral-vasodilators/index.qmd
+          #       contents:
+          #         - text: "(A) Peripheral vasodilators"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C04_peripheral-vasodilators/C04A_peripheral-vasodilators/index.qmd
+          #     - section: "(05) Vasoprotectives"
+          #       href: docs/pharmacopeia/C_cardiovascular-system/C05_vasoprotectives/index.qmd
+          #       contents:
+          #         - text: "(A) Agents for treatment of hemorrhoids and anal fissures for topical use"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C05_vasoprotectives/C05A_agents-for-treatment-of-hemorrhoids-and-anal-fissures-for-topical-use/index.qmd
+          #         - text: "(B) Antivaricose therapy"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C05_vasoprotectives/C05B_antivaricose-therapy/index.qmd
+          #         - text: "(C) Capillary stabilizing agents"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C05_vasoprotectives/C05C_capillary-stabilizing-agents/index.qmd
+          #         - text: "(X) Other vasoprotectives"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C05_vasoprotectives/C05X_other-vasoprotectives/index.qmd
+          #     - section: "(07) Beta blocking agents"
+          #       href: docs/pharmacopeia/C_cardiovascular-system/C07_beta-blocking-agents/index.qmd
+          #       contents:
+          #         - text: "(A) Beta blocking agents"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C07_beta-blocking-agents/C07A_beta-blocking-agents/index.qmd
+          #         - text: "(B) Beta blocking agents and thiazides"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C07_beta-blocking-agents/C07B_beta-blocking-agents-and-thiazides/index.qmd
+          #         - text: "(C) Beta blocking agents and other diuretics"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C07_beta-blocking-agents/C07C_beta-blocking-agents-and-other-diuretics/index.qmd
+          #         - text: "(D) Beta blocking agents, thiazides and other diuretics"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C07_beta-blocking-agents/C07D_beta-blocking-agents-thiazides-and-other-diuretics/index.qmd
+          #         - text: "(E) Beta blocking agents and vasodilators"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C07_beta-blocking-agents/C07E_beta-blocking-agents-and-vasodilators/index.qmd
+          #         - text: "(F) Beta blocking agents, other combinations"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C07_beta-blocking-agents/C07F_beta-blocking-agents-other-combinations/index.qmd
+          #     - section: "(08) Calcium channel blockers"
+          #       href: docs/pharmacopeia/C_cardiovascular-system/C08_calcium-channel-blockers/index.qmd
+          #       contents:
+          #         - text: "(C) Selective calcium channel blockers with mainly vascular effects"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C08_calcium-channel-blockers/C08C_selective-calcium-channel-blockers-with-mainly-vascular-effects/index.qmd
+          #         - text: "(D) Selective calcium channel blockers with direct cardiac effects"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C08_calcium-channel-blockers/C08D_selective-calcium-channel-blockers-with-direct-cardiac-effects/index.qmd
+          #         - text: "(E) Non-selective calcium channel blockers"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C08_calcium-channel-blockers/C08E_non-selective-calcium-channel-blockers/index.qmd
+          #         - text: "(G) Calcium channel blockers and diuretics"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C08_calcium-channel-blockers/C08G_calcium-channel-blockers-and-diuretics/index.qmd
+          #     - section: "(09) Agents acting on the renin-angiotensin system"
+          #       href: docs/pharmacopeia/C_cardiovascular-system/C09_agents-acting-on-the-renin-angiotensin-system/index.qmd
+          #       contents:
+          #         - text: "(A) ACE inhibitors, plain"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C09_agents-acting-on-the-renin-angiotensin-system/C09A_ace-inhibitors-plain/index.qmd
+          #         - text: "(B) ACE inhibitors, combinations"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C09_agents-acting-on-the-renin-angiotensin-system/C09B_ace-inhibitors-combinations/index.qmd
+          #         - text: "(C) Angiotensin II receptor blockers (arbs), plain"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C09_agents-acting-on-the-renin-angiotensin-system/C09C_angiotensin-ii-receptor-blockers-arbs-plain/index.qmd
+          #         - text: "(D) Angiotensin II receptor blockers (arbs), combinations"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C09_agents-acting-on-the-renin-angiotensin-system/C09D_angiotensin-ii-receptor-blockers-arbs-combinations/index.qmd
+          #         - text: "(X) Other agents acting on the renin-angiotensin system"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C09_agents-acting-on-the-renin-angiotensin-system/C09X_other-agents-acting-on-the-renin-angiotensin-system/index.qmd
+          #     - section: "(10) Lipid modifying agents"
+          #       href: docs/pharmacopeia/C_cardiovascular-system/C10_lipid-modifying-agents/index.qmd
+          #       contents:
+          #         - text: "(A) Lipid modifying agents, plain"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C10_lipid-modifying-agents/C10A_lipid-modifying-agents-plain/index.qmd
+          #         - text: "(B) Lipid modifying agents, combinations"
+          #           href: docs/pharmacopeia/C_cardiovascular-system/C10_lipid-modifying-agents/C10B_lipid-modifying-agents-combinations/index.qmd
+          # - section: "(D) Dermatologicals"
+          #   href: docs/pharmacopeia/D_dermatologicals/index.qmd
+          #   contents:
+          #     - section: "(01) Antifungals for dermatological use"
+          #       href: docs/pharmacopeia/D_dermatologicals/D01_antifungals-for-dermatological-use/index.qmd
+          #       contents:
+          #         - text: "(D) Antifungals for topical use"
+          #           href: docs/pharmacopeia/D_dermatologicals/D01_antifungals-for-dermatological-use/D01A_antifungals-for-topical-use/index.qmd
+          #         - text: "(D) Antifungals for systemic use"
+          #           href: docs/pharmacopeia/D_dermatologicals/D01_antifungals-for-dermatological-use/D01B_antifungals-for-systemic-use/index.qmd
+          #     - section: "(02) Emollients and protectives"
+          #       href: docs/pharmacopeia/D_dermatologicals/D02_emollients-and-protectives/index.qmd
+          #       contents:
+          #         - text: "(A) Emollients and protectives"
+          #           href: docs/pharmacopeia/D_dermatologicals/D02_emollients-and-protectives/D02A_emollients-and-protectives/index.qmd
+          #         - text: "(B) Protectives against uv-radiation"
+          #           href: docs/pharmacopeia/D_dermatologicals/D02_emollients-and-protectives/D02B_protectives-against-uv-radiation/index.qmd
+          #     - section: "(03) Preparations for treatment of wounds and ulcers"
+          #       href: docs/pharmacopeia/D_dermatologicals/D03_preparations-for-treatment-of-wounds-and-ulcers/index.qmd
+          #       contents:
+          #         - text: "(A) Cicatrizants"
+          #           href: docs/pharmacopeia/D_dermatologicals/D03_preparations-for-treatment-of-wounds-and-ulcers/D03A_cicatrizants/index.qmd
+          #         - text: "(B) Enzymes"
+          #           href: docs/pharmacopeia/D_dermatologicals/D03_preparations-for-treatment-of-wounds-and-ulcers/D03B_enzymes/index.qmd
+          #     - section: "(04) Antipruritics, incl. antihistamines, anesthetics, etc."
+          #       href: docs/pharmacopeia/D_dermatologicals/D04_antipruritics-incl-antihistamines-anesthetics-etc/index.qmd
+          #       contents:
+          #         - text: "(A) Antipruritics, incl. antihistamines, anesthetics, etc."
+          #           href: docs/pharmacopeia/D_dermatologicals/D04_antipruritics-incl-antihistamines-anesthetics-etc/D04A_antipruritics-incl-antihistamines-anesthetics-etc/index.qmd
+          #     - section: "(05) Antipsoriatics"
+          #       href: docs/pharmacopeia/D_dermatologicals/D05_antipsoriatics/index.qmd
+          #       contents:
+          #         - text: "(A) Antipsoriatics for topical use"
+          #           href: docs/pharmacopeia/D_dermatologicals/D05_antipsoriatics/D05A_antipsoriatics-for-topical-use/index.qmd
+          #         - text: "(B) Antipsoriatics for systemic use"
+          #           href: docs/pharmacopeia/D_dermatologicals/D05_antipsoriatics/D05B_antipsoriatics-for-systemic-use/index.qmd
+          #     - section: "(06) Antibiotics and chemotherapeutics for dermatological use"
+          #       href: docs/pharmacopeia/D_dermatologicals/D06_antibiotics-and-chemotherapeutics-for-dermatological-use/index.qmd
+          #       contents:
+          #         - text: "(A) Antibiotics for topical use"
+          #           href: docs/pharmacopeia/D_dermatologicals/D06_antibiotics-and-chemotherapeutics-for-dermatological-use/D06A_antibiotics-for-topical-use/index.qmd
+          #         - text: "(B) Chemotherapeutics for topical use"
+          #           href: docs/pharmacopeia/D_dermatologicals/D06_antibiotics-and-chemotherapeutics-for-dermatological-use/D06B_chemotherapeutics-for-topical-use/index.qmd
+          #         - text: "(C) Antibiotics and chemotherapeutics, combinations"
+          #           href: docs/pharmacopeia/D_dermatologicals/D06_antibiotics-and-chemotherapeutics-for-dermatological-use/D06C_antibiotics-and-chemotherapeutics-combinations/index.qmd
+          #     - section: "(07) Corticosteroids, dermatological preparations"
+          #       href: docs/pharmacopeia/D_dermatologicals/D07_corticosteroids-dermatological-preparations/index.qmd
+          #       contents:
+          #         - text: "(A) Corticosteroids, plain"
+          #           href: docs/pharmacopeia/D_dermatologicals/D07_corticosteroids-dermatological-preparations/D07A_corticosteroids-plain/index.qmd
+          #         - text: "(B) Corticosteroids, combinations with antiseptics"
+          #           href: docs/pharmacopeia/D_dermatologicals/D07_corticosteroids-dermatological-preparations/D07B_corticosteroids-combinations-with-antiseptics/index.qmd
+          #         - text: "(C) Corticosteroids, combinations with antibiotics"
+          #           href: docs/pharmacopeia/D_dermatologicals/D07_corticosteroids-dermatological-preparations/D07C_corticosteroids-combinations-with-antibiotics/index.qmd
+          #         - text: "(X) Corticosteroids, other combinations"
+          #           href: docs/pharmacopeia/D_dermatologicals/D07_corticosteroids-dermatological-preparations/D07X_corticosteroids-other-combinations/index.qmd
+          #     - section: "(08) Antiseptics and disinfectants"
+          #       href: docs/pharmacopeia/D_dermatologicals/D08_antiseptics-and-disinfectants/index.qmd
+          #       contents:
+          #         - text: "(A) Antiseptics and disinfectants"
+          #           href: docs/pharmacopeia/D_dermatologicals/D08_antiseptics-and-disinfectants/D08A_antiseptics-and-disinfectants/index.qmd
+          #     - section: "(09) Medicated dressings"
+          #       href: docs/pharmacopeia/D_dermatologicals/D09_medicated-dressings/index.qmd
+          #       contents:
+          #         - text: "(A) Medicated dressings"
+          #           href: docs/pharmacopeia/D_dermatologicals/D09_medicated-dressings/D09A_medicated-dressings/index.qmd
+          #     - section: "(10) Anti-acne preparations"
+          #       href: docs/pharmacopeia/D_dermatologicals/D10_anti-acne-preparations/index.qmd
+          #       contents:
+          #         - text: "(A) Anti-acne preparations for topical use"
+          #           href: docs/pharmacopeia/D_dermatologicals/D10_anti-acne-preparations/D10A_anti-acne-preparations-for-topical-use/index.qmd
+          #         - text: "(B) Anti-acne preparations for systemic use"
+          #           href: docs/pharmacopeia/D_dermatologicals/D10_anti-acne-preparations/D10B_anti-acne-preparations-for-systemic-use/index.qmd
+          #     - section: "(11) Other dermatological preparations"
+          #       href: docs/pharmacopeia/D_dermatologicals/D11_other-dermatological-preparations/index.qmd
+          #       contents:
+          #         - text: "(A) Other dermatological preparations"
+          #           href: docs/pharmacopeia/D_dermatologicals/D11_other-dermatological-preparations/D11A_other-dermatological-preparations/index.qmd
+          # - section: "(G) Genito urinary system and sex hormones"
+          #   href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/index.qmd
+          #   contents:
+          #     - section: "(01) Gynecological antiinfectives and antiseptics"
+          #       href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G01_gynecological-antiinfectives-and-antiseptics/index.qmd
+          #       contents:
+          #         - text: "(A) Antiinfectives and antiseptics, excl. combinations with corticosteroids"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G01_gynecological-antiinfectives-and-antiseptics/G01A_antiinfectives-and-antiseptics-excl-combinations-with-corticosteroids/index.qmd
+          #         - text: "(B) Antiinfectives/antiseptics in combination with corticosteroids"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G01_gynecological-antiinfectives-and-antiseptics/G01B_antiinfectivesantiseptics-in-combination-with-corticosteroids/index.qmd
+          #     - section: "(02) Other gynecologicals"
+          #       href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G02_other-gynecologicals/index.qmd
+          #       contents:
+          #         - text: "(A) Uterotonics"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G02_other-gynecologicals/G02A_uterotonics/index.qmd
+          #         - text: "(B) Contraceptives for topical use"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G02_other-gynecologicals/G02B_contraceptives-for-topical-use/index.qmd
+          #         - text: "(C) Other gynecologicals"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G02_other-gynecologicals/G02C_other-gynecologicals/index.qmd
+          #     - section: "(03) Sex hormones and modulators of the genital system"
+          #       href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G03_sex-hormones-and-modulators-of-the-genital-system/index.qmd
+          #       contents:
+          #         - text: "(A) Hormonal contraceptives for systemic use"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G03_sex-hormones-and-modulators-of-the-genital-system/G03A_hormonal-contraceptives-for-systemic-use/index.qmd
+          #         - text: "(B) Androgens"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G03_sex-hormones-and-modulators-of-the-genital-system/G03B_androgens/index.qmd
+          #         - text: "(C) Estrogens"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G03_sex-hormones-and-modulators-of-the-genital-system/G03C_estrogens/index.qmd
+          #         - text: "(D) Progestogens"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G03_sex-hormones-and-modulators-of-the-genital-system/G03D_progestogens/index.qmd
+          #         - text: "(E) Androgens and female sex hormones in combination"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G03_sex-hormones-and-modulators-of-the-genital-system/G03E_androgens-and-female-sex-hormones-in-combination/index.qmd
+          #         - text: "(F) Progestogens and estrogens in combination"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G03_sex-hormones-and-modulators-of-the-genital-system/G03F_progestogens-and-estrogens-in-combination/index.qmd
+          #         - text: "(G) Gonadotropins and other ovulation stimulants"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G03_sex-hormones-and-modulators-of-the-genital-system/G03G_gonadotropins-and-other-ovulation-stimulants/index.qmd
+          #         - text: "(H) Antiandrogens"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G03_sex-hormones-and-modulators-of-the-genital-system/G03H_antiandrogens/index.qmd
+          #         - text: "(X) Other sex hormones and modulators of the genital system"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G03_sex-hormones-and-modulators-of-the-genital-system/G03X_other-sex-hormones-and-modulators-of-the-genital-system/index.qmd
+          #     - section: "(04) Urologicals"
+          #       href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G04_urologicals/index.qmd
+          #       contents:
+          #         - text: "(B) Urologicals"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G04_urologicals/G04B_urologicals/index.qmd
+          #         - text: "(C) Drugs used in benign prostatic hypertrophy"
+          #           href: docs/pharmacopeia/G_genito-urinary-system-and-sex-hormones/G04_urologicals/G04C_drugs-used-in-benign-prostatic-hypertrophy/index.qmd
+          # - section: "(H) Systemic hormonal preparations, excl. sex hormones and insulins"
+          #   href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/index.qmd
+          #   contents:
+          #     - section: "(01) Pituitary and hypothalamic hormones and analogues"
+          #       href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H01_pituitary-and-hypothalamic-hormones-and-analogues/index.qmd
+          #       contents:
+          #         - text: "(A) Anterior pituitary lobe hormones and analogues"
+          #           href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H01_pituitary-and-hypothalamic-hormones-and-analogues/H01A_anterior-pituitary-lobe-hormones-and-analogues/index.qmd
+          #         - text: "(B) Posterior pituitary lobe hormones"
+          #           href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H01_pituitary-and-hypothalamic-hormones-and-analogues/H01B_posterior-pituitary-lobe-hormones/index.qmd
+          #         - text: "(C) Hypothalamic hormones"
+          #           href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H01_pituitary-and-hypothalamic-hormones-and-analogues/H01C_hypothalamic-hormones/index.qmd
+          #     - section: "(02) Corticosteroids for systemic use"
+          #       href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H02_corticosteroids-for-systemic-use/index.qmd
+          #       contents:
+          #         - text: "(A) Corticosteroids for systemic use, plain"
+          #           href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H02_corticosteroids-for-systemic-use/H02A_corticosteroids-for-systemic-use-plain/index.qmd
+          #         - text: "(B) Corticosteroids for systemic use, combinations"
+          #           href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H02_corticosteroids-for-systemic-use/H02B_corticosteroids-for-systemic-use-combinations/index.qmd
+          #         - text: "(C) Antiadrenal preparations"
+          #           href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H02_corticosteroids-for-systemic-use/H02C_antiadrenal-preparations/index.qmd
+          #     - section: "(03) Thyroid therapy"
+          #       href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H03_thyroid-therapy/index.qmd
+          #       contents:
+          #         - text: "(A) Thyroid preparations"
+          #           href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H03_thyroid-therapy/H03A_thyroid-preparations/index.qmd
+          #         - text: "(B) Antithyroid preparations"
+          #           href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H03_thyroid-therapy/H03B_antithyroid-preparations/index.qmd
+          #         - text: "(C) Iodine therapy"
+          #           href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H03_thyroid-therapy/H03C_iodine-therapy/index.qmd
+          #     - section: "(04) Pancreatic hormones"
+          #       href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H04_pancreatic-hormones/index.qmd
+          #       contents:
+          #         - text: "(A) Glycogenolytic hormones"
+          #           href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H04_pancreatic-hormones/H04A_glycogenolytic-hormones/index.qmd
+          #     - section: "(05) Calcium homeostasis"
+          #       href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H05_calcium-homeostasis/index.qmd
+          #       contents:
+          #         - text: "(A) Parathyroid hormones and analogues"
+          #           href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H05_calcium-homeostasis/H05A_parathyroid-hormones-and-analogues/index.qmd
+          #         - text: "(B) Anti-parathyroid agents"
+          #           href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H05_calcium-homeostasis/H05B_anti-parathyroid-agents/index.qmd
+          - section: "(J) Antiinfectives for systemic use"
+            href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/index.qmd
+            contents:
+              - text: "(01) Antibacterials for systemic use"
+                href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/index.qmd
+                # contents:
+                #   - text: "(A) Tetracyclines"
+                #     href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/J01A_tetracyclines/index.qmd
+                #   - text: "(B) Amphenicols"
+                #     href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/J01B_amphenicols/index.qmd
+                #   - text: "(C) Beta-lactam antibacterials, penicillins"
+                #     href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/J01C_beta-lactam-antibacterials-penicillins/index.qmd
+                #   - text: "(D) Other beta-lactam antibacterials"
+                #     href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/J01D_other-beta-lactam-antibacterials/index.qmd
+                #   - text: "(E) Sulfonamides and trimethoprim"
+                #     href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/J01E_sulfonamides-and-trimethoprim/index.qmd
+                #   - text: "(F) Macrolides, lincosamides and streptogramins"
+                #     href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/J01F_macrolides-lincosamides-and-streptogramins/index.qmd
+                #   - text: "(G) Aminoglycoside antibacterials"
+                #     href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/J01G_aminoglycoside-antibacterials/index.qmd
+                #   - text: "(M) Quinolone antibacterials"
+                #     href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/J01M_quinolone-antibacterials/index.qmd
+                #   - text: "(R) Combinations of antibacterials"
+                #     href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/J01R_combinations-of-antibacterials/index.qmd
+                #   - text: "(X) Other antibacterials"
+                #     href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/J01X_other-antibacterials/index.qmd
+              # - section: "(02) Antimycotics for systemic use"
+              #   href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J02_antimycotics-for-systemic-use/index.qmd
+              #   contents:
+              #     - text: "(A) Antimycotics for systemic use"
+              #       href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J02_antimycotics-for-systemic-use/J02A_antimycotics-for-systemic-use/index.qmd
+              # - section: "(04) Antimycobacterials"
+              #   href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J04_antimycobacterials/index.qmd
+              #   contents:
+              #     - text: "(A) Drugs for treatment of tuberculosis"
+              #       href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J04_antimycobacterials/J04A_drugs-for-treatment-of-tuberculosis/index.qmd
+              #     - text: "(B) Drugs for treatment of lepra"
+              #       href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J04_antimycobacterials/J04B_drugs-for-treatment-of-lepra/index.qmd
+              - text: "(05) Antivirals for systemic use"
+                href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J05_antivirals-for-systemic-use/index.qmd
+                # contents:
+                #   - text: "(A) Direct acting antivirals"
+                #     href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J05_antivirals-for-systemic-use/J05A_direct-acting-antivirals/index.qmd
+              # - section: "(06) Immune sera and immunoglobulins"
+              #   href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J06_immune-sera-and-immunoglobulins/index.qmd
+              #   contents:
+              #     - text: "(A) Immune sera"
+              #       href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J06_immune-sera-and-immunoglobulins/J06A_immune-sera/index.qmd
+              #     - text: "(B) Immunoglobulins"
+              #       href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J06_immune-sera-and-immunoglobulins/J06B_immunoglobulins/index.qmd
+              # - section: "(07) Vaccines"
+              #   href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J07_vaccines/index.qmd
+              #   contents:
+              #     - text: "(A) Bacterial vaccines"
+              #       href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J07_vaccines/J07A_bacterial-vaccines/index.qmd
+              #     - text: "(B) Viral vaccines"
+              #       href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J07_vaccines/J07B_viral-vaccines/index.qmd
+              #     - text: "(C) Bacterial and viral vaccines, combined"
+              #       href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J07_vaccines/J07C_bacterial-and-viral-vaccines-combined/index.qmd
+              #     - text: "(X) Other vaccines"
+              #       href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J07_vaccines/J07X_other-vaccines/index.qmd
+          - section: "(L) Antineoplastic and immunomodulating agents"
+            href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/index.qmd
+            contents:
+              # - section: "(01) Antineoplastic agents"
+              #   href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L01_antineoplastic-agents/index.qmd
+              #   contents:
+              #     - text: "(A) Alkylating agents"
+              #       href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L01_antineoplastic-agents/L01A_alkylating-agents/index.qmd
+              #     - text: "(B) Antimetabolites"
+              #       href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L01_antineoplastic-agents/L01B_antimetabolites/index.qmd
+              #     - text: "(C) Plant alkaloids and other natural products"
+              #       href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L01_antineoplastic-agents/L01C_plant-alkaloids-and-other-natural-products/index.qmd
+              #     - text: "(D) Cytotoxic antibiotics and related substances"
+              #       href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L01_antineoplastic-agents/L01D_cytotoxic-antibiotics-and-related-substances/index.qmd
+              #     - text: "(E) Protein kinase inhibitors"
+              #       href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L01_antineoplastic-agents/L01E_protein-kinase-inhibitors/index.qmd
+              #     - text: "(F) Monoclonal antibodies and antibody drug conjugates"
+              #       href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L01_antineoplastic-agents/L01F_monoclonal-antibodies-and-antibody-drug-conjugates/index.qmd
+              #     - text: "(X) Other antineoplastic agents"
+              #       href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L01_antineoplastic-agents/L01X_other-antineoplastic-agents/index.qmd
+              # - section: "(02) Endocrine therapy"
+              #   href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L02_endocrine-therapy/index.qmd
+              #   contents:
+              #     - text: "(A) Hormones and related agents"
+              #       href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L02_endocrine-therapy/L02A_hormones-and-related-agents/index.qmd
+              #     - text: "(B) Hormone antagonists and related agents"
+              #       href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L02_endocrine-therapy/L02B_hormone-antagonists-and-related-agents/index.qmd
+              # - section: "(03) Immunostimulants"
+              #   href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L03_immunostimulants/index.qmd
+              #   contents:
+              #     - text: "(A) Immunostimulants"
+              #       href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L03_immunostimulants/L03A_immunostimulants/index.qmd
+              - section: "(04) Immunosuppressants"
+                href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L04_immunosuppressants/index.qmd
+                contents:
+                  - text: "(A) Immunosuppressants"
+                    href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L04_immunosuppressants/L04A_immunosuppressants/index.qmd
+          # - section: "(M) Musculo-skeletal system"
+          #   href: docs/pharmacopeia/M_musculo-skeletal-system/index.qmd
+          #   contents:
+          #     - section: "(01) Antiinflammatory and antirheumatic products"
+          #       href: docs/pharmacopeia/M_musculo-skeletal-system/M01_antiinflammatory-and-antirheumatic-products/index.qmd
+          #       contents:
+          #         - text: "(A) Antiinflammatory and antirheumatic products, non-steroids"
+          #           href: docs/pharmacopeia/M_musculo-skeletal-system/M01_antiinflammatory-and-antirheumatic-products/M01A_antiinflammatory-and-antirheumatic-products-non-steroids/index.qmd
+          #         - text: "(B) Antiinflammatory/antirheumatic agents in combination"
+          #           href: docs/pharmacopeia/M_musculo-skeletal-system/M01_antiinflammatory-and-antirheumatic-products/M01B_antiinflammatoryantirheumatic-agents-in-combination/index.qmd
+          #         - text: "(C) Specific antirheumatic agents"
+          #           href: docs/pharmacopeia/M_musculo-skeletal-system/M01_antiinflammatory-and-antirheumatic-products/M01C_specific-antirheumatic-agents/index.qmd
+          #     - section: "(02) Topical products for joint and muscular pain"
+          #       href: docs/pharmacopeia/M_musculo-skeletal-system/M02_topical-products-for-joint-and-muscular-pain/index.qmd
+          #       contents:
+          #         - text: "(A) Topical products for joint and muscular pain"
+          #           href: docs/pharmacopeia/M_musculo-skeletal-system/M02_topical-products-for-joint-and-muscular-pain/M02A_topical-products-for-joint-and-muscular-pain/index.qmd
+          #     - section: "(03) Muscle relaxants"
+          #       href: docs/pharmacopeia/M_musculo-skeletal-system/M03_muscle-relaxants/index.qmd
+          #       contents:
+          #         - text: "(A) Muscle relaxants, peripherally acting agents"
+          #           href: docs/pharmacopeia/M_musculo-skeletal-system/M03_muscle-relaxants/M03A_muscle-relaxants-peripherally-acting-agents/index.qmd
+          #         - text: "(B) Muscle relaxants, centrally acting agents"
+          #           href: docs/pharmacopeia/M_musculo-skeletal-system/M03_muscle-relaxants/M03B_muscle-relaxants-centrally-acting-agents/index.qmd
+          #         - text: "(C) Muscle relaxants, directly acting agents"
+          #           href: docs/pharmacopeia/M_musculo-skeletal-system/M03_muscle-relaxants/M03C_muscle-relaxants-directly-acting-agents/index.qmd
+          #     - section: "(04) Antigout preparations"
+          #       href: docs/pharmacopeia/M_musculo-skeletal-system/M04_antigout-preparations/index.qmd
+          #       contents:
+          #         - text: "(A) Antigout preparations"
+          #           href: docs/pharmacopeia/M_musculo-skeletal-system/M04_antigout-preparations/M04A_antigout-preparations/index.qmd
+          #     - section: "(05) Drugs for treatment of bone diseases"
+          #       href: docs/pharmacopeia/M_musculo-skeletal-system/M05_drugs-for-treatment-of-bone-diseases/index.qmd
+          #       contents:
+          #         - text: "(B) Drugs affecting bone structure and mineralization"
+          #           href: docs/pharmacopeia/M_musculo-skeletal-system/M05_drugs-for-treatment-of-bone-diseases/M05B_drugs-affecting-bone-structure-and-mineralization/index.qmd
+          #     - section: "(09) Other drugs for disorders of the musculo-skeletal system"
+          #       href: docs/pharmacopeia/M_musculo-skeletal-system/M09_other-drugs-for-disorders-of-the-musculo-skeletal-system/index.qmd
+          #       contents:
+          #         - text: "(A) Other drugs for disorders of the musculo-skeletal system"
+          #           href: docs/pharmacopeia/M_musculo-skeletal-system/M09_other-drugs-for-disorders-of-the-musculo-skeletal-system/M09A_other-drugs-for-disorders-of-the-musculo-skeletal-system/index.qmd
+          # - section: "(N) Nervous system"
+          #   href: docs/pharmacopeia/N_nervous-system/index.qmd
+          #   contents:
+          #     - section: "(01) Anesthetics"
+          #       href: docs/pharmacopeia/N_nervous-system/N01_anesthetics/index.qmd
+          #       contents:
+          #         - text: "(A) Anesthetics, general"
+          #           href: docs/pharmacopeia/N_nervous-system/N01_anesthetics/N01A_anesthetics-general/index.qmd
+          #         - text: "(B) Anesthetics, local"
+          #           href: docs/pharmacopeia/N_nervous-system/N01_anesthetics/N01B_anesthetics-local/index.qmd
+          #     - section: "(02) Analgesics"
+          #       href: docs/pharmacopeia/N_nervous-system/N02_analgesics/index.qmd
+          #       contents:
+          #         - text: "(A) Opioids"
+          #           href: docs/pharmacopeia/N_nervous-system/N02_analgesics/N02A_opioids/index.qmd
+          #         - text: "(B) Other analgesics and antipyretics"
+          #           href: docs/pharmacopeia/N_nervous-system/N02_analgesics/N02B_other-analgesics-and-antipyretics/index.qmd
+          #         - text: "(C) Antimigraine preparations"
+          #           href: docs/pharmacopeia/N_nervous-system/N02_analgesics/N02C_antimigraine-preparations/index.qmd
+          #     - section: "(03) Antiepileptics"
+          #       href: docs/pharmacopeia/N_nervous-system/N03_antiepileptics/index.qmd
+          #       contents:
+          #         - text: "(A) Antiepileptics"
+          #           href: docs/pharmacopeia/N_nervous-system/N03_antiepileptics/N03A_antiepileptics/index.qmd
+          #     - section: "(04) Anti-parkinson drugs"
+          #       href: docs/pharmacopeia/N_nervous-system/N04_anti-parkinson-drugs/index.qmd
+          #       contents:
+          #         - text: "(A) Anticholinergic agents"
+          #           href: docs/pharmacopeia/N_nervous-system/N04_anti-parkinson-drugs/N04A_anticholinergic-agents/index.qmd
+          #         - text: "(B) Dopaminergic agents"
+          #           href: docs/pharmacopeia/N_nervous-system/N04_anti-parkinson-drugs/N04B_dopaminergic-agents/index.qmd
+          #         - text: "(C) Other antiparkinson drugs"
+          #           href: docs/pharmacopeia/N_nervous-system/N04_anti-parkinson-drugs/N04C_other-antiparkinson-drugs/index.qmd
+          #     - section: "(05) Psycholeptics"
+          #       href: docs/pharmacopeia/N_nervous-system/N05_psycholeptics/index.qmd
+          #       contents:
+          #         - text: "(A) Antipsychotics"
+          #           href: docs/pharmacopeia/N_nervous-system/N05_psycholeptics/N05A_antipsychotics/index.qmd
+          #         - text: "(B) Anxiolytics"
+          #           href: docs/pharmacopeia/N_nervous-system/N05_psycholeptics/N05B_anxiolytics/index.qmd
+          #         - text: "(C) Hypnotics and sedatives"
+          #           href: docs/pharmacopeia/N_nervous-system/N05_psycholeptics/N05C_hypnotics-and-sedatives/index.qmd
+          #     - section: "(06) Psychoanaleptics"
+          #       href: docs/pharmacopeia/N_nervous-system/N06_psychoanaleptics/index.qmd
+          #       contents:
+          #         - text: "(A) Antidepressants"
+          #           href: docs/pharmacopeia/N_nervous-system/N06_psychoanaleptics/N06A_antidepressants/index.qmd
+          #         - text: "(B) Psychostimulants, agents used for adhd and nootropics"
+          #           href: docs/pharmacopeia/N_nervous-system/N06_psychoanaleptics/N06B_psychostimulants-agents-used-for-adhd-and-nootropics/index.qmd
+          #         - text: "(C) Psycholeptics and psychoanaleptics in combination"
+          #           href: docs/pharmacopeia/N_nervous-system/N06_psychoanaleptics/N06C_psycholeptics-and-psychoanaleptics-in-combination/index.qmd
+          #         - text: "(D) Anti-dementia drugs"
+          #           href: docs/pharmacopeia/N_nervous-system/N06_psychoanaleptics/N06D_anti-dementia-drugs/index.qmd
+          #     - section: "(07) Other nervous system drugs"
+          #       href: docs/pharmacopeia/N_nervous-system/N07_other-nervous-system-drugs/index.qmd
+          #       contents:
+          #         - text: "(A) Parasympathomimetics"
+          #           href: docs/pharmacopeia/N_nervous-system/N07_other-nervous-system-drugs/N07A_parasympathomimetics/index.qmd
+          #         - text: "(B) Drugs used in addictive disorders"
+          #           href: docs/pharmacopeia/N_nervous-system/N07_other-nervous-system-drugs/N07B_drugs-used-in-addictive-disorders/index.qmd
+          #         - text: "(C) Antivertigo preparations"
+          #           href: docs/pharmacopeia/N_nervous-system/N07_other-nervous-system-drugs/N07C_antivertigo-preparations/index.qmd
+          #         - text: "(X) Other nervous system drugs"
+          #           href: docs/pharmacopeia/N_nervous-system/N07_other-nervous-system-drugs/N07X_other-nervous-system-drugs/index.qmd
+          # - section: "(P) Antiparasitic products, insecticides and repellents"
+          #   href: docs/pharmacopeia/P_antiparasitic-products-insecticides-and-repellents/index.qmd
+          #   contents:
+          #     - section: "(01) Antiprotozoals"
+          #       href: docs/pharmacopeia/P_antiparasitic-products-insecticides-and-repellents/P01_antiprotozoals/index.qmd
+          #       contents:
+          #         - text: "(A) Agents against amoebiasis and other protozoal diseases"
+          #           href: docs/pharmacopeia/P_antiparasitic-products-insecticides-and-repellents/P01_antiprotozoals/P01A_agents-against-amoebiasis-and-other-protozoal-diseases/index.qmd
+          #         - text: "(B) Antimalarials"
+          #           href: docs/pharmacopeia/P_antiparasitic-products-insecticides-and-repellents/P01_antiprotozoals/P01B_antimalarials/index.qmd
+          #         - text: "(C) Agents against leishmaniasis and trypanosomiasis"
+          #           href: docs/pharmacopeia/P_antiparasitic-products-insecticides-and-repellents/P01_antiprotozoals/P01C_agents-against-leishmaniasis-and-trypanosomiasis/index.qmd
+          #     - section: "(02) Anthelmintics"
+          #       href: docs/pharmacopeia/P_antiparasitic-products-insecticides-and-repellents/P02_anthelmintics/index.qmd
+          #       contents:
+          #         - text: "(B) Antitrematodals"
+          #           href: docs/pharmacopeia/P_antiparasitic-products-insecticides-and-repellents/P02_anthelmintics/P02B_antitrematodals/index.qmd
+          #         - text: "(C) Antinematodal agents"
+          #           href: docs/pharmacopeia/P_antiparasitic-products-insecticides-and-repellents/P02_anthelmintics/P02C_antinematodal-agents/index.qmd
+          #         - text: "(D) Anticestodals"
+          #           href: docs/pharmacopeia/P_antiparasitic-products-insecticides-and-repellents/P02_anthelmintics/P02D_anticestodals/index.qmd
+          #     - section: "(03) Ectoparasiticides, incl. scabicides, insecticides and repellents"
+          #       href: docs/pharmacopeia/P_antiparasitic-products-insecticides-and-repellents/P03_ectoparasiticides-incl-scabicides-insecticides-and-repellents/index.qmd
+          #       contents:
+          #         - text: "(A) Ectoparasiticides, incl. scabicides"
+          #           href: docs/pharmacopeia/P_antiparasitic-products-insecticides-and-repellents/P03_ectoparasiticides-incl-scabicides-insecticides-and-repellents/P03A_ectoparasiticides-incl-scabicides/index.qmd
+          #         - text: "(B) Insecticides and repellents"
+          #           href: docs/pharmacopeia/P_antiparasitic-products-insecticides-and-repellents/P03_ectoparasiticides-incl-scabicides-insecticides-and-repellents/P03B_insecticides-and-repellents/index.qmd
+          # - section: "(R) Respiratory system"
+          #   href: docs/pharmacopeia/R_respiratory-system/index.qmd
+          #   contents:
+          #     - section: "(01) Nasal preparations"
+          #       href: docs/pharmacopeia/R_respiratory-system/R01_nasal-preparations/index.qmd
+          #       contents:
+          #         - text: "(A) Decongestants and other nasal preparations for topical use"
+          #           href: docs/pharmacopeia/R_respiratory-system/R01_nasal-preparations/R01A_decongestants-and-other-nasal-preparations-for-topical-use/index.qmd
+          #         - text: "(B) Nasal decongestants for systemic use"
+          #           href: docs/pharmacopeia/R_respiratory-system/R01_nasal-preparations/R01B_nasal-decongestants-for-systemic-use/index.qmd
+          #     - section: "(02) Throat preparations"
+          #       href: docs/pharmacopeia/R_respiratory-system/R02_throat-preparations/index.qmd
+          #       contents:
+          #         - text: "(A) Throat preparations"
+          #           href: docs/pharmacopeia/R_respiratory-system/R02_throat-preparations/R02A_throat-preparations/index.qmd
+          #     - section: "(03) Drugs for obstructive airway diseases"
+          #       href: docs/pharmacopeia/R_respiratory-system/R03_drugs-for-obstructive-airway-diseases/index.qmd
+          #       contents:
+          #         - text: "(A) Adrenergics, inhalants"
+          #           href: docs/pharmacopeia/R_respiratory-system/R03_drugs-for-obstructive-airway-diseases/R03A_adrenergics-inhalants/index.qmd
+          #         - text: "(B) Other drugs for obstructive airway diseases, inhalants"
+          #           href: docs/pharmacopeia/R_respiratory-system/R03_drugs-for-obstructive-airway-diseases/R03B_other-drugs-for-obstructive-airway-diseases-inhalants/index.qmd
+          #         - text: "(C) Adrenergics for systemic use"
+          #           href: docs/pharmacopeia/R_respiratory-system/R03_drugs-for-obstructive-airway-diseases/R03C_adrenergics-for-systemic-use/index.qmd
+          #         - text: "(D) Other systemic drugs for obstructive airway diseases"
+          #           href: docs/pharmacopeia/R_respiratory-system/R03_drugs-for-obstructive-airway-diseases/R03D_other-systemic-drugs-for-obstructive-airway-diseases/index.qmd
+          #     - section: "(05) Cough and cold preparations"
+          #       href: docs/pharmacopeia/R_respiratory-system/R05_cough-and-cold-preparations/index.qmd
+          #       contents:
+          #         - text: "(C) Expectorants, excl. combinations with cough suppressants"
+          #           href: docs/pharmacopeia/R_respiratory-system/R05_cough-and-cold-preparations/R05C_expectorants-excl-combinations-with-cough-suppressants/index.qmd
+          #         - text: "(D) Cough suppressants, excl. combinations with expectorants"
+          #           href: docs/pharmacopeia/R_respiratory-system/R05_cough-and-cold-preparations/R05D_cough-suppressants-excl-combinations-with-expectorants/index.qmd
+          #         - text: "(F) Cough suppressants and expectorants, combinations"
+          #           href: docs/pharmacopeia/R_respiratory-system/R05_cough-and-cold-preparations/R05F_cough-suppressants-and-expectorants-combinations/index.qmd
+          #         - text: "(X) Other cold preparations"
+          #           href: docs/pharmacopeia/R_respiratory-system/R05_cough-and-cold-preparations/R05X_other-cold-preparations/index.qmd
+          #     - section: "(06) Antihistamines for systemic use"
+          #       href: docs/pharmacopeia/R_respiratory-system/R06_antihistamines-for-systemic-use/index.qmd
+          #       contents:
+          #         - text: "(A) Antihistamines for systemic use"
+          #           href: docs/pharmacopeia/R_respiratory-system/R06_antihistamines-for-systemic-use/R06A_antihistamines-for-systemic-use/index.qmd
+          #     - section: "(07) Other respiratory system products"
+          #       href: docs/pharmacopeia/R_respiratory-system/R07_other-respiratory-system-products/index.qmd
+          #       contents:
+          #         - text: "(A) Other respiratory system products"
+          #           href: docs/pharmacopeia/R_respiratory-system/R07_other-respiratory-system-products/R07A_other-respiratory-system-products/index.qmd
+          # - section: "(S) Sensory organs"
+          #   href: docs/pharmacopeia/S_sensory-organs/index.qmd
+          #   contents:
+          #     - section: "(01) Ophthalmologicals"
+          #       href: docs/pharmacopeia/S_sensory-organs/S01_ophthalmologicals/index.qmd
+          #       contents:
+          #         - text: "(A) Antiinfectives"
+          #           href: docs/pharmacopeia/S_sensory-organs/S01_ophthalmologicals/S01A_antiinfectives/index.qmd
+          #         - text: "(B) Antiinflammatory agents"
+          #           href: docs/pharmacopeia/S_sensory-organs/S01_ophthalmologicals/S01B_antiinflammatory-agents/index.qmd
+          #         - text: "(C) Antiinflammatory agents and antiinfectives in combination"
+          #           href: docs/pharmacopeia/S_sensory-organs/S01_ophthalmologicals/S01C_antiinflammatory-agents-and-antiinfectives-in-combination/index.qmd
+          #         - text: "(E) Antiglaucoma preparations and miotics"
+          #           href: docs/pharmacopeia/S_sensory-organs/S01_ophthalmologicals/S01E_antiglaucoma-preparations-and-miotics/index.qmd
+          #         - text: "(F) Mydriatics and cycloplegics"
+          #           href: docs/pharmacopeia/S_sensory-organs/S01_ophthalmologicals/S01F_mydriatics-and-cycloplegics/index.qmd
+          #         - text: "(G) Decongestants and antiallergics"
+          #           href: docs/pharmacopeia/S_sensory-organs/S01_ophthalmologicals/S01G_decongestants-and-antiallergics/index.qmd
+          #         - text: "(H) Local anesthetics"
+          #           href: docs/pharmacopeia/S_sensory-organs/S01_ophthalmologicals/S01H_local-anesthetics/index.qmd
+          #         - text: "(J) Diagnostic agents"
+          #           href: docs/pharmacopeia/S_sensory-organs/S01_ophthalmologicals/S01J_diagnostic-agents/index.qmd
+          #         - text: "(K) Surgical aids"
+          #           href: docs/pharmacopeia/S_sensory-organs/S01_ophthalmologicals/S01K_surgical-aids/index.qmd
+          #         - text: "(L) Ocular vascular disorder agents"
+          #           href: docs/pharmacopeia/S_sensory-organs/S01_ophthalmologicals/S01L_ocular-vascular-disorder-agents/index.qmd
+          #         - text: "(X) Other ophthalmologicals"
+          #           href: docs/pharmacopeia/S_sensory-organs/S01_ophthalmologicals/S01X_other-ophthalmologicals/index.qmd
+          #     - section: "(02) Otologicals"
+          #       href: docs/pharmacopeia/S_sensory-organs/S02_otologicals/index.qmd
+          #       contents:
+          #         - text: "(A) Antiinfectives"
+          #           href: docs/pharmacopeia/S_sensory-organs/S02_otologicals/S02A_antiinfectives/index.qmd
+          #         - text: "(B) Corticosteroids"
+          #           href: docs/pharmacopeia/S_sensory-organs/S02_otologicals/S02B_corticosteroids/index.qmd
+          #         - text: "(C) Corticosteroids and antiinfectives in combination"
+          #           href: docs/pharmacopeia/S_sensory-organs/S02_otologicals/S02C_corticosteroids-and-antiinfectives-in-combination/index.qmd
+          #         - text: "(D) Other otologicals"
+          #           href: docs/pharmacopeia/S_sensory-organs/S02_otologicals/S02D_other-otologicals/index.qmd
+          #     - section: "(03) Ophthalmological and otological preparations"
+          #       href: docs/pharmacopeia/S_sensory-organs/S03_ophthalmological-and-otological-preparations/index.qmd
+          #       contents:
+          #         - text: "(A) Antiinfectives"
+          #           href: docs/pharmacopeia/S_sensory-organs/S03_ophthalmological-and-otological-preparations/S03A_antiinfectives/index.qmd
+          #         - text: "(B) Corticosteroids"
+          #           href: docs/pharmacopeia/S_sensory-organs/S03_ophthalmological-and-otological-preparations/S03B_corticosteroids/index.qmd
+          #         - text: "(C) Corticosteroids and antiinfectives in combination"
+          #           href: docs/pharmacopeia/S_sensory-organs/S03_ophthalmological-and-otological-preparations/S03C_corticosteroids-and-antiinfectives-in-combination/index.qmd
+          #         - text: "(D) Other ophthalmological and otological preparations"
+          #           href: docs/pharmacopeia/S_sensory-organs/S03_ophthalmological-and-otological-preparations/S03D_other-ophthalmological-and-otological-preparations/index.qmd
+          # - section: "(V) Various"
+          #   href: docs/pharmacopeia/V_various/index.qmd
+          #   contents:
+          #     - section: "(01) Allergens"
+          #       href: docs/pharmacopeia/V_various/V01_allergens/index.qmd
+          #       contents:
+          #         - text: "(A) Allergens"
+          #           href: docs/pharmacopeia/V_various/V01_allergens/V01A_allergens/index.qmd
+          #     - section: "(03) All other therapeutic products"
+          #       href: docs/pharmacopeia/V_various/V03_all-other-therapeutic-products/index.qmd
+          #       contents:
+          #         - text: "(A) All other therapeutic products"
+          #           href: docs/pharmacopeia/V_various/V03_all-other-therapeutic-products/V03A_all-other-therapeutic-products/index.qmd
+          #     - section: "(04) Diagnostic agents"
+          #       href: docs/pharmacopeia/V_various/V04_diagnostic-agents/index.qmd
+          #       contents:
+          #         - text: "(B) Urine tests"
+          #           href: docs/pharmacopeia/V_various/V04_diagnostic-agents/V04B_urine-tests/index.qmd
+          #         - text: "(C) Other diagnostic agents"
+          #           href: docs/pharmacopeia/V_various/V04_diagnostic-agents/V04C_other-diagnostic-agents/index.qmd
+          #     - section: "(06) General nutrients"
+          #       href: docs/pharmacopeia/V_various/V06_general-nutrients/index.qmd
+          #       contents:
+          #         - text: "(A) Diet formulations for treatment of obesity"
+          #           href: docs/pharmacopeia/V_various/V06_general-nutrients/V06A_diet-formulations-for-treatment-of-obesity/index.qmd
+          #         - text: "(B) Protein supplements"
+          #           href: docs/pharmacopeia/V_various/V06_general-nutrients/V06B_protein-supplements/index.qmd
+          #         - text: "(C) Infant formulas"
+          #           href: docs/pharmacopeia/V_various/V06_general-nutrients/V06C_infant-formulas/index.qmd
+          #         - text: "(D) Other nutrients"
+          #           href: docs/pharmacopeia/V_various/V06_general-nutrients/V06D_other-nutrients/index.qmd
+          #     - section: "(07) All other non-therapeutic products"
+          #       href: docs/pharmacopeia/V_various/V07_all-other-non-therapeutic-products/index.qmd
+          #       contents:
+          #         - text: "(A) All other non-therapeutic products"
+          #           href: docs/pharmacopeia/V_various/V07_all-other-non-therapeutic-products/V07A_all-other-non-therapeutic-products/index.qmd
+          #     - section: "(08) Contrast media"
+          #       href: docs/pharmacopeia/V_various/V08_contrast-media/index.qmd
+          #       contents:
+          #         - text: "(A) X-ray contrast media, iodinated"
+          #           href: docs/pharmacopeia/V_various/V08_contrast-media/V08A_x-ray-contrast-media-iodinated/index.qmd
+          #         - text: "(B) X-ray contrast media, non-iodinated"
+          #           href: docs/pharmacopeia/V_various/V08_contrast-media/V08B_x-ray-contrast-media-non-iodinated/index.qmd
+          #         - text: "(C) Magnetic resonance imaging contrast media"
+          #           href: docs/pharmacopeia/V_various/V08_contrast-media/V08C_magnetic-resonance-imaging-contrast-media/index.qmd
+          #         - text: "(D) Ultrasound contrast media"
+          #           href: docs/pharmacopeia/V_various/V08_contrast-media/V08D_ultrasound-contrast-media/index.qmd
+          #     - section: "(09) Diagnostic radiopharmaceuticals"
+          #       href: docs/pharmacopeia/V_various/V09_diagnostic-radiopharmaceuticals/index.qmd
+          #       contents:
+          #         - text: "(A) Central nervous system"
+          #           href: docs/pharmacopeia/V_various/V09_diagnostic-radiopharmaceuticals/V09A_central-nervous-system/index.qmd
+          #         - text: "(B) Skeleton"
+          #           href: docs/pharmacopeia/V_various/V09_diagnostic-radiopharmaceuticals/V09B_skeleton/index.qmd
+          #         - text: "(C) Renal system"
+          #           href: docs/pharmacopeia/V_various/V09_diagnostic-radiopharmaceuticals/V09C_renal-system/index.qmd
+          #         - text: "(D) Hepatic and reticulo endothelial system"
+          #           href: docs/pharmacopeia/V_various/V09_diagnostic-radiopharmaceuticals/V09D_hepatic-and-reticulo-endothelial-system/index.qmd
+          #         - text: "(E) Respiratory system"
+          #           href: docs/pharmacopeia/V_various/V09_diagnostic-radiopharmaceuticals/V09E_respiratory-system/index.qmd
+          #         - text: "(F) Thyroid"
+          #           href: docs/pharmacopeia/V_various/V09_diagnostic-radiopharmaceuticals/V09F_thyroid/index.qmd
+          #         - text: "(G) Cardiovascular system"
+          #           href: docs/pharmacopeia/V_various/V09_diagnostic-radiopharmaceuticals/V09G_cardiovascular-system/index.qmd
+          #         - text: "(H) Inflammation and infection detection"
+          #           href: docs/pharmacopeia/V_various/V09_diagnostic-radiopharmaceuticals/V09H_inflammation-and-infection-detection/index.qmd
+          #         - text: "(I) Tumour detection"
+          #           href: docs/pharmacopeia/V_various/V09_diagnostic-radiopharmaceuticals/V09I_tumour-detection/index.qmd
+          #         - text: "(X) Other diagnostic radiopharmaceuticals"
+          #           href: docs/pharmacopeia/V_various/V09_diagnostic-radiopharmaceuticals/V09X_other-diagnostic-radiopharmaceuticals/index.qmd
+          #     - section: "(10) Therapeutic radiopharmaceuticals"
+          #       href: docs/pharmacopeia/V_various/V10_therapeutic-radiopharmaceuticals/index.qmd
+          #       contents:
+          #         - text: "(A) Antiinflammatory agents"
+          #           href: docs/pharmacopeia/V_various/V10_therapeutic-radiopharmaceuticals/V10A_antiinflammatory-agents/index.qmd
+          #         - text: "(B) Pain palliation (bone seeking agents)"
+          #           href: docs/pharmacopeia/V_various/V10_therapeutic-radiopharmaceuticals/V10B_pain-palliation-bone-seeking-agents/index.qmd
+          #         - text: "(X) Other therapeutic radiopharmaceuticals"
+          #           href: docs/pharmacopeia/V_various/V10_therapeutic-radiopharmaceuticals/V10X_other-therapeutic-radiopharmaceuticals/index.qmd
+          #     - section: "(20) Surgical dressings"
+          #       href: docs/pharmacopeia/V_various/V20_surgical-dressings/index.qmd
     - id: concepts
       title: "Concepts of the Craft"
       collapse-level: 2

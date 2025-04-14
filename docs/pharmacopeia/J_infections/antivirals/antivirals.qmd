@@ -1,8 +1,0 @@
----
-title: "Antivirals"
----
-
-:::{.callout-caution title="Under construction"}
-:::
-
-![](images/antivirals.png){#fig-antivirals}

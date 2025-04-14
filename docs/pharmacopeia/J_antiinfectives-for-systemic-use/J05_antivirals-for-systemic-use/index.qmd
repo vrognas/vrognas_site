@@ -1,0 +1,24 @@
+---
+title: "J05: Antivirals for systemic suse"
+---
+
+:::{.callout-caution title="Under construction"}
+:::
+
+![](images/antivirals.png){#fig-antivirals}
+
+| J05 | ANTIVIRALS FOR SYSTEMIC USE |
+| :--- | :--- |
+| J05A | DIRECT ACTING ANTIVIRALS |
+| J05AA | Thiosemicarbazones |
+| J05AB | Nucleosides and nucleotides excl. reverse transcriptase inhibitors |
+| J05AC | Cyclic amines |
+| J05AD | Phosphonic acid derivatives |
+| J05AE | Protease inhibitors |
+| J05AF | Nucleoside and nucleotide reverse transcriptase inhibitors |
+| J05AG | Non-nucleoside reverse transcriptase inhibitors |
+| J05AH | Neuraminidase inhibitors |
+| J05AJ | Integrase inhibitors |
+| J05AP | Antivirals for treatment of HCV infections |
+| J05AR | Antivirals for treatment of HIV infections, combinations |
+| J05AX | Other antivirals |

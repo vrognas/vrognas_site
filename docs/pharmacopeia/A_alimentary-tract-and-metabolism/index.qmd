@@ -1,0 +1,24 @@
+---
+title: "A: Alimentary tract and metabolism "
+---
+
+| Level 2 code | Description |
+| ---: | :--- |
+| A01 | Stomatological preparations |
+| A02 | Drugs for acid related disorders |
+| A03 | Drugs for functional gastrointestinal disorders |
+| A04 | Antiemetics and antinauseants |
+| A05 | Bile and liver therapy |
+| A06 | Drugs for constipation |
+| A07 | Antidiarrheals, intestinal antiinflammatory/antiinfective agents |
+| A08 | Antiobesity preparations, excl. diet products |
+| A09 | Digestives, incl. enzymes |
+| A10 | Drugs used in diabetes |
+| A11 | Vitamins |
+| A12 | Mineral supplements |
+| A13 | Tonics |
+| A14 | Anabolic agents for systemic use |
+| A15 | Appetite stimulants |
+| A16 | Other alimentary tract and metabolism products |
+
+: ATC A level 2 codes {#tbl-atc-a-lvl-2 tbl-colwidths="[20, 80]"}

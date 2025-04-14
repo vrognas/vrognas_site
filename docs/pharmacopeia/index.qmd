@@ -2,8 +2,29 @@
 title: "Pharmacopœia Pharmacometrika"
 ---
 
-This section contains a high-level overview on selected drug classes and their mechanism of action.
-It is organized according to [ATC-codes](https://atcddd.fhi.no/atc_ddd_index/) in @tbl-atc below.
+This section presents a high-level overview of selected drug classes and their mechanisms of action.
+It is organized according to the [**Anatomical Therapeutic Chemical (ATC)** classification system](https://atcddd.fhi.no/atc_ddd_index/).
+The ATC system was developeed in Norway and was introduced in 1976 and is maintained by the World Health Organization Collaborating Centre for Drug Statistics Methodology (WHOCC).
+It classifies active substances based on the organ or system they act on, as well as their therapeutic, pharmacological, and chemical properties.
+
+Drugs are classified in groups at five different levels.
+
+* **ATC 1^st^ level:** Main anatomical or pharmacological group, shown in @tbl-atc-lvl-1 below.
+* **ATC 2^nd^ level:** Pharmacological or Therapeutic subgroup
+* **ATC 3^rd^ & 4^th^ levels:** Chemical, Pharmacological or Therapeutic subgroup
+* **ATC 5^th^ level:** Chemical substance
+
+| ATC level | Codes | Different names/pharmaceuticals |
+| :--- | ---: | ---: |
+| Level 1 | 14 | 14 |
+| Level 2 | 94 | 94 |
+| Level 3 | 267 | 262 |
+| Level 4 | 889 | 819 |
+| Level 5 | 5067 | 4363 |
+
+: ATC count per level {#tbl-atc-count}
+
+The 2^nd^, 3^rd^ and 4^th^ levels are often used to identify pharmacological subgroups when that is considered more appropriate than therapeutic or chemical subgroups.
 
 | ATC code | Contents |
 | :------: | :------- |
@@ -22,6 +43,24 @@ It is organized according to [ATC-codes](https://atcddd.fhi.no/atc_ddd_index/) i
 | S | Sensory organs |
 | V | Various |
 
-: Anatomical Therapeutic Chemical (ATC) Classification System {#tbl-atc tbl-colwidths="[10, 90]"}
+: Codes in the first ATC level, the *Anatomical main group* {#tbl-atc-lvl-1 tbl-colwidths="[10, 90]"}
+
+## Example: metformin
+
+The complete classification of metformin illustrates the structure of the code:
+
+| Level                           | Code        | Description |
+| :------------------------------ | :---------- | :---------- |
+| **1:** Anatomical main group    | **A**       | Alimentary tract and metabolism |
+| **2:** Therapeutic subgroup     | A**10**     | Drugs used in diabetes |
+| **3:** Pharmacological subgroup | A10**B**    | Blood glucose lowering drues, excl. insulins |
+| **4:** Chemical subgroup        | A10B**A**   | Biguanides |
+| **5:** Chemical substance       | A10BA**02** | Metformin |
+
+: Anatomical Therapeutic Chemical (ATC) Classification System {#tbl-mtf tbl-colwidths="[30, 10, 60]"}
+
+Thus, in the ATC system all plain metformin preparations are given the code A10BA02.
+For the chemical substance, the [International Nonproprietary Name (INN)](https://www.who.int/teams/health-product-and-policy-standards/inn) is preferred.
+If INN names are not assigned, USAN (United States Adopted Name) or BAN (British Approved Name) names are usually chosen.
 
 ![](images/index_pharmacopeia.png)
