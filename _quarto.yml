@@ -539,7 +539,6 @@ website:
           #         - text: "(B) Anti-parathyroid agents"
           #           href: docs/pharmacopeia/H_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/H05_calcium-homeostasis/H05B_anti-parathyroid-agents/index.qmd
           - section: "(J) Antiinfectives for systemic use"
-            href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/index.qmd
             contents:
               - text: "(01) Antibacterials for systemic use"
                 href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/index.qmd
@@ -600,7 +599,6 @@ website:
               #     - text: "(X) Other vaccines"
               #       href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J07_vaccines/J07X_other-vaccines/index.qmd
           - section: "(L) Antineoplastic and immunomodulating agents"
-            href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/index.qmd
             contents:
               # - section: "(01) Antineoplastic agents"
               #   href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L01_antineoplastic-agents/index.qmd
@@ -632,7 +630,6 @@ website:
               #     - text: "(A) Immunostimulants"
               #       href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L03_immunostimulants/L03A_immunostimulants/index.qmd
               - section: "(04) Immunosuppressants"
-                href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L04_immunosuppressants/index.qmd
                 contents:
                   - text: "(A) Immunosuppressants"
                     href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L04_immunosuppressants/L04A_immunosuppressants/index.qmd
