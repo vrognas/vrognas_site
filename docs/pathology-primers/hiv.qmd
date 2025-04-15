@@ -5,18 +5,18 @@ title: "Human immunodeficiency virus (HIV)"
 ## What is HIV?
 
 The human immunodeficiency viruses (HIV) are two species of Lentivirus (a subgroup of retrovirus) that infect humans.
-Unlike most other viruses, the HIV particles **infect cells of the immune system**, primarily *CD4 helper T cells*.
-The HIV virus **spread through bodily fluid exchange**, typically during intercourse.
+Unlike most other viruses, HIV particles **infect immune system cells**, primarily **CD4 helper T cells**.
+The HIV virus **spreads through bodily fluid exchange**, typically during intercourse.
 Over time (often up to seven years without therapy), the number of CD4 helper T cells drops so low that they are almost undetectable in the blood, weakening the immune response to infection from other pathogens.
 This is what makes **<span class="red-underline">untreated</span> HIV lead to <span class="red-underline">acquired immunodeficiency syndrome (AIDS)</span>**.
-Without the CD4 helper T cells, eventually, a simple cold or bacterial infection can be fatal.
+Without the CD4 helper T cells, a simple cold or bacterial infection can be fatal.
 
 Though people living with HIV tend to be most infectious in the first few months after being infected, many are unaware of their status until the later stages.
 **People can go years(!) without knowing they are infected**.
 Children may have more rapid disease progression and accelerated damage of the developing immune system compared to adults, with higher viral loads and less effective immunological responses to HIV infection than adults.
 
-**An HIV positive person today who is on effective treatment can <span class="red-underline">live as long and be as healthy as a person who does not have HIV</span>**.
-With treatment, the viral load in patients can be reduced and maintained at such a low level, the risk of transmitting the virus to someone else can be almost eliminated.
+**An HIV-positive person today who is on effective treatment can <span class="red-underline">live as long and be as healthy as a person who does not have HIV</span>**.
+With treatment, the viral load in patients can be reduced and maintained at such a low level that the risk of transmitting the virus to someone else can be almost eliminated.
 However, it is a **life-long infection as it’s <span class="red-underline">impossible to clear it from your system**</span>, even when treated with drugs that target the virus.
 Without treatment, the average survival time after infection with HIV is estimated to be 9--11 years, depending on the HIV subtype.
 
@@ -30,21 +30,21 @@ The two main HIV subtypes are:
 
 #### HIV-1
 
-HIV-1 is a rapidly replicating virus, with an error-prone Reverse Transcriptase (RT).
+HIV-1 is a rapidly replicating virus with an error-prone Reverse Transcriptase (RT).
 HIV-1 viruses can be further stratified into groups M, N, O, and P.
 Among these, HIV-1 group M viruses are the **most prevalent, infecting nearly 90% of people living with HIV** ("M" for "major").
 HIV-1 infection results in chronic activation of the immune system and a subsequent gradual loss of CD4+ T cells, eventually leading to AIDS.
 
 #### HIV-2
 
-HIV-2 viruses are generally considered to be **less virulent and less transmissible** than HIV-1 M group viruses, although HIV-2 is also known to still cause AIDS.
+HIV-2 viruses are generally considered to be **less virulent and less transmissible** than HIV-1 M group viruses, although HIV-2 is also known to cause AIDS still.
 
 ## What are the symptoms?
 
 Not everyone reacts the same way to an infection of HIV, and symptoms may initially be subtle.
 
-HIV is like a lot of other viruses in as much that the initial symptoms are flu-like.
-As the infection progress, more signs and symptoms might develop.
+HIV is like many other viruses in that the initial symptoms are flu-like.
+As the infection progresses, more signs and symptoms might develop.
 This may include:
 
 * Fever 🤒
@@ -57,28 +57,28 @@ This may include:
 * Diarrhea 💩
 * Cough 😮‍💨
 
-The immune system then kicks in and the symptoms go away--so it can be easy to miss.
+The immune system then kicks in, and the symptoms go away---so it can be easy to miss.
 
 ## Diagnosis
 
 Rapid diagnostic tests that provide same-day results are used.
 Most widely used HIV diagnostic tests detect antibodies produced by a person as part of their immune response to fight HIV.
 In most cases, people develop antibodies to HIV within 28 days of infection.
-During this time, people are in the so-called "window period" when they have low levels of antibodies which cannot be detected by many rapid tests, but they may still transmit HIV to others.
+During this time, people are in the so-called "window period" when they have low levels of antibodies that many rapid tests cannot detect, but they may still transmit HIV to others.
 People who have had a recent high-risk exposure and test negative can have a further test after 28 days.
 
 ## How can it be treated?
 
 HIV can be prevented and treated with **antiretroviral therapy (ART)**.
 
-Resistance-associated mutations (RAMs) can rapidly be selected when there is selection pressure due to e.g. too low concentrations of antiviral drugs.
-Often, resistance to drugs in a certain ARV class results in cross-resistance to other drugs in that same class.
+Resistance-associated mutations (RAMs) can rapidly be selected when there is selection pressure, such as too low a concentration of antiviral drugs.
+Often, resistance to drugs in a specific ARV class results in cross-resistance to other drugs in that same class.
 
-One of the predictors for HIV-1 disease progression is the level of HIV-1 RNA in the blood (i.e., viral load).
-**The aim of treatment of HIV-1 infection is therefore to suppress, and subsequently maintain, the HIV-1 viral load to levels that are at least below the limit of detection of most commonly used assays (50 copies/mL of blood)**.
+One predictor of HIV-1 disease progression is the level of HIV-1 RNA in the blood (i.e., viral load).
+**The aim of treatment of HIV-1 infection is, therefore, to suppress and subsequently maintain the HIV-1 viral load to levels that are at least below the limit of detection of most commonly used assays (50 copies/mL of blood)**.
 
 Current ART options are combinations (or "cocktails") consisting of at least three medications belonging to at least two types, or "classes", of antiretroviral agents.
-There are eight classes of antiretroviral agents (ARVs), and over 30 individual drugs:
+There are eight classes of antiretroviral agents (ARVs) and over 30 individual drugs:
 
 1. Nucleoside/nucleotide reverse transcriptase inhibitors (NRTIs)
 2. Non-nucleoside reverse transcriptase inhibitors (NNRTIs)
@@ -89,9 +89,9 @@ There are eight classes of antiretroviral agents (ARVs), and over 30 individual 
 7. CD4 T lymphocyte (CD4) post-attachment inhibitor
 8. gp120 attachment inhibitor
 
-There are also two drugs, ritonavir (RTV) and cobicistat (COBI) which can be used as PK-enhancers ("boosters") to improve the PK profiles of PIs and the INI elvitegravir.
+There are also two drugs, ritonavir (RTV) and cobicistat (COBI), which can be used as PK-enhancers ("boosters") to improve the PK profiles of PIs and the INI elvitegravir.
 
-Depending on the guidelines being followed, initial treatment generally consists of two nucleoside reverse transcriptase inhibitors along with a third ARV, either an INI, an NNRTI, or a PI with a booster.
+Depending on the guidelines, initial treatment generally consists of two NRTIs and a third ARV, either an INI, an NNRTI, or a PI with a booster.
 
 ## References
 
