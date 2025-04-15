@@ -6,20 +6,20 @@ title: "Bacterial infections"
 
 For an infectious agent, **infectivity** refers to the proportion of exposed persons who become infected.
 **Pathogenicity** refers to the proportion of infected individuals who develop clinically apparent disease.
-**Virulence** refers to the proportion of clinically apparent cases that are severe or fatal.
-The disease process may never progress to clinically apparent illness, or result in illness that ranges from mild to severe or fatal. This range is called the **spectrum of disease**.
-Ultimately, the disease process ends either in recovery, disability or death (see @fig-periods).
+**Virulence** refers to the proportion of clinically apparent severe or fatal cases.
+The disease process may never progress to clinically apparent illness or result in illness that ranges from mild to severe or fatal. This range is called the **spectrum of disease**.
+Ultimately, the disease process ends in recovery, disability, or death (see @fig-periods).
 
-A bacterial infection is classified according to the site of infection, and sometimes also the source of infection (see @fig-overview). Some examples include:
+A bacterial infection is classified according to the site of infection and sometimes also the source of infection (see @fig-overview). Some examples include:
 
 * Skin infections
   * Acute bacterial skin and skin structure infection (ABSSSI)
 * Lung infections
-  * Community-acquired oneumonia (CAP)
-    * Probably Pneumococci, haemophilus influenzae, mycoplasma)
+  * Community-acquired pneumonia (CAP)
+    * Probably *Streptococcus pneumoniae*, *Haemophilus influenzae*, *Mycoplasma pneumoniae*)
   * Hospital-acquired/ventilator-associated pneumonia (HAP/VAP)
-    * Probably *S.aureus*, *P.aeruginosa*, *Enterobacteria*
-    * *Pseudomonas* not in gut, it is found in shower heads or sinks -> can only infect after antibiotic treatment, when gut flora is compromised.
+    * Probably *S. aureus*, *Pseudomonas aeruginosa*, *Enterobacteria*
+    * *Pseudomonas aeruginosa* is not in the gut but on shower heads or sinks. It can only infect after antibiotic treatment when the gut flora is compromised.
 * Intra-abdominal infection (IAI)
 * Blood-stream infection (BSI)
 * Urinary-tract infection (UTI)
@@ -29,13 +29,13 @@ A bacterial infection is classified according to the site of infection, and some
 ### Sepsis
 
 Sepsis is a special life-threatening state.
-Occurs rarely in UTI, mostly in lung infections.
+Occurs rarely during UTI, mostly in lung infections.
 
-The SOFA-score is often used to assess organ failure in septic patients.
+The SOFA score is often used to assess organ failure in septic patients.
 
-#### Septic chock
+#### Septic shock
 
-Septic chock is a development of sepsis that is even more severe.
+Septic shock is a development of sepsis that is even more severe.
 
 ## Symptoms
 
@@ -47,17 +47,17 @@ Infectious diseases can be contagious during all five of the periods of disease.
 |   #   | Period/Phase/Stage | Description |
 | :---: | :----------------- | :---------- |
 |   1   | Incubation/latency | Pathogen replicates. No signs or symptoms. |
-|   2   | Prodromal (subclinical disease) | Pathogeon replicates. General signs and symptoms. Immune system active. |
-|   3   | Illness (clinical disease) | Most severe and characteristic signs and symptoms. **Usual time of diagnosis early in this period.** |
-|   4   | Decline            | Pathogen particle-count declines. Signs and symptoms improve. Immune system possibly weakened---suceptibility to secondary infection. |
-|   5   | Convalescence      | Patient return to normal function. Signs and symptoms resolve. Some permament damage might have occured. |
+|   2   | Prodromal (subclinical disease) | Pathogeon replicates. General signs and symptoms. The immune system is active. |
+|   3   | Illness (clinical disease) | Most severe and characteristic signs and symptoms. **Usual time of diagnosis is early in this period.** |
+|   4   | Decline            | Pathogen particle-count declines. Signs and symptoms improve. Immune system possibly weakened---susceptibility to secondary infection. |
+|   5   | Convalescence      | Patient returns to normal function. Signs and symptoms resolve. Some permanent damage might have occurred. |
 
 : Periods of disease. {tbl-colwidths="[10,20,70]"}
 
 Stages might overlap.
 The onset of symptoms marks the transition from subclinical to clinical disease.
 
-![Periods of disease. This particular figure shows a complete recovery after illness. One can also imagine cases where the severity of symptoms never completely go back to baseline (a disability), or a case where the curves are truncated earlier in time (a death). Indeed, the time-scale is arbitrary here, as is the distance in time between the different periods. The periods of disease could even overlap in some diseases, adding to the complexity.](images/bac-inf_periods.avif){#fig-periods}
+![Periods of disease. This particular figure shows a complete recovery after illness. One can also imagine cases where the severity of symptoms never completely goes back to baseline (a disability) or a case where the curves are truncated earlier in time (a death). Indeed, the time-scale is arbitrary here, as is the distance in time between the different periods. The periods of disease could even overlap in some diseases, adding to the complexity.](images/bac-inf_periods.avif){#fig-periods}
 
 ## Diagnosis
 
@@ -78,8 +78,8 @@ The onset of symptoms marks the transition from subclinical to clinical disease.
 > "Hit hard and hit early" -Paul Erlich
 
 In almost all cases, an empirical treatment is used first.
-There no time to wait for culture results.
-The "right" treatment gets 90% success, "wrong" treatment gets 60% success (known as the **"90/60 rule"**).
+There is no time to wait for culture results.
+The "right" treatment is 90% successful, and the "wrong" treatment is 60% successful (known as the **"90/60 rule"**).
 
 Most infections can be treated in 5--7 days.
 
@@ -111,7 +111,7 @@ Most infections can be treated in 5--7 days.
 * Treatment re-evaluation after 3 days
     * 48 hours needed to evaluate antibiotic efficacy
     * The efficacy of antibiotic treatment is judged by **signs and symptoms** (Are you feeling better than yesterday?), and the course of **inflammatory markers** (WBC, CRP, PCT)
-* Empiric treatment should ideally be switched to targeted treatment once culture results are available (2--3 days)
+* Empiric treatment should ideally be switched to targeted therapy once culture results are available (2--3 days)
 
 ## References
 
