@@ -84,11 +84,11 @@ If you feel that you are floundering (as every student sometimes does), ask your
 
 ## 8 Rules to Run Effective Meetings
 
-1. Follow the Two-Pizza Rule. Keep meetings small enough to be fed by two pizzas (6-8 people).
+1. Follow the Two-Pizza Rule. Keep meetings small enough to be fed by two pizzas (6--8 people).
 2. Hold standing meetings. Studies show standing meetings reduce duration by 34%.
 3. Send a detailed agenda before the meeting. State the purpose and desired outcomes for every attendee. No agenda means no meeting.
 4. Keep one seat open at every meeting. This way, decisions will always consider the impact on the end user (h/t Amazon).
 5. Use Al transcription tools to quickly capture key meeting points and action items.
-6. Implement Maker-Manager Schedules. Managers thrive on 30-minute blocks for decisions. Makers need 3-4 hour blocks for deep work-schedule afternoon meetings for makers to protect creative flow.
+6. Implement Maker-Manager Schedules. Managers thrive on 30-minute blocks for decisions. Makers need 3--4 hour blocks for deep work-schedule afternoon meetings for makers to protect creative flow.
 7. Use the 4-Bullet Update. Update with 4 points: what was done, requested asks, current blockers, and future improvements. Save hours in recurring meetings.
 8. Finish meetings with Action Memos detailing decisions, owners, and deadlines.
