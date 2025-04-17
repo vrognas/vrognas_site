@@ -48,6 +48,19 @@ Emojis are meant to convey emotion in writing.
 Correctly used, they are irreplaceable in making sure your message is read in the intended tone of voice, even in professional email.
 :::
 
+| Instead of Saying...                        | Say This Instead                                       |
+|----------------------------------------------|--------------------------------------------------------|
+| Sorry for the delay                           | Thank you for your patience                            |
+| Sorry to bother you                           | Appreciate you making time for this                    |
+| Sorry for the confusion                       | Let me clarify that for you                            |
+| Sorry for asking so many questions            | I value your insight as I learn more                   |
+| Sorry I missed that                           | Thanks for catching that. I’ve updated it now          |
+| Sorry for jumping in                          | May I offer a thought here?                            |
+| Sorry if that didn’t make sense               | Let me rephrase that to be clearer                     |
+| Sorry, I’m not sure how to do this            | Could you walk me through the next step?               |
+| Sorry for venting                             | Thank you for listening                                |
+| Sorry for taking up your time                 | Grateful for the opportunity to share this             |
+
 ![](images/email.jpg){#fig-email}
 
 2. Next, **summarize** message and action-points in the beginning of an email.
