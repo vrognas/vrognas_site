@@ -5,12 +5,19 @@ title: "Meeting Best Practices"
 :::{.callout-caution title="Under construction"}
 :::
 
-A-energy vs B/C-energy
-* Meeting-strategies
-    * What does a good agenda look like?
-    * Email agreed action-points?
+## Meeting Energy Levels
 
-## Synthesis of meeting workflow
+* **A-Energy**: Focused, prepared, high-leverage meetings.
+* **B/C-Energy**: Reactive, unclear, or unfocused meetings.
+
+Aim to operate at **A-energy** by having clear strategies and ownership.
+
+## Meeting Strategies
+
+* What does a good agenda look like?
+* Should agreed action points be emailed after
+
+## Synthesis of meeting workflow (ref Alfred Sloan)
 
 1. Send out invitation 1 week in advance
     1. Announce purpose/topic.
@@ -18,37 +25,25 @@ A-energy vs B/C-energy
     3. Attach reference material
 2. Have the meeting
     1. Announce purpose/topic.
-    2. List agenda topics as questions
-        1. IF(your meeting): Present (do 90% of talking)
-        2. IF(not your meeting): Listen (do 10% of talking)
+    2. List agenda topics as questions (and **follow the agenda**)
+        1. IF(your meeting): Present (do 90% of talking) and ask if there is anything that needs to be clarified
+        2. IF(not your meeting): Listen (do 10% of talking) and ask clarifying questions
     3. Anything we need to change/add?
-    4. Review last meeting’s +/Δ
+    4. Review last meeting’s !/+/Δ
     5. Take notes
       * Decisions
-      * Action-points (What should be done, and who's responsible?)
+      * Action-points (What should be done, by when, and who's responsible?)
         * MoSCoW
     6. 5min to wrap up/summarize
+        1. !: Align on decisions and action list.
         1. +: “What did we do well?”  
         2. Δ: “What do we want to do differently?”
 3. Leave
-4. Send an email to one attendee.
+4. Immediately send an email to **one attendee**.
     1. Summarize discussion and conclusion.
     2. Spell out work assignments, next meeting on the subject or to study an issue.
     3. Specify deadlines and accountable persons.
-5. Send copy (CC) to all.
-
-## Alfred Sloan Meeting + Follow-up:
-
-1. Announce purpose/topic.
-2. Listen. Ask clarifying questions. No notes.
-3. Summarize
-4. Leave
-5. Immediately write a memo
-    1. Addressed to one attendee.
-    2. Summarize discussion and conclusion.
-    3. Spell out work assignments, next meeting on the subject or to study an issue.
-    4. Specify deadlines and accountable persons.
-    5. Send copy (CC) to all.
+    4. Send copy (CC) to all.
 
 ### My own take
 
@@ -84,11 +79,11 @@ If you feel that you are floundering (as every student sometimes does), ask your
 
 ## 8 Rules to Run Effective Meetings
 
-1. Follow the Two-Pizza Rule. Keep meetings small enough to be fed by two pizzas (6--8 people).
-2. Hold standing meetings. Studies show standing meetings reduce duration by 34%.
+1. Keep meetings small (6--8 people).
+2. Standing meetings reduce duration by 34%.
 3. Send a detailed agenda before the meeting. State the purpose and desired outcomes for every attendee. No agenda means no meeting.
-4. Keep one seat open at every meeting. This way, decisions will always consider the impact on the end user (h/t Amazon).
-5. Use Al transcription tools to quickly capture key meeting points and action items.
+4. Keep one seat open at every meeting. This way, decisions will always consider the impact on the end user.
+5. Use AI transcription tools to quickly capture key meeting points and action items.
 6. Implement Maker-Manager Schedules. Managers thrive on 30-minute blocks for decisions. Makers need 3--4 hour blocks for deep work-schedule afternoon meetings for makers to protect creative flow.
 7. Use the 4-Bullet Update. Update with 4 points: what was done, requested asks, current blockers, and future improvements. Save hours in recurring meetings.
 8. Finish meetings with Action Memos detailing decisions, owners, and deadlines.
