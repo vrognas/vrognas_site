@@ -48,20 +48,25 @@ Emojis are meant to convey emotion in writing.
 Correctly used, they are irreplaceable in making sure your message is read in the intended tone of voice, even in professional email.
 :::
 
-| Instead of Saying...                        | Say This Instead                                       |
-|----------------------------------------------|--------------------------------------------------------|
-| Sorry for the delay                           | Thank you for your patience                            |
-| Sorry to bother you                           | Appreciate you making time for this                    |
-| Sorry for the confusion                       | Let me clarify that for you                            |
-| Sorry for asking so many questions            | I value your insight as I learn more                   |
-| Sorry I missed that                           | Thanks for catching that. I’ve updated it now          |
-| Sorry for jumping in                          | May I offer a thought here?                            |
-| Sorry if that didn’t make sense               | Let me rephrase that to be clearer                     |
-| Sorry, I’m not sure how to do this            | Could you walk me through the next step?               |
-| Sorry for venting                             | Thank you for listening                                |
-| Sorry for taking up your time                 | Grateful for the opportunity to share this             |
-
-![](images/email.jpg){#fig-email}
+| What You're Really Saying              | Instead of Saying...                  | Say This Instead                              |
+| :--------------------------------------- | :------------------------------------- | :----------------------------------------- |
+| I know your time is valuable             | Sorry to bother you                    | Appreciate you making time for this        |
+| That might have been unclear             | Sorry for the confusion                | Let me clarify that for you                |
+| I'm learning and want to get it right    | Sorry for asking so many questions     | I value your insight as I learn more       |
+| I want to contribute thoughtfully        | Sorry for jumping in                   | May I offer a thought here?                |
+| I can explain this better                | Sorry if that didn’t make sense        | Let me rephrase that to be clearer         |
+| I need some guidance                     | Sorry, I’m not sure how to do this     | Could you walk me through the next step?   |
+| I need to express something              | Sorry for venting                      | Thank you for listening                    |
+| I appreciate your attention              | Sorry for taking up your time          | Grateful for the opportunity to share this |
+| I took a while, but you can deal     | Sorry for the delay                         | Thanks for your patience                  |
+| My schedule matters too              | What works best for you?                    | Could you do __:__?                       |
+| Yeah, you're welcome                 | No problem / No worries!                    | Always happy to help!                     |
+| I know what I’m doing                | I think maybe we should __                  | It’d be best if we __                     |
+| Wording this is hard                 | *Rewriting email for 40 minutes*            | It’d be easier to discuss in person       |
+| Do you get it?                       | Hopefully that makes sense?                 | Let me know if you have questions         |
+| Where the heck are we on this?       | Just wanted to check in                     | When can I expect an update?             |
+| I made a small error                 | Sorry I missed that     | Nice catch! I've updated it now. Thanks for letting me know! |
+| I have an appointment                | Could I possibly leave early?               | I will need to leave for ___ at ___      |
 
 2. Next, **summarize** message and action-points in the beginning of an email.
 3. Write an accurate (and short) **subject line**.
