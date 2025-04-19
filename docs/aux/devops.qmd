@@ -1,0 +1,25 @@
+---
+title: DevOps
+---
+
+## Workflow Best Practices
+
+1.	Version Everything
+  * Code, data, models, environments
+	•	Enable reproducibility and rollbacks
+2.	Automate Testing
+	•	Data validation checks
+	•	Model performance benchmarks
+	•	Integration tests for pipelines
+3.	Build CI/CD Pipelines
+	•	Automate model training
+	•	Enable continuous deployment
+	•	Support A/B testing
+4.	Implement Monitoring
+	•	Data drift detection
+	•	Model performance metrics
+	•	System resource utilization
+5.	Enable Collaboration
+	•	Shared tools and practices
+	•	Cross-functional visibility
+	•	Knowledge transfer
