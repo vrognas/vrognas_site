@@ -18,7 +18,7 @@ website:
   bread-crumbs: true
   navbar:
     left:
-      - text: "CV/Resume"
+      - text: "CV"
         href: docs/cv/index.qmd
       - text: "Portfolio"
         href: docs/portfolio/index.qmd
