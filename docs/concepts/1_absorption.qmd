@@ -36,5 +36,9 @@ If a drug exhibits enterohepatic recirculation, it is common to see two or more 
 
 ## References
 
+4. $\mathrm{F}=\left(\mathrm{AUC}_{\mathrm{po}} / \mathrm{AUC}_{\mathrm{iv}}\right) \cdot\left(\right.$ Dose $_{\mathrm{iv}} /$ Dose $\left._{\mathrm{po}}\right)$
+5. $\mathrm{F}=\mathrm{fa} \cdot\left(1-\mathrm{E}_{\mathrm{GI}}\right) \cdot\left(1-\mathrm{E}_{\mathrm{H}}\right)$
+
+
 ::: {#refs}
 :::
