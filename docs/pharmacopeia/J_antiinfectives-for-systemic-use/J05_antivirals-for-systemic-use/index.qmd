@@ -22,3 +22,5 @@ title: "J05: Antivirals for systemic suse"
 | J05AP | Antivirals for treatment of HCV infections |
 | J05AR | Antivirals for treatment of HIV infections, combinations |
 | J05AX | Other antivirals |
+
+: Codes for antivirals. {#tbl-antivirals tbl-colwidths="[10, 90]"}
