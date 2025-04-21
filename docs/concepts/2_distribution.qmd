@@ -28,5 +28,45 @@ Typical physiological valoumes for a 70 kg adult:
 
 ## References
 
+$$
+\V=\V_{\mathrm{P}}+\V_{\mathrm{T}} \cdot \mathrm{~K}_{\mathrm{P}}
+$$
+
+$$
+V = V_P + V_T \cdot \frac{f \hat{u}}{f u_T}
+$$
+
+$$
+\Vd =
+  \A_{\text{body}} / \Cpl
+$$
+
+$$
+\Vdss = \A_\text{body, ss} / \Cplss
+$$
+
+$$
+\Conc_\text{total} = \Conc_\text{unbound} + \Conc_\text{bound}
+$$
+
+$$
+\fu = \Conc_\text{unbound} / \Conc_\text{total}
+$$
+
+$$
+\fb = \Conc_\text{bound} / \Conc_\text{total}
+$$
+
+$$
+\mathrm{k}_{\mathrm{p}}=\mathrm{C}_{\mathrm{T}} / \mathrm{C}_{\V}
+$$
+
+6. $\quad \mathrm{V}=\operatorname{Dose}_{\mathrm{iv}} / \mathrm{C}_{(0)}$
+(1-compartment)
+7. $\mathrm{V}_{\mathrm{ss}}=\mathrm{V}_{\mathrm{P}}+\mathrm{V}_{\mathrm{T}} \cdot f \mathrm{fu} / \mathrm{fu}_{\mathrm{T}}$
+8. $\quad \mathrm{V}_{\text {app, } \mathrm{T}}=\mathrm{k}_{\mathrm{p}} \cdot \mathrm{V}_{\mathrm{T}}$
+9. $\mathrm{V}_{\mathrm{ss}}=\mathrm{V}_{\mathrm{P}}+\Sigma \mathrm{V}_{\mathrm{app}, \mathrm{T}}$
+(variation of eq. 7 \& 8)
+
 ::: {#refs}
 :::
