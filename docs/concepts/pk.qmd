@@ -1,0 +1,434 @@
+---
+title: "Pharmacokinetics"
+---
+
+> "What the body does to the drug"
+
+| Symbol | Description |
+| :----: | :---------- |
+| $\D$ | Dose |
+| $\ii$ | Dosing interval (interdose interval) |
+| $\CL$ | Clearance |
+| $\Vd$ | Volume of distribution |
+| $\ke$ | Elimination rate constant |
+| $\ka$ | Absorption rate constant |
+| $\F$ | Bioavailability |
+| $R_0$ | Infusion rate |
+| $T_\text{inf}$ | Duration of infusion |
+| $\Cpl$ | Plasma concentration |
+
+: Pharmacokinetic symbols {#tbl-pk-symbols tbl-colwidths="[20, 80]"}
+
+## Intravenous bolus
+
+### Single dose
+
+Initial concentration @eq-c0-iv.
+
+$$
+\C_0=\frac{\D}{\Vd}
+$$ {#eq-c0-iv}
+
+Plasma concentration @eq-c-single-iv-dose-1cmt.
+
+$$
+\C(t) = \C_0 \times e^{-\ke \times t}
+$$ {#eq-c-single-iv-dose-1cmt}
+
+### Multiple doses
+
+$$
+\C_n(t) =
+  \frac{\D}{\Vd}
+  \times
+  \frac{
+    \left(1 - e^{-n \times \ke \times \ii}\right)
+  }{
+    \left(1 - e^{-\ke \times \ii}\right)
+  }
+  \times
+  e^{-\ke \times t}
+$$
+
+at peak: $t = 0$; at steady state $\mathrm{n} \rightarrow \infty$; at trough: $t = \ii$
+
+$$
+\C_\text{max, ss} =
+  \frac{\D}{\V}
+  \times
+  \frac{1}{\left(1 - e^{-\ke \ii} \right)}
+$$ {#eq-cmaxss-multiple-iv-dose-1cmt}
+
+$$
+\C_\text{min, ss} = \C_\text{max, ss} \times e^{-\ke \times \ii}
+$$ {#eq-cminss-multiple-iv-dose-1cmt}
+
+Plasma concentration @eq-c-multiple-iv-dose-1cmt.
+
+$$
+\C(t) =
+  \frac{
+    \C_0 \times e^{-\ke \times t}
+  }{
+      1 - e^{-\ke \times \ii}
+  }
+$$ {#eq-c-multiple-iv-dose-1cmt}
+
+Peak @eq-cmax-multiple-iv-dose-1cmt.
+
+$$
+\Cmax =
+  \frac{
+    \C_0
+  }{
+    1 - e^{-\ke \times \ii}
+  }
+$$ {#eq-cmax-multiple-iv-dose-1cmt}
+
+Trough @eq-cmin-multiple-iv-dose-1cmt.
+
+$$
+\Cmin =
+  \frac{
+    \C_0 \times e^{-\ke \times \ii}
+  }{
+    1 - e^{-\ke \times \ii}
+  }
+$$ {#eq-cmin-multiple-iv-dose-1cmt}
+
+Average concentration (steady state) @eq-cavgss-multiple-iv-dose-1cmt.
+
+$$
+\bar{\C}_\text{pl, ss} = \frac{\D}{\CL \times \ii}
+$$ {#eq-cavgss-multiple-iv-dose-1cmt}
+
+## Oral administration
+
+### Single dose
+
+Plasma concentration @eq-c-single-po-dose-1cmt.
+
+$$
+\C =
+  \frac{
+    \F \times \D \times \ka
+  }{
+    \Vd \left(\ka - \ke \right)
+  }
+  \times
+  \left(
+    e^{-\ke \times t} - e^{-\ka \times t}
+  \right)
+$$ {#eq-c-single-po-dose-1cmt}
+
+Time of maximum concentration @eq-tmax-single-po-dose-1cmt.
+
+$$
+t_\text{max} =
+  \frac{
+    \ln \left(\ka / \ke \right)
+  }{
+    \ka - \ke
+  }
+$$ {#eq-tmax-single-po-dose-1cmt}
+
+### Multiple doses
+
+Plasma concentration @eq-c-multiple-po-dose-1cmt.
+
+$$
+\C =
+\frac{
+  \F \times \D \times \ka
+}{
+  \Vd (\ka - \ke)
+}
+\times
+\left(
+  \frac{
+    e^{-\ke \times t}
+  }{
+    1 - e^{-\ke \times \ii}
+  }
+  -
+  \frac{
+    e^{-\ka \times t}
+  }{
+    1 - e^{-\ka \times \ii}
+  }
+\right)
+$$ {#eq-c-multiple-po-dose-1cmt}
+
+Time of maximum concentration @eq-tmax-multiple-po-dose-1cmt.
+
+$$
+t_\text{max} =
+  \frac{
+    \ln
+      \left(
+        \frac{
+          \ka \times \left(1 - e^{-\ke \times \ii} \right)
+        }{
+          \ke \times \left(1 - e^{-\ka \times \ii} \right)
+        }
+      \right)
+  }{
+    \left(k_{\mathrm{a}}-k_{\mathrm{e}}\right)
+  }
+$$ {#eq-tmax-multiple-po-dose-1cmt}
+
+Average concentration (steady state) @eq-cavgss-multiple-po-dose-1cmt.
+
+$$
+\bar{\C} =
+  \frac{
+    \F \times \D
+  }{
+    \CL \times \ii
+  }
+$$ {#eq-cavgss-multiple-po-dose-1cmt}
+
+### Clearance
+
+$$
+\CL = \frac{\D \times \F}{\AUC}
+$$
+
+$$
+\CL = \ke \times \Vd
+$$
+
+## Constant rate infusion
+
+### Plasma concentration (during infusion)
+
+$$
+\mathrm{C}=\frac{R_0}{\CL} \times\left(1-\mathrm{e}^{-k_{\mathrm{e}} \times t}\right)
+$$
+
+### Plasma concentration (steady state)
+
+$$
+\C = \frac{R_0}{\CL}
+$$
+
+### Calculated clearance (Chiou equation)
+
+$$
+\CL =
+  \frac{2 \times R_0}{\left(C_1 + C_2 \right)} +
+  \frac{
+    2 \times \Vd \times \left(C_1 - C_2 \right)
+  }{
+    \left(C_1 + C_2\right) \times \left(t_2 - t_1\right)
+  }
+$$
+
+## Short-term infusion
+
+### Single infusion
+
+Since $\ii = t$ for $\Cmax$
+
+$$
+\Cmax = \frac{D}{\V \ke T} \times \left(1 -e ^{-\ke T} \right)
+$$
+
+$$
+\Cmin = \Cmax \times e^{-\ke \times (\ii - T)}
+$$
+
+Peak
+
+$$
+\C_{\max (1)} =
+  \frac{\D}{\CL \times T}
+  \times
+  \left(1 - e^{-\ke \times T} \right)
+$$
+
+Trough
+
+$$
+\mathrm{C}_{\min (1)}=\mathrm{C}_{\max (1)} \times \mathrm{e}^{-\mathrm{k}_{\mathrm{e}}(\ii-\mathrm{T})}
+$$
+
+### Multiple infusions
+
+Peak
+
+$$
+\Cmax =
+  \frac{\mathrm{D}}{\CL \times \mathrm{~T}} \times \frac{\left(1-\mathrm{e}^{-\mathrm{k}_{\mathrm{e}} \times \mathrm{~T}}\right)}{\left(1-\mathrm{e}^{-\mathrm{k}_{\mathrm{e}} \times \ii}\right)}
+$$
+
+Trough
+
+$$
+\Cmin =
+  \mathrm{C}_{\text {max }} \times \mathrm{e}^{-\mathbf{k}_{\mathrm{c}} \times(\ii-\mathrm{T})}
+$$
+
+
+#### For multiple short-term I.V. infusion at steady state
+
+$$
+C_{\max }=\frac{D}{V \ke T} \times \frac{\left(1-e^{-\ke T}\right)}{\left(1-e^{-\ke \ii}\right)}
+$$
+
+$$
+C_{\min }=C_{\max } \times e^{-\ke(\ii-T)}
+$$
+
+### Calculated elimination rate constant
+
+$$
+\mathrm{k}_{\mathrm{e}}=\frac{\ln \left(\frac{\mathrm{C_max}^*}{\mathrm{C_min}^*}\right)}{\Delta \mathrm{t}}
+$$
+
+with C^\*^~max~ = measured peak and C^\*^min = measured trough, measured over the time interval $\Delta$t
+
+### Calculated peak
+
+$$
+\mathrm{C_max}=\frac{\mathrm{C_max}^*}{\mathrm{e}^{-\mathrm{k}_{\mathrm{e}} \mathrm{t}^*}}
+$$
+
+with C^\*^~max~ = measured peak, measured at time t^\*^ after the end of the infusion
+
+### Calculated trough
+
+$$
+\mathrm{C_min}^*=\mathrm{C_min}^* \times \mathrm{e}^{-\mathrm{k}_{\mathrm{e}} \times t^*}
+$$
+
+with C^\*^min = measured trough, measured at time t^\*^ before the start of the next infusion
+
+### Calculated volume of distribution
+
+$$
+\Vd =
+  \frac{\D}{\ke \times T}
+  \times
+  \frac{
+    \left(1 - e^{-\ke \times T}\right)
+  }{
+    \left[C_{\max }-\left(C_{\min } \times e^{-\ke \times T}\right)\right]
+  }
+$$
+
+### Calculated recommended dosing interval
+
+$$
+\ii =
+  \frac{
+    \ln \left(\frac{\mathrm{C}_{\text {max(desired })}}{\mathrm{C}_{\min (\text { desired })}}\right)}{\mathrm{k}_{\mathrm{e}}}+\mathrm{T}
+$$
+
+### Calculated recommended dose
+
+$$
+\D =
+  \C_{\max (\text{desired})} \times \ke \times \V \times T \times
+  \frac{
+    \left(1 - e^{-\ke \ii}\right)
+  }{
+    \left(1 - e^{-\ke \times T} \right)
+  }
+$$
+
+## Two-Compartment-Body Model
+
+$$
+\C = \mathrm{a} \times e^{-\alpha t} + \mathrm{b} \times e^{-\rho t}
+$$
+
+$$
+\AUC_{\infty} = \mathrm{a} / \alpha+\mathrm{b} / \beta
+$$
+
+$$
+\Vd_{\text {area }} > \Vd_{\mathrm{ss}} > \V_c
+$$
+
+Vd_area = V beta?
+
+## Ideal Body Weight
+
+### Male
+
+IBW = 50 kg + 2.3 kg for each inch over 5ft in height
+
+### Female
+
+IBW = 45.5 kg + 2.3 kg for each inch over 5ft in height
+
+### Obese
+
+ABW = IBW + 0.4*(TBW-IBW)
+
+## For One Compartment Body Model
+
+### If the dosing involves a I.V. infusion (more equations)
+
+$$
+\begin{aligned}
+& C_t =
+  \frac{\D}{\V \times \ke \times T}
+  \times
+  \left(e^{\ke T} - 1 \right)
+  \times
+  e^{-\ke t}
+  \quad
+  \text{(most general eq.)}
+&& \text{during infusion t = T so,} \\
+\\
+& C_t =
+  \frac{\D}{\V \ke T}
+  \times
+  \left(1 - e^{-\ke t} \right)
+  \quad
+  \text{(during infusion)}
+&& \text{at steady state } t \rightarrow \infty, e^{-\ke t}, \mathrm{t} \rightarrow 0 \text{ so,} \\
+\\
+& \Cplss =
+  \frac{\D}{\V \ke T} =
+    \frac{k_0}{\V \ke} =
+      \frac{k_0}{\CL}
+  \text{(steady state)}
+  \quad
+&& \text{ remembering }
+  k_0 =
+  \frac{\D}{T}
+  \text{ and } \CL = \V \times \ke
+\end{aligned}
+$$
+
+# Dosage regimens
+
+Dose rate = Dose / tau
+
+$\mathrm{C}_{\mathrm{ss}}=\mathrm{R}_0 / \CL$
+( $\mathrm{R}_0=$ rate of infusion $)$
+$\mathrm{C}_{\mathrm{inf}}=\mathrm{C}_{\mathrm{ss}} \times\left(1-\mathrm{e}^{-\mathrm{kt}}\right)$
+(1-compartment)
+$\quad \mathrm{C}_{\mathrm{ss}, \mathrm{av}}=\mathrm{F} \times$ Dose $/(\CL \times \ii)$
+(variation of eq. 24)
+$\mathrm{R}_{\mathrm{ac}}($ accumulation index $)=1 /\left(1-\mathrm{e}^{-\mathrm{k} \ii}\right)$
+(1-compartment)
+$\mathrm{C}_{\mathrm{ss}, \max }=\mathrm{F} \times$ Dose $\times \mathrm{R}_{\mathrm{ac}} / \mathrm{V}$
+(1-compartment)
+$\quad C_{s s, \min }=C_{s s, \text { max }} \times e^{-k \times \ii}$
+(1-compartment, combination of eq. 22 and 28)
+Maximum $\ii=\ln \left(\mathrm{C}_{\mathrm{ss}, \max } / \mathrm{C}_{\mathrm{ss}, \min }\right) / \mathrm{k}$
+(1-compartment, variation of eq. 23)
+Corresponding dose $\times \mathrm{F}=\mathrm{V} \times\left(\mathrm{C}_{\text {max,ss }}-\mathrm{C}_{\text {min,ss }}\right)$ (1-compartment)
+
+# Exposure (AUC)
+
+1. $\AUC_{\mathrm{iv}}=\mathrm{C}_{(0)} / \mathrm{k}$
+(1-compartment)
+2. $\AUC_{\mathrm{iv}}=\mathrm{C}_1 / \lambda_1+\mathrm{C}_2 / \lambda_2$
+(2-compartment)
+3. $\AUC=\Sigma($ trapezoids $)+\mathrm{C}_{\text {last }} / \lambda_{\text {last }}$
+(Always applicable)
