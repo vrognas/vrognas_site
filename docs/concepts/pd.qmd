@@ -1,0 +1,33 @@
+---
+title: "Pharmacodynamics"
+---
+
+> "What the drug does to the body"
+
+| Symbol | Description |
+| :----: | :---------- |
+| E | Effect |
+| I | Inhibition |
+| EC~50~ | Concentration for half of maximum effect |
+| IC~50~ | Concentration for half of maximum inhibition |
+| E~max~ | **Theoretical** max effect |
+| I~max~ | **Theoretical** max inhibition |
+
+: Pharmacodynamic symbols {#tbl-pd-symbols tbl-colwidths="[20, 80]"}
+
+## Drug effect models
+
+$$
+\mathrm{E} =
+  \frac{
+    \mathrm{E_max} \times \C^\gamma
+  }{
+    \C^\gamma + \mathrm{EC}^\gamma_{50}
+  }
+$$
+
+$$
+\mathrm{E} = \mathrm{E_0} - \mathrm{slope} \times t
+$$
+
+(1-compartment)
