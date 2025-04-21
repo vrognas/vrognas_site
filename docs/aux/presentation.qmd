@@ -1,5 +1,5 @@
 ---
-title: "Presentation Techniques"
+title: "Presentation Technique"
 ---
 
 :::{.callout-caution title="Under construction"}
