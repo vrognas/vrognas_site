@@ -87,3 +87,9 @@ If you feel that you are floundering (as every student sometimes does), ask your
 6. Implement Maker-Manager Schedules. Managers thrive on 30-minute blocks for decisions. Makers need 3--4 hour blocks for deep work-schedule afternoon meetings for makers to protect creative flow.
 7. Use the 4-Bullet Update. Update with 4 points: what was done, requested asks, current blockers, and future improvements. Save hours in recurring meetings.
 8. Finish meetings with Action Memos detailing decisions, owners, and deadlines.
+
+## Questions NGN (eNGiNe)
+
+* Need-to-know: Answer will affect conclusion (Major objection)
+* Good-to-know: Answer could affect conclusion (Other concern)
+* Nice-to-know: Answer won't affect conclusion (avoid asking this question)
