@@ -5,11 +5,11 @@ title: "Presentation Techniques"
 :::{.callout-caution title="Under construction"}
 :::
 
-# First: Plan
+## First: Plan
 
 The absolute first thing you need to understand about your talk, is **who** you will be talking to.
 
-## Pitch (to investors):
+### Pitch (to investors):
 
 1. Strong opening (a "Punch in the nose": PIN)
 2. Need
@@ -19,16 +19,17 @@ The absolute first thing you need to understand about your talk, is **who** you 
 6. Financials (amount needed, use and returning how much by when)
 7. Close with the ”The Ask” (Get to further discussion)
 
-## Presenting PMx science
+### Presenting PMx science
 
-Ppt:
+Slides:
+
 1. Intro
 2. Conclusion (pause for questions, to guide the rest of the presentation) **"tell ’em what you’re gonna tell ’em"**
 3. Results (that support conclusion) **"tell ’em"**
 4. Conclusion **"tell ’em what you told ’em"**
 5. Many backup slides on details e.g., methods, demographic tables, graphics on study design, details on exclusion, PK sampling, etc.
 
-# Second: Design
+## Second: Design
 
 * Minimize text
 * Max 5 bullet points per slide (if you use slides)
@@ -40,15 +41,15 @@ Ppt:
 * Stick to a color theme.
   * Make the colors mean something across all slides.
 
-# Third: Practice
+## Third: Practice
 
-## Practice your talk
+### Practice your talk
 
 * Go through your talk a couple of times.
   * Read it out loud, as you would in a real situation.
 * If you want, record yourself and watch the recording.
 
-## Go to the venue where you will talk.
+### Go to the venue where you will talk.
 
 * Where will you be?
 * Will your slides be seen from the backmost row?
@@ -58,21 +59,20 @@ Ppt:
 
 * If presenting "offline", what projector will you be using, and how will the slides look like on that specific projector, in that specific room, at that specific time of the day (ie lighting conditions).
 
+## Fourth: Deliver
 
-# Fourth: Deliver
-
-## Right before
+### Right before
 
 * Silence your phone.
 * Go to the bathroom.
 
-## During
+### During
 
 * Talk to one person at a time, not the entire crowd.
   * Look him/her in the eyes, explain your point, then switch person.
-* Trust your self. The audience wants you too succeed, and they are interested in what you have to say.
+* Trust yourself. The audience wants you too succeed, and they are interested in what you have to say.
 
-# Fifth: Aftermath
+## Fifth: Aftermath
 
 * Seek feedback.
 * Reflect on feedback.
