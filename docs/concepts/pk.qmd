@@ -66,12 +66,7 @@ $$ {#eq-cminss-multiple-iv-dose-1cmt}
 Plasma concentration @eq-c-multiple-iv-dose-1cmt.
 
 $$
-\C(t) =
-  \frac{
-    \C_0 \times e^{-\ke \times t}
-  }{
-      1 - e^{-\ke \times \ii}
-  }
+\C(t) = \Cmax \times e^{-\ke \times t}
 $$ {#eq-c-multiple-iv-dose-1cmt}
 
 Peak @eq-cmax-multiple-iv-dose-1cmt.
