@@ -58,5 +58,130 @@ In general, if the serum creatinine rises at 2--3 mg/dl per day then the GFR is
 
 ## References
 
+
+# Elimination
+
+$$
+\quad \CL=$ Rate of elimination $/ \mathrm{C}
+$$
+
+$$
+\mathrm{E}=\CL_{\text {blood }} / \mathrm{Q}
+$$
+
+$$
+f_e+f_m=1
+$$
+
+$$
+\quad \CL_{\text {plasma }} \times \mathrm{C}_{\text {plasma }}=\CL_{\text {blood }} \times \mathrm{C}_{\text {blood }}
+$$
+
+10. $\CL=$ Dose $_{\mathrm{iv}} / \mathrm{AUC}_{\mathrm{iv}, 0-\infty}$
+(Intravenous case)
+11. $\CL / \mathrm{F}=$ Dose $_{\text {extravascular }} / \mathrm{AUC}_{\text {extravascular }, 0-\infty}$
+(Extravascular case, F unknown)
+12. $\CL=\CL_{\mathrm{H}}+\CL_{\mathrm{R}}+\CL_{\text {other }}$
+13. $\CL_{\mathrm{H}}=\CL_{\mathrm{H}, \text { met }}+\CL_{\text {biliary }}$
+14. $\quad \CL_{\mathrm{H}, \text { blood }}=\frac{\mathrm{Q}_{\mathrm{H}} \times \mathrm{f}_{\mathrm{u} \text {,blood }} \times \CL_{\text {int }}}{\mathrm{Q}_{\mathrm{H}}+\mathrm{f}_{\mathrm{u}, \text { blood }} \times \CL_{\text {int }}}$
+15. $\quad \CL_{\mathrm{int}}=\sum_1^{\mathrm{i}} \frac{\mathrm{V}_{\mathrm{m}, \mathrm{i}}}{\mathrm{K}_{\mathrm{m}, \mathrm{i}}+\mathrm{C}_{\mathrm{u}}}$
+16. $\quad \CL_{\mathrm{R}}=\left[\CL_{\text {filtr }}+\CL_{\text {secr }}\right] \cdot\left(1-\mathrm{f}_{\text {reabs }}\right)$
+17. $\CL_{\text {filtr }}=\mathrm{f}_{\mathrm{u}} \cdot \mathrm{GFR}$
+18. Rate of excretion $=d A e / d t=($ Rate of filtration + Rate of secretion $) \cdot\left(1-f_{\text {reabs }}\right)=C L_R \cdot C$
+19. $f_e=A_e /$ Dose $_{i v}=$ CL $_R / C L$
+
+## Elimination rate (1-compartment case)
+
+$$
+t_\textonehalf = \frac{\ln 2}{k_e}
+$$
+
+$$
+k_e = \CL / \V
+$$
+
+$$
+\Conc = \Conc_0 \cdot \mathrm{e}^{-\mathrm{k} \cdot \mathrm{t}}
+$$
+
+$$
+\mathrm{t} = \ln \left(\Conc_0 / \Conc \right) / \mathrm{k}
+$$
+
+$$
+\CL = \frac{\text { Dose }}{\AUC}
+$$
+
+$$
+\CL = k_e \cdot V_d
+$$
+
+## Metabolic and Renal Clearance
+
+$$
+\mathrm{E}_{\mathrm{H}}=\frac{C l_{\mathrm{int}} \cdot f u_b}{Q_H+C l_{\mathrm{int}} \cdot f u_b}
+$$
+
+$$
+\CL_{\mathrm{H}}=E_H \cdot Q_H=\frac{Q_H \cdot C l_{\mathrm{int}} \cdot f u_b}{Q_H+C l_{\mathrm{int}} \cdot f u_b}
+$$
+
+$$
+\mathrm{F}_{\mathrm{H}}=\frac{Q_H}{Q_H+C l_{\mathrm{int}} \cdot f u_b}
+$$
+
+$$
+\mathrm{CL_R} = \mathrm{RBF} \cdot \mathrm{E}=\mathrm{GFR} \cdot \frac{\mathrm{C}_{\text {in }}-\mathrm{C}_{\text {out }}}{\mathrm{C}_{\mathrm{in}}}
+$$
+
+$$
+\CL_{\text {ren }}=\frac{\text { rate of excretion }}{\text { plasma concentration }}
+$$
+
+$$
+\CL_{\text {ren }}=f u \cdot G F R+\left[\frac{\text { Rate of secretion }- \text { Rate of reabsorption }}{\text { Plasma concentration }}\right]
+$$
+
+$$
+\mathrm{CL_R} = \frac{\text { Urine flow } \cdot \text { urine concentration }}{\text { Plasma concentration }}
+$$
+
+## k_e for aminoglycosides
+
+$$
+\mathrm{K}_{\mathrm{e}}=0.00293(\mathrm{CrCL})+0.014
+$$
+
+### Elimination rate constant
+
+$$
+k_{\mathrm{e}} =
+  \frac{\CL}{\Vd} =
+    \frac{
+      \ln
+      \left(
+        \frac{\Conc_1}{\Conc_2}
+      \right)
+    }{
+      \left(
+        t_2 - t_1
+      \right)
+    } =
+      \frac{
+        \ln \Conc_1 - \ln \Conc_2
+      }{
+        \left(
+          t_2 - t_1
+        \right)
+      }
+$$
+
+### Half-life
+
+$$
+t_{\textonehalf} =
+  \frac{0.693 \times \mathrm{V_d}}{\CL}=\frac{\ln(2)}{k_{\mathrm{e}}}=\frac{0.693}{k_{\mathrm{e}}}
+$$
+
 ::: {#refs}
 :::
