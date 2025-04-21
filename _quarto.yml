@@ -952,19 +952,24 @@ website:
         - section: "Concepts of the Craft"
           href: docs/concepts/index.qmd
           contents:
-          - text: "Absorption"
-            href: docs/concepts/1_absorption.qmd
-          - text: "Distribution"
-            href: docs/concepts/2_distribution.qmd
-          - section: "Elimination"
-            href: docs/concepts/3_elimination.qmd
+          - section: "Pharmacokinetics"
+            href: docs/concepts/pk.qmd
             contents:
-            - text: "Hepatic impairment (HI)"
-              href: docs/concepts/hepatic-impairment-studies.qmd
-            - text: "Renal impairment (RI)"
-              href: docs/concepts/renal-impairment-studies.qmd
-            - text: "Augmented renal clearance (ARC)"
-              href: docs/concepts/augmented-renal-clearance.qmd
+            - text: "Absorption"
+              href: docs/concepts/1_absorption.qmd
+            - text: "Distribution"
+              href: docs/concepts/2_distribution.qmd
+            - section: "Elimination"
+              href: docs/concepts/3_elimination.qmd
+              contents:
+              - text: "Hepatic impairment (HI)"
+                href: docs/concepts/hepatic-impairment-studies.qmd
+              - text: "Renal impairment (RI)"
+                href: docs/concepts/renal-impairment-studies.qmd
+              - text: "Augmented renal clearance (ARC)"
+                href: docs/concepts/augmented-renal-clearance.qmd
+          - text: "Pharmacodynamics"
+            href: docs/concepts/pd.qmd
           - text: "Pediatrics"
             href: docs/concepts/pediatrics.qmd
           - text: "Clinical studies"
@@ -1053,7 +1058,9 @@ website:
         href: https://scholar.google.com/citations?user=RBJi1XQAAAAJ
 format:
   html:
-    include-in-header: seo.html
+    include-in-header:
+      - seo.html
+      - pk-operators.html
     theme:
       light: [cosmo, theme-light.scss]
       dark: [cosmo, theme-dark.scss]
