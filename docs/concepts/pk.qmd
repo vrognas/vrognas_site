@@ -88,12 +88,7 @@ $$ {#eq-cmax-multiple-iv-dose-1cmt}
 Trough @eq-cmin-multiple-iv-dose-1cmt.
 
 $$
-\Cmin =
-  \frac{
-    \C_0 \times e^{-\ke \times \ii}
-  }{
-    1 - e^{-\ke \times \ii}
-  }
+\Cmin = \Cmax \times e^{-\ke \times \ii}
 $$ {#eq-cmin-multiple-iv-dose-1cmt}
 
 Average concentration (steady state) @eq-cavgss-multiple-iv-dose-1cmt.
