@@ -52,7 +52,7 @@ Infectious diseases can be contagious during all five of the periods of disease.
 |   4   | Decline            | Pathogen particle-count declines. Signs and symptoms improve. Immune system possibly weakened---susceptibility to secondary infection. |
 |   5   | Convalescence      | Patient returns to normal function. Signs and symptoms resolve. Some permanent damage might have occurred. |
 
-: Periods of disease. {tbl-colwidths="[10,20,70]"}
+: Periods of disease. {#tbl-periods-of-disease tbl-colwidths="[10,20,70]"}
 
 Stages might overlap.
 The onset of symptoms marks the transition from subclinical to clinical disease.
