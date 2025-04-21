@@ -57,14 +57,23 @@ Slides:
 * Will you need some other equipment, like an extension cord, some adapter?
 * If you will be recorded, where can you move so you don't go out of picture?
 
-* If presenting "offline", what projector will you be using, and how will the slides look like on that specific projector, in that specific room, at that specific time of the day (ie lighting conditions).
+#### If presenting "offline"
+
+* What projector will you be using
+* How will the slides look like on that specific projector
+  * In that specific room
+  * At that specific time of the day (i.e., lighting conditions)
 
 ## Fourth: Deliver
 
 ### Right before
 
-* Silence your phone.
-* Go to the bathroom.
+* Put up the title slide on the screen for all to see
+* Go to the bathroom
+* Have (sparkling) water close by
+* Silence your phone
+* State that clarifying questions are allowed
+  * Save discussion points for after the presentation
 
 ### During
 
