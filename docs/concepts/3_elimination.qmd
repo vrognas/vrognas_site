@@ -101,12 +101,12 @@ $$
 $$
 
 $$
-\C = \C_0 \times \mathrm{e}^{-\mathrm{k} \times \mathrm{t}}
+\C = \C_0 \times e^{-\ke \times t}
 $$
 
 $$
-\mathrm{t} = \ln \left(\Conc_0 / \Conc \right) / \mathrm{k}
-$$
+t = \ln \left(\C_0 / \ \right) / \ke
+$$ {#eq-t-1cmt}
 
 $$
 \CL = \frac{\text { Dose }}{\AUC}
