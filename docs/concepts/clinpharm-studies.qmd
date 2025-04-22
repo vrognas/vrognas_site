@@ -21,16 +21,17 @@ Other ICH guidelines relevant to the conduct of clinical trials are:
 * E9 (statistical principles)
 * E11 (pediatric populations)
 
-| Abbreviation | Name | Description |
-| :----------: | :--- | :---------- |
-| ADR | Adverse drug reaction |  |
-| AE | Adverse event |  |
-| CRF | Case report form |  |
-| CRO | Contract research organization |  |
-| IDCM | Independent Data-Monitoring Committee |  |
-| IEC | Independent Ethics Committee |  |
-| IRB | Institutional Review Board |  |
-| SAE | Serious Adverse Event |  |
+| Abbreviation | Name |
+| :----------: | :--- |
+| ADR | Adverse drug reaction |
+| AE | Adverse event |
+| CRF | Case report form |
+| CRO | Contract research organization |
+| IB | Investigator's Brochure |
+| IDCM | Independent Data-Monitoring Committee |
+| IEC | Independent Ethics Committee |
+| IRB | Institutional Review Board |
+| SAE | Serious Adverse Event |
 
 : Clinical study abbreviations {#tbl-abbr tbl-colwidths="[20, 40, 40]"}
 
@@ -42,6 +43,18 @@ Other ICH guidelines relevant to the conduct of clinical trials are:
 | 2.13 Quality systems | Risk‑based checks on data pipelines, LIMS, PK analysis scripts. |
 
 : Principles {#tbl-principles tbl-colwidths="[30, 70]"}
+
+Take‑home checklist for pharmacometricians
+
+| Task | GCP Hook |
+| :--- | :------- |
+| Build a sampling‑time QC script | §5.0 Risk control; §4.9 Source data integrity |
+| Store raw, cleaned, and analysis datasets with hashes | §2.10 Data verifiability; §5.5.3 Audit‑trail |
+| Validate NONMEM/R scripts (unit tests) | §5.5.3 Computerised‑system validation |
+| Document model decisions in a contemporaneous log | §4.9 ALCOA; §5.18 Monitoring evidence |
+| Archive assays, datasets, reports ≥ 2 years post‑marketing | §4.9.5 & §5.5.11 Record retention |
+
+: Checklist {#tbl-checklist tbl-colwidths="[50, 50]"}
 
 ## General clinical study design
 
