@@ -6,13 +6,46 @@ title: "Clinical pharmacology studies"
 * How can Modeling help in each phase?
 :::
 
+## Good Clinical Practice (GCP)
+
+GCP is an international ethical and scientific quality standard for designing, conducting, recording, and reporting trials involving human subjects' participation.
+Compliance with this standard provides public assurance that trial subjects' rights, safety, and well-being are protected, consistent with the principles in the **Declaration of Helsinki**, and that the clinical trial data are credible.
+
+ICH E6 provides a unified global standard for ethics, data quality, and subject safety.
+Other ICH guidelines relevant to the conduct of clinical trials are:
+
+* E2A (clinical safety data management)
+* E3 (clinical study reporting)
+* E7 (geriatric populations)
+* E8 (general considerations for clinical trials)
+* E9 (statistical principles)
+* E11 (pediatric populations)
+
+| Abbreviation | Name | Description |
+| :----------: | :--- | :---------- |
+| ADR | Adverse drug reaction |  |
+| AE | Adverse event |  |
+| CRF | Case report form |  |
+| CRO | Contract research organization |  |
+| IDCM | Independent Data-Monitoring Committee |  |
+| IEC | Independent Ethics Committee |  |
+| IRB | Institutional Review Board |  |
+| SAE | Serious Adverse Event |  |
+
+| Principle from ICH E6 | Relevance to pharmacometrics |
+| :-------- | :-------------- |
+| 2.4 Adequate prior data | Dose‑setting PK modeling must rest on solid non‑clinical & early clinical results. |
+| 2.5 Scientific soundness | Protocol must pre‑define sampling times, bioanalytical methods, population‑PK or NCA strategy. |
+| 2.10 Accurate recording/storage | Raw concentration data ⇒ audit‑trails, ALCOA (Attributable‑Legible‑Contemporaneous‑Original‑Accurate). |
+| 2.13 Quality systems | Risk‑based checks on data pipelines, LIMS, PK analysis scripts. |
+
 ## General clinical study design
 
 * **P**opulation
   * Inclusion/Exclusion criteria
   * Number of subjects (sample size)
 * **I**ntervention
-  * What is given? (Drug/Food, Formulation, Dose) when (regimen), and how (route)?
+  * What is given (Drug/Food, Formulation, Dose), when (regimen), and how (route)?
   * Randomization and balance between arms
   * Blinding
   * Adaptive, cross-over/parallel-group (Study type)
@@ -23,10 +56,10 @@ title: "Clinical pharmacology studies"
   * What is being measured (Covariates, PK, Clinical/pharmacological outcomes), when (Sampling/visit schedule, baseline and/or time-varying), and how?
 * **T**ime
   * For how long does the study continue?
-  * Run-in, active treatment, washout, follow-up periods
+  * Run-in, active treatment, washout, and follow-up periods
 
 :::{.callout-tip}
-If cross-over design with washout-period, always check that the predose concentration of the second dose is BLQ.
+If a cross-over design with a washout period is used, always check that the predose concentration of the second dose is BLQ.
 :::
 
 ## Phases of drug development
@@ -122,7 +155,7 @@ SAD and MAD studies can be combined under one study, and subjects can participat
 
   * Renal impairment (RI)
     * Subjects are typically separated into parallel cohorts with varying degrees of impairment (normal, mild, moderate, severe).
-    * Impairment is often determined by estimated glomerular filtration rate (eGFR), preferably not using Cockgroft-Gault.
+    * Impairment is often determined by estimated glomerular filtration rate (eGFR), preferably not using Cockcroft-Gault.
     * For safety reasons, the dose given to the moderately/severely impaired groups may be lower than that given to the other groups.
     * PK/PD and safety can be of interest. 
   * Hepatic impairment (HI)
@@ -141,12 +174,12 @@ Phase II/III studies are less controlled than Phase 1, resulting in unrecorded d
 
 ##### 📈 Dose-response
 
-  * Typically randomized parallel group studies
+  * Typically, randomized parallel group studies
   * Three or more dosage levels, one of which may be zero (placebo).
   * Including one or more doses of an existing medicine as a control may also be helpful.
-  * As a rule, PoC is tested at the maximum tolerated doses (MTD) or maximal administered dose if MTD was not defined.
+  * As a rule, PoC is tested at the maximum tolerated doses (MTD) or the maximal administered dose if MTD was not defined.
   * Identify a reasonable starting (minimum effective) dose, ideally with specific adjustments.
-  * Identify response-guided stepwise dose adjustment (titration), and the intervals at which they should be taken.
+  * Identify response-guided stepwise dose adjustment (titration) and the intervals at which they should be taken.
   * Identify a dose, or a response (desirable or undesirable), beyond which titration should not ordinarily be attempted because of lack of further benefit or an unacceptable increase in undesirable effect.
   * Identify optimal dose
 
@@ -166,3 +199,8 @@ Phase II/III studies are less controlled than Phase 1, resulting in unrecorded d
 #### Phase 4: Post-approval
 
 Post-approval studies can, e.g., be studies in new indications.
+
+## References
+
+* https://www.wma.net/policies-post/wma-declaration-of-helsinki/
+* https://www.ich.org/page/efficacy-guidelines
