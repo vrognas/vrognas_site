@@ -5,10 +5,10 @@ title: "The Distribution Concept"
 :::{.callout-caution title="Under construction"}
 :::
 
-The pharmacokinetic parameter that quantifies drug distribution, is called *volume of distribution* (V~d~).
+The pharmacokinetic parameter that quantifies drug distribution, is called *volume of distribution* ($\Vd$).
 
-In general, a lipophilic drug will have a large V~d~, and a hydrophilic drug will have a small V~d~.
-Drugs can also be substrates to various transporters that impact V~d~.
+In general, a lipophilic drug will have a large $\Vd$, and a hydrophilic drug will have a small $\Vd$.
+Drugs can also be substrates to various transporters that impact $\Vd$.
 
 ![
   Reversible processes affecting the total amount of drug on each side of a biological membrane permeable only to the un-ionized free form of a drug.
@@ -22,23 +22,23 @@ Typical physiological valoumes for a 70 kg adult:
 
 * V~plasma~ ≈ 3 L
 * V~interstitial~ ≈ 12 L
-* V~water,extracellular~ ≈ 16 L
+* V~water,\ extracellular~ ≈ 16 L
 * V~cells~ ≈ 27 L
-* V~water,total~ ≈ 42 L
+* V~water,\ total~ ≈ 42 L
 
-## References
-
-$$
-\V=\V_{\mathrm{P}}+\V_{\mathrm{T}} \cdot \mathrm{~K}_{\mathrm{P}}
-$$
 
 $$
-V = V_P + V_T \cdot \frac{f \hat{u}}{f u_T}
+K_\text{p} =
+  \frac{\fu}{\mathrm{f_{unbound, tissue}}} =
+  \frac{\C_\text{tissue}}{\Cpl} 
 $$
 
 $$
-\Vd =
-  \A_{\text{body}} / \Cpl
+\V = \V_\text{peripheral} + \V_\text{tissue} \times K_\text{p}
+$$
+
+$$
+\Vd = \A_\text{body} / \Cpl
 $$
 
 $$
@@ -46,27 +46,34 @@ $$
 $$
 
 $$
-\Conc_\text{total} = \Conc_\text{unbound} + \Conc_\text{bound}
+\C_\text{total} = \C_\text{unbound} + \C_\text{bound}
 $$
 
 $$
-\fu = \Conc_\text{unbound} / \Conc_\text{total}
+\fu = \C_\text{unbound} / \C_\text{total}
 $$
 
 $$
-\fb = \Conc_\text{bound} / \Conc_\text{total}
+\fb = \C_\text{bound} / \C_\text{total}
 $$
 
 $$
-\mathrm{k}_{\mathrm{p}}=\mathrm{C}_{\mathrm{T}} / \mathrm{C}_{\V}
+\V = \D_\text{iv} / \C_0
 $$
-
-6. $\quad \mathrm{V}=\operatorname{Dose}_{\mathrm{iv}} / \mathrm{C}_{(0)}$
 (1-compartment)
-7. $\mathrm{V}_{\mathrm{ss}}=\mathrm{V}_{\mathrm{P}}+\mathrm{V}_{\mathrm{T}} \cdot f \mathrm{fu} / \mathrm{fu}_{\mathrm{T}}$
-8. $\quad \mathrm{V}_{\text {app, } \mathrm{T}}=\mathrm{k}_{\mathrm{p}} \cdot \mathrm{V}_{\mathrm{T}}$
-9. $\mathrm{V}_{\mathrm{ss}}=\mathrm{V}_{\mathrm{P}}+\Sigma \mathrm{V}_{\mathrm{app}, \mathrm{T}}$
+
+$$
+\V_\text{apparent, tissue} =
+  K_\mathrm{p} \times \V_\text{tissue}
+$$
+
+$$
+\Vdss = \V_\text{peripheral} + \Sigma \V_\text{apparent, tissue}
+$$
 (variation of eq. 7 \& 8)
+
+
+## References
 
 ::: {#refs}
 :::
