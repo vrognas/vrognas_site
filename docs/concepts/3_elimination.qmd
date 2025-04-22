@@ -24,73 +24,33 @@ A better way to illustrate drug elimination, would be through typical PK predict
 In the therapeutic context of the drug, what elimination characteristics would be clinically useful to understand?
 These characteristics can be quantified through deterministic predictions (no variability) or stochastic simulations (with variability).
 
-## Hepatic CL (metabolism)
-
-The liver can convert substances into metabolites.
-This generally makes a more water soluble substance that can be excreted through the kidneys.
-
-## Renal CL (excretion)
-
-Kidney function is often checked using GFR (glomerular filtration rate) estimating equations.
-These equations use endogenous biomarkers, like creatinine and cystatin C, along with age, sex, and weight, to estimate how well the kidneys work.
-
-There are many equations for estimating GFR, some of these are designed for specific populations.
-The estimated GFR from these equations are usually similar.
-However, differences appear at high GFR levels, especially when the values go above 150 mL/min/1.73 m^2^, a condition called augmented renal clearance.
-
-The most recommended equation right now is the 2021 version of the CKD-EPI formula [@inkerNewCreatinineCystatin2021]. This version does not consider race (@eq-ckd-epi-2021).
-
-**CKD-EPI (2021) expressed as a single equation:**
 $$
-\text{eGFR} = 142 \times \text{min}(\frac{\text{Scr}}{K}, 1)^{\alpha} \times \text{max}(\frac{\text{Scr}}{K}, 1)^{-1.200} \times 0.9938^{\text{Age}} \times 1.012 [\text{if female}]
-$$ {#eq-ckd-epi-2021}
-
-| Abbreviations | Units | Description |
-| :------------ | :--- | :--- |
-| eGFR | mL/min/1.73 m^2^ | Estimated glomerular filtration rate |
-| Scr  | mg/dL | Serum creatinine (standardized) |
-| $K$ | | 0.7 (females) or 0.9 (males) |
-| $\alpha$ | | -0.241 (females) or -0.302 (males) |
-| min() | | indicates the minimum of $\frac{\text{Scr}}{K}$ or 1 |
-| max() | | indicates the maximum of $\frac{\text{Scr}}{K}$ or 1 |
-
-In general, if the serum creatinine rises at 2--3 mg/dl per day then the GFR is near zero.
-
-## References
-
-
-# Elimination
-
+\CL= \text{Rate of elimination} / \C
 $$
-\quad \CL=$ Rate of elimination $/ \mathrm{C}
-$$
-
-$$
-\mathrm{E}=\CL_{\text {blood }} / \mathrm{Q}
-$$
-
 $$
 \fe + \fm = 1
 $$
 
 $$
-\quad \CL_{\text {plasma }} \times \mathrm{C}_{\text {plasma }}=\CL_{\text {blood }} \times \mathrm{C}_{\text {blood }}
+\CL_\text{pl} \times \Cpl = \CL_\text{bl} \times \Cbl
 $$
 
-10. $\CL=$ Dose $_{\mathrm{iv}} / \mathrm{AUC}_{\mathrm{iv}, 0-\infty}$
+$$
+\CL =\D_\text{iv} / \AUCinf
+$$
 (Intravenous case)
-11. $\CL / \mathrm{F}=$ Dose $_{\text {extravascular }} / \mathrm{AUC}_{\text {extravascular }, 0-\infty}$
-(Extravascular case, F unknown)
-12. $\CL=\CL_{\mathrm{H}}+\CL_{\mathrm{R}}+\CL_{\text {other }}$
-13. $\CL_{\mathrm{H}}=\CL_{\mathrm{H}, \text { met }}+\CL_{\text {biliary }}$
-14. $\quad \CL_{\mathrm{H}, \text { blood }}=\frac{\mathrm{Q}_{\mathrm{H}} \times \mathrm{f}_{\mathrm{u} \text {,blood }} \times \CL_{\text {int }}}{\mathrm{Q}_{\mathrm{H}}+\mathrm{f}_{\mathrm{u}, \text { blood }} \times \CL_{\text {int }}}$
-15. $\quad \CL_{\mathrm{int}}=\sum_1^{\mathrm{i}} \frac{\mathrm{V}_{\mathrm{m}, \mathrm{i}}}{\mathrm{K}_{\mathrm{m}, \mathrm{i}}+\mathrm{C}_{\mathrm{u}}}$
-16. $\quad \CL_{\mathrm{R}}=\left[\CL_{\text {filtr }}+\CL_{\text {secr }}\right] \times\left(1-\mathrm{f}_{\text {reabs }}\right)$
-17. $\CL_{\text {filtr }}=\mathrm{f}_{\mathrm{u}} \times \mathrm{GFR}$
-18. Rate of excretion $=d A e / d t=($ Rate of filtration + Rate of secretion $) \times\left(1-f_{\text {reabs }}\right)=C L_R \times C$
-19. $f_e=A_e /$ Dose $_{i v}=$ CL $_R / C L$
 
-## Elimination rate (1-compartment case)
+$$
+\CL / \F =
+  \D_\text{extravascular} / \AUC_{\text{extravascular, 0-}\infty}
+$$
+(Extravascular case, F unknown)
+
+$$
+\CL = \CL_H + \CL_R + \CL_\text{other}
+$$
+
+### Elimination rate (1-compartment case)
 
 $$
 t_\textonehalf = \frac{\ln 2}{\ke}
@@ -109,58 +69,22 @@ t = \ln \left(\C_0 / \ \right) / \ke
 $$ {#eq-t-1cmt}
 
 $$
-\CL = \frac{\text { Dose }}{\AUC}
+\CL = \frac{\D}{\AUC}
 $$
 
 $$
-\CL = k_e \times V_d
+\CL = \ke \times \Vd
 $$
 
-## Metabolic and Renal Clearance
+#### Elimination rate constant
 
 $$
-\mathrm{E}_{\mathrm{H}}=\frac{C l_{\mathrm{int}} \times f u_b}{Q_H+C l_{\mathrm{int}} \times f u_b}
-$$
-
-$$
-\CL_{\mathrm{H}}=E_H \times Q_H=\frac{Q_H \times C l_{\mathrm{int}} \times f u_b}{Q_H+C l_{\mathrm{int}} \times f u_b}
-$$
-
-$$
-\mathrm{F}_{\mathrm{H}}=\frac{Q_H}{Q_H+C l_{\mathrm{int}} \times f u_b}
-$$
-
-$$
-\mathrm{CL_R} = \mathrm{RBF} \times \mathrm{E}=\mathrm{GFR} \times \frac{\mathrm{C}_{\text {in }}-\mathrm{C}_{\text {out }}}{\mathrm{C}_{\mathrm{in}}}
-$$
-
-$$
-\CL_{\text {ren }}=\frac{\text { rate of excretion }}{\text { plasma concentration }}
-$$
-
-$$
-\CL_{\text {ren }}=f u \times G F R+\left[\frac{\text { Rate of secretion }- \text { Rate of reabsorption }}{\text { Plasma concentration }}\right]
-$$
-
-$$
-\mathrm{CL_R} = \frac{\text { Urine flow } \times \text { urine concentration }}{\text { Plasma concentration }}
-$$
-
-## k_e for aminoglycosides
-
-$$
-\mathrm{K}_{\mathrm{e}}=0.00293(\mathrm{CrCL})+0.014
-$$
-
-### Elimination rate constant
-
-$$
-k_{\mathrm{e}} =
+\ke =
   \frac{\CL}{\Vd} =
     \frac{
       \ln
       \left(
-        \frac{\Conc_1}{\Conc_2}
+        \frac{\C_1}{\C_2}
       \right)
     }{
       \left(
@@ -168,7 +92,7 @@ k_{\mathrm{e}} =
       \right)
     } =
       \frac{
-        \ln \Conc_1 - \ln \Conc_2
+        \ln \C_1 - \ln \C_2
       }{
         \left(
           t_2 - t_1
@@ -176,12 +100,132 @@ k_{\mathrm{e}} =
       }
 $$
 
-### Half-life
+#### Half-life
 
 $$
 t_{\textonehalf} =
-  \frac{0.693 \times \mathrm{V_d}}{\CL}=\frac{\ln(2)}{k_{\mathrm{e}}}=\frac{0.693}{k_{\mathrm{e}}}
+  \frac{0.693 \times \Vd}{\CL} =
+  \frac{\ln(2)}{\ke} =
+  \frac{0.693}{\ke}
 $$
+
+## Hepatic CL (metabolism)
+
+The liver can convert substances into metabolites.
+This generally makes a more water soluble substance that can be excreted through the kidneys.
+
+$$
+\mathrm{E_H} = \CL_\text{bl} / \mathrm{Q}
+$$
+
+$$
+\CL_\mathrm{H} = \CL_\text{H, met} + \CL_\text{biliary}
+$$
+
+$$
+\quad \CL_{\mathrm{H}, \text { blood }}=\frac{\mathrm{Q}_{\mathrm{H}} \times \mathrm{f}_{\mathrm{u} \text {,blood }} \times \CL_{\text {int }}}{\mathrm{Q}_{\mathrm{H}}+\mathrm{f}_{\mathrm{u}, \text { blood }} \times \CL_{\text {int }}}
+$$
+
+$$
+\CL_{\mathrm{int}}=\sum_1^{\mathrm{i}} \frac{\mathrm{V}_{\mathrm{m}, \mathrm{i}}}{\mathrm{K}_{\mathrm{m}, \mathrm{i}}+\mathrm{C}_{\mathrm{u}}}
+$$
+
+$$
+\mathrm{E}_{\mathrm{H}}=\frac{C l_{\mathrm{int}} \times f u_b}{Q_H+C l_{\mathrm{int}} \times f u_b}
+$$
+
+$$
+\CL_\mathrm{H} =
+  E_H \times Q_H=\frac{Q_H \times C l_{\mathrm{int}} \times f u_b}{Q_H+C l_{\mathrm{int}} \times f u_b}
+$$
+
+$$
+\F_\mathrm{H} = \frac{Q_H}{Q_H+C l_{\mathrm{int}} \times f u_b}
+$$
+
+## Renal CL (excretion)
+
+$$
+\CL_R =
+  \mathrm{RBF} \times \mathrm{E} =
+  \mathrm{GFR} \times \frac{\C_\text{in} - \C_\text{out}}{\C_\text{in}}
+$$
+
+$$
+\CL_R =
+  \frac{
+    \text { rate of excretion }
+  }{
+    \text { plasma concentration }
+  }
+$$
+
+$$
+\CL_R =
+  \fu \times \mathrm{GFR} +
+  \left[
+    \frac{
+      \text { Rate of secretion }- \text { Rate of reabsorption }
+    }{
+      \text { Plasma concentration }
+    }
+  \right]
+$$
+
+$$
+\CL_R = \frac{\text { Urine flow } \times \text { urine concentration }}{\text { Plasma concentration }}
+$$
+
+
+$\quad \CL_{\mathrm{R}}=\left[\CL_{\text {filtr }}+\CL_{\text {secr }}\right] \times\left(1-\mathrm{f}_{\text {reabs }}\right)$
+
+$\CL_{\text {filtr }}=\mathrm{f}_{\mathrm{u}} \times \mathrm{GFR}$
+
+Rate of excretion $=d A e / d t=($ Rate of filtration + Rate of secretion $) \times\left(1-f_{\text {reabs }}\right)=C L_R \times C$
+
+$$
+\fe =
+  \A_e / \D _\text{iv} =
+  \C_R / \CL
+$$
+
+Kidney function is often checked using GFR (glomerular filtration rate) estimating equations.
+These equations use endogenous biomarkers, like creatinine and cystatin C, along with age, sex, and weight, to estimate how well the kidneys work.
+
+There are many equations for estimating GFR, some of these are designed for specific populations.
+The estimated GFR from these equations are usually similar.
+However, differences appear at high GFR levels, especially when the values go above 150 mL/min/1.73 m^2^, a condition called augmented renal clearance.
+
+The most recommended equation right now is the 2021 version of the CKD-EPI formula [@inkerNewCreatinineCystatin2021]. This version does not consider race (@eq-ckd-epi-2021).
+
+**CKD-EPI (2021) expressed as a single equation:**
+$$
+\text{eGFR} =
+  142 \times
+  \text{min}(\frac{\text{SCr}}{K}, 1)^{\alpha} \times
+  \text{max}(\frac{\text{SCr}}{K}, 1)^{-1.200} \times
+  0.9938^{\text{Age}} \times
+  1.012 [\text{if female}]
+$$ {#eq-ckd-epi-2021}
+
+| Abbreviations | Units | Description |
+| :------------ | :--- | :--- |
+| eGFR | mL/min/1.73 m^2^ | Estimated glomerular filtration rate |
+| Scr  | mg/dL | Serum creatinine (standardized) |
+| $K$ | | 0.7 (females) or 0.9 (males) |
+| $\alpha$ | | -0.241 (females) or -0.302 (males) |
+| min() | | indicates the minimum of $\frac{\text{Scr}}{K}$ or 1 |
+| max() | | indicates the maximum of $\frac{\text{Scr}}{K}$ or 1 |
+
+In general, if the serum creatinine rises at 2--3 mg/dl per day then the GFR is near zero.
+
+### k~e~ for aminoglycosides
+
+$$
+\ke = 0.00293(\mathrm{CrCL}) + 0.014
+$$
+
+## References
 
 ::: {#refs}
 :::
