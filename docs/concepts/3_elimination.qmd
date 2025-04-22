@@ -70,7 +70,7 @@ $$
 $$
 
 $$
-f_e+f_m=1
+\fe + \fm = 1
 $$
 
 $$
@@ -85,23 +85,23 @@ $$
 13. $\CL_{\mathrm{H}}=\CL_{\mathrm{H}, \text { met }}+\CL_{\text {biliary }}$
 14. $\quad \CL_{\mathrm{H}, \text { blood }}=\frac{\mathrm{Q}_{\mathrm{H}} \times \mathrm{f}_{\mathrm{u} \text {,blood }} \times \CL_{\text {int }}}{\mathrm{Q}_{\mathrm{H}}+\mathrm{f}_{\mathrm{u}, \text { blood }} \times \CL_{\text {int }}}$
 15. $\quad \CL_{\mathrm{int}}=\sum_1^{\mathrm{i}} \frac{\mathrm{V}_{\mathrm{m}, \mathrm{i}}}{\mathrm{K}_{\mathrm{m}, \mathrm{i}}+\mathrm{C}_{\mathrm{u}}}$
-16. $\quad \CL_{\mathrm{R}}=\left[\CL_{\text {filtr }}+\CL_{\text {secr }}\right] \cdot\left(1-\mathrm{f}_{\text {reabs }}\right)$
-17. $\CL_{\text {filtr }}=\mathrm{f}_{\mathrm{u}} \cdot \mathrm{GFR}$
-18. Rate of excretion $=d A e / d t=($ Rate of filtration + Rate of secretion $) \cdot\left(1-f_{\text {reabs }}\right)=C L_R \cdot C$
+16. $\quad \CL_{\mathrm{R}}=\left[\CL_{\text {filtr }}+\CL_{\text {secr }}\right] \times\left(1-\mathrm{f}_{\text {reabs }}\right)$
+17. $\CL_{\text {filtr }}=\mathrm{f}_{\mathrm{u}} \times \mathrm{GFR}$
+18. Rate of excretion $=d A e / d t=($ Rate of filtration + Rate of secretion $) \times\left(1-f_{\text {reabs }}\right)=C L_R \times C$
 19. $f_e=A_e /$ Dose $_{i v}=$ CL $_R / C L$
 
 ## Elimination rate (1-compartment case)
 
 $$
-t_\textonehalf = \frac{\ln 2}{k_e}
+t_\textonehalf = \frac{\ln 2}{\ke}
 $$
 
 $$
-k_e = \CL / \V
+\ke = \CL / \V
 $$
 
 $$
-\Conc = \Conc_0 \cdot \mathrm{e}^{-\mathrm{k} \cdot \mathrm{t}}
+\C = \C_0 \times \mathrm{e}^{-\mathrm{k} \times \mathrm{t}}
 $$
 
 $$
@@ -113,25 +113,25 @@ $$
 $$
 
 $$
-\CL = k_e \cdot V_d
+\CL = k_e \times V_d
 $$
 
 ## Metabolic and Renal Clearance
 
 $$
-\mathrm{E}_{\mathrm{H}}=\frac{C l_{\mathrm{int}} \cdot f u_b}{Q_H+C l_{\mathrm{int}} \cdot f u_b}
+\mathrm{E}_{\mathrm{H}}=\frac{C l_{\mathrm{int}} \times f u_b}{Q_H+C l_{\mathrm{int}} \times f u_b}
 $$
 
 $$
-\CL_{\mathrm{H}}=E_H \cdot Q_H=\frac{Q_H \cdot C l_{\mathrm{int}} \cdot f u_b}{Q_H+C l_{\mathrm{int}} \cdot f u_b}
+\CL_{\mathrm{H}}=E_H \times Q_H=\frac{Q_H \times C l_{\mathrm{int}} \times f u_b}{Q_H+C l_{\mathrm{int}} \times f u_b}
 $$
 
 $$
-\mathrm{F}_{\mathrm{H}}=\frac{Q_H}{Q_H+C l_{\mathrm{int}} \cdot f u_b}
+\mathrm{F}_{\mathrm{H}}=\frac{Q_H}{Q_H+C l_{\mathrm{int}} \times f u_b}
 $$
 
 $$
-\mathrm{CL_R} = \mathrm{RBF} \cdot \mathrm{E}=\mathrm{GFR} \cdot \frac{\mathrm{C}_{\text {in }}-\mathrm{C}_{\text {out }}}{\mathrm{C}_{\mathrm{in}}}
+\mathrm{CL_R} = \mathrm{RBF} \times \mathrm{E}=\mathrm{GFR} \times \frac{\mathrm{C}_{\text {in }}-\mathrm{C}_{\text {out }}}{\mathrm{C}_{\mathrm{in}}}
 $$
 
 $$
@@ -139,11 +139,11 @@ $$
 $$
 
 $$
-\CL_{\text {ren }}=f u \cdot G F R+\left[\frac{\text { Rate of secretion }- \text { Rate of reabsorption }}{\text { Plasma concentration }}\right]
+\CL_{\text {ren }}=f u \times G F R+\left[\frac{\text { Rate of secretion }- \text { Rate of reabsorption }}{\text { Plasma concentration }}\right]
 $$
 
 $$
-\mathrm{CL_R} = \frac{\text { Urine flow } \cdot \text { urine concentration }}{\text { Plasma concentration }}
+\mathrm{CL_R} = \frac{\text { Urine flow } \times \text { urine concentration }}{\text { Plasma concentration }}
 $$
 
 ## k_e for aminoglycosides
