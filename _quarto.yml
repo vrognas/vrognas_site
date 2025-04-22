@@ -56,10 +56,14 @@ website:
         - section: "Pathology primers"
           href: docs/pathology-primers/index.qmd
           contents:
-            - text: "Rheumatoid arthritis (RA)"
-              href: docs/pathology-primers/rheumatoid-arthritis.qmd
-            - text: "Giant cell arteritis (GCA)"
-              href: docs/pathology-primers/giant-cell-arteritis.qmd
+            - section: "Autoimmune diseases"
+              contents:
+              - text: "Giant cell arteritis (GCA)"
+                href: docs/pathology-primers/giant-cell-arteritis.qmd
+              - text: "Psoriasis"
+                href: docs/pathology-primers/psoriasis.qmd
+              - text: "Rheumatoid arthritis (RA)"
+                href: docs/pathology-primers/rheumatoid-arthritis.qmd
             - section: "Viral infections"
               contents:
                 - text: "HIV/AIDS"
@@ -71,10 +75,20 @@ website:
                 href: docs/pathology-primers/tuberculosis.qmd
             - section: "Cancer"
               contents:
-              - text: "Skin cancers"
-                href: docs/pathology-primers/skin-cancer.qmd
               - text: "Lung cancers"
                 href: docs/pathology-primers/lung-cancer.qmd
+              - text: "Skin cancers"
+                href: docs/pathology-primers/skin-cancer.qmd
+            - section: "Neurological diseases"
+              contents:
+              - text: "Alzheimer"
+                href: docs/pathology-primers/alzheimer.qmd
+              - text: "Parkinson"
+                href: docs/pathology-primers/parkinson.qmd
+              - text: "Schizophrenia"
+                href: docs/pathology-primers/schizophrenia.qmd
+            - text: "Diabetes"
+              href: docs/pathology-primers/diabetes.qmd
     - id: pharmacopeia
       title: "Pharmacopœia"
       collapse-level: 2
