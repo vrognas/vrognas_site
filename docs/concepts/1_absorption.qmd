@@ -5,29 +5,40 @@ title: "The Absorption Concept"
 :::{.callout-caution title="Under construction"}
 :::
 
-## Overview
-
 Drug absorption can be characterized by **two** pharmacokinetic parameters:
 
-- **Bioavailability (F)** quantifies the **extent** of absorption.
-- **k<sub>a</sub>** quantifies the **rate** of absorption.
-
-## Definition
+- **Bioavailability ($\F$)** quantifies the **extent** of absorption.
+- **$\ka$** quantifies the **rate** of absorption.
 
 The oral bioavailability (F) of a drug is determined by three factors:
 
 $$
-F = F_{a} \times F_{g} \times F_{h},
+\F =
+  \mathrm{f_a} \times \mathrm{f_g} \times \mathrm{f_h} =
+  \mathrm{f_a} \left(1 - \mathrm{E}_\text{GI}\right) \left(1 - \mathrm{E}_\text{H} \right)
 $$ {#eq-bioavailability}
 
-where  
-* F~a~ is the fraction of drug absorbed,  
-* F~g~ is the fraction escaping gut-wall metabolism, and  
-* F~h~ is the fraction escaping hepatic extraction.
+where
+
+* f~a~ is the fraction of drug absorbed,  
+* f~g~ is the fraction escaping gut-wall metabolism, and  
+* f~h~ is the fraction escaping hepatic extraction.
 
 See @eq-bioavailability and @fig-absorption for an illustration of these processes.
 
+$$
+\F =
+  \left(
+    \AUC_\text{po} / \AUC_\text{iv}
+  \right)
+  \left(
+    \D_\text{iv} / \D_\text{po}
+  \right)
+$$
+
 ![Oral absorption.](images/absorption.png){#fig-absorption}
+
+## Enterohepatic recirculation
 
 @fig-enterohepatic-recirculation depicts enterohepatic recirculation, which can also influence bioavailability.
 If a drug exhibits enterohepatic recirculation, it is common to see two or more absorption "peaks".
@@ -35,10 +46,6 @@ If a drug exhibits enterohepatic recirculation, it is common to see two or more 
 ![Enterohepatic recirculation.](images/enterohepatic-recirculation.png){#fig-enterohepatic-recirculation}
 
 ## References
-
-4. $\mathrm{F}=\left(\mathrm{AUC}_{\mathrm{po}} / \mathrm{AUC}_{\mathrm{iv}}\right) \cdot\left(\right.$ Dose $_{\mathrm{iv}} /$ Dose $\left._{\mathrm{po}}\right)$
-5. $\mathrm{F}=\mathrm{fa} \cdot\left(1-\mathrm{E}_{\mathrm{GI}}\right) \cdot\left(1-\mathrm{E}_{\mathrm{H}}\right)$
-
 
 ::: {#refs}
 :::
