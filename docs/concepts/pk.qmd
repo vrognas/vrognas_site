@@ -181,38 +181,38 @@ $$ {#eq-cavgss-multiple-po-dose-1cmt}
 ### Clearance
 
 $$
-\CL = \frac{\D \times \F}{\AUC}
-$$
-
-$$
-\CL = \ke \times \Vd
-$$
+\CL = \frac{\D \times \F}{\AUCinf} = \ke \times \Vd
+$$ {#eq-cl-1cmt}
 
 ## Constant rate infusion
 
-### Plasma concentration (during infusion)
+Plasma concentration (during infusion) @eq-c-ctsinf-1cmt
 
 $$
-\mathrm{C}=\frac{R_0}{\CL} \times\left(1-\mathrm{e}^{-k_{\mathrm{e}} \times t}\right)
-$$
+\C = \frac{\Rin}{\CL}
+\times
+\left(
+  1 - e^{-\ke \times t}
+\right)
+$$ {#eq-c-ctsinf-1cmt}
 
-### Plasma concentration (steady state)
+Plasma concentration (steady state) @eq-css-ctsinf-1cmt
 
 $$
-\C = \frac{R_0}{\CL}
-$$
+\Cplss = \frac{\Rin}{\CL}
+$$ {#eq-css-ctsinf-1cmt}
 
-### Calculated clearance (Chiou equation)
+Calculated clearance (Chiou equation) @eq-cl-ctsinf-chiou
 
 $$
 \CL =
-  \frac{2 \times R_0}{\left(C_1 + C_2 \right)} +
+  \frac{2 \times \Rin}{\left(\C_1 + \C_2 \right)} +
   \frac{
-    2 \times \Vd \times \left(C_1 - C_2 \right)
+    2 \times \Vd \times \left(\C_1 - \C_2 \right)
   }{
-    \left(C_1 + C_2\right) \times \left(t_2 - t_1\right)
+    \left(\C_1 + \C_2 \right) \times \left(t_2 - t_1 \right)
   }
-$$
+$$ {#eq-cl-ctsinf-chiou}
 
 ## Short-term infusion
 
@@ -220,28 +220,17 @@ $$
 
 Since $\ii = t$ for $\Cmax$
 
+Peak @eq-cmax-single-infusion-1cmt
+
 $$
-\Cmax = \frac{D}{\V \ke T} \times \left(1 -e ^{-\ke T} \right)
-$$
+\Cmax = \frac{\D}{\CL T} \times \left(1 -e ^{-\ke T} \right)
+$$ {#eq-cmax-single-infusion-1cmt}
+
+Trough @eq-cmin-single-infusion-1cmt
 
 $$
 \Cmin = \Cmax \times e^{-\ke \times (\ii - T)}
-$$
-
-Peak
-
-$$
-\C_{\max (1)} =
-  \frac{\D}{\CL \times T}
-  \times
-  \left(1 - e^{-\ke \times T} \right)
-$$
-
-Trough
-
-$$
-\mathrm{C}_{\min (1)}=\mathrm{C}_{\max (1)} \times \mathrm{e}^{-\mathrm{k}_{\mathrm{e}}(\ii-\mathrm{T})}
-$$
+$$ {#eq-cmin-single-infusion-1cmt}
 
 ### Multiple infusions
 
@@ -249,31 +238,31 @@ Peak
 
 $$
 \Cmax =
-  \frac{\mathrm{D}}{\CL \times \mathrm{~T}} \times \frac{\left(1-\mathrm{e}^{-\mathrm{k}_{\mathrm{e}} \times \mathrm{~T}}\right)}{\left(1-\mathrm{e}^{-\mathrm{k}_{\mathrm{e}} \times \ii}\right)}
+  \frac{\D}{\CL \times T}
+  \times
+  \frac{
+    \left(1 - e^{-\ke \times T} \right)
+  }{
+    \left(1 - e^{-\ke \times \ii} \right)
+  }
 $$
 
 Trough
 
 $$
 \Cmin =
-  \mathrm{C}_{\text {max }} \times \mathrm{e}^{-\mathbf{k}_{\mathrm{c}} \times(\ii-\mathrm{T})}
-$$
-
-
-#### For multiple short-term I.V. infusion at steady state
-
-$$
-C_{\max }=\frac{D}{V \ke T} \times \frac{\left(1-e^{-\ke T}\right)}{\left(1-e^{-\ke \ii}\right)}
-$$
-
-$$
-C_{\min }=C_{\max } \times e^{-\ke(\ii-T)}
+  \Cmax \times e^{-\ke \times (\ii - T)}
 $$
 
 ### Calculated elimination rate constant
 
 $$
-\mathrm{k}_{\mathrm{e}}=\frac{\ln \left(\frac{\mathrm{C_max}^*}{\mathrm{C_min}^*}\right)}{\Delta \mathrm{t}}
+\ke =
+  \frac{
+    \ln \left(\frac{\Cmax^*}{\Cmin^*} \right)
+  }{
+    \Delta t
+  }
 $$
 
 with C^\*^~max~ = measured peak and C^\*^min = measured trough, measured over the time interval $\Delta$t
@@ -281,7 +270,7 @@ with C^\*^~max~ = measured peak and C^\*^min = measured trough, measured over th
 ### Calculated peak
 
 $$
-\mathrm{C_max}=\frac{\mathrm{C_max}^*}{\mathrm{e}^{-\mathrm{k}_{\mathrm{e}} \mathrm{t}^*}}
+\Cmax = \frac{\Cmax^*}{e^{-\ke t^*}}
 $$
 
 with C^\*^~max~ = measured peak, measured at time t^\*^ after the end of the infusion
@@ -289,7 +278,7 @@ with C^\*^~max~ = measured peak, measured at time t^\*^ after the end of the inf
 ### Calculated trough
 
 $$
-\mathrm{C_min}^*=\mathrm{C_min}^* \times \mathrm{e}^{-\mathrm{k}_{\mathrm{e}} \times t^*}
+\Cmin = \Cmin^* \times e^{-\ke \times t^*}
 $$
 
 with C^\*^min = measured trough, measured at time t^\*^ before the start of the next infusion
@@ -303,7 +292,9 @@ $$
   \frac{
     \left(1 - e^{-\ke \times T}\right)
   }{
-    \left[C_{\max }-\left(C_{\min } \times e^{-\ke \times T}\right)\right]
+    \left[
+      \Cmax - \left(\Cmin \times e^{-\ke \times T} \right)
+    \right]
   }
 $$
 
