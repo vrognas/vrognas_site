@@ -22,7 +22,7 @@ title: "Pharmacokinetics"
 
 ## Intravenous bolus
 
-### Single dose
+### Single i.v. dose
 
 Initial concentration @eq-c0-iv.
 
@@ -36,7 +36,7 @@ $$
 \C(t) = \C_0 \times e^{-\ke \times t}
 $$ {#eq-c-single-iv-dose-1cmt}
 
-### Multiple doses
+### Multiple i.v. doses
 
 $$
 \C_n(t) =
@@ -95,7 +95,7 @@ $$ {#eq-cavgss-multiple-iv-dose-1cmt}
 
 ## Oral administration
 
-### Single dose
+### Single p.o. dose
 
 Plasma concentration @eq-c-single-po-dose-1cmt.
 
@@ -122,7 +122,7 @@ t_\text{max} =
   }
 $$ {#eq-tmax-single-po-dose-1cmt}
 
-### Multiple doses
+### Multiple p.o. doses
 
 Plasma concentration @eq-c-multiple-po-dose-1cmt.
 
@@ -326,7 +326,7 @@ $$
   }
 $$ {#eq-dose-calc-multiple-infusion-1cmt}
 
-## Two-Compartment-Body Model
+## Two-compartment PK model
 
 $$
 \C = a \times e^{-\alpha t} + b \times e^{-\rho t}
@@ -405,14 +405,14 @@ $$
 
 ## Ideal Body Weight
 
-## Male
+### Male
 
 IBW = 50 kg + 2.3 kg for each inch over 5ft in height
 
-## Female
+### Female
 
 IBW = 45.5 kg + 2.3 kg for each inch over 5ft in height
 
-## Obese
+### Obese
 
 ABW = IBW + 0.4 * (TBW-IBW)
