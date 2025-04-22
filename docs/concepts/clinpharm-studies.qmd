@@ -41,7 +41,7 @@ Other ICH guidelines relevant to the conduct of clinical trials are:
 | 2.10 Accurate recording/storage | Raw concentration data ⇒ audit‑trails, ALCOA (Attributable‑Legible‑Contemporaneous‑Original‑Accurate). |
 | 2.13 Quality systems | Risk‑based checks on data pipelines, LIMS, PK analysis scripts. |
 
-: Principles {#tbl-principles tbl-colwidths="[20, 80]"}
+: Principles {#tbl-principles tbl-colwidths="[30, 70]"}
 
 ## General clinical study design
 
