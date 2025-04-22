@@ -32,12 +32,16 @@ Other ICH guidelines relevant to the conduct of clinical trials are:
 | IRB | Institutional Review Board |  |
 | SAE | Serious Adverse Event |  |
 
+: Clinical study abbreviations {#tbl-abbr tbl-colwidths="[20, 40, 40]"}
+
 | Principle from ICH E6 | Relevance to pharmacometrics |
 | :-------- | :-------------- |
 | 2.4 Adequate prior data | Dose‑setting PK modeling must rest on solid non‑clinical & early clinical results. |
 | 2.5 Scientific soundness | Protocol must pre‑define sampling times, bioanalytical methods, population‑PK or NCA strategy. |
 | 2.10 Accurate recording/storage | Raw concentration data ⇒ audit‑trails, ALCOA (Attributable‑Legible‑Contemporaneous‑Original‑Accurate). |
 | 2.13 Quality systems | Risk‑based checks on data pipelines, LIMS, PK analysis scripts. |
+
+: Principles {#tbl-principles tbl-colwidths="[20, 80]"}
 
 ## General clinical study design
 
