@@ -6,6 +6,7 @@ about:
     template: jolla
     image: "images/vrognas.png"
     image-shape: round
+    image-alt: "A profile picture of Viktor"
 ---
 
 [**viktor.rognas@gmail.com**](mailto:viktor.rognas@gmail.com)
