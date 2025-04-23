@@ -1,5 +1,3 @@
-# vrognas_site
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6d9ad640-566a-4eb4-af99-9f47b519a3a6/deploy-status)](https://app.netlify.com/sites/vrognas/deploys)
 [![Site status](https://img.shields.io/uptimerobot/status/m800397639-54a2e31651b9fd58c55556a9?label=vrognas.com)](https://stats.uptimerobot.com/8Pu4pG2KuM)
 
