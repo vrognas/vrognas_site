@@ -14,7 +14,7 @@ The oral bioavailability (F) of a drug is determined by three factors:
 
 $$
 \F =
-  \mathrm{f_a} \times \mathrm{f_g} \times \mathrm{f_h} =
+  \mathrm{f_a} \cdot \mathrm{f_g} \cdot \mathrm{f_h} =
   \mathrm{f_a} \left(1 - \mathrm{E}_\text{GI}\right) \left(1 - \mathrm{E}_\text{H} \right)
 $$ {#eq-bioavailability}
 

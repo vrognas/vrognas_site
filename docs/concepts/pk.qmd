@@ -27,7 +27,7 @@ title: "Pharmacokinetics"
 Initial concentration @eq-c0-iv.
 
 $$
-\C_0=\frac{\D}{\Vd}
+\C_0 = \frac{\D}{\Vd}
 $$ {#eq-c0-iv}
 
 Plasma concentration @eq-c-single-iv-dose-1cmt.
@@ -40,14 +40,12 @@ $$ {#eq-c-single-iv-dose-1cmt}
 
 $$
 \C_n(t) =
-  \frac{\D}{\Vd}
-  \times
+  \frac{\D}{\Vd} \times
   \frac{
     \left(1 - e^{-n \times \ke \times \ii}\right)
   }{
     \left(1 - e^{-\ke \times \ii}\right)
-  }
-  \times
+  } \times
   e^{-\ke \times t}
 $$
 
@@ -55,8 +53,7 @@ at peak: $t = 0$; at steady state $\mathrm{n} \rightarrow \infty$; at trough: $t
 
 $$
 \C_\text{max, ss} =
-  \frac{\D}{\V}
-  \times
+  \frac{\D}{\V} \times
   \frac{1}{\left(1 - e^{-\ke \ii} \right)}
 $$ {#eq-cmaxss-multiple-iv-dose-1cmt}
 
@@ -138,8 +135,7 @@ $$
     e^{-\ke \times t}
   }{
     1 - e^{-\ke \times \ii}
-  }
-  -
+  } -
   \frac{
     e^{-\ka \times t}
   }{
@@ -162,7 +158,7 @@ t_\text{max} =
         }
       \right)
   }{
-    \left(k_{\mathrm{a}}-k_{\mathrm{e}}\right)
+    \left(\ka - \ke}\right)
   }
 $$ {#eq-tmax-multiple-po-dose-1cmt}
 
@@ -238,8 +234,7 @@ Peak @eq-cmax-multiple-infusion-1cmt.
 
 $$
 \Cmax =
-  \frac{\Rin}{\CL}
-  \times
+  \frac{\Rin}{\CL} \times
   \frac{
     \left(1 - e^{-\ke \times T} \right)
   }{
@@ -372,7 +367,10 @@ $$
 
 $$
 \ii_\text{max} =
-  \ln \left(\mathrm{C}_{\mathrm{ss}, \max } / \mathrm{C}_{\mathrm{ss}, \min }\right) / \mathrm{k}
+  \ln
+    \left(
+      \C_\text{ss, max} / \C_\text{ss, min}
+    \right) / \ke
 $$
 (1-compartment, variation of eq. 23)
 

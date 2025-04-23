@@ -25,18 +25,18 @@ In the therapeutic context of the drug, what elimination characteristics would b
 These characteristics can be quantified through deterministic predictions (no variability) or stochastic simulations (with variability).
 
 $$
-\CL= \text{Rate of elimination} / \C
+\CL = \mathrm{R}_\text{elimination} / \C
 $$
 $$
 \fe + \fm = 1
 $$
 
 $$
-\CL_\text{pl} \times \Cpl = \CL_\text{bl} \times \Cbl
+\CL_\text{pl} \cdot \Cpl = \CL_\text{bl} \cdot \Cbl
 $$
 
 $$
-\CL =\D_\text{iv} / \AUCinf
+\CL = \D_\text{iv} / \AUCinf
 $$
 (Intravenous case)
 
@@ -47,7 +47,7 @@ $$
 (Extravascular case, F unknown)
 
 $$
-\CL = \CL_H + \CL_R + \CL_\text{other}
+\CL = \CL_\text{H} + \CL_\text{R} + \CL_\text{other}
 $$
 
 ### Elimination rate (1-compartment case)
@@ -61,11 +61,11 @@ $$
 $$
 
 $$
-\C = \C_0 \times e^{-\ke \times t}
+\C = \C_0 \cdot e^{-\ke \cdot t}
 $$
 
 $$
-t = \ln \left(\C_0 / \ \right) / \ke
+t = \ln \left(\C_0 / \C \right) / \ke
 $$ {#eq-t-1cmt}
 
 $$
@@ -73,7 +73,7 @@ $$
 $$
 
 $$
-\CL = \ke \times \Vd
+\CL = \ke \cdot \Vd
 $$
 
 #### Elimination rate constant
@@ -104,7 +104,7 @@ $$
 
 $$
 t_{\textonehalf} =
-  \frac{0.693 \times \Vd}{\CL} =
+  \frac{0.693 \cdot \Vd}{\CL} =
   \frac{\ln(2)}{\ke} =
   \frac{0.693}{\ke}
 $$
@@ -115,78 +115,121 @@ The liver can convert substances into metabolites.
 This generally makes a more water soluble substance that can be excreted through the kidneys.
 
 $$
-\mathrm{E_H} = \CL_\text{bl} / \mathrm{Q}
+\mathrm{E_H} = \CL_\text{H, bl} / \mathrm{Q_H}
 $$
 
 $$
-\CL_\mathrm{H} = \CL_\text{H, met} + \CL_\text{biliary}
+\CL_\text{H} = \CL_\text{H, met} + \CL_\text{biliary}
 $$
 
 $$
-\quad \CL_{\mathrm{H}, \text { blood }}=\frac{\mathrm{Q}_{\mathrm{H}} \times \mathrm{f}_{\mathrm{u} \text {,blood }} \times \CL_{\text {int }}}{\mathrm{Q}_{\mathrm{H}}+\mathrm{f}_{\mathrm{u}, \text { blood }} \times \CL_{\text {int }}}
+\CL_\text{H, bl} =
+  \mathrm{E_H} \cdot \mathrm{Q_H} =
+  \frac{
+    \mathrm{Q_H} \cdot \mathrm{f}_\text{unbound, bl} \cdot \CL_\text{intrinsic}
+  }{
+    \mathrm{Q_H} + \mathrm{f}_\text{unbound, bl} \cdot \CL_\text{intrinsic}
+  }
 $$
 
 $$
-\CL_{\mathrm{int}}=\sum_1^{\mathrm{i}} \frac{\mathrm{V}_{\mathrm{m}, \mathrm{i}}}{\mathrm{K}_{\mathrm{m}, \mathrm{i}}+\mathrm{C}_{\mathrm{u}}}
+\CL_\text{intrinsic} =
+  \sum_1^{i}
+    \frac{
+      \V_{\text{m, }i}
+    }{
+      \mathrm{K}_{\text{m, }i} + \C_\text{unbound}
+    }
 $$
 
 $$
-\mathrm{E}_{\mathrm{H}}=\frac{C l_{\mathrm{int}} \times f u_b}{Q_H+C l_{\mathrm{int}} \times f u_b}
+\mathrm{E_H} =
+  \frac{
+    \CL_\text{intrinsic} \cdot \mathrm{f}_\text{unbound, bl}
+  }{
+    \mathrm{Q_H} + \CL_\text{intrinsic} \cdot \mathrm{f}_\text{unbound, bl}
+  }
 $$
 
 $$
-\CL_\mathrm{H} =
-  E_H \times Q_H=\frac{Q_H \times C l_{\mathrm{int}} \times f u_b}{Q_H+C l_{\mathrm{int}} \times f u_b}
-$$
-
-$$
-\F_\mathrm{H} = \frac{Q_H}{Q_H+C l_{\mathrm{int}} \times f u_b}
+\F_\text{H} =
+  \frac{
+    \mathrm{Q_H}
+  }{
+    \mathrm{Q_H} + \CL_\text{int} \cdot \mathrm{f}_\text{unbound, bl}
+  }
 $$
 
 ## Renal CL (excretion)
 
 $$
-\CL_R =
-  \mathrm{RBF} \times \mathrm{E} =
-  \mathrm{GFR} \times \frac{\C_\text{in} - \C_\text{out}}{\C_\text{in}}
+\CL_\text{R} =
+  \mathrm{E_R} \cdot \mathrm{Q_R} =
+  \mathrm{GFR} \cdot \frac{\C_\text{in} - \C_\text{out}}{\C_\text{in}}
 $$
 
 $$
-\CL_R =
+\CL_\text{R} =
   \frac{
-    \text { rate of excretion }
+    \mathrm{R}_\text{excretion}
   }{
-    \text { plasma concentration }
+    \Cpl
   }
 $$
 
 $$
-\CL_R =
-  \fu \times \mathrm{GFR} +
+\CL_\text{R} =
+  \fu \cdot \mathrm{GFR} +
   \left[
     \frac{
-      \text { Rate of secretion }- \text { Rate of reabsorption }
+      \mathrm{R}_\text{secretion} - \mathrm{R}_\text{reabsorption}
     }{
-      \text { Plasma concentration }
+      \Cpl
     }
   \right]
 $$
 
 $$
-\CL_R = \frac{\text { Urine flow } \times \text { urine concentration }}{\text { Plasma concentration }}
+\CL_\text{R} =
+  \frac{
+    \text{Urine flow} \times \C_\text{urine}
+  }{
+    \Cpl
+  }
 $$
 
 
-$\quad \CL_{\mathrm{R}}=\left[\CL_{\text {filtr }}+\CL_{\text {secr }}\right] \times\left(1-\mathrm{f}_{\text {reabs }}\right)$
+$$
+\CL_\text{R} =
+  \left[
+    \CL_\text{filtration} + \CL_\text{secretion}
+  \right] \cdot
+  \left(
+    1 - \mathrm{f}_\text{reabsorption}
+  \right)
+$$
 
-$\CL_{\text {filtr }}=\mathrm{f}_{\mathrm{u}} \times \mathrm{GFR}$
+$$
+\CL_\text{filtration} =
+  \fu \cdot \mathrm{GFR}
+$$
 
-Rate of excretion $=d A e / d t=($ Rate of filtration + Rate of secretion $) \times\left(1-f_{\text {reabs }}\right)=C L_R \times C$
+$$
+\mathrm{R}_\text{excretion} =
+  \frac{d \mathrm{A_e}}{dt} =
+  \left(
+    \mathrm{R}_\text{filtration} + \mathrm{R}_\text{secretion}
+  \right) \cdot
+  \left(
+    1 - \mathrm{f}_\text {reabsorption}
+  \right) =
+  \CL_\text{R} \cdot \C
+$$
 
 $$
 \fe =
-  \A_e / \D _\text{iv} =
-  \C_R / \CL
+  \A_e / \D_\text{iv} =
+  \CL_\text{R} / \CL
 $$
 
 Kidney function is often checked using GFR (glomerular filtration rate) estimating equations.
@@ -201,18 +244,18 @@ The most recommended equation right now is the 2021 version of the CKD-EPI formu
 **CKD-EPI (2021) expressed as a single equation:**
 $$
 \text{eGFR} =
-  142 \times
-  \text{min}(\frac{\text{SCr}}{K}, 1)^{\alpha} \times
-  \text{max}(\frac{\text{SCr}}{K}, 1)^{-1.200} \times
-  0.9938^{\text{Age}} \times
+  142 \cdot
+  \text{min}(\frac{\text{SCr}}{\kappa}, 1)^{\alpha} \cdot
+  \text{max}(\frac{\text{SCr}}{\kappa}, 1)^{-1.200} \cdot
+  0.9938^{\text{Age}} \cdot
   1.012 [\text{if female}]
 $$ {#eq-ckd-epi-2021}
 
 | Abbreviations | Units | Description |
 | :------------ | :--- | :--- |
 | eGFR | mL/min/1.73 m^2^ | Estimated glomerular filtration rate |
-| Scr  | mg/dL | Serum creatinine (standardized) |
-| $K$ | | 0.7 (females) or 0.9 (males) |
+| SCr  | mg/dL | Serum creatinine (standardized) |
+| $\kappa$ | | 0.7 (females) or 0.9 (males) |
 | $\alpha$ | | -0.241 (females) or -0.302 (males) |
 | min() | | indicates the minimum of $\frac{\text{Scr}}{K}$ or 1 |
 | max() | | indicates the maximum of $\frac{\text{Scr}}{K}$ or 1 |
