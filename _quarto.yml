@@ -1072,6 +1072,7 @@ website:
         href: https://scholar.google.com/citations?user=RBJi1XQAAAAJ
 format:
   html:
+    canonical-url: "https://www.vrognas.com/"
     include-in-header:
       - seo.html
       - pk-operators.html
