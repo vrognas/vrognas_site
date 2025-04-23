@@ -1,20 +1,51 @@
-<script type="application/ld+json">{
-  "@context": "https://schema.org/",
+<!-- Person graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://www.vrognas.com/#me",
   "name": "Viktor Rognås",
-  "url": "https://www.vrognas.com",
   "image": "https://www.vrognas.com/images/vrognas.png",
+  "url": "https://www.vrognas.com",
+  "jobTitle": "Pharmacometric Engineer",
+  "description": "Clinical pharmacometrics engineer, open-source contributor, and PhD student at Uppsala University.",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "qPharmetra",
+    "url": "https://www.qpharmetra.com"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Uppsala University",
+    "url": "https://www.uu.se"
+  },
+  "nationality": { "@type": "Country", "name": "Sweden" },
   "sameAs": [
   "https://www.linkedin.com/in/vrognas/",
   "https://github.com/vrognas",
-  "https://vrognas.com"
-  ],
-  "jobTitle": "Pharmacometric Engineer",
-  "alumniOf": "Uppsala University",
-  "nationality": "Swedish",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Uppsala",
-    "addressCountry": "Sweden"
-  }
-}</script>
+  "https://scholar.google.com/citations?user=RBJi1XQAAAAJ"
+  ]
+}
+</script>
+
+<!-- Organization & WebSite graphs—kept tiny -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.vrognas.com/#organization",
+  "name": "Viktor Rognås",
+  "url": "https://www.vrognas.com",
+  "logo": "https://www.vrognas.com/images/vrognas.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.vrognas.com/#website",
+  "url": "https://www.vrognas.com",
+  "name": "Viktor Rognås",
+  "publisher": { "@id": "https://www.vrognas.com/#organization" }
+}
+</script>
