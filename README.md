@@ -3,7 +3,7 @@
 
 This repository contains the source code for my personal website, hosted at [vrognas.com](https://vrognas.com/). The site is built with [Quarto](https://quarto.org/) and automatically deployed using [Netlify](https://www.netlify.com/).
 
-## About the Website
+## About the website
 
 The website serves as a central hub for:
 
@@ -19,7 +19,7 @@ The website serves as a central hub for:
 - **Dynamic Deployment**: Automated builds and deployments with Netlify ensure changes are live quickly.
 - **Modular Structure**: Content is structured to allow easy updates and scaling.
 
-## Repository Structure
+## Repository structure
 
 - **`_quarto.yml`**: Configuration file for Quarto.
 - **`docs/`**: Markdown or QMD files for site content.
