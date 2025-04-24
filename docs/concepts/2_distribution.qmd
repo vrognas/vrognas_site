@@ -10,6 +10,8 @@ The pharmacokinetic parameter that quantifies drug distribution, is called *volu
 In general, a lipophilic drug will have a large $\Vd$, and a hydrophilic drug will have a small $\Vd$.
 Drugs can also be substrates to various transporters that impact $\Vd$.
 
+$\Vd$ usually has 30% inter-individual variability.
+
 ![
   Reversible processes affecting the total amount of drug on each side of a biological membrane permeable only to the un-ionized free form of a drug.
   Some binding of both the un-ionized and ionized forms may occur, but depending on the specific drug, one form usually predominates (the un-ionized form is preferentially bound in the case of narcotic analgesics).
