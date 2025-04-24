@@ -1,5 +1,6 @@
 ---
 title: "Pharmacodynamics"
+subtitle: "Exposure <-> Response"
 ---
 
 > "What the drug does to the body"
