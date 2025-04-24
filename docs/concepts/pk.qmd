@@ -1,5 +1,6 @@
 ---
 title: "Pharmacokinetics"
+subtitle: "Input <-> Exposure"
 ---
 
 > "What the body does to the drug"
