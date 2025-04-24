@@ -1,9 +1,29 @@
 ---
 title: "Pharmacokinetics"
-subtitle: "Input <-> Exposure"
+subtitle: "Dose-Exposure"
 ---
 
 > "What the body does to the drug"
+
+## Executive summary
+
+**Pharmacokinetics (PK)** asks a single question:  
+
+> *“Given an input (dose & regimen), what exposure (concentration-time profile) will the body create?”*
+
+This page is your quick-reference for that mapping. It is organised as follows:
+
+| Section | What you get | Key take-aways |
+|---------|--------------|----------------|
+| **Therapeutic window** | Where efficacy ⇢ safety overlap | Target *C~min~* and *C~max~* |
+| **Single-dose kinetics** | IV bolus + oral equations | How *V~d~* and *k~e~* shape curves |
+| **Repeated/continuous input** | Multiple-dose & infusion profiles | Why accumulation ratio (*R~ac~*) matters |
+| **Equations at a glance** | One-liner table of canonical PK formulae | Copy-paste cheatsheet |
+| **Deep dives** | Absorption · Distribution · Elimination | Mechanistic levers behind each parameter |
+
+Use the overview to **choose the right regimen**, then jump to the deep-dive pages when you need mechanism-level detail.
+
+## Key symbols and canonical equations
 
 | Symbol | Description |
 | :----: | :---------- |
@@ -21,9 +41,60 @@ subtitle: "Input <-> Exposure"
 
 : Pharmacokinetic symbols {#tbl-pk-symbols tbl-colwidths="[20, 80]"}
 
+### Clearance (CL)
+
+$$
+\CL = \frac{\D \times \F}{\AUCinf} \;=\; \ke \times \Vd
+$$ {#eq-cl-1cmt}
+
 ## Therapeutic window
 
-## Input-Exposure from various dosage regimens
+```{r}
+#| label: fig-therapeutic-window
+#| fig-cap: "Concentration–time profile and the therapeutic window."
+#| fig.align: "center"
+
+tibble::tibble(
+  time = c(0, 0.5, 1, 2, 4, 6, 8, 12), # h
+  conc = c(0, 14, 12, 9, 6, 4, 3, 0) # mg/L (example)
+) |>
+ggplot2::ggplot(ggplot2::aes(time, conc)) +
+  ggplot2::annotate( # shaded window
+    "rect",
+    xmin = -Inf,
+    xmax = Inf,
+    ymin = 3,
+    ymax = 10,
+    alpha = 0.08,
+    fill = "forestgreen"
+  ) +
+  ggplot2::geom_line(linewidth = 1) +
+  ggplot2::geom_hline(yintercept = 3, linetype = "dashed") + # MEC
+  ggplot2::geom_hline(yintercept = 10, linetype = "dashed") + # MTC
+  ggplot2::labs(
+    x = "Time (h)",
+    y = "Concentration (mg/L)"
+  ) +
+  ggplot2::annotate( # labels
+    "text",
+    x = 11.5,
+    y = 10.4,
+    hjust = 1,
+    label = "Safety threshold",
+    size = 3
+  ) +
+  ggplot2::annotate(
+    "text",
+    x = 11.5,
+    y = 3.4,
+    hjust = 1,
+    label = "Efficacy threshold",
+    size = 3
+  ) +
+  ggplot2::theme_minimal()
+```
+
+## Single-dose kinetics
 
 ### Intravenous bolus
 
@@ -178,12 +249,6 @@ $$
   }
 $$ {#eq-cavgss-multiple-po-dose-1cmt}
 
-#### Clearance
-
-$$
-\CL = \frac{\D \times \F}{\AUCinf} = \ke \times \Vd
-$$ {#eq-cl-1cmt}
-
 ### Intravenous infusion
 
 $$
@@ -326,7 +391,9 @@ $$
   }
 $$ {#eq-dose-calc-multiple-infusion-1cmt}
 
-### Two-compartment PK model
+## Multiple-dose kinetics
+
+## Two-compartment PK model
 
 $$
 \C = a \times e^{-\alpha t} + b \times e^{-\rho t}
@@ -342,7 +409,7 @@ $$ {#eq-v-2cmt}
 
 Vd_area = V beta?
 
-### Dosage regimens
+## Dosage regimens
 
 $$
 \C_\text{inf} = \C_\text{ss} \times \left(1 - e^{-\ke t}\right)
