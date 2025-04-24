@@ -21,9 +21,13 @@ subtitle: "Input <-> Exposure"
 
 : Pharmacokinetic symbols {#tbl-pk-symbols tbl-colwidths="[20, 80]"}
 
-## Intravenous bolus
+## Therapeutic window
 
-### Single i.v. dose
+## Input-Exposure from various dosage regimens
+
+### Intravenous bolus
+
+#### Single i.v. dose
 
 Initial concentration @eq-c0-iv.
 
@@ -37,7 +41,7 @@ $$
 \C(t) = \C_0 \times e^{-\ke \times t}
 $$ {#eq-c-single-iv-dose-1cmt}
 
-### Multiple i.v. doses
+#### Multiple i.v. doses
 
 $$
 \C_n(t) =
@@ -91,9 +95,9 @@ $$
 \bar{\C}_\text{pl, ss} = \frac{\D}{\CL \times \ii}
 $$ {#eq-cavgss-multiple-iv-dose-1cmt}
 
-## Oral administration
+### Oral administration
 
-### Single p.o. dose
+#### Single p.o. dose
 
 Plasma concentration @eq-c-single-po-dose-1cmt.
 
@@ -120,7 +124,7 @@ t_\text{max} =
   }
 $$ {#eq-tmax-single-po-dose-1cmt}
 
-### Multiple p.o. doses
+#### Multiple p.o. doses
 
 Plasma concentration @eq-c-multiple-po-dose-1cmt.
 
@@ -174,13 +178,13 @@ $$
   }
 $$ {#eq-cavgss-multiple-po-dose-1cmt}
 
-### Clearance
+#### Clearance
 
 $$
 \CL = \frac{\D \times \F}{\AUCinf} = \ke \times \Vd
 $$ {#eq-cl-1cmt}
 
-## Intravenous infusion
+### Intravenous infusion
 
 $$
 \Rin = \frac{\D}{T}
@@ -229,7 +233,7 @@ $$
 \Cmin = \Cmax \times e^{-\ke (\ii - T)}
 $$ {#eq-cmin-single-infusion-1cmt}
 
-### Multiple infusions
+#### Multiple infusions
 
 Peak @eq-cmax-multiple-infusion-1cmt.
 
@@ -250,7 +254,7 @@ $$
   \Cmax \times e^{-\ke (\ii - T)}
 $$ {#eq-cmin-multiple-infusion-1cmt}
 
-### Calculated parameters
+#### Calculated parameters
 
 Calculated elimination rate constant (1-compartment case) @eq-ke-1cmt.  
 With C^\*^~max~ = measured peak and C^\*^min = measured trough, measured over the time interval $\Delta t$
@@ -322,7 +326,7 @@ $$
   }
 $$ {#eq-dose-calc-multiple-infusion-1cmt}
 
-## Two-compartment PK model
+### Two-compartment PK model
 
 $$
 \C = a \times e^{-\alpha t} + b \times e^{-\rho t}
@@ -338,7 +342,7 @@ $$ {#eq-v-2cmt}
 
 Vd_area = V beta?
 
-## Dosage regimens
+### Dosage regimens
 
 $$
 \C_\text{inf} = \C_\text{ss} \times \left(1 - e^{-\ke t}\right)
@@ -381,7 +385,7 @@ $$
 $$
 (1-compartment)
 
-## Exposure (AUC)
+### Exposure (AUC)
 
 $$
 \AUC_\text{iv} =
@@ -402,16 +406,57 @@ $$
 $$
 (Always applicable)
 
-## Ideal Body Weight
+## Things that can affect PK
 
-### Male
+### Sex
+
+Common covariate.
+Males and females have different genetic physiological composition that are similar within the groups.
+Thus, "sex" is really a surrogate covariate for genetic and physiological variability.
+
+Females have ~15% lower kidney function than males.
+Metabolism by CYP3A is not expected to differ between sexes.
+
+This does **not** include **pregnant women**, which can have different physiological processes.
+
+### Age
+
+Age is a common covariate in PK because body composition and physiology change over time.
+
+Children differ substantially from adults in terms of physiology.
+During late adolescence, physiological changes stabilize, but gradual alterations continue throughout adulthood.
+
+In most adult patients, dose adjustments based on age are not necessary, as their age is typically close to that of the "typical" patient used for dose selection.
+However, adjustment may be warranted when the patient’s age deviates by more than 20 years from the typical reference age.
+
+As adults age, organ function declines, especially renal function.
+This is reflected in commonly used kidney function equations, many of which include age as a predictor.
+
+* **Kidney function decreases by approximately 1% per year in adults.**
+* Metabolic clearance also tends to decline with age.
+
+Therefore, including age as a covariate on drug clearance is always a sensible choice.
+
+### Weight
+
+#### Ideal Body Weight
+
+##### Male
 
 IBW = 50 kg + 2.3 kg for each inch over 5ft in height
 
-### Female
+##### Female
 
 IBW = 45.5 kg + 2.3 kg for each inch over 5ft in height
 
-### Obese
+##### Obese
 
 ABW = IBW + 0.4 * (TBW-IBW)
+
+### Disease
+
+### Genetics
+
+#### Race
+
+### DDI
