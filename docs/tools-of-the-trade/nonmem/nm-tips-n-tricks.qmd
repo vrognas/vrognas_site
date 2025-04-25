@@ -440,11 +440,12 @@ Things to try:
 
 ([Credit: Leonid Gibiansky](https://www.mail-archive.com/nmusers@globomaxnm.com/msg08915.html))
 
-::: {.callout-note}
-
-## Terminology
-
+::: {.callout-note title="Terminology"}
 * Use "Disease modifying" instead of "protective" (Credit: Mats Karlsson)
 * Time varying covariate: Specify as "regressor".
+:::
 
+## References
+
+::: {#refs}
 :::
