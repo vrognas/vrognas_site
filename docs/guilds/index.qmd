@@ -6,24 +6,28 @@ subtitle: "Get in contact with the community"
 :::{.callout-caution title="Under construction"}
 :::
 
-# Mailing Lists
+## Mailing Lists
 
 * NMUSERS
 
-# Communities
+## Communities
 
-* ISoP
+* International Society of Pharmacometrics (ISoP)
+  * The mission of ISoP is the promotion and advancement of the discipline of pharmacometrics, through Integration, Innovation, and Impact: quantitative integration of multisource data and knowledge of clinical, biomedical, biological, engineering, statistical, and mathematical concepts, resulting in continuous methodological and technological innovation enhancing scientific understanding and knowledge, which in turn has an impact on discovery, research, development, approval, and utilization of new therapies.
 
-# Conferences
+## Conferences
 
-* [PAGE](https://www.page-meeting.org) (annualy early/late june)
-* ACoP
-* [PAGANZ](https://www.paganz.org)
-* WCoP
-* [Stockholm-Uppsala Pharmacometrics](https://www.sup-meeting.se) (bianually spring/fall)
-* BeNeLux PMx
+*  Population Approach Group Europe ([PAGE](https://www.page-meeting.org)).
+  * Annually in June
+* The American Conference on Pharmacometrics (ACoP)
+  * Organized annually during the fall by ISoP.
+* Population Approach Group of Australia and New Zealand ([PAGANZ](https://www.paganz.org))
+* The World Conference on Pharmacometrics (WCoP)
+  * Held annually in Cape Town, South Africa during March/April.
+* Stockholm-Uppsala Pharmacometrics ([SUP](https://www.sup-meeting.se))
+  *  Bianually, alternately in Stockholm and Uppsala. One spring- and one fall-meeting.
 
-# Journals
+## Journals
 
 * CPT: Pharmacometrics & Systems Pharmacology
 * Journal of Pharmacokinetics and Pharmacodynamics
