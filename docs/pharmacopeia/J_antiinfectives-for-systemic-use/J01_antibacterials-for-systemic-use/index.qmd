@@ -10,6 +10,8 @@ title: "J01: Antibacterials for systemic use"
   * Dose fractionation
   * 1 CFU per animal (homogenization)
 * Nielsen-model (susceptible--resistant strains)
+
+* ABX C_T should be high enough.
 :::
 
 Antibacterials (@fig-abx-classes) are drugs used to treat bacterial infections.
@@ -117,7 +119,7 @@ PKPD models developed from *in vitro* experiments predict *in vivo* outcomes and
 Steps include:
 
 1. Building initial models from *in vitro* data (static time-kill studies)
-2. Refining models with dynamic *in vitro* and mouse studies
+2. Refining models with dynamic *in vitro* and *in vivo* (mouse) studies
 3. Integrating human PK data for simulations to predict clinical outcomes
 
 This approach considers variability in bacterial dynamics across strains, doses, and patient populations.
