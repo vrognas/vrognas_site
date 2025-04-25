@@ -37,10 +37,39 @@ Slides:
 * *You* are the presentation, not the slide deck.
   * The focus of the audience should be on *you*
   * Use the ability to shut off the slide deck (turn screen black or white), when it is not needed.
+* Presentations are about entertainment
+  * This does not mean that you omit scientific details
+  * Rather, the entertainment aspect puts emphasis on the important details
+
+### Slide design basics
+
+* Be consistent with your slide-design. The safest way is to use a template.
+* Use a plain background with a solid dark or bright color
+* **Control attention**
+  * We are drawn to the colors red, yellow, and orange; as well as size, contrasts and movements.
+  * Let the most important thing be the most visible (i.e., the biggest).
+  * YOU CAN'T GO TOO BIG (but you can go too small)
 * Focus the audience attention with clever use of blurr and colored boxes.
 * If you need a laser pointer, your slide is probably too detailed/messy.
 * Stick to a color theme.
   * Make the colors mean something across all slides.
+* Use slide numbers
+* Avoid intrusive in-your-face company logos on every slide
+* One message per slide
+  * We can only think one conscious thought each moment
+* Separate speech and slide
+  * We can't listen and read entire sentences at the same time
+* Don't write entire paragraphs on a slide
+  * And do not read slides word-for-word
+* Max 6 objects per slide
+  * That is approximately the limit of human perception.
+  * Some people can percieve more, some less.
+  Don't make it too hard for your audience!
+* Images, with color
+  * We remember colored images better than text or black/white images
+* Don't use figures straight from a paper
+  * Label them, make them readable, and relevant
+* Be restrictive with animations If used, they shall be relevant and not steal the attention from you
 
 ## Third: Practice
 
@@ -69,15 +98,22 @@ Slides:
 
 ### Right before
 
+* Turn on the lights. It's not bed time.
 * Put up the title slide on the screen for all to see
 * Go to the bathroom
 * Have (sparkling) water close by
 * Silence your phone
+* Stand up
+  * If you sit down, people won't pay as much attention
 * State that clarifying questions are allowed
   * Save discussion points for after the presentation
 
 ### During
 
+* Use a remote. Don't move back and forth from the laptop (aka the ppt-dance).
+* Speak up! We **want** to hear you!
+* Pay attention to your audience Are they following? Are they asleep?
+* If the audience seems lost: ASK! It is your responsibility to explain, not their responsibility to understand.
 * Talk to one person at a time, not the entire crowd.
   * Look him/her in the eyes, explain your point, then switch person.
 * Trust yourself. The audience wants you too succeed, and they are interested in what you have to say.
