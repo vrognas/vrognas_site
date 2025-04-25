@@ -9,6 +9,8 @@ NMusers is a mailing list for professionals that use the NONMEM software.
 The mail archive can be accessed here: [https://www.mail-archive.com/nmusers@globomaxnm.com/](https://www.mail-archive.com/nmusers@globomaxnm.com/).
 It was previously hosted at `https://www.cognigen.com/nonmem/nm/`.
 
+NMusers has an RSS-feed: [https://www.mail-archive.com/nmusers@globomaxnm.com/maillist.xml](https://www.mail-archive.com/nmusers@globomaxnm.com/maillist.xml)
+
 ## Subscribe
 
 To **subscribe** to nmusers, send the following in the body (not the subject line) of an email message to [majordomo@globomaxnm.com](mailto:nmusers-request@iconplc.com):
@@ -64,4 +66,27 @@ This will return a list of all entries on all lists that contain "string".
 2. No attachments
 3. Only text and links
 
-[](https://www.mail-archive.com/nmusers@globomaxnm.com/msg07406.html)
+[Reference 2019-03-15](https://www.mail-archive.com/nmusers@globomaxnm.com/msg07406.html)
+
+## Searching NMusers
+
+Searches span all archived messages in a particular mailing list.
+More complex searches are supported through advanced query syntax.
+Phrase search is supported.
+So are fancy boolean operators like + - AND OR NOT ().
+Finally, searches can be limited to a particular email field such as from, date, subject or message.
+For example, one can find all messages from April 2002.
+The sort order can be controlled by adding sort:newest or sort:oldest to your search string.
+
+"battle royale"
++Jeff -Breidenbach -Marshall
+(dualing OR dueling) AND banjos
+from:"Mac Oglesby"
+date:[20190101 TO 20191231] Breidenbach
+date:202204*
+help sort:newest
+
+<form action="/search" method=get>
+<input type="hidden" name="l" value="nmusers@globomaxnm.com">
+<input type=text name="q" value="" size=25>
+</form>
