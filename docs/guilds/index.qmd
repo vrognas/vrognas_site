@@ -8,7 +8,8 @@ subtitle: "Get in contact with the community"
 
 ## Mailing Lists
 
-* NMUSERS
+* NMusers
+  * A mailing list for professionals that use the NONMEM software.
 
 ## Communities
 
