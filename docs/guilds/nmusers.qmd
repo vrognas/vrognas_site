@@ -6,11 +6,12 @@ date: last-modified
 The NONMEM Users Network (NMusers) is maintained by ICON Clinical Research LLC.
 
 NMusers is a mailing list for professionals that use the NONMEM software.
-The mail archive can be accessed here: [https://www.mail-archive.com/nmusers@globomaxnm.com/](https://www.mail-archive.com/nmusers@globomaxnm.com/)
+The mail archive can be accessed here: [https://www.mail-archive.com/nmusers@globomaxnm.com/](https://www.mail-archive.com/nmusers@globomaxnm.com/).
+It was previously hosted at `https://www.cognigen.com/nonmem/nm/`.
 
 ## Subscribe
 
-To **subscribe** to nmusers, send the following in the body (not the subject line) of an email message to `majordomo@globomaxnm.com`:
+To **subscribe** to nmusers, send the following in the body (not the subject line) of an email message to [majordomo@globomaxnm.com](mailto:nmusers-request@iconplc.com):
 
 ```
 subscribe nmusers
@@ -24,13 +25,13 @@ If you wish to subscribe another address instead (such as a local redistribution
 subscribe nmusers other-address@your_site.your_net
 ```
 
-Alternatively, requests to subscribe to the network can be sent to: nmusers-request@iconplc.com.
+Alternatively, requests to subscribe to the network can be sent to: [nmusers-request@iconplc.com](mailto:nmusers-request@iconplc.com).
 
-Once subscribed, you may contribute to the discussion by emailing: nmusers@globomaxnm.com.
+Once subscribed, you may contribute to the discussion by emailing: [nmusers@globomaxnm.com](mailto:nmusers@globomaxnm.com).
 
 ## Unsubscribe
 
-To **unsubscribe** from NMusers, send the following in the body (not the subject line) of an email message to `majordomo@globomaxnm.com`:
+To **unsubscribe** from NMusers, send the following in the body (not the subject line) of an email message to [majordomo@globomaxnm.com](mailto:nmusers-request@iconplc.com):
 
 ```
 unsubscribe nmusers
