@@ -1,6 +1,7 @@
 ---
 title: "Pharmacokinetics"
 subtitle: "Dose-Exposure"
+date: last-modified
 ---
 
 > "What the body does to the drug"
