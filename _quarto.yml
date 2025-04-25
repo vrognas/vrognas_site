@@ -28,6 +28,8 @@ website:
             href: docs/aux/index.qmd
           - text: "Concepts of the Craft"
             href: docs/concepts/index.qmd
+          - text: "Gathering of Guilds"
+            href: docs/guilds/index.qmd
           - text: "Modeling Methods"
             href: docs/modeling/index.qmd
           - text: "Pathology Primers"
@@ -44,16 +46,18 @@ website:
       - icon: mortarboard
         href: https://scholar.google.com/citations?user=RBJi1XQAAAAJ
   sidebar:
-    - title: "CV/Resume"
+    - id: cv
+      title: "CV"
       style: "floating"
-    - title: "Portfolio"
+    - id: portfolio
+      title: "Portfolio"
       style: "floating"
     - id: pathology-primers
-      title: "Pathology primers"
+      title: "Pathology Primers"
       collapse-level: 1
       style: "floating"
       contents:
-        - section: "Pathology primers"
+        - section: "Pathology Primers"
           href: docs/pathology-primers/index.qmd
           contents:
             - section: "Autoimmune diseases"

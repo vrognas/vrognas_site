@@ -1,5 +1,5 @@
 ---
-title: "Guilds"
+title: "Gathering of Guilds"
 subtitle: "Get in contact with the community"
 ---
 
