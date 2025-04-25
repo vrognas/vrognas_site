@@ -19,23 +19,23 @@ website:
   navbar:
     left:
       - text: "CV"
-        href: docs/cv/
+        href: docs/cv/index.qmd
       - text: "Portfolio"
-        href: docs/portfolio/
+        href: docs/portfolio/index.qmd
       - text: "Resources"
         menu:
           - text: "Auxiliary Arts"
-            href: docs/aux/
+            href: docs/aux/index.qmd
           - text: "Concepts of the Craft"
-            href: docs/concepts/
+            href: docs/concepts/index.qmd
           - text: "Modeling Methods"
-            href: docs/modeling/
+            href: docs/modeling/index.qmd
           - text: "Pathology Primers"
-            href: docs/pathology-primers/
+            href: docs/pathology-primers/index.qmd
           - text: "Pharmacopœia"
-            href: docs/pharmacopeia/
+            href: docs/pharmacopeia/index.qmd
           - text: "Tools of the Trade"
-            href: docs/tools-of-the-trade/
+            href: docs/tools-of-the-trade/index.qmd
     tools:
       - icon: github
         href: https://github.com/vrognas
@@ -54,7 +54,7 @@ website:
       style: "floating"
       contents:
         - section: "Pathology primers"
-          href: docs/pathology-primers/
+          href: docs/pathology-primers/index.qmd
           contents:
             - section: "Autoimmune diseases"
               contents:
@@ -95,27 +95,27 @@ website:
       style: "floating"
       contents:
         - text: "Pharmacopœia"
-          href: docs/pharmacopeia/
+          href: docs/pharmacopeia/index.qmd
           contents:
           - section: "(J) Antiinfectives for systemic use"
             contents:
               - text: "(01) Antibacterials for systemic use"
-                href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/
+                href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/index.qmd
               - text: "(05) Antivirals for systemic use"
-                href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J05_antivirals-for-systemic-use/
+                href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J05_antivirals-for-systemic-use/index.qmd
           - section: "(L) Antineoplastic and immunomodulating agents"
             contents:
               - section: "(04) Immunosuppressants"
                 contents:
                   - text: "(A) Immunosuppressants"
-                    href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L04_immunosuppressants/L04A_immunosuppressants/
+                    href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L04_immunosuppressants/L04A_immunosuppressants/index.qmd
     - id: concepts
       title: "Concepts of the Craft"
       collapse-level: 2
       style: "floating"
       contents:
         - section: "Concepts of the Craft"
-          href: docs/concepts/
+          href: docs/concepts/index.qmd
           contents:
           - section: "Pharmacokinetics"
             href: docs/concepts/pk.qmd
@@ -148,7 +148,7 @@ website:
       style: floating
       contents:
       - section: "Modeling Methods"
-        href: docs/modeling/
+        href: docs/modeling/index.qmd
         contents:
         - text: "PK"
           href: docs/modeling/pk/pk.qmd
@@ -174,7 +174,7 @@ website:
       style: "floating"
       contents:
         - section: "Tools of the Trade"
-          href: docs/tools-of-the-trade/
+          href: docs/tools-of-the-trade/index.qmd
           contents:
           - section: "NONMEM"
             contents:
@@ -190,7 +190,7 @@ website:
       style: "floating"
       contents:
         - section: "Auxiliary Arts"
-          href: docs/aux/
+          href: docs/aux/index.qmd
           contents:
           - text: "Data Visualization"
             href: docs/aux/data-viz.qmd
@@ -223,7 +223,7 @@ website:
         href: https://scholar.google.com/citations?user=RBJi1XQAAAAJ
 format:
   html:
-    canonical-url: true
+    canonical-url: "https://www.vrognas.com/"
     include-in-header:
       - seo.html
       - pk-operators.html
