@@ -3,9 +3,9 @@ title: "NMusers"
 date: last-modified
 ---
 
-The NONMEM Users Network (NMusers) is maintained by ICON Clinical Research LLC.
+The NONMEM Users Network (NMusers) is a mailing list for professionals that use the NONMEM software.
 
-NMusers is a mailing list for professionals that use the NONMEM software.
+It is maintained by ICON Clinical Research LLC, and has been running since at least [1995](https://web.archive.org/web/20211122230941/https://www.cognigen.com/nonmem/nm/99oct191995.html).
 The mail archive can be accessed here: [https://www.mail-archive.com/nmusers@globomaxnm.com/](https://www.mail-archive.com/nmusers@globomaxnm.com/).
 It was previously hosted at `https://www.cognigen.com/nonmem/nm/`.
 
@@ -85,8 +85,3 @@ from:"Mac Oglesby"
 date:[20190101 TO 20191231] Breidenbach
 date:202204*
 help sort:newest
-
-<form action="/search" method=get>
-<input type="hidden" name="l" value="nmusers@globomaxnm.com">
-<input type=text name="q" value="" size=25>
-</form>
