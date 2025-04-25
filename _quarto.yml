@@ -244,6 +244,7 @@ format:
     theme:
       light: [cosmo, theme-light.scss]
       dark: [cosmo, theme-dark.scss]
+    fontsize: 1.1em
     highlight-style: github
     css: styles.css
     toc: true
