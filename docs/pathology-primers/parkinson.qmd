@@ -1,5 +1,6 @@
 ---
 title: "Parkinson's disease"
+date: last-modified
 ---
 
 :::{.callout-caution title="Under construction"}

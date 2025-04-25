@@ -1,5 +1,6 @@
 ---
 title: "Workbench"
+date: last-modified
 ---
 
 * Shiny E-max calculator

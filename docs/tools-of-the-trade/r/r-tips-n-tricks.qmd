@@ -1,5 +1,6 @@
 ---
 title: "R Tips-n-Tricks"
+date: last-modified
 ---
 
 ## How to transfer your library when updating R

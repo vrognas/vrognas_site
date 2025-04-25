@@ -1,5 +1,6 @@
 ---
 title: "Statins"
+date: last-modified
 ---
 
 Statins (or **HMG-CoA reductase inhibitors**) are a class of medications that reduce illness and mortality in people who are at high risk of cardiovascular disease.

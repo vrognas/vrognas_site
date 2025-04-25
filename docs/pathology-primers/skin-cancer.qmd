@@ -1,5 +1,6 @@
 ---
 title: "Skin cancer"
+date: last-modified
 ---
 
 ## What is skin cancer?

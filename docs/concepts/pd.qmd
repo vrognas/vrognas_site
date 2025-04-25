@@ -1,6 +1,7 @@
 ---
 title: "Pharmacodynamics"
 subtitle: "Exposure-Response"
+date: last-modified
 ---
 
 > "What the drug does to the body"

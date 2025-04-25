@@ -1,5 +1,6 @@
 ---
 title: "References"
 subtitle: "All the information you need to learn more about the topics covered on this page."
+date: last-modified
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Pharmacopœia Pharmacometrika"
+date: last-modified
 ---
 
 This section presents a high-level overview of selected drug classes and their mechanisms of action.

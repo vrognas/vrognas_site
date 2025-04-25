@@ -1,5 +1,6 @@
 ---
 title: "Bacterial infections"
+date: last-modified
 ---
 
 ## What are bacterial infections?

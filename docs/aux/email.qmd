@@ -1,5 +1,6 @@
 ---
 title: "Email like a Boss"
+date: last-modified
 ---
 
 * Remove all notifications about new email.

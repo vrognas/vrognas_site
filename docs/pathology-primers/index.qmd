@@ -1,5 +1,6 @@
 ---
 title: "Pathology Primers"
+date: last-modified
 ---
 
 Each primer provides a concise, high-level summary of a disease relevant to pharmacometricians, focusing on biomarkers, drug regimens, and modeling approaches.

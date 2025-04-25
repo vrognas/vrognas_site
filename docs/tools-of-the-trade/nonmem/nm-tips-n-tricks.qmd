@@ -1,6 +1,7 @@
 ---
 title: "NONMEM Tips-n-Tricks"
 code-overflow: scroll
+date: last-modified
 ---
 
 log-transform both sides: [cognigen.com/nonmem/nm/99apr232002.html](cognigen.com/nonmem/nm/99apr232002.html)
