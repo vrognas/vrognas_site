@@ -1,4 +1,4 @@
 ---
 title: "PKPD"
-subtitle: "Dose-Response-Outcome"
+subtitle: "Dose-Exposure-Response-Outcome"
 ---
