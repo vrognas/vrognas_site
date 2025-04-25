@@ -12,7 +12,7 @@ website:
   twitter-card: true
   site-url: https://vrognas.com
   repo-url: https://github.com/vrognas/vrognas_site
-  image: "images/vrognas.png"
+  image: "images/vrognas.avif"
   reader-mode: true
   page-navigation: true
   bread-crumbs: true

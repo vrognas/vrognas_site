@@ -4,7 +4,7 @@ subtitle: "Pharmacometric Engineer"
 about:
     id: about-vrognas
     template: jolla
-    image: "images/vrognas.png"
+    image: "images/vrognas.avif"
     image-shape: round
     image-alt: "A profile picture of Viktor"
 ---
