@@ -184,6 +184,16 @@ website:
             contents:
               - text: "Tips-n-tricks"
                 href: docs/tools-of-the-trade/r/r-tips-n-tricks.qmd
+    - id: guilds
+      title: "Gathering of Guilds"
+      collapse-level: 2
+      style: "floating"
+      contents:
+        - section: "Gathering of Guilds"
+          href: docs/guilds/index.qmd
+          contents:
+          - text: "NMusers"
+            href: docs/guilds/nmusers.qmd
     - id: aux
       title: "Auxiliary Arts"
       collapse-level: 2
