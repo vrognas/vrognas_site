@@ -4,34 +4,82 @@ code-overflow: scroll
 date: last-modified
 ---
 
-log-transform both sides: [cognigen.com/nonmem/nm/99apr232002.html](cognigen.com/nonmem/nm/99apr232002.html)
+## Introduction
 
-## Dataset
+NONMEM is a computer program.
+The name stands for “NONlinear Mixed Effects Modeling.”
+
+## Data review
+
+::: {.callout-important}
+Do a thorough exploratory data analysis before starting to model.
+:::
 
 * Tab-separated (less likely to be present in the actual data)
-* Start every dataset with a "Comment" column, the `IGNORE=@` will then ignore a row if there is a text comment!
-    * The second column should be a `REF` column with each line number
+* Start every dataset with a "Comment" column, the `IGNORE=@` will then ignore a row if there is a text comment
+  * The second column should be a `REF` column with each line number
 
 ### Sparse vs Rich data
 
-"Richness" of data has different meaning.
+The "richness" of data has different meanings.
+
 It can relate to ETAs and RSE/RUV.
 It can also relate to where on the PK-curve samples are taken.
 If samples are taken on in the absorption-phase (pre-C~max~), around C~max~, and in the elimination phase, and C~trough~ (pre-dose), then it can be considered "rich" sampling.
 
 * PK Studies:
-    * "Intensive studies" (Phase 1/2)
-        * Few subjects (homogeneous)
-        * Single dose
-        * Frequent (rich) sampling
-    * "Population studies" (Phase 3/4)
-        * Many subjects (heterogeneous)
-        * Multiple dose
-        * Sparse sampling
+  * "Intensive studies" (Phase 1/2)
+    * Few subjects (homogeneous)
+    * Single dose
+    * Frequent (rich) sampling
+  * "Population studies" (Phase 3/4)
+    * Many subjects (heterogeneous)
+    * Multiple dose
+    * Sparse sampling
 
-## Modeling
+###  Modify the NONMEM-dataset, inside a model file
 
-### Coding
+Let's say `TIME` is all -99, and we want to modify it.
+
+```verilog
+$INPUT ID TIME NTIME TAFD DV TYPE MDV EVID
+       AMT CMT DOSE AGE SEX HT WT BMI BSA
+       BLOQ COMMENT=DROP
+
+$DATA data.csv IGNORE=@
+
+$SUBROUTINE ADVAN=13 TOL=6
+
+$MODEL
+  COMP=(CENTRAL,DEFDOSE,DEFOBS)
+  COMP=PERIPHERAL
+
+$INFN
+  IF (ICALL == 1) THEN # <1>
+    DOWHILE(DATA) # <2>
+      IF (NEWIND < 2) START_TIME = TAFD # <3>
+      TIME = TAFD - START_TIME # <3>
+    ENDDO
+  ENDIF
+
+$PK
+...
+```
+1. `ICALL==1`, the routine has been called for initialization at the beginning of a NONMEM problem, one such call per problem
+2. `DOWHILE` loop over entire dataset
+3. Modifying statements here. They will be considered as "original dataset" by NONMEM.
+
+
+## Modeling: Writing the control stream
+
+One hint on control files: never write one from scratch.
+Instead, find a control file that does something similar to what you want to do, and modify it as necessary.
+
+`$ERROR` has almost nothing to do with error.
+It is used to calculate the result.
+It should really be called `$RESULT` instead.
+
+### General coding
 
 * When you use `F`, `CMT` matters (Credit: Maria Kjellsson)
 * `ETADER=3`: Get out of a local minima (Credit: Rikard Nordgren)
@@ -41,9 +89,9 @@ If samples are taken on in the absorption-phase (pre-C~max~), around C~max~, and
 * **Always add an ETA**, even if you don't intend to use it; then fix it to 0. This allows for easy estimation of the variability in case you need it, without changing the code.
 * Avoid temporary variables in the `$DES`-block. The more code you have there, the slower your model will run.
 * Proportional RUV is usually only needed if your measurement covers more than 3 orders of magnitude.
-    * PD biomarkers usually only cover 1--2 orders of magnitude, so only additive RUV is needed.
+  * PD biomarkers usually only cover 1--2 orders of magnitude, so only additive RUV is needed.
 
-### Time-to-event
+### Time-to-event models
 
 * Non-parametric analysis: Log-rank test
 * Semi-parametric analysis: Cox PH (does not assume a distribution)
@@ -54,36 +102,36 @@ Weibull\*COV *forces* proportional hazard (Credit: Andrew Hooker)
 * TTE simulations can be done either with a dataset containing all possible event times, or using `MTIME` (Credit: Joakim Nyberg)
 
 * logistic=expit=inverse logit
-    * logit≈probit(scaled)
+  * logit≈probit(scaled)
 
-### Estimation
+## Estimation methods/algorithms
 
 In general, always start with FOCE, then turn to EM.
 For example, if LAPLACE causes issues, go to EM.
-When building a relatively complex PKPD model (e.g. 47 parameters and 11 differential equations), there can be issues using FOCE so an EM-method is warranted.
+When building a relatively complex PKPD model (e.g., 47 parameters and 11 differential equations), there can be issues using FOCE so an EM-method is warranted.
 See [Bach et al. (2021)](https://doi.org/10.1007/s10928-021-09753-0) for a case study of FOCE vs EM-methods.
 
-#### Classical methods
+### Classical methods
 
 Classical methods want to be "statistically fair" to all possibilities.
 
-##### Robustness {#sec-classical-robustness}
+#### Robustness {#sec-classical-robustness}
 
 * `SADDLE_RESET=1`
 * `MCETA` (most important during first iterations)
-    * If `MCETA` ends up in local minima, increase value, or:
+  * If `MCETA` ends up in local minima, increase value, or:
 
 ```verilog
 $ESTIMATION METHOD=1 MCETA=1000 MAXEVAL=200
 $ESTIMATION METHOD=1 MCETA=1    MAXEVAL=9999
 ```
 
-##### Reproducibility
+#### Reproducibility
 
 * `RANMETHOD=4P`
 * `SEED=123456789`
 
-##### First-order conditional estimation (FOCE)
+#### First-order conditional estimation (FOCE)
 
 Always use the `FAST` option, tehre are very few cases where `FAST` is suboptimal.
 
@@ -91,23 +139,40 @@ Always use the `FAST` option, tehre are very few cases where `FAST` is suboptima
 The `FAST` option uses MU-modeling to be effective.
 :::
 
-#### EM-methods
+### EM-methods
 
-##### Reproducibility
+#### Reproducibility
 
 * `RANMETHOD=3S2P`
 * `SEED=123456789`
 
-##### Iterative two-stage (ITS)
+For the stochastic methods (IMP, IMPMAP, SAEM and BAYES), distribution of subjects to different nodes for computations is dependent on number of processors.
+This leads to differences in sequences of random numbers generated during computations that could make the results dependent on the number of processors.
 
-##### Importance sampling (IMP)
+Moreover, with the parallel processing option `PARSE_TYPE=4`, the results of the stochastic methods may not be exactly reproducible even when repeated on the same number of processors, because the distribution of the subjects to each processor may depend on the computer load.
+The option `PARSE_TYPE=1` (equal number of subjects at each node) guarantees the results to be independent of the computer load.
+Still, the results will depend on the number of used processors.
+
+Copy this file: `/opt/local64/nonmem/nm_7.4.4_g510/run/mpilinux8.pnm`
+Into `my_own_parafile.pnm` and put it somewhere resonable.
+Then change `PARSE_TYPE` to 1:
+
+```
+$GENERAL
+; [nodes] is a User defined variable.
+NODES=[nodes] PARSE_TYPE=1
+```
+When running models, use your own parafile: `-parafile=my_own_parafile.pnm`
+
+#### Iterative two-stage (ITS)
+
+#### Importance sampling (IMP)
 
 * `RANMETHOD=S2` can use fewer IMSAMPLEs for IMP
 * `METHOD=IMPMAP` is equivalent to `METHOD=IMP MAPITER=1 MAPINTER=1`
 * `CINTERVAL=1` is fine for IMP
 
-###### Stochastic noise
-
+::: {.callout-note appearance="minimal" collapse="true" title="Stochastic noise"}
 ```verilog
 $ESTIMATION METHOD=ITS
             INTERACTION
@@ -138,7 +203,7 @@ $ESTIMATION METHOD=IMPMAP
 $COVARIANCE UNCONDITIONAL MATRIX=S TOL=12 SIGL=12 SLOW
 ```
 
-The iterations for the initial `ITS` step seems in this case to be quite stable with some artefacts: 
+The iterations for the initial `ITS` step seems in this case to be quite stable with some artifacts: 
 
 ```verilog
 iteration 175 OBJ= 4693.4674554341409
@@ -195,6 +260,7 @@ iteration 131 OBJ= 4336.1893012015007 eff.= 417. Smpl.= 1000. Fit.= 0.96369
 #TERM: 
 OPTIMIZATION WAS COMPLETED 
 ```
+:::
 
 ::: {.callout-note}
 If `eff.` divided by `Smpl.` is not approximately equal to `IACCEPT`, then tweak something.
@@ -242,7 +308,7 @@ Do not compare IMP and FOCE OFVs
 
 :::
 
-##### SAEM
+#### SAEM
 
 * For binary data
 * SAEM is like a search light, dose not need as large of a starting density ("umbrella") as IMP.
@@ -250,7 +316,46 @@ Do not compare IMP and FOCE OFVs
 
 [http://monolix.lixoft.com/tasks/population-parameter-estimation-using-saem/](http://monolix.lixoft.com/tasks/population-parameter-estimation-using-saem/)
 
-## Software-specifics
+
+### Random ETA samples:
+
+When used in nonmem 7.5, a recommended example/setup would be (as shown on page 152 of nm750.pdf)
+
+```verilog
+$SIZES ISAMPLEMAX=250
+... 
+
+$ESTIMATION METHOD=SAEM
+            NBURN=500
+            NITER=1000
+            MASSRESET=1
+            ISAMPLE=2
+            PRINT=20
+            NOPRIOR=1
+            RANMETHOD=P
+
+$ESTIMATION METHOD=SAEM
+            NBURN=0
+            NITER=0
+            MASSRESET=0
+            ETASAMPLES=1
+            ISAMPLE=200
+            EONLY=1 
+
+$ESTIMATION METHOD=IMP
+            NITER=5
+            MASSRESET=1
+            ETASAMPLES=0
+            ISAMPLE=1000
+            EONLY=1
+            PRINT=1
+            MAPITER=0 
+```
+
+(Credit: Robert Bauer)
+
+
+## Running NONMEM
 
 ### Grok NONMEM
 
@@ -265,7 +370,7 @@ Do not compare IMP and FOCE OFVs
 
 * NONMEM places the low bound equal to 1/100 (or 1/1000) of the initial value even if it is set to zero in the code. You may rerun with lower initial value or put `NOTHETABOUNDTEST` to the estimation record. (Credit: Leonid Gibiansky)
 
-### Faster parallel NONMEM:
+### Faster parallel NONMEM
 
 `--threads-per-core=1`: Do not hyperthread.  
 `FILE07–39` should be size 0; in fact, `FILE*` should be size 0.
@@ -275,30 +380,52 @@ Therefore, use `--maxlim=3`: Do not use diskspace (slow).
 execute -nmfe_options="[sbatchargs=--threads-per-core=1] -maxlim=3  -parafprint=100"
 ```
 
-## Model Evaluation
+### Interactive Control of NONMEM runs
+
+Find the directory where NONMEM is running (`NM_run1/` in PsN) and manually create an empty file with a different name according to the desired action.
+
+```bash
+touch file.sig
+```
+
+Here's a list:
+
+| Action | Description | Filename |
+| :--- | :--- | :--- |
+| Print toggle | Monitor estimation progress | `print.sig` |
+| Paraprint toggle | Monitor parallel processing traffic | `paraprint.sig` |
+| Next | Move on to next estimation mode or next estimation. NONMEM grinds a couple of iterations more and then it terminates nicely as if the maximum number of function evaluations had been reached. | `next.sig` |
+| Stop | End the present run cleanly | `stop.sig` |
+| Subject print toggle | | `subject.sig` |
+
+: Interactive control {#tbl-nm-interactive tbl-colwidths="[30, 50, 20]"}
+
+([Credit: Paolo Denti](https://www.mail-archive.com/nmusers@globomaxnm.com/msg03990.html))
+
+## Interpreting the results, model validation
+
+::: {.callout-tip}
+The "best" model isn’t necessarily the one with the lowest objective function.
+:::
 
 * QA
 * ETA ShrinkageSD < 20% ? (then we can use EBE based diagnostics)
 * EPS ShrinkageSD < 20% ? (then we can look at IPRED vs DV)
 
 * Condition number (CN) – `$COVARIANCE PRINT=E`
-    * Calculated differently in different software
-        * In PsN it is calculated as dividing the largest eigenvalue with the smallest
-        * Gabrielsson and Wiener calculates it as log(largest/smallest)
-    * Different guidelines for ill-conditioning
-        * If CN < 10p, where p = "number of estimable parameters", then it’s good
-        * There are also references that point to CN < 106
-        * < 1000 (seems to relate more to linear models, or PK-models with 3 parameters (CL, V, KA))
+  * Calculated differently in different software
+    * In PsN it is calculated as dividing the largest eigenvalue with the smallest
+    * Gabrielsson and Wiener calculates it as log(largest/smallest)
+  * Different guidelines for ill-conditioning
+    * If CN < 10p, where p = "number of estimable parameters", then it’s good
+    * There are also references that point to CN < 106
+    * < 1000 (seems to relate more to linear models, or PK-models with 3 parameters (CL, V, KA))
 * NRD = Number of Required Digits
 
-::: {.callout-tip}
-
-### Significant improvement
-
+::: {.callout-tip title="Significant improvement"}
 * Don't directly associate OFVs with p-values ([Wählby et al. 2001](https://doi.org/10.1023/A:1011527125570))
-    * Regard a drop in OFV with ~10 ([Byon et al. 2013](https://doi.org/10.1038/psp.2013.26))
+  * Regard a drop in OFV with ~10 ([Byon et al. 2013](https://doi.org/10.1038/psp.2013.26))
 * boxcox ETA: dOFV > -10.827 (p < 0.001)
-
 :::
 
 ### Bias
@@ -336,78 +463,14 @@ Confidence interval (ci) and prediction interval (pi) for VPC.
 
 * Mixture prior slide 31. Prior+flat prior "what if we are wrong". When conflict: up-weights data, downplays history
 * Two-stage approach: Apply a model to each individuals data
-    * Require much data per individual.
-    * OK mean parameters (i.e. typical individual)
-    * But IIV id inflated (also diff ID -> diff model)
+  * Require much data per individual.
+  * OK mean parameters (i.e. typical individual)
+  * But IIV id inflated (also diff ID -> diff model)
 * NONMEM: Apply a model to all individuals data
 
 :::
 
-## Interactive Control of NONMEM runs
-
-Find the directory where NONMEM is running (`NM_run1/` in PsN) and manually create an empty file with a different name according to the desired action.
-
-```bash
-touch file.sig
-```
-
-Here's a list:
-
-| Action | Description | Filename |
-| :--- | :--- | :--- |
-| Print toggle | Monitor estimation progress | `print.sig` |
-| Paraprint toggle | Monitor parallel processing traffic | `paraprint.sig` |
-| Next | Move on to next estimation mode or next estimation. NONMEM grinds a couple of iterations more and then it terminates nicely as if the maximum number of function evaluations had been reached. | `next.sig` |
-| Stop | End the present run cleanly | `stop.sig` |
-| Subject print toggle | | `subject.sig` |
-
-
-[https://www.mail-archive.com/nmusers@globomaxnm.com/msg03990.html](https://www.mail-archive.com/nmusers@globomaxnm.com/msg03990.html)
-
-(Credit: Paolo Denti)
-
-## Random ETA samples:
-
-When used in nonmem 7.5, a recommended example/setup would be (as shown on page 152 of nm750.pdf)
-
-```verilog
-$SIZES ISAMPLEMAX=250
-... 
-
-$ESTIMATION METHOD=SAEM
-            NBURN=500
-            NITER=1000
-            MASSRESET=1
-            ISAMPLE=2
-            PRINT=20
-            NOPRIOR=1
-            RANMETHOD=P
-
-$ESTIMATION METHOD=SAEM
-            NBURN=0
-            NITER=0
-            MASSRESET=0
-            ETASAMPLES=1
-            ISAMPLE=200
-            EONLY=1 
-
-$ESTIMATION METHOD=IMP
-            NITER=5
-            MASSRESET=1
-            ETASAMPLES=0
-            ISAMPLE=1000
-            EONLY=1
-            PRINT=1
-            MAPITER=0 
-```
-
-(Credit: Robert Bauer)
-
-## University of Maryland
-
-[https://ctm.umaryland.edu/#/ms-pharma](https://ctm.umaryland.edu/#/ms-pharma)
-
-## Error messages
+## Troubleshooting
 
 ### EXIT OCCURS DURING SEARCH FOR ETA
 
@@ -431,10 +494,10 @@ Things to try:
 * Change `TOL` in `$SUBROUTINES` record.
 * Change `SIGL` and `NSIG` in `$ESTIMATION`.
 * Change initial estimates
-    * To something else within a realistic range.
-    * To the values of the previous model.
-    * If this is a complex model, try to start with something simpler, like linear, and use the output as initial estimates, and also look for outliers.
-    * Increase initial estimate of RUV.
+  * To something else within a realistic range.
+  * To the values of the previous model.
+  * If this is a complex model, try to start with something simpler, like linear, and use the output as initial estimates, and also look for outliers.
+  * Increase initial estimate of RUV.
 * Sometimes `MCETA=1000` in `$ESTIMATION` records helps with this message (@sec-classical-robustness).
 * Add IIV on RUV.
 
@@ -444,6 +507,10 @@ Things to try:
 * Use "Disease modifying" instead of "protective" (Credit: Mats Karlsson)
 * Time varying covariate: Specify as "regressor".
 :::
+
+## University of Maryland
+
+[https://ctm.umaryland.edu/#/ms-pharma](https://ctm.umaryland.edu/#/ms-pharma)
 
 ## References
 
