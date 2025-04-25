@@ -6,18 +6,18 @@ date: last-modified
 :::{.callout-caution title="Under construction"}
 :::
 
+## Write a paper/article
 
-## Write/read a paper/article
-
-### Write
+* Story/study
+* IMRAD
 
 Consult recent articles in target journal!
 
-![](images/writing.png)
-￼
-Frontload your argument
+![Story (purple) and study (orange) in IMRAD-format. Key section-specific questions to guide writers. While separated here, story and study overlap throughout the manuscript.](images/writing.png)
 
-#### Introduction
+Frontload your argument.
+
+### Introduction
 
 1. General background/problem
 2. Specific focus/problem
@@ -26,7 +26,15 @@ Frontload your argument
 5. Hypothesis
 6. Aim/objectives
 
-#### Discussion
+### Methods
+
+Using this section, it should be possible to reproduce the results.
+
+### Results
+
+Should be like a walk through an art-gallery.
+
+### Discussion
 
 1. Recap; Summarize findings. ”Long abstract of Introduction and Results”.
 2. Findings in context of previous research. Three implications max.
@@ -34,12 +42,12 @@ Frontload your argument
     2. How have you filled the gap?
 3. Remaining issues, e.g.: How does the design limit your contribution? Directions for future research
 
-#### Conclusion
+### Conclusion
 
 1. What’s the key lesson from your story?
 2. What is the inevitable story-in-waiting?
 
-#### Abstract: after paper is done
+### Abstract: after paper is done
 
 1. A conference abstract should be a coherent stand-alone piece. By simply copy-pasting sentences from different sections of a manuscript, you risk having a disjointed and incoherent abstract.
 2. DO NOT USE ALL CAPS FOR YOUR ABSTRACT TITLE.
@@ -58,12 +66,59 @@ Frontload your argument
 
 ![](images/nature-abstract.jpeg)
 
-### Typography
+## Typography
 
 practicaltypography.com  
 typewolf.com  
 prowebtype.com  
 https://www.supremo.co.uk/typeterms/  
+
+abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+
+The four most important typographic considerations for body text are **point size**, **line spacing**, **line length**, and **font**, because those choices determine how the body text looks.
+
+* **Point size** should be 10--12 points in printed documents, 15--25 pixels on the web.
+  * If you’re not required to use 12 point, don’t.
+  Try sizes down to 10 point, including intermediate sizes like 10.5 and 11.5 point
+* **Line spacing** should be 120--145% of the point size.
+* On screen, dark-gray text can be more comfortable to read than black text.
+* The average **line length** should be 45--90 characters (including spaces).
+* Use "curly" "quotation" "marks", not straight ones.
+* Use **bold** or *italic* as little as possible, and ***not together***.
+  * With a serif font, use *italic* for gentle emphasis, or **bold** for heavier emphasis.
+  * With a sans serif font, skip *italic* and use **bold** for emphasis.
+  * Yet another option for emphasis is to increase the font size slightly.
+  Move up in half-point increments until you get the emphasis you need.
+* [Never underline]{.underline}, except perhaps for web links.
+* ALL CAPS, **bold**, and *italic* are fine for less than one line of text, not more.
+* Use centered text sparingly.
+* Your Headings Aren’t Titles, Avoid Title Case (except for actual Titles).
+  * Use the smallest point-size increment necessary to make a visible difference.
+  If your text is set in 12 point, you needn’t go up to 14 or 15 point.
+  Try a smaller increase---to 12.5 or 13 point.
+  * Don't use more than three levels of headings.
+  * Headings are signposts for readers that reveal the structure of your **argument**, not you document.
+  Headings that announce every topic, subtopic, minitopic, and microtopic are exhausting.
+  If you write from an outline, that can be a good starting point for your headings, but don’t stop there---simplify it further.
+* Put only one space between sentences.
+* Don’t use multiple word spaces or other white-space characters in a row.
+* If you don’t have real [small caps]{.smallcaps}, don’t use them at all.
+* Use 5--12% extra letterspacing with ALL CAPS and [small caps]{.smallcaps}.
+* Kerning should always be turned on.
+* Use first-line indents that are one to four times the point size of the text, or use 4--10 points of space between paragraphs. Don’t use both.
+* Always use hyphenation with justified text.
+* Don’t confuse hyphens (-) and dashes(--, ---), and don’t use multiple hyphens as a dash.
+* Use ampersands (&) sparingly, unless included in a proper name.
+* Use proper symbols (e.g. ellipses ...)---not alphabetic approximations.
+* In a document longer than three pages, one exclamation point is plenty.
+* Put a nonbreaking space
+  * After paragraphs
+  * After section marks
+  * Between value and unit (e.g., 1 mg)
+  * After reference marks (Fig. 3, Figure 4)
+  * After titles (Prof. Doe)
+* (Parentheses), [brackets], and {braces} should generally not adopt the formatting of the surrounded material.
+* To make a signature line, hold down the underscore (_) key until you get the length you need.
 
 ## Figures
 
@@ -92,17 +147,6 @@ Effective captions typically include the following elements:
 given.
 
 DO NOT simply restate information already given in the figure or analysis of the data.
-
-### Read
-
-If you cannot write; read.
-
-If interesting, proceed to next.
-
-1. Title + keywords
-2. Abstract + conclusion
-3. Discussion
-4. Methods
 
 ## References
 
