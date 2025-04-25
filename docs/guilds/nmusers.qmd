@@ -5,7 +5,16 @@ title: "NMusers"
 :::{.callout-caution title="Under construction"}
 :::
 
-# NMMUSERS
+
+The NONMEM Users Network (NMusers) is maintained by ICON Clinical Research LLC.
+
+NMusers Archive
+The NONMEM Users Network Archive is maintained by Cognigen and contains a searchable database of every NMusers message sent since its inception.
+
+NMUsers is a mailing list for professionals that use the NONMEM software.
+The mail archive can be accessed here: [https://www.mail-archive.com/nmusers@globomaxnm.com/](https://www.mail-archive.com/nmusers@globomaxnm.com/)
+
+## Subscribe
 
 To **subscribe** to nmusers, send the following in the body (not the subject line) of an email message to `majordomo@globomaxnm.com`:
 
@@ -20,6 +29,12 @@ If you wish to subscribe another address instead (such as a local redistribution
 ```
 subscribe nmusers other-address@your_site.your_net
 ```
+
+Alternatively, requests to subscribe to the network can be sent to: nmusers-request@iconplc.com.
+
+Once subscribed, you may contribute to the discussion by emailing: nmusers@globomaxnm.com.
+
+## Unsubscribe
 
 To **unsubscribe** from nmusers, send the following in the body (not the subject line) of an email message to `majordomo@globomaxnm.com`:
 
