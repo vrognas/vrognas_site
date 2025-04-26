@@ -7,13 +7,55 @@ Regulatory documents are generally filled with walls of text, and much is up for
 
 This is why a clear yes/no answer from regulatory agencies are not possible until the final asssessment, when an assessment and interpretation of the totality of evidence has been made.
 
-## Guidelines and QA's
+## Good Clinical Practice (GCP)
 
-### ICH
+GCP is an international ethical and scientific quality standard for designing, conducting, recording, and reporting trials involving human subjects' participation.
+Compliance with this standard provides public assurance that trial subjects' rights, safety, and well-being are protected, consistent with the principles in the **Declaration of Helsinki**, and that the clinical trial data are credible.
 
-### EMA
+ICH E6 provides a unified global standard for ethics, data quality, and subject safety.
+Other ICH guidelines relevant to the conduct of clinical trials are:
 
-### FDA
+* E2A (clinical safety data management)
+* E3 (clinical study reporting)
+* E7 (geriatric populations)
+* E8 (general considerations for clinical trials)
+* E9 (statistical principles)
+* E11 (pediatric populations)
+
+| Abbreviation | Name |
+| :----------: | :--- |
+| ADR | Adverse drug reaction |
+| AE | Adverse event |
+| CRF | Case report form |
+| CRO | Contract research organization |
+| IB | Investigator's Brochure |
+| IDCM | Independent Data-Monitoring Committee |
+| IEC | Independent Ethics Committee |
+| IRB | Institutional Review Board |
+| SAE | Serious Adverse Event |
+
+: Clinical study abbreviations {#tbl-abbr tbl-colwidths="[20, 40, 40]"}
+
+| Principle from ICH E6 | Relevance to pharmacometrics |
+| :-------- | :-------------- |
+| 2.4 Adequate prior data | Dose‑setting PK modeling must rest on solid non‑clinical & early clinical results. |
+| 2.5 Scientific soundness | Protocol must pre‑define sampling times, bioanalytical methods, population‑PK or NCA strategy. |
+| 2.10 Accurate recording/storage | Raw concentration data ⇒ audit‑trails, ALCOA (Attributable‑Legible‑Contemporaneous‑Original‑Accurate). |
+| 2.13 Quality systems | Risk‑based checks on data pipelines, LIMS, PK analysis scripts. |
+
+: Principles {#tbl-principles tbl-colwidths="[30, 70]"}
+
+Take‑home checklist for pharmacometricians
+
+| Task | GCP Hook |
+| :--- | :------- |
+| Build a sampling‑time QC script | §5.0 Risk control; §4.9 Source data integrity |
+| Store raw, cleaned, and analysis datasets with hashes | §2.10 Data verifiability; §5.5.3 Audit‑trail |
+| Validate NONMEM/R scripts (unit tests) | §5.5.3 Computerised‑system validation |
+| Document model decisions in a contemporaneous log | §4.9 ALCOA; §5.18 Monitoring evidence |
+| Archive assays, datasets, reports ≥ 2 years post‑marketing | §4.9.5 & §5.5.11 Record retention |
+
+: Checklist {#tbl-checklist tbl-colwidths="[50, 50]"}
 
 ## Submission workflows
 
