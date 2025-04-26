@@ -143,6 +143,8 @@ website:
           href: docs/modeling/pkpd/pkpd.qmd
         - text: "Time-to-event"
           href: docs/modeling/tte/tte.qmd
+        - text: "C-QTc"
+          href: docs/modeling/qt.qmd
         - section: "Goodness-of-fit"
           contents:
           - text: "Continuous data"
