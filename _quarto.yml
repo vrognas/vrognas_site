@@ -131,10 +131,6 @@ website:
             - section: "Elimination"
               href: docs/concepts/3_elimination.qmd
               contents:
-              - text: "Hepatic impairment (HI)"
-                href: docs/concepts/hepatic-impairment-studies.qmd
-              - text: "Renal impairment (RI)"
-                href: docs/concepts/renal-impairment-studies.qmd
               - text: "Augmented renal clearance (ARC)"
                 href: docs/concepts/augmented-renal-clearance.qmd
           - text: "Pharmacodynamics"
@@ -146,6 +142,12 @@ website:
             contents:
             - text: "Data standards"
               href: docs/concepts/cdisc.qmd
+            - text: "Hepatic impairment (HI)"
+              href: docs/concepts/hepatic-impairment-studies.qmd
+            - text: "Renal impairment (RI)"
+              href: docs/concepts/renal-impairment-studies.qmd
+            - text: "QT-prolongation"
+              href: docs/concepts/qt.qmd
     - id: modeling
       title: "Modeling Mementoes"
       collapse-level: 2
