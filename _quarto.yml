@@ -30,7 +30,7 @@ website:
             href: docs/concepts/index.qmd
           - text: "Gathering of Guilds"
             href: docs/guilds/index.qmd
-          - text: "Modeling Methods"
+          - text: "Modeling Mementoes"
             href: docs/modeling/index.qmd
           - text: "Pathology Primers"
             href: docs/pathology-primers/index.qmd
@@ -147,11 +147,11 @@ website:
             - text: "Data standards"
               href: docs/concepts/cdisc.qmd
     - id: modeling
-      title: "Modeling Methods"
+      title: "Modeling Mementoes"
       collapse-level: 2
       style: floating
       contents:
-      - section: "Modeling Methods"
+      - section: "Modeling Mementoes"
         href: docs/modeling/index.qmd
         contents:
         - text: "PK"

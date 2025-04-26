@@ -2,8 +2,11 @@
 title: "Auxiliary Arts"
 ---
 
-Auxiliary arts are skills and kowledge in areas that amplify your core craft.
+**Auxiliary**:  
+*Providing supplementary help and support.*
 
-These skills are often interdisciplinary and can significantly contribute to personal and professional development.
+These are skills and kowledge in areas that amplify your core craft.
+
+They are often interdisciplinary and can significantly contribute to personal and professional development.
 
 ![](images/index_aux.png)

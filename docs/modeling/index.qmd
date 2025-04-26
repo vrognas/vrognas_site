@@ -1,5 +1,5 @@
 ---
-title: "Modeling Methods"
+title: "Modeling Mementoes"
 date: last-modified
 ---
 
@@ -8,8 +8,12 @@ date: last-modified
 
 > Model-based analysis is more an art than a science. -Lewis B. Sheiner, MD
 
-Hands-on guides to model building.
-Tool-agnostic, but emphasis on R and NONMEM.
+**Mementoes**:  
+*Things that you keep as a reminder of something else.*
+
+In this section, you'll get access to tidbits of knowledge on many forms of pharmacometric models.
+It contains hands-on guides to model building that will spark your memory.
+The guides are tool-agnostic, but with an emphasis on R and NONMEM.
 
 ## Important considerations
 

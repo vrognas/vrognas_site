@@ -3,6 +3,10 @@ title: "Pharmacopœia Pharmacometrika"
 date: last-modified
 ---
 
+**Pharmacopœia**:  
+*A collection of directions for the identification of medicines.*
+
+
 ## Drug facts that are good to know
 
 This section presents a high-level overview of selected drug classes and their mechanisms of action.
