@@ -1,3 +1,7 @@
 ---
 title: "Novice's Navigation"
 ---
+
+Steering through first steps and pitfalls.
+
+Career paths, training courses, workshops, and mentoring tips.
