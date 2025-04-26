@@ -10,7 +10,7 @@ The use of *model informed drug development* (MIDD) approaches in pediatric drug
 
 ## Pediatric age terminology
 
-Pediatric age terminology is commonly <span class="red-underline">**inconsistent**</span>.
+Pediatric age terminology is commonly inconsistent.
 However, the terminology in @tbl-age-term is generally accepted [@committeeonfetusandnewbornAgeTerminologyPerinatal2004].
 
 | Term  | Abbreviation | Comment |
@@ -52,8 +52,8 @@ The study design and statistical plans should consider changing numbers of patie
 
 | Group | Age  | Comment |
 | :---- | :--- | :------ |
-| Preterm neonates | birth--27 days (CGA, @eq-cga) | < 39 weeks gestation |
-| Term neonates    | birth--27 days (CGA, @eq-cga) | 39--41 weeks gestation |
+| Preterm neonates | birth--27 days (CGA, @eq-cga) | < 39 weeks gestation |
+| Term neonates    | birth--27 days (CGA, @eq-cga) | 39--41 weeks gestation |
 | Infants          | 28 days--23 months | |
 | Children         | 2--11 years | Often divided into 2--5 years, and 6--11 years.|
 | Adolescents      | 12--⁠17 years | PK often similar to adults. |
@@ -145,11 +145,11 @@ Do a sensitivity analysis: How do the exposure predictions change?
 
 The new model should give slightly different estimates for the volume and clearance parameters, but the diagnostics should be quite similar.
 
-If your model already includes WT as a covariate, perhaps centered on the median WT instead of 70 kg, replace it with the standard allometric exponents [@lst-v; @lst-cl].
+If your model already includes `WT` as a covariate, perhaps centered on the median `WT` instead of 70 kg, replace it with the standard allometric exponents [@lst-v; @lst-cl].
 Estimated exponents based on median WT can skew results when extrapolating beyond the observed range.
 
-By converting to the standard WT of 70 kg and using standard exponent values, you leverage over 50 years of experience from other compounds when simulating outside adult data.
-Additionally, if AGE or WT is included elsewhere in the model, remove these covariates.
+By converting to the standard `WT` of 70 kg and using standard exponent values, you leverage over 50 years of experience from other compounds when simulating outside adult data.
+Additionally, if `AGE` or `WT` is included elsewhere in the model, remove these covariates.
 They could cause problems with extrapolation after refitting the model with standard allometric exponents.
 
 ::: {.callout-warning}
@@ -188,14 +188,14 @@ This is due to high correlation between body weight and age in pediatric patient
 
 #### Step 2: Prepare a data set with pediatric simulation subjects
 
-Use either [NHANES](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023) (US subjects 2--18 years), or a growth chart (e.g. WHO).
-The WHO data is preferred for non-US studies or for pediatric patients less than 2 years of age.
+Use either [NHANES](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023) (US subjects 2--18 years), or a growth chart (e.g., WHO).
+The WHO data is preferred for non-US studies or for pediatric patients less than 2 years.
 
 ::: {.callout-warning}
 # [NHANES](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023) has limited data for younger age groups
 
 Because [NHANES](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023) involves sampling individual subjects, there may be limited data in certain categories---especially for younger patients.
-Therefore, for younger patients---usually those under 2 years of age, but sometimes under 6---it’s better to use the CDC or WHO growth charts instead.
+Therefore, for younger patients---usually those under 2 years, but sometimes under 6---it’s better to use the CDC or WHO growth charts instead.
 :::
 
 Create at least 250 simulation subjects in each age group of interest (@tbl-age-group).
@@ -206,10 +206,10 @@ To create a simulation subject:
 
 1. Generate a uniform distribution of ages in each age-group, with the desired number of subjects.
 2. Create 250 simulated male subjects and 250 female subjects in the same age-group (e.g., 12--18 years).
-3. For each of these 500 subjects, identify the mean and standard deviation for WT based on their specific AGE and SEX.
+3. For each of these 500 subjects, identify the mean and standard deviation for `WT` based on their specific `AGE` and `SEX`.
 4. Randomly sample a single WT using the mean and standard deviation from the growth chart.
 
-This process creates a set of simulation subjects with WT, age group, and SEX.
+This process creates a set of simulation subjects with `WT`, age group, and `SEX`.
 
 ::: {.callout-tip}
 # Save this dataset for use in future PK simulations
@@ -217,14 +217,14 @@ This process creates a set of simulation subjects with WT, age group, and SEX.
 
 #### Step 3: Simulate exposures and estimate target pediatric doses
 
-Randomly sample ETAs (in e.g. R) to calculate the individual PK-parameters for each simulation subject.
-The WT will be used in the calculation of the V- and CL-parameters.
+Randomly sample ETAs (in e.g., R) to calculate the individual PK-parameters for each simulation subject.
+The `WT` will be used in the calculation of the $\V$- and $\CL$-parameters.
 Then, using the individual PK-parameters, the appropriate dosing regimen is simulated using the adult clinical dose.
 The exposure for each pediatric age group is calculated and compared to the reference exposure for adults.
 Assuming dose-proportional PK, the optimal pediatric dose can be calculated:
 
 $$
-\text{Dose}_{\text{pediatric, optimal}} = \frac{\text{Dose}_{\text{adult, observed}}}{\text{AUC}_{\text{pediatric, simulated}}/\text{AUC}_{\text{adult, observed}}}
+\D_\text{pediatric, optimal} = \frac{\D_\text{adult, observed}}{\AUC_\text{pediatric, simulated} / \AUC_\text{adult, observed}}
 $$ {#eq-ped-dose}
 
 Adjust Dose~pediatric,optimal~ to a feasible amount (Dose~pediatric,adjusted~).
@@ -233,13 +233,13 @@ It is expected that Dose~pediatric,optimal~ will be different for each age group
 
 ### How to present results from a PK extrapolation
 
-The plot with all age groups receiving the adult clinical dose can be contrasted with a plot with age groups using Dose~pediatric,adjusted~.
+The plot with all age groups receiving the adult clinical dose can be contrasted with a plot with age groups using Dose~pediatric,\ adjusted~.
 If you have pediatric data, you can overlay observed pediatric exposure with the simulated distributions to identify how well your model predicted the pediatric exposure.
 
-The most relevant covariate influencing PK in pediatric patients is **body weight** accounting for size differences, and **age** (@fig-age-term) in the youngest pediatric patients to account for maturation of drug eliminating processes (see @lst-cl-mat).
+**The most relevant covariates** influencing PK in pediatric patients is **body weight** accounting for size differences, and **age** (@fig-age-term) in the youngest pediatric patients to account for maturation of drug eliminating processes (see @lst-cl-mat).
 
 Relevant predefined exposure metrics should be presented graphically versus body weight and age on a continuous scale (@fig-cov).
-If the drug is indicated to be used in the age range below one year, exposure vs body weight and age should be depicted in an additional separate figure focused on children 0--1 year of age.
+If the drug is indicated to be used in the age range below one year, exposure vs body weight and age should be depicted in an additional separate figure focused on children 0--1 years.
 
 ![Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions). The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated pediatric patients. The *horizontal gray band* encompasses 90% of the simulated adult patients receiving 100 mg BID [@schoemakerBrivaracetamPopulationPharmacokinetics2017].](images/pediatric-cov.png){#fig-cov}
 
@@ -262,7 +262,7 @@ Babies are still developing, which can be visualized in part the relationship be
 
 {{< video videos/hands-over-head.mp4 >}}
 
-**<span class="red-underline">Unless there's clinical efficacy data in pediatric patients, be very cautious to extrapolate response or PD models from adults to pediatric patients.</span>**
+Unless there's clinical efficacy data in pediatric patients, be *very* cautious to extrapolate response or PD models from adults to pediatric patients.
 
 Considerations include:
 
