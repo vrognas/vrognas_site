@@ -1,7 +1,8 @@
 ---
 title: "Pathology Primers"
-date: last-modified
 ---
+
+## Disease facts that are good to know
 
 Each primer provides a concise, high-level summary of a disease relevant to pharmacometricians, focusing on biomarkers, drug regimens, and modeling approaches.
 

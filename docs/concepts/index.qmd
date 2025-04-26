@@ -2,8 +2,8 @@
 title: "Concepts of the Craft"
 ---
 
-This section provides a high-level overview of specific concepts in the field of pharmacometrics.
-It is intended to be a quick reference.
-Each concept includes information on the definition, use cases, and implementation details for the concept.
+This section provides a high-level overview of specific theories and principles at pharmacometrics' heart.
+
+Each concept includes information on the definition, use cases, and implementation details.
 
 ![](images/index_concepts.png)

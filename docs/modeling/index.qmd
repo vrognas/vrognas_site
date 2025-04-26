@@ -8,6 +8,9 @@ date: last-modified
 
 > Model-based analysis is more an art than a science. -Lewis B. Sheiner, MD
 
+Hands-on guides to model building.
+Tool-agnostic, but emphasis on R and NONMEM.
+
 ## Important considerations
 
 ### Impact of a model [@musuambaScientificRegulatoryEvaluation2021; @skottheimrustenScientificRegulatoryEvaluation2021]
