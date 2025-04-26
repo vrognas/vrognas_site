@@ -495,7 +495,7 @@ Children differ substantially from adults in terms of physiology.
 During late adolescence, physiological changes stabilize, but gradual alterations continue throughout adulthood.
 
 In most adult patients, dose adjustments based on age are not necessary, as their age is typically close to that of the "typical" patient used for dose selection.
-However, adjustment may be warranted when the patient’s age deviates by more than 20 years from the typical reference age.
+However, adjustment may be warranted when the patient’s age deviates by more than 20 years from the typical reference age.
 
 As adults age, organ function declines, especially renal function.
 This is reflected in commonly used kidney function equations, many of which include age as a predictor.

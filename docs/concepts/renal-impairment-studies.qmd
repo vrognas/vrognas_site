@@ -26,7 +26,7 @@ This gives 80% power to detect plus/minus 40% change in exposure.
 
 When:
 Almost all small molecules.
-Biologics <69 kDa
+Biologics <69 kDa
 
 When not:
-mAbs (>69 kDa)
+mAbs (>69 kDa)

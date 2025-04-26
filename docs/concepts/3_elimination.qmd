@@ -238,7 +238,7 @@ These equations use endogenous biomarkers, like creatinine and cystatin C, along
 
 There are many equations for estimating GFR, some of these are designed for specific populations.
 The estimated GFR from these equations are usually similar.
-However, differences appear at high GFR levels, especially when the values go above 150 mL/min/1.73 m^2^, a condition called augmented renal clearance.
+However, differences appear at high GFR levels, especially when the values go above 150 mL/min/1.73 m^2^, a condition called augmented renal clearance.
 
 The most recommended equation right now is the 2021 version of the CKD-EPI formula [@inkerNewCreatinineCystatin2021]. This version does not consider race (@eq-ckd-epi-2021).
 

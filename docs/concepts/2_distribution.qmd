@@ -23,11 +23,11 @@ $\Vd$ usually has 30% inter-individual variability.
 
 Typical physiological valoumes for a 70 kg adult:
 
-* V~plasma~ ≈ 3 L
-* V~interstitial~ ≈ 12 L
-* V~water,\ extracellular~ ≈ 16 L
-* V~cells~ ≈ 27 L
-* V~water,\ total~ ≈ 42 L
+* V~plasma~ ≈ 3 L
+* V~interstitial~ ≈ 12 L
+* V~water,\ extracellular~ ≈ 16 L
+* V~cells~ ≈ 27 L
+* V~water,\ total~ ≈ 42 L
 
 
 $$

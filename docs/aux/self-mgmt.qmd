@@ -31,15 +31,18 @@ Try shifting to a different productivity metric: time spent or points made or pr
 
 ## Getting things done
 
-* Ppl have 100-200 next actions ar any one time
+* People have 100--200 next actions ar any one time
 * Project: anything you are comited to finish within next few weeks/months that take more than one step to finish
-* Most ppl have 30-100 projects
+* Most people have 30--100 projects
 * Maintain vs Finish. Eg relationships, personal development
 
-* Get your life back to widgets, but you have to define the widgets. ”Draft” instead of ”write” (crappy and still win)
+* Get your life back to widgets, but you have to define the widgets.
+”Draft” instead of ”write” (crappy and still win)
 * ”If you actually captured your thoughts the first time you had them, you’d be surprised how few you have”
-* If you are not doing the Weekly Review, you are doing it all the time, but not really doing it. Finish the thinking!
-* Winston Churchill: Freedom from order. Jock Willink: Discipline equals freedom.
+* If you are not doing the Weekly Review, you are doing it all the time, but not really doing it.
+Finish the thinking!
+* Winston Churchill: Freedom from order.
+Jock Willink: Discipline equals freedom.
 
 ## Project Square
 
@@ -51,11 +54,7 @@ Quality (How) - Time (When)
 ## Prioritization
 
 * Risk matrix (Impact/probability)
-
 * Priority matrix (Important/Urgent)
-
 * SWOT/TOWS
-
-* Fokus on the *task*, not the solution
-
+* Focus on the *task*, not the solution
 * Law of pi: everything takes at least 3.14 times longer than you think.

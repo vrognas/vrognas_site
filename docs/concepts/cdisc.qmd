@@ -8,7 +8,7 @@ date: last-modified
 
 **CDISC** stands for *Clinical Data Interchange Standards Consortium*.
 CDISC provides several interrelated standards, each addressing a specific stage of the data lifecycle @fig-cdisc.
-Each standard has an Implementation Guide (IG) that shows exactly how to apply that standard practically, e.g. SDTMIG for SDTM.
+Each standard has an Implementation Guide (IG) that shows exactly how to apply that standard practically, e.g., SDTMIG for SDTM.
 All the implementations have version numbers that are important to keep track of.
 
 CDISC also provides TAUGs (Therapeutic Area User Guides).
@@ -157,7 +157,7 @@ https://www.cdisc.org/system/files/members/standard/foundational/ADaMIG_v1.3.pdf
 
 ####  General variable conventions
 
-All ADaM variable names must be no more than 8 characters in length, start with a letter (not underscore), and be composed only of letters (A--Z), underscore ( _ ), and numerals (0--9).
+All ADaM variable names must be no more than 8 characters in length, start with a letter (not underscore), and be composed only of letters (A--Z), underscore (_), and numerals (0--9).
 
 ADaM adheres to a principle of harmonization known as "same name, same meaning, same values."
 

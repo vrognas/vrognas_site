@@ -4,24 +4,28 @@ date: last-modified
 ---
 
 * Remove all notifications about new email.
-  * You're not the President of the United States who needs to react to a nuclear threat. Emails/calls can always wait a few minutes.
-* Agree on email response times e.g. one/two business days
+  * You're not the President of the United States who needs to react to a nuclear threat.
+  Emails/calls can always wait a few minutes.
+* Agree on email response times (e.g., one/two business days)
 * Never send emails outside office hours
-  * Many modern email clients now have a "Send Later" functionality. Use it if you work ouside office hours.
+  * Many modern email clients now have a "Send Later" functionality.
+  Use it if you work ouside office hours.
 
 ## Read email in batches
 
 * Schedule reading at least once per day, what works for you.
-  * Expect ~30sec to process every email(=decide what to do with it, see below).
+  * Expect ~30 sec to process every email (i.e., decide what to do with it, see below).
 * Strive for "inbox zero"^[an empty inbox]---every day.
   * The inbox is for emails you have have decided what to do with yet.
 * If you open an email---make a decision.
-  * Action required (takes ≤2 min^[or other amount that works for you])? **Do it now**
-  * Action required (takes >2 min)? **Schedule it**
+  * Action required (takes ≤2 min^[or other amount that works for you])? **Do it now**
+  * Action required (takes >2 min)? **Schedule it**
   * Action required (but waiting for something/someone)? **Set a reminder**
   * Action not required? **Archive**
-    * Other emails go into the archive. Also all emails that required action go into the archive after action is taken.
-    * I've found that just archiving all emails is more efficient than spending time to sort them into subfolder. When you want a certain email, just search for it.
+    * Other emails go into the archive.
+    Also all emails that required action go into the archive after action is taken.
+    * I've found that just archiving all emails is more efficient than spending time to sort them into subfolder.
+    When you want a certain email, just search for it.
 * In general: Do not answer mails that you've been CC'ed on.
 * (Almost) never use "Reply All".
   * Want fewer emails? Send fewer emails.
@@ -30,13 +34,17 @@ date: last-modified
 
 > Sorry I'm writing a long email, but I did not have time to write a short one.
 
-1. Start with **jotting down** what you want to say in the body of the email. If it is a really short message, consider using only the subject line, ending it with "EOM" (End of Message).
+1. Start with **jotting down** what you want to say in the body of the email.
+If it is a really short message, consider using only the subject line, ending it with "EOM" (End of Message).
 * Keep email short, clear, and on topic.
   * [ChatGPT](chat.openai.com) can help to make emails more coherent, consise, and to the point.
-  * A good rule of thumb is to aim for max 5 sentences. If it is longer than that, email is probably not the right way to communicate.
+  * A good rule of thumb is to aim for max 5 sentences.
+  If it is longer than that, email is probably not the right way to communicate.
   * AVOID CAPITAL LETTERS
   * Avoid irony and sarcasm
-  * Do not use more than one exclamation mark!!!!!!! Same goes for the question mark???? And dots........ (what you want here is the *ellipsis* "...").
+  * Do not use more than one exclamation mark!!!!!!!
+  Same goes for the question mark????
+  And dots........ (what you want here is the *ellipsis* "...").
   * Mind your language.
     * Avoid profanity.
     * Be polite, and not overly apologetic (see @fig-email).

@@ -45,7 +45,7 @@ They would then receive a letter from him stating, "I tried it out on eight pati
 
 Most clinical pharmacology studies are Phase 1 studies, during which we **learn** about the drug's PK.
 In Phase 2, we **learn** about the PD of the drug.
-In Phase 3, we **confirm** our efficacy and safety hypotheses in the target population.
+In Phase 3, we **confirm** our efficacy and safety hypotheses in the target population.
 
 George Box views scientific progress as consisting of and requiring alternating steps of induction and deduction: the former is learning from experience, and the latter confirms what has been learned.
 A simplified application of this view to clinical drug development would break development into two learn-confirm cycles @fig-cycles.
@@ -53,12 +53,12 @@ A simplified application of this view to clinical drug development would break d
 ![A "Double Diamond" illustrating the two learn-confirm cycles of clinical drug development. After the first cycle, a point is reached where further development is decided upon. Finally, the drug is approved.](images/learn-confirm-cycles){#fig-cycles}
 
 * First cycle (Proof-of-Concept)
-  * Phase 1: **Learn** what is the tolerated dose? (Max tolerated dose?)
-  * Phase 2a: **Confirm** that this dose has the promise of efficacy in a selected group of patients. (Is that dose efficacious?)
+  * Phase 1: **Learn** what is the tolerated dose? (Max tolerated dose?)
+  * Phase 2a: **Confirm** that this dose has the promise of efficacy in a selected group of patients. (Is that dose efficacious?)
 * Decision point: Is there a sufficiently positive indication of efficacy (and lack of toxicity) to justify further development? (Go/No go)
 * Second cycle
-  * Phase 2b: **Learn** how to use the drug in representative patients to make acceptable benefits/risks likely. (Effect on patients?)
-  * Phase 3/4: **Confirm** in a large and representative patient population that acceptable benefit/risk is achieved. (Acceptable B/R-ratio?)
+  * Phase 2b: **Learn** how to use the drug in representative patients to make acceptable benefits/risks likely. (Effect on patients?)
+  * Phase 3/4: **Confirm** in a large and representative patient population that acceptable benefit/risk is achieved. (Acceptable B/R-ratio?)
 * Approval is granted.
 
 ### Studies within the phases
@@ -69,7 +69,7 @@ A simplified application of this view to clinical drug development would break d
 
 #### Phase 1: Human pharmacology
 
-Data from Phase 1 studies are typically well-controlled and provide clean SDTM input datasets.
+Data from Phase 1 studies are typically well-controlled and provide clean SDTM input datasets.
 
 ##### 👨‍⚕️"First in human" (FIH) PK
 
@@ -113,7 +113,7 @@ SAD and MAD studies can be combined under one study, and subjects can participat
 
 ##### 💓 (T)QT study
 
-  * Identifies medicines that prolong QT and thus need more thorough ECG monitoring in Phase 3 pivotal trials.
+  * Identifies medicines that prolong QT and thus need more thorough ECG monitoring in Phase 3 pivotal trials.
 
 ##### 🧬 Pharmacogenomics (CYP genotyping)
 
@@ -132,9 +132,9 @@ SAD and MAD studies can be combined under one study, and subjects can participat
 
 #### Phase 2: Therapeutic exploratory
 
-Phase II/III studies are performed on patients and often consist of separate study parts/cohorts to investigate multiple scenarios (e.g., different patient populations) in one study.
+Phase 2/3 studies are performed on patients and often consist of separate study parts/cohorts to investigate multiple scenarios (e.g., different patient populations) in one study.
 In most cases, PD measurements will be part of the analysis (and should be included in the analysis dataset to enable PK-PD evaluations). The study design can be very diverse. 
-Phase II/III studies are less controlled than Phase 1, resulting in unrecorded dosing times, missing laboratory measurements, etc.
+Phase 2/3 studies are less controlled than Phase 1, resulting in unrecorded dosing times, missing laboratory measurements, etc.
 
 ##### 🤒 Healthy vs Patient PK/PD
 
