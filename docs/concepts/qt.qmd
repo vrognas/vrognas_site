@@ -11,8 +11,6 @@ The cardiac conduction system (CCS, also called the electrical conduction system
 
 ![ECG of a heart in normal sinus rhythm.](images/SinusRhythmLabels.svg)
 
-![Schematic representation of a normal ECG](images/EKG_Complex_en.svg)
-
 ## Causes of QT-prolongation
 
 * Drug inhibition of ion-channels in the heart
@@ -20,9 +18,23 @@ The cardiac conduction system (CCS, also called the electrical conduction system
 * Hypocalcemia, hypomagnesia
 
 * Can in rare cases lead to fainting or death through **torsades de pointes (TdP)**, french for "twisting of peaks".
-* QT-time is affected by heat rate: Corrected QTc-time (Bazetts and Fridericia's formulas)
 
 ![Torsade de pointes ("twisting of peaks").](images/tdp.avif)
+
+::: {.callout-note}
+QT-prolongation ≠ risk for TdP
+
+There are more factors needed for TdP, e.g. "early afterdepolarizations".
+:::
+
+* QT-time is affected by heat rate: Corrected QTc-time (Bazetts and Fridericia's formulas)
+
+$$
+\begin{aligned}
+& \mathrm{QTc}_\text{Bazett} = \frac{\mathrm{QT}}{\sqrt{HR}} \\
+& \mathrm{QTc}_\text{Fridericia} = \frac{\mathrm{QT}}{\sqrt[3]{HR}}
+\end{aligned}
+$$
 
 ## Thorough QT/QTc study
 
