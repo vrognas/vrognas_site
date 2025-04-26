@@ -137,7 +137,7 @@ website:
             href: docs/concepts/pd.qmd
           - text: "Pediatrics"
             href: docs/concepts/pediatrics.qmd
-          - text: "Clinical studies"
+          - section: "Clinical studies"
             href: docs/concepts/clinpharm-studies.qmd
             contents:
             - text: "Data standards"
