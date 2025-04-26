@@ -19,21 +19,22 @@ The cardiac conduction system (CCS, also called the electrical conduction system
 * Genetics (hereditary)
 * Hypocalcemia, hypomagnesia
 
-* Can in rare cases lead to fainting or death through torsades de pointes (TdP), french for "twisting of peaks".
+* Can in rare cases lead to fainting or death through **torsades de pointes (TdP)**, french for "twisting of peaks".
 * QT-time is affected by heat rate: Corrected QTc-time (Bazetts and Fridericia's formulas)
 
 ![Torsade de pointes ("twisting of peaks").](images/tdp.avif)
 
 ## Thorough QT/QTc study
 
-* According to ICH E14, in general, all drugs shall perform a thorough QT/QTc study early in development.
+* According to ICH E14 (2005), *in general*, all drugs shall perform a thorough QT/QTc study early in development.
+  * Large targeted proteins and monoclonal antibodies have a low likelihood of direct ion channel interactions and a thorough QT/QTc study is generally not necessary. (QA 2015)
 
 * The threshold level of regulatory concern, is around **5 ms** as evidenced by an upper bound of the 95% confidence interval around the mean effect on QTc of 10 ms
 * Drugs that prolong the mean QT/QTc interval by **>20 ms** have a substantially increased likelihood of being proarrhythmic
 
 ### How to perform the study
 
-* The study is typically carried out in **healthy volunteers**
+* The study is *typically* carried out in **healthy volunteers**
 * Well controlled; **positive control group** recommended (assay sensitivity)
 * **Crossover or parallel** group study designs
 * Timing of the collection of ECGs and the study design (e.g., single or multiple dose, duration) should be guided by PK.
