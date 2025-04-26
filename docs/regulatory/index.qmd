@@ -1,5 +1,23 @@
 ---
 title: "Regulatory Rites"
+date: last-modified
 ---
 
-FDA/EMA submission workflows.
+## Guidelines and QA's
+
+### ICH
+
+### EMA
+
+### FDA
+
+## Submission workflows
+
+### EMA
+
+### FDA
+
+## References
+
+::: {#refs}
+:::
