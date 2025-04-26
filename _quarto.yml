@@ -36,6 +36,8 @@ website:
             href: docs/pathology-primers/index.qmd
           - text: "Pharmacopœia"
             href: docs/pharmacopeia/index.qmd
+          - text: "Regulatory Rites"
+            href: docs/regulatory/index.qmd
           - text: "Tools of the Trade"
             href: docs/tools-of-the-trade/index.qmd
     tools:
@@ -52,6 +54,105 @@ website:
     - id: portfolio
       title: "Portfolio"
       style: "floating"
+    - id: aux
+      title: "Auxiliary Arts"
+      collapse-level: 2
+      style: "floating"
+      contents:
+        - section: "Auxiliary Arts"
+          href: docs/aux/index.qmd
+          contents:
+          - text: "Data Visualization"
+            href: docs/aux/data-viz.qmd
+          - text: "Math Intuition"
+            href: docs/aux/math-intuition.qmd
+          - section: "Communication"
+            contents:
+            - text: "Presentation Technique"
+              href: docs/aux/presentation.qmd
+            - text: "Email"
+              href: docs/aux/email.qmd
+            - text: "Meetings"
+              href: docs/aux/meetings.qmd
+            - text: "Writing Tactics"
+              href: docs/aux/writing-tactics.qmd
+          - text: "Reproducible Research"
+            href: docs/aux/repr.qmd
+          - text: "Coding Practices"
+            href: docs/aux/code.qmd
+          - text: "Self Management"
+            href: docs/aux/self-mgmt.qmd
+    - id: concepts
+      title: "Concepts of the Craft"
+      collapse-level: 2
+      style: "floating"
+      contents:
+        - section: "Concepts of the Craft"
+          href: docs/concepts/index.qmd
+          contents:
+          - section: "Pharmacokinetics"
+            href: docs/concepts/pk.qmd
+            contents:
+            - text: "Absorption"
+              href: docs/concepts/1_absorption.qmd
+            - text: "Distribution"
+              href: docs/concepts/2_distribution.qmd
+            - section: "Elimination"
+              href: docs/concepts/3_elimination.qmd
+              contents:
+              - text: "Augmented renal clearance (ARC)"
+                href: docs/concepts/augmented-renal-clearance.qmd
+          - text: "Pharmacodynamics"
+            href: docs/concepts/pd.qmd
+          - text: "Pediatrics"
+            href: docs/concepts/pediatrics.qmd
+          - section: "Clinical studies"
+            href: docs/concepts/clinpharm-studies.qmd
+            contents:
+            - text: "Data standards"
+              href: docs/concepts/cdisc.qmd
+            - text: "Hepatic impairment (HI)"
+              href: docs/concepts/hepatic-impairment-studies.qmd
+            - text: "Renal impairment (RI)"
+              href: docs/concepts/renal-impairment-studies.qmd
+            - text: "QT-prolongation"
+              href: docs/concepts/qt.qmd
+    - id: guilds
+      title: "Gathering of Guilds"
+      collapse-level: 2
+      style: "floating"
+      contents:
+        - section: "Gathering of Guilds"
+          href: docs/guilds/index.qmd
+          contents:
+          - text: "NMusers"
+            href: docs/guilds/nmusers.qmd
+    - id: modeling
+      title: "Modeling Mementoes"
+      collapse-level: 2
+      style: floating
+      contents:
+      - section: "Modeling Mementoes"
+        href: docs/modeling/index.qmd
+        contents:
+        - text: "PK"
+          href: docs/modeling/pk/pk.qmd
+        - text: "PD"
+          href: docs/modeling/pd/pd.qmd
+        - text: "PKPD/E-R"
+          href: docs/modeling/pkpd/pkpd.qmd
+        - text: "Time-to-event"
+          href: docs/modeling/tte/tte.qmd
+        - section: "Goodness-of-fit"
+          contents:
+          - text: "Continuous data"
+            href: docs/modeling/gof/gof-cts.qmd
+          - text: "Categorical data"
+            href: docs/modeling/gof/gof-cat.qmd
+        - text: "Priors"
+          href: docs/modeling/priors.qmd
+        - text: "Variability"
+          href: docs/modeling/variability.qmd
     - id: pathology-primers
       title: "Pathology Primers"
       collapse-level: 1
@@ -113,67 +214,9 @@ website:
                 contents:
                   - text: "(A) Immunosuppressants"
                     href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L04_immunosuppressants/L04A_immunosuppressants/index.qmd
-    - id: concepts
-      title: "Concepts of the Craft"
-      collapse-level: 2
+    - id: regulatory
+      title: "Regulatory Rites"
       style: "floating"
-      contents:
-        - section: "Concepts of the Craft"
-          href: docs/concepts/index.qmd
-          contents:
-          - section: "Pharmacokinetics"
-            href: docs/concepts/pk.qmd
-            contents:
-            - text: "Absorption"
-              href: docs/concepts/1_absorption.qmd
-            - text: "Distribution"
-              href: docs/concepts/2_distribution.qmd
-            - section: "Elimination"
-              href: docs/concepts/3_elimination.qmd
-              contents:
-              - text: "Augmented renal clearance (ARC)"
-                href: docs/concepts/augmented-renal-clearance.qmd
-          - text: "Pharmacodynamics"
-            href: docs/concepts/pd.qmd
-          - text: "Pediatrics"
-            href: docs/concepts/pediatrics.qmd
-          - section: "Clinical studies"
-            href: docs/concepts/clinpharm-studies.qmd
-            contents:
-            - text: "Data standards"
-              href: docs/concepts/cdisc.qmd
-            - text: "Hepatic impairment (HI)"
-              href: docs/concepts/hepatic-impairment-studies.qmd
-            - text: "Renal impairment (RI)"
-              href: docs/concepts/renal-impairment-studies.qmd
-            - text: "QT-prolongation"
-              href: docs/concepts/qt.qmd
-    - id: modeling
-      title: "Modeling Mementoes"
-      collapse-level: 2
-      style: floating
-      contents:
-      - section: "Modeling Mementoes"
-        href: docs/modeling/index.qmd
-        contents:
-        - text: "PK"
-          href: docs/modeling/pk/pk.qmd
-        - text: "PD"
-          href: docs/modeling/pd/pd.qmd
-        - text: "PKPD/E-R"
-          href: docs/modeling/pkpd/pkpd.qmd
-        - text: "Time-to-event"
-          href: docs/modeling/tte/tte.qmd
-        - section: "Goodness-of-fit"
-          contents:
-          - text: "Continuous data"
-            href: docs/modeling/gof/gof-cts.qmd
-          - text: "Categorical data"
-            href: docs/modeling/gof/gof-cat.qmd
-        - text: "Priors"
-          href: docs/modeling/priors.qmd
-        - text: "Variability"
-          href: docs/modeling/variability.qmd
     - id: tools-of-the-trade
       title: "Tools of the Trade"
       collapse-level: 2
@@ -190,44 +233,6 @@ website:
             contents:
               - text: "Tips-n-tricks"
                 href: docs/tools-of-the-trade/r/r-tips-n-tricks.qmd
-    - id: guilds
-      title: "Gathering of Guilds"
-      collapse-level: 2
-      style: "floating"
-      contents:
-        - section: "Gathering of Guilds"
-          href: docs/guilds/index.qmd
-          contents:
-          - text: "NMusers"
-            href: docs/guilds/nmusers.qmd
-    - id: aux
-      title: "Auxiliary Arts"
-      collapse-level: 2
-      style: "floating"
-      contents:
-        - section: "Auxiliary Arts"
-          href: docs/aux/index.qmd
-          contents:
-          - text: "Data Visualization"
-            href: docs/aux/data-viz.qmd
-          - text: "Math Intuition"
-            href: docs/aux/math-intuition.qmd
-          - section: "Communication"
-            contents:
-            - text: "Presentation Technique"
-              href: docs/aux/presentation.qmd
-            - text: "Email"
-              href: docs/aux/email.qmd
-            - text: "Meetings"
-              href: docs/aux/meetings.qmd
-            - text: "Writing Tactics"
-              href: docs/aux/writing-tactics.qmd
-          - text: "Reproducible Research"
-            href: docs/aux/repr.qmd
-          - text: "Coding Practices"
-            href: docs/aux/code.qmd
-          - text: "Self Management"
-            href: docs/aux/self-mgmt.qmd
   page-footer:
     left: "© 2025 Viktor Rognås"
     right:
