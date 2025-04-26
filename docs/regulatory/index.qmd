@@ -3,6 +3,10 @@ title: "Regulatory Rites"
 date: last-modified
 ---
 
+Regulatory documents are generally filled with walls of text, and much is up for interpretation.
+
+This is why a clear yes/no answer from regulatory agencies are not possible until the final asssessment, when an assessment and interpretation of the totality of evidence has been made.
+
 ## Guidelines and QA's
 
 ### ICH
