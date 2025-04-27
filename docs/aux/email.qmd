@@ -50,9 +50,7 @@ If it is a really short message, consider using only the subject line, ending it
     * Be polite, and not overly apologetic (see @fig-email).
     * Use abbreviations, symbols, and emojis sparingly.
 
-:::{.callout-note}
-# Note on emojis
-
+:::{.callout-note title="Note on emojis"}
 Emojis are meant to convey emotion in writing.
 Correctly used, they are irreplaceable in making sure your message is read in the intended tone of voice, even in professional email.
 :::
@@ -77,13 +75,19 @@ Correctly used, they are irreplaceable in making sure your message is read in th
 | I made a small error                 | Sorry I missed that     | Nice catch! I've updated it now. Thanks for letting me know! |
 | I have an appointment                | Could I possibly leave early?               | I will need to leave for ___ at ___      |
 
+:::{.callout-note title="Note on attachments"}
+Prefer links to secure servers over attaching files.
+:::
+
 2. Next, **summarize** message and action-points in the beginning of an email.
 3. Write an accurate (and short) **subject line**.
 * Consider starting your subject lines with a word such as:
-  * Action: 
-  * Info/FYI: 
-  * Question: 
-  * Feedback: 
+  * Action:
+  * Info/FYI:
+  * Question:
+  * Feedback:
+* Does the email contain links to draft working material? Write "draft" in the subject.
+* Avoid confidential info on the subject line.
 
 :::{.callout-tip}
 # Stick to one topic
