@@ -58,3 +58,16 @@ Quality (How) - Time (When)
 * SWOT/TOWS
 * Focus on the *task*, not the solution
 * Law of pi: everything takes at least 3.14 times longer than you think.
+
+### Responsible allocation of time between projects
+
+1. What *already* supports me and *will* support me the coming 0--2 years.
+    * Time: 60% (36 h)
+    * 5 units/day
+2. What *will* support me in 3--5 years.
+    * Tine: 30% (18 h)
+    * 2 units/day
+3. What *might* support me in 5--10 years.
+    * Time: 10% (6 h)
+    * 1 unit/day
+
