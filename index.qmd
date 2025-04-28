@@ -1,12 +1,13 @@
 ---
 title: "Viktor Rognås"
 subtitle: "Pharmacometric Engineer"
+description: ""
 about:
     id: about-vrognas
     template: jolla
     image: "images/vrognas.avif"
     image-shape: round
-    image-alt: "A profile picture of Viktor"
+    image-alt: "A profile picture of Viktor, looking all smug"
 ---
 
 [**viktor.rognas@gmail.com**](mailto:viktor.rognas@gmail.com)
