@@ -8,6 +8,8 @@ execute:
 website:
   title: "🌱 Viktor Rognås"
   favicon: "favicon.png"
+  google-analytics: "G-83Y8K7VV1M"
+  cookie-consent: true
   open-graph: true
   twitter-card: true
   site-url: https://vrognas.com
