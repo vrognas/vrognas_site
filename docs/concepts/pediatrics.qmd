@@ -6,9 +6,11 @@ date: last-modified
 The use of *model informed drug development* (MIDD) approaches in pediatric drug development is highly recommended due to:
 
 * Practical and ethical **limitations in data collection**.
-* Ability to **quantify the effects of growth and maturation** by leveraging data from literature and older patients.
+* Ability to **quantify the effects of growth and maturation** by leveraging data from literature and older patients @ichE11R1ClinicalInvestigation2017.
 
-## Pediatric age terminology
+The age-related biological changes that occur as an individual matures from birth up to adulthood, is called "ontogeny".
+
+## Pediatric age terminology {#sec-age}
 
 Pediatric age terminology is commonly inconsistent.
 However, the terminology in @tbl-age-term is generally accepted [@committeeonfetusandnewbornAgeTerminologyPerinatal2004].
@@ -37,20 +39,18 @@ $$
 \text{Corrected gestational age}_\text{weeks} = \text{PNA}_\text{weeks} - (40 - \text{GA}_\text{weeks})
 $$ {#eq-cga}
 
-### Age classification of pediatric patients {#sec-age}
+### Age classification of pediatric patients {#sec-age-class} 
 
 Age groups are to some extent <span class="red-underline">**arbitrary**</span>, but a classification such as the one in @tbl-age-group provides a basis for thinking about study design.
 The identification of **which ages to study should be medicinal product-specific and <span class="red-underline">justified</span>**.
 Too many age groups might needlessly increase the number of patients required.
 Sometimes, it may be more appropriate to collect data over broad age ranges and examine the effect of age as a continuous covariate.
 
-::: {.callout-warning}
-# In longer studies, patients could change age group!
-
+::: {.callout-warning title="In longer studies, patients could change age group"}
 The study design and statistical plans should consider changing numbers of patients within a given age group, as patients grow older.
 :::
 
-| Group | Age  | Comment |
+| Group | Age  | Comment | 
 | :---- | :--- | :------ |
 | Preterm neonates | birth--27 days (CGA, @eq-cga) | < 39 weeks gestation |
 | Term neonates    | birth--27 days (CGA, @eq-cga) | 39--41 weeks gestation |
@@ -65,7 +65,7 @@ The study design and statistical plans should consider changing numbers of patie
 # A 17.9 year old belongs to the adolescent age group, until the 18^th^ birthday
 :::
 
-## Pediatric weight terminology
+## Pediatric weight terminology {#sec-wt}
 
 Using the Fenton (2013) growth chart (https://doi.org/10.1186/1471-2431-13-59).
 
@@ -75,7 +75,7 @@ Using the Fenton (2013) growth chart (https://doi.org/10.1186/1471-2431-13-59).
 
 Neonates first **loose weight after birth**, then regain it.
 
-## Pediatric PK studies
+## Pediatric PK studies {#sec-pk}
 
 Relative bioavailability comparisons of pediatric and adult formulations should typically be performed in adults.
 PK studies in the pediatric population are generally conducted in patients with the disease.
@@ -88,10 +88,10 @@ Pediatric dosing is typically based on mg/kg body weight, up to the maximum adul
 Although surface area-guided dosing might be preferred, measuring the height or length, especially in infants and young children, is often prone to errors.
 For medications with a narrow therapeutic window, such as those used in oncology, surface area-guided dosing may be necessary.
 
-## PK extrapolation is often feasible
+## PK extrapolation is often feasible {#sec-pk-extrapolation}
 
 Whether PK extrapolation is feasible or not, is **ultimately a clinical question**.
-If an indication can be assumed to behave similarly in adult and pediatric populations, PK extrapolation ("bridging") can be used.
+If an indication can be assumed to behave similarly in adult and pediatric populations, PK extrapolation ("bridging") can be used @ichE11APediatricExtrapolation2024.
 However, there could be cases in which a dedicated pediatric study is warranted (e.g., safety concerns or clinical presentation of the disease).
 
 The relevant PK metric(s) linked to efficacy and safety and the exposure-response relationship should first be established in adults.
@@ -272,11 +272,9 @@ Considerations include:
 
 ## References
 
-1. [ICH E11(R1) (2017)](https://database.ich.org/sites/default/files/E11_R1_Addendum.pdf)
-2. [ICH E11A (2024)](https://database.ich.org/sites/default/files/ICH_E11A_Guideline_Step4_2024_0821.pdf)
-3. [EMA M&S QA (2023)](https://www.ema.europa.eu/en/human-regulatory-overview/research-and-development/scientific-guidelines/clinical-pharmacology-and-pharmacokinetics/modelling-and-simulation-questions-and-answers)
-4. [EMA PIP QA (2025)](https://www.ema.europa.eu/en/human-regulatory-overview/research-development/paediatric-medicines-research-development/paediatric-investigation-plans/paediatric-investigation-plans-questions-answers)
-5. [National Health and Nutrition Examination Survey (NHANES)](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023)
+* [EMA M&S QA (2023)](https://www.ema.europa.eu/en/human-regulatory-overview/research-and-development/scientific-guidelines/clinical-pharmacology-and-pharmacokinetics/modelling-and-simulation-questions-and-answers)
+* [EMA PIP QA (2025)](https://www.ema.europa.eu/en/human-regulatory-overview/research-development/paediatric-medicines-research-development/paediatric-investigation-plans/paediatric-investigation-plans-questions-answers)
+* [National Health and Nutrition Examination Survey (NHANES)](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023)
 
 ::: {#refs}
 :::
