@@ -6,6 +6,19 @@ date: last-modified
 :::{.callout-caution title="Under construction"}
 :::
 
+The normal range for transit time includes the following:
+
+* Gastric emptying (2--5 hours)
+  * Generally assumed as 2 hours.
+  * Highly diverse and primarily depend on whether the body is fed or fasted, and the size and density of the dosage form.
+* Small intestine transit (2--6 hours)
+  * Relatively constant, not affected much.
+* Colonic transit (10--59 hours)
+  * Influenced by a number of factors such as diet, stress, dietary fiber content and disease.
+  * Diarrhea increases colonic transit, constipation decreases it.
+  * Human activity can also affect dosage form motility in the colon, with the inactive state of sleep delaying the colonic transit.
+* Whole gut transit (10--72 hours).
+
 Drug absorption can be characterized by **two** pharmacokinetic parameters:
 
 - **Bioavailability ($\F$)** quantifies the **extent** of absorption.
