@@ -2,6 +2,9 @@ project:
   type: website
   output-dir: _site
 
+resources:
+  - images/seedling_tiny_ps.svg
+
 execute:
   freeze: auto
 
