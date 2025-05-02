@@ -10,4 +10,4 @@ about:
     image-alt: "A profile picture of Viktor, looking all smug"
 ---
 
-[**viktor.rognas@gmail.com**](mailto:viktor.rognas@gmail.com)
+[**viktor@vrognas.com**](mailto:viktor@vrognas.com)
