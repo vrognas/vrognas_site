@@ -254,7 +254,7 @@ format:
     canonical-url: true
     lang: en
     smooth-scroll: false
-    link-external-icon: true
+    link-external-icon: false # Also adds unwanted icon to lightbox
     include-in-header:
       - seo.html
       - pk-operators.html
