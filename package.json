@@ -3,6 +3,7 @@
     "@quarto/netlify-plugin-quarto": "^0.0.5"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.14.0",
     "@netlify/plugin-lighthouse": "^6.0.1"
   }
 }
