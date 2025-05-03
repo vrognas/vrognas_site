@@ -253,6 +253,8 @@ format:
   html:
     canonical-url: true
     lang: en
+    smooth-scroll: false
+    link-external-icon: true
     include-in-header:
       - seo.html
       - pk-operators.html
@@ -265,6 +267,7 @@ format:
     toc: true
     bibliography: refs.bib
     csl: clinical-microbiology-and-infection.csl
+    image-lazy-loading: true
     lightbox: true
     fig-width: 9
     fig-asp: 0.618
