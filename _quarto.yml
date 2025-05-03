@@ -252,6 +252,7 @@ website:
 format:
   html:
     canonical-url: true
+    lang: en
     include-in-header:
       - seo.html
       - pk-operators.html
