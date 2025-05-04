@@ -33,7 +33,7 @@ A [Visual Studio Code](https://code.visualstudio.com/) [extension](https://marke
 
 By tokenization according to [TextMate 1.5.1 naming conventions](https://macromates.com/manual/en/language_grammars#naming_conventions)
 
-![](images/demo_syntax-highlight.png)
+![](images/demo_syntax-highlight.avif)
 
 ##### Snippet Completion
 
@@ -98,7 +98,7 @@ High colistin exposure was associated with poor kidney function, and was not rel
 
 [https://www.page-meeting.org/default.asp?abstract=9869](https://www.page-meeting.org/default.asp?abstract=9869)
 
-![](images/phd-2-scr.png)
+![](images/phd-2-scr.avif)
 
 ### Bounded integer approach to model time-varying SOFA scores from patients with carbapenem resistant infections
 
@@ -106,7 +106,7 @@ High colistin exposure was associated with poor kidney function, and was not rel
 
 [https://www.page-meeting.org/default.asp?abstract=9052](https://www.page-meeting.org/default.asp?abstract=9052)
 
-![](images/phd-3-bi.png)
+![](images/phd-3-bi.avif)
 
 ### An integrated semi-mechanistic model to predict the outcome of drug-target effects on the erythropoietic system
 
@@ -114,4 +114,4 @@ High colistin exposure was associated with poor kidney function, and was not rel
 
 [https://www.page-meeting.org/?abstract=10044](https://www.page-meeting.org/?abstract=10044)
 
-![](images/phd-4-ery.png)
+![](images/phd-4-ery.avif)
