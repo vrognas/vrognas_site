@@ -47,7 +47,7 @@ If it is a really short message, consider using only the subject line, ending it
   And dots........ (what you want here is the *ellipsis* "...").
   * Mind your language.
     * Avoid profanity.
-    * Be polite, and not overly apologetic (see @fig-email).
+    * Be polite, and not overly apologetic (see @tbl-email).
     * Use abbreviations, symbols, and emojis sparingly.
 
 :::{.callout-note title="Note on emojis"}
@@ -74,6 +74,8 @@ Correctly used, they are irreplaceable in making sure your message is read in th
 | Where the heck are we on this?       | Just wanted to check in                     | When can I expect an update?             |
 | I made a small error                 | Sorry I missed that     | Nice catch! I've updated it now. Thanks for letting me know! |
 | I have an appointment                | Could I possibly leave early?               | I will need to leave for ___ at ___      |
+
+: Email communication {#tbl-email}
 
 :::{.callout-note title="Note on attachments"}
 Prefer links to secure servers over attaching files.
