@@ -3,3 +3,9 @@ package = "@quarto/netlify-plugin-quarto"
 
 [[plugins]]
 package = "@netlify/plugin-lighthouse"
+
+[[plugins]]
+package = "netlify-plugin-critical-css"
+
+[[plugins]]
+package = "netlify-plugin-minify-html"
