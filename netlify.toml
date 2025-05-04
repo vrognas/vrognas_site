@@ -15,5 +15,6 @@
 
 [[redirects]]
   from = "https://www.vrognas.com/docs/modeling/cat"
+  to = ""
   status = 410
   force = true
