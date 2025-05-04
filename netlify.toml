@@ -14,19 +14,13 @@
   package = "@netlify/plugin-lighthouse"
 
 [[redirects]]
-  from = "https://www.vrognas.com/docs/modeling/cat"
-  to = "/"
+  from = "/docs/modeling/cat"
   status = 410
-  force = true
 
 [[redirects]]
-  from = "https://vrognas.com/docs/pharmacopeia/J_infections/antibiotics/antibiotics.html"
-  to = "/"
+  from = "/pharmacopeia/J_infections/antibiotics/antibiotics.html"
   status = 410
-  force = true
 
 [[redirects]]
-  from = "https://www.vrognas.com/blog/*"
-  to = "/"
+  from = "/blog/*"
   status = 410
-  force = true
