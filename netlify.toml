@@ -1,14 +1,19 @@
 [[plugins]]
-package = "@quarto/netlify-plugin-quarto"
+  package = "@quarto/netlify-plugin-quarto"
 
 [[plugins]]
-package = "netlify-plugin-critical-css"
+  package = "netlify-plugin-critical-css"
 
   [plugins.inputs]
-  base  = "_site"
+    base  = "_site"
 
 [[plugins]]
-package = "netlify-plugin-minify-html"
+  package = "netlify-plugin-minify-html"
 
 [[plugins]]
-package = "@netlify/plugin-lighthouse"
+  package = "@netlify/plugin-lighthouse"
+
+[[redirects]]
+  from = "https://www.vrognas.com/docs/modeling/cat"
+  status = 410
+  force = true
