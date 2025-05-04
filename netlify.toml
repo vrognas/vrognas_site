@@ -15,6 +15,12 @@
 
 [[redirects]]
   from = "https://www.vrognas.com/docs/modeling/cat"
-  to = ""
+  to = "/"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "https://www.vrognas.com/blog/*"
+  to = "/"
   status = 410
   force = true
