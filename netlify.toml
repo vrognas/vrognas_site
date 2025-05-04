@@ -15,12 +15,15 @@
 
 [[redirects]]
   from = "/docs/modeling/cat"
+  to = "/"
   status = 410
 
 [[redirects]]
   from = "/docs/pharmacopeia/J_infections/antibiotics/antibiotics.html"
+  to = "/"
   status = 410
 
 [[redirects]]
   from = "/blog/*"
+  to = "/"
   status = 410
