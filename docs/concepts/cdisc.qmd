@@ -12,22 +12,22 @@ Each standard has an Implementation Guide (IG) that shows exactly how to apply t
 All the implementations have version numbers that are important to keep track of.
 
 CDISC also provides TAUGs (Therapeutic Area User Guides).
-A TAUG is a document providing guidance on applying CDISC standards to a specific therapeutic area (oncology, diabetes, CNS, etc.).
+A TAUG is a document that provides guidance on applying CDISC standards to a specific therapeutic area (e.g., oncology, diabetes, CNS, etc.).
 
 ![](images/cdisc.png){#fig-cdisc}
 
 ## CDASH
 
-CDASH (Clinical Data Acquisition Standards Harmonization) standardizes how data are entered into *case report forms (CRFs)* at clinical sites.
+CDASH (Clinical Data Acquisition Standards Harmonization) standardizes data entry into *case report forms (CRFs)* at clinical sites.
 
 ## SDTM
 
 SDTM (Study Data Tabulation Model) organizes the data from CDASH into submission-ready datasets.
-It includes different **domains/datasets** (e.g., exposure, and lab-values) and controlled terminology (e.g., how to name variables).
+It includes different **domains/datasets** (e.g., exposure and lab values) and controlled terminology (e.g., how to name variables).
 
 ### General Observation Classes
 
-General Observation Classes are high-level classifications within SDTM that group domains based on the type of data they contain.
+General Observation Classes are high-level classifications within SDTM that group domains based on the data type they contain.
 
 There are three general observation classes: *Interventions*, *Events*, and *Findings*.
 There is also a fourth observation class: *Special purpose*.
@@ -83,7 +83,7 @@ A typical example is splitting the Laboratory Test Results (LB) domain due to si
 |                           | Subject status                              | `SS`                |
 |                           | Tumor/lesion identification                 | `TU`                |
 |                           | Tumor/lesion results                        | `TR`                |
-|                           | Vital signs                                 | `VS`                |
+| **Findings about**        | Vital signs                                 | `VS`                |
 |                           | Findings about events or interventions      | `FA`                |
 |                           | Skin response                               | `SR`                |
 | **Special Purpose**       | Comments                                    | `CO`                |
@@ -91,6 +91,18 @@ A typical example is splitting the Laboratory Test Results (LB) domain due to si
 |                           | Subject elements                            | `SE`                |
 |                           | Subject disease milestones                  | `SM`                |
 |                           | Subject visits                              | `SV`                |
+| **Trial design**          | Trial arms                                  | `TA`                |
+|                           | Trial disease assessments                   | `TD`                |
+|                           | Trial elements                              | `TE`                |
+|                           | Trial inclusion/exclusion criteria          | `TI`                |
+|                           | Trial disease milestones                    | `TM`                |
+|                           | Trial summary                               | `TS`                |
+|                           | Trial visits                                | `TV`                |
+| **Relationship**          | Related records                             | `RELREC`            |
+|                           | Related specimens                           | `RELSPEC`           |
+|                           | Related subjects                            | `RELSUB`            |
+|                           | Supplemental qualifiers for [domain name]   | `SUPP--`            |
+| **Study reference**       | Non-host organism indentifiers              | `OI`                |
 
 : General observation classes in SDTM. {#tbl-goc}
 
@@ -137,9 +149,9 @@ Describes the timing of the observation.
 
 ## ADaM
 
-ADaM (Analysis Data Model) takes SDTM data and transforms it into datasets suitable for statistical analysis.
-It contains derived datasets used for tables, listings, figures.
-Like SDTM it is organized into different **domains/datasets**, each with its specific setup.
+ADaM (Analysis Data Model) transforms SDTM data into datasets suitable for statistical analysis.
+It contains derived datasets used for tables, listings, and figures.
+Like SDTM, it is organized into different **domains/datasets**, each with its specific setup.
 
 https://www.cdisc.org/system/files/members/standard/foundational/ADaMIG_v1.3.pdf
 
