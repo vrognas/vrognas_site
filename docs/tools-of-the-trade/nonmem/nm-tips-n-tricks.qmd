@@ -133,7 +133,7 @@ $ESTIMATION METHOD=1 MCETA=1    MAXEVAL=9999
 
 #### First-order conditional estimation (FOCE)
 
-Always use the `FAST` option, tehre are very few cases where `FAST` is suboptimal.
+Always use the `FAST` option, there are very few cases where `FAST` is suboptimal.
 
 :::{.callout-note}
 The `FAST` option uses MU-modeling to be effective.
