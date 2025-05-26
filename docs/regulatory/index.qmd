@@ -5,7 +5,7 @@ date: last-modified
 
 Regulatory documents are generally filled with walls of text, and much is up for interpretation.
 
-This is why a clear yes/no answer from regulatory agencies are not possible until the final asssessment, when an assessment and interpretation of the totality of evidence has been made.
+This is why a clear yes/no answer from regulatory agencies are not possible until the final assessment, when an assessment and interpretation of the totality of evidence has been made.
 
 ## Good Clinical Practice (GCP)
 
@@ -120,7 +120,7 @@ Information is presented according to a predefined structure:
         * In a balanced way (i.e., informing on uncertainties as appropriate)
         * Including study results in the paediatric population, even if the product is not (yet) indicated, to improve the information available on the use of medicine in the various paediatric populations
   * **5.2 Pharmacokinetic properties**
-    * Desciptive information on general PK
+    * Descriptive information on general PK
     * Differences in PK due to e.g. hepatic/renal impairment or concomitant diseases
   * 5.3 Preclinical safety data
 * 6. Pharmaceutical particulars
