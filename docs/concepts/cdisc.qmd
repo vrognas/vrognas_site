@@ -106,6 +106,32 @@ A typical example is splitting the Laboratory Test Results (LB) domain due to si
 
 : General observation classes in SDTM. {#tbl-goc}
 
+### PC Domain (Pharmacokinetics Concentrations)
+
+ref: <https://www.fda.gov/media/153632/download>
+
+The PC domain should support the creation of time series graphs and automatic calculation of pharmacokinetic parameters from sets of related plasma concentrations.
+Three elements are necessary:
+
+* Nominal timings relative to the dose in ISO 8601 duration format
+* Grouping of each different set of time series measurements used to calculate a related pharmacokinetic parameter
+* Identification of the start of each time series relative to the start of exposure
+
+If the nominal times are provided in PCELTM, nulls should be avoided for plasma concentrations used to calculate a profile.
+PCDTC and PCDY variables should be populated with actual/collected information when it available; however, for single dose, repeat dose, or carcinogenicity studies where actual/collected data are not readily available to be incorporated into the dataset, these variables may be left null or populated with calculated or nominal dates/times.
+The use of calculated or nominal dates and times should be mentioned in the nSDRG.
+When actual dose dates or date/time values are available for PCRFTDTC/PPRFTDTC, they can be included.
+When a test result is below a lower limit of quantitation (LLOQ), it should be submitted using the following instructions:
+
+* `PCORRES` should not contain a specific value.
+For example, the value in PCORRES may be `<LLOQ`, where LLOQ is the numerical value.
+• `BLQ`[^According to the FDA’s Bioanalytical Method Validation Guidance for Industry (May 2018), study samples with concentrations listed below the LLOQ should be reported as `BQL`; however, `BLQ`, as specified in FDA-supported SENDIG versions, is appropriate to use in SEND datasets to report this data.] should be in PCSTRESC to signify that the result is below the LLOQ.
+• `PCSTRESN` should be blank.
+• Standardized units for LOQ should be in `PCSTRESU`.
+• `PCLLOQ` should be populated with the lower limit of quantitation for the analyte.
+• When a numeric value has been assigned to a result that is below the LLOQ for the purpose of group summary statistics, that value should be submitted in SUPPPC as QNAM = `PCCALCN` to allow the group statistics presented in the study report to be reproduced.
+When a value that is below the LLOQ is excluded from group statistics, no PCCALCN entry is needed.
+
 ### SDTM variables
 
 Variables are classified as *required*, *expected*, or *permissible* for each domain.
