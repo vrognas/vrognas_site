@@ -4,6 +4,9 @@ code-overflow: scroll
 date: last-modified
 ---
 
+:::{.callout-caution title="Under construction"}
+:::
+
 Estimation methods are the algorithms that are used to identify the best fit model parameters given the specified model and the analysis data set.
 
 The aim of this page is to:
@@ -702,13 +705,13 @@ NUTS_MASS=D
 
 | Scenario         | FOCE  | LAPLACE | IMP   | IMPMAP | SAEM  | DIRECT | BAYES | NUTS  |
 | :--------------- | :---: | :------ | :---: | :----: | :---: | :----: | :---: | :---: |
-| Very sparse data |       |         |       |        |   x   |   x    |       |       |
-| Sparse data      |   x   |    x    |   x   |        |   x   |   x    |       |       |
-| Rich data        |   x   |    x    |   x   |   x    |   x   |   x    |       |       |
-| Very rich data   |   x   |    x    |       |   x    |   x   |   x    |       |       |
-| Categorical data |       |    x    |       |        |   x   |   x    |       |       |
+| Very sparse data |       |         |       |        |   x   |        |       |       |
+| Sparse data      |   x   |    x    |   x   |        |   x   |        |       |       |
+| Rich data        |   x   |    x    |   x   |   x    |   x   |        |       |       |
+| Very rich data   |   x   |    x    |       |   x    |   x   |        |       |       |
+| Categorical data |       |    x    |       |        |   x   |        |       |       |
 | Simple models    |   x   |    x    |       |        |       |        |       |       |
-| Complex models   |       |         |   x   |   x    |   x   |   x    |       |       |
+| Complex models   |       |         |   x   |   x    |   x   |        |       |       |
 
 If you are unsure which method to use, **start with MLE methods like FOCE or LAPLACE, then turn to EM.**
 

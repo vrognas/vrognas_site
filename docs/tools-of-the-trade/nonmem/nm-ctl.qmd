@@ -4,6 +4,9 @@ code-overflow: scroll
 date: last-modified
 ---
 
+:::{.callout-caution title="Under construction"}
+:::
+
 ## Modeling: Writing the control stream
 
 One hint on control files: never write one from scratch.
@@ -12,18 +15,17 @@ Instead, find a control file that does something similar to what you want to do,
 ### Model structure templates with NONMEM code
 
 For a great resource on model templates, see <https://pmxrepo.com>.
-According to the maintainer, James Ousey: "the site is meant to be a practical repository for pharmacometric NONMEM related technical information".
 On the website you'll find example code for various absorption models including:
 
 * Dual absorption
 * Saturable absorption
 * Weibull
-* Transit compartments.
+* Transit compartments
 
 * Linear clearance models
 * Non-linear clearance models
 * Time varying clearance models
-* Various interaction models.
+* Various interaction models
 
 There are also multiple residual error models for each model.
 
@@ -53,21 +55,22 @@ Protection code need not be inserted for every `LOG()`, `EXP()`, or `SQRT()`, bu
 * Extreme eta values may sometimes be selected
 * Usually extreme ETAs are rejected by MC algorithm
 * Occasionally, analysis fails because of
-  – Floating point overflows
-  – Divide by zero
-  – Domain errors
+    * Floating point overflows
+    * Divide by zero
+    * Domain errors
 * Result in failure of the analysis.
 
 * `EXIT` statement allows NONMEM to reject the present set of ETAs
 * If `NOABORT` is selected as a `$EST` setting, NONMEM will attempt to recover and continue.
 * The `EXIT` statement causes an error condition index to be set, which is detected by the MLE as well as the EM algorithms.
 
-* As of NONMEM 7.4, you can use "protection" functions that avoid the numerical difficulties. For example:
+As of NONMEM 7.4, you can use "protection" functions that avoid the numerical difficulties. For example:
+
 * `PLOG(X)` returns a large negative value when `X<=0.0`
 * `PEXP(X)` returns `EXP(40.0)` when `X>40.0`
 * `PSQRT(X)` returns `0.0` when `X<0.0`
-* More functions listed in intro7.pdf
-* Or, simply set at beginning of control stream file: `$ABBR PROTECT` and all functions will be converted to protected form
+
+Or, simply set at beginning of control stream file: `$ABBR PROTECT` and all functions will be converted to protected form.
 
 #### Random ETA samples
 
