@@ -42,3 +42,8 @@ Find your chapter, share tales, and build alliances to sharpen your practice.
 
 * CPT: Pharmacometrics & Systems Pharmacology
 * Journal of Pharmacokinetics and Pharmacodynamics
+
+## Websites
+
+* <https://pmxrepo.com>
+* <https://www.pkpd-info.com>

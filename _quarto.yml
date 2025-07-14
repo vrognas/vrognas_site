@@ -234,6 +234,18 @@ website:
           contents:
           - section: "NONMEM"
             contents:
+              - text: "Data"
+                href: docs/tools-of-the-trade/nonmem/nm-data.qmd
+              - text: "Grok NM-TRAN"
+                href: docs/tools-of-the-trade/nonmem/nm-ctl.qmd
+              - text: "Estimation methods"
+                href: docs/tools-of-the-trade/nonmem/nm-est.qmd
+              - text: "Tweaks for Geeks"
+                href: docs/tools-of-the-trade/nonmem/nm-run.qmd
+              - text: "Troubleshooting"
+                href: docs/tools-of-the-trade/nonmem/nm-err.qmd
+              - text: "Model QA"
+                href: docs/tools-of-the-trade/nonmem/nm-qa.qmd
               - text: "Tips-n-tricks"
                 href: docs/tools-of-the-trade/nonmem/nm-tips-n-tricks.qmd
           - section: "R"

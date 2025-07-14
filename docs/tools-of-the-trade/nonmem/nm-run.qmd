@@ -1,0 +1,46 @@
+---
+title: "Tweaks for Geeks"
+code-overflow: scroll
+date: last-modified
+---
+
+## Running NONMEM
+
+* NONMEM places the low bound equal to 1/100 (or 1/1000) of the initial value even if it is set to zero in the code. You may rerun with lower initial value or put `NOTHETABOUNDTEST` to the estimation record. (Credit: Leonid Gibiansky)
+
+### Faster parallel NONMEM
+
+`--threads-per-core=1`: Do not hyperthread.  
+`FILE07–39` should be size 0; in fact, `FILE*` should be size 0.
+Therefore, use `--maxlim=3`: Do not use diskspace (slow).  
+
+```zsh
+execute -nmfe_options="[sbatchargs=--threads-per-core=1] -maxlim=3  -parafprint=100"
+```
+
+### Interactive control of NONMEM runs
+
+Find the directory where NONMEM is running (`NM_run1/` in PsN) and manually create an empty file with a different name according to the desired action.
+
+```bash
+touch file.sig
+```
+
+Here's a list:
+
+| Action | Description | Filename |
+| :--- | :--- | :--- |
+| Print toggle | Monitor estimation progress | `print.sig` |
+| Paraprint toggle | Monitor parallel processing traffic | `paraprint.sig` |
+| Next | Move on to next estimation mode or next estimation. NONMEM grinds a couple of iterations more and then it terminates nicely as if the maximum number of function evaluations had been reached. | `next.sig` |
+| Stop | End the present run cleanly | `stop.sig` |
+| Subject print toggle | | `subject.sig` |
+
+: Interactive control {#tbl-nm-interactive tbl-colwidths="[30, 50, 20]"}
+
+([Credit: Paolo Denti](https://www.mail-archive.com/nmusers@globomaxnm.com/msg03990.html))
+
+## References
+
+::: {#refs}
+:::

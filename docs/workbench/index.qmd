@@ -6,3 +6,7 @@ date: last-modified
 * Shiny E-max calculator
 * Shiny Hazard function calculator
 * Half-life dosing table, e.g., dosing every half-life gives AR=2
+* Convert Omega values to percentages
+* Convert precentages to Omega values
+* Calculate confidence interval (95%) given mean and SD
+* Calculate half-life based on V and CL

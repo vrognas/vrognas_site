@@ -1,0 +1,91 @@
+---
+title: "NONMEM model quality assurance"
+code-overflow: scroll
+date: last-modified
+---
+
+## Interpreting the results, model validation
+
+### Grok NONMEM
+
+`.ext` means "extra"  
+`.cnv` means "convergence", contains convergence-testing statistics.  
+`.phm` means ".phi-file for mixture model"  
+`.ets`-file gets "random sampled ETAs" (less prone to shrinkage)  
+`.phi` contains individual parameters: φi=μi+ηi, φi=(φ1,…,φn)  
+
+* phc=Var(phi)
+* non_MU_ref parameters: φi=ηi
+
+### QA
+
+::: {.callout-tip}
+The "best" model isn’t necessarily the one with the lowest objective function.
+:::
+
+* QA
+* ETA ShrinkageSD < 20% ? (then we can use EBE based diagnostics)
+* EPS ShrinkageSD < 20% ? (then we can look at IPRED vs DV)
+
+* Condition number (CN) – `$COVARIANCE PRINT=E`
+  * Calculated differently in different software
+    * In PsN it is calculated as dividing the largest eigenvalue with the smallest
+    * Gabrielsson and Wiener calculates it as log(largest/smallest)
+  * Different guidelines for ill-conditioning
+    * If CN < 10p, where p = "number of estimable parameters", then it’s good
+    * There are also references that point to CN < 106
+    * < 1000 (seems to relate more to linear models, or PK-models with 3 parameters (CL, V, KA))
+* NRD = Number of Required Digits
+
+::: {.callout-tip title="Significant improvement"}
+* Don't directly associate OFVs with p-values ([Wählby et al. 2001](https://doi.org/10.1023/A:1011527125570))
+  * Regard a drop in OFV with ~10 ([Byon et al. 2013](https://doi.org/10.1038/psp.2013.26))
+* boxcox ETA: dOFV > -10.827 (p < 0.001)
+:::
+
+### Bias
+
+#### Driving individuals
+
+Compare iOFV values in the `.phi`-file between runs.
+
+1. Sharkplot (ΔOFV (= OFV~full~ - OFV~reduced~) vs #subjects~removed~)
+2. Should be able to remove 5 subjects without loosing significance.
+
+#### Outlying observations {#sec-outliers}
+
+Do a sensitivity analysis for outliers (|CWRES| < 5).
+
+1. Re-estimate model with the  outliers removed
+2. Parameter estimates change -> Remove outliers
+3. Parameter estimates **doesn’t** change -> Keep outliers
+
+### Parameter uncertainty
+
+* RSE% considered precise: < 30% for THETAs, < 50% for ETAs
+* SIR (PsN vs NONMEM)
+
+### VPCs
+
+The VPCs central metric are the prediction of data percentiles.
+If you focus on the difference between e.g. the 5th and 95th percentile based on the simulated data you will have a prediction interval, like Bill states.
+If you focus on an individual percentile, but consider the imprecision with which it is derived, often given as a shaded area, then it is like other metrics of imprecision a confidence interval.
+Confidence interval (ci) and prediction interval (pi) for VPC.
+
+::: {.callout-note}
+
+## Notes
+
+* Mixture prior slide 31. Prior+flat prior "what if we are wrong". When conflict: up-weights data, downplays history
+* Two-stage approach: Apply a model to each individuals data
+  * Require much data per individual.
+  * OK mean parameters (i.e. typical individual)
+  * But IIV id inflated (also diff ID -> diff model)
+* NONMEM: Apply a model to all individuals data
+
+:::
+
+## References
+
+::: {#refs}
+:::

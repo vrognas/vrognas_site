@@ -1,0 +1,758 @@
+---
+title: "NONMEM estimation methods/algorithms"
+code-overflow: scroll
+date: last-modified
+---
+
+Estimation methods are the algorithms that are used to identify the best fit model parameters given the specified model and the analysis data set.
+
+The aim of this page is to:
+
+* Give a **brief overview** of the available methods, their options, and sensible tweaks/options
+* Give an **intuitive explanation** of the methods on a conceptual level
+* Give a sense of **when to choose which** estimation method
+
+In essence, there are two families of estimation methods available in NONMEM:
+
+1. Maximum-Likelihood ("Classical" or "MLE"^["ML"-methods (Machine Learning) are something else entirely]) methods
+2. Expectation-Maximization ("EM") methods
+
+## Classical MLE methods {#sec-mle}
+
+MLE (or "classical") methods want to be "statistically fair" to all possibilities.
+These are also the type of methods used in classical statistical tests like t-test, AN(C)OVA, and even the simple *mean* of a set of values.
+
+There are essentially three MLE methods available in NONMEM:
+
+1. FO (First Order)
+2. FOCE (First Order with Conditional Estimation)
+3. LAPLACE (Second order)
+
+The "order" refers to the derivative evaluated in the Taylor expansion.
+So, the first order methods FO and FOCE evaluated the first order derivative (Jacobian matrix), or the "slope" of the objective function value (OFV).
+LAPLACE evaluates the second order derivative (Hessian matrix), or the "curvature" of the OFV, requiring more computational effort than the first order.
+
+### FO {#sec-fo}
+
+FO stands for **F**irst **O**rder.
+Is the **perfect method when no ETAs are computed**^[Credit: Adrian Dunne], as in e.g. single TTE-models that do not contain a frailty-component.
+Only optimizes the THETAs (fixed effect parameters).
+
+Might also be useful as an exploratory method when fast approximate results are desirable.
+
+::: {.callout-note}
+FO can be specified as either `METHOD=ZERO` or `METHOD=0`.
+
+Either one is fine, although `METHOD=0` is more common.
+:::
+
+### FOCE {#sec-foce}
+
+FOCE stands for **F**irst **O**rder **C**onditional **E**stimation.
+FOCE simultaneously estimates both fixed and random effects, unlike the FO method which estimates fixed effects first, then random effects.
+
+It is very common to also use the `INTERACTION` option, and that is then called the FOCEI (FOCE **I**nteraction) method.
+The `INTERACTION` option allows for correlation between the two types of random effects: ETAs (between-subject variability) and Epsilons (residual variability).
+
+::: {.callout-note}
+FOCE can be specified as either `METHOD=CONDITIONAL` or `METHOD=1`.
+
+For explicitness, `METHOD=CONDITIONAL` is prefered.
+:::
+
+#### Options {#sec-foce-options}
+
+For now on we differentiate problems by their computational nature, as this in some sense define the different options we want to tweak to optimize speed and accuracy of our estimation algorithm.
+We define "numerical integration problems" as problems using `ADVAN6`, `ADVAN9`, or `ADVAN13` or similar solvers, and "analytical problems" as problems using any of the ADVANs in PREDPP that have analytical solutions (e.g. anything else than `ADVAN6`, `ADVAN9`, or `ADVAN13`).
+
+* Internal precision is based on user specified TOL
+* Often `TOL=6` or less, not 10
+* The largest NSIG one should insist on is 2.
+
+Sensible options to add from start:
+
+```verilog
+$ESTIMATION METHOD=CONDITIONAL
+            INTERACTION
+            MAXEVAL=99999
+            FAST # <1>
+            CTYPE=4
+            NONINFETA=1 # <2>
+            NSIG=2 # <3>
+            SIGL # <4>
+            SIGLO # <5>
+            MSFO=root.msf
+            PRINT=1
+```
+1. Always use the `FAST` option, there are very few cases where `FAST` is suboptimal^[Credit: Robert Bauer].
+The `FAST` option benefits from MU-modeling to be more effective (see "Speaking NM-TRAN" for more info).
+2. `NONINFETA` should be added when not all ETAs are used for all subjects.
+For example, an ETA to a KA during a fit of a subject with only IV dosing.
+3. `NSIG <= SIGL/3`.
+Default value is 3 (ok for analytical problems), but for numerical integration problems the largest `NSIG` one should insist on is 2^[Credit: Robert Bauer].
+4. `SIGL <= TOL` (for numerical integration problems).
+`SIGL <= 14` (for analytical problems, about the limit of double precision ).
+5. `SIGLO <= TOL` and `SIGLO >= SIGL`. By default, `SIGLO=SIGL`
+
+If issues arise, then first try these options:
+
+```verilog
+NSIG=2 # <1>
+NOABORT # <2>
+NOHABORT # <3>
+NOTHETABOUNDTEST # <4>
+NOOMEGABOUNDTEST # <4>
+NOSIGMABOUNDTEST # <4>
+MCETA=1000 # <5>
+SEED=14455 # <6>
+RANMETHOD=4P # <6>
+SADDLE_RESET=1
+REPEAT
+```
+1. Some trial and error for `NSIG`, `SIGL`, `SIGLO` may still be required given the data.
+2. If "Hessian not positive definite"
+2. If there is trouble even at the beginning of an optimization with NOABORT
+4. If "PARAMETER ESTIMATE IS NEAR ITS DEFAULT BOUNDARY."
+5. If issue with MAP (ETA) estimation
+6. If using MCETA
+
+The relevant default options for FOCE are:
+
+```verilog
+$ESTIMATION METHOD=CONDITIONAL
+            ABORT
+            ATOL=12
+            BOOTDATA=0
+            CONDITIONAL
+            CTYPE=0
+            ETADER=0
+            ETASTYPE=0
+            FILE=root.ext
+            FNLETA=1
+            FORMAT=s1PE12.5
+            LEVWT=0 ; If $LEVEL is used
+            MASSRESET=-1
+            MAXEVAL=224
+            MCETA=0
+            NOLABEL=0
+            NONINFETA=0
+            NOPRIOR=0
+            NOSLOW
+            NOSUB=0
+            NOTITLE=0
+            NSIG=3 ; Also "SIGDIGITS" or "NSIGDIGITS"
+            NUMDER=0
+            NUTS_EPARAM
+            NUTS_MASS
+            NUTS_OPARAM
+            NUTS_REG
+            NUTS_SPARAM
+            OMITTED
+            OPTMAP
+            ORDER
+            PARAFILE
+            PARAFPRINT
+            POSTHOC
+            PREDICTION
+            PRINT=9999
+            PRIORC
+            SADDLE_HESS=0
+            SADDLE_RESET=0
+            NOSORT
+            NOREPEAT
+            NONUMERICAL
+            NOCENTERING
+            NOINTERACTION
+            NOETABARCHECK
+            THETABOUNDTEST
+            OMEGABOUNDTEST
+            SIGMABOUNDTEST
+```
+
+::: {.callout-tip}
+There is no reason to use the `POSTHOC` option with FOCE as it only applies for the FO method.
+:::
+
+### LAPLACE {#sec-laplace}
+
+Similar to FOCE but evaluates the second order derivative (Hessian) instead of the first order (Jacobian).
+Should really be called SOCE (second order conditional estimation).
+
+::: {.callout-note}
+LAPLACE can be specified as either `LAPLACE` (most common) or `LAPLACIAN`, as an **option to FOCE**.
+
+```verilog
+$ESTIMATION METHOD=CONDITIONAL LAPLACE
+```
+:::
+
+### Robustness {#sec-mle-robust}
+
+#### SADDLE_RESET
+
+The `SADDLE_RESET` option was developed enable more robust parameter estimation through a check for local practical identifiability [@bjugardnybergSaddleResetRobustParameter2020].
+In the original article, the authors recommend setting `SADDLE_RESET=1` when using MLE (FO, FOCE, LAPLACE).
+
+#### MCETA
+
+When MAP estimation is performed, NONMEM must pick a starting set of individual ETAs.
+By default it uses all zeros, but that may trap the algorithm in a local minimum.
+The `MCETA` option tells NONMEM to test alternative starting points and keep the one that gives the lowest objective function:
+
+* `MCETA=0` (default): Only ETA = 0 is tried.
+* `MCETA=1`: Compares ETA = 0 with the ETAs from the previous iteration and starts MAP with whichever produces the lower OFV.
+* `MCETA>1`: Generates `MCETA – 1` random ETA vectors sampled from N(0, Ω) and tests them together with ETA = 0 and the previous ETAs; the vector with the lowest OFV becomes the MAP starting point.
+
+If the algorithm ends up in local minima despite `MCETA`, try increasing the value (e.g. from 100 to 1000).
+Since `MCETA` is most impactful during the early iterations^[Credit: Robert Bauer, NONMEM maintainter], another option to still benefit from the robustness of `MCETA` but not impact the estimation speed too much, is to only use `MCETA` for the first 200 iterations or so:
+
+```verilog
+$ESTIMATION METHOD=1 MCETA=1000 MAXEVAL=200
+$ESTIMATION METHOD=1 MCETA=1    MAXEVAL=9999
+```                                                                                                                                                                             
+
+### Reproducibility {#sec-mle-repr}
+
+As mentioned above, MLE methods are inherently reproducible since they are deterministic.
+However, if one uses the `MCETA` option, a stochastic Monte-Carlo element is introduced that benefits from additional options for reproducibility:
+
+* `RANMETHOD=4P`: The `4` sets the randomization method to the same as the default one in `$SIMULATION`, and the `P` is necessary when running NONMEM in parallel.
+* `SEED=123456789`: This enables the Monte-Carlo sequence to be reproduced. Choose any integer, but be consistent within your analysis.
+
+## EM-methods {#sec-em}
+
+EM stand for **E**xpectation-**M**aximization, and was first published in 1977.
+EM derives its name from the two iterative steps that define its approach:
+
+1. **E (Expectation) step**: The algorithm calculates the expected value (or integral) of the likelihood function given the current parameter estimates and the model.
+
+2. **M (Maximization) step**: The algorithm *updates the parameter estimates* by maximizing the likelihood function based on the expectations calculated in the E-step.
+
+Multiple parameter combinations could potentially explain the observed data.
+Rather than seeking a single "best" solution like MLE methods, **EM explores the distribution of likely parameter values** and identifies the *most likely combination* from this distribution.
+
+It is important to understand that parameters can be estimated/refined *ad infinitum*, since they are continuous.
+Thus, a **stopping (convergence) critera** is needed.
+Each time you run your model, you might get a slightly different result depending on the stopping criteria.
+
+Also, to avoid searching the *infinite space* of all parameters (would literally take forever), the different EM methods **restrict the search area** in different ways.
+In general, this also determines the speed of the algorithm.
+For example, IMP is generally faster than SAEM due to IMP searching a smaller space around the initial estimates then SAEM.
+
+::: {.callout-note title="MU modeling"}
+EM methods are most efficient when the model follows a specific statistical structure: fixed effects parameters (THETAs) only define the mean (MU) of the normal population distribution of individual parameters (phi = THETA + ETA).
+This requires a special coding technique called **MU modeling** for optimal performance.
+Please see "Speaking NM-TRAN" for more info.
+:::
+
+### ITS {#sec-its}
+
+ITS stands for **I**terative **T**wo **S**tage.
+Normally, it is used as a rapid exploratory pre-analysis method to facilitate parameter estimation with IMP or SAEM.
+
+```verilog
+$ESTIMATION METHOD=ITS
+            INTERACTION
+            LAPLACE
+            NITER=15
+$ESTIMATION METHOD=SAEM
+            INTERACTION
+            LAPLACE
+            NBURN=200
+            NITER=200
+$ESTIMATION METHOD=IMP
+            EONLY=1
+            NITER=2
+            ISAMPLE=1000
+            MAPITER=0
+```
+
+#### Options
+
+AUTO=1
+
+```verilog
+METHOD=ITS
+INTERACTION
+CTYPE=3
+NITER=500
+NOPRIOR=1
+CITER=10
+CINTERVAL=1
+CALPHA=0.05
+```
+
+### IMP {#sec-imp}
+
+IMP stands for **IMP**ortance sampling.
+The IMP method in NONMEM uses Monte Carlo sampling (E-step) to narrow the posterior parameter distribution.
+
+::: {.callout-tip}
+When using the IMP method, it is adviced to include two sequential `$ESTIMATION` records.
+The first record will perform optimization of parameter estimates (E- and M-step) until a global minimum is found.
+The second record will then take those parameter estimates and calculate more precise estimates of the objective function value (just the E-step).
+The second `$ESTIMATION` command will have a higher `ISAMPLE` to reduce the Monte Carlo noise, and have `EONLY=1` (no optimization of population parameters).
+`IMP EONLY=1` needs a few iterations to stabilize because of internal processes
+:::
+
+#### Stochastic noise
+
+Remember, EM algorithms by nature don't find a single set of parameters that are the best fit.
+They find a distribution of parameter sets that maximize the expectation.
+Often those parameter sets are very similar and only differ in the 6^th^ or 7^th^ decimal place.
+But sometimes in complex models with poorly estimated parameters they can differ by larger numbers.
+
+```verilog
+$ESTIMATION METHOD=ITS
+            INTERACTION
+            LAPLACE
+            NITER=200
+            SIG=3
+            PRINT=1
+            SIGL=6
+            NOHABORT 
+            CTYPE=3
+            NUMERICAL
+            SLOW 
+
+$ESTIMATION METHOD=IMPMAP
+            INTERACTION
+            LAPLACE
+            ISAMPLE=1000
+            NITER=1000
+            SIG=3
+            PRINT=1 
+            SIGL=6
+            NOHABORT
+            CTYPE=3
+            IACCEPT=0.4
+            MAPITER=0
+            RANMETHOD=3S2 
+
+$COVARIANCE UNCONDITIONAL MATRIX=S TOL=12 SIGL=12 SLOW
+```
+
+The iterations for the initial `ITS` step seems in this case to be quite stable with some artifacts: 
+
+```verilog
+iteration 175 OBJ= 4693.4674554341409
+iteration 176 OBJ= 4694.2296104065535
+iteration 177 OBJ= 4693.7753507970829
+iteration 178 OBJ= 4693.9600270372885
+iteration 179 OBJ= 4693.5732455834705
+iteration 180 OBJ= 4693.6386423202493
+iteration 181 OBJ= 4693.6215390721527
+iteration 182 OBJ= 4693.6006496138452
+iteration 183 OBJ= 4693.7877620448235
+iteration 184 OBJ= 4694.1591757809929
+iteration 185 OBJ= 4693.2614956897451
+iteration 186 OBJ= 4693.5641640401127
+iteration 187 OBJ= 4693.5575289919379
+iteration 188 OBJ= 4495.6489907149398
+iteration 189 OBJ= 4693.7711764252363
+iteration 190 OBJ= 4693.6281175153035
+iteration 191 OBJ= 4694.1171774559862
+iteration 192 OBJ= 4693.7908707845536
+iteration 193 OBJ= 4693.7709264605819
+iteration 194 OBJ= 4495.9262902940209
+iteration 195 OBJ= 4693.3321354894242
+iteration 196 OBJ= 4694.3177205227348
+iteration 197 OBJ= 4694.1301486616576
+iteration 198 OBJ= 4694.2898587322170
+iteration 199 OBJ= 4693.8304358341920
+iteration 200 OBJ= 4691.6818293505230
+
+#TERM: 
+OPTIMIZATION WAS NOT COMPLETED 
+```
+
+The IMP step can be less stable:
+
+```verilog
+iteration 120 OBJ= 4314.8310660241377 eff.= 446. Smpl.= 1000. Fit.= 0.96389
+iteration 121 OBJ= 4326.9079856676717 eff.= 448. Smpl.= 1000. Fit.= 0.96409
+iteration 122 OBJ= 4164.6649529423103 eff.= 479. Smpl.= 1000. Fit.= 0.96392
+iteration 123 OBJ= 4299.9887619753636 eff.= 432. Smpl.= 1000. Fit.= 0.96395
+iteration 124 OBJ= 4303.9571213327054 eff.= 399. Smpl.= 1000. Fit.= 0.96349
+iteration 125 OBJ= 4328.9835950930074 eff.= 417. Smpl.= 1000. Fit.= 0.96423
+iteration 126 OBJ= 4304.3861595488252 eff.= 550. Smpl.= 1000. Fit.= 0.96392
+iteration 127 OBJ= 4291.0862736663648 eff.= 422. Smpl.= 1000. Fit.= 0.96430
+iteration 128 OBJ= 4326.2378678645500 eff.= 407. Smpl.= 1000. Fit.= 0.96409
+iteration 129 OBJ= 4157.5352046539456 eff.= 406. Smpl.= 1000. Fit.= 0.96404
+iteration 130 OBJ= 4332.6894073732456 eff.= 399. Smpl.= 1000. Fit.= 0.96399
+iteration 131 OBJ= 4357.5343346793761 eff.= 493. Smpl.= 1000. Fit.= 0.96414
+
+Convergence achieved 
+
+iteration 131 OBJ= 4336.1893012015007 eff.= 417. Smpl.= 1000. Fit.= 0.96369 
+
+#TERM: 
+OPTIMIZATION WAS COMPLETED 
+```
+
+::: {.callout-note}
+If `eff.` divided by `Smpl.` is not approximately equal to `IACCEPT`, then tweak something.
+In the above example, `IACCEPT=0.4`, and `eff.` / `Smpl.` ≈ 0.4, so we're good.
+
+`Fit.` tells you how Gaussian the profile is.
+If `Fit.` is more like 0.6, then IMP is a good choice.
+If `Fit.` is approximately 1, you might as well use FOCE.
+In the above example, FOCE might have been a reasonable alternative.
+:::
+
+It is not unusual to see this large Monte Carlo noise in the OFV estimate.
+It indicates that the number of samples (`ISAMPLE`) may not be high enough.
+
+In this case, perform another run with the parameter values set to their final estimates, and with: 
+
+```verilog
+$ESTIMATION METHOD=IMP
+            INTERACTION
+            LAPLACE
+            ISAMPLE=10000 ; Number of samples
+            NITER=5 ; Number of iterations
+            SIG=3
+            PRINT=1 
+            SIGL=6
+            EONLY=1 ; Perform only the expectation step
+            NOHABORT
+            RANMETHOD=3S2
+```
+
+The higher number of samples should give a more stable result (although the run time of each iteration will increase significantly).
+Taking the **average OFV of these 5 iterations** will give a more accurate estimation of the final OFV^[Credit: Jon Moss].
+
+::: {.callout-caution}
+Do not compare IMP and FOCE OFVs
+:::
+
+#### Options {#sec-imp-options}
+
+In general, using the `AUTO=1` option is fine.
+
+```verilog
+$ESTIMATION METHOD=IMP
+            AUTO=1
+
+$ESTIMATION METHOD=IMP
+            INTERACTION
+            CTYPE=3
+            NITER=500
+            ISAMPLE=300
+            STDOBJ=10
+            ISAMPEND=10000
+            NOPRIOR=1
+            CITER=10
+            CINTERVAL=1
+            CALPHA=0.05
+            IACCEPT=0.0
+            ISCALE_MIN=0.1
+            ISCALE_MAX=10
+            DF=0
+            MCETA=3
+            EONLY=0
+            MAPITER=1
+            MAPINTER=-1
+```
+
+AUTO=2 is same as AUTO=1, with additional:
+
+```verilog
+GRDQ=-1.0 DERCONT=1 RANMETHOD=3S2P
+```
+
+* `RANMETHOD=S2` can use fewer ISAMPLEs for IMP
+* `CINTERVAL=1` is fine for IMP
+
+### IMPMAP {#sec-impmap}
+
+`METHOD=IMPMAP` is equivalent to `METHOD=IMP MAPITER=1 MAPINTER=1`.
+It is thus the same as IMP, but assisted by Mode a Posteriori (MAP) estimation.
+
+#### Options
+
+AUTO=1
+
+```verilog
+METHOD=IMPMAP
+INTERACTION
+CTYPE=3
+NITER=500
+ISAMPLE=300
+STDOBJ=10
+ISAMPEND=10000
+NOPRIOR=1
+CITER=10
+CINTERVAL=1
+CALPHA=0.05
+IACCEPT=0.0
+ISCALE_MIN=0.1
+ISCALE_MAX=10
+DF=0
+MCETA=3
+EONLY=0
+```
+
+### SAEM {#sec-saem}
+
+SAEM stands for **S**tochastic **A**pproximation **E**xpectation-**M**aximization.
+SAEM takes a stochastic approximation of the parameter distribution using a simulation step.
+This narrows the possibilities and allows for faster convergence.
+
+* SAEM is like a search light, does not need as large of a starting density ("umbrella") as IMP.
+* CINTERVAL: ~10--100
+
+[http://monolix.lixoft.com/tasks/population-parameter-estimation-using-saem/](http://monolix.lixoft.com/tasks/population-parameter-estimation-using-saem/)
+
+#### Options {#sec-saem-options}
+
+In general, using the `AUTO=1` option is fine.
+
+AUTO=1
+
+```verilog
+METHOD=SAEM
+INTERACTION
+CTYPE=3
+NITER=1000
+NBURN=4000
+ISAMPEND=10
+NOPRIOR=1
+CITER=10
+CINTERVAL=0
+CALPHA=0.05
+IACCEPT=0.4
+ISCALE_MIN=1.0E-06
+ISCALE_MAX=1.0E+06
+ISAMPLE_M1=2
+ISAMPLE_M1A=0
+ISAMPLE_M1B=2
+ISAMPLE_M2=2
+ISAMPLE_M3=2
+CONSTRAIN=1
+EONLY=0
+ISAMPLE=2
+MCETA=0
+```
+
+AUTO=2 is the same as AUTO=1, with the additional options:
+
+```verilog
+MAPITERS=1 MCETA=100
+```
+
+to turn MAP assessment assist on the first iteration.
+
+### Robustness {#sec-em-robust}
+
+The EM-methods are already quite robust in that they can handle many different estimation problems.
+
+SAEM: Use MCETA
+
+#### Full OMEGA blocks
+
+Full OMEGA blocks are generally preferred in EM-based estimation, as EM handles them more reliably than FOCE [@bauerNONMEMTutorialPartTwo2019].
+Including off-diagonal elements does not compromise stability, on the contrary, off-diagonals allow the algorithms to more efficiantly search the parameter space.
+Off-diagonals should therefore not be fixed to 0 just because of high RSEs (>100%) (as you would with FOCE).
+If they were fixed in a previous FOCE run due to rounding errors or failed `$COVARIANCE` steps, they should be estimated in EM.
+Only consider FIX:ing off-diagonals back to 0 if EM OFV is highly variable, or if the covariance matrix is non-positive-definite.
+
+### Reproducibility {#sec-em-repr}
+
+* `RANMETHOD=3S2P`
+* `SEED=123456789`
+
+#### A note on paralell NONMEM
+
+For the stochastic methods (IMP, IMPMAP, SAEM and BAYES), distribution of subjects to different nodes for computations is dependent on number of processors.
+This leads to differences in sequences of random numbers generated during computations that could make the results dependent on the number of processors.
+
+Moreover, with the parallel processing option `PARSE_TYPE=4`, the results of the stochastic methods may not be exactly reproducible even when repeated on the same number of processors, because the distribution of the subjects to each processor may depend on the computer load.
+The option `PARSE_TYPE=1` (equal number of subjects at each node) guarantees the results to be independent of the computer load.
+Still, the results will depend on the number of used processors.
+
+Copy this file: `/opt/local64/nonmem/nm_7.4.4_g510/run/mpilinux8.pnm`
+Into `my_own_parafile.pnm` and put it somewhere resonable.
+Then change `PARSE_TYPE` to 1:
+
+```verilog
+$GENERAL
+; [nodes] is a User defined variable.
+NODES=[nodes] PARSE_TYPE=1
+```
+When running models, use your own parafile: `-parafile=my_own_parafile.pnm`
+
+## Direct sampling
+
+`METHOD=DIRECT`
+
+#### Options
+
+AUTO=1
+
+```verilog
+INTERACTION
+ISAMPLE=1000
+CTYPE=3
+NITER=500
+STDOBJ=10
+ISAMPEND=10000
+NOPRIOR=1
+CITER=10
+CINTERVAL=0
+CALPHA=0.05
+EONLY=0
+```
+
+## Other methods
+
+### Bayesian
+
+`METHOD=BAYES`
+
+#### Options
+
+**AUTO=1**
+
+```verilog
+INTERACTION
+CTYPE=3
+NITER=10000
+NBURN=4000
+NOPRIOR=0
+CITER=10
+CINTERVAL=0
+CALPHA=0.05
+IACCEPT=0.4
+ISCALE_MIN=1.0E-06
+ISCALE_MAX=1.0E+06
+PACCEPT=0.5
+PSCALE_MIN=0.01
+PSCALE_MAX=1000
+PSAMPLE_M1=1
+PSAMPLE_M2=-1
+PSAMPLE_M3=1
+OSAMPLE_M1=-1
+OSAMPLE_M2=-1
+OACCEPT=0.5
+ISAMPLE_M1=2
+ISAMPLE_M1A=0
+ISAMPLE_M2=2
+ISAMPLE_M3=3
+ISAMPLE_M1B=2
+MCETA=0
+```
+
+**AUTO=2** same as AUTO=1, with the following:
+
+```verilog
+MAPITERS=1
+MCETA=100
+```
+
+### NUTS
+
+`METHOD=NUTS`
+
+#### Options
+
+**AUTO=1**
+
+```verilog
+INTERACTION
+CTYPE=0
+NITER=2000
+NBURN=10000
+NOPRIOR=0
+NUTS_STEPITER=1
+NUTS_STEPINTER=0
+NUTS_TEST=0
+NUTS_INIT=75
+NUTS_BASE=-3
+NUTS_TERM=50
+NUTS_GAMMA=0.05
+NUTS_DELTA=0.8
+KAPPA=1.0
+IKAPPA=1.0
+NUTS_REG=0.0
+MADAPT=-1
+NUTS_EPARAM=0
+NUTS_OPARAM=1
+NUTS_SPARAM=1
+NUTS_MASS=B
+NUTS_TRANSFORM=0
+NUTS_MAXDEPTH=10
+```
+
+**AUTO=2** same as AUTO=1, with the following **replaced**:
+
+```verilog
+NUTS_EPARAM=2
+NUTS_MASS=BD
+```
+
+**AUTO=3** same as AUTO=1, with the following **replaced**:
+
+```verilog
+NUTS_EPARAM=1
+NUTS_MASS=D
+```
+
+## When to use which
+
+| Scenario         | FOCE  | LAPLACE | IMP   | IMPMAP | SAEM  | DIRECT | BAYES | NUTS  |
+| :--------------- | :---: | :------ | :---: | :----: | :---: | :----: | :---: | :---: |
+| Very sparse data |       |         |       |        |   x   |   x    |       |       |
+| Sparse data      |   x   |    x    |   x   |        |   x   |   x    |       |       |
+| Rich data        |   x   |    x    |   x   |   x    |   x   |   x    |       |       |
+| Very rich data   |   x   |    x    |       |   x    |   x   |   x    |       |       |
+| Categorical data |       |    x    |       |        |   x   |   x    |       |       |
+| Simple models    |   x   |    x    |       |        |       |        |       |       |
+| Complex models   |       |         |   x   |   x    |   x   |   x    |       |       |
+
+If you are unsure which method to use, **start with MLE methods like FOCE or LAPLACE, then turn to EM.**
+
+The reason is simple: MLE methods are **deterministic**, and EM-methods are stochastic ("random").
+Essentially, this means that with MLE, there is **one correct answer**; a single best set of parameters for a data set given a statistical model, while for EM methods, there are several answers (i.e., parameter estimates).
+This makes for better reproducibility of model fit, and less ambiguity on "best fit".
+
+For simple one- and two-compartment PK models, FOCEI is the preferred method, whereas more complex models and/or sparse datasets typically benefit from EM methods [@liuComparingPerformanceFOCE2016; @sukarnjanasetEvaluationFOCEISAEM2018; @bachComparingPerformanceFirstorder2021].
+In general, EM tends to perform better than MLE in the following situations:
+
+Relatively **complex models**, such as:
+
+* Parent-metabolite
+* Non-linear clearance
+* Target-mediated drug disposition (TMDD) [@gibianskyComparisonNonmem722012]
+* Mixture models (`$MIX`)
+* Many covariates (like during FFEM)
+* Multiple PD endpoints or sequential PD biomarkers
+* Categorical endpoints
+* Count data
+* Binary data (consider SAEM)
+
+**Data limitations**, such as:
+
+* Sparse or incomplete datasets
+* Lack of observations across the full dose–response range
+* Insufficient PK data to identify all compartments
+
+::: {.callout-note}
+We apply MLE to sparse datasets all the time, but "sparse" here means we may be missing portions of the dose-response curve or key PK time-points, so the data cannot inform every model compartment.
+
+In these situations, EM algorithms typically give more stable estimates than pure MLE.
+That said, **if the data fundamentally cannot support the model** (e.g., trying to fit a two-compartment model to observations that behave as one compartment), **no algorithm will rescue the fit**; the likelihood surface is flat and parameter estimates become highly variable.
+
+Contrast that with a scenario where the model is appropriate (we do have a PK-PD signal) but the dose or exposure range is limited. Here EM often succeeds in estimating parameters like EC~50~ and E~max~, while MLE struggles, because EM can better leverage the partial information that is available.
+:::
+
+::: {.callout-important}
+OFVs between MLE and EM methods are incomparable.
+:::
+
+## PRIORs
+
+## References
+
+::: {#refs}
+:::

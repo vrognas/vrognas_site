@@ -1,0 +1,70 @@
+---
+title: "NONMEM input data"
+code-overflow: scroll
+date: last-modified
+---
+
+## Data review
+
+::: {.callout-important}
+Do a thorough exploratory data analysis before starting to model.
+:::
+
+* Tab-separated (less likely to be present in the actual data)
+* Start every dataset with a "Comment" column, the `IGNORE=@` will then ignore a row if there is a text comment
+  * The second column should be a `REF` column with each line number
+
+### Sparse vs Rich data
+
+The "richness" of data has different meanings.
+
+It can relate to ETAs and RSE/RUV.
+It can also relate to where on the PK-curve samples are taken.
+If samples are taken on in the absorption-phase (pre-C~max~), around C~max~, and in the elimination phase, and C~trough~ (pre-dose), then it can be considered "rich" sampling.
+
+* PK Studies:
+  * "Intensive studies" (Phase 1/2)
+    * Few subjects (homogeneous)
+    * Single dose
+    * Frequent (rich) sampling
+  * "Population studies" (Phase 3/4)
+    * Many subjects (heterogeneous)
+    * Multiple dose
+    * Sparse sampling
+
+###  Modify the NONMEM-dataset, inside a model file
+
+Let's say `TIME` is all -99, and we want to modify it.
+
+```verilog
+$INPUT ID TIME NTIME TAFD DV TYPE MDV EVID
+       AMT CMT DOSE AGE SEX HT WT BMI BSA
+       BLOQ COMMENT=DROP
+
+$DATA data.csv IGNORE=@
+
+$SUBROUTINE ADVAN=13 TOL=6
+
+$MODEL
+  COMP=(CENTRAL,DEFDOSE,DEFOBS)
+  COMP=PERIPHERAL
+
+$INFN
+  IF (ICALL == 1) THEN # <1>
+    DOWHILE(DATA) # <2>
+      IF (NEWIND < 2) START_TIME = TAFD # <3>
+      TIME = TAFD - START_TIME # <3>
+    ENDDO
+  ENDIF
+
+$PK
+...
+```
+1. `ICALL==1`, the routine has been called for initialization at the beginning of a NONMEM problem, one such call per problem
+2. `DOWHILE` loop over entire dataset
+3. Modifying statements here. They will be considered as "original dataset" by NONMEM.
+
+## References
+
+::: {#refs}
+:::

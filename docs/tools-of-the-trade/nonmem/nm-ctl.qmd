@@ -1,0 +1,127 @@
+---
+title: "Speaking NM-TRAN"
+code-overflow: scroll
+date: last-modified
+---
+
+## Modeling: Writing the control stream
+
+One hint on control files: never write one from scratch.
+Instead, find a control file that does something similar to what you want to do, and modify it as necessary.
+
+### Model structure templates with NONMEM code
+
+For a great resource on model templates, see <https://pmxrepo.com>.
+According to the maintainer, James Ousey: "the site is meant to be a practical repository for pharmacometric NONMEM related technical information".
+On the website you'll find example code for various absorption models including:
+
+* Dual absorption
+* Saturable absorption
+* Weibull
+* Transit compartments.
+
+* Linear clearance models
+* Non-linear clearance models
+* Time varying clearance models
+* Various interaction models.
+
+There are also multiple residual error models for each model.
+
+### General pointers
+
+`$ERROR` has almost nothing to do with error.
+It is used to calculate the result.
+It should really be called `$RESULT` instead.
+
+* When you use `F`, `CMT` matters (Credit: Maria Kjellsson)
+* `ETADER=3`: Get out of a local minima (Credit: Rikard Nordgren)
+* Use `$COVARIANCE MATRIX=R` for consistency between statistical software.
+* Use `EXIT(1)` instead of `p=0 /+1E-15` (Credit: Gunnar Yngman)
+* **Always code with MU-modeling** if possible.
+* **Always add an ETA**, even if you don't intend to use it; then `FIX` it to 0.
+This allows for easy estimation of the variability in case you need it, without changing the code.
+* Avoid temporary variables in the `$DES`-block.
+The more code you have there, the slower your model will run.
+* Proportional RUV is usually only needed if your measurement covers more than 3 orders of magnitude.
+  * PD biomarkers usually only cover 1--2 orders of magnitude, so only additive RUV is needed.
+
+#### Protection code
+
+Protection code need not be inserted for every `LOG()`, `EXP()`, or `SQRT()`, but only if your analysis fails frequently or tends to be sensitive to initial values.
+
+* Monte Carlo methods create samples of etas from multivariate normal or t-distributions
+* Extreme eta values may sometimes be selected
+* Usually extreme ETAs are rejected by MC algorithm
+* Occasionally, analysis fails because of
+  – Floating point overflows
+  – Divide by zero
+  – Domain errors
+* Result in failure of the analysis.
+
+* `EXIT` statement allows NONMEM to reject the present set of ETAs
+* If `NOABORT` is selected as a `$EST` setting, NONMEM will attempt to recover and continue.
+* The `EXIT` statement causes an error condition index to be set, which is detected by the MLE as well as the EM algorithms.
+
+* As of NONMEM 7.4, you can use "protection" functions that avoid the numerical difficulties. For example:
+* `PLOG(X)` returns a large negative value when `X<=0.0`
+* `PEXP(X)` returns `EXP(40.0)` when `X>40.0`
+* `PSQRT(X)` returns `0.0` when `X<0.0`
+* More functions listed in intro7.pdf
+* Or, simply set at beginning of control stream file: `$ABBR PROTECT` and all functions will be converted to protected form
+
+#### Random ETA samples
+
+When used in nonmem 7.5, a recommended example/setup would be (as shown on page 152 of nm750.pdf)
+
+```verilog
+$SIZES ISAMPLEMAX=250
+... 
+
+$ESTIMATION METHOD=SAEM
+            NBURN=500
+            NITER=1000
+            MASSRESET=1
+            ISAMPLE=2
+            PRINT=20
+            NOPRIOR=1
+            RANMETHOD=P
+
+$ESTIMATION METHOD=SAEM
+            NBURN=0
+            NITER=0
+            MASSRESET=0
+            ETASAMPLES=1
+            ISAMPLE=200
+            EONLY=1 
+
+$ESTIMATION METHOD=IMP
+            NITER=5
+            MASSRESET=1
+            ETASAMPLES=0
+            ISAMPLE=1000
+            EONLY=1
+            PRINT=1
+            MAPITER=0 
+```
+
+(Credit: Robert Bauer)
+
+### Specific pointers
+
+#### Time-to-event models
+
+* Non-parametric analysis: Log-rank test
+* Semi-parametric analysis: Cox PH (does not assume a distribution)
+* Parametric: Weibull, Gompertz, etc (fit a distribution)
+
+Weibull\*COV *forces* proportional hazard (Credit: Andrew Hooker)
+
+* TTE simulations can be done either with a dataset containing all possible event times, or using `MTIME` (Credit: Joakim Nyberg)
+
+* logistic=expit=inverse logit
+  * logit≈probit(scaled)
+
+## References
+
+::: {#refs}
+:::

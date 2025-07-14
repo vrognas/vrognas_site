@@ -12,17 +12,18 @@ Tuberculosis (TB) is an infectious disease caused by **bacteria** (*Mycobacteriu
 While TB usually affects the lungs, it can also involve the kidneys, brain, spine and skin.
 TB spreads through airborne droplets when people with TB cough, sneeze or spit.
 About 25% of the global population is estimated to have been infected with TB bacteria.
-**Those who are infected but free of disease <span class="red-underline">cannot spread it.**</span>
+**Those who are infected but free of disease <span class="red-underline">cannot spread it</span>**.
 About 7.5% of people infected with TB will eventually get symptoms and develop TB disease.
 If left untreated, active TB disease kills around 50% of those affected.
 
-:::{.callout-note}
-# TB and HIV
+:::{.callout-note title="TB and HIV"}
 
 People living with HIV are ~16 times more likely to fall ill with TB disease than people without HIV.
 TB is the leading cause of death among people with HIV.
 HIV and TB form a lethal combination, each speeding the other's progress.
+
 :::
+
 *Mycobacterium tuberculosis* has been suggested to exist in three states, showcased in @fig-mtb-model (Clewe et al. 2016).
 
 ![Pharmacodynamic model for different states of *Mycobacterium tuberculosis*. NB unidirectional from fast to non-multiplying ("dormant"). Clewe et al. (2016).](images/mtb-model.avif){#fig-mtb-model}
@@ -111,28 +112,45 @@ The second-line treatment contains bedaquiline, levofloxacin/moxifloxacin, ethio
 
 ### Drug characteristics
 
+#### Delamanid
+
+Approved 2014 in adults, 2021 in children.
+
+* Oral F decreases at high dose
+* AUC ~2.7--4 after meal, dose with food
+* 2 CMT PK, with 2 CMT metabolite.
+
 #### Bedaquiline
 
-  *  f~b~ ≈ 99%
-  * Food effect
-  * CYP3A4 metabolism
-  * Most common adverse events: QTc-prolongation, and hepatotoxicity
+* f~b~ ≈ 99%
+* Food effect
+* CYP3A4 metabolism
+* Most common adverse events: QTc-prolongation, and hepatotoxicity
 
 #### Linezolid
 
-  * Highly variable PK
-  * Inhibits its own CL
-  * F ≈ 100%
-  * No food effect
-  * "non-enzymatic metabolism"
-  * Known toxicity at higher doses and/or longer durations
+* Highly variable PK
+* Inhibits its own CL
+* F ≈ 100%
+* No food effect
+* "Non-enzymatic metabolism"
+* Known toxicity at higher doses and/or longer durations
 
 #### Rifampicin
 
 Old drug.
 
-  * Strong enzyme inducer of enzymes and pumps, it thus induces its own CL
-  * Also saturable biliary excretion -> higher than dose-prop exposures -> F is dose dependent.
+* Strong enzyme inducer of enzymes and pumps, it thus induces its own CL
+* Also saturable biliary excretion -> higher than dose-prop exposures -> F is dose dependent.
+
+#### Pretomanid
+
+Approved 2019.
+
+* HL: 14--26 h 
+* Food effect: AUC +88% (dosed with food)
+* Saturated bioavailability (F) at high dose
+* 1 CMT PK
 
 # References
 
