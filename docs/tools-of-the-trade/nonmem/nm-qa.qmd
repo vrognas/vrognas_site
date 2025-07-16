@@ -66,7 +66,20 @@ Do a sensitivity analysis for outliers (|CWRES| < 5).
 ### Parameter uncertainty
 
 * RSE% considered precise: < 30% for THETAs, < 50% for ETAs
-* SIR (PsN vs NONMEM)
+
+Don't confuse parameter precision estimates as determinant of the quality of the model fit.
+If a model minimizes, those are the best fit parameters.
+
+We have **three different methods** because different models require different methods.
+
+* **$COVARIANCE** is the fastest, but doesn't work on all models, especially complex ones where the parameter precision distribution is not normally distributed.
+    * Default (Sandwich)
+    * `MATRIX=S`
+    * `MATRIX=R`
+* **SIR** (PsN) is faster than bootstrap, but it can also sometimes give skewed distributions.
+* **Bootstrap** takes the longest and can really be influenced by the sampling scheme employed and inflate the confidence interval for parameters that rely on a small number of subjects in the analysis.
+
+There is absolutely **no reason that they should match each other** because they have different assumptions and they're using different approaches.
 
 ### VPCs
 
