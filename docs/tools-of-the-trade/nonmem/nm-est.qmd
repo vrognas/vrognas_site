@@ -23,7 +23,7 @@ In essence, there are two families of estimation methods available in NONMEM:
 ::: {.callout-note title="ETA optimization"}
 When finding the individual ETAs, NONMEM by default uses an optimization method called BFGS (Broyden, Fletcher, Goldfarb, and Shanno).
 This method can be changed, but should for all practical purposes be left to its default.
-The optimal ETA values are also called either EBEs, CPEs, MAPs, or conditional mode estimates, referred to symbolically as $\hat{\eta}$ (pronounced "ETA hat").
+The optimal ETA values are also called either Empirical Bayes Estimates (EBEs), Conditional Parametric ETAs (CPEs), or conditional mode estimates, referred to symbolically as $\hat{\eta}$ (pronounced "ETA hat").
 :::
 
 ## Classical MLE methods {#sec-mle}
@@ -292,9 +292,14 @@ However, if one uses the `MCETA` option, a stochastic Monte-Carlo element is int
 EM stand for **E**xpectation-**M**aximization, and was first published in 1977.
 EM derives its name from the two iterative steps that define its approach:
 
-1. **E (Expectation) step**: The algorithm calculates the expected value (or integral) of the likelihood function given the current parameter estimates and the model.
+1. **E (Expectation) step**:
+THETAs, OMEGAs, and SIGMAs are fixed.
+ETAs and their variances are calculated.
+Sometimes, gradients of the likelihood for THETAs and SIGMAs are also calculated.
 
-2. **M (Maximization) step**: The algorithm *updates the parameter estimates* by maximizing the likelihood function based on the expectations calculated in the E-step.
+2. **M (Maximization) step**:
+THETAs, OMEGAs, and SIGMAs are updated based on the ETAs and/or likelihood gradients.
+The M-step typically requires very little computation time.
 
 Multiple parameter combinations could potentially explain the observed data.
 Rather than seeking a single "best" solution like MLE methods, **EM explores the distribution of likely parameter values** and identifies the *most likely combination* from this distribution.
@@ -615,7 +620,7 @@ to turn MAP assessment assist on the first iteration.
 
 The EM-methods are already quite robust in that they can handle many different estimation problems.
 
-SAEM: Use MCETA
+To get good individual parameter values near the mode of the posterior density for the first iteration of SAEM, you can set `MAPITERS=1`.
 
 #### Full OMEGA blocks
 
@@ -650,121 +655,8 @@ NODES=[nodes] PARSE_TYPE=1
 ```
 When running models, use your own parafile: `-parafile=my_own_parafile.pnm`
 
-## Direct sampling
-
-`METHOD=DIRECT`
-
-#### Options
-
-AUTO=1
-
-```verilog
-INTERACTION
-ISAMPLE=1000
-CTYPE=3
-NITER=500
-STDOBJ=10
-ISAMPEND=10000
-NOPRIOR=1
-CITER=10
-CINTERVAL=0
-CALPHA=0.05
-EONLY=0
-```
-
-## Other methods
-
-### Bayesian
-
-`METHOD=BAYES`
-
-#### Options
-
-**AUTO=1**
-
-```verilog
-INTERACTION
-CTYPE=3
-NITER=10000
-NBURN=4000
-NOPRIOR=0
-CITER=10
-CINTERVAL=0
-CALPHA=0.05
-IACCEPT=0.4
-ISCALE_MIN=1.0E-06
-ISCALE_MAX=1.0E+06
-PACCEPT=0.5
-PSCALE_MIN=0.01
-PSCALE_MAX=1000
-PSAMPLE_M1=1
-PSAMPLE_M2=-1
-PSAMPLE_M3=1
-OSAMPLE_M1=-1
-OSAMPLE_M2=-1
-OACCEPT=0.5
-ISAMPLE_M1=2
-ISAMPLE_M1A=0
-ISAMPLE_M2=2
-ISAMPLE_M3=3
-ISAMPLE_M1B=2
-MCETA=0
-```
-
-**AUTO=2** same as AUTO=1, with the following:
-
-```verilog
-MAPITERS=1
-MCETA=100
-```
-
-### NUTS
-
-`METHOD=NUTS`
-
-#### Options
-
-**AUTO=1**
-
-```verilog
-INTERACTION
-CTYPE=0
-NITER=2000
-NBURN=10000
-NOPRIOR=0
-NUTS_STEPITER=1
-NUTS_STEPINTER=0
-NUTS_TEST=0
-NUTS_INIT=75
-NUTS_BASE=-3
-NUTS_TERM=50
-NUTS_GAMMA=0.05
-NUTS_DELTA=0.8
-KAPPA=1.0
-IKAPPA=1.0
-NUTS_REG=0.0
-MADAPT=-1
-NUTS_EPARAM=0
-NUTS_OPARAM=1
-NUTS_SPARAM=1
-NUTS_MASS=B
-NUTS_TRANSFORM=0
-NUTS_MAXDEPTH=10
-```
-
-**AUTO=2** same as AUTO=1, with the following **replaced**:
-
-```verilog
-NUTS_EPARAM=2
-NUTS_MASS=BD
-```
-
-**AUTO=3** same as AUTO=1, with the following **replaced**:
-
-```verilog
-NUTS_EPARAM=1
-NUTS_MASS=D
-```
+* MAP-estimation is always parallelized properly.
+* Always use `RANMETHOD=P`
 
 ## When to use which
 

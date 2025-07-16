@@ -107,7 +107,10 @@ $ESTIMATION METHOD=IMP
             MAPITER=0 
 ```
 
-(Credit: Robert Bauer)
+Where `ETASAMPLES=1` causes individual `ISAMPLE` random ETA samples per subject, to be written to `root.ets`.
+`MASSRESET` is set to 1 to initialize the internal burn-in coefficients, and collect that information during the population parameter estimation.
+Then, have the next SAEM step accumulate eta samples (`ETASAMPLES=1`), and set `MASSRESET=0` so the internal burn-in coefficients are note reset, but use those obtained during the previous SAEM step.
+After this, you could request the IMP step (IMP needs to use its own burn-in or shaping coefficients, so re-initialize with `MASSRESET=1`).
 
 ### Specific pointers
 

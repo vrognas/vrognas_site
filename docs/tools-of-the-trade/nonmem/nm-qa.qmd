@@ -11,6 +11,7 @@ date: last-modified
 
 ### Grok NONMEM
 
+`.ets` means "ETA samples"  
 `.ext` means "extra"  
 `.cnv` means "convergence", contains convergence-testing statistics.  
 `.phm` means ".phi-file for mixture model"  
