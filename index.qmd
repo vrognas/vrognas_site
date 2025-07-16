@@ -11,8 +11,11 @@ subtitle: "Pharmacometric Engineer"
 
 [📩 **viktor@vrognas.com**](mailto:viktor@vrognas.com)
 
-This site is both my public home on the web and my long‑horizon research notebook. I use it to track skills, projects, and ideas as they evolve. I hope you and other colleagues in pharmacometrics, clinical pharmacology, and data science find it useful too. 😊
-
 **Use the <span class="red-underline">search in the upper-right</span> to quickly find what you want.**
 
-If you like my work, you can [buy me a coffe ☕️](https://buymeacoffee.com/vrognas)!
+This site is both my public home on the web and my long‑horizon research notebook.
+I use it to track skills, projects, and ideas as they evolve.
+I hope you and other colleagues in pharmacometrics, clinical pharmacology, and data science find it useful too.
+❤️
+
+If you want to support my work, you can share it on social media or [buy me a coffe ☕️](https://buymeacoffee.com/vrognas)!
