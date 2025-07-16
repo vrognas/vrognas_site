@@ -14,10 +14,6 @@ The name stands for “NONlinear Mixed Effects Modeling.”
 
 <https://www.iconplc.com/solutions/technologies/nonmem>
 
-## University of Maryland
-
-[https://ctm.umaryland.edu/#/ms-pharma](https://ctm.umaryland.edu/#/ms-pharma)
-
 ## References
 
 ::: {#refs}
