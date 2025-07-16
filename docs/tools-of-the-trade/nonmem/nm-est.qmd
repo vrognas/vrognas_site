@@ -7,18 +7,24 @@ date: last-modified
 :::{.callout-caution title="Under construction"}
 :::
 
-Estimation methods are the algorithms that are used to identify the best fit model parameters given the specified model and the analysis data set.
+Estimation methods are the algorithms that are used to identify the best fit model population parameters (THETAs, OMEGAs, and SIGMAs) given the specified model and the analysis data set.
 
 The aim of this page is to:
 
-* Give a **brief overview** of the available methods, their options, and sensible tweaks/options
-* Give an **intuitive explanation** of the methods on a conceptual level
+* Give a **brief overview** of the available estimation methods, their options, and sensible tweaks/options
+* Give an **intuitive explanation** of the estimation methods on a conceptual level
 * Give a sense of **when to choose which** estimation method
 
 In essence, there are two families of estimation methods available in NONMEM:
 
 1. Maximum-Likelihood ("Classical" or "MLE"^["ML"-methods (Machine Learning) are something else entirely]) methods
 2. Expectation-Maximization ("EM") methods
+
+::: {.callout-note title="ETA optimization"}
+When finding the individual ETAs, NONMEM by default uses an optimization method called BFGS (Broyden, Fletcher, Goldfarb, and Shanno).
+This method can be changed, but should for all practical purposes be left to its default.
+The optimal ETA values are also called either EBEs, CPEs, MAPs, or conditional mode estimates, referred to symbolically as $\hat{\eta}$ (pronounced "ETA hat").
+:::
 
 ## Classical MLE methods {#sec-mle}
 
@@ -66,7 +72,7 @@ For explicitness, `METHOD=CONDITIONAL` is prefered.
 #### Options {#sec-foce-options}
 
 For now on we differentiate problems by their computational nature, as this in some sense define the different options we want to tweak to optimize speed and accuracy of our estimation algorithm.
-We define "numerical integration problems" as problems using `ADVAN6`, `ADVAN9`, or `ADVAN13` or similar solvers, and "analytical problems" as problems using any of the ADVANs in PREDPP that have analytical solutions (e.g. anything else than `ADVAN6`, `ADVAN9`, or `ADVAN13`).
+We define "numerical integration problems" as problems using `$DES`, and "analytical problems" those that do not.
 
 * Internal precision is based on user specified TOL
 * Often `TOL=6` or less, not 10
@@ -192,6 +198,50 @@ $ESTIMATION METHOD=CONDITIONAL LAPLACE
 
 ### Robustness {#sec-mle-robust}
 
+#### NSIG, SIGL, SIGLO, and TOL
+
+How one should approach these options are different depending on if you are dealing with an analytical of numerical problem.
+
+`NSIG`:
+Specifies the significant digits required for **THETAs, OMEGAs, and SIGMAs**; estimation stops when each change by less than `NSIG` digits between iterations.
+
+`SIGL`:
+The significant digits to which the **iOFV** is evaluated.
+The internal NONMEM `SIGL` is set to 10.
+Rule of thumb: iOFV is evaluated to a precision of the smaller of TOL and the internal SIGL.
+If all iOFVs are of the same sign, then the OVF could have a resulting precision of $\log_{10}$(N) + `SIGL`, where N is the number of subjects, for a maximum of 15, the limiting precision of double precision.
+Thus with 100 subjects, the actual precision that the total OFV is evaluated could be 12.
+One should not necessarily rely on this, so it is safest to suppose the more conservative precision of 10, for which a suitable `NSIG` would be 3.
+
+`TOL`: The relative significant digits precision to which differential equations are to be integrated, so the precision is 10^-`TOL`^
+
+For numerical integration problems:
+
+* Internal precision is based on user specified `TOL`, not `SIGL`
+* Often `TOL` = 6 or less, not 10
+* The largest `NSIG` one should insist on is 2.
+
+Set `SIGL`, `NSIG`, and `TOL` such that:
+
+* `SIGL` ≤ `TOL`
+* `NSIG` ≤ `SIGL` / 3
+
+`SIGLO`:
+The precision to which the individual ETAs are estimated.
+By default, `SIGLO` = `SIGL`.
+If SIGLO is used, set `SIGLO` ≤ `TOL`.
+
+##### Rule of Thumb to set SIGL and NSIG (but trial and error is always good to do)
+
+* For Analytical Problems
+    * SIGL<=14 (about the limit of double precision)
+    * NSIG<=SIGL/3
+
+* For Numerical Integration problems
+    * SIGL<=TOL
+    * NSIG<=SIGL/3
+    * So, if TOL=6, then SIGL should be 6, and NSIG should be 2
+
 #### CTYPE
 
 Sometimes you may see several iterations with almost no change in OFV.
@@ -223,7 +273,11 @@ Since `MCETA` is most impactful during the early iterations^[Credit: Robert Baue
 ```verilog
 $ESTIMATION METHOD=1 MCETA=1000 MAXEVAL=200
 $ESTIMATION METHOD=1 MCETA=1    MAXEVAL=9999
-```                                                                                                                                                                             
+```
+
+#### Numerical stability
+
+`$ABBR PROTECT`
 
 ### Reproducibility {#sec-mle-repr}
 
