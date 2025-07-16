@@ -6,12 +6,33 @@ date: last-modified
 **Pharmacopœia**:  
 *A collection of directions for the identification of medicines.*
 
-
-## Drug facts that are good to know
-
 This section presents a high-level overview of selected drug classes and their mechanisms of action.
-It is organized according to the [**Anatomical Therapeutic Chemical (ATC)** classification system](https://atcddd.fhi.no/atc_ddd_index/).
-The ATC system was developeed in Norway and was introduced in 1976 and is maintained by the World Health Organization Collaborating Centre for Drug Statistics Methodology (WHOCC).
+
+## Drug modalities
+
+In drug development, a modality (@tbl-modality) is the broad "type" or "format" of therapeutic intervention defined primarily by its molecular (or cellular) nature and the way it produces a clinical effect.
+
+In practice: modality = "What kind of therapeutic thing is this?"
+
+| Category | Modalities |
+| :------- | :--------- |
+| Conventional | Small molecules |
+| Antibodies | Monoclonal antibody (mAb), Antibody–Drug Conjugate (ADC), Bi-specific antibody (BsAb) |
+| Proteins and peptides | Recombinant |
+| Cell therapies | Cell therapies, CAR-T, Stem cells, TCRT, CAR-NK, TILs |
+| Gene therapies | Gene augmentation, Gene editing |
+| Nucleic acids | DNA and RNA therapies, RNAi, mRNA |
+| Other new modalities | Oncolytic viruses, Microbiomes, PROTAC |
+
+: Modality categories {#tbl-modality}
+
+ATMP (Advanced Therapy Medicinal Product) is another term that is being used to describe a group of modalities.
+In essence, ATMPs are a class of medicines that use living materials like cells, tissues, or genetic material to treat or prevent diseases. 
+
+## ATC
+
+Drugs are organized according to the [**Anatomical Therapeutic Chemical (ATC)** classification system](https://atcddd.fhi.no/atc_ddd_index/).
+The ATC system was developed in Norway and was introduced in 1976 and is maintained by the World Health Organization Collaborating Centre for Drug Statistics Methodology (WHOCC).
 It classifies active substances based on the organ or system they act on, as well as their therapeutic, pharmacological, and chemical properties.
 
 Drugs are classified in groups at five different levels.
