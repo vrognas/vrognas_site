@@ -27,7 +27,7 @@ website:
         href: docs/cv/index.qmd
       - text: "Portfolio"
         href: docs/portfolio/index.qmd
-      - text: "Resources"
+      - text: "Encyclopædia"
         menu:
           - text: "Auxiliary Arts"
             href: docs/aux/index.qmd
@@ -45,13 +45,15 @@ website:
             href: docs/regulatory/index.qmd
           - text: "Tools of the Trade"
             href: docs/tools-of-the-trade/index.qmd
-    tools:
+    right:
       - icon: github
         href: https://github.com/vrognas
       - icon: linkedin
         href: https://www.linkedin.com/in/vrognas/
-      - icon: mortarboard
+      - text: "{{< fa brands google-scholar >}}"
         href: https://scholar.google.com/citations?user=RBJi1XQAAAAJ
+      - text: "{{< fa brands orcid >}}"
+        href: https://orcid.org/0000-0002-7837-2467
   sidebar:
     - id: cv
       title: "CV"
@@ -259,8 +261,10 @@ website:
         href: https://github.com/vrognas
       - icon: linkedin
         href: https://www.linkedin.com/in/vrognas/
-      - icon: mortarboard
+      - text: "{{< fa brands google-scholar >}}"
         href: https://scholar.google.com/citations?user=RBJi1XQAAAAJ
+      - text: "{{< fa brands orcid >}}"
+        href: https://orcid.org/0000-0002-7837-2467
 format:
   html:
     canonical-url: true

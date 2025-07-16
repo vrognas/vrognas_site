@@ -1,15 +1,16 @@
 ---
-title: "Viktor Rognås"
-subtitle: "Pharmacometric Engineer"
-description: ""
 about:
     id: about-vrognas
     template: jolla
     image: "images/vrognas.avif"
     image-shape: round
-    image-alt: "A profile picture of Viktor, looking all smug"
+    image-alt: "A profile picture of Viktor, lookin' all smug"
+title: "Viktor Rognås"
+subtitle: "Pharmacometric Engineer"
 ---
 
 [📩 **viktor@vrognas.com**](mailto:viktor@vrognas.com)
+
+This site is both my public home on the web and my long‑horizon research notebook. I use it to track skills, projects, and ideas as they evolve. I hope you and other colleagues in pharmacometrics, clinical pharmacology, and data science find it useful too. 😊
 
 If you like my work, you can [buy me a coffe ☕️](https://buymeacoffee.com/vrognas)!
