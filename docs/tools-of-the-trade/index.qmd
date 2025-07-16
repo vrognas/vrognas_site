@@ -16,8 +16,21 @@ date: last-modified
 * [RStudio](https://rstudio.com/)
 * [R](https://www.r-project.org/)
 * [R Markdown](https://rmarkdown.rstudio.com/)
+* [Quarto](https://quarto.com/)
 * [LaTeX](https://www.latex-project.org/)
 * [Git](https://git-scm.com/)
 * [GitHub](https://github.com/)
+
+## Other links to online pharmacometric resources
+
+* <https://pmxrepo.com>
+* <https://code.pharmacometrics.ai>
+* <https://www.pkpd-info.com>
+* <https://www.pmxsolutions.com>
+* <https://blog.djnavarro.net/>
+* <https://www.singaporepharmacometrics.com/>
+* <https://web.archive.org/web/20240722154348/https://www.ctm.umaryland.edu/#/ms-pharma>
+* <https://accp1.org/Members/ACCP1/Students_Trainees/Pharmacometric-Web-based-Learning-Resource.aspx>
+* [Clinical Pharmacology Podcast with Nathan Teuscher (Spotify)](https://open.spotify.com/show/6QJ81a96Q9HeeFBX8EtHTu?si=1e05e7a31a2942e0)
 
 ![](images/index_tools.png)
