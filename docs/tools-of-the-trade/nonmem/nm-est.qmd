@@ -1,5 +1,5 @@
 ---
-title: "NONMEM estimation methods/algorithms"
+title: "NONMEM estimation methods"
 code-overflow: scroll
 date: last-modified
 ---
@@ -92,7 +92,8 @@ The `FAST` option benefits from MU-modeling to be more effective (see "Speaking 
 2. `NONINFETA` should be added when not all ETAs are used for all subjects.
 For example, an ETA to a KA during a fit of a subject with only IV dosing.
 3. `NSIG <= SIGL/3`.
-Default value is 3 (ok for analytical problems), but for numerical integration problems the largest `NSIG` one should insist on is 2^[Credit: Robert Bauer].
+Default is `NSIG=3`, which is ok for analytical problems.
+But for numerical integration problems `NSIG=2` is the largest one should insist on^[Credit: Robert Bauer].
 4. `SIGL <= TOL` (for numerical integration problems).
 `SIGL <= 14` (for analytical problems, about the limit of double precision ).
 5. `SIGLO <= TOL` and `SIGLO >= SIGL`. By default, `SIGLO=SIGL`
@@ -191,6 +192,16 @@ $ESTIMATION METHOD=CONDITIONAL LAPLACE
 
 ### Robustness {#sec-mle-robust}
 
+#### CTYPE
+
+Sometimes you may see several iterations with almost no change in OFV.
+What’s happening?
+One or more parameters are probably bouncing around in the second significant digit, with `NSIG=3`.
+If a parameter’s influence on the objective is this tiny, the traditional convergence rule "every parameter must change by less than `NSIG` significant digits" may never be met, even though the objective is already at its minimum.
+
+To handle this, add `CTYPE=4`.
+If the OFV doesn't change beyond `NSIG` decimal places for 10 straight iterations, the minimization is sucessful and the run terminates successfully.
+
 #### SADDLE_RESET
 
 The `SADDLE_RESET` option was developed enable more robust parameter estimation through a check for local practical identifiability [@bjugardnybergSaddleResetRobustParameter2020].
@@ -216,7 +227,7 @@ $ESTIMATION METHOD=1 MCETA=1    MAXEVAL=9999
 
 ### Reproducibility {#sec-mle-repr}
 
-As mentioned above, MLE methods are inherently reproducible since they are deterministic.
+As mentioned above, MLE methods are inherently reproducible since they provide only one correct answer.
 However, if one uses the `MCETA` option, a stochastic Monte-Carlo element is introduced that benefits from additional options for reproducibility:
 
 * `RANMETHOD=4P`: The `4` sets the randomization method to the same as the default one in `$SIMULATION`, and the `P` is necessary when running NONMEM in parallel.
@@ -703,23 +714,26 @@ NUTS_MASS=D
 
 ## When to use which
 
-| Scenario         | FOCE  | LAPLACE | IMP   | IMPMAP | SAEM  | DIRECT | BAYES | NUTS  |
-| :--------------- | :---: | :------ | :---: | :----: | :---: | :----: | :---: | :---: |
-| Very sparse data |       |         |       |        |   x   |        |       |       |
-| Sparse data      |   x   |    x    |   x   |        |   x   |        |       |       |
-| Rich data        |   x   |    x    |   x   |   x    |   x   |        |       |       |
-| Very rich data   |   x   |    x    |       |   x    |   x   |        |       |       |
-| Categorical data |       |    x    |       |        |   x   |        |       |       |
-| Simple models    |   x   |    x    |       |        |       |        |       |       |
-| Complex models   |       |         |   x   |   x    |   x   |        |       |       |
-
 If you are unsure which method to use, **start with MLE methods like FOCE or LAPLACE, then turn to EM.**
 
-The reason is simple: MLE methods are **deterministic**, and EM-methods are stochastic ("random").
-Essentially, this means that with MLE, there is **one correct answer**; a single best set of parameters for a data set given a statistical model, while for EM methods, there are several answers (i.e., parameter estimates).
+The reason is simple: with MLE, there is **one correct answer**; a single best set of parameters for a data set given a statistical model, while for EM methods, there are several answers (i.e., parameter estimates).
 This makes for better reproducibility of model fit, and less ambiguity on "best fit".
 
-For simple one- and two-compartment PK models, FOCEI is the preferred method, whereas more complex models and/or sparse datasets typically benefit from EM methods [@liuComparingPerformanceFOCE2016; @sukarnjanasetEvaluationFOCEISAEM2018; @bachComparingPerformanceFirstorder2021].
+With that said, @tbl-when provides some rule-of-thumbs of when to consider which estimation method.
+
+| Scenario         | FOCE  | LAPLACE | IMP   | IMPMAP | SAEM  |
+| :--------------- | :---: | :-----: | :---: | :----: | :---: |
+| Very sparse data |       |         |       |        |   x   |
+| Sparse data      |   x   |    x    |   x   |        |   x   |
+| Rich data        |   x   |    x    |   x   |   x    |   x   |
+| Very rich data   |   x   |    x    |       |   x    |   x   |
+| Categorical data |       |    x    |       |        |   x   |
+| Simple models    |   x   |    x    |       |        |       |
+| Complex models   |       |         |   x   |   x    |   x   |
+
+: Problem-Method fit {#tbl-when tbl-colwidths="[30,14,14,14,14,14]"}
+
+For simple one- and two-compartment PK models, FOCE is the preferred method, whereas more complex models and/or very sparse datasets typically benefit from EM methods [@liuComparingPerformanceFOCE2016; @sukarnjanasetEvaluationFOCEISAEM2018; @bachComparingPerformanceFirstorder2021].
 In general, EM tends to perform better than MLE in the following situations:
 
 Relatively **complex models**, such as:
@@ -740,13 +754,19 @@ Relatively **complex models**, such as:
 * Lack of observations across the full dose–response range
 * Insufficient PK data to identify all compartments
 
-::: {.callout-note}
-We apply MLE to sparse datasets all the time, but "sparse" here means we may be missing portions of the dose-response curve or key PK time-points, so the data cannot inform every model compartment.
+::: {.callout-note title="A note on sparse data"}
 
-In these situations, EM algorithms typically give more stable estimates than pure MLE.
-That said, **if the data fundamentally cannot support the model** (e.g., trying to fit a two-compartment model to observations that behave as one compartment), **no algorithm will rescue the fit**; the likelihood surface is flat and parameter estimates become highly variable.
+Think about "sparse data" as missing important parts of the picture.
+Perhaps we miss the peak concentration or don't have high enough doses to see the top of the dose-response curve.
+In that situation, classic MLE can have a tough time because the likelihood surface is poorly defined.
 
-Contrast that with a scenario where the model is appropriate (we do have a PK-PD signal) but the dose or exposure range is limited. Here EM often succeeds in estimating parameters like EC~50~ and E~max~, while MLE struggles, because EM can better leverage the partial information that is available.
+That’s where EM shines ✨.
+EM fills in the gaps of the missing data, so the parameter estimates stay much more stable than with MLE.
+
+However, EM is not a magic fix.
+If you’re forcing the wrong model onto the data, say, fitting a two-compartment PK model when the observations clearly behave as one compartment, **the problem is your model, not the algorithm**.
+
+That's different from using an EM algorithm on a complex model where you <span class="red-underline">**know**</span> that you have PKPD response, but your dose or exposure range is limited.
 :::
 
 ::: {.callout-important}
