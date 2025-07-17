@@ -14,6 +14,12 @@ The name stands for “NONlinear Mixed Effects Modeling.”
 
 <https://www.iconplc.com/solutions/technologies/nonmem>
 
+Some gotchas for NONMEM:
+
+* Machine (double) precision: `MEPS = 1.0E-15`
+* `INFTY = 1.0E+154`
+* Largest possible integer = `2147483647`
+
 ## References
 
 ::: {#refs}
