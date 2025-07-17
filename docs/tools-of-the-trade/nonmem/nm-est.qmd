@@ -1,11 +1,13 @@
 ---
 title: "NONMEM estimation methods"
 code-overflow: scroll
-date: last-modified
+description: "Desc"
+copyright: 
+  holder: "Viktor Rognås"
+  year: 2025
 ---
 
-:::{.callout-caution title="Under construction"}
-:::
+
 
 Estimation methods are the algorithms that are used to identify the best fit model population parameters (THETAs, OMEGAs, and SIGMAs) given the specified model and the analysis data set.
 
@@ -21,9 +23,12 @@ In essence, there are two families of estimation methods available in NONMEM:
 2. Expectation-Maximization ("EM") methods
 
 ::: {.callout-note title="ETA optimization"}
-When finding the individual ETAs, NONMEM by default uses an optimization method called BFGS (Broyden, Fletcher, Goldfarb, and Shanno).
-This method can be changed, but should for all practical purposes be left to its default.
-The optimal ETA values are also called either Empirical Bayes Estimates (EBEs), Conditional Parametric ETAs (CPEs), or conditional mode estimates, referred to symbolically as $\hat{\eta}$ (pronounced "ETA hat").
+When finding the individual ETAs, NONMEM by default uses an optimization method called **BFGS** (Broyden, Fletcher, Goldfarb, and Shanno).
+This method can be changed using the `OPTMAP` option, but should for all practical purposes be left to its default.
+
+The process of finding the individual ETAs is often called "Mode a Posteriori (**MAP**) estimation".
+
+The optimal ETA values themselves are called either Empirical Bayes Estimates (**EBEs**), Conditional Parametric ETAs (CPEs), MAP estimates, or conditional mode estimates, referred to symbolically as $\hat{\eta}$ (pronounced "ETA hat").
 :::
 
 ## Classical MLE methods {#sec-mle}
@@ -44,7 +49,7 @@ LAPLACE evaluates the second order derivative (Hessian matrix), or the "curvatur
 ### FO {#sec-fo}
 
 FO stands for **F**irst **O**rder.
-Is the **perfect method when no ETAs are computed**^[Credit: Adrian Dunne], as in e.g. single TTE-models that do not contain a frailty-component.
+Is the **perfect method when no ETAs are computed**[^AD], as in e.g. single TTE-models that do not contain a frailty-component.
 Only optimizes the THETAs (fixed effect parameters).
 
 Might also be useful as an exploratory method when fast approximate results are desirable.
@@ -93,13 +98,13 @@ $ESTIMATION METHOD=CONDITIONAL
             MSFO=root.msf
             PRINT=1
 ```
-1. Always use the `FAST` option, there are very few cases where `FAST` is suboptimal^[Credit: Robert Bauer].
+1. Always use the `FAST` option, there are very few cases where `FAST` is suboptimal[^RB].
 The `FAST` option benefits from MU-modeling to be more effective (see "Speaking NM-TRAN" for more info).
 2. `NONINFETA` should be added when not all ETAs are used for all subjects.
 For example, an ETA to a KA during a fit of a subject with only IV dosing.
 3. `NSIG <= SIGL/3`.
 Default is `NSIG=3`, which is ok for analytical problems.
-But for numerical integration problems `NSIG=2` is the largest one should insist on^[Credit: Robert Bauer].
+But for numerical integration problems `NSIG=2` is the largest one should insist on[^RB].
 4. `SIGL <= TOL` (for numerical integration problems).
 `SIGL <= 14` (for analytical problems, about the limit of double precision ).
 5. `SIGLO <= TOL` and `SIGLO >= SIGL`. By default, `SIGLO=SIGL`
@@ -158,11 +163,9 @@ $ESTIMATION METHOD=CONDITIONAL
             NUTS_REG
             NUTS_SPARAM
             OMITTED
-            OPTMAP
             ORDER
             PARAFILE
             PARAFPRINT
-            POSTHOC
             PREDICTION
             PRINT=9999
             PRIORC
@@ -200,7 +203,7 @@ $ESTIMATION METHOD=CONDITIONAL LAPLACE
 
 #### NSIG, SIGL, SIGLO, and TOL
 
-How one should approach these options are different depending on if you are dealing with an analytical of numerical problem.
+How one should approach these options are different depending on if you are using `$DES` or not.
 
 `NSIG`:
 Specifies the significant digits required for **THETAs, OMEGAs, and SIGMAs**; estimation stops when each change by less than `NSIG` digits between iterations.
@@ -259,7 +262,7 @@ In the original article, the authors recommend setting `SADDLE_RESET=1` when usi
 
 #### MCETA
 
-When MAP estimation is performed, NONMEM must pick a starting set of individual ETAs.
+During ETA optimization NONMEM must pick a starting set of individual ETAs.
 By default it uses all zeros, but that may trap the algorithm in a local minimum.
 The `MCETA` option tells NONMEM to test alternative starting points and keep the one that gives the lowest objective function:
 
@@ -268,7 +271,7 @@ The `MCETA` option tells NONMEM to test alternative starting points and keep the
 * `MCETA>1`: Generates `MCETA – 1` random ETA vectors sampled from N(0, Ω) and tests them together with ETA = 0 and the previous ETAs; the vector with the lowest OFV becomes the MAP starting point.
 
 If the algorithm ends up in local minima despite `MCETA`, try increasing the value (e.g. from 100 to 1000).
-Since `MCETA` is most impactful during the early iterations^[Credit: Robert Bauer, NONMEM maintainter], another option to still benefit from the robustness of `MCETA` but not impact the estimation speed too much, is to only use `MCETA` for the first 200 iterations or so:
+Since `MCETA` is most impactful during the early iterations[^RB], another option to still benefit from the robustness of `MCETA` but not impact the estimation speed too much, is to only use `MCETA` for the first 200 iterations or so:
 
 ```verilog
 $ESTIMATION METHOD=1 MCETA=1000 MAXEVAL=200
@@ -278,6 +281,21 @@ $ESTIMATION METHOD=1 MCETA=1    MAXEVAL=9999
 #### Numerical stability
 
 `$ABBR PROTECT`
+
+#### Small number of subjects
+
+When there are very few subjects (**less than 10**), its most accurate to correct the degrees of freedom when assessing OMEGAs.
+This can be done using `LDF`, which stands for "loss of degrees of freedom".
+
+**If you can MU-model all THETAs**, then set `LDF=-1` in `$PK` to let NONMEM do the correction automatically.
+
+**If you <span class="red-underline">cannot</span> MU-model all THETAs**, the most accurate is to have `LDF(n)` be the number of to-be-estimated THETAs involved in `MU_n`:
+
+```verilog
+" LDF(3) = 2.0
+MU_3 = THETA(4) + LOG(WT) * THETA(5)
+CL = EXP(MU_3 + ETA(3))
+```
 
 ### Reproducibility {#sec-mle-repr}
 
@@ -493,7 +511,7 @@ $ESTIMATION METHOD=IMP
 ```
 
 The higher number of samples should give a more stable result (although the run time of each iteration will increase significantly).
-Taking the **average OFV of these 5 iterations** will give a more accurate estimation of the final OFV^[Credit: Jon Moss].
+Taking the **average OFV of these 5 iterations** will give a more accurate estimation of the final OFV[^JM].
 
 ::: {.callout-caution}
 Do not compare IMP and FOCE OFVs
@@ -622,6 +640,10 @@ The EM-methods are already quite robust in that they can handle many different e
 
 To get good individual parameter values near the mode of the posterior density for the first iteration of SAEM, you can set `MAPITERS=1`.
 
+#### For uncertain initial estimates
+
+`$ANNEAL`
+
 #### Full OMEGA blocks
 
 Full OMEGA blocks are generally preferred in EM-based estimation, as EM handles them more reliably than FOCE [@bauerNONMEMTutorialPartTwo2019].
@@ -635,7 +657,7 @@ Only consider FIX:ing off-diagonals back to 0 if EM OFV is highly variable, or i
 * `RANMETHOD=3S2P`
 * `SEED=123456789`
 
-#### A note on paralell NONMEM
+#### Paralell NONMEM
 
 For the stochastic methods (IMP, IMPMAP, SAEM and BAYES), distribution of subjects to different nodes for computations is dependent on number of processors.
 This leads to differences in sequences of random numbers generated during computations that could make the results dependent on the number of processors.
@@ -672,7 +694,7 @@ With that said, @tbl-when provides some rule-of-thumbs of when to consider which
 | Very sparse data |       |         |       |        |   x   |
 | Sparse data      |   x   |    x    |   x   |        |   x   |
 | Rich data        |   x   |    x    |   x   |   x    |   x   |
-| Very rich data   |   x   |    x    |       |   x    |   x   |
+| Very rich data   |   x   |    x    |       |   x    |       |
 | Categorical data |       |    x    |       |        |   x   |
 | Simple models    |   x   |    x    |       |        |       |
 | Complex models   |       |         |   x   |   x    |   x   |
@@ -725,3 +747,7 @@ OFVs between MLE and EM methods are incomparable.
 
 ::: {#refs}
 :::
+
+[^AD]: Credit: Adrian Dunne
+[^JM]: Credit: Jon Moss
+[^RB]: Credit: Robert Bauer
