@@ -280,7 +280,19 @@ $ESTIMATION METHOD=1 MCETA=1    MAXEVAL=9999
 
 #### Numerical stability
 
-`$ABBR PROTECT`
+In general, it is advised to write the model code in such a way that boundaries are avoided.
+For example, if a parameter `A` should have a lower bound of 0, code it in logarithmic space `A = EXP(THETA)` such that THETA is unbounded.
+
+##### Protection against floating point exceptions
+
+Simply set `$ABBREVIATED PROTECT` at beginning of control stream file.
+This will convert all functions to their respective "protected form".
+
+Protected forms:
+
+* EXP(): 
+* LOG(): 
+* SQRT(): 
 
 #### Small number of subjects
 
@@ -304,6 +316,10 @@ However, if one uses the `MCETA` option, a stochastic Monte-Carlo element is int
 
 * `RANMETHOD=4P`: The `4` sets the randomization method to the same as the default one in `$SIMULATION`, and the `P` is necessary when running NONMEM in parallel.
 * `SEED=123456789`: This enables the Monte-Carlo sequence to be reproduced. Choose any integer, but be consistent within your analysis.
+
+### Speed {#sec-mle-speed}
+
+* FAST
 
 ## EM-methods {#sec-em}
 
@@ -679,6 +695,8 @@ When running models, use your own parafile: `-parafile=my_own_parafile.pnm`
 
 * MAP-estimation is always parallelized properly.
 * Always use `RANMETHOD=P`
+
+### Speed {#sec-em-speed}
 
 ## When to use which
 
