@@ -11,12 +11,13 @@ date: last-modified
 
 ### Grok NONMEM
 
-`.ets` means "ETA samples"  
-`.ext` means "extra"  
 `.cnv` means "convergence", contains convergence-testing statistics.  
+`.ets` means "ETA samples"; gets "random sampled ETAs" (less prone to shrinkage)  
+`.ext` means "extra"  
+`.phi` contains individual parameters: φi=μi+ηi, φi=(φ1,…,φn), and iOFV  
 `.phm` means ".phi-file for mixture model"  
-`.ets`-file gets "random sampled ETAs" (less prone to shrinkage)  
-`.phi` contains individual parameters: φi=μi+ηi, φi=(φ1,…,φn)  
+`.shk` means "shrinkage"; contains same cmoposite shrinkage data as in `.lst`  
+`.shm` means "shrinkage map"; contains information which ETAs were excluded in the ETA shrinkage assessment.  
 
 * phc=Var(phi)
 * non_MU_ref parameters: φi=ηi
