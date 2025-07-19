@@ -23,7 +23,7 @@ In essence, there are two families of estimation methods available in NONMEM:
 2. Expectation-Maximization ("EM") methods
 
 ::: {.callout-note title="ETA optimization"}
-When finding the individual ETAs, NONMEM by default uses an optimization method called **BFGS** (Broyden, Fletcher, Goldfarb, and Shanno).
+When finding the individual ETAs, NONMEM by default uses an optimization method called **BFGS** (Broyden-Fletcher-Goldfarb-Shanno) @fletcherPracticalMethodsOptimization2010.
 This method can be changed using the `OPTMAP` option, but should for all practical purposes be left to its default.
 
 The process of finding the individual ETAs is often called "Mode a Posteriori (**MAP**) estimation".
@@ -87,27 +87,29 @@ Sensible options to add from start:
 
 ```verilog
 $ESTIMATION METHOD=CONDITIONAL
-            INTERACTION
+            INTERACTION # <1>
             MAXEVAL=99999
-            FAST # <1>
+            FAST # <2>
             CTYPE=4
-            NONINFETA=1 # <2>
-            NSIG=2 # <3>
-            SIGL # <4>
-            SIGLO # <5>
+            NONINFETA=1 # <3>
+            ETASTYPE=1
+            NSIG=2 # <4>
+            SIGL # <5>
+            SIGLO # <6>
             MSFO=root.msf
             PRINT=1
 ```
-1. Always use the `FAST` option, there are very few cases where `FAST` is suboptimal[^RB].
+1. `INTERACTION` should always be used when residual error is proportional, and does not impact the analysis when the residual error is additive. Thus, always use it.
+2. Always use the `FAST` option, there are very few cases where `FAST` is suboptimal[^RB].
 The `FAST` option benefits from MU-modeling to be more effective (see "Speaking NM-TRAN" for more info).
-2. `NONINFETA` should be added when not all ETAs are used for all subjects.
+3. `NONINFETA=1` and `ETASTYPE=1` should be added when not all ETAs are used for all subjects.
 For example, an ETA to a KA during a fit of a subject with only IV dosing.
-3. `NSIG <= SIGL/3`.
+4. `NSIG <= SIGL/3`.
 Default is `NSIG=3`, which is ok for analytical problems.
 But for numerical integration problems `NSIG=2` is the largest one should insist on[^RB].
-4. `SIGL <= TOL` (for numerical integration problems).
+5. `SIGL <= TOL` (for numerical integration problems).
 `SIGL <= 14` (for analytical problems, about the limit of double precision ).
-5. `SIGLO <= TOL` and `SIGLO >= SIGL`. By default, `SIGLO=SIGL`
+6. `SIGLO <= TOL` and `SIGLO >= SIGL`. By default, `SIGLO=SIGL`
 
 If issues arise, then first try these options:
 
