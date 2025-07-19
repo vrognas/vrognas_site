@@ -22,9 +22,8 @@ The process of finding the individual ETAs is often called "Mode a Posteriori (*
 
 The optimal ETA values themselves are called either Empirical Bayes Estimates (**EBEs**), Conditional Parametric ETAs (CPEs), MAP estimates, or conditional mode estimates, referred to symbolically as $\hat{\eta}$ (pronounced "ETA hat").
 
-When finding the individual ETAs, NONMEM by default uses an optimization method called **BFGS** (Broyden-Fletcher-Goldfarb-Shanno) @fletcherPracticalMethodsOptimization2010.
+When finding the individual ETAs, NONMEM by default uses an optimization method called **BFGS** (Broyden-Fletcher-Goldfarb-Shanno) [@fletcherPracticalMethodsOptimization2010].
 This method can be changed using the `OPTMAP` option, but should for all practical purposes be left to its default.
-It is also, to the authors best knowledge, a very similar method the the ones used to update population parameters in FO.
 :::
 
 ## Classical MLE methods {#sec-mle}
