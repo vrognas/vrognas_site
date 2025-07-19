@@ -1,7 +1,7 @@
 ---
 title: "Tools of the Trade"
 subtitle: "All the information you need to learn more about the topics covered on this page."
-date: last-modified
+date: "2025-07-19"
 ---
 
 :::{.callout-caution title="Under construction"}
@@ -33,5 +33,6 @@ date: last-modified
 * <https://accp1.org/Members/ACCP1/Students_Trainees/Pharmacometric-Web-based-Learning-Resource.aspx>
 * [Clinical Pharmacology Podcast with Nathan Teuscher (Spotify)](https://open.spotify.com/show/6QJ81a96Q9HeeFBX8EtHTu?si=1e05e7a31a2942e0)
 * <https://trc-p.nl/>
+* <https://nmhelp.tingjieguo.com/>
 
 ![](images/index_tools.png)
