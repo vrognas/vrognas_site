@@ -1,8 +1,13 @@
 ---
 title: "NONMEM estimation methods"
 description: "Info on $SUBROUTINES, $ESTIMATION, and $PRIOR"
-code-overflow: scroll
 date: "2025-07-21"
+format:
+  html:
+    code-fold: true
+    code-summary: "Show the code"
+code-overflow: scroll
+code-tools: true
 ---
 
 Estimation methods are the algorithms that are used to identify the best fit model population parameters (THETAs, OMEGAs, and SIGMAs) given the specified model and the analysis data set.
@@ -27,16 +32,73 @@ When finding the individual ETAs, NONMEM by default uses an optimization method 
 This method can be changed using the `OPTMAP` option, but should for all practical purposes be left to its default.
 :::
 
-## Subroutines
+## Subroutines {#sec-subr}
 
 Before diving into the estimation methods, lets quickly talk about `$SUBROUTINES`.
+
+NONMEM comes with a library of **ADVAN** routines.
+Their function is to "advance" the kinetic system from one state time point to the next (hence "ADVAN").
+
+<details>
+<summary>Show ADVAN table</summary>
+| Routine | Control records | Description |
+| :-----  | :---------- | :---------- |
+| `ADVAN1`  | | One Compartment Linear Model |
+| `ADVAN2`  | | One Compartment Linear Model with First Order Absorption |
+| `ADVAN3`  | | Two Compartment Linear Model |
+| `ADVAN4`  | | Two Compartment Linear Model with First Order Absorption |
+| `ADVAN5`  | `$MODEL`| General Linear Model |
+| `ADVAN6`  | `$MODEL`, `$DES`| General Nonlinear Model |
+| `ADVAN7`  | `$MODEL`| General Linear Model with Real Eigenvalues |
+| `ADVAN8`  | `$MODEL`, `$DES`| General Nonlinear Model with Stiff Differential Equations |
+| `ADVAN9`  | `$MODEL`, `$DES`, `$AES`, `$AESINITIAL`| General Nonlinear Model with Equilibrium Compartments |
+| `ADVAN10` | | One Compartment Model with Michaelis-Menten Elimination |
+| `ADVAN11` | | Three Compartment Linear Model |
+| `ADVAN12` | | Three Compartment Linear Model with First Order Absorption |
+| `ADVAN13` | `$MODEL`, `$DES`| General Nonlinear Model using LSODA |
+| `ADVAN14` | `$MODEL`, `$DES`| General Nonlinear Model using CVODA |
+| `ADVAN15` | `$MODEL`, `$DES`| General Nonlinear Model with Equilibrium Compartments using IDA |
+| `ADVAN16` | `$MODEL`, `$DES`| Delay Differential Equation Model using RADAR5 |
+| `ADVAN17` | `$MODEL`, `$DES`, `$AES`, `$AESINITIAL`| Delay Differential Equation Model with Equilibrium Compartments using RADAR5 |
+| `ADVAN18` | `$MODEL`, `$DES`| Delay Differential Equation Model using DDE_SOLVER |
+
+: Advancement routines. {#tbl-advan tbl-colwidths="[20, 30, 50]"}
+</details>
+
+Then there are **TRANS** routines.
+These routines are used to "translate" between parameterizations (hence "TRANS").
+
+<details>
+<summary>Show TRANS table</summary>
+| Routine  | Description |
+| :------- | :---------- |
+| `TRANS1` | Dummy, or null, translator; may be used with all ADVAN routines. It is the default. |
+| `TRANS2` | Used with ADVAN1 and ADVAN2. |
+| `TRANS3` | Used with ADVAN3 and ADVAN4. |
+| `TRANS4` | Used with ADVAN3, ADVAN4, ADVAN11, ADVAN12 |
+| `TRANS5` | Used with ADVAN3 and ADVAN4. |
+| `TRANS6` | Used with ADVAN3, ADVAN4, ADVAN11, ADVAN12 |
+
+: Translator routines. {#tbl-trans tbl-colwidths="[20, 80]"}
+</details>
+
+For every run, you specify **<span class="red-underline">one</span> ADVAN** routine and **<span class="red-underline">one</span> TRANS** routine in the `$SUBROUTINES` record.
 
 We differentiate problems by their computational nature, as this in some sense define the different options we want to tweak to optimize speed and accuracy of our estimation algorithm.
 We define "numerical integration problems" as problems using `$DES`, and "analytical problems" those that do not.
 
-`ATOL`
-`TOL`
-`$TOL`
+### Fine-tuning tolerance
+
+Tolerance options may be set at `$SUBROUTINES`, which be in effect throughout the entire problem^[An alternative method is to use the `$TOL` record, where options for each compartment may be entered.].
+These options are used for the numerical `ADVAN` routines.
+
+* `TOL=n`: The relative significant digits precision to which differential equations are to be integrated, so the precision is 10^-`TOL`^.
+Used with `ADVAN6`, `ADVAN8`, `ADVAN9`, and `ADVAN13` to specify the number of digits that are required to be accurate in the computation of the drug amount in each compartment; the precise meaning depends on the particular ADVAN routine that uses it @gibianskyComparisonNonmem722012.
+* `ATOL=n`: The absolute significant digits precision to which differential equations are to be integrated, so the accuracy is 10^-`ATOL`^.
+Default is 12.
+Used with `ADVAN9`, `ADVAN13`, `ADVAN14`, `ADVAN15`, `ADVAN16`, `ADVAN17`, `ADVAN18`.
+On occasion you may want to reduce `ATOL` (usually set it equal to that of `TOL`), and improve speeds of up to 4 fold.
+* For the numerical ADVAN routines, internal precision is based on user specified `TOL`, as opposed to the analytical routines where internal precision is based on `SIGL`
 
 ## Classical MLE methods {#sec-mle}
 
@@ -83,12 +145,9 @@ For explicitness, `METHOD=CONDITIONAL` is prefered.
 
 #### Options {#sec-foce-options}
 
-* Internal precision is based on user specified TOL
-* Often `TOL=6` or less, not 10
-* The largest NSIG one should insist on is 2.
-
 Sensible options to add from start:
-
+<details>
+<summary>Show code</summary>
 ```verilog
 $ESTIMATION METHOD=CONDITIONAL
             INTERACTION # <1>
@@ -116,9 +175,11 @@ But for numerical integration problems `NSIG=2` is the largest one should insist
 `SIGL <= 14` (for analytical problems, about the limit of double precision ).
 6. `SIGLO <= TOL` and `SIGLO >= SIGL`.
 By default, `SIGLO=SIGL`
+</details>
 
 If issues arise, then first try these options:
-
+<details>
+<summary>Show code</summary>
 ```verilog
 NSIG=2 # <1>
 NOABORT # <2>
@@ -138,9 +199,12 @@ REPEAT
 4. If "PARAMETER ESTIMATE IS NEAR ITS DEFAULT BOUNDARY."
 5. If issue with MAP (ETA) estimation
 6. If using MCETA
+</details>
 
 The relevant default options for FOCE are:
 
+<details>
+<summary>Show code</summary>
 ```verilog
 $ESTIMATION METHOD=CONDITIONAL
             ABORT
@@ -189,6 +253,7 @@ $ESTIMATION METHOD=CONDITIONAL
             OMEGABOUNDTEST
             SIGMABOUNDTEST
 ```
+</details>
 
 ::: {.callout-tip}
 There is no reason to use the `POSTHOC` option with FOCE as it only applies for the FO method.
@@ -224,16 +289,11 @@ If all iOFVs are of the same sign, then the OVF could have a resulting precision
 Thus with 100 subjects, the actual precision that the total OFV is evaluated could be 12.
 One should not necessarily rely on this, so it is safest to suppose the more conservative precision of 10, for which a suitable `NSIG` would be 3.
 
-`TOL`: The relative significant digits precision to which differential equations are to be integrated, so the precision is 10^-`TOL`^
-
 For numerical integration problems:
 
-* Internal precision is based on user specified `TOL`, not `SIGL`
+* Internal precision is based on user specified `TOL`, not `SIGL` (see @sec-subr)
 * Often `TOL` = 6 or less, not 10
 * The largest `NSIG` one should insist on is 2.
-
-Set `SIGL`, `NSIG`, and `TOL` such that:
-
 * `SIGL` ≤ `TOL`
 * `NSIG` ≤ `SIGL` / 3
 
@@ -422,7 +482,8 @@ This gives the mean and variance of the ETAs that are most likely given the data
 
 4. The algorithm goes through this E-M loop (2--3) `NITER` times, or until the convergence critera is met.
 
-IMP is specified by:
+<details>
+<summary>Show IMP options</summary>
 
 ```verilog
 $ESTIMATION METHOD=IMP
@@ -474,6 +535,55 @@ On very rare occasions, the OFV varies widely, and these options may need to be 
 Remember to revert these parameters to default operation on the next `$EST` step:
 `ISCALE_MIN=-100 ISCALE_MAX=-100`.
 9. See @sec-em-robust-ctest
+</details>
+
+<details>
+<summary>AUTO=1</summary>
+
+```verilog
+$ESTIMATION METHOD=IMP
+            AUTO=1
+
+$ESTIMATION METHOD=IMP
+            INTERACTION
+            CTYPE=3
+            NITER=500
+            ISAMPLE=300
+            STDOBJ=10
+            ISAMPEND=10000
+            NOPRIOR=1 # <1>
+            CITER=10
+            CINTERVAL=1
+            CALPHA=0.05
+            IACCEPT=0.0
+            ISCALE_MIN=0.1
+            ISCALE_MAX=10
+            DF=0
+            MCETA=3 # <2>
+            EONLY=0
+            MAPITER=1
+            MAPINTER=-1
+```
+1. `NOPRIOR` determines if you do want to use (`0`) prior information for this estimation record or not (`1`).
+Normally, if you specify a prior you want to use it, so set `NOPRIOR=0`.
+2. `MCETA` works the same during MAP as it does for the MLE methods.
+</details>
+
+<details>
+<summary>AUTO=2</summary>
+
+`AUTO=2` is same as `AUTO=1`, with additional:
+
+```verilog
+GRDQ=-1.0 # <1>
+DERCONT=1 # <2>
+RANMETHOD=3S2P # <3>
+```
+1. `GRDQ`: The gradient quick option.
+Used for THETAs that are not MU-modeled, for SIGMAs, and THETAs that model RUV.
+2. `DERCONT=1` might me helpful in cases of extreme discontinuity when varying certain THETAs by even just a small amount in the model results in a large change in OFV.
+3. See @sec-em-repr
+</details>
 
 #### Monte Carlo noise
 
@@ -512,6 +622,10 @@ $COVARIANCE UNCONDITIONAL MATRIX=S TOL=12 SIGL=12 SLOW
 
 The iterations for the initial `ITS` step seems in this case to be quite stable with some artifacts: 
 
+
+<details>
+<summary>Show output</summary>
+
 ```verilog
 iteration 175 OBJ= 4693.4674554341409
 iteration 176 OBJ= 4694.2296104065535
@@ -544,9 +658,12 @@ iteration 200 OBJ= 4691.6818293505230
 OPTIMIZATION WAS NOT COMPLETED 
 ```
 1. Small "spikes"
-
+</details>
 
 The IMP step can be less stable:
+
+<details>
+<summary>Show output</summary>
 
 ```verilog
 iteration 120 OBJ= 4314.8310660241377 eff.= 446. Smpl.= 1000. Fit.= 0.96389
@@ -572,7 +689,7 @@ OPTIMIZATION WAS COMPLETED
 1. It is not unusual to see this large Monte Carlo noise in the OFV estimate.
 It indicates that the number of samples (`ISAMPLE`) may not be high enough.
 Consider restricting `ISCALE_MIN` and `ISCALE_MAX` as well.
-
+</details>
 
 ::: {.callout-tip title="Interpreting the IMP iterations" collapse="true"}
 During estimation with IMP, the iteration output contains:
@@ -590,58 +707,13 @@ The scaling of the variance of the proposal density is adjusted (limited by `ISC
 If you find that this is not the case, then tweak something.
 :::
 
-#### AUTO option {#sec-imp-options}
-
-In general, using the `AUTO=1` option is fine.
-
-```verilog
-$ESTIMATION METHOD=IMP
-            AUTO=1
-
-$ESTIMATION METHOD=IMP
-            INTERACTION
-            CTYPE=3
-            NITER=500
-            ISAMPLE=300
-            STDOBJ=10
-            ISAMPEND=10000
-            NOPRIOR=1 # <1>
-            CITER=10
-            CINTERVAL=1
-            CALPHA=0.05
-            IACCEPT=0.0
-            ISCALE_MIN=0.1
-            ISCALE_MAX=10
-            DF=0
-            MCETA=3 # <2>
-            EONLY=0
-            MAPITER=1
-            MAPINTER=-1
-```
-1. `NOPRIOR` determines if you do want to use (`0`) prior information for this estimation record or not (`1`).
-Normally, if you specify a prior you want to use it, so set `NOPRIOR=0`.
-2. `MCETA` works the same during MAP as it does for the MLE methods.
-
-`AUTO=2` is same as `AUTO=1`, with additional:
-
-```verilog
-GRDQ=-1.0 # <1>
-DERCONT=1 # <2>
-RANMETHOD=3S2P # <3>
-```
-1. `GRDQ`: The gradient quick option.
-Used for THETAs that are not MU-modeled, for SIGMAs, and THETAs that model RUV.
-2. `DERCONT=1` might me helpful in cases of extreme discontinuity when varying certain THETAs by even just a small amount in the model results in a large change in OFV.
-3. See @sec-em-repr
-
 ### IMPMAP {#sec-impmap}
 
 `METHOD=IMPMAP` is equivalent to `METHOD=IMP MAPITER=1 MAPINTER=1`.
 It is thus like IMP, with the added assistance of MAP estimation on every E-step.
 
-#### AUTO option {#sec-impmap-options}
-
-AUTO=1
+<details>
+<summary>AUTO=1</summary>
 
 ```verilog
 $ESTIMATION METHOD=IMPMAP
@@ -665,6 +737,7 @@ $ESTIMATION METHOD=IMPMAP
             MCETA=3
             EONLY=0
 ```
+</details>
 
 ### SAEM {#sec-saem}
 
@@ -676,9 +749,8 @@ SAEM is like a search light, does not need as large of a starting density ("umbr
 
 [http://monolix.lixoft.com/tasks/population-parameter-estimation-using-saem/](http://monolix.lixoft.com/tasks/population-parameter-estimation-using-saem/)
 
-#### Options {#sec-saem-options}
-
-In general, using the `AUTO=1` option is fine.
+<details>
+<summary>AUTO=1</summary>
 
 ```verilog
 $ESTIMATION METHOD=SAEM
@@ -707,6 +779,10 @@ $ESTIMATION METHOD=SAEM
             ISAMPLE=2
             MCETA=0
 ```
+</details>
+
+<details>
+<summary>AUTO=2</summary>
 
 `AUTO=2` is the same as `AUTO=1`, with the additional options:
 
@@ -715,6 +791,7 @@ MAPITERS=1 MCETA=100
 ```
 
 To turn MAP assessment assist on the first iteration.
+</details>
 
 ### Robustness {#sec-em-robust}
 
@@ -758,7 +835,7 @@ The default value is 0.05.
 
 **SAEM:** Iterations can be highly correlated, so to properly detect a lack of change in parameters, you may want to test every 10--100^th^ iteration (`CINTERVAL`=10 to 100), so that the linear regression on parameter change is spread out over a larger segment of iterations.
 
-::: {.callout-tip}
+::: {.callout-tip title="Allow time to converge"}
 Give a rather high value to `NBURN` (1000--10000 for SAEM/BAYES) or `NITER` (200--1000 for ITS/IMP/IMPMAP) so you don't run out of iterations before the method converges.
 
 An alternative method to convergence testing is to set `NBURN` to a very high number (10000), monitor the change in `SAEMOBJ`, and enter ctrl-K (see section I.15 Interactive Control of a NONMEM batch Program) when you feel that the variations are stationary, which will end the burn-in mode and continue on to the statistical/accumulation mode.
@@ -885,7 +962,7 @@ Relatively **complex models**, such as:
 * Lack of observations across the full dose–response range
 * Insufficient PK data to identify all compartments
 
-::: {.callout-note title="A note on sparse data"}
+::: {.callout-note title="A note on sparse data" collapse="true"}
 
 Think about "sparse data" as missing important parts of the picture.
 Perhaps we miss the peak concentration or don't have high enough doses to see the top of the dose-response curve.
