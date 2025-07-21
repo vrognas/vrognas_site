@@ -1,7 +1,8 @@
 ---
 title: "NONMEM estimation methods"
+description: "Info on $SUBROUTINES, $ESTIMATION, and $PRIOR"
 code-overflow: scroll
-date: "2025-07-19"
+date: "2025-07-21"
 ---
 
 Estimation methods are the algorithms that are used to identify the best fit model population parameters (THETAs, OMEGAs, and SIGMAs) given the specified model and the analysis data set.
@@ -18,13 +19,21 @@ In essence, there are two families of estimation methods available in NONMEM:
 2. Expectation-Maximization ("EM") methods
 
 ::: {.callout-note title="ETA optimization"}
-The process of finding the individual ETAs is often called "Mode a Posteriori (**MAP**) estimation".
+The process of finding the individual ETAs is often called "Maximum a Posteriori (**MAP**) estimation"^[In the pharmacometric field, also called "mode a posteriori". Essentially the same, since the mode is the maximum of a unimodal distribution.].
 
 The optimal ETA values themselves are called either Empirical Bayes Estimates (**EBEs**), Conditional Parametric ETAs (CPEs), MAP estimates, or conditional mode estimates, referred to symbolically as $\hat{\eta}$ (pronounced "ETA hat").
 
 When finding the individual ETAs, NONMEM by default uses an optimization method called **BFGS** (Broyden-Fletcher-Goldfarb-Shanno) [@fletcherPracticalMethodsOptimization2010].
 This method can be changed using the `OPTMAP` option, but should for all practical purposes be left to its default.
 :::
+
+## Subroutines
+
+Before diving into the estimation methods, lets quickly talk about `$SUBROUTINES`.
+
+`ATOL`
+`TOL`
+`$TOL`
 
 ## Classical MLE methods {#sec-mle}
 
@@ -37,7 +46,7 @@ There are essentially three MLE methods available in NONMEM:
 2. FOCE (First Order with Conditional Estimation)
 3. LAPLACE (Second order)
 
-The "order" refers to the derivative evaluated in the Taylor expansion.
+The "order" refers to the derivative evaluated in the Taylor expansion [@wangDerivationVariousNONMEM2007].
 So, the first order methods FO and FOCE evaluated the first order derivative (Jacobian matrix), or the "slope" of the objective function value (OFV).
 LAPLACE evaluates the second order derivative (Hessian matrix), or the "curvature" of the OFV, requiring more computational effort than the first order.
 
@@ -94,7 +103,8 @@ $ESTIMATION METHOD=CONDITIONAL
             MSFO=root.msf
             PRINT=1
 ```
-1. `INTERACTION` should always be used when residual error is proportional, and does not impact the analysis when the residual error is additive. Thus, always use it.
+1. `INTERACTION` should always be used when residual error is proportional, and does not impact the analysis when the residual error is additive.
+Thus, always use it.
 2. Always use the `FAST` option, there are very few cases where `FAST` is suboptimal[^RB].
 The `FAST` option benefits from MU-modeling to be more effective (see "Speaking NM-TRAN" for more info).
 3. `NONINFETA=1` and `ETASTYPE=1` should be added when not all ETAs are used for all subjects.
@@ -104,7 +114,8 @@ Default is `NSIG=3`, which is ok for analytical problems.
 But for numerical integration problems `NSIG=2` is the largest one should insist on[^RB].
 5. `SIGL <= TOL` (for numerical integration problems).
 `SIGL <= 14` (for analytical problems, about the limit of double precision ).
-6. `SIGLO <= TOL` and `SIGLO >= SIGL`. By default, `SIGLO=SIGL`
+6. `SIGLO <= TOL` and `SIGLO >= SIGL`.
+By default, `SIGLO=SIGL`
 
 If issues arise, then first try these options:
 
@@ -271,8 +282,13 @@ If the algorithm ends up in local minima despite `MCETA`, try increasing the val
 Since `MCETA` is most impactful during the early iterations[^RB], another option to still benefit from the robustness of `MCETA` but not impact the estimation speed too much, is to only use `MCETA` for the first 200 iterations or so:
 
 ```verilog
-$ESTIMATION METHOD=1 MCETA=1000 MAXEVAL=200
-$ESTIMATION METHOD=1 MCETA=1    MAXEVAL=9999
+$ESTIMATION METHOD=1
+            MCETA=1000
+            MAXEVAL=200
+
+$ESTIMATION METHOD=1
+            MCETA=1
+            MAXEVAL=9999
 ```
 
 #### Numerical stability
@@ -285,18 +301,12 @@ For example, if a parameter `A` should have a lower bound of 0, code it in logar
 Simply set `$ABBREVIATED PROTECT` at beginning of control stream file.
 This will convert all functions to their respective "protected form".
 
-Protected forms:
-
-* EXP(): 
-* LOG(): 
-* SQRT(): 
-
 #### Small number of subjects
 
 When there are very few subjects (**less than 10**), its most accurate to correct the degrees of freedom when assessing OMEGAs.
 This can be done using `LDF`, which stands for "loss of degrees of freedom".
 
-**If you can MU-model all THETAs**, then set `LDF=-1` in `$PK` to let NONMEM do the correction automatically.
+**If you <span class="red-underline">can</span> MU-model all THETAs**, then set `LDF=-1` in `$PK` to let NONMEM do the correction automatically.
 
 **If you <span class="red-underline">cannot</span> MU-model all THETAs**, the most accurate is to have `LDF(n)` be the number of to-be-estimated THETAs involved in `MU_n`:
 
@@ -312,7 +322,8 @@ As mentioned above, MLE methods are inherently reproducible since they provide o
 However, if one uses the `MCETA` option, a stochastic Monte-Carlo element is introduced that benefits from additional options for reproducibility:
 
 * `RANMETHOD=4P`: The `4` sets the randomization method to the same as the default one in `$SIMULATION`, and the `P` is necessary when running NONMEM in parallel.
-* `SEED=123456789`: This enables the Monte-Carlo sequence to be reproduced. Choose any integer, but be consistent within your analysis.
+* `SEED=123456789`: This enables the Monte-Carlo sequence to be reproduced.
+Choose any integer, but be consistent within your analysis.
 
 ### Speed {#sec-mle-speed}
 
@@ -352,7 +363,18 @@ Please see "Speaking NM-TRAN" for more info.
 ### ITS {#sec-its}
 
 ITS stands for **I**terative **T**wo **S**tage.
-Normally, it is used as a rapid exploratory pre-analysis method to facilitate parameter estimation with IMP or SAEM.
+Is considered deterministic, as opposed to other EM-methods.
+
+ITS is specified by:
+
+```verilog
+$ESTIMATION METHOD=ITS
+            INTERACTION
+            NITER=50 # <1>
+```
+1. `NITER` (default 50) sets maximum number of iterations
+
+Normally, it is used as a **rapid exploratory pre-analysis method** to facilitate parameter estimation with IMP or SAEM.
 
 ```verilog
 $ESTIMATION METHOD=ITS
@@ -389,22 +411,76 @@ CALPHA=0.05
 ### IMP {#sec-imp}
 
 IMP stands for **IMP**ortance sampling.
-The IMP method in NONMEM uses Monte Carlo sampling (E-step) to narrow the posterior parameter distribution.
+The general IMP algorithm goes like this:
 
-::: {.callout-tip}
-When using the IMP method, it is adviced to include two sequential `$ESTIMATION` records.
-The first record will perform optimization of parameter estimates (E- and M-step) until a global minimum is found.
-The second record will then take those parameter estimates and calculate more precise estimates of the objective function value (just the E-step).
-The second `$ESTIMATION` command will have a higher `ISAMPLE` to reduce the Monte Carlo noise, and have `EONLY=1` (no optimization of population parameters).
-`IMP EONLY=1` needs a few iterations to stabilize because of internal processes
-:::
+1. A **MAP estimation** (set by `MAPITER=1`) is performed to estimate the parameters of the proposal density (aka "sampling distribution" *q(x)*).
 
-#### Stochastic noise
+2. **E-step**: For every individual, ETAs are sampled `ISAMPLE` times from the proposal density.
+This gives the mean and variance of the ETAs that are most likely given the data.
+
+3. **M-step**: Population parameters are updated.
+
+4. The algorithm goes through this E-M loop (2--3) `NITER` times, or until the convergence critera is met.
+
+IMP is specified by:
+
+```verilog
+$ESTIMATION METHOD=IMP
+            INTERACTION
+            NITER=1000 # <1>
+            ISAMPLE=300 # <2>
+            ISAMPEND=10000 # <3>
+            STDOBJ=10 # <3>
+            MAPITER=1 # <4>
+            MAPINTER=-1 # <5>
+            IACCEPT=0.0 # <6>
+            IACCEPTL=0.01 # <6>
+            DF=0 # <7>
+            ISCALE_MIN=0.1 # <8>
+            ISCALE_MAX=10 # <8>
+            CTYPE=1 # <9>
+            CINTERVAL=10 # <9>
+            CITER=10 # <9>
+            CALPHA=0.05 # <9>
+```
+1. `NITER`: Integer.
+Sets maximum number of iterations (default 50).
+Usually about 50--200 iterations are required to approach the maximum likelihood population parameters [@bauerNONMEMTutorialPartTwo2019].
+Synonymous with `NSAMPLE`.
+2. `ISAMPLE`: Integer.
+Number of random samples per subject used for E-step (default 300).
+Usually 300 is sufficient, but may require 1000--3000 for very sparse data, and when you want an OFV with low Monte Carlo noise.
+3. `ISAMPEND` and `STDOBJ`:
+If `ISAMPEND` is greater than `ISAMPLE`, and `STDOBJ` > 0.0, then samples per subject will adjust between `ISAMPLE`--`ISAMPEND`, until the stochastic standard deviation of the OFV falls below `STDOBJ`.
+4. `MAPITER=n`: Integer.
+The first *n* iterations MAP is use to assess parameters for the proposal density.
+After this, the Monte Carlo conditional means and variances of the previous iteration are used for the proposal density parameters of the present iteration.
+5. `MAPINTER=n`: Integer.
+Every *n*^th^ iteration, MAP is used to provide parameters to the proposal density.
+If `MAPINTER=-1`, then MAP will be turned on only if the OFV increases consistently over several iterations.
+6. `IACCEPT` and `IACCEPTL`: Real.
+Lower `IACCEPT` to expand the proposal density (default 0.4).
+For very sparse data or highly nonlinear posterior densities (such as with categorical data), you may want to decrease to `IACCEPT` to 0.1--0.3.
+`IACCEPTL` scales a second multivariate normal distribution, to cover long tails in the posterior density (hence "L" for "long tails").
+If `IACCEPT=0.0` the `DF` and `IACCEPT` level will be automatically determined for each subject (output in `root.imp`).
+If `IACCEPT=0.0`, and `IACCEPTL` > 0, then a search for the best `IACCEPTL` for each subject is made, starting the testing at the `IACCEPTL` value given by the user, while `IACCEPT` is fixed to 1.
+7. `DF`: Integer.
+Degrees of freedom for the proposal density.
+Default `DF=0` is normal distribution, else *d.f.* for t-distrubution.
+For very sparse data or highly non-linear posterior densities (such as with categorical data), you may want to set `DF` to somewhere between 2--10.
+8. `ISCALE_MIN` and `ISCALE_MAX`: Real.
+Boundaries for the scale factor used to vary the size of the variance of the proposal density in order to meet the `IACCEPT` condition.
+On very rare occasions, the OFV varies widely, and these options may need to be reduced (e.g., `ISCALE_MIN=0.3 ISAMPLE_MAX=3`).
+Remember to revert these parameters to default operation on the next `$EST` step:
+`ISCALE_MIN=-100 ISCALE_MAX=-100`.
+9. See @sec-em-robust-ctest
+
+#### Monte Carlo noise
 
 Remember, EM algorithms by nature don't find a single set of parameters that are the best fit.
 They find a distribution of parameter sets that maximize the expectation.
 Often those parameter sets are very similar and only differ in the 6^th^ or 7^th^ decimal place.
-But sometimes in complex models with poorly estimated parameters they can differ by larger numbers.
+But sometimes in complex^[Complex PK/PD problems are those that require ODEs or problems with more than six model parameters to be estimated] models with poorly estimated parameters they can differ by larger numbers.
 
 ```verilog
 $ESTIMATION METHOD=ITS
@@ -412,26 +488,24 @@ $ESTIMATION METHOD=ITS
             LAPLACE
             NITER=200
             SIG=3
-            PRINT=1
             SIGL=6
             NOHABORT 
             CTYPE=3
             NUMERICAL
             SLOW 
 
-$ESTIMATION METHOD=IMPMAP
+$ESTIMATION METHOD=IMP
             INTERACTION
             LAPLACE
             ISAMPLE=1000
             NITER=1000
             SIG=3
-            PRINT=1 
             SIGL=6
             NOHABORT
             CTYPE=3
             IACCEPT=0.4
             MAPITER=0
-            RANMETHOD=3S2 
+            RANMETHOD=3S2P
 
 $COVARIANCE UNCONDITIONAL MATRIX=S TOL=12 SIGL=12 SLOW
 ```
@@ -452,7 +526,7 @@ iteration 184 OBJ= 4694.1591757809929
 iteration 185 OBJ= 4693.2614956897451
 iteration 186 OBJ= 4693.5641640401127
 iteration 187 OBJ= 4693.5575289919379
-iteration 188 OBJ= 4495.6489907149398
+iteration 188 OBJ= 4495.6489907149398 # <1>
 iteration 189 OBJ= 4693.7711764252363
 iteration 190 OBJ= 4693.6281175153035
 iteration 191 OBJ= 4694.1171774559862
@@ -469,13 +543,15 @@ iteration 200 OBJ= 4691.6818293505230
 #TERM: 
 OPTIMIZATION WAS NOT COMPLETED 
 ```
+1. Small "spikes"
+
 
 The IMP step can be less stable:
 
 ```verilog
 iteration 120 OBJ= 4314.8310660241377 eff.= 446. Smpl.= 1000. Fit.= 0.96389
 iteration 121 OBJ= 4326.9079856676717 eff.= 448. Smpl.= 1000. Fit.= 0.96409
-iteration 122 OBJ= 4164.6649529423103 eff.= 479. Smpl.= 1000. Fit.= 0.96392
+iteration 122 OBJ= 4164.6649529423103 eff.= 479. Smpl.= 1000. Fit.= 0.96392 # <1>
 iteration 123 OBJ= 4299.9887619753636 eff.= 432. Smpl.= 1000. Fit.= 0.96395
 iteration 124 OBJ= 4303.9571213327054 eff.= 399. Smpl.= 1000. Fit.= 0.96349
 iteration 125 OBJ= 4328.9835950930074 eff.= 417. Smpl.= 1000. Fit.= 0.96423
@@ -493,44 +569,28 @@ iteration 131 OBJ= 4336.1893012015007 eff.= 417. Smpl.= 1000. Fit.= 0.96369
 #TERM: 
 OPTIMIZATION WAS COMPLETED 
 ```
-
-::: {.callout-note}
-If `eff.` divided by `Smpl.` is not approximately equal to `IACCEPT`, then tweak something.
-In the above example, `IACCEPT=0.4`, and `eff.` / `Smpl.` ≈ 0.4, so we're good.
-
-`Fit.` tells you how Gaussian the profile is.
-If `Fit.` is more like 0.6, then IMP is a good choice.
-If `Fit.` is approximately 1, you might as well use FOCE.
-In the above example, FOCE might have been a reasonable alternative.
-:::
-
-It is not unusual to see this large Monte Carlo noise in the OFV estimate.
+1. It is not unusual to see this large Monte Carlo noise in the OFV estimate.
 It indicates that the number of samples (`ISAMPLE`) may not be high enough.
+Consider restricting `ISCALE_MIN` and `ISCALE_MAX` as well.
 
-In this case, perform another run with the parameter values set to their final estimates, and with: 
 
-```verilog
-$ESTIMATION METHOD=IMP
-            INTERACTION
-            LAPLACE
-            ISAMPLE=10000 ; Number of samples
-            NITER=5 ; Number of iterations
-            SIG=3
-            PRINT=1 
-            SIGL=6
-            EONLY=1 ; Perform only the expectation step
-            NOHABORT
-            RANMETHOD=3S2
-```
+::: {.callout-tip title="Interpreting the IMP iterations" collapse="true"}
+During estimation with IMP, the iteration output contains:
 
-The higher number of samples should give a more stable result (although the run time of each iteration will increase significantly).
-Taking the **average OFV of these 5 iterations** will give a more accurate estimation of the final OFV[^JM].
+* `OBJ`: The objective function
+* `eff.`: Average effective number of samples
+* `Smpl.`: Actual samples (which is usually `ISAMPLE`)
+* `Fit.`: Average fitness.
+This tells you how Normal the posterior is.
+If `Fit.` is approximately 1, you might as well use FOCE.
+If `Fit.` is more like 0.6, then IMP is a good choice.
+It is the average absolute difference between the posterior density and proposal density among the samples, and indicates to what extent that the proposal density matches the posterior density.
 
-::: {.callout-caution}
-Do not compare IMP and FOCE OFVs
+The scaling of the variance of the proposal density is adjusted (limited by `ISCALE_MIN` and `ISCALE_MAX`) so that `eff.` divided by `Smpl.` is approximately equal to `IACCEPT`.
+If you find that this is not the case, then tweak something.
 :::
 
-#### Options {#sec-imp-options}
+#### AUTO option {#sec-imp-options}
 
 In general, using the `AUTO=1` option is fine.
 
@@ -539,6 +599,55 @@ $ESTIMATION METHOD=IMP
             AUTO=1
 
 $ESTIMATION METHOD=IMP
+            INTERACTION
+            CTYPE=3
+            NITER=500
+            ISAMPLE=300
+            STDOBJ=10
+            ISAMPEND=10000
+            NOPRIOR=1 # <1>
+            CITER=10
+            CINTERVAL=1
+            CALPHA=0.05
+            IACCEPT=0.0
+            ISCALE_MIN=0.1
+            ISCALE_MAX=10
+            DF=0
+            MCETA=3 # <2>
+            EONLY=0
+            MAPITER=1
+            MAPINTER=-1
+```
+1. `NOPRIOR` determines if you do want to use (`0`) prior information for this estimation record or not (`1`).
+Normally, if you specify a prior you want to use it, so set `NOPRIOR=0`.
+2. `MCETA` works the same during MAP as it does for the MLE methods.
+
+`AUTO=2` is same as `AUTO=1`, with additional:
+
+```verilog
+GRDQ=-1.0 # <1>
+DERCONT=1 # <2>
+RANMETHOD=3S2P # <3>
+```
+1. `GRDQ`: The gradient quick option.
+Used for THETAs that are not MU-modeled, for SIGMAs, and THETAs that model RUV.
+2. `DERCONT=1` might me helpful in cases of extreme discontinuity when varying certain THETAs by even just a small amount in the model results in a large change in OFV.
+3. See @sec-em-repr
+
+### IMPMAP {#sec-impmap}
+
+`METHOD=IMPMAP` is equivalent to `METHOD=IMP MAPITER=1 MAPINTER=1`.
+It is thus like IMP, with the added assistance of MAP estimation on every E-step.
+
+#### AUTO option {#sec-impmap-options}
+
+AUTO=1
+
+```verilog
+$ESTIMATION METHOD=IMPMAP
+            AUTO=1
+
+$ESTIMATION METHOD=IMPMAP
             INTERACTION
             CTYPE=3
             NITER=500
@@ -555,46 +664,6 @@ $ESTIMATION METHOD=IMP
             DF=0
             MCETA=3
             EONLY=0
-            MAPITER=1
-            MAPINTER=-1
-```
-
-AUTO=2 is same as AUTO=1, with additional:
-
-```verilog
-GRDQ=-1.0 DERCONT=1 RANMETHOD=3S2P
-```
-
-* `RANMETHOD=S2` can use fewer ISAMPLEs for IMP
-* `CINTERVAL=1` is fine for IMP
-
-### IMPMAP {#sec-impmap}
-
-`METHOD=IMPMAP` is equivalent to `METHOD=IMP MAPITER=1 MAPINTER=1`.
-It is thus the same as IMP, but assisted by Mode a Posteriori (MAP) estimation.
-
-#### Options
-
-AUTO=1
-
-```verilog
-METHOD=IMPMAP
-INTERACTION
-CTYPE=3
-NITER=500
-ISAMPLE=300
-STDOBJ=10
-ISAMPEND=10000
-NOPRIOR=1
-CITER=10
-CINTERVAL=1
-CALPHA=0.05
-IACCEPT=0.0
-ISCALE_MIN=0.1
-ISCALE_MAX=10
-DF=0
-MCETA=3
-EONLY=0
 ```
 
 ### SAEM {#sec-saem}
@@ -603,8 +672,7 @@ SAEM stands for **S**tochastic **A**pproximation **E**xpectation-**M**aximizatio
 SAEM takes a stochastic approximation of the parameter distribution using a simulation step.
 This narrows the possibilities and allows for faster convergence.
 
-* SAEM is like a search light, does not need as large of a starting density ("umbrella") as IMP.
-* CINTERVAL: ~10--100
+SAEM is like a search light, does not need as large of a starting density ("umbrella") as IMP.
 
 [http://monolix.lixoft.com/tasks/population-parameter-estimation-using-saem/](http://monolix.lixoft.com/tasks/population-parameter-estimation-using-saem/)
 
@@ -612,52 +680,49 @@ This narrows the possibilities and allows for faster convergence.
 
 In general, using the `AUTO=1` option is fine.
 
-AUTO=1
-
 ```verilog
-METHOD=SAEM
-INTERACTION
-CTYPE=3
-NITER=1000
-NBURN=4000
-ISAMPEND=10
-NOPRIOR=1
-CITER=10
-CINTERVAL=0
-CALPHA=0.05
-IACCEPT=0.4
-ISCALE_MIN=1.0E-06
-ISCALE_MAX=1.0E+06
-ISAMPLE_M1=2
-ISAMPLE_M1A=0
-ISAMPLE_M1B=2
-ISAMPLE_M2=2
-ISAMPLE_M3=2
-CONSTRAIN=1
-EONLY=0
-ISAMPLE=2
-MCETA=0
+$ESTIMATION METHOD=SAEM
+            AUTO=1
+
+$ESTIMATION METHOD=SAEM
+            INTERACTION
+            CTYPE=3
+            NITER=1000
+            NBURN=4000
+            ISAMPEND=10
+            NOPRIOR=1
+            CITER=10
+            CINTERVAL=0
+            CALPHA=0.05
+            IACCEPT=0.4
+            ISCALE_MIN=1.0E-06
+            ISCALE_MAX=1.0E+06
+            ISAMPLE_M1=2
+            ISAMPLE_M1A=0
+            ISAMPLE_M1B=2
+            ISAMPLE_M2=2
+            ISAMPLE_M3=2
+            CONSTRAIN=1
+            EONLY=0
+            ISAMPLE=2
+            MCETA=0
 ```
 
-AUTO=2 is the same as AUTO=1, with the additional options:
+`AUTO=2` is the same as `AUTO=1`, with the additional options:
 
 ```verilog
 MAPITERS=1 MCETA=100
 ```
 
-to turn MAP assessment assist on the first iteration.
+To turn MAP assessment assist on the first iteration.
 
 ### Robustness {#sec-em-robust}
 
 The EM-methods are already quite robust in that they can handle many different estimation problems.
 
-To get good individual parameter values near the mode of the posterior density for the first iteration of SAEM, you can set `MAPITERS=1`.
+To get good individual parameter values near the maximum of the posterior density for the first iteration of SAEM, you can set `MAPITERS=1`.
 
-#### For uncertain initial estimates
-
-`$ANNEAL`
-
-#### Full OMEGA blocks
+#### Full OMEGA blocks {#sec-em-robust-omega-block}
 
 Full OMEGA blocks are generally preferred in EM-based estimation, as EM handles them more reliably than FOCE [@bauerNONMEMTutorialPartTwo2019].
 Including off-diagonal elements does not compromise stability, on the contrary, off-diagonals allow the algorithms to more efficiantly search the parameter space.
@@ -665,12 +730,99 @@ Off-diagonals should therefore not be fixed to 0 just because of high RSEs (>100
 If they were fixed in a previous FOCE run due to rounding errors or failed `$COVARIANCE` steps, they should be estimated in EM.
 Only consider FIX:ing off-diagonals back to 0 if EM OFV is highly variable, or if the covariance matrix is non-positive-definite.
 
+#### GRD
+
+`GRD`
+
+#### For uncertain initial estimates {#sec-em-robust-anneal}
+
+`$ANNEAL`
+
+Simulated annealing (SA) is a probabilistic technique for approximating the global optimum of a given function.
+
+#### Convergence test  {#sec-em-robust-ctest}
+
+As stated before, you need to set up a criteria for when the EM-method should stop (aka "converge" or "terminate").
+Basically what this does is set up the instructions for a linear regression that tests if the slope is not statistically different from zero.
+The convergence test is defined by these four options:
+
+* `CTYPE`: Once the OFV is randomly stationary, then often the analysis has converged statistically, so CTYPE=1 is often enough.
+* `CINTERVAL=n`: Integer.
+Every n iterations is saved for convergence test (see `CITER`).
+If `CINTERVAL=0`, then NONMEM will decide^[I frequently use this].
+* `CITER=n`: Integer.
+Number of latest submitted iterations (see `CINTERVAL`) on which to perform the regression.
+CITER=10 is the default.
+Also coded as `CNSAMP`.
+* `CALPHA=x`: Real, 0.01--0.05.
+Alpha error rate to use on linear regression test to assess statistical significance.
+The default value is 0.05.
+
+**IMP:** IMP iterations tend to be statistically uncorrelated, and so it is reasonable to have `CITER=10` consecutive iterations (`CINTERVAL=1`) tested at `CALPHA=0.05`.
+
+**SAEM:** Iterations can be highly correlated, so to properly detect a lack of change in parameters, you may want to test every 10--100^th^ iteration (`CINTERVAL`=10 to 100), so that the linear regression on parameter change is spread out over a larger segment of iterations.
+
+::: {.callout-tip}
+Give a rather high value to `NBURN` (1000--10000 for SAEM/BAYES) or `NITER` (200--1000 for ITS/IMP/IMPMAP) so you don't run out of iterations before the method converges.
+
+An alternative method to convergence testing is to set `NBURN` to a very high number (10000), monitor the change in `SAEMOBJ`, and enter ctrl-K (see section I.15 Interactive Control of a NONMEM batch Program) when you feel that the variations are stationary, which will end the burn-in mode and continue on to the statistical/accumulation mode.
+
+It is better to provide a large `NBURN` number, and end it at will with ctrl-K, or allow the convergence tester to end it, rather than to have a small `NBURN` number and have the burn-in phase end prematurely.
+:::
+
+#### Refinement step {#sec-em-robust-refinement}
+
+When using the IMP, IMPMAP or SAEM estimation, it is adviced to include a "refinement step" in the form of an additional subsequent `$ESTIMATION METHOD=IMP` record to obtain more precise final estimates.
+This will take the population parameter estimates and calculate more precise estimates of the objective function value (just the E-step).
+
+The refinement step will have:
+
+```verilog
+$ESTIMATION METHOD=IMP
+            INTERACTION
+            ISAMPLE=10000 # <1>
+            NITER=10 # <2>
+            EONLY=1 # <3>
+            MAPITER=0 # <4>
+```
+1. The higher number of samples (3000--10000) should give a more stable result (although the run time of each iteration will increase significantly).
+2. Number of iterations should be low, 5--10.
+`IMP EONLY=1` needs a few iterations to allow the proposal density to become stationary.
+This is observed by the OFV settling around a particular value (with some stochastic noise).
+Assessing the **mean and variance of the iterated OFV** will give a more accurate estimation of the final OFV[^JM].
+3. Perform only the E-step (do not update population parameters)
+4. To maintain continuity of the estimation from the previous step.
+
 ### Reproducibility {#sec-em-repr}
 
-* `RANMETHOD=3S2P`
-* `SEED=123456789`
+#### Random number generator (RNG) {#sec-em-repr-ranmethod}
 
-#### Paralell NONMEM
+NONMEM’s internal RNG is controlled with `RANMETHOD=[n|M|S|m|P]`.
+
+The "Knuth" RNG is the default in `$ESTIMATION`, specified as `RANMETHOD=3` (`n=3`).
+To reduce sampling noise, use the Sobol method (`S`, `RANMETHOD=3S`) with Faure-Tezuka type scrambling (`m=2`, `RANMETHOD=3S2`).
+That added stability often lets you reach reliable results with IMP using fewer `ISAMPLE`s.
+
+::: {.callout-important title="Using DF>0 with RANMETHOD=S" collapse=true}
+
+When `RANMETHOD=S` is combined with a t-distribution (DF>0), `DF` should be limited to 1, 2, 4, 5, 8, or 10.
+However, discretizing the *d.f.* does not work if you use the `IACCEPT=0.0` to automatically determine the `DF`.
+
+In this case, **<span class="red-underline">use `IACCEPTL`</span>** as described in @sec-imp instead of `DF`.
+:::
+
+Running NONMEM in parallel?
+Append `P` so every subject keeps its own seed path, independent of the number of processes: `RANMETHOD=P`.
+
+So, the final recommended `RANMETHOD` for IMP becomes: `RANMETHOD=3S2P`
+
+#### Seed for RNG {#sec-em-repr-seed}
+
+Using the `SEED` option is a requirement for reproducible results.
+You can use any SEED number, and the default is `SEED=14455`.
+Its also advisable to keep the same SEED throughout your analysis, i.e., in all the models, to track the model fit and not depend so much on stochastic happenstance.
+
+#### Paralell NONMEM {#sec-em-repr-paralell}
 
 For the stochastic methods (IMP, IMPMAP, SAEM and BAYES), distribution of subjects to different nodes for computations is dependent on number of processors.
 This leads to differences in sequences of random numbers generated during computations that could make the results dependent on the number of processors.
@@ -756,7 +908,7 @@ That's different from using an EM algorithm on a complex model where you <span c
 OFVs between MLE and EM methods are incomparable.
 :::
 
-## PRIORs
+## Using priors
 
 ## References
 
