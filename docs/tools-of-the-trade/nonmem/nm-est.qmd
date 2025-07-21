@@ -31,6 +31,9 @@ This method can be changed using the `OPTMAP` option, but should for all practic
 
 Before diving into the estimation methods, lets quickly talk about `$SUBROUTINES`.
 
+We differentiate problems by their computational nature, as this in some sense define the different options we want to tweak to optimize speed and accuracy of our estimation algorithm.
+We define "numerical integration problems" as problems using `$DES`, and "analytical problems" those that do not.
+
 `ATOL`
 `TOL`
 `$TOL`
@@ -79,9 +82,6 @@ For explicitness, `METHOD=CONDITIONAL` is prefered.
 :::
 
 #### Options {#sec-foce-options}
-
-For now on we differentiate problems by their computational nature, as this in some sense define the different options we want to tweak to optimize speed and accuracy of our estimation algorithm.
-We define "numerical integration problems" as problems using `$DES`, and "analytical problems" those that do not.
 
 * Internal precision is based on user specified TOL
 * Often `TOL=6` or less, not 10
@@ -730,10 +730,6 @@ Off-diagonals should therefore not be fixed to 0 just because of high RSEs (>100
 If they were fixed in a previous FOCE run due to rounding errors or failed `$COVARIANCE` steps, they should be estimated in EM.
 Only consider FIX:ing off-diagonals back to 0 if EM OFV is highly variable, or if the covariance matrix is non-positive-definite.
 
-#### GRD
-
-`GRD`
-
 #### For uncertain initial estimates {#sec-em-robust-anneal}
 
 `$ANNEAL`
@@ -746,7 +742,7 @@ As stated before, you need to set up a criteria for when the EM-method should st
 Basically what this does is set up the instructions for a linear regression that tests if the slope is not statistically different from zero.
 The convergence test is defined by these four options:
 
-* `CTYPE`: Once the OFV is randomly stationary, then often the analysis has converged statistically, so CTYPE=1 is often enough.
+* `CTYPE`: Once the OFV is stationary, then often the analysis has converged statistically, meaning `CTYPE=1` is enough.
 * `CINTERVAL=n`: Integer.
 Every n iterations is saved for convergence test (see `CITER`).
 If `CINTERVAL=0`, then NONMEM will decide^[I frequently use this].
