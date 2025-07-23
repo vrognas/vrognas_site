@@ -7,9 +7,7 @@ date: last-modified
 :::{.callout-caution title="Under construction"}
 :::
 
-## Interpreting the results, model validation
-
-### Grok NONMEM
+## Output
 
 `.cnv` means "convergence", contains convergence-testing statistics.  
 `.ets` means "ETA samples"; gets "random sampled ETAs" (less prone to shrinkage)  
@@ -22,7 +20,7 @@ date: last-modified
 * phc=Var(phi)
 * non_MU_ref parameters: φi=ηi
 
-### QA
+## QA
 
 ::: {.callout-tip}
 The "best" model isn’t necessarily the one with the lowest objective function.
@@ -48,16 +46,56 @@ The "best" model isn’t necessarily the one with the lowest objective function.
 * boxcox ETA: dOFV > -10.827 (p < 0.001)
 :::
 
-### Bias
+### Random ETA samples
 
-#### Driving individuals
+When used in nonmem 7.5, a recommended example/setup would be (as shown on page 152 of nm750.pdf)
+
+```verilog
+$SIZES ISAMPLEMAX=250
+... 
+
+$ESTIMATION METHOD=SAEM
+            NBURN=500
+            NITER=1000
+            MASSRESET=1
+            ISAMPLE=2
+            PRINT=20
+            NOPRIOR=1
+            RANMETHOD=P
+
+$ESTIMATION METHOD=SAEM
+            NBURN=0
+            NITER=0
+            MASSRESET=0
+            ETASAMPLES=1
+            ISAMPLE=200
+            EONLY=1 
+
+$ESTIMATION METHOD=IMP
+            NITER=5
+            MASSRESET=1
+            ETASAMPLES=0
+            ISAMPLE=1000
+            EONLY=1
+            PRINT=1
+            MAPITER=0 
+```
+
+Where `ETASAMPLES=1` causes individual `ISAMPLE` random ETA samples per subject, to be written to `root.ets`.
+`MASSRESET` is set to 1 to initialize the internal burn-in coefficients, and collect that information during the population parameter estimation.
+Then, have the next SAEM step accumulate eta samples (`ETASAMPLES=1`), and set `MASSRESET=0` so the internal burn-in coefficients are note reset, but use those obtained during the previous SAEM step.
+After this, you could request the IMP step (IMP needs to use its own burn-in or shaping coefficients, so re-initialize with `MASSRESET=1`).
+
+## Bias
+
+### Driving individuals
 
 Compare iOFV values in the `.phi`-file between runs.
 
 1. Sharkplot (ΔOFV (= OFV~full~ - OFV~reduced~) vs #subjects~removed~)
 2. Should be able to remove 5 subjects without loosing significance.
 
-#### Outlying observations {#sec-outliers}
+### Outlying observations {#sec-outliers}
 
 Do a sensitivity analysis for outliers (|CWRES| < 5).
 
@@ -65,7 +103,7 @@ Do a sensitivity analysis for outliers (|CWRES| < 5).
 2. Parameter estimates change -> Remove outliers
 3. Parameter estimates **doesn’t** change -> Keep outliers
 
-### Parameter uncertainty
+## Parameter uncertainty
 
 * RSE% considered precise: < 30% for THETAs, < 50% for ETAs
 
@@ -83,7 +121,7 @@ We have **three different methods** because different models require different m
 
 There is absolutely **no reason that they should match each other** because they have different assumptions and they're using different approaches.
 
-### VPCs
+## VPCs
 
 The VPCs central metric are the prediction of data percentiles.
 If you focus on the difference between e.g. the 5th and 95th percentile based on the simulated data you will have a prediction interval, like Bill states.
@@ -91,16 +129,14 @@ If you focus on an individual percentile, but consider the imprecision with whic
 Confidence interval (ci) and prediction interval (pi) for VPC.
 
 ::: {.callout-note}
-
-## Notes
-
-* Mixture prior slide 31. Prior+flat prior "what if we are wrong". When conflict: up-weights data, downplays history
+* Mixture prior slide 31.
+Prior + flat prior "what if we are wrong".
+When conflict: up-weights data, downplays history
 * Two-stage approach: Apply a model to each individuals data
   * Require much data per individual.
   * OK mean parameters (i.e. typical individual)
   * But IIV id inflated (also diff ID -> diff model)
 * NONMEM: Apply a model to all individuals data
-
 :::
 
 ## References
