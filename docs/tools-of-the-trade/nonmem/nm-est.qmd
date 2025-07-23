@@ -1,16 +1,18 @@
 ---
-title: "NONMEM estimation methods"
+title: "NONMEM Solvers and Estimation Methods"
 description: "Info on $SUBROUTINES, $ESTIMATION, and $PRIOR"
 date: "2025-07-21"
-format:
-  html:
-    code-fold: true
-    code-summary: "Show the code"
 code-overflow: scroll
 code-tools: true
 ---
 
+If you have ever felt lost choosing between FOCE, LAPLACE, IMP, or SAEM, this page is for you.
+We will walk through the available estimation methods, when to pick each one, and the little tweaks that make runs faster and more robust.
+
 Estimation methods are the algorithms that are used to identify the best fit model population parameters (THETAs, OMEGAs, and SIGMAs) given the specified model and the analysis data set.
+The model together with the data set is what we call a "problem" to be solved by our estimation methods.
+
+My goal is to keep the tone light and encouraging while still giving you the technical depth you need for day-to-day NONMEM work.
 
 The aim of this page is to:
 
@@ -24,11 +26,11 @@ In essence, there are two families of estimation methods available in NONMEM:
 2. Expectation-Maximization ("EM") methods
 
 ::: {.callout-note title="ETA optimization"}
-The process of finding the individual ETAs is often called "Maximum a Posteriori (**MAP**) estimation"^[In the pharmacometric field, also called "mode a posteriori". Essentially the same, since the mode is the maximum of a unimodal distribution.].
+Finding the individual ETAs is called "Maximum a Posteriori (**MAP**) estimation"^[In pharmacometrics, also called "Mode a Posteriori". Essentially the same, since the mode is the maximum of a unimodal distribution.].
 
-The optimal ETA values themselves are called either Empirical Bayes Estimates (**EBEs**), Conditional Parametric ETAs (CPEs), MAP estimates, or conditional mode estimates, referred to symbolically as $\hat{\eta}$ (pronounced "ETA hat").
+The optimal ETA values themselves are called either **Empirical Bayes Estimates (EBEs)**, Conditional Parametric ETAs (CPEs), MAP estimates, or conditional mode estimates, referred to symbolically as $\hat{\eta}$ (pronounced "ETA hat").
 
-When finding the individual ETAs, NONMEM by default uses an optimization method called **BFGS** (Broyden-Fletcher-Goldfarb-Shanno) [@fletcherPracticalMethodsOptimization2010].
+NONMEM performs MAP using the **BFGS (Broyden-Fletcher-Goldfarb-Shanno)** optimizer by default.
 This method can be changed using the `OPTMAP` option, but should for all practical purposes be left to its default.
 :::
 
@@ -36,61 +38,52 @@ This method can be changed using the `OPTMAP` option, but should for all practic
 
 Before diving into the estimation methods, lets quickly talk about `$SUBROUTINES`.
 
-NONMEM comes with a library of **ADVAN** routines.
+NONMEM comes with a library of **ADVAN** routines (@tbl-advan).
 Their function is to "advance" the kinetic system from one state time point to the next (hence "ADVAN").
+Another possible name for ADVAN would have been SOLVER, because most ADVAN routines solve a set of differential equations, either analytically or by integration.
+We differentiate the solvers by their computational nature, as this will impact how we choose and optimize our estimation algorithm.
+In general "numerical integration problems" are problems using `$DES`, and "analytical problems" those that do not (see column "Solver" in @tbl-advan).
 
 <details>
 <summary>Show ADVAN table</summary>
-| Routine | Control records | Description |
-| :-----  | :---------- | :---------- |
-| `ADVAN1`  | | One Compartment Linear Model |
-| `ADVAN2`  | | One Compartment Linear Model with First Order Absorption |
-| `ADVAN3`  | | Two Compartment Linear Model |
-| `ADVAN4`  | | Two Compartment Linear Model with First Order Absorption |
-| `ADVAN5`  | `$MODEL`| General Linear Model |
-| `ADVAN6`  | `$MODEL`, `$DES`| General Nonlinear Model |
-| `ADVAN7`  | `$MODEL`| General Linear Model with Real Eigenvalues |
-| `ADVAN8`  | `$MODEL`, `$DES`| General Nonlinear Model with Stiff Differential Equations |
-| `ADVAN9`  | `$MODEL`, `$DES`, `$AES`, `$AESINITIAL`| General Nonlinear Model with Equilibrium Compartments |
-| `ADVAN10` | | One Compartment Model with Michaelis-Menten Elimination |
-| `ADVAN11` | | Three Compartment Linear Model |
-| `ADVAN12` | | Three Compartment Linear Model with First Order Absorption |
-| `ADVAN13` | `$MODEL`, `$DES`| General Nonlinear Model using LSODA |
-| `ADVAN14` | `$MODEL`, `$DES`| General Nonlinear Model using CVODA |
-| `ADVAN15` | `$MODEL`, `$DES`| General Nonlinear Model with Equilibrium Compartments using IDA |
-| `ADVAN16` | `$MODEL`, `$DES`| Delay Differential Equation Model using RADAR5 |
-| `ADVAN17` | `$MODEL`, `$DES`, `$AES`, `$AESINITIAL`| Delay Differential Equation Model with Equilibrium Compartments using RADAR5 |
-| `ADVAN18` | `$MODEL`, `$DES`| Delay Differential Equation Model using DDE_SOLVER |
+| Routine   | Solver   | Control records | Description |
+| :-------- | :------- | :-------------- | :---------- |
+| `ADVAN1`  | Analytic |                 | One Compartment Linear Model |
+| `ADVAN2`  | Analytic |                 | One Compartment Linear Model with First Order Absorption |
+| `ADVAN3`  | Analytic |                 | Two Compartment Linear Model |
+| `ADVAN4`  | Analytic |                 | Two Compartment Linear Model with First Order Absorption |
+| `ADVAN5`  | Analytic | `$MODEL`        | General Linear Model |
+| `ADVAN6`  | Numeric  | `$MODEL`, `$DES`| General Nonlinear Model |
+| `ADVAN7`  | Analytic | `$MODEL`        | General Linear Model with Real Eigenvalues |
+| `ADVAN8`  | Numeric  | `$MODEL`, `$DES`| General Nonlinear Model with Stiff Differential Equations |
+| `ADVAN9`  | Both     | `$MODEL`, `$DES`, `$AES`, `$AESINITIAL`| General Nonlinear Model with Equilibrium Compartments |
+| `ADVAN10` | Analytic |                 | One Compartment Model with Michaelis-Menten Elimination |
+| `ADVAN11` | Analytic |                 | Three Compartment Linear Model |
+| `ADVAN12` | Analytic |                 | Three Compartment Linear Model with First Order Absorption |
+| `ADVAN13` | Numeric  | `$MODEL`, `$DES`| General Nonlinear Model using LSODA |
+| `ADVAN14` | Numeric  | `$MODEL`, `$DES`| General Nonlinear Model using CVODA |
+| `ADVAN15` | Both     | `$MODEL`, `$DES`| General Nonlinear Model with Equilibrium Compartments using IDA |
+| `ADVAN16` | Numeric  | `$MODEL`, `$DES`| Delay Differential Equation Model using RADAR5 |
+| `ADVAN17` | Both     | `$MODEL`, `$DES`, `$AES`, `$AESINITIAL`| Delay Differential Equation Model with Equilibrium Compartments using RADAR5 |
+| `ADVAN18` | Numeric  | `$MODEL`, `$DES`| Delay Differential Equation Model using DDE_SOLVER |
 
 : Advancement routines. {#tbl-advan tbl-colwidths="[20, 30, 50]"}
 </details>
 
-Then there are **TRANS** routines.
-These routines are used to "translate" between parameterizations (hence "TRANS").
+For each ADVAN, there exists a group of **TRANS** subroutines (numbered 1--6).
+Think of TRANS as a "translator" (hence "TRANS") that swaps one parameterization for another so you can work in the language that feels most natural to you.
 
-<details>
-<summary>Show TRANS table</summary>
-| Routine  | Description |
-| :------- | :---------- |
-| `TRANS1` | Dummy, or null, translator; may be used with all ADVAN routines. It is the default. |
-| `TRANS2` | Used with ADVAN1 and ADVAN2. |
-| `TRANS3` | Used with ADVAN3 and ADVAN4. |
-| `TRANS4` | Used with ADVAN3, ADVAN4, ADVAN11, ADVAN12 |
-| `TRANS5` | Used with ADVAN3 and ADVAN4. |
-| `TRANS6` | Used with ADVAN3, ADVAN4, ADVAN11, ADVAN12 |
-
-: Translator routines. {#tbl-trans tbl-colwidths="[20, 80]"}
-</details>
+* `TRANS1` is the default for all ADVANs and means that you are using rate constants (*k*'s) are your main parameters.
+* `TRANS2`,`TRANS3`, and `TRANS4` are sometimes seen with analytic solvers, meaning you are using CL, V, and potentially Q and KA as parameters instead of rate constants.
+* `TRANS5` and `TRANS6` are rarely used, so these can be disregarded for all practical purposes.
 
 For every run, you specify **<span class="red-underline">one</span> ADVAN** routine and **<span class="red-underline">one</span> TRANS** routine in the `$SUBROUTINES` record.
-
-We differentiate problems by their computational nature, as this in some sense define the different options we want to tweak to optimize speed and accuracy of our estimation algorithm.
-We define "numerical integration problems" as problems using `$DES`, and "analytical problems" those that do not.
+If you are using `TRANS1`, you don't need to speficy this since it is the default.
 
 ### Fine-tuning tolerance
 
-Tolerance options may be set at `$SUBROUTINES`, which be in effect throughout the entire problem^[An alternative method is to use the `$TOL` record, where options for each compartment may be entered.].
-These options are used for the numerical `ADVAN` routines.
+Tolerance options may be set at `$SUBROUTINES`, which will be in effect throughout the entire problem^[An alternative method is to use the `$TOL` record, where options for each compartment may be entered.].
+These options are used for the numerical `ADVAN` routines (see column "Solver" in @tbl-advan).
 
 * `TOL=n`: The relative significant digits precision to which differential equations are to be integrated, so the precision is 10^-`TOL`^.
 Used with `ADVAN6`, `ADVAN8`, `ADVAN9`, and `ADVAN13` to specify the number of digits that are required to be accurate in the computation of the drug amount in each compartment; the precise meaning depends on the particular ADVAN routine that uses it @gibianskyComparisonNonmem722012.
@@ -165,7 +158,7 @@ $ESTIMATION METHOD=CONDITIONAL
 1. `INTERACTION` should always be used when residual error is proportional, and does not impact the analysis when the residual error is additive.
 Thus, always use it.
 2. Always use the `FAST` option, there are very few cases where `FAST` is suboptimal[^RB].
-The `FAST` option benefits from MU-modeling to be more effective (see "Speaking NM-TRAN" for more info).
+The `FAST` option benefits from MU-modeling to be more effective (see "Grok NM-TRAN" for more info).
 3. `NONINFETA=1` and `ETASTYPE=1` should be added when not all ETAs are used for all subjects.
 For example, an ETA to a KA during a fit of a subject with only IV dosing.
 4. `NSIG <= SIGL/3`.
@@ -263,14 +256,11 @@ There is no reason to use the `POSTHOC` option with FOCE as it only applies for 
 
 Similar to FOCE but evaluates the second order derivative (Hessian) instead of the first order (Jacobian).
 Should really be called SOCE (second order conditional estimation).
-
-::: {.callout-note}
-LAPLACE can be specified as either `LAPLACE` (most common) or `LAPLACIAN`, as an **option to FOCE**.
+LAPLACE is specified as either `LAPLACE` (most common) or `LAPLACIAN`, as an **option to FOCE**.
 
 ```verilog
 $ESTIMATION METHOD=CONDITIONAL LAPLACE
 ```
-:::
 
 ### Robustness {#sec-mle-robust}
 
@@ -387,7 +377,18 @@ Choose any integer, but be consistent within your analysis.
 
 ### Speed {#sec-mle-speed}
 
-* FAST
+#### FAST
+
+#### ITS
+
+The classical NONMEM methods can be facilitated using an EM method by first having a rapid EM method such as iterative two stage be performed first, with the resulting parameters being passed on to the FOCE method, to speed up the analysis:
+
+```verilog
+$ESTIMATION METHOD=ITS
+            INTERACTION
+$ESTIMATION METHOD=CONDITIONAL
+            INTERACTION
+```
 
 ## EM-methods {#sec-em}
 
@@ -417,8 +418,14 @@ For example, IMP is generally faster than SAEM due to IMP searching a smaller sp
 ::: {.callout-note title="MU modeling"}
 EM methods are most efficient when the model follows a specific statistical structure: fixed effects parameters (THETAs) only define the mean (MU) of the normal population distribution of individual parameters (phi = THETA + ETA).
 This requires a special coding technique called **MU modeling** for optimal performance.
-Please see "Speaking NM-TRAN" for more info.
+Please see "Grok NM-TRAN" for more info.
 :::
+
+There are essentially three EM methods available in NONMEM:
+
+* ITS (Iterative Two-Stage)
+* IMP (Importance sampling, of which IMPMAP is a special case)
+* SAEM (Stochastic Approximation EM)
 
 ### ITS {#sec-its}
 
@@ -436,6 +443,8 @@ $ESTIMATION METHOD=ITS
 
 Normally, it is used as a **rapid exploratory pre-analysis method** to facilitate parameter estimation with IMP or SAEM.
 
+<details>
+<summary>Show example</summary>
 ```verilog
 $ESTIMATION METHOD=ITS
             INTERACTION
@@ -452,11 +461,10 @@ $ESTIMATION METHOD=IMP
             ISAMPLE=1000
             MAPITER=0
 ```
+</details>
 
-#### Options
-
-AUTO=1
-
+<details>
+<summary>AUTO=1</summary>
 ```verilog
 METHOD=ITS
 INTERACTION
@@ -467,13 +475,29 @@ CITER=10
 CINTERVAL=1
 CALPHA=0.05
 ```
+</details>
+
+### DIRECT {#sec-direct}
+
+NONMEM has a direct Monte Carlo sampling method which is specified like this:
+
+```verilog
+$ESTIMATION METHOD=DIRECT
+            INTERACTION
+            ISAMPLE=10000
+            NITER=50
+```
+
+This method is the purest method for performing E-M, in that it creates completely independent sample, and there is no chance of causing bias if the sampling density is not similar enough to the conditional density (unlike IMP).
+However, it is very inefficient, requiring `ISAMPLE` values of 10000--300000 to properly estimate the problem.
 
 ### IMP {#sec-imp}
 
 IMP stands for **IMP**ortance sampling.
 The general IMP algorithm goes like this:
 
-1. A **MAP estimation** (set by `MAPITER=1`) is performed to estimate the parameters of the proposal density (aka "sampling distribution" *q(x)*).
+1. A **MAP estimation** (if `MAPITER=1`) is performed to estimate the parameters of the proposal density (aka "sampling distribution" *q(x)*).
+Can be replaced by Monte Carlo direct sampling `METHOD=DIRECT` (see @sec-em-robust-init).
 
 2. **E-step**: For every individual, ETAs are sampled `ISAMPLE` times from the proposal density.
 This gives the mean and variance of the ETAs that are most likely given the data.
@@ -587,10 +611,16 @@ Used for THETAs that are not MU-modeled, for SIGMAs, and THETAs that model RUV.
 
 #### Monte Carlo noise
 
-Remember, EM algorithms by nature don't find a single set of parameters that are the best fit.
+Remember, EM algorithms don't find a single set of parameters that are the best fit.
 They find a distribution of parameter sets that maximize the expectation.
 Often those parameter sets are very similar and only differ in the 6^th^ or 7^th^ decimal place.
-But sometimes in complex^[Complex PK/PD problems are those that require ODEs or problems with more than six model parameters to be estimated] models with poorly estimated parameters they can differ by larger numbers.
+But sometimes in complex^[Complex PK/PD problems are those that require ODEs or problems with more than six model parameters to be estimated] models with poorly estimated parameters they can differ by larger numbers. 
+
+
+<details>
+<summary>Show example</summary>
+
+The iterations for the initial `ITS` step seems in this case to be quite stable with some artifacts:
 
 ```verilog
 $ESTIMATION METHOD=ITS
@@ -618,15 +648,9 @@ $ESTIMATION METHOD=IMP
             RANMETHOD=3S2P
 
 $COVARIANCE UNCONDITIONAL MATRIX=S TOL=12 SIGL=12 SLOW
-```
 
-The iterations for the initial `ITS` step seems in this case to be quite stable with some artifacts: 
+...
 
-
-<details>
-<summary>Show output</summary>
-
-```verilog
 iteration 175 OBJ= 4693.4674554341409
 iteration 176 OBJ= 4694.2296104065535
 iteration 177 OBJ= 4693.7753507970829
@@ -658,12 +682,8 @@ iteration 200 OBJ= 4691.6818293505230
 OPTIMIZATION WAS NOT COMPLETED 
 ```
 1. Small "spikes"
-</details>
 
 The IMP step can be less stable:
-
-<details>
-<summary>Show output</summary>
 
 ```verilog
 iteration 120 OBJ= 4314.8310660241377 eff.= 446. Smpl.= 1000. Fit.= 0.96389
@@ -698,7 +718,8 @@ During estimation with IMP, the iteration output contains:
 * `eff.`: Average effective number of samples
 * `Smpl.`: Actual samples (which is usually `ISAMPLE`)
 * `Fit.`: Average fitness.
-This tells you how Normal the posterior is.
+
+`Fit.` tells you how Normal the posterior is.
 If `Fit.` is approximately 1, you might as well use FOCE.
 If `Fit.` is more like 0.6, then IMP is a good choice.
 It is the average absolute difference between the posterior density and proposal density among the samples, and indicates to what extent that the proposal density matches the posterior density.
@@ -799,7 +820,7 @@ The EM-methods are already quite robust in that they can handle many different e
 
 To get good individual parameter values near the maximum of the posterior density for the first iteration of SAEM, you can set `MAPITERS=1`.
 
-#### Full OMEGA blocks {#sec-em-robust-omega-block}
+#### Use full OMEGA blocks {#sec-em-robust-omega-block}
 
 Full OMEGA blocks are generally preferred in EM-based estimation, as EM handles them more reliably than FOCE [@bauerNONMEMTutorialPartTwo2019].
 Including off-diagonal elements does not compromise stability, on the contrary, off-diagonals allow the algorithms to more efficiantly search the parameter space.
@@ -807,18 +828,125 @@ Off-diagonals should therefore not be fixed to 0 just because of high RSEs (>100
 If they were fixed in a previous FOCE run due to rounding errors or failed `$COVARIANCE` steps, they should be estimated in EM.
 Only consider FIX:ing off-diagonals back to 0 if EM OFV is highly variable, or if the covariance matrix is non-positive-definite.
 
-#### For uncertain initial estimates {#sec-em-robust-anneal}
+#### For uncertain initial estimates {#sec-em-robust-init}
 
-`$ANNEAL`
+* PsN program `parallel_retries` can be useful
+* `METHOD=CHAIN`: Create random initial values of THETAS and OMEGAS.
+Applied only for the estimation step
+* `$CHAIN`: To introduce initial THETAs OMEGAs and SIGMAs that will cover the entire scope of a given problem.
 
-Simulated annealing (SA) is a probabilistic technique for approximating the global optimum of a given function.
+**Monte Carlo Direct Sampling** can help IMP if the first iteration fails due to MAP issues.
+Here a few iterations of DIRECT define the sampling distribution for IMP:
+
+```verilog
+$ESTIMATION METHOD=DIRECT
+            INTERACTION
+            ISAMPLE=10000
+            NITER=3
+
+$ESTIMATION METHOD=IMP
+            INTERACTION
+            ISAMPLE=1000
+            NITER=50
+            MAPITER=0 # <1>
+```
+1. `MAPITER=0` tells IMP to skip its own MAP search and instead use the sampling distribution that DIRECT just estimated.
+
+#### THETAs with no ETAs
+
+<details>
+<summary>First option: `$OMEGA 0.0225 FIX`</summary>
+When your problem uses EM-methods and includes THETAs without ETAs, **use ETAs anyways but fix the OMEGA to a low value like 0.0225**.
+</details>
+
+<details>
+<summary>Second option: `$ANNEAL`</summary>
+If you run SAEM and suspect that your inital values might be far from the solution, you could consider **simulated annealing**.
+By default, NONMEM use gradient methods which are adequate when starting close to the solution.
+But if you start far away, annealing is more suitable.
+Here's the intuition:
+
+1. Annealing sets the chosen OMEGAs to a defined value.
+2. With each iteration, the OMEGA will shrink.
+3. Eventually the annealed OMEGAs will reach 0
+
+Annealing is activated using `$ANNEAL` together with the `$ESTIMATION CONSTRAIN=n` option.
+
+Values for `CONSTRAIN=n` are:
+
+* 0 or 4: No annealing
+* 1 or 5: Annealing for OMEGA. Default is 1.
+* 2 or 6: Annealing for SIGMA
+* 3 or 7: Annealing for OMEGA and SIGMA
+
+When `CONSTRAIN` ≥ 4, annealing is also performed on diagonal elements of OMEGA that are fixed to 0.
+
+```verilog
+$PK
+MU_1 = THETA(1)
+EMAX = EXP(MU_1 + ETA(1))
+MU_2 = THETA(2)
+ED50 = EXP(MU_2 + ETA(2))
+IPRED = EMAX * DOSE / (ED50 + DOSE)
+
+$THETA 4.1 ; 1. EMAX
+$THETA 6.9 ; 2. ED50
+
+$OMEGA 0 FIX
+$OMEGA 0.1
+
+$ANNEAL 1:0.3
+
+$ESTIMATION METHOD=SAEM
+            INTERACTION
+            CONSTRAIN=5
+
+$ESTIMATION METHOD=IMP
+            INTERACTION
+            EONLY=1
+            CONSTRAIN=0
+```
+</details>
+
+<details>
+<summary>Third option: `METHOD=CHAIN`</summary>
+Another technique is to use an initial Monte Carlo search method using `$EST METHOD=CHAIN ISAMPEND`, and then use the standard gradient method for SAEM:
+
+```verilog
+$PK
+MU_1 = THETA(1)
+EMAX = EXP(MU_1 + ETA(1))
+MU_2 = THETA(2)
+ED50 = EXP(MU_2 + ETA(2))
+IPRED = EMAX * DOSE / (ED50 + DOSE)
+
+$THETA (0.1, 4.1, 10) ; 1. EMAX
+$THETA 6.9 ; 2. ED50
+
+$OMEGA 0 FIX
+$OMEGA 0.1
+
+$ESTIMATION METHOD=CHAIN
+            ISAMPLE=1
+            ISAMPEND=30
+            NSAMPLE=30
+
+$ESTIMATION METHOD=SAEM
+            INTERACTION
+
+$ESTIMATION METHOD=IMP
+            INTERACTION
+            EONLY=1
+```
+</details>
 
 #### Convergence test  {#sec-em-robust-ctest}
 
 As stated before, you need to set up a criteria for when the EM-method should stop (aka "converge" or "terminate").
 Basically what this does is set up the instructions for a linear regression that tests if the slope is not statistically different from zero.
-The convergence test is defined by these four options:
 
+<details>
+<summary>Show convergence test options</summary>
 * `CTYPE`: Once the OFV is stationary, then often the analysis has converged statistically, meaning `CTYPE=1` is enough.
 * `CINTERVAL=n`: Integer.
 Every n iterations is saved for convergence test (see `CITER`).
@@ -830,12 +958,13 @@ Also coded as `CNSAMP`.
 * `CALPHA=x`: Real, 0.01--0.05.
 Alpha error rate to use on linear regression test to assess statistical significance.
 The default value is 0.05.
+</details>
 
 **IMP:** IMP iterations tend to be statistically uncorrelated, and so it is reasonable to have `CITER=10` consecutive iterations (`CINTERVAL=1`) tested at `CALPHA=0.05`.
 
 **SAEM:** Iterations can be highly correlated, so to properly detect a lack of change in parameters, you may want to test every 10--100^th^ iteration (`CINTERVAL`=10 to 100), so that the linear regression on parameter change is spread out over a larger segment of iterations.
 
-::: {.callout-tip title="Allow time to converge"}
+::: {.callout-tip title="Allow time to converge" collapse="true"}
 Give a rather high value to `NBURN` (1000--10000 for SAEM/BAYES) or `NITER` (200--1000 for ITS/IMP/IMPMAP) so you don't run out of iterations before the method converges.
 
 An alternative method to convergence testing is to set `NBURN` to a very high number (10000), monitor the change in `SAEMOBJ`, and enter ctrl-K (see section I.15 Interactive Control of a NONMEM batch Program) when you feel that the variations are stationary, which will end the burn-in mode and continue on to the statistical/accumulation mode.
@@ -848,8 +977,8 @@ It is better to provide a large `NBURN` number, and end it at will with ctrl-K, 
 When using the IMP, IMPMAP or SAEM estimation, it is adviced to include a "refinement step" in the form of an additional subsequent `$ESTIMATION METHOD=IMP` record to obtain more precise final estimates.
 This will take the population parameter estimates and calculate more precise estimates of the objective function value (just the E-step).
 
-The refinement step will have:
-
+<details>
+<summary>Show refinement step example</summary>
 ```verilog
 $ESTIMATION METHOD=IMP
             INTERACTION
@@ -865,6 +994,7 @@ This is observed by the OFV settling around a particular value (with some stocha
 Assessing the **mean and variance of the iterated OFV** will give a more accurate estimation of the final OFV[^JM].
 3. Perform only the E-step (do not update population parameters)
 4. To maintain continuity of the estimation from the previous step.
+</details>
 
 ### Reproducibility {#sec-em-repr}
 
@@ -895,7 +1025,7 @@ Using the `SEED` option is a requirement for reproducible results.
 You can use any SEED number, and the default is `SEED=14455`.
 Its also advisable to keep the same SEED throughout your analysis, i.e., in all the models, to track the model fit and not depend so much on stochastic happenstance.
 
-#### Paralell NONMEM {#sec-em-repr-paralell}
+#### Parallel NONMEM {#sec-em-repr-parallel}
 
 For the stochastic methods (IMP, IMPMAP, SAEM and BAYES), distribution of subjects to different nodes for computations is dependent on number of processors.
 This leads to differences in sequences of random numbers generated during computations that could make the results dependent on the number of processors.
@@ -981,7 +1111,34 @@ That's different from using an EM algorithm on a complex model where you <span c
 OFVs between MLE and EM methods are incomparable.
 :::
 
+### Issuing Multiple Estimations within a Single Problem
+
+A sequence of two or more `$ESTIMATION` statements within a given problem will result in the sequential execution of separate estimations.
+For example:
+
+```verilog
+$THETA 0.3 0.5 6.0
+$OMEGA 0.2 0.2 0.2
+$SIGMA 0.2
+$ESTIMATION METHOD=0 # <1>
+            MAXEVAL=9999
+            NSIG=3
+$ESTIMATION METHOD=CONDITIONAL # <2>
+            NSIG=4
+```
+1. First estimation step
+2. Second estimation step
+
+Will first result in estimation of the problem by the first order method, using as initial parameters those defined by the `$THETA`, `$OMEGA`, and `$SIGMA` statements.
+Next, the first order conditional estimation method will be implemented, using as initial parameters the final estimates of THETA, OMEGA, and SIGMA from the previous analysis.
+
+Up to 20 estimations may be performed within a problem.
+
 ## Using priors
+
+A bit unintuitively, we end with the discussion on PRIORs, since PRIORs do come into effect PRIOR to the estimation method.
+
+The way to specify PRIORs is through `$PRIOR` @chankwongPriorInformationPopulation2020.
 
 ## References
 
