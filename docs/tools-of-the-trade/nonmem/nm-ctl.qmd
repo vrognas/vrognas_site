@@ -72,46 +72,6 @@ As of NONMEM 7.4, you can use "protection" functions that avoid the numerical di
 
 Or, simply set at beginning of control stream file: `$ABBR PROTECT` and all functions will be converted to protected form.
 
-#### Random ETA samples
-
-When used in nonmem 7.5, a recommended example/setup would be (as shown on page 152 of nm750.pdf)
-
-```verilog
-$SIZES ISAMPLEMAX=250
-... 
-
-$ESTIMATION METHOD=SAEM
-            NBURN=500
-            NITER=1000
-            MASSRESET=1
-            ISAMPLE=2
-            PRINT=20
-            NOPRIOR=1
-            RANMETHOD=P
-
-$ESTIMATION METHOD=SAEM
-            NBURN=0
-            NITER=0
-            MASSRESET=0
-            ETASAMPLES=1
-            ISAMPLE=200
-            EONLY=1 
-
-$ESTIMATION METHOD=IMP
-            NITER=5
-            MASSRESET=1
-            ETASAMPLES=0
-            ISAMPLE=1000
-            EONLY=1
-            PRINT=1
-            MAPITER=0 
-```
-
-Where `ETASAMPLES=1` causes individual `ISAMPLE` random ETA samples per subject, to be written to `root.ets`.
-`MASSRESET` is set to 1 to initialize the internal burn-in coefficients, and collect that information during the population parameter estimation.
-Then, have the next SAEM step accumulate eta samples (`ETASAMPLES=1`), and set `MASSRESET=0` so the internal burn-in coefficients are note reset, but use those obtained during the previous SAEM step.
-After this, you could request the IMP step (IMP needs to use its own burn-in or shaping coefficients, so re-initialize with `MASSRESET=1`).
-
 ### Specific pointers
 
 #### Time-to-event models
