@@ -1,13 +1,10 @@
 ---
 title: "Estimation and Solvers"
-description: "The Practitioner's Guide to $ESTIMATION and $SUBROUTINES"
+description: "A Practitioner's Guide to $ESTIMATION and $SUBROUTINES"
 date: "2025-07-24"
 code-overflow: scroll
 code-tools: true
 ---
-
-:::{.callout-caution title="Under construction"}
-:::
 
 If you have ever felt lost choosing between FOCE, LAPLACE, IMP, or SAEM, this page is for you.
 We will walk through the available estimation methods, when to pick each one, and the little tweaks that make runs faster and more robust.
@@ -386,14 +383,11 @@ Choose any integer, but be consistent within your analysis.
 
 #### Speed {#sec-mle-speed}
 
-##### FAST
+Using the `FAST` option together with MU_-modeling will most often improve esimation speeds.
 
-::: {.callout-caution title="TODO"}
-:::
+Reducing the required significant digits might also increase estimation speeds.
 
-##### ITS
-
-The classical NONMEM methods can be facilitated using an EM method by first having a rapid EM method such as iterative two stage be performed first, with the resulting parameters being passed on to the FOCE method, to speed up the analysis:
+Additionally, the classical NONMEM methods can be facilitated using an EM method by first having a rapid EM method such as iterative two stage be performed first, with the resulting parameters being passed on to the FOCE method, to speed up the analysis:
 
 ```verilog
 $ESTIMATION METHOD=ITS
@@ -401,6 +395,7 @@ $ESTIMATION METHOD=ITS
 $ESTIMATION METHOD=CONDITIONAL
             INTERACTION
 ```
+
 :::
 :::
 
@@ -977,74 +972,39 @@ $ESTIMATION METHOD=IMP
 With SAEM: If the option `MCETA` is set to greater than `ISAMPLE_M1`, then for the first iteration of SAEM, `ISAMPLE_M1`, `ISAMPLE_M2`, and `ISAMPLE_M3` will be set to `MCETA`, to facilitate a robust initial search for reasonable parameter values.
 </details>
 
-##### THETAs with no ETAs
-
-One alternative is to **use ETAs anyways but fix the OMEGA to a low value like 0.0025**
-This corresponds to 5% for log-normally distributed parameters.
-With this method, the EM algorithm can be used, and the variability is kept small.
-
 <details>
 <summary>If using SAEM: `$ANNEAL`</summary>
 
-::: {.callout-caution title="TODO"}
-:::
 If you run **SAEM** and suspect that your inital values might be far from the solution, you could consider **simulated annealing**.
-By default, NONMEM use gradient methods which are adequate when starting close to the solution.
-But if you start far away, annealing is more suitable.
+By default, NONMEM’s gradient-based methods behave nicely when you start close to the solution.
+When you don’t, annealing is more suitable.
 Here's the intuition:
 
-1. Annealing sets the chosen OMEGAs to a defined value.
-2. With each iteration, the OMEGA will shrink.
-3. Eventually the annealed OMEGAs will reach 0
+1. Pick a generous starting value for OMEGAs (e.g., 1).
+2. Each iteration, those values shrink.
+3. Eventually the OMEGAs will reach 0 (as intended).
 
-`$ANNEAL` sets starting diagonal OMEGA values together with the `$ESTIMATION CONSTRAIN=n` option.
+Use `$ANNEAL` to set the initial diagonal OMEGA values, and `$ESTIMATION CONSTRAIN=n` to say *what* gets annealed.
 
 For example: `$ANNEAL 1-3,5:0.3 6,7:1.0`, will set initial values of `OMEGA(1,1)`, `OMEGA(2,2)`, `OMEGA(3,3)`, and `OMEGA(5,5)` to 0.3, while initial `OMEGA(6,6)` and `OMEGA(7,7)` are set to 1.0.
 
 Values for `CONSTRAIN=n` are:
 
 * 0 or 4: No annealing
-* 1 or 5: Annealing for OMEGA. Default is 1.
-* 2 or 6: Annealing for SIGMA
-* 3 or 7: Annealing for OMEGA and SIGMA
+* 1 or 5: Anneal OMEGA. Default is 1.
+* 2 or 6: Anneal SIGMA
+* 3 or 7: Anneal OMEGA & SIGMA
 
-When `CONSTRAIN` ≥ 4, annealing is also performed on diagonal elements of OMEGA that are fixed to 0.
+When `CONSTRAIN` ≥ 4, annealing is also applied to diagonal OMEGAs fixed to 0.
 
-```verilog
-$PK
-MU_1 = THETA(1)
-EMAX = EXP(MU_1 + ETA(1))
-MU_2 = THETA(2)
-ED50 = EXP(MU_2 + ETA(2))
-IPRED = EMAX * DOSE / (ED50 + DOSE)
+You can even code a custom annealing algorithm (see below)!
+For example, one use would be to slow the rate of reduction of the diagonal elements of the OMEGA values during the burn-in phase of the SAEM method (as is done in Monolix).
+This algorithm was derived from a template of `CONSTRAINT.f90` in the `..\source` directory.
 
-$THETA 4.1 ; 1. EMAX
-$THETA 6.9 ; 2. ED50
-
-$OMEGA 0 FIX
-$OMEGA 0.1
-
-$ANNEAL 1:0.3
-
-$ESTIMATION METHOD=SAEM
-            INTERACTION
-            CONSTRAIN=5
-
-$ESTIMATION METHOD=IMP
-            INTERACTION
-            EONLY=1
-            CONSTRAIN=0
-```
-
-Additional algorithmic constraints may be imposed upon the model parameters, by use of the subroutine CONSTRAINT.
-This feature is available only for the EM and Bayesian algorithms.
-One use would be to slow the rate of reduction of the diagonal elements of the OMEGA values during the burn-in phase of the SAEM method (as is done in Monolix).
-This is shown in example 9, where a user supplied annealing algorithm is used to replace the built-in one described earlier. By specifying `OTHER=ANEAL.f90`, where `ANEAL.f90` was originally derived from a template of `CONSTRAINT.f90` in the `..\source` directory, the user supplied CONSTRAINT subroutine can be incorporated into the model.
-In example 9, whenever iteration number (`ITER_NO`) changes, a new OMEGA is evaluated that is larger than what was determined by the SAEM update.
-Typically, this expansion algorithm should be such that its impact decreases with each iteration.
-
+<details>
+<summary>Show FORTRAN code for custom algorithm</summary>
 ```fortranfree
-File Aneal.f90
+File custom_anneal.f90
       SUBROUTINE CONSTRAINT(THETAS, NTHETAS, SIGMA2, NSIGMAS, OMEGA, NOMEGAS, ITER_NO)
       USE SIZES, ONLY: ISIZE, DPSIZE
       IMPLICIT NONE
@@ -1053,7 +1013,7 @@ File Aneal.f90
       INTEGER :: I, J, ITER_OLD
       DATA ITER_OLD /-1/
       REAL(KIND = DPSIZE) :: OMEGA(MAXOMEG,MAXOMEG), THETAS(MAXPTHETA), SIGMA2(MAXPTHETA)
-      REAL(KIND = DPSIZE) :: OMEGO(MAXOMEG))
+      REAL(KIND = DPSIZE) :: OMEGO(MAXOMEG)
       SAVE
 !---------------------------------------------------------------------------
       IF (SAEM_MODE == 1 .AND. IMP_MODE == 0 .AND. ITS_MODE == 0 .AND. ITER_NO < 200) THEN
@@ -1078,10 +1038,48 @@ File Aneal.f90
 !---------------------------------------------------------------------------
       END SUBROUTINE CONSTRAINT
 ```
+</details>
+
+```verilog
+$SUBROUTINES OTHER=custom_anneal.F90 # <1>
+$PK
+MU_1 = THETA(1)
+EMAX = EXP(MU_1 + ETA(1))
+MU_2 = THETA(2)
+ED50 = EXP(MU_2 + ETA(2))
+IPRED = EMAX * DOSE / (ED50 + DOSE)
+
+$THETA 4.1 ; 1. EMAX
+$THETA 6.9 ; 2. ED50
+
+$OMEGA 0 FIX
+$OMEGA 0.1
+
+$ANNEAL 1:0.3
+
+$ESTIMATION METHOD=SAEM
+            INTERACTION
+            CONSTRAIN=5
+
+$ESTIMATION METHOD=IMP
+            INTERACTION
+            EONLY=1
+            CONSTRAIN=0 # <2>
+```
+1. The custom annealing is implemented using `$SUBROUTINES OTHER=custom_anneal.f90`.
+2. Turn annealing off for the refinement step.
 
 1. Once you have found good initial estimates (for THETA, OMEGA, and SIGMA) close to the global optimum, run the model again without `$ANNEAL` for better estimates.
 
 </details>
+
+##### THETAs with no ETAs
+
+One alternative is to **use ETAs anyways but fix the OMEGA to a low value like 0.0025**
+This corresponds to 5% for log-normally distributed parameters.
+With this method, the EM algorithm can be used, and the variability is kept small.
+
+Another option would be to implement `$ANNEAL` with the `CONSTRAIN` option set to ≥4 in `$ESTIMATION`.
 
 ##### Convergence test  {#sec-em-robust-ctest}
 
@@ -1195,8 +1193,8 @@ When running models, use your own parafile: `-parafile=my_own_parafile.pnm`
 
 #### Speed {#sec-em-speed}
 
-::: {.callout-caution title="TODO"}
-:::
+* Reduce `ATOL` in `$SUBROUTINES` (usually set equal to `TOL`) may improve speeds.
+* Keeping the `ISAMPLE` low makes for faster iterations, however, it will result in higher stochastic noise.
 
 :::
 :::
