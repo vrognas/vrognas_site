@@ -1,10 +1,13 @@
 ---
 title: "NONMEM Solvers and Estimation Methods"
 description: "Info on $SUBROUTINES, $ESTIMATION, and $PRIOR"
-date: "2025-07-21"
+date: "2025-07-24"
 code-overflow: scroll
 code-tools: true
 ---
+
+:::{.callout-caution title="Under construction"}
+:::
 
 If you have ever felt lost choosing between FOCE, LAPLACE, IMP, or SAEM, this page is for you.
 We will walk through the available estimation methods, when to pick each one, and the little tweaks that make runs faster and more robust.
@@ -12,11 +15,9 @@ We will walk through the available estimation methods, when to pick each one, an
 Estimation methods are the algorithms that are used to identify the best fit model population parameters (THETAs, OMEGAs, and SIGMAs) given the specified model and the analysis data set.
 The model together with the data set is what we call a "problem" to be solved by our estimation methods.
 
-My goal is to keep the tone light and encouraging while still giving you the technical depth you need for day-to-day NONMEM work.
-
 The aim of this page is to:
 
-* Give a **brief overview** of the available estimation methods, their options, and sensible tweaks/options
+* Give a **brief overview** of the available estimation methods and sensible tweaks/options
 * Give an **intuitive explanation** of the estimation methods on a conceptual level
 * Give a sense of **when to choose which** estimation method
 
@@ -264,17 +265,41 @@ $ESTIMATION METHOD=CONDITIONAL LAPLACE
 
 ### Robustness {#sec-mle-robust}
 
+#### Numerical stability
+
+In general, it is advised to write the model code in such a way that boundaries are avoided.
+For example, if a parameter `A` should have a lower bound of 0, code it in logarithmic space `A = EXP(THETA)` such that THETA is unbounded.
+
+##### Protection against floating point exceptions
+
+Simply set `$ABBREVIATED PROTECT` at beginning of control stream file.
+This will convert all functions to their respective "protected form".
+
+#### Small number of subjects
+
+If you are analyzing very few subjects (**less than 10**), it's most accurate to correct the *d.f.* when assessing OMEGAs.
+This can be done using `LDF`, which stands for "loss of degrees of freedom".
+
+**If you <span class="red-underline">can</span> MU-model all THETAs**, then set `LDF=-1` in `$PK` to let NONMEM do the correction automatically.
+
+**If you <span class="red-underline">cannot</span> MU-model all THETAs**, the most accurate is to have `LDF(n)` be the number of to-be-estimated THETAs involved in `MU_n`:
+
+```verilog
+" LDF(3) = 2.0
+MU_3 = THETA(4) + LOG(WT) * THETA(5)
+CL = EXP(MU_3 + ETA(3))
+```
+
 #### NSIG, SIGL, SIGLO, and TOL
 
-How one should approach these options are different depending on if you are using `$DES` or not.
-
 `NSIG`:
-Specifies the significant digits required for **THETAs, OMEGAs, and SIGMAs**; estimation stops when each change by less than `NSIG` digits between iterations.
+**The significant digits for THETAs, OMEGAs, and SIGMAs**.
+Estimation stops when each change by less than `NSIG` digits between iterations.
 
 `SIGL`:
-The significant digits to which the **iOFV** is evaluated.
+**The significant digits for iOFV**.
 The internal NONMEM `SIGL` is set to 10.
-Rule of thumb: iOFV is evaluated to a precision of the smaller of TOL and the internal SIGL.
+Rule of thumb: iOFV is evaluated to a precision of the smaller of `TOL` and the internal `SIGL`.
 If all iOFVs are of the same sign, then the OVF could have a resulting precision of $\log_{10}$(N) + `SIGL`, where N is the number of subjects, for a maximum of 15, the limiting precision of double precision.
 Thus with 100 subjects, the actual precision that the total OFV is evaluated could be 12.
 One should not necessarily rely on this, so it is safest to suppose the more conservative precision of 10, for which a suitable `NSIG` would be 3.
@@ -282,26 +307,31 @@ One should not necessarily rely on this, so it is safest to suppose the more con
 For numerical integration problems:
 
 * Internal precision is based on user specified `TOL`, not `SIGL` (see @sec-subr)
-* Often `TOL` = 6 or less, not 10
+* Often `TOL=6` or less, not 10
 * The largest `NSIG` one should insist on is 2.
 * `SIGL` ≤ `TOL`
 * `NSIG` ≤ `SIGL` / 3
 
 `SIGLO`:
-The precision to which the individual ETAs are estimated.
+**The significant digits for ETAs**.
 By default, `SIGLO` = `SIGL`.
+
+<details>
+<summary>Rule-of-thumb for setting NSIG, SIGL, and SIGLO</summary>
+Most problems will benefit from some trial-and-error testing.
+See @tbl-advan for info on solvers.
+
+* Analytical solvers
+    * `SIGL` ≤ 14 (about the limit of double precision)
+    * `NSIG` ≤ `SIGL` / 3
+
+* Numerical solvers
+    * `SIGL` ≤ `TOL`
+    * `NSIG` ≤ `SIGL` / 3
+    * So, if `TOL=6`, then `SIGL` should be 6, and `NSIG` should be 2
+
 If SIGLO is used, set `SIGLO` ≤ `TOL`.
-
-##### Rule of Thumb to set SIGL and NSIG (but trial and error is always good to do)
-
-* For Analytical Problems
-    * SIGL<=14 (about the limit of double precision)
-    * NSIG<=SIGL/3
-
-* For Numerical Integration problems
-    * SIGL<=TOL
-    * NSIG<=SIGL/3
-    * So, if TOL=6, then SIGL should be 6, and NSIG should be 2
+</details>
 
 #### CTYPE
 
@@ -339,31 +369,6 @@ $ESTIMATION METHOD=1
 $ESTIMATION METHOD=1
             MCETA=1
             MAXEVAL=9999
-```
-
-#### Numerical stability
-
-In general, it is advised to write the model code in such a way that boundaries are avoided.
-For example, if a parameter `A` should have a lower bound of 0, code it in logarithmic space `A = EXP(THETA)` such that THETA is unbounded.
-
-##### Protection against floating point exceptions
-
-Simply set `$ABBREVIATED PROTECT` at beginning of control stream file.
-This will convert all functions to their respective "protected form".
-
-#### Small number of subjects
-
-When there are very few subjects (**less than 10**), its most accurate to correct the degrees of freedom when assessing OMEGAs.
-This can be done using `LDF`, which stands for "loss of degrees of freedom".
-
-**If you <span class="red-underline">can</span> MU-model all THETAs**, then set `LDF=-1` in `$PK` to let NONMEM do the correction automatically.
-
-**If you <span class="red-underline">cannot</span> MU-model all THETAs**, the most accurate is to have `LDF(n)` be the number of to-be-estimated THETAs involved in `MU_n`:
-
-```verilog
-" LDF(3) = 2.0
-MU_3 = THETA(4) + LOG(WT) * THETA(5)
-CL = EXP(MU_3 + ETA(3))
 ```
 
 ### Reproducibility {#sec-mle-repr}
@@ -558,6 +563,7 @@ Boundaries for the scale factor used to vary the size of the variance of the pro
 On very rare occasions, the OFV varies widely, and these options may need to be reduced (e.g., `ISCALE_MIN=0.3 ISAMPLE_MAX=3`).
 Remember to revert these parameters to default operation on the next `$EST` step:
 `ISCALE_MIN=-100 ISCALE_MAX=-100`.
+Default is `ISCALE_MIN=0.1 ISCALE_MAX=10` for importance sampling.
 9. See @sec-em-robust-ctest
 </details>
 
@@ -605,7 +611,8 @@ RANMETHOD=3S2P # <3>
 ```
 1. `GRDQ`: The gradient quick option.
 Used for THETAs that are not MU-modeled, for SIGMAs, and THETAs that model RUV.
-2. `DERCONT=1` might me helpful in cases of extreme discontinuity when varying certain THETAs by even just a small amount in the model results in a large change in OFV.
+2. `DERCONT`: Derivative continuity.
+`DERCONT=1` might be helpful in cases of extreme discontinuity when varying certain THETAs by even just a small amount in the model results in a large change in OFV.
 3. See @sec-em-repr
 </details>
 
@@ -763,12 +770,98 @@ $ESTIMATION METHOD=IMPMAP
 ### SAEM {#sec-saem}
 
 SAEM stands for **S**tochastic **A**pproximation **E**xpectation-**M**aximization.
-SAEM takes a stochastic approximation of the parameter distribution using a simulation step.
-This narrows the possibilities and allows for faster convergence.
+Like IMP, random samples are generated from normal proposal densities (@sec-imp).
+However, instead of always centered at the mean or mode of the posterior density, the proposal density is centered at the previous sample position.
+The general SAEM algorithm goes like this:
 
-SAEM is like a search light, does not need as large of a starting density ("umbrella") as IMP.
+1. "Stochastic", "exploratory", or "burn-in" phase (iterations set by `NBURN`).
+    i. Sampling of the ETA proposal density
+    ii. Population parameters are updated based on the **averaging of ETAs from the previous step** in this phase.
+2. "Accumulation" or "smoothing" phase (iterations set by `NITER`).
+    i. Sampling of the ETA proposal density (as in burn-in phase)
+    ii. Population parameters are updated based on the **averaging of ETAs from <span class="red-underline">all</span> previous steps** in this phase.
 
-[http://monolix.lixoft.com/tasks/population-parameter-estimation-using-saem/](http://monolix.lixoft.com/tasks/population-parameter-estimation-using-saem/)
+This method is useful for highly non-normal posterior densities^[very sparse or categorical data].
+
+During the exploratory phase, SAEM acts like a search light that finally will oscillate around the maximum likelihood.
+Thus, SAEM does not need as large of a starting density ("umbrella") as IMP.
+See [here](http://monolix.lixoft.com/tasks/population-parameter-estimation-using-saem/) for an excellent primer on SAEM.
+
+The size of the explored space depends on the standard deviations of the random effects and the residual error.
+Exploring a large space increases the chances of finding the global maximum.
+Thus, it is recommended to choose large initial values for the OMEGAs and the SIGMAs.
+
+<details>
+<summary>Show SAEM options</summary>
+
+```verilog
+$ESTIMATION METHOD=SAEM
+            AUTO=1
+
+$ESTIMATION METHOD=SAEM
+            INTERACTION
+            NBURN=500 # <1>
+            NITER=1000 # <2>
+            MCETA=0 # <3>
+            ISAMPLE=2 # <4>
+            ISAMPEND=10 # <5>
+            ISAMPLE_M1=2 # <6>
+            ISAMPLE_M1A=0 # <7>
+            ISAMPLE_M1B=2 # <8>
+            ISAMPLE_M2=2 # <9>
+            ISAMPLE_M3=2 # <10>
+            IACCEPT=0.4 # <11>
+            ISCALE_MIN=1.0E-06 # <12>
+            ISCALE_MAX=1.0E+06 # <12>
+            NOCOV=0 # <13>
+            DERCONT=0 # <14>
+            CONSTRAIN=1 # <15>
+            MAPITERS=0 # <16>
+            NOPRIOR=1 # <17>
+```
+1. `NBURN`: Maximum iterations for the exploratory phase.
+Should be high enough for convergence to occur.
+Default 1000.
+2. `NITER`: Maximum iterations for the smoothing phase.
+Default 1000.
+3. `MCETA`: If greater than `ISAMPLE_M1`, then for the first iteration of SAEM, `ISAMPLE_M1`, `ISAMPLE_M2`, and `ISAMPLE_M3` will be set to `MCETA`, to facilitate a robust initial search for reasonable parameter values.
+4. `ISAMPLE`:  Integer.
+Number of samples per individual.
+More samples means less stochastic noise.
+Should have at least 50 total samples per iteration.
+For datasets with more than 50 individuals, `ISAMPLE=1` is usually fine.
+5. `ISAMPEND`: Integer.
+NONMEM will perform 200 iterations to determine the best `ISAMPLE` value, with `ISAMPEND` as an upper bound.
+4. `ISAMPLE_M1`: Number of "mode 1" iterations per `ISAMPLE`.
+Should usually be left to default (2).
+5. `ISAMPLE_M1A`: Number of " 1A" iterations per `ISAMPLE`.
+Should usually be left to default (0).
+6. `ISAMPLE_M1B`: Number of "mode 1B" iterations per `ISAMPLE`.
+Should usually be left to default (2).
+7. `ISAMPLE_M2`: Number of "mode 2" iterations per `ISAMPLE`.
+Should usually be left to default (2).
+8. `ISAMPLE_M3`: Number of "mode 3" iterations per `ISAMPLE`.
+Should usually be left to default (2).
+9. `IACCEPT`: Goal fraction of samples to be accepted.
+Should usually be left to default (0.4).
+12. `ISCALE_MIN` and `ISCALE_MAX`: Boundaries for the scale factor used to vary the size of the variance of the proposal density in order to meet the `IACCEPT` condition.
+On very rare occasions, the OFV varies widely, and these options may need to be reduced (e.g., `ISCALE_MIN=0.001 ISAMPLE_MAX=1000`).
+Remember to revert these parameters to default operation on the next `$EST` step:
+`ISCALE_MIN=-100 ISCALE_MAX=-100`.
+Default is `ISCALE_MIN=1.0E-06 ISCALE_MAX=1.0E+06` for MCMC sampling.
+13. `NOCOV`: If covariance estimation is not desired for a particular estimation step, set `NOCOV=1`.
+Normally, after SAEM you perform a refinement step (@sec-em-robust-refinement), so `NOCOV=1` can be set during the SAEM and changed back to `NOCOV=0` for the IMP refinement.
+14. `DERCONT`: Derivative continuity.
+Default 0.
+`DERCONT=1` might be helpful in cases of extreme discontinuity when varying certain THETAs by even just a small amount in the model results in a large change in OFV.
+15. `CONSTRAIN`: A built-in simulated annealing algorithm.
+It starts the OMEGAs at 1.5 times the initial values, and then control the rate at which the OMEGAs shrink during each iteration.
+`CONSTRAIN=7` performs simulated annealing on both OMEGA (zero and non-zero) and SIGMA parameters.
+To mimic Monolix, set OMEGA and additive SIGMA inital values to 0.66, and proportional SIGMA to 0.22.
+Default 1.
+16. `MAPITERS`: 
+17. `NOPRIOR`: 
+</details>
 
 <details>
 <summary>AUTO=1</summary>
@@ -814,6 +907,15 @@ MAPITERS=1 MCETA=100
 To turn MAP assessment assist on the first iteration.
 </details>
 
+#### Initial estimates
+
+It is recommended to set initial variability estimates high in order for SAEM to have the possibility to explore the domain.
+
+```verilog
+$OMEGA 1.0
+$SIMGA 1.0 ; additive
+$SIGMA 0.3 ; proportional
+```
 ### Robustness {#sec-em-robust}
 
 The EM-methods are already quite robust in that they can handle many different estimation problems.
@@ -852,16 +954,20 @@ $ESTIMATION METHOD=IMP
 ```
 1. `MAPITER=0` tells IMP to skip its own MAP search and instead use the sampling distribution that DIRECT just estimated.
 
-#### THETAs with no ETAs
-
 <details>
-<summary>First option: `$OMEGA 0.0225 FIX`</summary>
-When your problem uses EM-methods and includes THETAs without ETAs, **use ETAs anyways but fix the OMEGA to a low value like 0.0225**.
+<summary>If using SAEM: `MCETA`</summary>
+With SAEM: If the option `MCETA` is set to greater than `ISAMPLE_M1`, then for the first iteration of SAEM, `ISAMPLE_M1`, `ISAMPLE_M2`, and `ISAMPLE_M3` will be set to `MCETA`, to facilitate a robust initial search for reasonable parameter values.
 </details>
 
+#### THETAs with no ETAs
+
+One alternative is to **use ETAs anyways but fix the OMEGA to a low value like 0.0025**
+This corresponds to 5% for log-normally distributed parameters.
+With this method, the EM algorithm can be used, and the variability is kept small.
+
 <details>
-<summary>Second option: `$ANNEAL`</summary>
-If you run SAEM and suspect that your inital values might be far from the solution, you could consider **simulated annealing**.
+<summary>If using SAEM: `$ANNEAL`</summary>
+If you run **SAEM** and suspect that your inital values might be far from the solution, you could consider **simulated annealing**.
 By default, NONMEM use gradient methods which are adequate when starting close to the solution.
 But if you start far away, annealing is more suitable.
 Here's the intuition:
@@ -870,7 +976,9 @@ Here's the intuition:
 2. With each iteration, the OMEGA will shrink.
 3. Eventually the annealed OMEGAs will reach 0
 
-Annealing is activated using `$ANNEAL` together with the `$ESTIMATION CONSTRAIN=n` option.
+`$ANNEAL` sets starting diagonal OMEGA values together with the `$ESTIMATION CONSTRAIN=n` option.
+
+For example: `$ANNEAL 1-3,5:0.3 6,7:1.0`, will set initial values of `OMEGA(1,1)`, `OMEGA(2,2)`, `OMEGA(3,3)`, and `OMEGA(5,5)` to 0.3, while initial `OMEGA(6,6)` and `OMEGA(7,7)` are set to 1.0.
 
 Values for `CONSTRAIN=n` are:
 
@@ -906,38 +1014,52 @@ $ESTIMATION METHOD=IMP
             EONLY=1
             CONSTRAIN=0
 ```
-</details>
 
-<details>
-<summary>Third option: `METHOD=CHAIN`</summary>
-Another technique is to use an initial Monte Carlo search method using `$EST METHOD=CHAIN ISAMPEND`, and then use the standard gradient method for SAEM:
+Additional algorithmic constraints may be imposed upon the model parameters, by use of the subroutine CONSTRAINT.
+This feature is available only for the EM and Bayesian algorithms.
+One use would be to slow the rate of reduction of the diagonal elements of the OMEGA values during the burn-in phase of the SAEM method (as is done in Monolix).
+This is shown in example 9, where a user supplied annealing algorithm is used to replace the built-in one described earlier. By specifying `OTHER=ANEAL.f90`, where `ANEAL.f90` was originally derived from a template of `CONSTRAINT.f90` in the `..\source` directory, the user supplied CONSTRAINT subroutine can be incorporated into the model.
+In example 9, whenever iteration number (`ITER_NO`) changes, a new OMEGA is evaluated that is larger than what was determined by the SAEM update.
+Typically, this expansion algorithm should be such that its impact decreases with each iteration.
 
-```verilog
-$PK
-MU_1 = THETA(1)
-EMAX = EXP(MU_1 + ETA(1))
-MU_2 = THETA(2)
-ED50 = EXP(MU_2 + ETA(2))
-IPRED = EMAX * DOSE / (ED50 + DOSE)
-
-$THETA (0.1, 4.1, 10) ; 1. EMAX
-$THETA 6.9 ; 2. ED50
-
-$OMEGA 0 FIX
-$OMEGA 0.1
-
-$ESTIMATION METHOD=CHAIN
-            ISAMPLE=1
-            ISAMPEND=30
-            NSAMPLE=30
-
-$ESTIMATION METHOD=SAEM
-            INTERACTION
-
-$ESTIMATION METHOD=IMP
-            INTERACTION
-            EONLY=1
+```fortranfree
+File Aneal.f90
+      SUBROUTINE CONSTRAINT(THETAS, NTHETAS, SIGMA2, NSIGMAS, OMEGA, NOMEGAS, ITER_NO)
+      USE SIZES, ONLY: ISIZE, DPSIZE
+      IMPLICIT NONE
+      INCLUDE '../nm/TOTAL.INC'
+      INTEGER(KIND = ISIZE) NTHETAS, NSIGMAS, NOMEGAS, ITER_NO
+      INTEGER :: I, J, ITER_OLD
+      DATA ITER_OLD /-1/
+      REAL(KIND = DPSIZE) :: OMEGA(MAXOMEG,MAXOMEG), THETAS(MAXPTHETA), SIGMA2(MAXPTHETA)
+      REAL(KIND = DPSIZE) :: OMEGO(MAXOMEG))
+      SAVE
+!---------------------------------------------------------------------------
+      IF (SAEM_MODE == 1 .AND. IMP_MODE == 0 .AND. ITS_MODE == 0 .AND. ITER_NO < 200) THEN
+            IF (ITER_NO /= ITER_OLD .OR. ITER_NO == 0) THEN
+! During burn-in phase of SAEM, and when a new iteration occurs
+! (iter_old<>iter_no)
+! store the present diagonals of OMEGAs
+                  ITER_OLD = ITER_NO
+                  DO I = 1, NOMEGAS
+                        OMEGO(I) = OMEGA(I,I)
+                  ENDDO
+            ENDIF
+            IF (ITER_NO /= 0) THEN
+                  DO I = 1, NOMEGAS
+! Monolix style algorithm needed to "slow down" the reduction of OMEGA
+! The expansion of OMEGA should be less with each iteration.
+                        OMEGA(I,I) = MAX(OMEGA(I,I), 0.95D0 * OMEGO(I))
+                  ENDDO
+            ENDIF
+      ENDIF
+      RETURN
+!---------------------------------------------------------------------------
+      END SUBROUTINE CONSTRAINT
 ```
+
+1. Once you have found good initial estimates (for THETA, OMEGA, and SIGMA) close to the global optimum, run the model again without `$ANNEAL` for better estimates.
+
 </details>
 
 #### Convergence test  {#sec-em-robust-ctest}
@@ -962,7 +1084,9 @@ The default value is 0.05.
 
 **IMP:** IMP iterations tend to be statistically uncorrelated, and so it is reasonable to have `CITER=10` consecutive iterations (`CINTERVAL=1`) tested at `CALPHA=0.05`.
 
-**SAEM:** Iterations can be highly correlated, so to properly detect a lack of change in parameters, you may want to test every 10--100^th^ iteration (`CINTERVAL`=10 to 100), so that the linear regression on parameter change is spread out over a larger segment of iterations.
+**SAEM:** Iterations can be highly correlated.
+To properly detect a lack of change in parameters, you may want to test every 10--100^th^ iteration (`CINTERVAL`=10 to 100), so that the linear regression on parameter change is spread out over a larger segment of iterations.
+To mimic Monolix, set `CTYPE=3`, `CINTERVAL=15`, and `CITER=10`.
 
 ::: {.callout-tip title="Allow time to converge" collapse="true"}
 Give a rather high value to `NBURN` (1000--10000 for SAEM/BAYES) or `NITER` (200--1000 for ITS/IMP/IMPMAP) so you don't run out of iterations before the method converges.
@@ -990,7 +1114,7 @@ $ESTIMATION METHOD=IMP
 1. The higher number of samples (3000--10000) should give a more stable result (although the run time of each iteration will increase significantly).
 2. Number of iterations should be low, 5--10.
 `IMP EONLY=1` needs a few iterations to allow the proposal density to become stationary.
-This is observed by the OFV settling around a particular value (with some stochastic noise).
+This is observed by the OFV stabilizing (oscilating) around a particular value.
 Assessing the **mean and variance of the iterated OFV** will give a more accurate estimation of the final OFV[^JM].
 3. Perform only the E-step (do not update population parameters)
 4. To maintain continuity of the estimation from the previous step.
@@ -1027,7 +1151,7 @@ Its also advisable to keep the same SEED throughout your analysis, i.e., in all 
 
 #### Parallel NONMEM {#sec-em-repr-parallel}
 
-For the stochastic methods (IMP, IMPMAP, SAEM and BAYES), distribution of subjects to different nodes for computations is dependent on number of processors.
+For stochastic methods (MCETA, DIRECT, IMP, IMPMAP, and SAEM), distribution of subjects to different nodes for computations is dependent on number of processors.
 This leads to differences in sequences of random numbers generated during computations that could make the results dependent on the number of processors.
 
 Moreover, with the parallel processing option `PARSE_TYPE=4`, the results of the stochastic methods may not be exactly reproducible even when repeated on the same number of processors, because the distribution of the subjects to each processor may depend on the computer load.
