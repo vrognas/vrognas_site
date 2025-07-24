@@ -162,7 +162,7 @@ $ESTIMATION METHOD=CONDITIONAL
 1. `INTERACTION` should always be used when residual error is proportional, and does not impact the analysis when the residual error is additive.
 Thus, always use it.
 2. Always use the `FAST` option, there are very few cases where `FAST` is suboptimal[^RB].
-The `FAST` option benefits from MU-modeling to be more effective (see "Grok NM-TRAN" for more info).
+The `FAST` option benefits from MU-modeling to be more effective.
 3. `NONINFETA=1` and `ETASTYPE=1` should be added when not all ETAs are used for all subjects.
 For example, an ETA to a KA during a fit of a subject with only IV dosing.
 4. `NSIG <= SIGL/3`.
@@ -427,7 +427,6 @@ For example, IMP is generally faster than SAEM due to IMP searching a smaller sp
 ::: {.callout-note title="MU modeling"}
 EM methods are most efficient when the model follows a specific statistical structure: fixed effects parameters (THETAs) only define the mean (MU) of the normal population distribution of individual parameters (phi = THETA + ETA).
 This requires a special coding technique called **MU modeling** for optimal performance.
-Please see "Grok NM-TRAN" for more info.
 :::
 
 There are essentially three EM methods available in NONMEM:
@@ -1195,6 +1194,10 @@ When running models, use your own parafile: `-parafile=my_own_parafile.pnm`
 
 * Reduce `ATOL` in `$SUBROUTINES` (usually set equal to `TOL`) may improve speeds.
 * Keeping the `ISAMPLE` low makes for faster iterations, however, it will result in higher stochastic noise.
+* MU-model as many THETAs as possible.
+Even if a parameter doesn't have IIV, MU-model it anyway.
+Sometimes, it might be impossible to MU-model a THETA.
+If you can, rerapameterize so that they can be MU-modeled, or keep a maximum of three non-MU-modeled THETAs.
 
 :::
 :::
