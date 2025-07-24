@@ -240,10 +240,8 @@ website:
                 href: docs/tools-of-the-trade/nonmem/nm-data.qmd
               - text: "Grok NM-TRAN"
                 href: docs/tools-of-the-trade/nonmem/nm-ctl.qmd
-              - text: "Estimation methods"
+              - text: "Estimation"
                 href: docs/tools-of-the-trade/nonmem/nm-est.qmd
-              - text: "Tweaks for Geeks"
-                href: docs/tools-of-the-trade/nonmem/nm-run.qmd
               - text: "Troubleshooting"
                 href: docs/tools-of-the-trade/nonmem/nm-err.qmd
               - text: "Model QA"
@@ -280,7 +278,10 @@ format:
     fontsize: 1.1em
     highlight-style: github
     css: styles.css
+    toc-title: "Contents"
     toc: true
+    toc-expand: 1
+    toc-depth: 4
     bibliography: refs.bib
     csl: clinical-microbiology-and-infection.csl
     image-lazy-loading: true
