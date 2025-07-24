@@ -1,6 +1,6 @@
 ---
-title: "NONMEM Solvers and Estimation Methods"
-description: "Info on $SUBROUTINES, $ESTIMATION, and $PRIOR"
+title: "Estimation and Solvers"
+description: "The Practitioner's Guide to $ESTIMATION and $SUBROUTINES"
 date: "2025-07-24"
 code-overflow: scroll
 code-tools: true
@@ -12,8 +12,8 @@ code-tools: true
 If you have ever felt lost choosing between FOCE, LAPLACE, IMP, or SAEM, this page is for you.
 We will walk through the available estimation methods, when to pick each one, and the little tweaks that make runs faster and more robust.
 
-Estimation methods are the algorithms that are used to identify the best fit model population parameters (THETAs, OMEGAs, and SIGMAs) given the specified model and the analysis data set.
-The model together with the data set is what we call a "problem" to be solved by our estimation methods.
+Estimation methods are the algorithms used to identify the best-fit model population parameters (THETAs, OMEGAs, and SIGMAs) given the specified model and the analysis dataset.
+The model, together with the dataset, is what we call a "problem" to be solved by our estimation methods.
 
 The aim of this page is to:
 
@@ -29,21 +29,21 @@ In essence, there are two families of estimation methods available in NONMEM:
 ::: {.callout-note title="ETA optimization"}
 Finding the individual ETAs is called "Maximum a Posteriori (**MAP**) estimation"^[In pharmacometrics, also called "Mode a Posteriori". Essentially the same, since the mode is the maximum of a unimodal distribution.].
 
-The optimal ETA values themselves are called either **Empirical Bayes Estimates (EBEs)**, Conditional Parametric ETAs (CPEs), MAP estimates, or conditional mode estimates, referred to symbolically as $\hat{\eta}$ (pronounced "ETA hat").
+The optimal ETA values themselves are called either **Empirical Bayes Estimates (EBEs)**, Conditional Parametric ETAs (CPEs), MAP estimates, or conditional mode estimates, symbolically denoted as $\hat{\eta}$ (pronounced "ETA hat").
 
 NONMEM performs MAP using the **BFGS (Broyden-Fletcher-Goldfarb-Shanno)** optimizer by default.
-This method can be changed using the `OPTMAP` option, but should for all practical purposes be left to its default.
+This method can be changed using the `OPTMAP` option, but it should generally be left at its default setting.
 :::
 
 ## Subroutines {#sec-subr}
 
-Before diving into the estimation methods, lets quickly talk about `$SUBROUTINES`.
+Before diving into the estimation methods, let's quickly talk about `$SUBROUTINES`.
 
 NONMEM comes with a library of **ADVAN** routines (@tbl-advan).
 Their function is to "advance" the kinetic system from one state time point to the next (hence "ADVAN").
 Another possible name for ADVAN would have been SOLVER, because most ADVAN routines solve a set of differential equations, either analytically or by integration.
 We differentiate the solvers by their computational nature, as this will impact how we choose and optimize our estimation algorithm.
-In general "numerical integration problems" are problems using `$DES`, and "analytical problems" those that do not (see column "Solver" in @tbl-advan).
+In general, "numerical integration problems" are problems using `$DES`, and "analytical problems" are those that do not (see column "Solver" in @tbl-advan).
 
 <details>
 <summary>Show ADVAN table</summary>
@@ -74,12 +74,12 @@ In general "numerical integration problems" are problems using `$DES`, and "anal
 For each ADVAN, there exists a group of **TRANS** subroutines (numbered 1--6).
 Think of TRANS as a "translator" (hence "TRANS") that swaps one parameterization for another so you can work in the language that feels most natural to you.
 
-* `TRANS1` is the default for all ADVANs and means that you are using rate constants (*k*'s) are your main parameters.
-* `TRANS2`,`TRANS3`, and `TRANS4` are sometimes seen with analytic solvers, meaning you are using CL, V, and potentially Q and KA as parameters instead of rate constants.
+* `TRANS1` is the default for all ADVANs and means that you are using rate constants (*k*'s) as your main parameters.
+* `TRANS2`, `TRANS3`, and `TRANS4` are sometimes seen with analytic solvers, meaning you are using CL, V, and potentially Q and KA as parameters instead of rate constants.
 * `TRANS5` and `TRANS6` are rarely used, so these can be disregarded for all practical purposes.
 
 For every run, you specify **<span class="red-underline">one</span> ADVAN** routine and **<span class="red-underline">one</span> TRANS** routine in the `$SUBROUTINES` record.
-If you are using `TRANS1`, you don't need to speficy this since it is the default.
+If you are using `TRANS1`, you don't need to specify this since it's the default.
 
 ### Fine-tuning tolerance
 
@@ -89,15 +89,15 @@ These options are used for the numerical `ADVAN` routines (see column "Solver" i
 * `TOL=n`: The relative significant digits precision to which differential equations are to be integrated, so the precision is 10^-`TOL`^.
 Used with `ADVAN6`, `ADVAN8`, `ADVAN9`, and `ADVAN13` to specify the number of digits that are required to be accurate in the computation of the drug amount in each compartment; the precise meaning depends on the particular ADVAN routine that uses it @gibianskyComparisonNonmem722012.
 * `ATOL=n`: The absolute significant digits precision to which differential equations are to be integrated, so the accuracy is 10^-`ATOL`^.
-Default is 12.
+The default is 12.
 Used with `ADVAN9`, `ADVAN13`, `ADVAN14`, `ADVAN15`, `ADVAN16`, `ADVAN17`, `ADVAN18`.
-On occasion you may want to reduce `ATOL` (usually set it equal to that of `TOL`), and improve speeds of up to 4 fold.
-* For the numerical ADVAN routines, internal precision is based on user specified `TOL`, as opposed to the analytical routines where internal precision is based on `SIGL`
+On occasion, you may want to reduce `ATOL` (usually set equal to `TOL`) to improve speeds.
+* For the numerical ADVAN routines, internal precision is based on `TOL`, as opposed to the analytical routines, where internal precision is based on `SIGL`
 
 ## Classical MLE methods {#sec-mle}
 
 MLE (or "classical") methods want to be "statistically fair" to all possibilities.
-These are also the type of methods used in classical statistical tests like t-test, AN(C)OVA, and even the simple *mean* of a set of values.
+These are also the types of methods used in classical statistical tests like t-test, AN(C)OVA, and even the simple *mean* of a set of values.
 
 There are essentially three MLE methods available in NONMEM:
 
@@ -106,16 +106,17 @@ There are essentially three MLE methods available in NONMEM:
 3. LAPLACE (Second order)
 
 The "order" refers to the derivative evaluated in the Taylor expansion [@wangDerivationVariousNONMEM2007].
-So, the first order methods FO and FOCE evaluated the first order derivative (Jacobian matrix), or the "slope" of the objective function value (OFV).
-LAPLACE evaluates the second order derivative (Hessian matrix), or the "curvature" of the OFV, requiring more computational effort than the first order.
+Therefore, FO and FOCE evaluate the first-order derivative (Jacobian matrix), or the "slope" of the objective function value (OFV).
+LAPLACE evaluates the second-order derivative (Hessian matrix), or the "curvature" of the OFV, requiring more computational effort than the first order.
 
+::: {.panel-tabset}
 ### FO {#sec-fo}
 
 FO stands for **F**irst **O**rder.
-Is the **perfect method when no ETAs are computed**[^AD], as in e.g. single TTE-models that do not contain a frailty-component.
-Only optimizes the THETAs (fixed effect parameters).
+Is the **perfect method when no ETAs are computed**[^AD], as in e.g., single TTE-models that do not contain a frailty-component.
+It may also be helpful as an exploratory method when fast, approximate results are desirable.
 
-Might also be useful as an exploratory method when fast approximate results are desirable.
+To get the ETAs, specify the option `POSTHOC` (latin for "after this").
 
 ::: {.callout-note}
 FO can be specified as either `METHOD=ZERO` or `METHOD=0`.
@@ -126,7 +127,12 @@ Either one is fine, although `METHOD=0` is more common.
 ### FOCE {#sec-foce}
 
 FOCE stands for **F**irst **O**rder **C**onditional **E**stimation.
-FOCE simultaneously estimates both fixed and random effects, unlike the FO method which estimates fixed effects first, then random effects.
+FOCE simultaneously estimates both fixed and random effects, unlike the FO method, which estimates fixed effects first, then random effects.
+
+::: {.callout-tip}
+There is no need to specify the `POSTHOC` option with FOCE.
+It only applies to the FO method.
+:::
 
 It is very common to also use the `INTERACTION` option, and that is then called the FOCEI (FOCE **I**nteraction) method.
 The `INTERACTION` option allows for correlation between the two types of random effects: ETAs (between-subject variability) and Epsilons (residual variability).
@@ -134,7 +140,7 @@ The `INTERACTION` option allows for correlation between the two types of random 
 ::: {.callout-note}
 FOCE can be specified as either `METHOD=CONDITIONAL` or `METHOD=1`.
 
-For explicitness, `METHOD=CONDITIONAL` is prefered.
+For explicitness, `METHOD=CONDITIONAL` is preferred.
 :::
 
 #### Options {#sec-foce-options}
@@ -249,10 +255,6 @@ $ESTIMATION METHOD=CONDITIONAL
 ```
 </details>
 
-::: {.callout-tip}
-There is no reason to use the `POSTHOC` option with FOCE as it only applies for the FO method.
-:::
-
 ### LAPLACE {#sec-laplace}
 
 Similar to FOCE but evaluates the second order derivative (Hessian) instead of the first order (Jacobian).
@@ -263,19 +265,21 @@ LAPLACE is specified as either `LAPLACE` (most common) or `LAPLACIAN`, as an **o
 $ESTIMATION METHOD=CONDITIONAL LAPLACE
 ```
 
-### Robustness {#sec-mle-robust}
+### Tweaks for geeks
 
-#### Numerical stability
+::: {.panel-tabset}
+#### Robustness {#sec-mle-robust}
 
-In general, it is advised to write the model code in such a way that boundaries are avoided.
-For example, if a parameter `A` should have a lower bound of 0, code it in logarithmic space `A = EXP(THETA)` such that THETA is unbounded.
+##### Code for numerical stability
 
-##### Protection against floating point exceptions
+Instead of parameter bounds, **re-parameterize**.
+For example, if a parameter `A` should have a lower bound of 0, code it in logarithmic space `A = EXP(THETA)`.
+This way, A has a lower bound of 0, but the associated THETA is unbounded.
 
-Simply set `$ABBREVIATED PROTECT` at beginning of control stream file.
-This will convert all functions to their respective "protected form".
+To guard against floating-point exceptions, simply write `$ABBREVIATED PROTECT` at the beginning of your control stream.
+NONMEM will then use "protected" versions of `EXP()`, `LOG()`, `SQRT()`, etc.
 
-#### Small number of subjects
+##### Small number of subjects (< 10)?
 
 If you are analyzing very few subjects (**less than 10**), it's most accurate to correct the *d.f.* when assessing OMEGAs.
 This can be done using `LDF`, which stands for "loss of degrees of freedom".
@@ -290,7 +294,7 @@ MU_3 = THETA(4) + LOG(WT) * THETA(5)
 CL = EXP(MU_3 + ETA(3))
 ```
 
-#### NSIG, SIGL, SIGLO, and TOL
+##### Precision in practice
 
 `NSIG`:
 **The significant digits for THETAs, OMEGAs, and SIGMAs**.
@@ -333,7 +337,7 @@ See @tbl-advan for info on solvers.
 If SIGLO is used, set `SIGLO` ≤ `TOL`.
 </details>
 
-#### CTYPE
+##### CTYPE
 
 Sometimes you may see several iterations with almost no change in OFV.
 What’s happening?
@@ -343,12 +347,12 @@ If a parameter’s influence on the objective is this tiny, the traditional conv
 To handle this, add `CTYPE=4`.
 If the OFV doesn't change beyond `NSIG` decimal places for 10 straight iterations, the minimization is sucessful and the run terminates successfully.
 
-#### SADDLE_RESET
+##### SADDLE_RESET
 
 The `SADDLE_RESET` option was developed enable more robust parameter estimation through a check for local practical identifiability [@bjugardnybergSaddleResetRobustParameter2020].
 In the original article, the authors recommend setting `SADDLE_RESET=1` when using MLE (FO, FOCE, LAPLACE).
 
-#### MCETA
+##### MCETA
 
 During ETA optimization NONMEM must pick a starting set of individual ETAs.
 By default it uses all zeros, but that may trap the algorithm in a local minimum.
@@ -371,7 +375,7 @@ $ESTIMATION METHOD=1
             MAXEVAL=9999
 ```
 
-### Reproducibility {#sec-mle-repr}
+#### Reproducibility {#sec-mle-repr}
 
 As mentioned above, MLE methods are inherently reproducible since they provide only one correct answer.
 However, if one uses the `MCETA` option, a stochastic Monte-Carlo element is introduced that benefits from additional options for reproducibility:
@@ -380,11 +384,14 @@ However, if one uses the `MCETA` option, a stochastic Monte-Carlo element is int
 * `SEED=123456789`: This enables the Monte-Carlo sequence to be reproduced.
 Choose any integer, but be consistent within your analysis.
 
-### Speed {#sec-mle-speed}
+#### Speed {#sec-mle-speed}
 
-#### FAST
+##### FAST
 
-#### ITS
+::: {.callout-caution title="TODO"}
+:::
+
+##### ITS
 
 The classical NONMEM methods can be facilitated using an EM method by first having a rapid EM method such as iterative two stage be performed first, with the resulting parameters being passed on to the FOCE method, to speed up the analysis:
 
@@ -394,6 +401,8 @@ $ESTIMATION METHOD=ITS
 $ESTIMATION METHOD=CONDITIONAL
             INTERACTION
 ```
+:::
+:::
 
 ## EM-methods {#sec-em}
 
@@ -432,6 +441,7 @@ There are essentially three EM methods available in NONMEM:
 * IMP (Importance sampling, of which IMPMAP is a special case)
 * SAEM (Stochastic Approximation EM)
 
+::: {.panel-tabset}
 ### ITS {#sec-its}
 
 ITS stands for **I**terative **T**wo **S**tage.
@@ -607,13 +617,12 @@ Normally, if you specify a prior you want to use it, so set `NOPRIOR=0`.
 ```verilog
 GRDQ=-1.0 # <1>
 DERCONT=1 # <2>
-RANMETHOD=3S2P # <3>
+RANMETHOD=3S2P
 ```
 1. `GRDQ`: The gradient quick option.
 Used for THETAs that are not MU-modeled, for SIGMAs, and THETAs that model RUV.
 2. `DERCONT`: Derivative continuity.
 `DERCONT=1` might be helpful in cases of extreme discontinuity when varying certain THETAs by even just a small amount in the model results in a large change in OFV.
-3. See @sec-em-repr
 </details>
 
 #### Monte Carlo noise
@@ -770,7 +779,7 @@ $ESTIMATION METHOD=IMPMAP
 ### SAEM {#sec-saem}
 
 SAEM stands for **S**tochastic **A**pproximation **E**xpectation-**M**aximization.
-Like IMP, random samples are generated from normal proposal densities (@sec-imp).
+Like IMP, random samples are generated from normal proposal densities.
 However, instead of always centered at the mean or mode of the posterior density, the proposal density is centered at the previous sample position.
 The general SAEM algorithm goes like this:
 
@@ -816,8 +825,6 @@ $ESTIMATION METHOD=SAEM
             NOCOV=0 # <13>
             DERCONT=0 # <14>
             CONSTRAIN=1 # <15>
-            MAPITERS=0 # <16>
-            NOPRIOR=1 # <17>
 ```
 1. `NBURN`: Maximum iterations for the exploratory phase.
 Should be high enough for convergence to occur.
@@ -833,17 +840,17 @@ For datasets with more than 50 individuals, `ISAMPLE=1` is usually fine.
 5. `ISAMPEND`: Integer.
 NONMEM will perform 200 iterations to determine the best `ISAMPLE` value, with `ISAMPEND` as an upper bound.
 4. `ISAMPLE_M1`: Number of "mode 1" iterations per `ISAMPLE`.
-Should usually be left to default (2).
+Should usually be left at default (2).
 5. `ISAMPLE_M1A`: Number of " 1A" iterations per `ISAMPLE`.
-Should usually be left to default (0).
+Should usually be left at default (0).
 6. `ISAMPLE_M1B`: Number of "mode 1B" iterations per `ISAMPLE`.
-Should usually be left to default (2).
+Should usually be left at default (2).
 7. `ISAMPLE_M2`: Number of "mode 2" iterations per `ISAMPLE`.
-Should usually be left to default (2).
+Should usually be left at default (2).
 8. `ISAMPLE_M3`: Number of "mode 3" iterations per `ISAMPLE`.
-Should usually be left to default (2).
+Should usually be left at default (2).
 9. `IACCEPT`: Goal fraction of samples to be accepted.
-Should usually be left to default (0.4).
+Should usually be left at default (0.4).
 12. `ISCALE_MIN` and `ISCALE_MAX`: Boundaries for the scale factor used to vary the size of the variance of the proposal density in order to meet the `IACCEPT` condition.
 On very rare occasions, the OFV varies widely, and these options may need to be reduced (e.g., `ISCALE_MIN=0.001 ISAMPLE_MAX=1000`).
 Remember to revert these parameters to default operation on the next `$EST` step:
@@ -859,8 +866,6 @@ It starts the OMEGAs at 1.5 times the initial values, and then control the rate 
 `CONSTRAIN=7` performs simulated annealing on both OMEGA (zero and non-zero) and SIGMA parameters.
 To mimic Monolix, set OMEGA and additive SIGMA inital values to 0.66, and proportional SIGMA to 0.22.
 Default 1.
-16. `MAPITERS`: 
-17. `NOPRIOR`: 
 </details>
 
 <details>
@@ -912,17 +917,30 @@ To turn MAP assessment assist on the first iteration.
 It is recommended to set initial variability estimates high in order for SAEM to have the possibility to explore the domain.
 
 ```verilog
+Without annealing
+
 $OMEGA 1.0
-$SIMGA 1.0 ; additive
+$SIGMA 1.0 ; additive
 $SIGMA 0.3 ; proportional
+
+With annealing
+
+$OMEGA 0.66
+$SIGMA 0.66 ; additive
+$SIGMA 0.22 ; proportional
 ```
-### Robustness {#sec-em-robust}
+
+By default, no MAP estimation is performed with SAEM (`MAPITERS=0`).
+To get good individual parameter values near the mode of the posterior density for the first iteration of SAEM, you can set `MAPITERS=1`.
+
+### Tweaks for geeks
+
+::: {.panel-tabset}
+#### Robustness {#sec-em-robust}
 
 The EM-methods are already quite robust in that they can handle many different estimation problems.
 
-To get good individual parameter values near the maximum of the posterior density for the first iteration of SAEM, you can set `MAPITERS=1`.
-
-#### Use full OMEGA blocks {#sec-em-robust-omega-block}
+##### Use full OMEGA blocks {#sec-em-robust-omega-block}
 
 Full OMEGA blocks are generally preferred in EM-based estimation, as EM handles them more reliably than FOCE [@bauerNONMEMTutorialPartTwo2019].
 Including off-diagonal elements does not compromise stability, on the contrary, off-diagonals allow the algorithms to more efficiantly search the parameter space.
@@ -930,7 +948,7 @@ Off-diagonals should therefore not be fixed to 0 just because of high RSEs (>100
 If they were fixed in a previous FOCE run due to rounding errors or failed `$COVARIANCE` steps, they should be estimated in EM.
 Only consider FIX:ing off-diagonals back to 0 if EM OFV is highly variable, or if the covariance matrix is non-positive-definite.
 
-#### For uncertain initial estimates {#sec-em-robust-init}
+##### For uncertain initial estimates {#sec-em-robust-init}
 
 * PsN program `parallel_retries` can be useful
 * `METHOD=CHAIN`: Create random initial values of THETAS and OMEGAS.
@@ -959,7 +977,7 @@ $ESTIMATION METHOD=IMP
 With SAEM: If the option `MCETA` is set to greater than `ISAMPLE_M1`, then for the first iteration of SAEM, `ISAMPLE_M1`, `ISAMPLE_M2`, and `ISAMPLE_M3` will be set to `MCETA`, to facilitate a robust initial search for reasonable parameter values.
 </details>
 
-#### THETAs with no ETAs
+##### THETAs with no ETAs
 
 One alternative is to **use ETAs anyways but fix the OMEGA to a low value like 0.0025**
 This corresponds to 5% for log-normally distributed parameters.
@@ -967,6 +985,9 @@ With this method, the EM algorithm can be used, and the variability is kept smal
 
 <details>
 <summary>If using SAEM: `$ANNEAL`</summary>
+
+::: {.callout-caution title="TODO"}
+:::
 If you run **SAEM** and suspect that your inital values might be far from the solution, you could consider **simulated annealing**.
 By default, NONMEM use gradient methods which are adequate when starting close to the solution.
 But if you start far away, annealing is more suitable.
@@ -1062,7 +1083,7 @@ File Aneal.f90
 
 </details>
 
-#### Convergence test  {#sec-em-robust-ctest}
+##### Convergence test  {#sec-em-robust-ctest}
 
 As stated before, you need to set up a criteria for when the EM-method should stop (aka "converge" or "terminate").
 Basically what this does is set up the instructions for a linear regression that tests if the slope is not statistically different from zero.
@@ -1096,9 +1117,9 @@ An alternative method to convergence testing is to set `NBURN` to a very high nu
 It is better to provide a large `NBURN` number, and end it at will with ctrl-K, or allow the convergence tester to end it, rather than to have a small `NBURN` number and have the burn-in phase end prematurely.
 :::
 
-#### Refinement step {#sec-em-robust-refinement}
+##### Refinement step {#sec-em-robust-refinement}
 
-When using the IMP, IMPMAP or SAEM estimation, it is adviced to include a "refinement step" in the form of an additional subsequent `$ESTIMATION METHOD=IMP` record to obtain more precise final estimates.
+When using EM methods, it is adviced to include a "refinement step" in the form of an additional subsequent `$ESTIMATION METHOD=IMP EONLY=1` record to obtain more precise final estimates.
 This will take the population parameter estimates and calculate more precise estimates of the objective function value (just the E-step).
 
 <details>
@@ -1120,9 +1141,9 @@ Assessing the **mean and variance of the iterated OFV** will give a more accurat
 4. To maintain continuity of the estimation from the previous step.
 </details>
 
-### Reproducibility {#sec-em-repr}
+#### Reproducibility {#sec-em-repr}
 
-#### Random number generator (RNG) {#sec-em-repr-ranmethod}
+##### Random number generator (RNG) {#sec-em-repr-ranmethod}
 
 NONMEM’s internal RNG is controlled with `RANMETHOD=[n|M|S|m|P]`.
 
@@ -1135,7 +1156,7 @@ That added stability often lets you reach reliable results with IMP using fewer 
 When `RANMETHOD=S` is combined with a t-distribution (DF>0), `DF` should be limited to 1, 2, 4, 5, 8, or 10.
 However, discretizing the *d.f.* does not work if you use the `IACCEPT=0.0` to automatically determine the `DF`.
 
-In this case, **<span class="red-underline">use `IACCEPTL`</span>** as described in @sec-imp instead of `DF`.
+In this case, **<span class="red-underline">use `IACCEPTL`</span>** as described for IMP instead of `DF`.
 :::
 
 Running NONMEM in parallel?
@@ -1143,13 +1164,13 @@ Append `P` so every subject keeps its own seed path, independent of the number o
 
 So, the final recommended `RANMETHOD` for IMP becomes: `RANMETHOD=3S2P`
 
-#### Seed for RNG {#sec-em-repr-seed}
+##### Seed for RNG {#sec-em-repr-seed}
 
 Using the `SEED` option is a requirement for reproducible results.
 You can use any SEED number, and the default is `SEED=14455`.
 Its also advisable to keep the same SEED throughout your analysis, i.e., in all the models, to track the model fit and not depend so much on stochastic happenstance.
 
-#### Parallel NONMEM {#sec-em-repr-parallel}
+##### Parallel NONMEM {#sec-em-repr-parallel}
 
 For stochastic methods (MCETA, DIRECT, IMP, IMPMAP, and SAEM), distribution of subjects to different nodes for computations is dependent on number of processors.
 This leads to differences in sequences of random numbers generated during computations that could make the results dependent on the number of processors.
@@ -1172,7 +1193,13 @@ When running models, use your own parafile: `-parafile=my_own_parafile.pnm`
 * MAP-estimation is always parallelized properly.
 * Always use `RANMETHOD=P`
 
-### Speed {#sec-em-speed}
+#### Speed {#sec-em-speed}
+
+::: {.callout-caution title="TODO"}
+:::
+
+:::
+:::
 
 ## When to use which
 
@@ -1257,12 +1284,6 @@ Will first result in estimation of the problem by the first order method, using 
 Next, the first order conditional estimation method will be implemented, using as initial parameters the final estimates of THETA, OMEGA, and SIGMA from the previous analysis.
 
 Up to 20 estimations may be performed within a problem.
-
-## Using priors
-
-A bit unintuitively, we end with the discussion on PRIORs, since PRIORs do come into effect PRIOR to the estimation method.
-
-The way to specify PRIORs is through `$PRIOR` @chankwongPriorInformationPopulation2020.
 
 ## References
 
