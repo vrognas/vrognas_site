@@ -20,31 +20,35 @@ Aim to operate at **A-energy** by having clear strategies and ownership.
 
 ## Synthesis of meeting workflow (ref Alfred Sloan)
 
-1. Send out invitation 1 week in advance
+1. Send out invitation ~1 week in advance (No agenda = no meeting!)
+    1. Announce purpose/topic and desired outcome.
+    2. List agenda topics as questions.
+    3. Compile and attach "reading guide"^[SE: "läsanvisning"].
+    This is the context that everyone needs to be aware of for a meaningful discussion.
+2. Have the meeting.
     1. Announce purpose/topic.
-    2. List agenda topics as questions
-    3. Attach reference material
-2. Have the meeting
-    1. Announce purpose/topic.
-    2. List agenda topics as questions (and **follow the agenda**)
-        1. IF(your meeting): Present (do 90% of talking) and ask if there is anything that needs to be clarified
-        2. IF(not your meeting): Listen (do 10% of talking) and ask clarifying questions
-    3. Anything we need to change/add?
-    4. Review last meeting’s !/+/Δ
-    5. Take notes
+    2. Begin with 20--30 minutes of silent study time to ensure everyone has digested the reading guide.
+    3. List agenda topics as questions (and **follow the agenda**)
+        1. If it's **your meeting**: Present (do 90% of talking) and ask if there is anything that needs to be clarified
+        2. If it's **<span class="red-underline">not</span> your meeting**: Listen (do 10% of talking) and ask clarifying questions
+    4. Anything we need to change/add?
+    5. Review last meeting’s !/+/Δ
+    6. Take notes on these things:
       * Decisions
       * Action-points (What should be done, by when, and who's responsible?)
         * MoSCoW
-    6. 5min to wrap up/summarize
+    7. 5 min to wrap up/summarize
         1. !: Align on decisions and action list.
-        1. +: “What did we do well?”  
-        2. Δ: “What do we want to do differently?”
+        2. +: “What did we do well?”  
+        3. Δ: “What do we want to do differently?”
+    8. Decide **time of next meeting** (if needed)
 3. Leave
-4. Immediately send an email to **one attendee**.
+4. **Immediately send an email** to attendees.
     1. Summarize discussion and conclusion.
-    2. Spell out work assignments, next meeting on the subject or to study an issue.
-    3. Specify deadlines and accountable persons.
-    4. Send copy (CC) to all.
+    2. Spell out the **Action Memo** (deadlines and accountable persons)
+    3. Inform on **next meeting** on the subject.
+    4. Put **one attendee as sole recipient**.
+    5. Send copy (CC) to all other attendees.
 
 ### My own take
 
@@ -78,25 +82,27 @@ If you feel that you are floundering (as every student sometimes does), ask your
 * As high as possible: 155 -> 120 -> 105 -> 100
 * End on odd number
 
-## 8 Rules to Run Effective Meetings
+## Things to try for effective meetings
 
-1. Keep meetings small (6--8 people).
-2. Standing meetings reduce duration by 34%.
-3. Send a detailed agenda before the meeting.
-State the purpose and desired outcomes for every attendee. No agenda means no meeting.
-4. Keep one seat open at every meeting.
-This way, decisions will always consider the impact on the end user.
-5. Use AI transcription tools to quickly capture key meeting points and action items.
-6. Implement Maker-Manager Schedules.
+* Keep meetings small (6--8 key people).
+* Standing meetings can reduce duration (increase effectiveness).
+* Use AI transcription tools to quickly capture key meeting points and action items.
+* Encourage discussion, debate, brainstorming, and questioning!
+Be structured before (agenda) and after (memo) the meeting, but unstructured within the agenda.
+* Implement [Maker-Manager schedules](https://paulgraham.com/makersschedule.html).
 Managers thrive on 30-minute blocks for decisions.
 Makers need 3--4 hour blocks for deep work-schedule afternoon meetings for makers to protect creative flow.
-7. Use the 4-Bullet Update.
-Update with 4 points: what was done, requested asks, current blockers, and future improvements.
-Save hours in recurring meetings.
-8. Finish meetings with Action Memos detailing decisions, owners, and deadlines.
+    * Maker: **deep work** in the AM (8--12), Manager: **meetings** in the PM (13--17).
+    * Meetings mostly need to fall into a fairly narrow range of time slots to be reasonable for everyone.
+    That means almost all meetings land in a 2 h time slot each day and the number than can be scheduled are limited so if it doesn't have to be a meeting, it isn't.
+* Use the 4-bullet update:
+    * Here's what you asked me to do...
+    * Here's what I did...
+    * Here are the current risk/blockers (if any)...
+    * If given more time, I'd do this...
 
 ## Questions NGN (eNGiNe)
 
-* Need-to-know: Answer will affect conclusion (Major objection)
-* Good-to-know: Answer could affect conclusion (Other concern)
-* Nice-to-know: Answer won't affect conclusion (avoid asking this question)
+* Need-to-know: Answer will affect conclusion (Major objection, **always ask this**)
+* Good-to-know: Answer could affect conclusion (Other concern, **ask if there is time**)
+* Nice-to-know: Answer won't affect conclusion (**avoid asking this**)
