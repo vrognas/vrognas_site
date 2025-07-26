@@ -64,7 +64,7 @@ Kristoffersson AN^\*^, **Rognås V^\*^**, Brill MJE^\*^, et al. (^\*^shared firs
 
 *Clin Microbiol Infect* (2020)
 
-[https://doi.org/10.1016/j.cmi.2020.03.016](https://doi.org/10.1016/j.cmi.2020.03.016)
+<https://doi.org/10.1016/j.cmi.2020.03.016>
 
 #### Objectives
 
@@ -96,7 +96,7 @@ High colistin exposure was associated with poor kidney function, and was not rel
 
 **Rognås V** et al.
 
-[https://www.page-meeting.org/default.asp?abstract=9869](https://www.page-meeting.org/default.asp?abstract=9869)
+<https://www.page-meeting.org/default.asp?abstract=9869>
 
 ![](images/phd-2-scr.avif)
 
@@ -104,14 +104,21 @@ High colistin exposure was associated with poor kidney function, and was not rel
 
 **Rognås V** et al.
 
-[https://www.page-meeting.org/default.asp?abstract=9052](https://www.page-meeting.org/default.asp?abstract=9052)
+<https://www.page-meeting.org/default.asp?abstract=9052>
 
 ![](images/phd-3-bi.avif)
 
-### An integrated semi-mechanistic model to predict the outcome of drug-target effects on the erythropoietic system
+### A semi-mechanistic population pharmacokinetic-pharmacodynamic model to assess downstream drug-target effects on erythropoiesis
 
-**Rognås V** et al.
+**Rognås SV** et al.
 
-[https://www.page-meeting.org/?abstract=10044](https://www.page-meeting.org/?abstract=10044)
+*J Pharmacokinet Pharmacodyn* (2025)
 
-![](images/phd-4-ery.avif)
+<https://doi.org/10.1007/s10928-025-09990-7>
+
+Erythropoiesis is a complex process that results in the production of erythrocytes from hematopoietic stem cells in the bone marrow.
+This work aimed to develop a population pharmacokinetic-pharmacodynamic (PKPD) model describing erythropoiesis and hemoglobin synthesis following bitopertin, an inhibitor of glycine transporter 1 (GlyT1), administration.
+Data from a Phase 1 clinical trial in 67 healthy subjects administered bitopertin (10, 30, or 60 mg) or placebo for 120 days were analyzed.
+Hematological assessments included erythrocyte and reticulocyte counts, immature reticulocyte fraction, hemoglobin concentration, and mean corpuscular hemoglobin.
+The proposed semi-mechanistic model, which leverages data and physiological knowledge, was found to adequately simultaneously describe the dose- and time-dependent changes in the biomarkers.
+The framework was used to illustrate the potential outcome of hypothetical drug-target interactions at distinct stages of erythropoiesis and hemoglobin synthesis, exemplifying its usefulness in a clinical setting.
