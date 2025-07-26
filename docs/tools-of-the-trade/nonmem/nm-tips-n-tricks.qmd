@@ -45,7 +45,7 @@ touch file.sig
 Here's a list:
 
 | Action | Description | Filename |
-| :--- | :--- | :--- |
+|:-------|:------------|:---------|
 | Print toggle | Monitor estimation progress | `print.sig` |
 | Paraprint toggle | Monitor parallel processing traffic | `paraprint.sig` |
 | Next | Move on to next estimation mode or next estimation. NONMEM grinds a couple of iterations more and then it terminates nicely as if the maximum number of function evaluations had been reached. | `next.sig` |
