@@ -40,15 +40,15 @@ Find your chapter, share tales, and build alliances to sharpen your practice.
 
 ## Journals
 
-* CPT
-* CPT: Pharmacometrics & Systems Pharmacology
-* J Clin Pharm
-* Journal of Pharmacokinetics and Pharmacodynamics
-* TCP
-* AAPS
-* BJCP
-* Clin Pharm Drug Rev
-* Clin PK
+* Clinical Pharmacology & Therapeutics (CPT) <https://ascpt.onlinelibrary.wiley.com/journal/15326535>
+* CPT: Pharmacometrics & Systems Pharmacology (CPT: PSP) <https://ascpt.onlinelibrary.wiley.com/journal/21638306>
+* The Journal of Clinical Pharmacology (J Clin Pharm), <https://accp1.onlinelibrary.wiley.com/journal/15524604>
+* Journal of Pharmacokinetics and Pharmacodynamics (JPKPD), <https://link.springer.com/journal/10928>
+* Translational and Clinical Pharmacology (TCP), <https://tcpharm.org/>
+* The AAPS Journal (AAPS), <https://link.springer.com/journal/12248>
+* British Journal of Clinical Pharmacology (BJCP), <https://bpspubs.onlinelibrary.wiley.com/journal/13652125>
+* Clinical Pharmacology in Drug Development (Clin Pharm Drug Dev), <https://accp1.onlinelibrary.wiley.com/journal/21607648>
+* Clinical Pharmacokinetics (Clin PK), <https://link.springer.com/journal/40262>
 
 ## Websites
 
