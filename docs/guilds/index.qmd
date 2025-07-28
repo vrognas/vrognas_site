@@ -40,8 +40,15 @@ Find your chapter, share tales, and build alliances to sharpen your practice.
 
 ## Journals
 
+* CPT
 * CPT: Pharmacometrics & Systems Pharmacology
+* J Clin Pharm
 * Journal of Pharmacokinetics and Pharmacodynamics
+* TCP
+* AAPS
+* BJCP
+* Clin Pharm Drug Rev
+* Clin PK
 
 ## Websites
 
