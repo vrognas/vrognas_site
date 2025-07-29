@@ -13,9 +13,9 @@ subtitle: "Pharmacometric Engineer"
 
 **Use the <span class="red-underline">search in the upper-right</span> to quickly find what you want.**
 
-This site is both my public home on the web and my long‑horizon research notebook.
-I use it to track skills, projects, and ideas as they evolve.
-I hope you and other colleagues in pharmacometrics, clinical pharmacology, and data science find it useful too.
+👋 Hi! I use this site to track my projects and knowledge as it evolves.
+In the **Encylopædia**, I've crystallized knowledge that I want to keep as a memo for my future self.
+I hope you and others in **pharmacometrics, clinical pharmacology, and data science** find it helpful too.
 ❤️
 
-If you want to support my work, you can share it on social media or [buy me a coffe ☕️](https://buymeacoffee.com/vrognas)!
+If you want to support my work, you can share it on social media or [buy me a coffee ☕️](https://buymeacoffee.com/vrognas)!
