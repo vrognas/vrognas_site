@@ -87,6 +87,82 @@ Weibull\*COV *forces* proportional hazard (Credit: Andrew Hooker)
 * logistic=expit=inverse logit
   * logit≈probit(scaled)
 
+```verilog
+; This is a comment.
+
+$PROBLEM Example ; Declare a problem called Example
+
+$INPUT
+  ID ; We need a variable that uniquely defines a subject
+  TIME ; (Independent variable) We need a non-decreasing (within ID) TIME variable
+  DV ; (Dependent variable), our observation values
+  EVID ; Event ID
+  COV=DROP ; Exclude variables with the DROP alias
+
+$DATA dataset.csv IGNORE=@
+
+$SUBROUTINES ADVAN13 TRANS1
+
+$PK
+
+; Assignment & Arithmetic
+; =======================
+  
+  Z = 1 ; Assign to variable z
+  j = 10 + 2 - 3
+  a = 11.54 / (2.3 * 3.1)
+  b = 2**3 ; Exponentiation
+
+  ; Control Flow Statements & Operators
+  ; ===================================
+
+  ; Single-line if statement
+  IF (z == a) b = 4 ; Conditions always need parentheses.
+
+  IF (z /= a) THEN ; z not equal to a
+    ; Other symbolic comparisons are < > <= >= == /=
+    b = 4
+  ELSEIF (z .GT. a) THEN ; z greater than a
+    ; Text equivalents to symbol operators are .LT. .GT. .LE. .GE. .EQ. .NE.
+    b = 6
+  ELSEIF (z < a) THEN ; "THEN" must be on this line.
+    b = 5 ; Execution block must be on a new line.
+  ELSE
+    b = 10
+  ENDIF
+
+  IF ((x < c .AND. v >= a .OR. z == z)) THEN ; Boolean operators.
+    IF (.TRUE.) THEN
+      b = 1
+    ENDIF
+  ENDIF
+
+; Built-in Functions
+    ; ==================
+
+    ; NMTRAN has many functions/subroutines intrinsic to the language.
+    ; Examples -
+    v = LOG(x)            ! log base e.
+
+$DES ; Differential Equation System
+
+$ERROR ; Should really be called "$RESULT"
+
+  Y = IPRED + EPS(1)
+
+$THETA (0, 1, 10)
+
+$OMEGA 0 FIX
+
+$SIGMA 09
+
+$ESTIMATION METHOD=0 POSTHOC
+
+$COVARIANCE MATRIX=S
+
+$TABLE ID DV TIME
+```
+
 ## References
 
 ::: {#refs}
