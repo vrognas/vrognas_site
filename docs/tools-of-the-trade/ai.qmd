@@ -6,4 +6,59 @@ date: last-modified
 :::{.callout-caution title="Under construction"}
 :::
 
-Large-language models (LLMs).
+* Large-language models (LLMs).
+  * Open AI
+    * GPT o4-mini
+    * GPT o3
+  * Anthropic
+    * Claude 4 Opus
+    * Claude 4 Sonnet
+
+![](images/llm_r.jpeg){#fig-llm-r}
+
+## Use
+
+### Prompt Engineering
+
+XML tags
+
+```xml
+<task>
+1. Output an overview of every single dimension of my request.
+2. Find points of uncertainty.
+3. Ask as many clarifying questions as possible.
+</task>
+
+<request>
+
+</request>
+
+<context>
+
+</context>
+```
+
+### Tips
+
+* Start with brainstorming/planning, then move on to implementation
+* Commit often with small focused commits
+* Always write test so that the AI can iterate
+* New problem, new chat. Clear the context; start fresh.
+
+### R packages
+
+* acquaint
+* btw
+
+### Other
+
+* MCP
+* RAG
+
+
+## References
+
+* Simon P. Couch
+
+::: {#refs}
+:::
