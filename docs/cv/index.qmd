@@ -1,12 +1,9 @@
 ---
-title: "Curriculum Vitae"
+title: "📜 Curriculum Vitae"
+description: "Pharmacometric Engineer, Data Scientist at [qPharmetra](https://www.qpharmetra.com), PhD student in Pharmacometrics at [Uppsala University](https://www.uu.se/en). Expert in pharmacokinetic/pharmacodynamic modeling using NONMEM, and antimicrobial resistance research."
 ---
 
-I am currently working as a Data Scientist at [qPharmetra](https://www.qpharmetra.com), while pursuing a PhD in Pharmacometrics at [Uppsala University](https://www.uu.se/en).
-
-## Experience
-
-
+## 🛞 Experience
 
 * **Data Scientist**, [*qPharmetra*](https://www.qpharmetra.com) (Mar 2025--*present*)
 * **Pharmacometric Assessor**, [*Swedish Medical Products Agency (Läkemedelsverket)*](https://www.lakemedelsverket.se/en) (Nov 2023--Oct 2024)
@@ -14,7 +11,7 @@ I am currently working as a Data Scientist at [qPharmetra](https://www.qpharmetr
 * **Clinical Pharmacometrician Intern**, [*F. Hoffmann-La Roche Ltd*](https://www.roche.com) (Sep 2021--Feb 2022)
 * **Teacher (Pharmacokinetics & Statistics)**, [*Uppsala University*](https://www.uu.se) (Nov 2017--Aug 2021)
 
-## Degrees
+## 🎓 Degrees
 
 * [**Master of Science in Engineering**](http://www.uu.se/en/admissions/master/selma/studieplan/?planId=405&pKod=TKT2Y&lasar=), *Uppsala University* (2017)
   * Master Thesis: [*Customer Based Business Development: Strategic Challenges for a Small Research-Based Spin-Off Enterprise*](http://www.diva-portal.org/smash/get/diva2:1137512/FULLTEXT01.pdf)
@@ -29,9 +26,9 @@ I am currently working as a Data Scientist at [qPharmetra](https://www.qpharmetr
 
 * [**School of Entrepreneurship**](https://cie.uu.se/industrial-engineering-and-management/education/entrepreneurship/), *Uppsala University* (2017)
 
-## Projects
+## 🛠️ Projects
 
-### Scientific Work 📚
+### 🧪 Science
 
 - [Population pharmacokinetics of colistin and the relation to survival in critically ill patients infected with colistin susceptible and carbapenem-resistant bacteria](https://doi.org/10.1016/j.cmi.2020.03.016)
 - [Colistin Resistance Development Following Colistin-Meropenem Combination Therapy Versus Colistin Monotherapy in Patients With Infections Caused by Carbapenem-Resistant Organisms](https://doi.org/10.1093/cid/ciz1146)
@@ -40,17 +37,17 @@ I am currently working as a Data Scientist at [qPharmetra](https://www.qpharmetr
 - [Turn-over model characterizing effect of colistin on serum-creatinine in critically ill patients](https://www.page-meeting.org/?abstract=9869)
 - [Bounded Integer approach to model time-varying SOFA scores from patients with carbapenem resistant infections](https://www.page-meeting.org/?abstract=9052)
 
-### Software Projects 📝
+### 💻 Software
 
 - [*vscode-nmtran*](https://github.com/vrognas/vscode-nmtran): Extending Visual Studio Code with NMTRAN (NONMEM) language support
 - [*vmisc*](https://github.com/vrognas/vmisc): A handy toolbox of custom R-functions, crafted over the years
 - [*MPAcolors*](https://github.com/vrognas/MPAcolors): ggplot2-compatible functions for colors used by the Swedish Medical Products Agency (MPA)
 
-#### Contributions 🤝
+#### 🤝 Contributions
 
 - [*PharmPy*](https://pharmpy.github.io/): Pioneering tools and libraries for the pharmacometrics community
 
-## Awards and Scholarships
+## 🏅 Awards and Scholarships
 
 * **The Pharmaceutical Student Union’s Study Council Award for Student Treatment**, *Pharmaceutical Student Union* (2021)
 
@@ -66,7 +63,7 @@ I am currently working as a Data Scientist at [qPharmetra](https://www.qpharmetr
 
 * **Gahn Foundation for Students of Chemistry**, *Uppsala University* (2014)
 
-## Courses
+## 🤓 Courses
 
 ### Pharmacometrics/Modeling/Engineering
 
