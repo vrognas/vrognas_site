@@ -10,19 +10,20 @@ date: last-modified
 
 Create and share beautiful images of your source code.
 
-[https://carbon.now.sh](https://carbon.now.sh)
+<https://carbon.now.sh>
 
 ### R
 
 #### Naming
 
-https://indrajeetpatil.github.io/second-hardest-cs-thing/
+<https://indrajeetpatil.github.io/second-hardest-cs-thing/>
 
-https://style.tidyverse.org/syntax.html#sec-objectnames
+<https://style.tidyverse.org/syntax.html#sec-objectnames>
 
 How good a name is can be assessed by how detailed the accompanying comment needs to be.
 
 Good names:
+
 * Precise (but not too long)
 * Concise
 * Meaningful
