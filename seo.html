@@ -8,27 +8,139 @@
   "image": "https://www.vrognas.com/images/vrognas_full.png",
   "url": "https://www.vrognas.com",
   "jobTitle": "Pharmacometric Engineer",
-  "description": "Clinical pharmacometrics engineer, open-source contributor, and PhD student at Uppsala University.",
+  "description": "Pharmacometric Engineer and Data Scientist specializing in population pharmacokinetic/pharmacodynamic modeling, clinical pharmacology, and antimicrobial resistance research. PhD student at Uppsala University with expertise in NONMEM modeling and open-source software development.",
+  "knowsAbout": [
+    "Pharmacometrics",
+    "Clinical Pharmacology", 
+    "Population Pharmacokinetics",
+    "Pharmacodynamics",
+    "NONMEM",
+    "Antimicrobial Resistance",
+    "Drug Development",
+    "Regulatory Science",
+    "R Programming",
+    "Python"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Master of Science in Engineering",
+      "credentialCategory": "degree",
+      "educationalLevel": "Master's degree",
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "Uppsala University"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Advanced Methods in NONMEM 7.5",
+      "credentialCategory": "certificate",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "ICON plc"
+      }
+    }
+  ],
+  "award": [
+    "The Pharmaceutical Student Union's Study Council Award for Student Treatment (2021)",
+    "Börjessons äldre Scholarship, Uppsala University (2018)",
+    "Hans Linds Scholarship, Uppsala University (2017)",
+    "Gahn Foundation for Students of Chemistry, Uppsala University (2014)"
+  ],
   "worksFor": {
     "@type": "Organization",
     "name": "qPharmetra",
     "url": "https://www.qpharmetra.com"
   },
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Uppsala University",
-    "url": "https://www.uu.se"
-  },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Uppsala University",
+      "url": "https://www.uu.se"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Colorado Boulder",
+      "url": "https://www.colorado.edu"
+    }
+  ],
   "nationality": { "@type": "Country", "name": "Sweden" },
   "sameAs": [
-  "https://www.linkedin.com/in/vrognas/",
-  "https://github.com/vrognas",
-  "https://scholar.google.com/citations?user=RBJi1XQAAAAJ"
+    "https://www.linkedin.com/in/vrognas/",
+    "https://github.com/vrognas",
+    "https://scholar.google.com/citations?user=RBJi1XQAAAAJ",
+    "https://orcid.org/0000-0002-7837-2467",
+    "https://marketplace.visualstudio.com/publishers/vrognas"
+  ],
+  "subjectOf": [
+    {
+      "@type": "CreativeWork",
+      "name": "Population pharmacokinetics of colistin and the relation to survival in critically ill patients infected with colistin susceptible and carbapenem-resistant bacteria",
+      "url": "https://doi.org/10.1016/j.cmi.2020.03.016",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Clinical Microbiology and Infection"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "A semi-mechanistic population pharmacokinetic-pharmacodynamic model to assess downstream drug-target effects on erythropoiesis", 
+      "url": "https://doi.org/10.1007/s10928-025-09990-7",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Journal of Pharmacokinetics and Pharmacodynamics"
+      }
+    }
   ]
 }
 </script>
 
-<!-- Organization & WebSite graphs—kept tiny -->
+<!-- Key Professional Organizations -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization", 
+  "@id": "https://www.qpharmetra.com/#organization",
+  "name": "qPharmetra",
+  "url": "https://www.qpharmetra.com",
+  "description": "Leading pharmacometric consulting company specializing in population PK/PD modeling and regulatory support",
+  "employee": {
+    "@id": "https://www.vrognas.com/#me"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollegeOrUniversity",
+  "@id": "https://www.uu.se/#university", 
+  "name": "Uppsala University",
+  "url": "https://www.uu.se",
+  "description": "Sweden's oldest university, founded in 1477, renowned for pharmaceutical and medical research",
+  "alumnus": {
+    "@id": "https://www.vrognas.com/#me"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GovernmentOrganization",
+  "@id": "https://www.lakemedelsverket.se/#agency",
+  "name": "Swedish Medical Products Agency", 
+  "alternateName": "Läkemedelsverket",
+  "url": "https://www.lakemedelsverket.se",
+  "description": "Sweden's national regulatory authority for medicinal products and medical devices",
+  "employee": {
+    "@id": "https://www.vrognas.com/#me"
+  }
+}
+</script>
+
+<!-- Personal Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -36,7 +148,10 @@
   "@id": "https://www.vrognas.com/#organization",
   "name": "Viktor Rognås",
   "url": "https://www.vrognas.com",
-  "logo": "https://www.vrognas.com/images/vrognas_full.png"
+  "logo": "https://www.vrognas.com/images/vrognas_full.png",
+  "founder": {
+    "@id": "https://www.vrognas.com/#me"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -46,6 +161,123 @@
   "@id": "https://www.vrognas.com/#website",
   "url": "https://www.vrognas.com",
   "name": "Viktor Rognås",
-  "publisher": { "@id": "https://www.vrognas.com/#organization" }
+  "publisher": { "@id": "https://www.vrognas.com/#organization" },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.vrognas.com/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- BreadcrumbList Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://www.vrognas.com"
+  }]
+}
+</script>
+
+<!-- Education Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationEvent",
+  "@id": "https://www.vrognas.com/#education-uppsala-masters",
+  "name": "Master of Science in Engineering",
+  "description": "Chemical Engineering with specialization in Pharmaceutical Science",
+  "educationLevel": "Master's degree",
+  "startDate": "2015",
+  "endDate": "2017",
+  "provider": {
+    "@type": "CollegeOrUniversity", 
+    "name": "Uppsala University",
+    "url": "https://www.uu.se"
+  },
+  "recipient": {
+    "@id": "https://www.vrognas.com/#me"
+  }
+}
+</script>
+
+<!-- Professional Awards Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Award",
+  "@id": "https://www.vrognas.com/#award-pharmaceutical-union-2021",
+  "name": "The Pharmaceutical Student Union's Study Council Award for Student Treatment",
+  "description": "Award recognizing exceptional dedication to student support during COVID-19 pandemic, demonstrating leadership in educational excellence.",
+  "datePublished": "2021",
+  "issuedBy": {
+    "@type": "Organization",
+    "name": "Pharmaceutical Student Union",
+    "parentOrganization": {
+      "@type": "CollegeOrUniversity",
+      "name": "Uppsala University"
+    }
+  },
+  "recipient": {
+    "@id": "https://www.vrognas.com/#me"
+  }
+}
+</script>
+
+<!-- Professional Certification Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org", 
+  "@type": "Certification",
+  "@id": "https://www.vrognas.com/#certification-nonmem-advanced",
+  "name": "Advanced Methods in NONMEM 7.5",
+  "description": "Advanced pharmacometric modeling certification in NONMEM software",
+  "datePublished": "2022",
+  "issuedBy": {
+    "@type": "Organization",
+    "name": "ICON plc",
+    "url": "https://www.iconplc.com"
+  },
+  "recipient": {
+    "@id": "https://www.vrognas.com/#me"
+  }
+}
+</script>
+
+<!-- FAQ Schema for common pharmacometrics questions -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What is pharmacometrics?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pharmacometrics is the science of quantitative pharmacology that uses mathematical models to describe and predict drug behavior in patients. It combines pharmacokinetics (what the body does to the drug) and pharmacodynamics (what the drug does to the body) to optimize drug development and dosing."
+    }
+  }, {
+    "@type": "Question", 
+    "name": "What is NONMEM used for?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "NONMEM (NONlinear Mixed Effects Modeling) is specialized software for population pharmacokinetic/pharmacodynamic modeling. It's used to analyze drug concentration-time data from clinical trials to understand variability between patients and optimize dosing regimens."
+    }
+  }, {
+    "@type": "Question",
+    "name": "How is pharmacometrics used in drug development?",
+    "acceptedAnswer": {
+      "@type": "Answer", 
+      "text": "Pharmacometrics supports drug development by predicting optimal doses, identifying patient populations likely to benefit, designing efficient clinical trials, and supporting regulatory submissions with quantitative evidence of drug efficacy and safety."
+    }
+  }]
 }
 </script>
