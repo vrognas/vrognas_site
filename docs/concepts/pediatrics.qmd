@@ -158,18 +158,18 @@ They could cause problems with extrapolation after refitting the model with stan
 
 ##### Maturation
 
-In neonates the maturation level of eliminating organs influences the estimates and in adults the body composition will affect them.
+In neonates, the maturation level of eliminating organs influences the estimates, and in adults, the body composition will affect them.
 Data from pediatric development programs are often too limited to confirm whether allometric exponents differ from theoretical values.
 EMA MWP (Methodology Working Party) considers the use of fixed exponents both scientifically justified and practical when developing popPK models in children.
 
-In lower ages (**< 2 years**) there are also maturation functions that come into play.
-For these pediatric patients it is <span class="red-underline">**important to include maturation function(s)**</span> to describe pediatric PK (@lst-cl-mat).
+In lower ages (**< 2 years**), there are also maturation functions that come into play.
+For these pediatric patients, it is <span class="red-underline">**important to include maturation function(s)**</span> to describe pediatric PK (@lst-cl-mat).
 
 ```verilog {#lst-cl-mat lst-cap="Renal maturation [@rhodinHumanRenalFunction2009]. PMA from the input data."}
 CLR = THETA(1) * EXP(ETA(1))
 CLR = CLR * (WT / 70)**0.75 ; Allometric scaling
 
-TM_50 = 47.7
+TM_50 = 47.7 ; Weeks
 Hill = 3.4
 CLR = CLR * PMA**Hill / (TM_50**Hill + PMA**Hill) ; Maturation
 ```
@@ -178,13 +178,21 @@ The maturation half-life (TM~50~) is fixed to the literature value of 47.7 weeks
 The distribution (mean, [min--max]) of PMA (weeks) in this study population was (518, [57--1652]).
 Assuming renal maturation time differs in pre-term infants, a separate TM~50~ value could be estimated for them if the current model poorly describes this subgroup.
 
-![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full term infant with a PMA of 40 weeks](images/pediatric-gfr.png){#fig-gfr}
+![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full-term infant with a PMA of 40 weeks](images/pediatric-gfr.png){#fig-gfr}
 
 ::: {.callout-warning}
 # Maturation functions and allometric exponents should not be estimated simultaneously
 
-This is due to high correlation between body weight and age in pediatric patients [@bonateEffectCollinearityParameter1999].
+This is due to the high correlation between body weight and age in pediatric patients [@bonateEffectCollinearityParameter1999].
 :::
+
+Schwartz (bedside) formula:
+
+```verilog {#lst-cl-bedside lst-cap="Schwartz bedside formula [@schwartzNewEquationsEstimate2009]"}
+CLR = 0.413 * HT / SCr ; mL/min/1.73 m2
+```
+
+Where height is in cm, and SCr is in mg/dL.
 
 #### Step 2: Prepare a data set with pediatric simulation subjects
 
