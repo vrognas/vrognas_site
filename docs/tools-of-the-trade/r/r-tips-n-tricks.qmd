@@ -3,6 +3,33 @@ title: "R Tips-n-Tricks"
 date: last-modified
 ---
 
+## Using the native pipe (`|>`)
+
+Which dplyr verbs will work with the native pipe, and which won't?
+
+Checking their args: if the first argument is something like `.data=` or `data=` or `x=` (all expecting a `data.frame`-like object), then it can be used immediately after `|>`.
+
+```r
+n_distinct(mtcars$gear)
+# [1] 3
+
+mtcars |> with(n_distinct(gear))
+# [1] 3
+
+mtcars |>
+  summarize(ngears = n_distinct(gear)) |>
+  pull(ngears)
+# [1] 3
+
+mtcars |> _$gear |> n_distinct()
+# [1] 3
+
+mtcars$gear |> n_distinct()
+# [1] 3
+```
+
+<https://stackoverflow.com/questions/77599582/very-basic-question-about-the-native-pipe-and-tidyverse>
+
 ## How to transfer your library when updating R
 
 [https://rstats.wtf/maintaining-r.html#how-to-transfer-your-library-when-updating-r](https://rstats.wtf/maintaining-r.html#how-to-transfer-your-library-when-updating-r)
@@ -42,8 +69,8 @@ date: last-modified
 * Roxygen2
 * Usethis
 * Devtools
-* ”future” — r-package for cluster and parallell in r
-* ”furrr” — future:ize the purrr-functions
+* "future" — R package for cluster and parallel computing in R
+* "furrr" — future:ize the purrr-functions
 
 ## Useful functions
 
@@ -58,7 +85,7 @@ filter(
 )
 ```
 
-### Find first occurence of a non-NA
+### Find first occurrence of a non-NA
 
 ```r
 df$col1[which.max(!is.na(col2))]
@@ -154,10 +181,9 @@ plot(layers)
     * [Paul van der Laken](https://paulvanderlaken.com/2018/05/21/r-tips-and-tricks/)
     * [Benjamin Guiastrennec](https://guiastrennec.gitbooks.io/r-notes/content/)
 
-
 * txtProgressBar
     * (single=3)
-* If write files on cluster for use in next step
+* If writing files on a remote server for use in the next step
     * `sys.sleep(3)`
 * Bang Bang – How to program with dplyr
     * [Markus Berroth: How to program with dplyr (2019)](https://www.statworx.com/de/blog/bang-bang-how-to-program-with-dplyr/)
