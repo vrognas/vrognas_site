@@ -176,7 +176,6 @@ plot(layers)
 ## Misc
 
 * Use `sink()` to record output of script
-* Use `locate()` instead of `select(col, everything())`
 * R-tips
     * [Paul van der Laken](https://paulvanderlaken.com/2018/05/21/r-tips-and-tricks/)
     * [Benjamin Guiastrennec](https://guiastrennec.gitbooks.io/r-notes/content/)
