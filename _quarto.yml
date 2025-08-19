@@ -306,3 +306,4 @@ format:
         - kind: float
           reference-prefix: Video
           key: vid
+          caption-location: margin
