@@ -6,17 +6,9 @@ keywords:
   - Pediactric drug development
 ---
 
-If you have ever felt uncomfortable with pharmacometric analysis in pediatric patients, this page is for you.
-Let's walk through the basic concepts, so that you can confidently ask pointy questions during the next poster session.
-
-The aim of this page is to:
-
-* Give a **brief overview** of the available estimation methods and sensible tweaks/options
-* Give an **intuitive explanation** of the estimation methods on a conceptual level
-* Give a sense of **when to choose which** estimation method
+If you have ever felt uncomfortable with pharmacometric analysis in pediatric patients, this page is for you, let's walk through the basic concepts.
 
 First things first: <span class="red-underline">**Children are not small adults**</span>.
-So pat yourself on the back for not assuming this and thus being uncomfortable with your ignorance.
 Children have quite different physiology (@fig-small-adult), which must be taken into condsideration when evaluating PK and PD.
 
 ![A child and an adult human male scaled to the same height. Imagine how smart kids would be at this (brain) size. Another observation is the liver size, which would give them a much larger metabolic capacity that adults, which is true when scaled to body weight (more on this later).](images/small-adult.png){#fig-small-adult}
@@ -27,7 +19,7 @@ The differences in child--adult physiology can be further visualized through the
 
 {{< video videos/hands-over-head.mp4 title="Arm-length/head-size ratio" >}}
 
-Video showing the difference in arm-length/head-size ratio between child and adult.
+Difference in arm-length/head-size ratio between child and adult.
 [Link to original video](https://www.tiktok.com/@dawnwalker_/video/7082077181089893678)
 
 :::
@@ -57,7 +49,7 @@ However, the terminology in @tbl-age-term is generally accepted [@committeeonfet
 | Postnatal (or "chronologial") age | PNA | Time since birth | Days, weeks, months, years |
 | Postmenstrual age | PMA | Applied from 0--1 years of chronological age. A 33-week, 1-day GA infant who is 10 weeks, 5 days PNA would have a PMA of 43 weeks, 6 days. |
 | Corrected (or "adjusted") [gestational] age | CGA | Time since *expected date of delivery* (see @eq-cga). Used to describe children up to 3 years of age who were born preterm. |
-| Conceptional age | | Time between conception and birth. Very accurate for *in-vitro* fertilization. <span class="red-underline">**Should not be used**.</span> |
+| Conceptional age | | Time between conception and birth. Very accurate for *in-vitro* fertilization. |
 
 : Age terminology during the perinatal period {#tbl-age-term tbl-colwidths="[30, 5, 65]"}
 
@@ -86,14 +78,14 @@ Sometimes, it may be more appropriate to collect data over broad age ranges and 
 The study design and statistical plans should consider changing numbers of patients within a given age group, as patients grow older.
 :::
 
-| Group | Age  | Comment | 
-| :---- | :--- | :------ |
-| Preterm neonates | birth--27 days (CGA, @eq-cga) | < 39 weeks gestation |
+| Group            | Age                           | Comment                |
+| :--------------- | :---------------------------- | :--------------------- |
+| Preterm neonates | birth--27 days (CGA, @eq-cga) | < 39 weeks gestation   |
 | Term neonates    | birth--27 days (CGA, @eq-cga) | 39--41 weeks gestation |
-| Infants          | 28 days--23 months | |
-| Children         | 2--11 years | Often divided into 2--5 years, and 6--11 years.|
-| Adolescents^[Not the same as "teenager"! A teenager refers to chronological ages 13--19, while adolescent is a developmental age classification.] | 12--⁠17 years | PK often similar to adults. |
-| Adults           | ≥ 18 years | Acts as reference. |
+| Infants          | 28 days--23 months            |                        |
+| Children         | 2--11 years                   | Often divided into 2--5 years, and 6--11 years.|
+| Adolescents^[Not the same as "teenager"! A teenager refers to chronological ages 13--19, while adolescent is a developmental age classification.] | 12--⁠17 years  | PK often similar to adults. |
+| Adults           | ≥ 18 years                    | Acts as reference.     |
 
 : Approximate pediatric age groups. Neonates = "newborn infants". {#tbl-age-group}
 
@@ -101,50 +93,58 @@ The study design and statistical plans should consider changing numbers of patie
 # A 17.9 year old belongs to the adolescent age group, until the 18^th^ birthday
 :::
 
-## Pediatric weight terminology {#sec-wt}
+## On the weight of children {#sec-wt}
 
-Using the Fenton (2013) growth chart (https://doi.org/10.1186/1471-2431-13-59).
+One perhaps surprising fact is that neonates **loose weight after birth**, then regain it.
+Less surprisingly, females usually weigh less than males.
+Typical weight bands of children are:
 
-* bBW: birth body weight
-* AGA: Appropriate for gestational age
-* SGA: Small for gestational age
+| Age group        | Weight (kg)  | Comment                   |
+| :--------------- | :----------- | :------------------------ |
+| Preterm neonates | 0.5--4       | Using the Fenton growth chart @fentonSystematicReviewMetaanalysis2013 |
+| Term neonates    | 2.5--4.5     |                           |
+| Infants          | 5--15        |                           |
+| Children         | 15--30       |                           |
+| Adolescents      | 30+          | Approaching adult weights |
 
-Neonates first **loose weight after birth**, then regain it.
+: Approximate weights per age groups. {#tbl-age-group}
 
 ## Pediatric PK studies {#sec-pk}
 
-Relative bioavailability comparisons of pediatric and adult formulations should typically be performed in adults.
-PK studies in the pediatric population are generally conducted in patients with the disease.
+Relative bioavailability comparisons of pediatric and adult formulations should typically be done in adults.
+In contrast, PK studies in children are generally done in patients with the disease, warranting a clinically relevant dose to always be used.
 
-For drugs with linear PK in adults, a single-dose in pediatric patients may be sufficient for dose selection.
-Sparse sampling in multidose clinical studies could confirm these findings.
-However, steady-state studies are necessary if adults exhibit dose- or time-dependent PK or PD.
+For drugs with linear PK in adults, a single-dose study in pediatric patients may be sufficient for dose selection. with sparse sampling in multidose clinical studies to confirm the findings.
+However, when adults exhibit dose- or time-dependent PK or PD, pediatric steady-state studies become necessary.
 
-Pediatric dosing is typically based on mg/kg body weight, up to the maximum adult dose.
-Although surface area-guided dosing might be preferred, measuring the height or length, especially in infants and young children, is often prone to errors.
-For medications with a narrow therapeutic window, such as those used in oncology, surface area-guided dosing may be necessary.
+Pediatric dosing is often expressed as mg/kg, up to the maximum adult dose.
+Although body surface area (BSA)-guided dosing might be preferred, it is often prone to measurement errors in height, particularly in infants and young children. 
+Still, for medications with a narrow therapeutic window, such as many oncology drugs, BSA-guided dosing may be necessary.
 
 ## PK extrapolation is often feasible {#sec-pk-extrapolation}
 
-Whether PK extrapolation is feasible or not, is **ultimately a clinical question**.
-If an indication can be assumed to behave similarly in adult and pediatric populations, PK extrapolation ("bridging") can be used @ichE11APediatricExtrapolation2024.
+The feasibility of PK extrapolation is ultimately a **clinical question**. 
+If an indication can be assumed to behave similarly in adult and pediatric populations, PK extrapolation (or "bridging") can be used @ichE11APediatricExtrapolation2024.
 However, there could be cases in which a dedicated pediatric study is warranted (e.g., safety concerns or clinical presentation of the disease).
 
 The relevant PK metric(s) linked to efficacy and safety and the exposure-response relationship should first be established in adults.
-In pediatric patients, we want to start with a **clinically relevant dose**.
-Pediatric PK should then be comparable to that of adults.
+As stated before, we want to start with a **clinically relevant dose**.
+The goal is to have pediatric **exposure (<span class="red-underline">not dose</span>) comparable to that of adults**.
 
-The plan is to predict exposure in a pediatric age group (@tbl-age-group), collect data, refine predictions for the next younger group, and repeat.
-Extrapolation generally includes a population PK model and exposure-response models.
-These models may be independent of adult models if there are adequate data or they may be developed in combination with adult data.
+The general procedure is to predict exposure in a pediatric age group (@tbl-age-group), collect data, refine predictions for the next younger group, and repeat.
+These models may be independent of adult models if there are adequate pediatric data, or they may be developed in combination with adult data.
+
+See the [EMA PIP QA (2025)](https://www.ema.europa.eu/en/human-regulatory-overview/research-development/paediatric-medicines-research-development/paediatric-investigation-plans/paediatric-investigation-plans-questions-answers) for more information.
 
 ### Allometric scaling
 
-A previously developed adult PK model can be extrapolated to pediatric patients using allometry, which relates volume of distribution and clearance to body size.
+A previously developed adult PK model can be extrapolated to pediatric patients using allometry, which relates volume of distribution ($\V$) and clearance ($\CL$) to body size.
 Researchers have studied and applied this theory across various animal species and human subjects using a wide range of compounds [@boxenbaumInterspeciesScalingAllometry1982].
-Volume of distribution scales proportionally with body size (@lst-v), while clearance scales less proportionally (@lst-cl).
+$\V$ scales proportionally with body size (@lst-v), while $\CL$ scales less proportionally (@lst-cl).
 It has proven robust and reliable, except in some targeted therapies and large molecule biologics.
 Allometric scaling should not be used on rate constants.
+
+Below is a three-step guide on how to apply allometric scaling, inspired by [Nathan Teuscher](https://open.spotify.com/episode/1QZPnryXK1csg5GFigjGkv?si=6929e54ecbfd45a0).
 
 #### Step 1: Refit the final adult data with allometric exponents
 
@@ -157,7 +157,7 @@ V1 = V1 * (WT / 70)**1 ; Allometric scaling
 V2 = THETA(2) * EXP(ETA(2))
 V2 = V2 * (WT / 70)**1 ; Allometric scaling
 ```
-Scale each clearance parameter, including total clearance (CL) and inter-compartmental clearance values such as Q.
+Scale each clearance parameter, including total clearance ($\CL$) and inter-compartmental clearance values such as $Q$.
 
 ```verilog {#lst-cl lst-cap="Allometric scaling for Clearance"}
 CL = THETA(1) * EXP(ETA(1))
@@ -184,7 +184,7 @@ The new model should give slightly different estimates for the volume and cleara
 If your model already includes `WT` as a covariate, perhaps centered on the median `WT` instead of 70 kg, replace it with the standard allometric exponents [@lst-v; @lst-cl].
 Estimated exponents based on median WT can skew results when extrapolating beyond the observed range.
 
-By converting to the standard `WT` of 70 kg and using standard exponent values, you leverage over 50 years of experience from other compounds when simulating outside adult data.
+By converting to the standard `WT` of 70 kg and using standard exponent values, you rely on robust research when simulating outside adult data.
 Additionally, if `AGE` or `WT` is included elsewhere in the model, remove these covariates.
 They could cause problems with extrapolation after refitting the model with standard allometric exponents.
 
@@ -199,7 +199,14 @@ Data from pediatric development programs are often too limited to confirm whethe
 EMA MWP (Methodology Working Party) considers the use of fixed exponents both scientifically justified and practical when developing popPK models in children.
 
 In lower ages (**< 2 years**), there are also maturation functions that come into play.
-For these pediatric patients, it is <span class="red-underline">**important to include maturation function(s)**</span> to describe pediatric PK (@lst-cl-mat).
+For these pediatric patients, it is <span class="red-underline">**important to include maturation function(s)**</span> to describe pediatric PK.
+One maturation function is the Schwartz (bedside) formula (@lst-cl-bedside), where height is in cm, and SCr is in mg/dL.
+
+```verilog {#lst-cl-bedside lst-cap="Schwartz bedside formula [@schwartzNewEquationsEstimate2009]"}
+CLR = 0.413 * HT / SCr ; mL/min/1.73 m2
+```
+
+But more commonly, the Rhodin formula is seen (@lst-cl-mat).
 
 ```verilog {#lst-cl-mat lst-cap="Renal maturation [@rhodinHumanRenalFunction2009]. PMA from the input data."}
 CLR = THETA(1) * EXP(ETA(1))
@@ -222,36 +229,28 @@ Assuming renal maturation time differs in pre-term infants, a separate TM~50~ va
 This is due to the high correlation between body weight and age in pediatric patients [@bonateEffectCollinearityParameter1999].
 :::
 
-Schwartz (bedside) formula:
+#### Step 2: Prepare a data set of pediatric simulation subjects
 
-```verilog {#lst-cl-bedside lst-cap="Schwartz bedside formula [@schwartzNewEquationsEstimate2009]"}
-CLR = 0.413 * HT / SCr ; mL/min/1.73 m2
-```
-
-Where height is in cm, and SCr is in mg/dL.
-
-#### Step 2: Prepare a data set with pediatric simulation subjects
-
-Use either [NHANES](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023) (US subjects 2--18 years), or a growth chart (e.g., WHO).
-The WHO data is preferred for non-US studies or for pediatric patients less than 2 years.
+To generate pediatric simulation subjects, two main data sources are commonly used: [NHANES](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023) (U.S. subjects, 2--18 years) and growth charts (e.g., WHO or CDC).
 
 ::: {.callout-warning}
-# [NHANES](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023) has limited data for younger age groups
+# NHANES has limited data for younger age groups
 
-Because [NHANES](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023) involves sampling individual subjects, there may be limited data in certain categories---especially for younger patients.
-Therefore, for younger patients---usually those under 2 years, but sometimes under 6---it’s better to use the CDC or WHO growth charts instead.
+While NHANES provides individual-level subject data, its coverage of younger age groups is limited.
+This makes it less reliable for simulations involving infants or very young children.
+In such cases---typically for patients under 2 years of age---consider using growth charts.
 :::
 
 Create at least 250 simulation subjects in each age group of interest (@tbl-age-group).
 You can adjust these age groups based on the disease condition or target patient population.
 
-The growth charts provide the distribution of WT for various ages and statures of children.
+The growth charts provide the distribution of `WT` for various ages and statures of children.
 To create a simulation subject:
 
 1. Generate a uniform distribution of ages in each age-group, with the desired number of subjects.
 2. Create 250 simulated male subjects and 250 female subjects in the same age-group (e.g., 12--18 years).
 3. For each of these 500 subjects, identify the mean and standard deviation for `WT` based on their specific `AGE` and `SEX`.
-4. Randomly sample a single WT using the mean and standard deviation from the growth chart.
+4. Randomly sample a single `WT` using the mean and standard deviation from the growth chart.
 
 This process creates a set of simulation subjects with `WT`, age group, and `SEX`.
 
@@ -294,7 +293,9 @@ The reference range in the adult population (median and outer percentiles of obs
 
 ![Adult reference range (5^th^--95^th^ percentiles and median) highlighted in the background.](images/pediatric-box.png){#fig-box}
 
-## PD extrapolation is often not feasible
+See the [EMA M&S QA (2023)](https://www.ema.europa.eu/en/human-regulatory-overview/research-and-development/scientific-guidelines/clinical-pharmacology-and-pharmacokinetics/modelling-and-simulation-questions-and-answers) for more information.
+
+## PD extrapolation is often <span class="red-underline">not</span> feasible
 
 Unlike PK, PD models are disease- and therapy-specific, making direct extrapolation challenging.
 Thus, **response (E-R) and PD models from adults may not apply to children**.
@@ -307,11 +308,10 @@ Considerations include:
 * Sensitivity adjustments: Use conservative parameters (e.g., lower EC~50~).
 * Clinical caution: Without pediatric data, PD extrapolations are empirical.
 
-## References
+One area where I have seen efficacy extrapolation being done is for bacterial infections.
+However, any PD extrapolation should always be discussed together with a medical expert.
 
-* [EMA M&S QA (2023)](https://www.ema.europa.eu/en/human-regulatory-overview/research-and-development/scientific-guidelines/clinical-pharmacology-and-pharmacokinetics/modelling-and-simulation-questions-and-answers)
-* [EMA PIP QA (2025)](https://www.ema.europa.eu/en/human-regulatory-overview/research-development/paediatric-medicines-research-development/paediatric-investigation-plans/paediatric-investigation-plans-questions-answers)
-* [National Health and Nutrition Examination Survey (NHANES)](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023)
+## References
 
 ::: {#refs}
 :::
