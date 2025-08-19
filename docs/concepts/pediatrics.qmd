@@ -6,15 +6,34 @@ keywords:
   - Pediactric drug development
 ---
 
-**Children are not small adults**.
-They have quite different physiology (@fig-small-adult), which must be taken into condsideration when evaluating PK and PD.
+If you have ever felt uncomfortable with pharmacometric analysis in pediatric patients, this page is for you.
+Let's walk through the basic concepts, so that you can confidently ask pointy questions during the next poster session.
 
-![A child and an adult human male scaled to the same height.](images/small-adult.png){#fig-small-adult}
+The aim of this page is to:
 
-Thi can be further visualized through how the relationship between the size of their head and the lengths of their arms is changing as the babies grow and become adults (See video below, credit: [dawnwalker_ on TikTok](https://www.tiktok.com/@dawnwalker_)).
+* Give a **brief overview** of the available estimation methods and sensible tweaks/options
+* Give an **intuitive explanation** of the estimation methods on a conceptual level
+* Give a sense of **when to choose which** estimation method
+
+First things first: <span class="red-underline">**Children are not small adults**</span>.
+So pat yourself on the back for not assuming this and thus being uncomfortable with your ignorance.
+Children have quite different physiology (@fig-small-adult), which must be taken into condsideration when evaluating PK and PD.
+
+![A child and an adult human male scaled to the same height. Imagine how smart kids would be at this (brain) size. Another observation is the liver size, which would give them a much larger metabolic capacity that adults, which is true when scaled to body weight (more on this later).](images/small-adult.png){#fig-small-adult}
+
+The differences in child--adult physiology can be further visualized through the arm-length/head-size ratio difference (See @vid-size).
+
+::: {#vid-size}
+
+{{< video videos/hands-over-head.mp4 title="Arm-length/head-size ratio" >}}
+
+Video showing the difference in arm-length/head-size ratio between child and adult.
+[Link to original video](https://www.tiktok.com/@dawnwalker_/video/7082077181089893678)
+
+:::
+
 The age-related biological changes that occur as an individual matures from birth up to adulthood, is called **ontogeny**.
-
-{{< video videos/hands-over-head.mp4 >}}
+The term ontogeny is especially used when talking about metabolic (enzyme) developement.
 
 The use of *model informed drug development* (MIDD) approaches in pediatric drug development is highly recommended due to:
 
