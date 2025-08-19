@@ -302,3 +302,7 @@ format:
     crossref:
       lst-prefix: "Code"
       lst-title: "Code"
+      custom: 
+        - kind: float
+          reference-prefix: Video
+          key: vid
