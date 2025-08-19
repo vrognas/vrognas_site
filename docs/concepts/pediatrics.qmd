@@ -1,18 +1,35 @@
 ---
 title: "Pediatric Pharmacometrics"
-date: last-modified
+date: "2025-08-19"
+keywords: 
+  - Pharmacometrics
+  - Pediactric drug development
 ---
+
+**Children are not small adults**.
+They have quite different physiology (@fig-small-adult), which must be taken into condsideration when evaluating PK and PD.
+
+![A child and an adult human male scaled to the same height.](images/small-adult.png){#fig-small-adult}
+
+Thi can be further visualized through how the relationship between the size of their head and the lengths of their arms is changing as the babies grow and become adults (See video below, credit: [dawnwalker_ on TikTok](https://www.tiktok.com/@dawnwalker_)).
+The age-related biological changes that occur as an individual matures from birth up to adulthood, is called **ontogeny**.
+
+{{< video videos/hands-over-head.mp4 >}}
 
 The use of *model informed drug development* (MIDD) approaches in pediatric drug development is highly recommended due to:
 
 * Practical and ethical **limitations in data collection**.
 * Ability to **quantify the effects of growth and maturation** by leveraging data from literature and older patients @ichE11R1ClinicalInvestigation2017.
 
-The age-related biological changes that occur as an individual matures from birth up to adulthood, is called "ontogeny".
+## How do you measure the age of a child? {#sec-age}
 
-## Pediatric age terminology {#sec-age}
+This is not as straight-forward as you might think!
+For everyday use, we would use the chronological age (i.e., time since birth).
+However, the development of a human begins well before birth.
+While the concept of *when* childhood begins is debated in social and ethical contexts (e.g., abortion), here we adopt the biological and regulatory definitions used in pediatric drug development.
 
 Pediatric age terminology is commonly inconsistent.
+This is why it is important the be specific in how age is calculated.
 However, the terminology in @tbl-age-term is generally accepted [@committeeonfetusandnewbornAgeTerminologyPerinatal2004].
 
 | Term  | Abbreviation | Comment |
@@ -25,11 +42,11 @@ However, the terminology in @tbl-age-term is generally accepted [@committeeonfet
 
 : Age terminology during the perinatal period {#tbl-age-term tbl-colwidths="[30, 5, 65]"}
 
-When patients are very young, age is often related to the mothers last menstrual period.
+When patients are very young (< 1 year after birth), age is often related to the mothers last menstrual period.
 This is done because most women know when their last period began but not when ovulation occurred.
 This method of estimating the date of delivery is reliable as long as menstrual dates are remembered accurately (@fig-age-term).
 
-![Perinatal Age Terminology. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, postnatal age](images/pediatric-age.png){#fig-age-term}
+![Perinatal age terminology. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, postnatal age](images/pediatric-age.png){#fig-age-term}
 
 **Methods of determining GA should be <span class="red-underline">clearly stated</span>** so that the variability inherent in these estimations can be considered when outcomes are interpreted.
 The convention for calculating GA when the date of conception is known is to add 2 weeks to the conceptional age.
@@ -39,7 +56,7 @@ $$
 \text{Corrected gestational age}_\text{weeks} = \text{PNA}_\text{weeks} - (40 - \text{GA}_\text{weeks})
 $$ {#eq-cga}
 
-### Age classification of pediatric patients {#sec-age-class} 
+### Age groups {#sec-age-groups} 
 
 Age groups are to some extent <span class="red-underline">**arbitrary**</span>, but a classification such as the one in @tbl-age-group provides a basis for thinking about study design.
 The identification of **which ages to study should be medicinal product-specific and <span class="red-underline">justified</span>**.
@@ -56,7 +73,7 @@ The study design and statistical plans should consider changing numbers of patie
 | Term neonates    | birth--27 days (CGA, @eq-cga) | 39--41 weeks gestation |
 | Infants          | 28 days--23 months | |
 | Children         | 2--11 years | Often divided into 2--5 years, and 6--11 years.|
-| Adolescents      | 12--⁠17 years | PK often similar to adults. |
+| Adolescents^[Not the same as "teenager"! A teenager refers to chronological ages 13--19, while adolescent is a developmental age classification.] | 12--⁠17 years | PK often similar to adults. |
 | Adults           | ≥ 18 years | Acts as reference. |
 
 : Approximate pediatric age groups. Neonates = "newborn infants". {#tbl-age-group}
@@ -262,13 +279,6 @@ The reference range in the adult population (median and outer percentiles of obs
 
 Unlike PK, PD models are disease- and therapy-specific, making direct extrapolation challenging.
 Thus, **response (E-R) and PD models from adults may not apply to children**.
-This is because children and adults have different physiology that PD-wise cannot be easily extrapolated (@fig-small-adult).
-
-![Children are not small adults. They have quite different physiology when you look closer. However, this mostly has implications for PD, not so much for PK.](images/small-adult.png){#fig-small-adult}
-
-Babies are still developing, which can be visualized in part the relationship between the size of their head and the lengths of their arms is changing as the babies grow and become adults (See video below).
-
-{{< video videos/hands-over-head.mp4 >}}
 
 Unless there's clinical efficacy data in pediatric patients, be *very* cautious to extrapolate response or PD models from adults to pediatric patients.
 
