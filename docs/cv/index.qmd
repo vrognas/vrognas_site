@@ -1,7 +1,9 @@
 ---
-title: "📜 Curriculum Vitae"
+title: "About"
 description: "Pharmacometric Engineer, Data Scientist at [qPharmetra](https://www.qpharmetra.com), PhD student in Pharmacometrics at [Uppsala University](https://www.uu.se/en). Expert in pharmacokinetic/pharmacodynamic modeling using NONMEM, and antimicrobial resistance research."
 ---
+
+# 📜 Curriculum Vitae
 
 ## 🛞 Experience
 
