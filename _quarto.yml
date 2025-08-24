@@ -23,7 +23,7 @@ website:
   bread-crumbs: true
   navbar:
     left:
-      - text: "CV"
+      - text: "About"
         href: docs/cv/index.qmd
       - text: "Portfolio"
         href: docs/portfolio/index.qmd
