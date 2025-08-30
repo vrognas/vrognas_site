@@ -87,7 +87,7 @@ Weibull\*COV *forces* proportional hazard (Credit: Andrew Hooker)
 * logistic=expit=inverse logit
   * logit≈probit(scaled)
 
-```verilog
+```nmtran
 ; This is a comment.
 
 $PROBLEM Example ; Declare a problem called Example

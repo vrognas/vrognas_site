@@ -50,7 +50,7 @@ The "best" model isn’t necessarily the one with the lowest objective function.
 
 When used in nonmem 7.5, a recommended example/setup would be (as shown on page 152 of nm750.pdf)
 
-```verilog
+```nmtran
 $SIZES ISAMPLEMAX=250
 ... 
 

@@ -13,7 +13,7 @@ date: last-modified
 
 ### EXIT OCCURS DURING SEARCH FOR ETA
 
-```verilog
+```nmtran
 0PRED EXIT CODE = 1
 0INDIVIDUAL NO.       4   ID= 4.00000000000000E+00   (WITHIN-INDIVIDUAL) DATA 
 REC NO.   2

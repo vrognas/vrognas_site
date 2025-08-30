@@ -154,7 +154,7 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
 <details>
   <summary>NONMEM code: Exponential distribution</summary>
   
-  ```verilog
+  ```nmtran
   $SUBROUTINES ADVAN=13
   $MODEL COMP=(HAZARD) ; Comartment for integration of hazard
   
@@ -190,7 +190,7 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
 <details>
   <summary>NONMEM code: Weibull distribution</summary>
   
-  ```verilog
+  ```nmtran
   $SUBROUTINES ADVAN=13
   $MODEL COMP=(HAZARD) ; Comartment for integration of hazard
   
@@ -235,7 +235,7 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
 <details>
   <summary>NONMEM code: Lognormal distribution</summary>
   
-  ```verilog
+  ```nmtran
   $SUBROUTINES ADVAN=13
   $MODEL COMP=(HAZARD) ; Comartment for integration of hazard
   
@@ -285,7 +285,7 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
 <details>
   <summary>NONMEM code: (Generalized) log-logistic distribution</summary>
   
-  ```verilog
+  ```nmtran
   $SUBROUTINES ADVAN=13
   $MODEL COMP=(HAZARD) ; Comartment for integration of hazard
   
@@ -333,7 +333,7 @@ Interestingly, base-R uses the "standard" parameterization with scale parameters
 <details>
   <summary>NONMEM code: TTE simulation for VPC</summary>
   
-  ```verilog
+  ```nmtran
   $SUBROUTINES ADVAN=13
   $MODEL COMP=(HAZARD) ; Comartment for integration of hazard
   ...

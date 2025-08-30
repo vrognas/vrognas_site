@@ -150,7 +150,7 @@ Below is a three-step guide on how to apply allometric scaling, inspired by [Nat
 
 Scale each volume parameter, including central volume and peripheral volumes.
 
-```verilog {#lst-v lst-cap="Allometric scaling for Volume"}
+```nmtran {#lst-v lst-cap="Allometric scaling for Volume"}
 V1 = THETA(1) * EXP(ETA(1))
 V1 = V1 * (WT / 70)**1 ; Allometric scaling
 
@@ -159,7 +159,7 @@ V2 = V2 * (WT / 70)**1 ; Allometric scaling
 ```
 Scale each clearance parameter, including total clearance ($\CL$) and inter-compartmental clearance values such as $Q$.
 
-```verilog {#lst-cl lst-cap="Allometric scaling for Clearance"}
+```nmtran {#lst-cl lst-cap="Allometric scaling for Clearance"}
 CL = THETA(1) * EXP(ETA(1))
 CL = CL * (WT / 70)**0.75 ; Allometric scaling
 
@@ -202,13 +202,13 @@ In lower ages (**< 2 years**), there are also maturation functions that come int
 For these pediatric patients, it is <span class="red-underline">**important to include maturation function(s)**</span> to describe pediatric PK.
 One maturation function is the Schwartz (bedside) formula (@lst-cl-bedside), where height is in cm, and SCr is in mg/dL.
 
-```verilog {#lst-cl-bedside lst-cap="Schwartz bedside formula [@schwartzNewEquationsEstimate2009]"}
+```nmtran {#lst-cl-bedside lst-cap="Schwartz bedside formula [@schwartzNewEquationsEstimate2009]"}
 CLR = 0.413 * HT / SCr ; mL/min/1.73 m2
 ```
 
 But more commonly, the Rhodin formula is seen (@lst-cl-mat).
 
-```verilog {#lst-cl-mat lst-cap="Renal maturation [@rhodinHumanRenalFunction2009]. PMA from the input data."}
+```nmtran {#lst-cl-mat lst-cap="Renal maturation [@rhodinHumanRenalFunction2009]. PMA from the input data."}
 CLR = THETA(1) * EXP(ETA(1))
 CLR = CLR * (WT / 70)**0.75 ; Allometric scaling
 

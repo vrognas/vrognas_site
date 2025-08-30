@@ -145,7 +145,7 @@ For explicitness, `METHOD=CONDITIONAL` is preferred.
 Sensible options to add from start:
 <details>
 <summary>Show code</summary>
-```verilog
+```nmtran
 $ESTIMATION METHOD=CONDITIONAL
             INTERACTION # <1>
             MAXEVAL=99999
@@ -177,7 +177,7 @@ By default, `SIGLO=SIGL`
 If issues arise, then first try these options:
 <details>
 <summary>Show code</summary>
-```verilog
+```nmtran
 NSIG=2 # <1>
 NOABORT # <2>
 NOHABORT # <3>
@@ -202,7 +202,7 @@ The relevant default options for FOCE are:
 
 <details>
 <summary>Show code</summary>
-```verilog
+```nmtran
 $ESTIMATION METHOD=CONDITIONAL
             ABORT
             ATOL=12
@@ -258,7 +258,7 @@ Similar to FOCE but evaluates the second order derivative (Hessian) instead of t
 Should really be called SOCE (second order conditional estimation).
 LAPLACE is specified as either `LAPLACE` (most common) or `LAPLACIAN`, as an **option to FOCE**.
 
-```verilog
+```nmtran
 $ESTIMATION METHOD=CONDITIONAL LAPLACE
 ```
 
@@ -285,7 +285,7 @@ This can be done using `LDF`, which stands for "loss of degrees of freedom".
 
 **If you <span class="red-underline">cannot</span> MU-model all THETAs**, the most accurate is to have `LDF(n)` be the number of to-be-estimated THETAs involved in `MU_n`:
 
-```verilog
+```nmtran
 " LDF(3) = 2.0
 MU_3 = THETA(4) + LOG(WT) * THETA(5)
 CL = EXP(MU_3 + ETA(3))
@@ -362,7 +362,7 @@ The `MCETA` option tells NONMEM to test alternative starting points and keep the
 If the algorithm ends up in local minima despite `MCETA`, try increasing the value (e.g. from 100 to 1000).
 Since `MCETA` is most impactful during the early iterations[^RB], another option to still benefit from the robustness of `MCETA` but not impact the estimation speed too much, is to only use `MCETA` for the first 200 iterations or so:
 
-```verilog
+```nmtran
 $ESTIMATION METHOD=1
             MCETA=1000
             MAXEVAL=200
@@ -389,7 +389,7 @@ Reducing the required significant digits might also increase estimation speeds.
 
 Additionally, the classical NONMEM methods can be facilitated using an EM method by first having a rapid EM method such as iterative two stage be performed first, with the resulting parameters being passed on to the FOCE method, to speed up the analysis:
 
-```verilog
+```nmtran
 $ESTIMATION METHOD=ITS
             INTERACTION
 $ESTIMATION METHOD=CONDITIONAL
@@ -443,7 +443,7 @@ Is considered deterministic, as opposed to other EM-methods.
 
 ITS is specified by:
 
-```verilog
+```nmtran
 $ESTIMATION METHOD=ITS
             INTERACTION
             NITER=50 # <1>
@@ -454,7 +454,7 @@ Normally, it is used as a **rapid exploratory pre-analysis method** to facilitat
 
 <details>
 <summary>Show example</summary>
-```verilog
+```nmtran
 $ESTIMATION METHOD=ITS
             INTERACTION
             LAPLACE
@@ -474,7 +474,7 @@ $ESTIMATION METHOD=IMP
 
 <details>
 <summary>AUTO=1</summary>
-```verilog
+```nmtran
 METHOD=ITS
 INTERACTION
 CTYPE=3
@@ -490,7 +490,7 @@ CALPHA=0.05
 
 NONMEM has a direct Monte Carlo sampling method which is specified like this:
 
-```verilog
+```nmtran
 $ESTIMATION METHOD=DIRECT
             INTERACTION
             ISAMPLE=10000
@@ -518,7 +518,7 @@ This gives the mean and variance of the ETAs that are most likely given the data
 <details>
 <summary>Show IMP options</summary>
 
-```verilog
+```nmtran
 $ESTIMATION METHOD=IMP
             INTERACTION
             NITER=1000 # <1>
@@ -574,7 +574,7 @@ Default is `ISCALE_MIN=0.1 ISCALE_MAX=10` for importance sampling.
 <details>
 <summary>AUTO=1</summary>
 
-```verilog
+```nmtran
 $ESTIMATION METHOD=IMP
             AUTO=1
 
@@ -608,7 +608,7 @@ Normally, if you specify a prior you want to use it, so set `NOPRIOR=0`.
 
 `AUTO=2` is same as `AUTO=1`, with additional:
 
-```verilog
+```nmtran
 GRDQ=-1.0 # <1>
 DERCONT=1 # <2>
 RANMETHOD=3S2P
@@ -632,7 +632,7 @@ But sometimes in complex^[Complex PK/PD problems are those that require ODEs or 
 
 The iterations for the initial `ITS` step seems in this case to be quite stable with some artifacts:
 
-```verilog
+```nmtran
 $ESTIMATION METHOD=ITS
             INTERACTION
             LAPLACE
@@ -695,7 +695,7 @@ OPTIMIZATION WAS NOT COMPLETED
 
 The IMP step can be less stable:
 
-```verilog
+```nmtran
 iteration 120 OBJ= 4314.8310660241377 eff.= 446. Smpl.= 1000. Fit.= 0.96389
 iteration 121 OBJ= 4326.9079856676717 eff.= 448. Smpl.= 1000. Fit.= 0.96409
 iteration 122 OBJ= 4164.6649529423103 eff.= 479. Smpl.= 1000. Fit.= 0.96392 # <1>
@@ -746,7 +746,7 @@ It is thus like IMP, with the added assistance of MAP estimation on every E-step
 <details>
 <summary>AUTO=1</summary>
 
-```verilog
+```nmtran
 $ESTIMATION METHOD=IMPMAP
             AUTO=1
 
@@ -797,7 +797,7 @@ Thus, it is recommended to choose large initial values for the OMEGAs and the SI
 <details>
 <summary>Show SAEM options</summary>
 
-```verilog
+```nmtran
 $ESTIMATION METHOD=SAEM
             AUTO=1
 
@@ -865,7 +865,7 @@ Default 1.
 <details>
 <summary>AUTO=1</summary>
 
-```verilog
+```nmtran
 $ESTIMATION METHOD=SAEM
             AUTO=1
 
@@ -899,7 +899,7 @@ $ESTIMATION METHOD=SAEM
 
 `AUTO=2` is the same as `AUTO=1`, with the additional options:
 
-```verilog
+```nmtran
 MAPITERS=1 MCETA=100
 ```
 
@@ -910,7 +910,7 @@ To turn MAP assessment assist on the first iteration.
 
 It is recommended to set initial variability estimates high in order for SAEM to have the possibility to explore the domain.
 
-```verilog
+```nmtran
 Without annealing
 
 $OMEGA 1.0
@@ -952,7 +952,7 @@ Applied only for the estimation step
 **Monte Carlo Direct Sampling** can help IMP if the first iteration fails due to MAP issues.
 Here a few iterations of DIRECT define the sampling distribution for IMP:
 
-```verilog
+```nmtran
 $ESTIMATION METHOD=DIRECT
             INTERACTION
             ISAMPLE=10000
@@ -1039,7 +1039,7 @@ File custom_anneal.f90
 ```
 </details>
 
-```verilog
+```nmtran
 $SUBROUTINES OTHER=custom_anneal.F90 # <1>
 $PK
 MU_1 = THETA(1)
@@ -1068,7 +1068,7 @@ $ESTIMATION METHOD=IMP
 1. The custom annealing is implemented using `$SUBROUTINES OTHER=custom_anneal.f90`.
 2. Turn annealing off for the refinement step.
 
-1. Once you have found good initial estimates (for THETA, OMEGA, and SIGMA) close to the global optimum, run the model again without `$ANNEAL` for better estimates.
+Once you have found good initial estimates (for THETA, OMEGA, and SIGMA) close to the global optimum, run the model again without `$ANNEAL` for better estimates.
 
 </details>
 
@@ -1121,7 +1121,7 @@ This will take the population parameter estimates and calculate more precise est
 
 <details>
 <summary>Show refinement step example</summary>
-```verilog
+```nmtran
 $ESTIMATION METHOD=IMP
             INTERACTION
             ISAMPLE=10000 # <1>
@@ -1180,7 +1180,7 @@ Copy this file: `/opt/local64/nonmem/nm_7.4.4_g510/run/mpilinux8.pnm`
 Into `my_own_parafile.pnm` and put it somewhere resonable.
 Then change `PARSE_TYPE` to 1:
 
-```verilog
+```nmtran
 $GENERAL
 ; [nodes] is a User defined variable.
 NODES=[nodes] PARSE_TYPE=1
@@ -1268,7 +1268,7 @@ OFVs between MLE and EM methods are incomparable.
 A sequence of two or more `$ESTIMATION` statements within a given problem will result in the sequential execution of separate estimations.
 For example:
 
-```verilog
+```nmtran
 $THETA 0.3 0.5 6.0
 $OMEGA 0.2 0.2 0.2
 $SIGMA 0.2

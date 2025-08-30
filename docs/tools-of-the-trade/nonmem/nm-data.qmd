@@ -39,7 +39,7 @@ If samples are taken on in the absorption-phase (pre-C~max~), around C~max~, and
 
 Let's say `TIME` is all -99, and we want to modify it.
 
-```verilog
+```nmtran
 $INPUT ID TIME NTIME TAFD DV TYPE MDV EVID
        AMT CMT DOSE AGE SEX HT WT BMI BSA
        BLOQ COMMENT=DROP

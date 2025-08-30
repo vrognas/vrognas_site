@@ -108,7 +108,7 @@ tidyverse style guide
 Use descriptive variable names in snake_case or SCREAMING_SNAKE_CASE, not generic ones.
 Try to make them as concise as possible.
 
-```verilog
+```nmtran
 P = THETA(1) ; Don't do this
 probability_no_event = THETA(1) ; Better
 prob_no_event = THETA(1) ; Best
@@ -118,7 +118,7 @@ prob_no_event = THETA(1) ; Best
 
 Always spell out the control record in full, i.e., no abbreviations.
 
-```verilog
+```nmtran
 $COVARIANCE ; Like this
 $COV ; Not like this
 ```
@@ -127,7 +127,7 @@ Always use a newline before a control record.
 
 Always use a newline after the following control records: `$PRED`, `$PK`, `$DES`, `$ERROR`.
 
-```verilog
+```nmtran
 $PK
 
 A = 1
@@ -140,7 +140,7 @@ Y = DV
 
 Control records that can be written on a single line, or only consists of options (e.g. `$ESTIMATION`), does not need a newline after the control record.
 
-```verilog
+```nmtran
 $PROBLEM dummy
 
 $INPUT ID TIME DV EVID
@@ -160,7 +160,7 @@ $COVARIANCE MATRIX=R
 
 Separate all infix operators by spaces, except exponentials.
 
-```verilog
+```nmtran
 A = 1 + 4 - 3 * 5 / 8**3
 ```
 
@@ -168,7 +168,7 @@ Adding extra spaces is ok if it improves alignment of `=`.
 
 Do not put spaces inside or outside parentheses for regular function calls.
 
-```verilog
+```nmtran
 ; Good
 LOG(A)
 
@@ -179,7 +179,7 @@ LOG( A )
 
 Place a space before and after () when used with `IF`.
 
-```verilog
+```nmtran
 ; Good
 IF (A > B) THEN
   1+1
