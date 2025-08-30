@@ -23,8 +23,8 @@ website:
   bread-crumbs: true
   navbar:
     left:
-      - text: "CV"
-        href: docs/cv/index.qmd
+      - text: "About"
+        href: docs/about/index.qmd
       - text: "Portfolio"
         href: docs/portfolio/index.qmd
       - text: "Encyclopædia"
@@ -55,8 +55,8 @@ website:
       - text: "{{< fa brands orcid >}}"
         href: https://orcid.org/0000-0002-7837-2467
   sidebar:
-    - id: cv
-      title: "CV"
+    - id: about
+      title: "About"
       style: "floating"
     - id: portfolio
       title: "Portfolio"
