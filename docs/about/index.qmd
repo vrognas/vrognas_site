@@ -55,7 +55,7 @@ description: "Viktor Rognås is a Pharmacometric Engineer, Data Scientist at [qP
 
 > During the spring semester of 2020, courses were taught remotely when COVID-19 began to spread in Sweden. Students experienced difficulties with remote work. Viktor approached and understood the students, brought forward their opinions to the ones responsible and stayed after hours to help the students that needed extra help with their individual projects. Thanks to Viktor’s admirable approach, the upcoming courses could be optimized for students.
 
-* **Börjessons äldre**, *Uppsala University* (2018)  
+* **Börjessons äldre**, *Uppsala University* (2018)
 
 > "...for male students who are studying towards licentiate or higher degrees, [and] are distinguished by dedication and aptitude..."
 
@@ -105,7 +105,7 @@ description: "Viktor Rognås is a Pharmacometric Engineer, Data Scientist at [qP
 * Physiology, *Uppsala University* (2013)
 * Medical Genetics, *Uppsala University* (2012)
 
-#### Antimicrobial Resistance 
+#### Antimicrobial Resistance
 
 * The Economics of Antibiotics, *Uppsala University* (2019)
 * Resistance Biology, *Uppsala University* (2018)
@@ -130,7 +130,7 @@ description: "Viktor Rognås is a Pharmacometric Engineer, Data Scientist at [qP
 * Chemical Thermodynamics, *Uppsala University* (2013)
 * Chemical Principles, *Uppsala University* (2011)
 
-### Miscellaneous 
+### Miscellaneous
 
 * Business Development and Entrepreneurship, *Uppsala University* (2017)
 * Project Management, *Stockholm University* (2015)
