@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language>
+<language name="NMTRAN" version="1.0" kateversion="5.0" section="Scientific" extensions="*.ctl;*.mod;*.nmtran" mimetype="text/x-nmtran" author="User" license="MIT">
+
+  <highlighting>
+    <list name="controlrecords">
+      <item>$PROBLEM</item>
+      <item>$PROB</item>
+      <item>$DATA</item>
+      <item>$INPUT</item>
+      <item>$MODEL</item>
+      <item>$PK</item>
+      <item>$PRED</item>
+      <item>$ERROR</item>
+      <item>$THETA</item>
+      <item>$OMEGA</item>
+      <item>$SIGMA</item>
+      <item>$ESTIMATION</item>
+      <item>$COVARIANCE</item>
+      <item>$TABLE</item>
+      <item>$SIMULATION</item>
+      <item>$SIZES</item>
+      <item>$PRIOR</item>
+    </list>
+
+    <list name="functions">
+      <item>LOG</item>
+      <item>LOG10</item>
+      <item>SQRT</item>
+      <item>EXP</item>
+      <item>ABS</item>
+      <item>ACOS</item>
+      <item>ASIN</item>
+      <item>ATAN</item>
+      <item>ATAN2</item>
+      <item>COS</item>
+      <item>SIN</item>
+      <item>TAN</item>
+      <item>SINH</item>
+      <item>TANH</item>
+      <item>COTAN</item>
+      <item>SIGN</item>
+      <item>INT</item>
+      <item>MOD</item>
+      <item>MIN</item>
+      <item>MAX</item>
+      <item>MAXLOG</item>
+      <item>RANDOM</item>
+      <item>RANDMT</item>
+      <item>RANDMTU</item>
+      <item>GAMLN</item>
+      <item>REAL</item>
+      <item>PASS</item>
+      <item>SUPP</item>
+    </list>
+
+    <list name="protected_functions">
+      <item>PLOG</item>
+      <item>PLOG10</item>
+      <item>PSQRT</item>
+      <item>PEXP</item>
+      <item>PDZ</item>
+      <item>PZR</item>
+      <item>PNP</item>
+      <item>PHE</item>
+      <item>PNG</item>
+      <item>PTAN</item>
+      <item>PACOS</item>
+      <item>PASIN</item>
+      <item>PATAN</item>
+    </list>
+
+
+    <list name="constants">
+      <item>TRUE</item>
+      <item>FALSE</item>
+      <item>NULL</item>
+      <item>Inf</item>
+      <item>-Inf</item>
+    </list>
+
+
+    <contexts>
+      <context attribute="Normal Text" lineEndContext="#stay" name="Normal">
+        <!-- Verbatim FORTRAN code -->
+        <RegExpr attribute="Verbatim" context="#stay" String="^&quot;.*$"/>
+        
+        <!-- Comments -->
+        <RegExpr attribute="Comment" context="#stay" String=";.*$"/>
+        
+        <!-- Continuation lines -->
+        <RegExpr attribute="Keyword" context="#stay" String="&amp;\s*$"/>
+        
+        <!-- Control records - flexible pattern to match any $WORD -->
+        <RegExpr attribute="Preprocessor" context="#stay" String="\$[A-Za-z]+" insensitive="true"/>
+        
+        <!-- Problem specification -->
+        <RegExpr attribute="String" context="#stay" String="(?&lt;=\$PROB(LEM)?\b).*" insensitive="true"/>
+        
+        <!-- Functions (must come early to avoid being caught by other patterns) -->
+        <RegExpr attribute="Function" context="#stay" String="\b(LOG(10)?|SQRT|EXP|ABS|A?(COS|SIN|TAN)|ATAN2|SIGN|SIN|SINH|TAN|TANH|COTAN|INT|MOD|MIN|MAX|MAXLOG|RANDOM|RANDMT(U)?|GAMLN|REAL|PASS|SUPP)(?=\()" insensitive="true"/>
+        
+        <!-- Protected functions -->
+        <RegExpr attribute="Function" context="#stay" String="\bP(LOG(10)?|SQRT|EXP|DZ|ZR|NP|HE|NG|TAN|A(COS|SIN|TAN))\b" insensitive="true"/>
+        
+        <!-- Parameters -->
+        <RegExpr attribute="Variable" context="#stay" String="(THETA|ETA|EPS|ERR)\([0-9]+\)" insensitive="true"/>
+        <RegExpr attribute="Variable" context="#stay" String="MU_[0-9]+" insensitive="true"/>
+        
+        <!-- Reserved variables -->
+        <RegExpr attribute="Builtin" context="#stay" String="(A(_0|_U)?\([0-9]+\))|(DADT\([0-9]+\))|((T|X)+SCALE)" insensitive="true"/>
+        <RegExpr attribute="Builtin" context="#stay" String="(CORRL2|MTIME|MNEXT|MPAST)\([0-9]+\)" insensitive="true"/>
+        <RegExpr attribute="Builtin" context="#stay" String="(CIWRES(I)?|DES_DER|MIXNUM|MIXEST|MTDIFF|MNOW|NPD(E?)|NPDE_MODE|DV_LOQ|DV_LAQ|CDF_L(A)?|T)\b" insensitive="true"/>
+        
+        <!-- Reserved data labels -->
+        <RegExpr attribute="Builtin" context="#stay" String="(ID|L(1|2)|MDV(I1|I2|I3)?|DV|TIME|DATE|DAT(1|2|3)|EVID|AMT|RATE|SS|II|ADDL(_ACTUAL|_TIME|_TIMEDIFF)?|RAW_|MRG_|RPT_)\b" insensitive="true"/>
+        
+        <!-- Semi-reserved labels -->
+        <RegExpr attribute="Builtin" context="#stay" String="(XVID(1|2|3|4|5)|REPL_)\b" insensitive="true"/>
+        
+        <!-- NMPRD4 variables -->
+        <RegExpr attribute="Builtin" context="#stay" String="(COM\([0-9]+\)|COM(ACT|RES|SAV)?)\b" insensitive="true"/>
+        
+        <!-- Other reserved variables -->
+        <RegExpr attribute="Builtin" context="#stay" String="(ETASXI\([0-9]+\)|HINIT|HMIN|HMAX|STOP_TIME|ITASK|PASTZERO)\b" insensitive="true"/>
+        
+        <!-- Reserved variables (ALAG, F, S, D with numbers) -->
+        <RegExpr attribute="Builtin" context="#stay" String="((ALAG|F|S|D)[0-9]+)\b" insensitive="true"/>
+        
+        <!-- Record counters -->
+        <RegExpr attribute="Builtin" context="#stay" String="(NDREC|NIREC|FIRSTREC|LASTREC|FIRSTOBS|LASTOBS|FIRSTDOS|LASTDOS|EFIRSTREC|ELASTREC|EFIRSTOBS|ELASTOBS|EFIRSTDOS|ELASTDOS|IRECIDX)\b" insensitive="true"/>
+        
+        <!-- NONMEM general reserved -->
+        <RegExpr attribute="Builtin" context="#stay" String="(ITER_REPORT|BAYES_EXTRA_REQUEST|BAYES_EXTRA|RANDMT(U)?)\b" insensitive="true"/>
+        
+        <!-- Internal NMTRAN variables -->
+        <RegExpr attribute="Builtin" context="#stay" String="(CALL|CMT|PCMT|CONT|NTHETA|NTHP|NPROB|IPROB|MODE|R|PRED_IGNORE_DATA_TEST|PRED_IGNORE_DATA)\b" insensitive="true"/>
+        <RegExpr attribute="Builtin" context="#stay" String="(VECTR[A-Z]|FUNC[A-Z]|PLOG|PEXP|PSQRT|PSIN|PCOS|PTAN)\b" insensitive="true"/>
+        <RegExpr attribute="Builtin" context="#stay" String="(ICALL|NEWIND|GETETA|SIMETA|SIMEPS|NWIND|ETEXT|IERPRD|IERPRDU|MSEC|MFIRST|NETEXT)\b" insensitive="true"/>
+        <RegExpr attribute="Builtin" context="#stay" String="((A|B|C|D|E|F|P|Q)[0-9]{5}|M(C|E|G|T)[0-9]{4}|MXSTEP)\b" insensitive="true"/>
+        
+        <!-- Subroutines -->
+        <RegExpr attribute="Type" context="#stay" String="(ADVAN(=)?[0-9]+|TRANS(=)?[0-9]+)|((TN|NW)PRI)" insensitive="true"/>
+        
+        <!-- Specific control record options (must come before general patterns) -->
+        <!-- $ESTIMATION record options with complex patterns -->
+        <RegExpr attribute="Type" context="#stay" String="(-2LL|AUTO|BOOTDATA|CALPHA|CENTERING|CINTERVAL|CITER|CNSAMP|(UN)?COND(ITIONAL)?|CONSTRAIN|CTYPE|DERCONT|DF(S)?|EONLY|ETA(BARCHECK|DER|SAMPLES|STYPE)|FILE|FNLETA|FORMAT|DELIM|FPARAFILE|GRD|GRDQ|GRID|HYBRID|IACCEPT(L)?|INTER(ACTION)?|IKAPPA|ISAMPEND|ISAMPLE(_M(1(A|B)?|2|3))?|ISCALE_(MAX|MIN)|KAPPA|LAPLACE|LEVWT|LIKE(LIHOOD)?|LNTWOPI|MADAPT|MAPCOV|MAPI(N)?TER|MASSRESET|MAXEVAL(S)?|MCETA|MSFO|MUM|N(BURN|ITER|SAMPLE)|(NO)?(ABORT|(THETA|OMEGA|SIGMA)BOUNDTEST)|NO(COV|HABORT|LABEL|NINFETA|PRIOR(C)?|SUB|TITLE)|NOCENTERING|NOETABARCHECK|NONUMERICAL|NOSLOW|NOSORT|NSIG|PRIORC|SIGDIGITS|NUMDER|NUMERICAL|NUTS_(BASE|DELTA|EPARAM|GAMMA|INIT|MASS|MAXDEPTH|OPARAM|REG|SPARAM|STEPINTER|STEPITER|TERM|TEST|TRANSFORM)|OACCEPT|OLKJDF|OLNTWOPI|OMEGABOUNDTEST|OPTMAP|ORDER|OSAMPLE_(M1|M2)?|OVARF|PACCEPT|PARAFILE|PARAFPRINT|PHITYPE|POSTHOC|PREDICTION|PRINT|PSAMPLE_(M1|M2|M3|MAX|MIN)|RANMETHOD|REPEAT(1|2)?|SADDLE_(HESS|RESET)|SEED|SIGL(O)?|SLKJDF|FAST|SORT|STDOBJ|STIELTJES|SVARF|THIN|TTDF|ZERO)\b" insensitive="true"/>
+        
+        <!-- General control record options (after specific ones) -->
+        <RegExpr attribute="Type" context="#stay" String="(DIAGONAL|BLOCK)\([0-9]+\)" insensitive="true"/>
+        <RegExpr attribute="Type" context="#stay" String="(PROTECT|DATA|IGN(ORE)?|(NO)?(PRINT|WIDE|REWIND|ABORT|RESCALE|REPEAT|INTERACTION|LAPLACIAN|POSTHOC)|CHECKOUT|OMITTED|RECORDS|LRECL|SUBROUTINES|DERIV2|NUMBERPOINTS|SAME|NPOPETAS|NORMAL|UNIFORM|NEW|SUBPROBLEMS|ONLYSIM(ULATION)?|METH(OD)?|SIG((DIG)?ITS)?|MAXEVAL(S)?|MSFO|SPECIAL|MATRIX|(UN)?CONDITIONAL|(NO|ONE)HEADER|VS|BY|UNIT|FROM|(A)?TOL|(N)?COMP(ARTMENT(S)?)?|NEQUILIBRIUM|NPARAMETERS|LINK|LIKE(LIHOOD)?)\b" insensitive="true"/>
+        
+        <!-- Other specific control record options -->
+        <!-- $SIZES record options -->
+        <RegExpr attribute="Type" context="#stay" String="(LTH|LVR(2)?|NO|MMX|LNP4|LSUPP|LIM(1|2|3|4|5|6|7|8|11|13|15|16)|LWS3|MAXIDS|MAXRECID|P(C|CT|IR|D|DT|AL|L)|MAXFCN|DIM(TMP|CNS|NEW|VRB)|NPOPMIXMAX|MAX(OMEG|PTHETA|ITER|SIDL)|ISAMPLEMAX|PNM_MAXNODES)\\b" insensitive="true"/>
+        
+        <!-- $PRIOR record options -->
+        <RegExpr attribute="Type" context="#stay" String="(ITYP|NSAM|ISS|PLEV|CNT|N(THETA|ETA|EPS|THP|ETP|EPP)|NPEXP|IFND|MODE|IVAR|DISPLAY|ICMAX)\\b" insensitive="true"/>
+        
+        <!-- $COVARIANCE record options -->
+        <RegExpr attribute="Type" context="#stay" String="(SPECIAL|MATRIX|SIR(THBND|SAMPLE|DF|NITER|CENTER)|(PRE|PF)?COND(S)?|FPOSDEF|RESUME|PRETYPE|COMPRESS|NOFCOV|IACCEPT(L)?)\\b" insensitive="true"/>
+        
+        <!-- $TABLE record options -->
+        <RegExpr attribute="Type" context="#stay" String="(NOAPPEND|VARCALC)\\b" insensitive="true"/>
+        
+        <!-- $DATA record options (highlighted as errors) -->
+        <RegExpr attribute="Error" context="#stay" String="(DROP|SKIP)\\b" insensitive="true"/>
+        
+        <!-- $SIMULATION record options -->
+        <RegExpr attribute="Type" context="#stay" String="(NSUB)\\b" insensitive="true"/>
+        
+        <!-- Option arguments -->
+        <RegExpr attribute="Type" context="#stay" String="(INITIALOFF|NOOFF|NODOSE|EQUILIBRIUM|EXCLUDE|DEFOBSERVATION|DEFDOSE|DEFDOS|CENT|CENTRAL|DEFOBS|DEPOT|INITIAL|FINAL|PRIOR|NO|NOCOMMON|FULL|COMPACT|ZERO|HYBRID)\b" insensitive="true"/>
+        <RegExpr attribute="Type" context="#stay" String="SS([1-9]|1[0-2])\b" insensitive="true"/>
+        
+        <!-- Other options -->
+        <RegExpr attribute="Type" context="#stay" String="(OMITTED|CHOLROFF|KNUTHSUMOFF)\b" insensitive="true"/>
+        <RegExpr attribute="Type" context="#stay" String="ETAS\b" insensitive="true"/>
+        
+        <!-- Numbers (integers, decimals, scientific notation) -->
+        <RegExpr attribute="DecVal" context="#stay" String="-?[0-9]+(\.[0-9]*)?([eE][+-]?[0-9]+)?"/>
+        
+        <!-- Constants -->
+        <keyword attribute="Builtin" context="#stay" String="constants" insensitive="true"/>
+        
+        
+        <!-- Control flow -->
+        <RegExpr attribute="ControlFlow" context="#stay" String="\\b(CALL(FL)?|DO(\\s)?WHILE|(ELSE)?IF|THEN|ELSE|END(DO|IF)?|EXIT|MODE|RETURN|PROGRAM|read|WRITE|REWIND|SAVE|SNGL|STATUS|STOP|CONTINUE|SUBROUTINE|OPEN|CLOSE|FIX(ED)?)\\b" insensitive="true"/>
+        
+        <!-- Logical operators -->
+        <RegExpr attribute="Operator" context="#stay" String="\.((N)?EQ|EQN|GE|GT|LE|LT|NE(N)?|OR|AND)\." insensitive="true"/>
+        
+        <!-- FORTRAN 95 logical operators -->
+        <RegExpr attribute="Operator" context="#stay" String="(==|\/=|&gt;(=)?|&lt;(=)?)" insensitive="false"/>
+        
+        <!-- Flow control -->
+        <RegExpr attribute="ControlFlow" context="#stay" String="(CALL(FL)?|DO(\s)?WHILE|(ELSE)?IF|THEN|ELSE|END(DO|IF)?|EXIT|MODE|RETURN|PROGRAM|read|WRITE|REWIND|SAVE|SNGL|STATUS|STOP|CONTINUE|SUBROUTINE|OPEN|CLOSE|FIX(ED)?)\b" insensitive="true"/>
+        
+        <!-- Abbreviated code -->
+        <RegExpr attribute="Keyword" context="#stay" String="(AIMAG|AINT|ALOG|ALOG10|AMAX0|AMAX1|AMIN0|AMIN1|AMOD|ANINT|BACKSPACE|BLOCK|CHAR|CHARACTER|CMPLX|COMMON|COMPLEX|CONJG|COSH|DATA(N(2)?)?|DBLE|DCOS|DCOSH|DDIM|DIM|DIMENSION|DINT|DMAX1|DMIN1|DMOD|DNINT|DOUBLE|DPROD|DSIGN|ENTRY|EQUIVALENCE|EXTERNAL|FILE|FLOAT|FORMAT|FUNCTION|GOTO|IABS|ICHAR|IDIM|IDINT|IDNINT|IFIX|IMPLICIT|INDEX|INQUIRE|INTRINSIC|IOSTAT|ISIGN|LLE|LLT|LOGICAL|MAX(0|1)?|MIN(0|1)?)\b" insensitive="true"/>
+        
+        <!-- Assignment operator -->
+        <RegExpr attribute="Operator" context="#stay" String="(?&lt;![=\/&lt;&gt;])=(?!=)"/>
+        
+        <!-- Arithmetic operators -->
+        <AnyChar attribute="Operator" context="#stay" String="*+-/"/>
+        
+        <!-- Exponentiation (must come after numbers) -->
+        <RegExpr attribute="Operator" context="#stay" String="(?&lt;=(\d|\)))(E|(\*\*))" insensitive="true"/>
+        
+        <!-- Invalid operators -->
+        <RegExpr attribute="Error" context="#stay" String="(\.NEQN\.)|=\/" insensitive="true"/>
+      </context>
+    </contexts>
+
+    <itemDatas>
+      <itemData name="Normal Text" defStyleNum="dsNormal"/>
+      <itemData name="Comment" defStyleNum="dsComment"/>
+      <itemData name="Keyword" defStyleNum="dsKeyword"/>
+      <itemData name="Preprocessor" defStyleNum="dsPreprocessor" bold="1"/>
+      <itemData name="String" defStyleNum="dsString"/>
+      <itemData name="Variable" defStyleNum="dsVariable"/>
+      <itemData name="Builtin" defStyleNum="dsBuiltIn"/>
+      <itemData name="Type" defStyleNum="dsDataType"/>
+      <itemData name="Function" defStyleNum="dsFunction"/>
+      <itemData name="ControlFlow" defStyleNum="dsControlFlow"/>
+      <itemData name="Operator" defStyleNum="dsOperator"/>
+      <itemData name="DecVal" defStyleNum="dsDecVal"/>
+      <itemData name="Verbatim" defStyleNum="dsVerbatimString"/>
+      <itemData name="Error" defStyleNum="dsError"/>
+    </itemDatas>
+  </highlighting>
+
+  <general>
+    <comments>
+      <comment name="singleLine" start=";"/>
+    </comments>
+    <keywords casesensitive="false"/>
+  </general>
+
+</language>

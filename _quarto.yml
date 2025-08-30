@@ -266,6 +266,8 @@ website:
         href: https://orcid.org/0000-0002-7837-2467
 format:
   html:
+    syntax-definitions:
+      - syntaxes/nmtran.xml
     canonical-url: true
     lang: en
     smooth-scroll: false

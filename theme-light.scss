@@ -8,3 +8,20 @@ $body-color: #282828;
 // $link-color: #8D3A37;
 $link-color: #547763;
 $link-decoration: none;
+
+/* NMTRAN-specific code highlight variables (light) */
+.quarto-light, :root {
+  --nmtran-keyword:               #8CBD7A;  /* FORTRAN keywords, flow control */
+  --nmtran-function:              #C65B45;  /* LOG, SQRT, EXP, etc. */
+  --nmtran-parameter:             #C74D51;  /* THETA, ETA, EPS parameters */
+  --nmtran-builtin:               #7d9029;  /* Reserved variables, data labels */
+  --nmtran-attribute:             #7d9029;  /* Misc attributes */
+  --nmtran-controlrecordoption:   #3F6CAA;  /* MAXEVAL, METHOD, etc. */
+  --nmtran-number:                #B16386;  /* Numeric values */
+  --nmtran-string:                #b57614;  /* Strings and problem text */
+  --nmtran-comment:               #6b737b;  /* Semicolon comments */
+  --nmtran-operator:              #666666;  /* =, +, -, etc. */
+  --nmtran-controlrecord:         #576A39;  /* $ESTIMATION, $PROBLEM, etc. */
+  --nmtran-error:                 #ff5555;  /* Invalid syntax */
+  --nmtran-lineno:                #aaaaaa;  /* Line numbers */
+}
