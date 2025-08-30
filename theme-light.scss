@@ -25,3 +25,11 @@ $link-decoration: none;
   --nmtran-error:                 #ff5555;  /* Invalid syntax */
   --nmtran-lineno:                #aaaaaa;  /* Line numbers */
 }
+
+/*-- scss:rules --*/
+
+/* Inline code styling for light theme */
+code:not(pre code) {
+  color: $body-color !important;
+  background-color: rgba(175, 184, 193, 0.2) !important;
+}

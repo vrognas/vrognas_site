@@ -37,17 +37,42 @@ $dropdown-link-hover-color: white;
 
 /* NMTRAN-specific code highlight variables (dark) */
 .quarto-dark {
-  --nmtran-keyword:               #b8bb26; /* FORTRAN keywords, flow control */
-  --nmtran-function:              #C65B45; /* LOG, SQRT, EXP, etc. */
-  --nmtran-parameter:             #C74D51; /* THETA, ETA, EPS parameters */
-  --nmtran-builtin:               #8ec07c; /* Reserved variables, data labels */
-  --nmtran-attribute:             #8ec07c; /* Misc attributes */
-  --nmtran-controlrecordoption:   #7FB3D3; /* MAXEVAL, METHOD, etc. */
-  --nmtran-number:                #d3869b; /* Numeric values */
-  --nmtran-string:                #fabd2f; /* Strings and problem text */
-  --nmtran-comment:               #928374; /* Semicolon comments */
-  --nmtran-operator:              #ebdbb2; /* =, +, -, etc. */
-  --nmtran-controlrecord:         #8FAA6B; /* $ESTIMATION, $PROBLEM, etc. */
-  --nmtran-error:                 #fb4934; /* Invalid syntax */
-  --nmtran-lineno:                #7c6f64; /* Line numbers */
+  --nmtran-keyword: #b8bb26;
+  /* FORTRAN keywords, flow control */
+  --nmtran-function: #C65B45;
+  /* LOG, SQRT, EXP, etc. */
+  --nmtran-parameter: #C74D51;
+  /* THETA, ETA, EPS parameters */
+  --nmtran-builtin: #8ec07c;
+  /* Reserved variables, data labels */
+  --nmtran-attribute: #8ec07c;
+  /* Misc attributes */
+  --nmtran-controlrecordoption: #7FB3D3;
+  /* MAXEVAL, METHOD, etc. */
+  --nmtran-number: #d3869b;
+  /* Numeric values */
+  --nmtran-string: #fabd2f;
+  /* Strings and problem text */
+  --nmtran-comment: #928374;
+  /* Semicolon comments */
+  --nmtran-operator: #ebdbb2;
+  /* =, +, -, etc. */
+  --nmtran-controlrecord: #8FAA6B;
+  /* $ESTIMATION, $PROBLEM, etc. */
+  --nmtran-error: #fb4934;
+  /* Invalid syntax */
+  --nmtran-lineno: #7c6f64;
+  /* Line numbers */
+}
+
+/*-- scss:rules --*/
+
+.layout-example {
+  background: $gray-700;
+}
+
+/* Inline code styling for dark theme */
+.quarto-dark code:not(pre code) {
+  color: $body-color !important;
+  background-color: #545454 !important;
 }
