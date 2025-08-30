@@ -1,6 +1,6 @@
 ---
 title: "Who is Viktor Rognås?"
-description: "Viktor Rognås is a Pharmacometric Engineer, Data Scientist at [qPharmetra](https://www.qpharmetra.com), and a PhD student in Pharmacometrics at [Uppsala University](https://www.uu.se/en). He is an expert in R programming, NONMEM pharmacokinetic/pharmacodynamic modeling, and antimicrobial resistance research."
+description: "Viktor Rognås is a Pharmacometric Engineer that develop tools for pharmacometrics. He is an expert in R programming, and NONMEM pharmacokinetic/pharmacodynamic modeling."
 ---
 
 # 📜 Curriculum Vitae
