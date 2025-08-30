@@ -4,6 +4,15 @@
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
 
+## Force canonical host: apex (vrognas.com)
+## Redirect all www traffic to apex with 301
+[[redirects]]
+  from = "/*"
+  to = "https://vrognas.com/:splat"
+  status = 301
+  force = true
+  conditions = { Host = ["www.vrognas.com"] }
+
 [[redirects]]
   from = "/docs/modeling/cat"
   to = "/"
