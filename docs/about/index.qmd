@@ -1,14 +1,16 @@
 ---
-title: "📜 Curriculum Vitae"
-description: "Pharmacometric Engineer, Data Scientist at [qPharmetra](https://www.qpharmetra.com), PhD student in Pharmacometrics at [Uppsala University](https://www.uu.se/en). Expert in pharmacokinetic/pharmacodynamic modeling using NONMEM, and antimicrobial resistance research."
+title: "Who is Viktor Rognås?"
+description: "Viktor Rognås is a Pharmacometric Engineer, Data Scientist at [qPharmetra](https://www.qpharmetra.com), and a PhD student in Pharmacometrics at [Uppsala University](https://www.uu.se/en). He is an expert in R programming, NONMEM pharmacokinetic/pharmacodynamic modeling, and antimicrobial resistance research."
 ---
+
+# 📜 Curriculum Vitae
 
 ## 🛞 Experience
 
 * **Data Scientist**, [*qPharmetra*](https://www.qpharmetra.com) (Mar 2025--*present*)
 * **Pharmacometric Assessor**, [*Swedish Medical Products Agency (Läkemedelsverket)*](https://www.lakemedelsverket.se/en) (Nov 2023--Oct 2024)
 * **Systems developer (Python)**, [*Pharmpy*](https://pharmpy.github.io/latest/) (Feb--Oct 2023)
-* **Clinical Pharmacometrician Intern**, [*F. Hoffmann-La Roche Ltd*](https://www.roche.com) (Sep 2021--Feb 2022)
+* **Clinical Pharmacometrician (Internship)**, [*F. Hoffmann-La Roche Ltd*](https://www.roche.com) (Sep 2021--Feb 2022)
 * **Teacher (Pharmacokinetics & Statistics)**, [*Uppsala University*](https://www.uu.se) (Nov 2017--Aug 2021)
 
 ## 🎓 Degrees
