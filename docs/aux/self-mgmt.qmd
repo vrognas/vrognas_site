@@ -1,6 +1,6 @@
 ---
 title: "Self Management"
-date: last-modified
+date: "2025-08-31"
 ---
 
 :::{.callout-caution title="Under construction"}
