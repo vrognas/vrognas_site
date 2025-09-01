@@ -1,6 +1,7 @@
 ---
 title: "Modeling Mementoes"
 date: last-modified
+description: "Comprehensive guide to pharmacometric modeling including PK/PD models, time-to-event analysis, goodness-of-fit assessment, and model building best practices."
 ---
 
 :::{.callout-caution title="Under construction"}

@@ -1,5 +1,6 @@
 ---
 title: "Concepts of the Craft"
+description: "Comprehensive guide to pharmacokinetics, pharmacodynamics, pediatric pharmacology, clinical studies, and drug development concepts for pharmacometricians."
 ---
 
 This section provides a high-level overview of specific theories and principles at pharmacometrics' heart.

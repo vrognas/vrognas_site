@@ -1,5 +1,6 @@
 ---
 title: "Portfolio"
+description: "Professional portfolio showcasing pharmacometric modeling projects, software development, and scientific research in clinical pharmacology and drug development."
 ---
 
 :::{.callout-tip}
