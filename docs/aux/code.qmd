@@ -13,6 +13,80 @@ Create and share beautiful images of your source code.
 <https://carbon.now.sh>
 
 ### R
+## Coding: language agnostic
+
+### Function naming
+
+Strive to use **verbs** for function names: `to`, `add`, `remove`, `do`, `get`, `make`, `take`, `find`, `use`, `call`, `try`, `have`, `has`, `give`, `ask`, `go`, `put`, `let`, `help`, `move`, `turn`, `run`, `hold`, `write`, `read`, `include`, `set`, `change`, `watch`, `stop`, `start`, `create`, `open`, `close`, `save`, `build`, `wait`, `require`, `kill`, `pull`, `push`, `pass`, `stay`, etc...
+
+Use (lower) **camelCase** for self-defined functions that are not to be exported outside your project.
+
+Class names, on the other hand, should use **Pascal Casing**.
+
+This is to make a clear distinction between self-defined and imported functions.
+
+```r
+# Class
+
+Parameter <- R6Class("Parameter", ....)
+
+# Variable
+
+parameterToDelete <- ...
+
+# Method and function
+
+performSimulation <- function (...)
+```
+
+:::{.callout-note}
+# Don't hesitate to choose lengthy names for test functions.
+
+Unlike regular functions, long names are less problematic for test functions because
+
+* They are not visible or accessible to the users
+* They are not called repeatedly throughout the codebase
+:::
+
+### Variable naming
+
+Variable names should be **nouns**.
+
+True constant variables should use **ALL_CAPS Casing**.
+
+```r
+# Constant variables
+
+DEFAULT_PERCENTILE <- 0.5
+```
+
+Names for **Boolean variables or functions** should make clear what `true` and `false` <span class="red-underline">**mean**</span>. This can be done using prefixes (`is`, `has`, `can`, etc.)
+
+```r
+# not great
+if (child) {
+  if (parentSupervision) {
+    watchHorrorMovie <- TRUE
+  }
+}
+
+# better
+if (isChild) {
+  if (hasParentSupervision) {
+    canWatchHorrorMovie <- TRUE
+  }
+}
+```
+
+Use positive terms for Booleans since they are easier to process.
+
+```r
+# double negation - difficult
+is_firewall_disabled <- FALSE
+
+# better
+is_firewall_enabled <- TRUE
+```
 
 #### Naming
 
@@ -20,32 +94,28 @@ Create and share beautiful images of your source code.
 
 <https://style.tidyverse.org/syntax.html#sec-objectnames>
 
-How good a name is can be assessed by how detailed the accompanying comment needs to be.
+The quality of a name can be assessed by how detailed the accompanying comment needs to be.
 
 Good names:
 
-* Precise (but not too long)
+* Precise
 * Concise
 * Meaningful
 * Consistent
 * Difficult to misinterpret
 * Distinguishable
-* Searchable (i.e. updateable)
+* Searchable (i.e., updateable)
 * Pronounceable
 * Honor conventions (e.g. *n* for count)
 
-Use **snake_case** for variable/object and function names.
 Variable/object names should be **nouns** and function names should be **verbs**.
 
 :::{.callout-note}
-# Example of coding standards adopted in OSP organization
+# My own opinionated naming standards
 
-* Use all ALL_CAPS for constant variables (`public const double PI = 3.14;`)
-* Prefix private/protected member variable with _ (`private int _currentDebt`)
-* Use Pascal Casing for class names (`public class GlobalAccounting`)
-* Use Pascal Casing for public and protected method name (`public void GetRevenues()`)
-* Use Camel Casing for private method name (`private int balanceBooks()`)
-
+* Use **snake_case** for variable/object and (package)function names.
+* For custom non-exported functions (e.g., in an analysis script), use **camelCase**.
+* Use **SCREAMING_SNAKE** for constant variables (`PI = 3.14`)
 :::
 
 ```r
@@ -63,31 +133,30 @@ days_since_last_dose
 
 # Not ideal - unnecessarily precise
 days_since_last_dose_floor_4_lab_23
-
 ```
 
 :::{.callout-note}
-Don’t hesitate to choose lengthy names for **test** functions.
+Don't hesitate to choose lengthy names for **test** functions.
 
 Unlike regular functions, long names are less problematic for test functions because
 
-* they are not visible or accessible to the users
-* they are not called repeatedly throughout the codebase
+* They are not visible or accessible to the users
+* They are not called repeatedly throughout the codebase
 :::
 
-If you find yourself attempting to cram data into variable names (e.g. `model_2018`, `model_2019`, `model_2020`), consider using a list or data frame instead.
+If you find yourself attempting to cram data into variable names (e.g., `model_2018`, `model_2019`, `model_2020`), consider using a list or data frame instead.
 
-Using generic names can improve code readability, but *only* if language or domain customs are followed.
+Using generic names can improve code readability, but *only* if language or domain-specific conventions are followed.
 However, even when you think you need generic names, you are better off using descriptive names.
 
-* In type names, avoid using *class*, *data*, *object*, and *type* (e.g. bad: `classShape`, good: `Shape`)
-* But important details should be kept (e.g. okay: `child_height`, better: `child_height_cm`)
+* In type names, avoid using *class*, *data*, *object*, and *type* (e.g., bad: `classShape`, good: `Shape`)
+* But essential details should be kept (e.g., okay: `child_height`, better: `child_height_cm`)
 
 ##### Booleans or indicators
 
 Boolean variable names should convey what true or false values represent.
-In general, use positive terms for Booleans since they are easier to process.
-But if the variable is only ever used in its false version (e.g. `is_volcano_inactive`), the negative version can be easier to work with.
+Generally, use positive terms for Booleans, as they are easier to process.
+But if the variable is only ever used in its false version (e.g., `is_volcano_inactive`), the negative version can be easier to work with.
 
 ##### Functions
 
@@ -116,16 +185,16 @@ prob_no_event = THETA(1) ; Best
 
 #### Style
 
-Always spell out the control record in full, i.e., no abbreviations.
+Prefer to spell out the control record in full, i.e., no abbreviations.
 
 ```nmtran
 $COVARIANCE ; Like this
 $COV ; Not like this
 ```
 
-Always use a newline before a control record.
+Always use a newline *before* a control record.
 
-Always use a newline after the following control records: `$PRED`, `$PK`, `$DES`, `$ERROR`.
+Always use a newline *after* the following control records: `$PRED`, `$PK`, `$DES`, `$ERROR`.
 
 ```nmtran
 $PK
@@ -138,7 +207,7 @@ Y = DV
 
 ```
 
-Control records that can be written on a single line, or only consists of options (e.g. `$ESTIMATION`), does not need a newline after the control record.
+Control records that can be written on a single line, or only consist of options (e.g., `$ESTIMATION`), do not need a newline after the control record.
 
 ```nmtran
 $PROBLEM dummy
@@ -164,7 +233,7 @@ Separate all infix operators by spaces, except exponentials.
 A = 1 + 4 - 3 * 5 / 8**3
 ```
 
-Adding extra spaces is ok if it improves alignment of `=`.
+Adding extra spaces is ok if it improves the alignment of `=`.
 
 Do not put spaces inside or outside parentheses for regular function calls.
 
