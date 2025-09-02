@@ -1,5 +1,6 @@
 ---
 title: "Speaking NM-TRAN"
+description-meta: "Complete guide to NONMEM NM-TRAN control stream syntax, modeling templates, best practices, and troubleshooting tips for pharmacometric modeling."
 code-overflow: scroll
 date: last-modified
 ---
@@ -199,7 +200,7 @@ $PK
 
 ; Assignment & Arithmetic
 ; =======================
-  
+
   Z = 1 ; Assign to variable z
   j = 10 + 2 - 3
   a = 11.54 / (2.3 * 3.1)

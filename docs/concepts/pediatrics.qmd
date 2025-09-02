@@ -1,7 +1,8 @@
 ---
 title: "Pediatric Pharmacometrics"
+description-meta: "Essential guide to pediatric pharmacometrics covering ontogeny, physiological differences between children and adults, allometric scaling, and model-informed drug development approaches in pediatric populations."
 date: "2025-08-19"
-keywords: 
+keywords:
   - Pharmacometrics
   - Pediactric drug development
 ---
@@ -67,7 +68,7 @@ $$
 \text{Corrected gestational age}_\text{weeks} = \text{PNA}_\text{weeks} - (40 - \text{GA}_\text{weeks})
 $$ {#eq-cga}
 
-### Age groups {#sec-age-groups} 
+### Age groups {#sec-age-groups}
 
 Age groups are to some extent <span class="red-underline">**arbitrary**</span>, but a classification such as the one in @tbl-age-group provides a basis for thinking about study design.
 The identification of **which ages to study should be medicinal product-specific and <span class="red-underline">justified</span>**.
@@ -118,12 +119,12 @@ For drugs with linear PK in adults, a single-dose study in pediatric patients ma
 However, when adults exhibit dose- or time-dependent PK or PD, pediatric steady-state studies become necessary.
 
 Pediatric dosing is often expressed as mg/kg, up to the maximum adult dose.
-Although body surface area (BSA)-guided dosing might be preferred, it is often prone to measurement errors in height, particularly in infants and young children. 
+Although body surface area (BSA)-guided dosing might be preferred, it is often prone to measurement errors in height, particularly in infants and young children.
 Still, for medications with a narrow therapeutic window, such as many oncology drugs, BSA-guided dosing may be necessary.
 
 ## PK extrapolation is often feasible {#sec-pk-extrapolation}
 
-The feasibility of PK extrapolation is ultimately a **clinical question**. 
+The feasibility of PK extrapolation is ultimately a **clinical question**.
 If an indication can be assumed to behave similarly in adult and pediatric populations, PK extrapolation (or "bridging") can be used @ichE11APediatricExtrapolation2024.
 However, there could be cases in which a dedicated pediatric study is warranted (e.g., safety concerns or clinical presentation of the disease).
 

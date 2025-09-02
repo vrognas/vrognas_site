@@ -7,6 +7,8 @@ about:
     image-alt: "A profile picture of Viktor, lookin' all smug"
 title: "Viktor Rognås"
 subtitle: "Pharmacometric Engineer"
+pagetitle: "Viktor Rognås | Pharmacometric Engineer & Clinical Pharmacology Expert"
+description-meta: "Expert in pharmacometrics, NONMEM modeling, and clinical pharmacology. PhD student at Uppsala University specializing in population PK/PD models, antimicrobial resistance research, and regulatory science."
 ---
 
 [📩 **viktor@vrognas.com**](mailto:viktor@vrognas.com)
