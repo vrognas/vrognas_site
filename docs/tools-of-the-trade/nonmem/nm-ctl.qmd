@@ -74,6 +74,26 @@ Or, simply set at beginning of control stream file: `$ABBR PROTECT` and all func
 
 ### Specific pointers
 
+#### AUC > MIC
+
+```nmtran
+$DES
+CONC = A(1) / V ; mass/volume
+MIC = 8 ; mass/volume
+RT = 0
+
+IF (CONC > MIC) RT=1
+
+DADT(2) = RT ; Time above MIC
+DADT(3) = RT * (CONC - MIC) ; AUC > MIC
+
+$ERROR
+
+CP = A(1) / V
+TAM = A(2) ; Time Above MIC
+AUC = A(3) ; AUC: AUC above MIC
+```
+
 #### MTIME
 
 | Parameter  | Description |
@@ -88,6 +108,7 @@ Or, simply set at beginning of control stream file: `$ABBR PROTECT` and all func
 **Example 1**: Changing absorption time​
 
 ```nmtran
+
 $PK ​
 MTIME(1) = THETA(5) ; change point for KA ​
 
@@ -96,48 +117,50 @@ XKA2 = THETA(4) * EXP(ETA(4)) ​
 
 KA = XKA1 * (1 - MPAST(1)) + XKA2 * MPAST(1)
 ```
+
 **Example 2**: Changing a model time (same as adding event times in the input dataset​)
 
 ```nmtran
+
 IF (TIME == 0) TEMP = 0 ​
 TEMP = TEMP+1 ​
 MTIME(1) = TEMP ​
 MTDIFF = 1​
 ```
 
-`MTIME` coding increases Tmax precision but increases running time​
+`MTIME` coding increases Tmax precision but increases running time​.
 
 ```nmtran
-$PK​
-​
-IF (EVID == 1 .OR. EVID == 4) TEMP = 0​
-​
-TEMP = TEMP + DT​
-MTIME(1) = TEMP​
-MTDIFF = 1​
-​
-$DES​
-IF (T == TDOS) THEN​
-  CMAXM = 0​
-  TMAXM = 0​
-ENDIF​
-​
-IF(CP > CMAXM) THEN​
-  CMAXM = CP​
-  TMAXM = T - TDOS​
-ENDIF​
-​```
+$PK
+
+IF (EVID == 1 .OR. EVID == 4) TEMP = 0
+TEMP = TEMP + DT
+MTIME(1) = TEMP
+MTDIFF = 1
+
+$DES
+
+IF (T == TDOS) THEN
+  CMAXM =  0
+  TMAXM = 0
+ENDIF
+
+IF (CP > CMAXM) THEN
+  CMAXM = CP
+  TMAX = T - TDOS
+ENDIF
+```
 
 ![](./images/tmax-vs-dt.png)
 
-|  | Total CPU time(s) |
-| :--- | :---: |
+|          | Total CPU time(s) |
+| :------- | :---: |
 | NO MTIME | 0.085 |
-| DT=5 | 0.132 |
-| DT=2 | 0.175 |
-| DT=0.5 | 0.372 |
-| DT=0.2 | 0.638 |
-| DT=0.1 | 1.106 |
+| DT=5     | 0.132 |
+| DT=2     | 0.175 |
+| DT=0.5   | 0.372 |
+| DT=0.2   | 0.638 |
+| DT=0.1   | 1.106 |
 
 Another example:
 
