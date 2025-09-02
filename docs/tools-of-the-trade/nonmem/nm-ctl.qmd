@@ -74,6 +74,75 @@ Or, simply set at beginning of control stream file: `$ABBR PROTECT` and all func
 
 ### Specific pointers
 
+#### MTIME
+
+| Parameter  | Description |
+| :--------- | :---------- |
+| `MTIME(i)` | The i^th^ model event time |
+| `MNEXT(i)` | 1 if `TIME < MTIME(i)`, otherwise 0 |
+| `MPAST(i)` | 1 if `TIME > MTIME(i)`, otherwise 0 |
+| `MTDIFF`   | If `MTDIFF=1` is in \$PK, the reset of `MTIME(i)` is indicated |
+
+##### Examples
+
+**Example 1**: Changing absorption time​
+
+```nmtran
+$PK ​
+MTIME(1) = THETA(5) ; change point for KA ​
+
+XKA1 = THETA(3) * EXP(ETA(3)) ​
+XKA2 = THETA(4) * EXP(ETA(4)) ​
+
+KA = XKA1 * (1 - MPAST(1)) + XKA2 * MPAST(1)
+```
+**Example 2**: Changing a model time (same as adding event times in the input dataset​)
+
+```nmtran
+IF (TIME == 0) TEMP = 0 ​
+TEMP = TEMP+1 ​
+MTIME(1) = TEMP ​
+MTDIFF = 1​
+```
+
+`MTIME` coding increases Tmax precision but increases running time​
+
+```nmtran
+$PK​
+​
+IF (EVID == 1 .OR. EVID == 4) TEMP = 0​
+​
+TEMP = TEMP + DT​
+MTIME(1) = TEMP​
+MTDIFF = 1​
+​
+$DES​
+IF (T == TDOS) THEN​
+  CMAXM = 0​
+  TMAXM = 0​
+ENDIF​
+​
+IF(CP > CMAXM) THEN​
+  CMAXM = CP​
+  TMAXM = T - TDOS​
+ENDIF​
+​```
+
+![](./images/tmax-vs-dt.png)
+
+|  | Total CPU time(s) |
+| :--- | :---: |
+| NO MTIME | 0.085 |
+| DT=5 | 0.132 |
+| DT=2 | 0.175 |
+| DT=0.5 | 0.372 |
+| DT=0.2 | 0.638 |
+| DT=0.1 | 1.106 |
+
+Another example:
+
+[To increase the precision of large TTE trial without huge input dataset​]​(https://www.page-meeting.org/pdf_assets/404-Poster_PAGE%20_2014_tte_sim_joakim_nyberg_with_code.pdf​)
+
 #### Time-to-event models
 
 * Non-parametric analysis: Log-rank test
@@ -117,7 +186,7 @@ $PK
   ; ===================================
 
   ; Single-line if statement
-  IF (z == a) b = 4 ; Conditions always need parentheses.
+  IF (z == a) b = 4 ; Conditions always need parentheses
 
   IF (z /= a) THEN ; z not equal to a
     ; Other symbolic comparisons are < > <= >= == /=
@@ -125,26 +194,24 @@ $PK
   ELSEIF (z .GT. a) THEN ; z greater than a
     ; Text equivalents to symbol operators are .LT. .GT. .LE. .GE. .EQ. .NE.
     b = 6
-  ELSEIF (z < a) THEN ; "THEN" must be on this line.
-    b = 5 ; Execution block must be on a new line.
+  ELSEIF (z < a) THEN ; "THEN" must be on this line
+    b = 5 ; Execution block must be on a new line
   ELSE
     b = 10
   ENDIF
 
-  IF ((x < c .AND. v >= a .OR. z == z)) THEN ; Boolean operators.
-    IF (.TRUE.) THEN
-      b = 1
-    ENDIF
+  IF ((x < c .AND. v >= a .OR. z == z)) THEN ; Boolean operators
+    IF (.TRUE.) b = 1
   ENDIF
 
 ; Built-in Functions
     ; ==================
 
-    ; NMTRAN has many functions/subroutines intrinsic to the language.
+    ; NMTRAN has many functions/subroutines intrinsic to the language
     ; Examples -
-    v = LOG(x)            ! log base e.
+    v = LOG(x) ; log base e
 
-$DES ; Differential Equation System
+$DES ; "Differential Equation System"
 
 $ERROR ; Should really be called "$RESULT"
 
