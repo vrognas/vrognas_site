@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "@quarto/netlify-plugin-quarto": "^0.0.5"
+    "@quarto/netlify-plugin-quarto": "^0.0.5",
+    "mcp-server-gsc": "^0.2.0"
   },
   "devDependencies": {
     "@lhci/cli": "^0.14.0",
