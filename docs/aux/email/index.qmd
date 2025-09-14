@@ -47,7 +47,7 @@ If it is a really short message, consider using only the subject line, ending it
   And dots........ (what you want here is the *ellipsis* "...").
   * Mind your language.
     * Avoid profanity.
-    * Be polite, and not overly apologetic (see @tbl-email).
+    * Be polite, and not overly apologetic.
     * Use abbreviations, symbols, and emojis sparingly.
 
 :::{.callout-note title="Note on emojis"}
