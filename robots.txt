@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://vrognas.com/sitemap.xml
+
+# Block common crawlers from irrelevant paths
+Disallow: /site_libs/
+Disallow: /_site/
+Disallow: /_freeze/
