@@ -26,7 +26,7 @@ website:
   navbar:
     left:
       - text: "About"
-        href: docs/about/index.qmd
+        href: about/index.qmd
       - text: "Portfolio"
         href: docs/portfolio/index.qmd
       - text: "Encyclopædia"
