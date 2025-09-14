@@ -72,25 +72,25 @@ website:
           href: docs/aux/index.qmd
           contents:
           - text: "Data Visualization"
-            href: docs/aux/data-viz.qmd
+            href: docs/aux/data-viz/
           - text: "Math Intuition"
-            href: docs/aux/math-intuition.qmd
+            href: docs/aux/math-intuition/
           - section: "Communication"
             contents:
             - text: "Presentation Technique"
-              href: docs/aux/presentation.qmd
+              href: docs/aux/presentation/
             - text: "Email"
-              href: docs/aux/email.qmd
+              href: docs/aux/email/
             - text: "Meetings"
-              href: docs/aux/meetings.qmd
+              href: docs/aux/meetings/
             - text: "Writing Tactics"
-              href: docs/aux/writing-tactics.qmd
+              href: docs/aux/writing-tactics/
           - text: "Reproducible Research"
-            href: docs/aux/repr.qmd
+            href: docs/aux/repr/
           - text: "Coding Practices"
-            href: docs/aux/code.qmd
+            href: docs/aux/code/
           - text: "Self Management"
-            href: docs/aux/self-mgmt.qmd
+            href: docs/aux/self-mgmt/
     - id: concepts
       title: "Concepts of the Craft"
       collapse-level: 2
@@ -100,32 +100,32 @@ website:
           href: docs/concepts/index.qmd
           contents:
           - section: "Pharmacokinetics"
-            href: docs/concepts/pk.qmd
+            href: docs/concepts/pk/
             contents:
             - text: "Absorption"
-              href: docs/concepts/1_absorption.qmd
+              href: docs/concepts/1_absorption/
             - text: "Distribution"
-              href: docs/concepts/2_distribution.qmd
+              href: docs/concepts/2_distribution/
             - section: "Elimination"
-              href: docs/concepts/3_elimination.qmd
+              href: docs/concepts/3_elimination/
               contents:
               - text: "Augmented renal clearance (ARC)"
-                href: docs/concepts/augmented-renal-clearance.qmd
+                href: docs/concepts/augmented-renal-clearance/
           - text: "Pharmacodynamics"
-            href: docs/concepts/pd.qmd
+            href: docs/concepts/pd/
           - text: "Pediatrics"
-            href: docs/concepts/pediatrics.qmd
+            href: docs/concepts/pediatrics/
           - section: "Clinical studies"
-            href: docs/concepts/clinpharm-studies.qmd
+            href: docs/concepts/clinpharm-studies/
             contents:
             - text: "Data standards"
-              href: docs/concepts/cdisc.qmd
+              href: docs/concepts/cdisc/
             - text: "Hepatic impairment (HI)"
-              href: docs/concepts/hepatic-impairment-studies.qmd
+              href: docs/concepts/hepatic-impairment-studies/
             - text: "Renal impairment (RI)"
-              href: docs/concepts/renal-impairment-studies.qmd
+              href: docs/concepts/renal-impairment-studies/
             - text: "QT-prolongation"
-              href: docs/concepts/qt.qmd
+              href: docs/concepts/qt/
     - id: guilds
       title: "Gathering of Guilds"
       collapse-level: 2
@@ -135,7 +135,7 @@ website:
           href: docs/guilds/index.qmd
           contents:
           - text: "NMusers"
-            href: docs/guilds/nmusers.qmd
+            href: docs/guilds/nmusers/
     - id: modeling
       title: "Modeling Mementoes"
       collapse-level: 2
@@ -145,25 +145,25 @@ website:
         href: docs/modeling/index.qmd
         contents:
         - text: "PK"
-          href: docs/modeling/pk/pk.qmd
+          href: docs/modeling/pk/pk/
         - text: "PD"
-          href: docs/modeling/pd/pd.qmd
+          href: docs/modeling/pd/pd/
         - text: "PKPD/E-R"
-          href: docs/modeling/pkpd/pkpd.qmd
+          href: docs/modeling/pkpd/pkpd/
         - text: "Time-to-event"
-          href: docs/modeling/tte/tte.qmd
+          href: docs/modeling/tte/tte/
         - text: "C-QTc"
-          href: docs/modeling/qt.qmd
+          href: docs/modeling/qt/
         - section: "Goodness-of-fit"
           contents:
           - text: "Continuous data"
-            href: docs/modeling/gof/gof-cts.qmd
+            href: docs/modeling/gof/gof-cts/
           - text: "Categorical data"
-            href: docs/modeling/gof/gof-cat.qmd
+            href: docs/modeling/gof/gof-cat/
         - text: "Priors"
-          href: docs/modeling/priors.qmd
+          href: docs/modeling/priors/
         - text: "Variability"
-          href: docs/modeling/variability.qmd
+          href: docs/modeling/variability/
     - id: pathology-primers
       title: "Pathology Primers"
       collapse-level: 1
@@ -175,36 +175,36 @@ website:
             - section: "Autoimmune diseases"
               contents:
               - text: "Giant cell arteritis (GCA)"
-                href: docs/pathology-primers/giant-cell-arteritis.qmd
+                href: docs/pathology-primers/giant-cell-arteritis/
               - text: "Psoriasis"
-                href: docs/pathology-primers/psoriasis.qmd
+                href: docs/pathology-primers/psoriasis/
               - text: "Rheumatoid arthritis (RA)"
-                href: docs/pathology-primers/rheumatoid-arthritis.qmd
+                href: docs/pathology-primers/rheumatoid-arthritis/
             - section: "Viral infections"
               contents:
                 - text: "HIV/AIDS"
-                  href: docs/pathology-primers/hiv.qmd
+                  href: docs/pathology-primers/hiv/
             - section: "Bacterial infections"
-              href: docs/pathology-primers/bacterial-infection.qmd
+              href: docs/pathology-primers/bacterial-infection/
               contents:
               - text: "Tuberculosis"
-                href: docs/pathology-primers/tuberculosis.qmd
+                href: docs/pathology-primers/tuberculosis/
             - section: "Cancer"
               contents:
               - text: "Lung cancers"
-                href: docs/pathology-primers/lung-cancer.qmd
+                href: docs/pathology-primers/lung-cancer/
               - text: "Skin cancers"
-                href: docs/pathology-primers/skin-cancer.qmd
+                href: docs/pathology-primers/skin-cancer/
             - section: "Neurological diseases"
               contents:
               - text: "Alzheimer"
-                href: docs/pathology-primers/alzheimer.qmd
+                href: docs/pathology-primers/alzheimer/
               - text: "Parkinson"
-                href: docs/pathology-primers/parkinson.qmd
+                href: docs/pathology-primers/parkinson/
               - text: "Schizophrenia"
-                href: docs/pathology-primers/schizophrenia.qmd
+                href: docs/pathology-primers/schizophrenia/
             - text: "Diabetes"
-              href: docs/pathology-primers/diabetes.qmd
+              href: docs/pathology-primers/diabetes/
     - id: pharmacopeia
       title: "Pharmacopœia"
       collapse-level: 2
@@ -239,21 +239,21 @@ website:
           - section: "NONMEM"
             contents:
               - text: "Data"
-                href: docs/tools-of-the-trade/nonmem/nm-data.qmd
+                href: docs/tools-of-the-trade/nonmem/nm-data/
               - text: "Grok NM-TRAN"
-                href: docs/tools-of-the-trade/nonmem/nm-ctl.qmd
+                href: docs/tools-of-the-trade/nonmem/nm-ctl/
               - text: "Estimation"
-                href: docs/tools-of-the-trade/nonmem/nm-est.qmd
+                href: docs/tools-of-the-trade/nonmem/nm-est/
               - text: "Troubleshooting"
-                href: docs/tools-of-the-trade/nonmem/nm-err.qmd
+                href: docs/tools-of-the-trade/nonmem/nm-err/
               - text: "Model QA"
-                href: docs/tools-of-the-trade/nonmem/nm-qa.qmd
+                href: docs/tools-of-the-trade/nonmem/nm-qa/
               - text: "Tips-n-tricks"
-                href: docs/tools-of-the-trade/nonmem/nm-tips-n-tricks.qmd
+                href: docs/tools-of-the-trade/nonmem/nm-tips-n-tricks/
           - section: "R"
             contents:
               - text: "Tips-n-tricks"
-                href: docs/tools-of-the-trade/r/r-tips-n-tricks.qmd
+                href: docs/tools-of-the-trade/r/r-tips-n-tricks/
   page-footer:
     left: "© 2025 Viktor Rognås"
     right:
