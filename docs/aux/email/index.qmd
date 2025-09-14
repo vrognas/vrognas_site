@@ -55,27 +55,44 @@ Emojis are meant to convey emotion in writing.
 Correctly used, they are irreplaceable in making sure your message is read in the intended tone of voice, even in professional email.
 :::
 
-| What You're Really Saying              | Instead of Saying...                  | Say This Instead                              |
-| :--------------------------------------- | :------------------------------------- | :----------------------------------------- |
-| I know your time is valuable             | Sorry to bother you                    | Appreciate you making time for this        |
-| That might have been unclear             | Sorry for the confusion                | Let me clarify that for you                |
-| I'm learning and want to get it right    | Sorry for asking so many questions     | I value your insight as I learn more       |
-| I want to contribute thoughtfully        | Sorry for jumping in                   | May I offer a thought here?                |
-| I can explain this better                | Sorry if that didn’t make sense        | Let me rephrase that to be clearer         |
-| I need some guidance                     | Sorry, I’m not sure how to do this     | Could you walk me through the next step?   |
-| I need to express something              | Sorry for venting                      | Thank you for listening                    |
-| I appreciate your attention              | Sorry for taking up your time          | Grateful for the opportunity to share this |
-| I took a while, but you can deal     | Sorry for the delay                         | Thanks for your patience                  |
-| My schedule matters too              | What works best for you?                    | Could you do __:__?                       |
-| Yeah, you're welcome                 | No problem / No worries!                    | Always happy to help!                     |
-| I know what I’m doing                | I think maybe we should __                  | It’d be best if we __                     |
-| Wording this is hard                 | *Rewriting email for 40 minutes*            | It’d be easier to discuss in person       |
-| Do you get it?                       | Hopefully that makes sense?                 | Let me know if you have questions         |
-| Where the heck are we on this?       | Just wanted to check in                     | When can I expect an update?             |
-| I made a small error                 | Sorry I missed that     | Nice catch! I've updated it now. Thanks for letting me know! |
-| I have an appointment                | Could I possibly leave early?               | I will need to leave for ___ at ___      |
+### Corporate lingo
 
-: Email communication {#tbl-email}
+| Lingo             | Try this |
+| :---------------- | :------- |
+| Alignment         |          |
+| Circle back       |          |
+| Low-hanging fruit |          |
+| Bandwidth         |          |
+| Resources         |          |
+| Synergy           |          |
+| Resources         |          |
+| EOB/EOD           | Say the clock time |
+
+: Corporate lingo {#tbl-corporate-lingo}
+
+### Be assertive
+
+| What you mean                          | Instead of saying...               | Try saying this instead                    |
+| :------------------------------------- | :--------------------------------- | :----------------------------------------- |
+| I know your time is valuable           | Sorry to bother you                | Appreciate you making time for this        |
+| That might have been unclear           | Sorry for the confusion            | Let me clarify that for you                |
+| I'm learning and want to get it right  | Sorry for asking so many questions | I value your insight as I learn more       |
+| I want to contribute thoughtfully      | Sorry for jumping in               | May I offer a thought here?                |
+| I can explain this better              | Sorry if that didn’t make sense    | Let me rephrase that to be clearer         |
+| I need some guidance                   | Sorry, I’m not sure how to do this | Could you walk me through the next step?   |
+| I need to express something            | Sorry for venting                  | Thank you for listening                    |
+| I appreciate your attention            | Sorry for taking up your time      | Grateful for the opportunity to share this |
+| I took a while, but you can deal       | Sorry for the delay                | Thanks for your patience                   |
+| My schedule matters too                | What works best for you?           | Could you do __:__?                        |
+| Yeah, you're welcome                   | No problem / No worries!           | Always happy to help!                      |
+| I know what I’m doing                  | I think maybe we should __         | It’d be best if we __                      |
+| Wording this is hard                   | *Rewriting email for 40 minutes*   | It’d be easier to discuss in person        |
+| Do you get it?                         | Hopefully that makes sense?        | Let me know if you have questions          |
+| Where the heck are we on this?         | Just wanted to check in            | When can I expect an update?               |
+| I made a small error                   | Sorry I missed that                | Nice catch! I've updated it now. Thanks for letting me know! |
+| I have an appointment                  | Could I possibly leave early?      | I will need to leave for ___ at ___        |
+
+: Assertive communication {#tbl-assertive-communication}
 
 :::{.callout-note title="Note on attachments"}
 Prefer links to secure servers over attaching files.
