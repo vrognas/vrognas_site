@@ -26,7 +26,7 @@ HIV and TB form a lethal combination, each speeding the other's progress.
 
 *Mycobacterium tuberculosis* has been suggested to exist in three states, showcased in @fig-mtb-model (Clewe et al. 2016).
 
-![Pharmacodynamic model for different states of *Mycobacterium tuberculosis*. NB unidirectional from fast to non-multiplying ("dormant"). Clewe et al. (2016).](images/mtb-model.avif){#fig-mtb-model}
+![Pharmacodynamic model for different states of *Mycobacterium tuberculosis*. NB unidirectional from fast to non-multiplying ("dormant"). Clewe et al. (2016).](../images/mtb-model.avif){#fig-mtb-model}
 
 ### Drug resistant TB
 

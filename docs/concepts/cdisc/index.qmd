@@ -14,7 +14,7 @@ All the implementations have version numbers that are important to keep track of
 CDISC also provides TAUGs (Therapeutic Area User Guides).
 A TAUG is a document that provides guidance on applying CDISC standards to a specific therapeutic area (e.g., oncology, diabetes, CNS, etc.).
 
-![](images/cdisc.png){#fig-cdisc}
+![](../images/cdisc.png){#fig-cdisc}
 
 ## CDASH
 

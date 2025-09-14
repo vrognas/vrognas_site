@@ -27,7 +27,7 @@ The term "antibiotic" comes from the Greek words *anti* ("against") and *biotiko
 Strictly speaking, antibiotics refers only to naturally produced substances, and not synthetic or semi-synthetic types (e.g., quinolones).
 However, it is commonly used interchangeably with antibacterials.
 
-![Types and classes of antibacterials.](images/abx-classes.png){#fig-abx-classes}
+![Types and classes of antibacterials.](../images/abx-classes.png){#fig-abx-classes}
 
 ## How do antibacterials work?
 
@@ -38,7 +38,7 @@ Antibacterials interfere with vital processes in bacterial cells.
 
 The host's immune system then clears the remaining infecting pathogens.
 
-![Drug-Bug-Host disease triangle.](images/bug-drug-host_disease-triangle.png){#fig-triangle}
+![Drug-Bug-Host disease triangle.](../images/bug-drug-host_disease-triangle.png){#fig-triangle}
 
 ### Antibiotic targets in bacteria
 

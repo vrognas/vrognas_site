@@ -36,4 +36,4 @@ description: "Essential software tools and resources for pharmacometrics includi
 * <https://trc-p.nl/>
 * <https://nmhelp.tingjieguo.com/>
 
-![](images/index_tools.png)
+![](../images/index_tools.png)

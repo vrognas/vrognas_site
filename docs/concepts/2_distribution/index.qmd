@@ -19,7 +19,7 @@ $\Vd$ usually has 30% inter-individual variability.
   Similarly, at active receptor sites, one form of the drug usually is effective and the other is not (a or b).
   A very high affinity of the drug for pharmacologically inactive binding sites in tissues or a large partitioning of a lipophillic drug into lipids creates a sink for drug accumulation in tissue and limits the free drug concentration, which determines the number of drug-receptor complexes formed and the intensity of drug action.
   Extensive binding and partitioning in tissue creates a large tissue distribution volume.
-](images/distribution.png){#fig-distribution}
+](../images/distribution.png){#fig-distribution}
 
 Typical physiological valoumes for a 70 kg adult:
 

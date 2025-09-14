@@ -75,7 +75,7 @@ d %>%
     labs(x = "Days old", y = "Circumference (mm)")
 ```
 
-![](./images/line-end-label.png)
+![](../images/line-end-label.png)
 
 ### Scientific figures
 
@@ -92,4 +92,4 @@ smart.servier.com
 You probably can’t write text that conveys the entire meaning of a chart.
 But, that doesn’t mean that you shouldn’t try.
 
-![https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81](images/alt-text.png)
+![https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81](../images/alt-text.png)

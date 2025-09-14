@@ -14,7 +14,7 @@ date: last-modified
     * Claude 4 Opus
     * Claude 4 Sonnet
 
-![](images/llm_r.jpeg){#fig-llm-r}
+![](../images/llm_r.jpeg){#fig-llm-r}
 
 ## Use
 

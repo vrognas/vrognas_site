@@ -9,4 +9,4 @@ These are skills and knowledge in areas that amplify your core craft.
 
 They are often interdisciplinary and can significantly contribute to personal and professional development.
 
-![](images/index_aux.png)
+![](./images/index_aux.png)

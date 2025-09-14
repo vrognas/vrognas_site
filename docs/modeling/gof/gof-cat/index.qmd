@@ -13,11 +13,11 @@ date: last-modified
   * Bar-plots
   * VPC (@fig-vpc-binary)
 
-![Binary visual predictive check (VPC). Simulated (blue distribution) and actual proportion (blue circles), stratified.](images/vpc_binary.png){#fig-vpc-binary}
+![Binary visual predictive check (VPC). Simulated (blue distribution) and actual proportion (blue circles), stratified.](../images/vpc_binary.png){#fig-vpc-binary}
 
 * PPC of proportions (@fig-ppc-binary)
 
-![Binary posterior predictive check (PPC). Simulated (blue distribution) and actual proportion (red line), stratified by dose and (binned) time.](images/ppc_binary.png){#fig-ppc-binary}
+![Binary posterior predictive check (PPC). Simulated (blue distribution) and actual proportion (red line), stratified by dose and (binned) time.](../images/ppc_binary.png){#fig-ppc-binary}
 
 ## Ordinal data
 

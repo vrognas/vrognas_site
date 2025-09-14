@@ -12,13 +12,13 @@ If you have ever felt uncomfortable with pharmacometric analysis in pediatric pa
 First things first: <span class="red-underline">**Children are not small adults**</span>.
 Children have quite different physiology (@fig-small-adult), which must be taken into condsideration when evaluating PK and PD.
 
-![A child and an adult human male scaled to the same height. Imagine how smart kids would be at this (brain) size. Another observation is the liver size, which would give them a much larger metabolic capacity that adults, which is true when scaled to body weight (more on this later).](images/small-adult.png){#fig-small-adult}
+![A child and an adult human male scaled to the same height. Imagine how smart kids would be at this (brain) size. Another observation is the liver size, which would give them a much larger metabolic capacity that adults, which is true when scaled to body weight (more on this later).](../images/small-adult.png){#fig-small-adult}
 
 The differences in child--adult physiology can be further visualized through the arm-length/head-size ratio difference (See @vid-size).
 
 ::: {#vid-size}
 
-{{< video videos/hands-over-head.mp4 title="Arm-length/head-size ratio" >}}
+{{< video ../videos/hands-over-head.mp4 title="Arm-length/head-size ratio" >}}
 
 Difference in arm-length/head-size ratio between child and adult.
 [Link to original video](https://www.tiktok.com/@dawnwalker_/video/7082077181089893678)
@@ -58,7 +58,7 @@ When patients are very young (< 1 year after birth), age is often related to the
 This is done because most women know when their last period began but not when ovulation occurred.
 This method of estimating the date of delivery is reliable as long as menstrual dates are remembered accurately (@fig-age-term).
 
-![Perinatal age terminology. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, postnatal age](images/pediatric-age.png){#fig-age-term}
+![Perinatal age terminology. PMA, post-menstrual age; D1, first day of last menstrual period; GA, gestational age; W, weeks; PNA, postnatal age](../images/pediatric-age.png){#fig-age-term}
 
 **Methods of determining GA should be <span class="red-underline">clearly stated</span>** so that the variability inherent in these estimations can be considered when outcomes are interpreted.
 The convention for calculating GA when the date of conception is known is to add 2 weeks to the conceptional age.
@@ -222,7 +222,7 @@ The maturation half-life (TM~50~) is fixed to the literature value of 47.7 weeks
 The distribution (mean, [min--max]) of PMA (weeks) in this study population was (518, [57--1652]).
 Assuming renal maturation time differs in pre-term infants, a separate TM~50~ value could be estimated for them if the current model poorly describes this subgroup.
 
-![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full-term infant with a PMA of 40 weeks](images/pediatric-gfr.png){#fig-gfr}
+![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full-term infant with a PMA of 40 weeks](../images/pediatric-gfr.png){#fig-gfr}
 
 ::: {.callout-warning}
 # Maturation functions and allometric exponents should not be estimated simultaneously
@@ -285,14 +285,14 @@ If you have pediatric data, you can overlay observed pediatric exposure with the
 Relevant predefined exposure metrics should be presented graphically versus body weight and age on a continuous scale (@fig-cov).
 If the drug is indicated to be used in the age range below one year, exposure vs body weight and age should be depicted in an additional separate figure focused on children 0--1 years.
 
-![Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions). The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated pediatric patients. The *horizontal gray band* encompasses 90% of the simulated adult patients receiving 100 mg BID [@schoemakerBrivaracetamPopulationPharmacokinetics2017].](images/pediatric-cov.png){#fig-cov}
+![Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions). The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated pediatric patients. The *horizontal gray band* encompasses 90% of the simulated adult patients receiving 100 mg BID [@schoemakerBrivaracetamPopulationPharmacokinetics2017].](../images/pediatric-cov.png){#fig-cov}
 
 Often plots that show the distribution of AUC~pediatric,simulated~ along with the distribution of AUC~adult,observed~ or simulated values from individual adult subjects using the final popPK model using box-plots can be useful (@fig-box).
 If different doses are proposed for bands of weight or/and age, exposure ranges predicted for the proposed doses for the subsets of the pediatric population should be visualized as box-plots (@fig-box).
 The reference range in the adult population (median and outer percentiles of observed or simulated data) should be given additionally (@fig-box).
 **The same statistics should be presented numerically in tables.**
 
-![Adult reference range (5^th^--95^th^ percentiles and median) highlighted in the background.](images/pediatric-box.png){#fig-box}
+![Adult reference range (5^th^--95^th^ percentiles and median) highlighted in the background.](../images/pediatric-box.png){#fig-box}
 
 See the [EMA M&S QA (2023)](https://www.ema.europa.eu/en/human-regulatory-overview/research-and-development/scientific-guidelines/clinical-pharmacology-and-pharmacokinetics/modelling-and-simulation-questions-and-answers) for more information.
 

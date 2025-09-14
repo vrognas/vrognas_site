@@ -13,7 +13,7 @@ date: last-modified
 
 Consult recent articles in target journal!
 
-![Story (purple) and study (orange) in IMRAD-format. Key section-specific questions to guide writers. While separated here, story and study overlap throughout the manuscript.](images/writing.png)
+![Story (purple) and study (orange) in IMRAD-format. Key section-specific questions to guide writers. While separated here, story and study overlap throughout the manuscript.](../images/writing.png)
 
 Frontload your argument.
 
@@ -64,7 +64,7 @@ Should be like a walk through an art-gallery.
 
 {{< video https://www.youtube.com/watch?v=w5Cy2mjBxQw >}}
 
-![](images/nature-abstract.jpeg)
+![](../images/nature-abstract.jpeg)
 
 ## Typography
 

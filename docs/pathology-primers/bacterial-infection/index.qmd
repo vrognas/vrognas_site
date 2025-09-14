@@ -25,7 +25,7 @@ A bacterial infection is classified according to the site of infection and somet
 * Blood-stream infection (BSI)
 * Urinary-tract infection (UTI)
 
-![Overview of bacterial infections. Typical pathogens are listed for each site of infection.](images/bac-inf_overview.avif){#fig-overview}
+![Overview of bacterial infections. Typical pathogens are listed for each site of infection.](../images/bac-inf_overview.avif){#fig-overview}
 
 ### Sepsis
 
@@ -58,11 +58,11 @@ Infectious diseases can be contagious during all five of the periods of disease.
 Stages might overlap.
 The onset of symptoms marks the transition from subclinical to clinical disease.
 
-![Periods of disease. This particular figure shows a complete recovery after illness. One can also imagine cases where the severity of symptoms never completely goes back to baseline (a disability) or a case where the curves are truncated earlier in time (a death). Indeed, the time-scale is arbitrary here, as is the distance in time between the different periods. The periods of disease could even overlap in some diseases, adding to the complexity.](images/bac-inf_periods.avif){#fig-periods}
+![Periods of disease. This particular figure shows a complete recovery after illness. One can also imagine cases where the severity of symptoms never completely goes back to baseline (a disability) or a case where the curves are truncated earlier in time (a death). Indeed, the time-scale is arbitrary here, as is the distance in time between the different periods. The periods of disease could even overlap in some diseases, adding to the complexity.](../images/bac-inf_periods.avif){#fig-periods}
 
 ## Diagnosis
 
-![Typical plasma concentration-time profiles of different biomarkers of bacterial infections. Adapted from Meisner M., (1999) @meisnerProcalcitoninErfahrungenMit1999](images/bac-inf_biomarkers.avif){#fig-biomarkers}
+![Typical plasma concentration-time profiles of different biomarkers of bacterial infections. Adapted from Meisner M., (1999) @meisnerProcalcitoninErfahrungenMit1999](../images/bac-inf_biomarkers.avif){#fig-biomarkers}
 
 * Biomarkers not specific
     * 3 markers + WBC (but unspecific)

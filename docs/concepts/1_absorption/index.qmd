@@ -50,14 +50,14 @@ $$
   \right)
 $$
 
-![Oral absorption.](images/absorption.png){#fig-absorption}
+![Oral absorption.](../images/absorption.png){#fig-absorption}
 
 ## Enterohepatic recirculation
 
 @fig-enterohepatic-recirculation depicts enterohepatic recirculation, which can also influence bioavailability.
 If a drug exhibits enterohepatic recirculation, it is common to see two or more absorption "peaks".
 
-![Enterohepatic recirculation.](images/enterohepatic-recirculation.png){#fig-enterohepatic-recirculation}
+![Enterohepatic recirculation.](../images/enterohepatic-recirculation.png){#fig-enterohepatic-recirculation}
 
 ## References
 

@@ -2,7 +2,7 @@
 about:
     id: about-vrognas
     template: jolla
-    image: "images/vrognas.avif"
+    image: "/images/vrognas.avif"
     image-shape: round
     image-alt: "A profile picture of Viktor, lookin' all smug"
 title: "Viktor Rognås"

@@ -9,7 +9,7 @@ The cardiac conduction system (CCS, also called the electrical conduction system
 * **QRS-complex**: depolarization of the chambers.
 * **ST-segment** and **T-wave**: repolarization of the chambers (return to "normal").
 
-![ECG of a heart in normal sinus rhythm.](images/SinusRhythmLabels.svg)
+![ECG of a heart in normal sinus rhythm.](../images/SinusRhythmLabels.svg)
 
 ## Causes of QT-prolongation
 
@@ -19,7 +19,7 @@ The cardiac conduction system (CCS, also called the electrical conduction system
 
 * Can in rare cases lead to fainting or death through **torsades de pointes (TdP)**, french for "twisting of peaks".
 
-![Torsade de pointes ("twisting of peaks").](images/tdp.avif)
+![Torsade de pointes ("twisting of peaks").](../images/tdp.avif)
 
 ::: {.callout-note}
 QT-prolongation ≠ risk for TdP

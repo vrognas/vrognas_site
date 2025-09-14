@@ -7,4 +7,4 @@ This section provides a high-level overview of specific theories and principles 
 
 Each concept includes information on the definition, use cases, and implementation details.
 
-![](images/index_concepts.png)
+![](../images/index_concepts.png)

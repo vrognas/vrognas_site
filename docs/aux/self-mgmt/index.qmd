@@ -83,7 +83,7 @@ Finish the thinking!
 To make the right prioritizations, focus on the *task*, not the solution.
 Frame projects using the project matrix (an variant of the project triangle):
 
-![](images/project-square.png)
+![](../images/project-square.png)
 
 Mapping your work across these dimensions clarifies priorities and constraints.
 
