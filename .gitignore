@@ -12,3 +12,8 @@
 node_modules/
 .npm/
 .pnpm/
+
+# Generated HTML files (should only exist in _site/)
+*.html
+!seo.html
+!pk-operators.html
