@@ -72,4 +72,4 @@ Lack of identifiability means multiple parameter combinations yield the same lik
 ::: {#refs}
 :::
 
-![](../images/index_modeling.png)
+![](./images/index_modeling.png)
