@@ -28,7 +28,7 @@ website:
       - text: "About"
         href: about/index.qmd
       - text: "Portfolio"
-        href: docs/portfolio/index.qmd
+        href: portfolio/index.qmd
       - text: "Encyclopædia"
         menu:
           - text: "Auxiliary Arts"
