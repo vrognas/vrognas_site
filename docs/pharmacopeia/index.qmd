@@ -91,4 +91,4 @@ Thus, in the ATC system all plain metformin preparations are given the code A10B
 For the chemical substance, the [International Nonproprietary Name (INN)](https://www.who.int/teams/health-product-and-policy-standards/inn) is preferred.
 If INN names are not assigned, USAN (United States Adopted Name) or BAN (British Approved Name) names are usually chosen.
 
-![](../images/index_pharmacopeia.png)
+![](./images/index_pharmacopeia.png)

@@ -34,11 +34,11 @@ A [Visual Studio Code](https://code.visualstudio.com/) [extension](https://marke
 
 By tokenization according to [TextMate 1.5.1 naming conventions](https://macromates.com/manual/en/language_grammars#naming_conventions)
 
-![NMTRAN syntax highlighting in VS Code showing control stream records with color-coded keywords, variables, and comments for better code readability](../images/demo_syntax-highlight.avif)
+![NMTRAN syntax highlighting in VS Code showing control stream records with color-coded keywords, variables, and comments for better code readability](./images/demo_syntax-highlight.avif)
 
 ##### Snippet Completion
 
-![Animated demonstration of ADVAN snippet completion in VS Code, showing autocomplete suggestions for NONMEM subroutine selection with ADVAN and TRANS options](../images/demo_advan-snippets.gif)
+![Animated demonstration of ADVAN snippet completion in VS Code, showing autocomplete suggestions for NONMEM subroutine selection with ADVAN and TRANS options](./images/demo_advan-snippets.gif)
 
 ###### Selection of available snippets
 
@@ -99,7 +99,7 @@ High colistin exposure was associated with poor kidney function, and was not rel
 
 <https://www.page-meeting.org/default.asp?abstract=9869>
 
-![Scientific poster showing turn-over model characterizing effect of colistin on serum creatinine in critically ill patients with mathematical equations and population pharmacokinetic modeling results](../images/phd-2-scr.avif)
+![Scientific poster showing turn-over model characterizing effect of colistin on serum creatinine in critically ill patients with mathematical equations and population pharmacokinetic modeling results](./images/phd-2-scr.avif)
 
 ### Bounded integer approach to model time-varying SOFA scores from patients with carbapenem resistant infections
 
@@ -107,7 +107,7 @@ High colistin exposure was associated with poor kidney function, and was not rel
 
 <https://www.page-meeting.org/default.asp?abstract=9052>
 
-![Scientific poster displaying bounded integer approach for modeling time-varying SOFA scores in patients with carbapenem-resistant infections, showing statistical methodology and clinical outcomes data](../images/phd-3-bi.avif)
+![Scientific poster displaying bounded integer approach for modeling time-varying SOFA scores in patients with carbapenem-resistant infections, showing statistical methodology and clinical outcomes data](./images/phd-3-bi.avif)
 
 ### A semi-mechanistic population pharmacokinetic-pharmacodynamic model to assess downstream drug-target effects on erythropoiesis
 

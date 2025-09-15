@@ -25,4 +25,4 @@ Typical structure for disease "XYZ":
     * Dose Adjustments (e.g., renal/liver impairment, pediatrics)
   * Commonly used PK-models
 
-![](../images/index_pathology.avif)
+![](./images/index_pathology.avif)
