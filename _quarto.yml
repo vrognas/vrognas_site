@@ -26,27 +26,27 @@ website:
   navbar:
     left:
       - text: "About"
-        href: about/index.qmd
+        href: about/
       - text: "Portfolio"
-        href: portfolio/index.qmd
+        href: portfolio/
       - text: "Encyclopædia"
         menu:
           - text: "Auxiliary Arts"
-            href: docs/aux/index.qmd
+            href: docs/aux/
           - text: "Concepts of the Craft"
-            href: docs/concepts/index.qmd
+            href: docs/concepts/
           - text: "Gathering of Guilds"
-            href: docs/guilds/index.qmd
+            href: docs/guilds/
           - text: "Modeling Mementoes"
-            href: docs/modeling/index.qmd
+            href: docs/modeling/
           - text: "Pathology Primers"
-            href: docs/pathology-primers/index.qmd
+            href: docs/pathology-primers/
           - text: "Pharmacopœia"
-            href: docs/pharmacopeia/index.qmd
+            href: docs/pharmacopeia/
           - text: "Regulatory Rites"
-            href: docs/regulatory/index.qmd
+            href: docs/regulatory/
           - text: "Tools of the Trade"
-            href: docs/tools-of-the-trade/index.qmd
+            href: docs/tools-of-the-trade/
     right:
       - icon: github
         href: https://github.com/vrognas
@@ -69,7 +69,7 @@ website:
       style: "floating"
       contents:
         - section: "Auxiliary Arts"
-          href: docs/aux/index.qmd
+          href: docs/aux/
           contents:
           - text: "Data Visualization"
             href: docs/aux/data-viz/
@@ -97,7 +97,7 @@ website:
       style: "floating"
       contents:
         - section: "Concepts of the Craft"
-          href: docs/concepts/index.qmd
+          href: docs/concepts/
           contents:
           - section: "Pharmacokinetics"
             href: docs/concepts/pk/
@@ -132,7 +132,7 @@ website:
       style: "floating"
       contents:
         - section: "Gathering of Guilds"
-          href: docs/guilds/index.qmd
+          href: docs/guilds/
           contents:
           - text: "NMusers"
             href: docs/guilds/nmusers/
@@ -142,7 +142,7 @@ website:
       style: floating
       contents:
       - section: "Modeling Mementoes"
-        href: docs/modeling/index.qmd
+        href: docs/modeling/
         contents:
         - text: "PK"
           href: docs/modeling/pk/pk/
@@ -170,7 +170,7 @@ website:
       style: "floating"
       contents:
         - section: "Pathology Primers"
-          href: docs/pathology-primers/index.qmd
+          href: docs/pathology-primers/
           contents:
             - section: "Autoimmune diseases"
               contents:
@@ -211,20 +211,20 @@ website:
       style: "floating"
       contents:
         - text: "Pharmacopœia"
-          href: docs/pharmacopeia/index.qmd
+          href: docs/pharmacopeia/
           contents:
           - section: "(J) Antiinfectives for systemic use"
             contents:
               - text: "(01) Antibacterials for systemic use"
-                href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/index.qmd
+                href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/
               - text: "(05) Antivirals for systemic use"
-                href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J05_antivirals-for-systemic-use/index.qmd
+                href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J05_antivirals-for-systemic-use/
           - section: "(L) Antineoplastic and immunomodulating agents"
             contents:
               - section: "(04) Immunosuppressants"
                 contents:
                   - text: "(A) Immunosuppressants"
-                    href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L04_immunosuppressants/L04A_immunosuppressants/index.qmd
+                    href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L04_immunosuppressants/L04A_immunosuppressants/
     - id: regulatory
       title: "Regulatory Rites"
       style: "floating"
@@ -234,7 +234,7 @@ website:
       style: "floating"
       contents:
         - section: "Tools of the Trade"
-          href: docs/tools-of-the-trade/index.qmd
+          href: docs/tools-of-the-trade/
           contents:
           - section: "NONMEM"
             contents:
