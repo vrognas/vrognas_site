@@ -17,6 +17,7 @@ website:
   open-graph: true
   twitter-card: true
   site-url: https://vrognas.com
+  site-path: "/"
   repo-url: https://github.com/vrognas/vrognas_site
   repo-actions: [source, issue]
   image: "images/vrognas.avif"
