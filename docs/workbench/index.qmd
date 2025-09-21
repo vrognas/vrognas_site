@@ -7,6 +7,18 @@ date: last-modified
 * Shiny Hazard function calculator
 * Half-life dosing table, e.g., dosing every half-life gives AR=2
 * Convert Omega values to percentages
-* Convert precentages to Omega values
+* Convert percentages to Omega values
 * Calculate confidence interval (95%) given mean and SD
 * Calculate half-life based on V and CL
+
+## Unit converter
+
+### Bilirubin
+
+mg/dL -> μmol/L, multiply with 17.1
+μmol/L -> mg/dL, divide by 17.1
+
+### Creatinine
+
+mg/dL -> μmol/L, multiply with 88.4
+μmol/L -> mg/dL, divide by 88.4
