@@ -4,8 +4,8 @@
 
 # CAR-T cell therapy
 
-Chimeric Antigen REceptor (CAR T) cell therapy
+Chimeric Antigen Receptor (CAR T) cell therapy
 
-Emily is the first patient with incurable leukemia, cured using CAR T therapy. Grupp et al., N Engl J Med 2013.
+Emily was the first patient with incurable leukemia, cured using CAR T therapy. Grupp et al., N Engl J Med 2013. <https://www.nejm.org/doi/full/10.1056/nejmoa1215134>
 
 ## CD19 CAR T cells
