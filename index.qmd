@@ -13,9 +13,8 @@ description-meta: "Expert in pharmacometric DevOps, R data programming, and NONM
 
 [📩 **viktor@vrognas.com**](mailto:viktor@vrognas.com)
 
-👋 I build tools and workflows for model-informed drug development.
-This site is my knowledge base on pharmacometrics, clinical pharmacology, and data science.
+👋 This site is where I collect what I learn about pharmacometrics, clinical pharmacology, and data science.
+Explore the [Encyclopædia](/docs/encyclopaedia/) for notes, models, and code.
 
-Explore the [Encyclopædia](/docs/encyclopaedia/) to find structured notes, models, and code.
-
+**I believe in knowledge sharing.**
 If you find something useful, don't keep it to yourself; share it with your colleagues! 💚
