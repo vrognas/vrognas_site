@@ -9,7 +9,7 @@ description: "Professional portfolio showcasing pharmacometric modeling projects
 
 ## Software
 
-::: {.callout title="VSCode/VSX extension for NMTRAN (NONMEM)"}
+::: {.callout title="VSCode/VSX extension for NMTRAN (NONMEM)" collapse="true"}
 
 <https://github.com/vrognas/vscode-nmtran>
 
