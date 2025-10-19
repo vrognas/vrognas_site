@@ -14,7 +14,6 @@ description-meta: "Expert in pharmacometric DevOps, R data programming, and NONM
 [📩 **viktor@vrognas.com**](mailto:viktor@vrognas.com)
 
 👋 Hi, I'm Viktor---this site is where I collect what I learn about pharmacometrics, clinical pharmacology, and data science.
-Explore the [Encyclopædia](/docs/encyclopaedia/) for notes, models, and code.
 
 **I believe in knowledge sharing.**  
 If you find something useful, don't keep it to yourself; share it with your colleagues! 💚
