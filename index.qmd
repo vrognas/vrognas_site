@@ -7,19 +7,15 @@ about:
     image-alt: "A profile picture of Viktor, lookin' all smug"
 title: "Viktor Rognås"
 subtitle: "Pharmacometric Engineer"
-pagetitle: "Viktor Rognås | Pharmacometric Engineer & Clinical Pharmacology Expert"
-description-meta: "Expert in pharmacometrics, NONMEM modeling, and clinical pharmacology. PhD student at Uppsala University specializing in population PK/PD models, antimicrobial resistance research, and regulatory science."
+pagetitle: "Viktor Rognås | Pharmacometric Engineer"
+description-meta: "Expert in pharmacometric DevOps, R data programming, and NONMEM modeling. PhD student at Uppsala University."
 ---
 
 [📩 **viktor@vrognas.com**](mailto:viktor@vrognas.com)
 
-**Use the <span class="red-underline">search in the upper-right</span> to quickly find what you want.**
+👋 I build tools and workflows for model-informed drug development.
+This site is my knowledge base on pharmacometrics, clinical pharmacology, and data science.
 
-👋 Hi! I use this site to track my projects and knowledge as it evolves.
+Explore the [Encyclopædia](/docs/encyclopaedia/) to find structured notes, models, and code.
 
-In the **Encylopædia**, I've crystallized knowledge that I want to keep as a memo for my future self.
-
-I hope you and others in **pharmacometrics, clinical pharmacology, and data science** find it helpful too.
-💚
-
-If you want to support my work, you can share it on social media or [buy me a coffee ☕️](https://buymeacoffee.com/vrognas)!
+If you find something useful, don't keep it to yourself; share it with your colleagues! 💚
