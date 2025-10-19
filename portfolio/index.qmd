@@ -3,20 +3,22 @@ title: "Portfolio"
 description: "Professional portfolio showcasing pharmacometric modeling projects, software development, and scientific research in clinical pharmacology and drug development."
 ---
 
-:::{.callout-tip}
+::: {.callout-tip}
 # Click on images to enlarge them
 :::
 
 ## Software
 
-::: {.callout title="VSCode extension for NMTRAN (NONMEM)"}
+::: {.callout title="VSCode/VSX extension for NMTRAN (NONMEM)"}
 
 <https://github.com/vrognas/vscode-nmtran>
 
 ![](https://img.shields.io/github/license/vrognas/vscode-nmtran)
 ![](https://img.shields.io/visual-studio-marketplace/azure-devops/installs/total/vrognas.nmtran)
 
-A [Visual Studio Code](https://code.visualstudio.com/) [extension](https://marketplace.visualstudio.com/VSCode) written in **TypeScript**, adding support for the NMTRAN language used in [**NONMEM**](https://www.iconplc.com/solutions/technologies/nonmem/) control streams.
+An extension written in **TypeScript**, adding support for the NMTRAN language used in [**NONMEM**](https://www.iconplc.com/solutions/technologies/nonmem/) control streams.
+
+Available on the [VSCode marketplace](https://marketplace.visualstudio.com/items?itemName=vrognas.nmtran) and [Open VSX](https://open-vsx.org/extension/vrognas/nmtran).
 
 #### Programmatic Language Features
 
