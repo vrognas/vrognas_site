@@ -11,53 +11,17 @@ date: last-modified
 
 [Reproducibility and Replicability in Research](https://www.nationalacademies.org/news/2019/09/reproducibility-and-replicability-in-research)
 
-
-### Use version control (git or svn)
-
-* Do not track model development in git, it is too messy, which messes with the git history.
-  * Use `rsync` if needed
-  * Track the Rmd-file for the report
-  * This tracks the models. The models are still in the "messy" folder.
-    * base_model <- run25.mod
-    * covariate_model <- run63.mod
-    * final_model <- run67.mod
-    * simulation_model <- run68.mod
-  * Runrecord
-    * runno
-    * based on
-    * OFV
-    * dOFV
-    * Condition number (CN)
-* Do not track produced PDFs in git
-
-#### When and how to commit
-
-Commit often and in small, contained chunks.
-
-The seven rules of a great Git commit message^[https://cbea.ms/git-commit/]
-
-1. Separate subject from body with a blank line
-2. Limit the subject line to 50 characters
-3. Capitalize the subject line
-4. Do not end the subject line with a period
-5. Use the imperative mood in the subject line.
-Git itself uses the imperative whenever it creates a commit on your behalf.
-A properly formed Git commit subject line should always be able to complete the following sentence:
-*If applied, this commit will **your subject line here***
-6. Wrap the body at 72 characters
-7. Use the body to explain what and why vs. how
-
-## File/folder naming
+## Naming things
 
 * Name files/folders using only A-Z, a-z, 0-9, -, _.
   * Start folder names with a number for sorting purposes.
 * In general, use kebab-case for naming (easier to read than snake_case).
   * If there are multiple parts to a name (e.g., a description, a date, and an author), use snake_case to separate between parts, and kebab-case within the parts (e.g., `descriptive-name_2025-01-08_viktor-rognas.ext`)
 
-## Folder structure:
+## Project folder structure
 
-```r
-project/
+```
+project-root/
   - README.md       # Project description
   - input/
     - data/         # All input data files
@@ -89,6 +53,41 @@ project/
       - slides.pptx
 ```
 
+## Using version control (git or svn)
+
+* Do not track model development in git; it is too messy, which messes with the git history.
+  * Use `rsync` if needed
+  * Track the Rmd-file for the report
+  * This tracks the models. The models are still in the "messy" folder.
+    * base_model <- run25.mod
+    * covariate_model <- run63.mod
+    * final_model <- run67.mod
+    * simulation_model <- run68.mod
+  * Runrecord
+    * runno
+    * based on
+    * OFV
+    * dOFV
+    * Condition number (CN)
+* Do not track produced PDFs in git
+
+### When and how to commit
+
+Commit often and in small, contained chunks.
+
+The seven rules of a great Git commit message^[https://cbea.ms/git-commit/]
+
+1. Separate subject from body with a blank line
+2. Limit the subject line to 50 characters
+3. Capitalize the subject line
+4. Do not end the subject line with a period
+5. Use the imperative mood in the subject line.
+Git itself uses the imperative whenever it creates a commit on your behalf.
+A properly formed Git commit subject line should always be able to complete the following sentence:
+*If applied, this commit will **your subject line here***
+6. Wrap the body at 72 characters
+7. Use the body to explain what and why vs. how
+
 ## Coding: language specific
 
 ### R
@@ -102,7 +101,22 @@ project/
 
 ### NONMEM
 
-When using Monte-Carlo estimation methods (e.g., `SAEM`, `IMP`, or `FOCE MCETA)`), always specify the `SEED` option and `RANMETHOD=P`.
-Also, it is recommended to specify the `RANMETHOD` option accordingy:
+When using Monte-Carlo estimation methods (e.g., `SAEM`, `IMP`, or `FOCE MCETA`), always specify the `SEED` option and `RANMETHOD=P`.
+Also, it is recommended to specify the `RANMETHOD` option accordingly:
 * For `SAEM` and `IMP`: `RANMETHOD=3S2P`
 * For `MCETA: `RANMETHOD=4P` (`$SIMULATION` uses this method by default)
+
+## Docker
+
+Rockerverse: <https://journal.r-project.org/articles/RJ-2020-007/RJ-2020-007.pdf>
+
+Docker docs: <https://docs.docker.com/>
+
+The idea of a container approach is to **always start from a pristine state**.
+You define the configuration that your database server needs to have, and you launch it **in this precise state each time**.
+This makes your infrastructure predictable, and, thus, your analysis reproducible.
+
+A container can run a single process, it is **not** a virtual machine (i.e. not a whole computer system, a computer inside your computer)
+So it helps to think of Docker encapsulating a single command, though that first command may spawn more commands.
+Docker containers can be orchestrated and combined.
+Each container can provide its services on a network port
