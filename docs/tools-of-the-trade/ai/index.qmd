@@ -24,7 +24,7 @@ Application example: *You're using AI to help analyze a large dataset for a rese
 
 > The goal is to create the most effective human-AI partnership
 
-1. **Problem Awareness:** Clearly define goals and the work needed, **before** involving AI tools
+1. **Problem Awareness:** Clearly define goals and the work needed, [**before**]{.red-underline} involving AI tools
 2. **Platform Awareness:** Knowing through **hands-on** experience, what different AI systems can and can't do (capabilities and limitations).
 3. **Task Delegation:** Strategically dividing work between you and AI
     1. **Automation:** AI executes specific tasks based on your instructions
