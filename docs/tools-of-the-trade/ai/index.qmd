@@ -8,11 +8,10 @@ date: last-modified
 
 * Large-language models (LLMs).
   * Open AI
-    * GPT o4-mini
-    * GPT o3
+    * GPT 5
   * Anthropic
-    * Claude 4 Opus
-    * Claude 4 Sonnet
+    * Claude Sonnet 4.5
+    * Claude Haiku 4.5
 
 ![](../images/llm_r.jpeg){#fig-llm-r}
 
