@@ -60,7 +60,7 @@ True constant variables should use **ALL_CAPS Casing**.
 DEFAULT_PERCENTILE <- 0.5
 ```
 
-Names for **Boolean variables or functions** should make clear what `true` and `false` <span class="red-underline">**mean**</span>. This can be done using prefixes (`is`, `has`, `can`, etc.)
+Names for **Boolean variables or functions** should make clear what `true` and `false` [**mean**]{.red-underline}. This can be done using prefixes (`is`, `has`, `can`, etc.)
 
 ```r
 # not great
