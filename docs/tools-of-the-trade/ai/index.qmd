@@ -18,16 +18,27 @@ date: last-modified
 
 ## Use
 
-* **Automation:** The AI completes specific tasks based on your instructions.
-* **Augmentation:** You and AI collaborate as creative thinking and task execution partners.
-* **Agency:** You configure AI to work independently on your behalf, establishing its knowledge and behavior patterns rather than just giving it specific tasks.
+### Three levels of AI usage
 
-### Anthropic 4D framework
+1. **Automation:** AI executes specific tasks based on your instructions
+2. **Augmentation:** You and AI collaborate as creative thinking and task execution partners
+3. **Agency:** You configure AI to work independently on your behalf, establishing its knowledge and behavior patterns rather than just giving it specific tasks
 
-* **Delegation:** Deciding what work to do with AI vs. doing it yourself
-* **Description:** Communicating clearly (e.g., context/prompt engineering)
-* **Discernment:** Evaluating output/behavior
-* **Diligence:** Ensuring responsible interaction (accuracy, safety, security, accountability)
+### Anthropic 4D framework for "AI Fluency"
+
+* **Delegation:** Deciding what work to do with AI vs. yourself
+* **Description:** Communicating effectively (e.g., context/prompt engineering)
+* **Discernment:** Evaluating AI output/behavior
+* **Diligence:** Ensuring responsible AI interaction (accuracy, safety, security, accountability)
+
+Application example:
+
+You're using AI to help analyze a large dataset for a research paper.
+
+* **Delegation:** How would you divide the analytical work between yourself and the AI?
+* **Description:** What context would the AI need to understand about your research question to do its share of the tasks well?
+* **Discernment:** How would you verify the AI's analysis for accuracy?
+* **Diligence:** What ethical considerations might arise when publishing AI-assisted research?
 
 ### Prompt Engineering
 
