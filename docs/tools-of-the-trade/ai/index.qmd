@@ -27,7 +27,7 @@ date: last-modified
 * **Delegation:** Deciding what work to do with AI vs. doing it yourself
 * **Description:** Communicating clearly (e.g., context/prompt engineering)
 * **Discernment:** Evaluating output/behavior
-* **Diligence:** Ensuring responsible interaction
+* **Diligence:** Ensuring responsible interaction (accuracy, safety, security, accountability)
 
 ### Prompt Engineering
 
