@@ -27,9 +27,9 @@ Application example: *You're using AI to help analyze a large dataset for a rese
 1. **Problem Awareness:** Clearly define goals and the work needed, **before** involving AI tools
 2. **Platform Awareness:** Knowing through **hands-on** experience, what different AI systems can and can't do (capabilities and limitations).
 3. **Task Delegation:** Strategically dividing work between you and AI
-  1. **Automation:** AI executes specific tasks based on your instructions
-  2. **Augmentation:** You and AI collaborate as creative thinking and task execution partners
-  3. **Agency:** You configure AI to work independently on your behalf, establishing its knowledge and behavior patterns rather than just giving it specific tasks
+    1. **Automation:** AI executes specific tasks based on your instructions
+    2. **Augmentation:** You and AI collaborate as creative thinking and task execution partners
+    3. **Agency:** You configure AI to work independently on your behalf, establishing its knowledge and behavior patterns rather than just giving it specific tasks
 
 What could be usefully automated?
 Where would augmentation create more value than working separately?
