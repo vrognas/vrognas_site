@@ -22,8 +22,10 @@ Application example: *You're using AI to help analyze a large dataset for a rese
 
 ## Delegation
 
-1. **Problem Awareness:** Clearly define your goals and understand what work is needed **before** involving AI tools
-2. **Platform Awareness:** Knowing what different AI systems can (and can't) do, through **hands-on** experience
+> The goal is to create the most effective human-AI partnership
+
+1. **Problem Awareness:** Clearly define goals and the work needed, **before** involving AI tools
+2. **Platform Awareness:** Knowing through **hands-on** experience, what different AI systems can and can't do (capabilities and limitations).
 3. **Task Delegation:** Strategically dividing work between you and AI
   1. **Automation:** AI executes specific tasks based on your instructions
   2. **Augmentation:** You and AI collaborate as creative thinking and task execution partners
@@ -33,6 +35,8 @@ What could be usefully automated?
 Where would augmentation create more value than working separately?
 What should be done by a human alone?
 What could be done by an agent on your behalf?
+
+>  "I'm preparing how to [insert task] and want to discuss with you what a delegation plan may look like for figuring out which parts I should delegate to an AI like you vs. not. Can you help me with this?"
 
 ## Description: Prompt Engineering
 
