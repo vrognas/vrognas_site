@@ -30,7 +30,7 @@ Aim to operate at **A-energy** by having clear strategies and ownership.
     2. Begin with 20--30 minutes of silent study time to ensure everyone has digested the reading guide.
     3. List agenda topics as questions (and **follow the agenda**)
         1. If it's **your meeting**: Present (do 90% of talking) and ask if there is anything that needs to be clarified
-        2. If it's **<span class="red-underline">not</span> your meeting**: Listen (do 10% of talking) and ask clarifying questions
+        2. If it's **[not]{.red-underline} your meeting**: Listen (do 10% of talking) and ask clarifying questions
     4. Anything we need to change/add?
     5. Review last meeting’s !/+/Δ
     6. Take notes on these things:
