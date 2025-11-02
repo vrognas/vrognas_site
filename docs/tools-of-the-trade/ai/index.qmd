@@ -18,6 +18,17 @@ date: last-modified
 
 ## Use
 
+* **Automation:** The AI completes specific tasks based on your instructions.
+* **Augmentation:** You and AI collaborate as creative thinking and task execution partners.
+* **Agency:** You configure AI to work independently on your behalf, establishing its knowledge and behavior patterns rather than just giving it specific tasks.
+
+### Anthropic 4D framework
+
+* **Delegation:** Thoughtfully deciding what work to do with AI vs. doing it yourself
+* **Description:** Communicating clearly with AI systems
+* **Discernment:** Evaluating AI outputs and behavior with a critical eye
+* **Diligence:** Ensuring you interact with AI responsibly
+
 ### Prompt Engineering
 
 XML tags
@@ -41,20 +52,22 @@ XML tags
 ### Tips
 
 * Start with brainstorming/planning, then move on to implementation
-* Commit often with small focused commits
-* Always write test so that the AI can iterate
+* Commit often with small, focused commits
+* Always writea  test so that the AI can iterate
 * New problem, new chat. Clear the context; start fresh.
 
 ### R packages
 
 * acquaint
 * btw
+* ellmer
+* chores
+* gander
 
 ### Other
 
 * MCP
 * RAG
-
 
 ## References
 
