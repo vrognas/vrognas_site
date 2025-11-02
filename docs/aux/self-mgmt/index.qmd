@@ -7,20 +7,20 @@ date: "2025-08-31"
 :::
 
 **Modern knowledge work is not industrial factory work.**
-Your value isn’t measured by keystrokes, lines of code, or calendar hours, but by what you ship, solve, and create.
+Your value isn't measured by keystrokes, lines of code, or calendar hours, but by what you ship, solve, and create.
 Deep work looks like: thinking, pausing, reading, rewriting.
 Not pacing in meetings for 8 hours.
 
 **Social media shows the sugar, not the stress.**
 You saw the team building and coffee break.
-You didn’t see the 1 am production bug fix.
+You didn't see the 1 am production bug fix.
 
-**"Ghostworking" is real---but it’s not laziness.**
-It’s a symptom of burnout, unclear roles, broken systems.
+**"Ghostworking" is real---but it's not laziness.**
+It's a symptom of burnout, unclear roles, and broken systems.
 Faking busyness is often more exhausting than real work.
-And it’s everywhere, not just Gen Z.
+And it's everywhere, not just Gen Z.
 
-If you gets your work done, take breaks, and protect your mental energy---that’s not slacking.
+If you get your work done, take breaks, and protect your mental energy---that's not slacking.
 That's called sustainable productivity.
 We still confuse "busy" with "useful".
 Still reward exhaustion over impact.
@@ -32,56 +32,58 @@ The future of work needs better metrics than how often someone grabs coffee.
 One reason academic writers get lost is that they have been piling up words without knowing what they want to say or why they are saying it.
 This often happens when word count or pages produced is our chosen productivity measure.
 Academics can ramble on for pages, sounding profound without saying much of anything.
-Good editors, and good readers, will call them on this.
-So feeling lost can be a sign of not writing thoughtfully even though goals are met for number of words or pages written.
+Good editors and good readers will call them on this.
+So feeling lost can be a sign of not writing thoughtfully, even though goals are met for the number of words or pages written.
 This is an example of metrics without meaning.
-In this example, try shifting to a different productivity metric: "time spent" or "points made" or "progress on through-line" can serve as a measure for each session's progress.
+In this example, try shifting to a different productivity metric: "time spent," "points made," or "progress on through-line" can serve as a measure for each session's progress.
 
 Find your metric.
 
 ## Build sustainable habits and routines
 
 * Take regular breaks.
-Use a variant of the pomodoro-method e.g., aim to work in units of 45 min focused work followed by 15 min break.
-I believe that if you can focus intensly for about 45 min on a task, that should be considered adequate.
-Anything more is not realisticly sustainable, and less than that is probably a sign of issues with concentration (can you make the environment less distracting?).
+Use a variant of the Pomodoro method, e.g., aim to work in units of 45 minutes of focused work followed by a 15-minute break.
+I believe that if you can focus intensely for about 45 minutes on a task, that should be considered adequate.
+Anything more is not realistically sustainable, and less than that is probably a sign of issues with concentration (can you make the environment less distracting?).
 * Plan only ~75% of your working time.
 Allow space for unforeseen tasks and creative exploration.
-Parkinsons law says that every task fills the time given to it, so giving a task less time makes it *take* less time.
+Parkinson's law says that every task fills the time given to it, so giving a task less time makes it *take* less time.
 I also use the "law of π (pi)": everything takes at least 3.14 times longer than you think.
 * Plan, then do, then re-evaluate your plan.
 * Schedule important tasks.
 Block time for what matters most and commit to sticking to it.
-Try thinking of each item on your schedule as a dentist-appointent---you have to be there on time!
+Try thinking of each item on your schedule as a flight to catch---you have to be there on time!
 * Think in terms of:
   * 5 % Strategy: Define your direction.
   * 15 % Position: Understand your current situation and what resources you have.
   * 80 % Action: Most of your progress comes from doing.
 
-> Better to be in the arena getting stomped by the bull, than it is to be up in the stands, or out in the parking lot.
+> Better to be in the arena getting stomped by the bull than to be up in the stands or out in the parking lot.
 
 ## Getting things done
 
 * People commonly have 100--200 things to do at any one time, if they would really write them all down.
 
-A **project** is anything you are commited to finish within next few weeks/months that take more than one step to finish (quickly answering a text message is not a project, but sending a more thought-through and difficult text message might be a project.). Most people have 30--100 projects. Distinguish between **maintaining** (e.g. relationships, personal development) and **finishing** (e.g. deliverables).
+A **project** is anything you are committed to finish within the next few weeks/months that takes more than one step to finish (quickly answering a text message is not a project, but sending a more thought-through and difficult text message might be a project).
+Most people have 30--100 projects.
+Distinguish between **maintaining** (e.g., relationships, personal development) and **finishing** (e.g., deliverables).
 
 Capture your thoughts when they arise---draft instead of trying to craft perfect prose.
-Squiggle down thoughts, always have a notebook at hand.
+Squiggle down thoughts; always have a notebook at hand.
 Get the thoughts out of your head!
 Your brain is useful for HAVING thoughts, not storing them.
 
-> If you actually captured your thoughts the first time you had them, you’d be surprised how few you have.
+> If you actually captured your thoughts the first time you had them, you'd be surprised how few you have.
 
 Review your notes at least once a week (a "Weekly Review").
-If you are <span class="red-underline">not</span> doing the Weekly Review, you are **doing it all the time**, but not really doing it.
+If you are [not]{.red-underline} doing the Weekly Review, you are **doing it all the time**, but not really doing it.
 As Winston Churchill put it, "Freedom from order", and as Jocko Willink reminds us, "Discipline equals freedom".
 Finish the thinking!
 
 ## Prioritization
 
 To make the right prioritizations, focus on the *task*, not the solution.
-Frame projects using the project matrix (an variant of the project triangle):
+Frame projects using the project matrix (a variant of the project triangle):
 
 ![](../images/project-square.png)
 
@@ -91,8 +93,8 @@ Mapping your work across these dimensions clarifies priorities and constraints.
 Where *Impact * Probability = Risk*.
 * Priority matrix (Important vs Urgent)
 * SWOT/TOWS.
-A SWOT matrix evaluate strengths, weaknesses, opportunities, and threats.
-A TOWS matrix evaluate interactions between theses.
+A SWOT matrix evaluates strengths, weaknesses, opportunities, and threats.
+A TOWS matrix evaluates interactions between these.
 
 ### Responsible allocation of time between projects
 
@@ -100,7 +102,7 @@ A TOWS matrix evaluate interactions between theses.
     * Time: 60% (36 h)
     * 5 units/day
 2. What *will* support me in 3--5 years.
-    * Tine: 30% (18 h)
+    * Time: 30% (18 h)
     * 2 units/day
 3. What *might* support me in 5--10 years.
     * Time: 10% (6 h)
@@ -108,5 +110,5 @@ A TOWS matrix evaluate interactions between theses.
 
 ## Conclusion – Sustainable productivity is about choice
 
-Productivity isn't about staying busy; it’s about creating impact.
+Productivity isn't about staying busy; it's about creating impact.
 By choosing meaningful metrics, building healthy routines, mastering your commitments, framing projects clearly, prioritizing wisely, and allocating your time across horizons, you set yourself up for sustainable success. ✨
