@@ -24,10 +24,10 @@ date: last-modified
 
 ### Anthropic 4D framework
 
-* **Delegation:** Thoughtfully deciding what work to do with AI vs. doing it yourself
-* **Description:** Communicating clearly with AI systems (e.g., context/prompt engineering)
-* **Discernment:** Evaluating AI outputs and behavior with a critical eye
-* **Diligence:** Ensuring you interact with AI responsibly
+* **Delegation:** Deciding what work to do with AI vs. doing it yourself
+* **Description:** Communicating clearly (e.g., context/prompt engineering)
+* **Discernment:** Evaluating output/behavior
+* **Diligence:** Ensuring responsible interaction
 
 ### Prompt Engineering
 
