@@ -38,9 +38,18 @@ What could be done by an agent on your behalf?
 
 >  "I'm preparing how to [insert task] and want to discuss with you what a delegation plan may look like for figuring out which parts I should delegate to an AI like you vs. not. Can you help me with this?"
 
-## Description: Prompt Engineering
+## Description
 
-XML tags
+* Start with brainstorming/planning, then move on to implementation
+* Commit often with small, focused commits
+* Always write a test so that the AI can iterate
+* New problem, new chat. Clear the context; start fresh.
+
+Before moving on to more advanced techniques such as RAG and fine-tuning, try out prompt engineering first.
+
+### Prompt Engineering
+
+XML tags and variables
 
 ```xml
 <task>
@@ -50,20 +59,23 @@ XML tags
 </task>
 
 <request>
-
+{{REQUEST}}
 </request>
 
 <context>
-
+{{CONTEXT}}
 </context>
 ```
 
-### Tips
+### RAG
 
-* Start with brainstorming/planning, then move on to implementation
-* Commit often with small, focused commits
-* Always write a test so that the AI can iterate
-* New problem, new chat. Clear the context; start fresh.
+Rertrieval augmented generation
+
+### Fine-tuning
+
+### MCP
+
+Model context protocol
 
 ## Discernment
 
@@ -82,15 +94,12 @@ XML tags
 * ellmer
 * chores
 * gander
-
-### Other technologies
-
-* MCP
-* RAG
+* mall
 
 ## References
 
 * Simon P. Couch
+* Sara Altman
 
 ::: {#refs}
 :::
