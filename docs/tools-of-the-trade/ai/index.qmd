@@ -47,12 +47,12 @@ What could be done by an agent on your behalf?
 
 There is much similarity between describing the task to an AI and describing it to a human.
 
-* **Product Description:** Defining **what you want**, the end-result
+* **Product Description:** What you want, the end result
     * Output, format, audience, style, etc
-* **Process Description:** Defining **the way to get it**, the thought-process
+* **Process Description:** The way to success, the thought process
     * Specific approaches, tools, methods, data, preferred order, etc
-* **Performance Description:** Defining how you want the AI to **behave**
-    * Concise or detailed; challenging or supportive?
+* **Performance Description:** AI general behavior
+    * Role and tone; concise or detailed; challenging or supportive?
 
 ### Prompt Engineering
 
