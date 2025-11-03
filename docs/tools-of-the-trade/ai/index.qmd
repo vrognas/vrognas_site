@@ -45,7 +45,7 @@ What could be done by an agent on your behalf?
 
 ## Description
 
-* **Product Description:** Clearly defining what you want the AI to create
+* **Product Description:** Clearly defining **what you [want]{.red-underline}**
 * **Process Description:** Guiding how the AI approaches your request
 * **Performance Description:** Defining how you want the AI to behave during your collaboration
 
