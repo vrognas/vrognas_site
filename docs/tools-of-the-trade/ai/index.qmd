@@ -80,6 +80,8 @@ You’re updating the model’s trainable parameters, which alters its internal 
 > After training, the model is self-contained and fast to serve, but static. New knowledge means retraining.
 > Best for behavioral adaptation: reasoning format, style, or classification logic.
 
+A good use is for Behavior alignment or domains with static knowledge.
+
 ### Retrieval-augmented Generation (RAG)
 
 RAG by contrast, keeps the model frozen and adds a retrieval pipeline,
@@ -88,8 +90,6 @@ RAG by contrast, keeps the model frozen and adds a retrieval pipeline,
 > At query time, relevant chunks are retrieved by cosine similarity and appended to the prompt before generation.
 > It only needs embedding inference (CPU/GPU-light) plus a retrieval service.
 > Best for knowledge augmentation: dynamic Q&A, enterprise docs, or fast-changing sources.
-
-A good use is for Behavior alignment or domains with static knowledge.
 
 A good use for RAG is where new knowledge is added to the database on a rapid scale, and the latest, accurate information retrieval is crucial
 
