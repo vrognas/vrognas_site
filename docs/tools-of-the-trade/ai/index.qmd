@@ -93,9 +93,9 @@ RAG by contrast, keeps the model frozen and adds a retrieval pipeline,
 
 A good use for RAG is where new knowledge is added to the database on a rapid scale, and the latest, accurate information retrieval is crucial
 
-### MCP
+### Model context protocol (MCP)
 
-Model context protocol
+A protocol for LLMs to communicate with external services and tools.
 
 ## Discernment
 
