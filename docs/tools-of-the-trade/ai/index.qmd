@@ -69,6 +69,11 @@ A good prompt consists of the following:
 * Asking the AI to **think first:** Give space for the AI to work through its process
 * **Role or tone:** Specify how you want the AI to communicate
 
+::: {.callout-tip title="Gotcha"}
+
+Giving examples in your prompt of what "good" looks like is sometimes called *few-shot* or *n-shot* prompting, where "n" is the number of examples given (e.g., three examples would be called "three-shot prompting").
+:::
+
 #### Prompting tips
 
 `<XML_tags>` and `{{VARIABLES}}`
