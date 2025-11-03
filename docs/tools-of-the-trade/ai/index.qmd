@@ -89,7 +89,7 @@ Model context protocol
 
 ### R packages
 
-* acquaint
+* mcptools
 * btw
 * ellmer
 * chores
