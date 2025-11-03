@@ -6,6 +6,11 @@ date: last-modified
 :::{.callout-caution title="Under construction"}
 :::
 
+* Start with brainstorming/planning, then move on to implementation
+* Commit often with small, focused commits
+* Always write a test so that the AI can iterate
+* New problem, new chat. Clear the context; start fresh.
+
 **Anthropic 4D framework for "AI Fluency":**
 
 * **Delegation:** Deciding what work to do with AI vs. yourself
@@ -40,10 +45,9 @@ What could be done by an agent on your behalf?
 
 ## Description
 
-* Start with brainstorming/planning, then move on to implementation
-* Commit often with small, focused commits
-* Always write a test so that the AI can iterate
-* New problem, new chat. Clear the context; start fresh.
+* **Product Description:** Clearly defining what you want the AI to create
+* **Process Description:** Guiding how the AI approaches your request
+* **Performance Description:** Defining how you want the AI to behave during your collaboration
 
 Before moving on to more advanced techniques such as RAG and fine-tuning, try out prompt engineering first.
 
