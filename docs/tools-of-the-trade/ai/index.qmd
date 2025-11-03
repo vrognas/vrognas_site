@@ -71,11 +71,27 @@ XML tags and variables
 </context>
 ```
 
-### RAG
-
-Rertrieval augmented generation
-
 ### Fine-tuning
+
+Fine-tuning operates inside the model.
+It modifies the model's parameters by continuing gradient-based training on a domain or task dataset.
+You’re updating the model’s trainable parameters, which alters its internal representation space, essentially teaching it new mappings between input tokens and contextual embeddings.
+> It requires GPU clusters (often multi-node with FSDP/DeepSpeed), mixed-precision training, and PEFT methods like LoRA or QLoRA that  train only a small fraction of weights (1–5%)  to reduce compute,
+> After training, the model is self-contained and fast to serve, but static. New knowledge means retraining.
+> Best for behavioral adaptation: reasoning format, style, or classification logic.
+
+### Retrieval-augmented Generation (RAG)
+
+RAG by contrast, keeps the model frozen and adds a retrieval pipeline,
+> Documents are chunked (e.g., 1,000-token segments with 200 overlap) using RecursiveCharacterTextSplitter.
+> Text chunks are embedded (e.g., via all-MiniLM or text-embedding-3-large) and stored in a vector DB such as Chroma or Pinecone.
+> At query time, relevant chunks are retrieved by cosine similarity and appended to the prompt before generation.
+> It only needs embedding inference (CPU/GPU-light) plus a retrieval service.
+> Best for knowledge augmentation: dynamic Q&A, enterprise docs, or fast-changing sources.
+
+A good use is for Behavior alignment or domains with static knowledge.
+
+A good use for RAG is where new knowledge is added to the database on a rapid scale, and the latest, accurate information retrieval is crucial
 
 ### MCP
 
