@@ -60,14 +60,46 @@ Before moving on to more advanced techniques such as RAG and fine-tuning, try pr
 
 As a first step, **ask the AI itself to help improve your prompt**; successful prompting is **iterative**.
 
-A good prompt consists of the following:
+A good prompt is structured using `<XML_tags>` and `{{VARIABLES}}` and consists of the following:
 
-* **Context:** Be specific about **what you want**, **why** you want it, and the relevant **background**
-* **Examples:** Demonstrate the output **style** or **format** you're looking for
-* **Constraints:** Clearly define format, length, and other **output requirements**
-* **Steps:** Guide the AI through multi-step reasoning
-* Asking the AI to **think first:** Give space for the AI to work through its process
-* **Role or tone:** Specify how you want the AI to communicate
+```xml
+Role: {{ROLE}} <!-- <1> -->
+Tone: {{TONE}}
+
+<request>
+{{REQUEST}}
+</request>
+
+<context> <!-- <2> -->
+{{CONTEXT}}
+</context>
+
+<example> <!-- <3> -->
+{{EXAMPLE}}
+</example>
+
+<constraints> <!-- <4> -->
+{{CONSTRAINTS}}
+</constraints>
+
+<steps>  <!-- <5> -->
+Let's think step-by-step.
+
+1. Output an overview of every single dimension of my request.
+2. Find points of uncertainty.
+3. Ask as many clarifying questions as possible.
+</steps>
+
+Before answering, please think through this problem carefully. <!-- <6> -->
+Consider the different factors involved, potential constraints, and various approaches before recommending the best solution. <!-- <6> -->
+```
+
+1. **Role or tone:** Specify how you want the AI to communicate
+2. **Context:** Be specific about **what you want**, **why** you want it, and the relevant **background**
+3. **Example(s):** Demonstrate the output **style** or **format** you're looking for
+4. **Constraint(s):** Clearly define format, length, and other **output requirements**
+5. **Steps:** Guide the AI through multi-step reasoning
+6. Asking the AI to **think first:** Give space for the AI to work through its process
 
 ::: {.callout-tip title="Gotcha"}
 
@@ -75,39 +107,6 @@ Giving examples in your prompt of what "good" looks like is sometimes called *fe
 
 Giving the AI step-by-step instructions is sometimes called "Chain of thought" (CoT) prompting.
 :::
-
-#### Prompting tips
-
-`<XML_tags>` and `{{VARIABLES}}`
-
-```xml
-Role: {{ROLE}}
-Tone: {{TONE}}
-
-<request>
-{{REQUEST}}
-</request>
-
-Let's think step-by-step.
-
-<steps>
-1. Output an overview of every single dimension of my request.
-2. Find points of uncertainty.
-3. Ask as many clarifying questions as possible.
-</steps>
-
-<context>
-{{CONTEXT}}
-</context>
-
-<example>
-{{EXAMPLE}}
-</example>
-
-<constraints>
-{{CONSTRAINTS}}
-</constraints>
-```
 
 Force the model to say things out loud.
 
