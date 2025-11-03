@@ -135,6 +135,10 @@ A protocol for LLMs to communicate with external services and tools.
 
 ## Discernment
 
+* **Product Discernment:** Evaluating the quality of AI outputs
+* **Process Discernment:** Assessing how the AI approached the task
+* **Performance Discernment:** Evaluating how the AI behaved during the interaction itself
+
 ## Diligence
 
 ## Tools
