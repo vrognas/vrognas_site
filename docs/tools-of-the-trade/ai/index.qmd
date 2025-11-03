@@ -72,6 +72,8 @@ A good prompt consists of the following:
 ::: {.callout-tip title="Gotcha"}
 
 Giving examples in your prompt of what "good" looks like is sometimes called *few-shot* or *n-shot* prompting, where "n" is the number of examples given (e.g., three examples would be called "three-shot prompting").
+
+Giving the AI step-by-step instructions is sometimes called "Chain of thought" (CoT) prompting.
 :::
 
 #### Prompting tips
