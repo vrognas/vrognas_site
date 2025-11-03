@@ -45,13 +45,18 @@ What could be done by an agent on your behalf?
 
 ## Description
 
-* **Product Description:** Clearly defining **what you [want]{.red-underline}**
-* **Process Description:** Guiding how the AI approaches your request
-* **Performance Description:** Defining how you want the AI to behave during your collaboration
+There is much similarity between describing the task to an AI and describing it to a human.
 
-Before moving on to more advanced techniques such as RAG and fine-tuning, try out prompt engineering first.
+* **Product Description:** Defining **what you want**, the end-result
+    * Output, format, audience, style, etc
+* **Process Description:** Defining **the way to get it**, the thought-process
+    * Specific approaches, tools, methods, data, preferred order, etc
+* **Performance Description:** Defining how you want the AI to **behave**
+    * Concise or detailed; challenging or supportive?
 
 ### Prompt Engineering
+
+Before moving on to more advanced techniques such as RAG and fine-tuning, try out prompt engineering first.
 
 XML tags and variables
 
@@ -74,24 +79,17 @@ XML tags and variables
 ### Fine-tuning
 
 Fine-tuning operates inside the model.
-It modifies the model's parameters by continuing gradient-based training on a domain or task dataset.
-You’re updating the model’s trainable parameters, which alters its internal representation space, essentially teaching it new mappings between input tokens and contextual embeddings.
-> It requires GPU clusters (often multi-node with FSDP/DeepSpeed), mixed-precision training, and PEFT methods like LoRA or QLoRA that  train only a small fraction of weights (1–5%)  to reduce compute,
-> After training, the model is self-contained and fast to serve, but static. New knowledge means retraining.
-> Best for behavioral adaptation: reasoning format, style, or classification logic.
 
-A good use is for Behavior alignment or domains with static knowledge.
+This updates the model, essentially resulting in a **new model**.
+After training, the model is self-contained and fast to serve, but static. New knowledge means retraining.
+
+A good use is for **behavior alignment** (reasoning format, style, classification logic) or domains with **static knowledge**.
 
 ### Retrieval-augmented Generation (RAG)
 
-RAG by contrast, keeps the model frozen and adds a retrieval pipeline,
-> Documents are chunked (e.g., 1,000-token segments with 200 overlap) using RecursiveCharacterTextSplitter.
-> Text chunks are embedded (e.g., via all-MiniLM or text-embedding-3-large) and stored in a vector DB such as Chroma or Pinecone.
-> At query time, relevant chunks are retrieved by cosine similarity and appended to the prompt before generation.
-> It only needs embedding inference (CPU/GPU-light) plus a retrieval service.
-> Best for knowledge augmentation: dynamic Q&A, enterprise docs, or fast-changing sources.
+RAG keeps the model as-is and adds a library.
 
-A good use for RAG is where new knowledge is added to the database on a rapid scale, and the latest, accurate information retrieval is crucial
+A good use for RAG is as **knowledge augmentation** where new knowledge is added often, and the latest, accurate information retrieval is crucial.
 
 ### Model context protocol (MCP)
 
