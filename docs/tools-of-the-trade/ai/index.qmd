@@ -102,6 +102,12 @@ Let's think step-by-step.
 </constraints>
 ```
 
+Force the model to say things out loud.
+
+<https://ai.google.dev/gemini-api/docs/prompting-strategies>
+<https://cookbook.openai.com/>
+<https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview>
+
 ### Fine-tuning
 
 Fine-tuning operates inside the model.
