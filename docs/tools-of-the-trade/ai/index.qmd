@@ -110,9 +110,12 @@ Giving the AI step-by-step instructions is sometimes called "Chain of thought" (
 
 Force the model to say things out loud.
 
-<https://ai.google.dev/gemini-api/docs/prompting-strategies>
-<https://cookbook.openai.com/>
-<https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview>
+
+For lots of helpful tips and examples, see:
+
+* Anthropic's [Prompt Engineering Overview](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)
+* OpenAI's [OpenAI Cookbook](https://cookbook.openai.com/)
+* Google's [Prompt Design Strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies)
 
 ### Fine-tuning
 
