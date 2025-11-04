@@ -128,13 +128,14 @@ A good use is for **behavior alignment** (reasoning format, style, classificatio
 
 ### Retrieval-augmented Generation (RAG)
 
-RAG keeps the model as-is and adds a library.
+RAG keeps the model as-is and adds a **static** library.
 
 A good use for RAG is as **knowledge augmentation** where new knowledge is added often, and the latest, accurate information retrieval is crucial.
 
 ### Model context protocol (MCP)
 
-A protocol for LLMs to communicate with external services and tools.
+MCP, just like RAG, keeps the model as-is, but adds a **dynamic** library.
+It's a protocol for LLMs to communicate with external services and tools.
 
 ## Discernment
 
