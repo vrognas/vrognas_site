@@ -47,7 +47,7 @@ What could be done by an agent on your behalf?
 
 ## Description
 
-> The art of communicating effectively with AI
+> The art of **communicating your needs** to AI
 
 There is much similarity between describing a task to an AI and describing it to a human.
 
@@ -98,6 +98,8 @@ Let's think step-by-step.
 Before answering, please think through this problem carefully. # <6>
 Consider the different factors involved, potential constraints,
 and various approaches before recommending the best solution.
+
+Compose three different answers, and then recommend one of them. # <7>
 ```
 1. **Role or tone:** Specify how you want the AI to communicate
 2. **Context:** Be specific about **what you want**, **why** you want it, and the relevant **background**
@@ -106,9 +108,12 @@ Called "n-shot" prompting, where "n" is the number of examples given.
 4. **Constraint(s):** Clearly define format, length, and other **output requirements**
 5. **Steps:** Guide the AI through multi-step reasoning, forcing the model to say things out loud.
 Called "Chain of thought" (CoT) prompting.
-6. Asking the AI to **think first:** Give space for the AI to work through its process
+6. Asking the AI to **think first.**
+Give space for the AI to work through its process.
+7. Ask for **multiple answers**.
+This is especially helpful for boosting creativity.
 
-For lots of helpful tips and examples, see:
+For more helpful tips and examples, see:
 
 * Anthropic's [Prompt Engineering Overview](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)
 * OpenAI's [OpenAI Cookbook](https://cookbook.openai.com/)
@@ -133,11 +138,23 @@ It's a protocol for LLMs to communicate with external services and tools.
 
 ## Discernment
 
-> Your ability to critically evaluate what AI produces, how it produces it, and how it behaves
+> The art of evaluating **how well your needs were met** by AI
 
 * **Product Discernment:** Evaluating the quality of AI outputs
-* **Process Discernment:** Assessing how the AI approached the task
-* **Performance Discernment:** Evaluating how the AI behaved during the interaction itself
+    * Accuracy, appropriateness, coherence, relevance
+* **Process Discernment:** Evaluating how the AI approached the task
+    * Logical errors, attention gaps, circular reasoning
+* **Performance Discernment:** Evaluating how the AI is communicating with you
+    * Is the communication style effective?
+
+> When **discernment** flags a problem, a better **description** is often the solution, and sometimes the **delegation** needs adjustment.
+
+### Feedback
+
+* Specifying the problem
+* Clearly explaining why it is a problem
+* Providing concrete suggestions for improvement
+* Revising your instructions or examples
 
 ## Diligence
 
