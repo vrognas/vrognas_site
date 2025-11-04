@@ -47,9 +47,9 @@ What could be done by an agent on your behalf?
 
 ## Description
 
-> The art of communicating effectively with AI systems
+> The art of communicating effectively with AI
 
-There is much similarity between describing the task to an AI and describing it to a human.
+There is much similarity between describing a task to an AI and describing it to a human.
 
 * **Product Description:** What you want, the end result
     * Output, format, audience, style, etc
@@ -66,27 +66,27 @@ As a first step, **ask the AI itself to help improve your prompt**; successful p
 
 A good prompt is structured using `<XML_tags>` and `{{VARIABLES}}` and consists of the following:
 
-```xml
-Role: {{ROLE}} <!-- <1> -->
+```python
+Role: {{ROLE}} # <1>
 Tone: {{TONE}}
 
 <request>
 {{REQUEST}}
 </request>
 
-<context> <!-- <2> -->
+<context> # <2>
 {{CONTEXT}}
 </context>
 
-<example> <!-- <3> -->
+<example> # <3>
 {{EXAMPLE}}
 </example>
 
-<constraints> <!-- <4> -->
+<constraints> # <4>
 {{CONSTRAINTS}}
 </constraints>
 
-<steps>  <!-- <5> -->
+<steps>  # <5>
 Let's think step-by-step.
 
 1. Output an overview of every single dimension of my request.
@@ -94,10 +94,9 @@ Let's think step-by-step.
 3. Ask as many clarifying questions as possible.
 </steps>
 
-Before answering, please think through this problem carefully. <!-- <6> -->
-Consider the different factors involved, potential constraints, and various approaches before recommending the best solution. <!-- <6> -->
+Before answering, please think through this problem carefully. # <6>
+Consider the different factors involved, potential constraints, and various approaches before recommending the best solution. # <6>
 ```
-
 1. **Role or tone:** Specify how you want the AI to communicate
 2. **Context:** Be specific about **what you want**, **why** you want it, and the relevant **background**
 3. **Example(s):** Demonstrate the output **style** or **format** you're looking for
@@ -122,22 +121,19 @@ For lots of helpful tips and examples, see:
 
 ### Fine-tuning
 
-Fine-tuning operates inside the model.
-
-This updates the model, essentially resulting in a **new model**.
-After training, the model is self-contained and fast to serve, but static. New knowledge means retraining.
+Fine-tuning updates the LLM itself, essentially resulting in a **new model**.
 
 A good use is for **behavior alignment** (reasoning format, style, classification logic) or domains with **static knowledge**.
 
 ### Retrieval-augmented Generation (RAG)
 
-RAG keeps the model as-is and adds a **static** library.
+RAG keeps the LLM as-is and adds a **static** library.
 
 A good use for RAG is as **knowledge augmentation** where new knowledge is added often, and the latest, accurate information retrieval is crucial.
 
 ### Model context protocol (MCP)
 
-MCP, just like RAG, keeps the model as-is, but adds a **dynamic** library.
+MCP, just like RAG, keeps the LLM as-is, but adds a **dynamic** library.
 It's a protocol for LLMs to communicate with external services and tools.
 
 ## Discernment
