@@ -27,7 +27,9 @@ Application example: *You're using AI to help analyze a large dataset for a rese
 
 ## Delegation
 
-> The goal is to create the most effective human-AI partnership
+> The clarity to decide what to collaborate on with AI,
+> what to do yourself,
+> and the wisdom to know the difference.
 
 1. **Problem Awareness:** Clearly define goals and the work needed, [**before**]{.red-underline} involving AI tools
 2. **Platform Awareness:** Knowing through **hands-on** experience, what different AI systems can and can't do (capabilities and limitations).
@@ -44,6 +46,8 @@ What could be done by an agent on your behalf?
 >  "I'm preparing how to [insert task] and want to discuss with you what a delegation plan may look like for figuring out which parts I should delegate to an AI like you vs. not. Can you help me with this?"
 
 ## Description
+
+> The art of communicating effectively with AI systems
 
 There is much similarity between describing the task to an AI and describing it to a human.
 
@@ -110,7 +114,6 @@ Giving the AI step-by-step instructions is sometimes called "Chain of thought" (
 
 Force the model to say things out loud.
 
-
 For lots of helpful tips and examples, see:
 
 * Anthropic's [Prompt Engineering Overview](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)
@@ -138,6 +141,8 @@ MCP, just like RAG, keeps the model as-is, but adds a **dynamic** library.
 It's a protocol for LLMs to communicate with external services and tools.
 
 ## Discernment
+
+> Your ability to critically evaluate what AI produces, how it produces it, and how it behaves
 
 * **Product Discernment:** Evaluating the quality of AI outputs
 * **Process Discernment:** Assessing how the AI approached the task
