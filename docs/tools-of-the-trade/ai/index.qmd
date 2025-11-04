@@ -27,8 +27,8 @@ Application example: *You're using AI to help analyze a large dataset for a rese
 
 ## Delegation
 
-> The clarity to decide what to collaborate on with AI,
-> what to do yourself,
+> The clarity to decide what to collaborate on with AI,  
+> what to do yourself,  
 > and the wisdom to know the difference.
 
 1. **Problem Awareness:** Clearly define goals and the work needed, [**before**]{.red-underline} involving AI tools
@@ -64,9 +64,9 @@ Before moving on to more advanced techniques such as RAG and fine-tuning, try pr
 
 As a first step, **ask the AI itself to help improve your prompt**; successful prompting is **iterative**.
 
-A good prompt is structured using `<XML_tags>` and `{{VARIABLES}}` and consists of the following:
+A good prompt is structured using `<XML_tags>` and `{{{VARIABLES}}}` and consists of the following:
 
-```python
+```{.r}
 Role: {{ROLE}} # <1>
 Tone: {{TONE}}
 
@@ -89,13 +89,14 @@ Tone: {{TONE}}
 <steps>  # <5>
 Let's think step-by-step.
 
-1. Output an overview of every single dimension of my request.
+1. Output an overview of every dimension of my request.
 2. Find points of uncertainty.
-3. Ask as many clarifying questions as possible.
+3. Ask as many clarifying questions as needed
 </steps>
 
 Before answering, please think through this problem carefully. # <6>
-Consider the different factors involved, potential constraints, and various approaches before recommending the best solution. # <6>
+Consider the different factors involved, potential constraints, # <6>
+and various approaches before recommending the best solution. # <6>
 ```
 1. **Role or tone:** Specify how you want the AI to communicate
 2. **Context:** Be specific about **what you want**, **why** you want it, and the relevant **background**
