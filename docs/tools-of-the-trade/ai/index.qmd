@@ -6,24 +6,13 @@ date: last-modified
 :::{.callout-caution title="Under construction"}
 :::
 
-* Start with brainstorming/planning, then move on to implementation
-* Commit often with small, focused commits
-* Always write a test so that the AI can iterate
-* New problem, new chat. Clear the context; start fresh.
+Anthropic has devised something they call "AI Fluency"---a way to approach and work with AI that outlives evanescent tips and tricks that quickly become outdated.
+The proposed "4D framework" for AI Fluency rests on these four core competencies:
 
-**Anthropic 4D framework for "AI Fluency":**
-
-* **Delegation:** Deciding what work to do with AI vs. yourself
-* **Description:** Communicating effectively (e.g., context/prompt engineering)
-* **Discernment:** Evaluating AI output/behavior
-* **Diligence:** Ensuring responsible AI interaction (accuracy, safety, security, accountability)
-
-Application example: *You're using AI to help analyze a large dataset for a research paper.*
-
-* **Delegation:** How would you divide the analytical work between yourself and the AI?
-* **Description:** What context would the AI need to understand about your research question to do its share of the tasks well?
-* **Discernment:** How would you verify the AI's analysis for accuracy?
-* **Diligence:** What ethical considerations might arise when publishing AI-assisted research?
+1. **Delegation:** Deciding what work to do with AI vs. yourself
+2. **Description:** Communicating effectively (e.g., context/prompt engineering)
+3. **Discernment:** Evaluating AI output/behavior
+4. **Diligence:** Ensuring responsible AI interaction (accuracy, safety, security, accountability)
 
 ## Delegation
 
@@ -149,7 +138,7 @@ It's a protocol for LLMs to communicate with external services and tools.
 
 > When **discernment** flags a problem, a better **description** is often the solution, and sometimes the **delegation** needs adjustment.
 
-### Feedback
+### Giving feedback to the AI
 
 * Specifying the problem
 * Clearly explaining why it is a problem
@@ -159,6 +148,16 @@ It's a protocol for LLMs to communicate with external services and tools.
 ## Diligence
 
 ## Tools
+
+### Coding agents
+
+Coding agents are AI products like Anthropic's *Claude Code* and OpenAI's *Codex*.
+Some tips that I've found helpful when working with these tools are:
+
+* Start with brainstorming/planning, then move on to implementation
+* Commit *often*, with small and focused commits
+* Always write a *test* so that the AI can iterate (called *test-driven development*)
+* New problem = new chat; clear the context and start fresh.
 
 ### Models
 
