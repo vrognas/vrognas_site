@@ -147,6 +147,18 @@ It's a protocol for LLMs to communicate with external services and tools.
 
 ## Diligence
 
+Ethical and safety aspects for responsible AI collaboration.
+
+* **Creation Diligence:** Being thoughtful about which AI systems you choose and how you work with them
+* **Transparency Diligence:** Being open about AI's role in your work
+  * Who needs to know?
+  * How (and when) should I communicate this?
+  * What level of detail is needed?
+* **Deployment Diligence:** Taking ownership of AI-assisted outputs you share with others
+  * Verify facts
+  * Check for biases
+  * Ensure accuracy
+
 ## Tools
 
 ### Coding agents
