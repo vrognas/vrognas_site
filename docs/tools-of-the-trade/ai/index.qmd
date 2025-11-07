@@ -34,6 +34,24 @@ What could be done by an agent on your behalf?
 
 >  "I'm preparing how to [insert task] and want to discuss with you what a delegation plan may look like for figuring out which parts I should delegate to an AI like you vs. not. Can you help me with this?"
 
+### Agency
+
+Is the task conplex enough?
+no -> workflows
+yes -> agents
+
+is the task valuable enough?
+<$0.1 -> workflows
+>$1 -> agents
+
+are all parts of the task doable?
+no -> reduce scope
+yes -> agents
+
+what is the cost of error/error discovery?
+high -> read-only/human-in-the-loop
+low -> agents
+
 ## Description
 
 > The art of **communicating your needs** to AI
