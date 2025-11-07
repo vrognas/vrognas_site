@@ -49,6 +49,8 @@ There is much similarity between describing a task to an AI and describing it to
 
 ### Prompt Engineering
 
+Prompt engineering can be thought of as **programming in natural language**.
+
 Before moving on to more advanced techniques such as RAG and fine-tuning, try prompt engineering first.
 
 As a first step, **ask the AI itself to help improve your prompt**; successful prompting is **iterative**.
