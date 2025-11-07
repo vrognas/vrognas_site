@@ -10,6 +10,7 @@ date: last-modified
 * Convert percentages to Omega values
 * Calculate confidence interval (95%) given mean and SD
 * Calculate half-life based on V and CL
+* Token visualizer
 
 ## Unit converter
 
