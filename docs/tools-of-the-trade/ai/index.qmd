@@ -59,6 +59,8 @@ A good prompt is structured using `<XML_tags>` and `{{{VARIABLES}}}` and consist
 
 Role: {{ROLE}} # <1>
 Tone: {{TONE}}
+Style: {{STYLE}}
+Task: {{TASK}}
 
 <request>
 {{REQUEST}}
@@ -89,6 +91,8 @@ Consider the different factors involved, potential constraints,
 and various approaches before recommending the best solution.
 
 Compose three different answers, and then recommend one of them. # <7>
+
+{{REPEAT}} # <8>
 ```
 1. **Role or tone:** Specify how you want the AI to communicate
 2. **Context:** Be specific about **what you want**, **why** you want it, and the relevant **background**
@@ -101,6 +105,7 @@ Called "Chain of thought" (CoT) prompting.
 Give space for the AI to work through its process.
 7. Ask for **multiple answers**.
 This is especially helpful for boosting creativity.
+8. Repeat any important instructions
 
 For more helpful tips and examples, see:
 
