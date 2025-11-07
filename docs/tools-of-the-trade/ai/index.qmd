@@ -89,6 +89,9 @@ Let's think step-by-step.
 Before answering, please think through this problem carefully. # <6>
 Consider the different factors involved, potential constraints,
 and various approaches before recommending the best solution.
+If you don't know, say "I don't know".
+Answer only if you're very cinfident in your response.
+Using the context, find relevant quotes and answer using the quotes.
 
 Compose three different answers, and then recommend one of them. # <7>
 
