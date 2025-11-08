@@ -36,20 +36,27 @@ What could be done by an agent on your behalf?
 
 ### Agency
 
-Is the task conplex enough?
-no -> workflows
+Agency doesn't mean uncontrolled action or just "yolo"'ing it.
+It means intelligent agency with clear check-points.
+Human oversight for critical decisions while delegating smaller time-consuming decisions.
+It means taking a complex task and see it through to completion.
+
+#### When to consider using AI agents
+
+Is the task complex enough?  
+no -> workflows  
 yes -> agents
 
-is the task valuable enough?
-<$0.1 -> workflows
+Is the task valuable enough?  
+<$0.1 -> workflows  
 >$1 -> agents
 
-are all parts of the task doable?
-no -> reduce scope
+Are all parts of the task doable?  
+no -> reduce scope  
 yes -> agents
 
-what is the cost of error/error discovery?
-high -> read-only/human-in-the-loop
+What is the cost of error/error discovery?  
+high -> read-only/human-in-the-loop  
 low -> agents
 
 ## Description
@@ -172,6 +179,13 @@ It's a protocol for LLMs to communicate with external services and tools.
 * Clearly explaining why it is a problem
 * Providing concrete suggestions for improvement
 * Revising your instructions or examples
+
+### Agent self-discernment
+
+When applying AI agency, an important piece is how the AI evaluates its own work.
+
+Test-driven development (writing tests *first*) have emerged as a state-of-the-art technique for agentic coding.
+Having the AI begin with writing and reviewing tests before moving on to implementation is a huge improvement in the efficiency and effectiveness for AI agents.
 
 ## Diligence
 
