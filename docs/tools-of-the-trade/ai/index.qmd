@@ -182,10 +182,15 @@ It's a protocol for LLMs to communicate with external services and tools.
 
 ### Agent self-discernment
 
-When applying AI agency, an important piece is how the AI evaluates its own work.
+When applying AI agency (or "vibe coding"), an important piece is how the AI evaluates its own work.
 
 Test-driven development (writing tests *first*) have emerged as a state-of-the-art technique for agentic coding.
 Having the AI begin with writing and reviewing tests before moving on to implementation is a huge improvement in the efficiency and effectiveness for AI agents.
+
+However, its easy to have tests written that are too sorcific to the current feature.
+Having tests written as minimalist, general, and end-to-end helps.
+
+Writing acceptance tests, using the end product, and spot-checking key facts you understand, are all good ways to practice discernment on AI agent output.
 
 ## Diligence
 
