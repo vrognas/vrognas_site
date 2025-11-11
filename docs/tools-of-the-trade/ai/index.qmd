@@ -37,9 +37,9 @@ What could be done by an agent on your behalf?
 ### Agency
 
 Agency doesn't mean uncontrolled action or just "yolo"'ing it.
-It means intelligent agency with clear check-points.
-Human oversight for critical decisions while delegating smaller time-consuming decisions.
-It means taking a complex task and see it through to completion.
+It means intelligent agency with clear checkpoints.
+Human oversight for critical decisions while delegating smaller, time-consuming decisions.
+It means taking a complex task and seeing it through to completion.
 
 #### When to consider using AI agents
 
@@ -117,7 +117,7 @@ Before answering, please think through this problem carefully. # <6>
 Consider the different factors involved, potential constraints,
 and various approaches before recommending the best solution.
 If you don't know, say "I don't know".
-Answer only if you're very cinfident in your response.
+Answer only if you're very confident in your response.
 When making a factual claim, be sure to refer back to the source.
 
 Compose three different answers, and then recommend one of them. # <7>
@@ -184,13 +184,13 @@ It's a protocol for LLMs to communicate with external services and tools.
 
 When applying AI agency (or "vibe coding"), an important piece is how the AI evaluates its own work.
 
-Test-driven development (writing tests *first*) have emerged as a state-of-the-art technique for agentic coding.
-Having the AI begin with writing and reviewing tests before moving on to implementation is a huge improvement in the efficiency and effectiveness for AI agents.
+Test-driven development (writing tests *first*) has emerged as a state-of-the-art technique for agentic coding.
+Having the AI begin with writing and reviewing tests before moving on to implementation is a huge improvement in the efficiency and effectiveness of AI agents.
 
-However, its easy to have tests written that are too sorcific to the current feature.
+However, it's easy to have tests written that are too specific to the current feature.
 Having tests written as minimalist, general, and end-to-end helps.
 
-Writing acceptance tests, using the end product, and spot-checking key facts you understand, are all good ways to practice discernment on AI agent output.
+Writing acceptance tests, using the end product, and spot-checking key facts you understand are all good ways to practice discernment on AI agent output.
 
 ## Diligence
 
@@ -205,6 +205,18 @@ Ethical and safety aspects for responsible AI collaboration.
   * Verify facts
   * Check for biases
   * Ensure accuracy
+
+### The Lethal Trifecta
+
+The **lethal trifecta**^[<https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/>] of capabilities is:
+
+* **Access to your private data**---one of the most common purposes of tools in the first place!
+* **Exposure to untrusted content**---any mechanism by which text (or images) controlled by a malicious attacker could become available to your LLM
+* **The ability to externally communicate** in a way that could be used to steal your data ([Simon Willison](https://simonwillison.net/) calls this "exfiltration")
+
+If your agent combines these three features, an attacker can **easily trick it** into accessing your private data and sending it to that attacker.
+
+[2025 Top 10 Risk & Mitigations for LLMs and Gen AI Apps](https://genai.owasp.org/llm-top-10/)
 
 ## Tools
 
