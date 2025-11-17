@@ -1,0 +1,32 @@
+# Netlify redirects for vrognas.com
+# Documentation: https://docs.netlify.com/routing/redirects/
+
+# Old URL structure migration: page.html → page/index.html
+# These redirects handle legacy URLs from previous site structure
+
+## NONMEM documentation pages
+/docs/tools-of-the-trade/nonmem/nm-qa.html      /docs/tools-of-the-trade/nonmem/nm-qa/index.html      301
+/docs/tools-of-the-trade/nonmem/nm-err.html     /docs/tools-of-the-trade/nonmem/nm-err/index.html     301
+/docs/tools-of-the-trade/nonmem/nm-ctl.html     /docs/tools-of-the-trade/nonmem/nm-ctl/index.html     301
+/docs/tools-of-the-trade/nonmem/nm-data.html    /docs/tools-of-the-trade/nonmem/nm-data/index.html    301
+/docs/tools-of-the-trade/nonmem/nm-est.html     /docs/tools-of-the-trade/nonmem/nm-est/index.html     301
+/docs/tools-of-the-trade/nonmem/nm-tips-n-tricks.html  /docs/tools-of-the-trade/nonmem/nm-tips-n-tricks/index.html  301
+
+# nm-run.html never existed - redirect to main NONMEM tools page
+/docs/tools-of-the-trade/nonmem/nm-run.html     /docs/tools-of-the-trade/index.html                   301
+
+## Modeling pages
+/docs/modeling/pkpd/pkpd.html                   /docs/modeling/pkpd/pkpd/index.html                   301
+/docs/modeling/pk/pk.html                       /docs/modeling/pk/pk/index.html                       301
+/docs/modeling/pd/pd.html                       /docs/modeling/pd/pd/index.html                       301
+/docs/modeling/tte/tte.html                     /docs/modeling/tte/tte/index.html                     301
+/docs/modeling/gof/gof-cts.html                 /docs/modeling/gof/gof-cts/index.html                 301
+/docs/modeling/gof/gof-cat.html                 /docs/modeling/gof/gof-cat/index.html                 301
+
+## General catch-all for old .html files (if not caught by specific rules above)
+# This converts /path/to/page.html → /path/to/page/index.html
+/docs/*/*.html                                  /docs/:splat/index.html                               301
+/docs/*/*/*.html                                /docs/:splat/index.html                               301
+
+# Note: Trailing slashes are handled automatically by Netlify's internal routing
+# No explicit redirects needed for /page → /page/ (prevents redirect chains)

@@ -5,6 +5,7 @@ project:
 resources:
   - images/seedling_tiny_ps.svg
   - robots.txt
+  - _redirects
 
 execute:
   freeze: auto

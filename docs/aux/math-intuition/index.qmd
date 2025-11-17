@@ -73,8 +73,8 @@ Or more mathy: (d/dx)*(e^x) = e^x
 * **Probability** is starting with an animal, and figuring out what footprints it will make.
 * **Statistics** is seeing a footprint, and guessing the animal.
 
-![https://wetlandscapes.com/blog/a-brief-visualization-of-rs-distribution-functions/](./images/fig-1.png)
+![https://wetlandscapes.com/blog/a-brief-visualization-of-rs-distribution-functions/](../images/fig-1.png)
 
 ### Common statistical tests are linear models
 
-![https://lindeloev.github.io/tests-as-linear/](./images/linear-tests.png)
+![https://lindeloev.github.io/tests-as-linear/](../images/linear-tests.png)
