@@ -152,7 +152,7 @@ IF (CP > CMAXM) THEN
 ENDIF
 ```
 
-![](./images/tmax-vs-dt.png)
+![](../images/tmax-vs-dt.png)
 
 |          | Total CPU time(s) |
 | :------- | :---: |

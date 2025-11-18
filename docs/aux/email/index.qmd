@@ -37,7 +37,7 @@ date: last-modified
 1. Start with **jotting down** what you want to say in the body of the email.
 If it is a really short message, consider using only the subject line, ending it with "EOM" (End of Message).
 * Keep email short, clear, and on topic.
-  * [ChatGPT](chat.openai.com) can help to make emails more coherent, consise, and to the point.
+  * [ChatGPT](https://chat.openai.com) can help to make emails more coherent, consise, and to the point.
   * A good rule of thumb is to aim for max 5 sentences.
   If it is longer than that, email is probably not the right way to communicate.
   * AVOID CAPITAL LETTERS
