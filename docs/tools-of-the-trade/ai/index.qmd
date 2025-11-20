@@ -225,24 +225,24 @@ If your agent combines these three features, an attacker can **easily trick it**
 Coding agents are AI products like Anthropic's *Claude Code* and OpenAI's *Codex*.
 Some tips that I've found helpful when working with these tools are:
 
+New problem = new chat; clear the context and start fresh.
+
 * As with "normal" AI, be specific when prompting.
-* Do not enable MCP's by default. Only enable them when you know you'll need them, then disable them. This is because they eat up your context window.
-* Start with brainstorming/planning, then move on to implementation
-  * Force (ultra)thinking.
-  * Prompt: "Do not generate code until you are fully ready"
-* Document the plan in a markdown document.
-* Speaking of markdown documents, keep a `COMMON_MISTAKES.md` and reference it every time.
+Some helpful prompts include:
+  * Start with brainstorming/planning.
+  * Document the plan in a markdown document.
+  * Ultrathink
+  * "Do not generate code until you are fully ready"
+  * Stop if you find anything unexpected.
+* Keep a `COMMON_MISTAKES.md` and reference it every time.
 * Track all work in git.
 * Commit *often*, with small and focused commits
-  * This goes hand-in-hand with breaking down your work into small pieces.
-  * New problem = new chat; clear the context and start fresh.
+* This goes hand-in-hand with breaking down your work into small pieces.
 * Always write a *test* so that the AI can iterate (called *test-driven development*)
-  * ~3 e2e tests per feature is enough
-* "Stop if you find anything unexpected"
-
-#### Tips 'n Tricks with agentic coding
-
-
+  * ~3 e2e tests per feature are enough
+* Do not enable MCPs by default.
+Only enable them when you know you'll need them, then disable them.
+This is because MCPs eat up your context window.
 
 ### Models
 
