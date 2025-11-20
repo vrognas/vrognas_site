@@ -232,6 +232,7 @@ Some helpful prompts include:
   * Start with brainstorming/planning.
   * Document the plan in a markdown document.
   * Ultrathink
+  * Spin up as many parallel subagents as you find beneficial.
   * "Do not generate code until you are fully ready"
   * Stop if you find anything unexpected.
 * Keep a `COMMON_MISTAKES.md` and reference it every time.
