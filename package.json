@@ -4,9 +4,7 @@
     "mcp-server-gsc": "^0.2.0"
   },
   "devDependencies": {
-    "@lhci/cli": "^0.14.0",
-    "@netlify/plugin-lighthouse": "^6.0.1",
-    "netlify-plugin-critical-css": "^1.0.4",
-    "netlify-plugin-minify-html": "^0.3.1"
+    "@lhci/cli": "^0.15.1",
+    "@netlify/plugin-lighthouse": "^6.0.4"
   }
 }
