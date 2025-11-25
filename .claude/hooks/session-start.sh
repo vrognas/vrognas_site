@@ -1,0 +1,61 @@
+#!/bin/bash
+set -euo pipefail
+
+# Only run in Claude Code remote environment
+if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
+  exit 0
+fi
+
+echo "🚀 Setting up development environment..."
+
+# Install npm dependencies (includes mcp-server-gsc for Google Search Console)
+# Skip Chromium download as it's not needed for Claude Code web sessions
+# (penthouse/puppeteer is only used by Netlify during production builds)
+echo "📦 Installing npm dependencies..."
+PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm install
+
+# Install GitHub CLI via direct binary download (more reliable than apt in containers)
+echo "🔧 Installing GitHub CLI..."
+if ! command -v gh &> /dev/null; then
+  GH_VERSION="2.63.2"
+  ARCH=$(dpkg --print-architecture)
+  curl -sSL "https://github.com/cli/cli/releases/download/v${GH_VERSION}/gh_${GH_VERSION}_linux_${ARCH}.tar.gz" | tar -xz -C /tmp
+  mv "/tmp/gh_${GH_VERSION}_linux_${ARCH}/bin/gh" /usr/local/bin/gh
+  chmod +x /usr/local/bin/gh
+  rm -rf "/tmp/gh_${GH_VERSION}_linux_${ARCH}"
+  echo "✅ GitHub CLI installed"
+else
+  echo "✅ GitHub CLI already installed"
+fi
+
+# Install Netlify CLI globally
+echo "🔧 Installing Netlify CLI..."
+if ! command -v netlify &> /dev/null; then
+  npm install -g netlify-cli
+  echo "✅ Netlify CLI installed"
+else
+  echo "✅ Netlify CLI already installed"
+fi
+
+# Add helpful aliases to environment
+cat >> "$CLAUDE_ENV_FILE" << 'ENVEOF'
+# Quarto shortcuts
+alias qrender='quarto render'
+alias qpreview='quarto preview'
+
+# Netlify shortcuts
+alias ndeploy='netlify deploy'
+alias nstatus='netlify status'
+ENVEOF
+
+echo ""
+echo "✅ Development environment ready!"
+echo ""
+echo "Available tools:"
+echo "  - gh (GitHub CLI) - Manage GitHub repos, issues, PRs"
+echo "  - netlify - Deploy and manage Netlify sites"
+echo "  - npx mcp-server-gsc - Google Search Console MCP server"
+echo ""
+echo "Notes:"
+echo "  - Google Analytics: Use GA4 Data API or Google Analytics dashboard"
+echo "  - LinkedIn: API access requires OAuth app approval from LinkedIn"
