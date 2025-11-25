@@ -79,14 +79,28 @@ else
 fi
 
 # Setup Google credentials if provided (base64 encoded)
+# Note: Using Node.js for base64 decode as bash's base64 -d has issues in this environment
 GOOGLE_CREDS_PATH="${HOME}/.config/gcloud/application_default_credentials.json"
 if [ -n "${GOOGLE_CREDENTIALS_BASE64:-}" ]; then
   echo "🔐 Setting up Google credentials..."
   mkdir -p "$(dirname "$GOOGLE_CREDS_PATH")"
-  echo "$GOOGLE_CREDENTIALS_BASE64" | base64 -d > "$GOOGLE_CREDS_PATH"
+
+  # Use Node.js for reliable base64 decoding (bash base64 -d fails in this environment)
+  node -e "
+    const fs = require('fs');
+    const creds = Buffer.from(process.env.GOOGLE_CREDENTIALS_BASE64, 'base64').toString('utf-8');
+    fs.writeFileSync('$GOOGLE_CREDS_PATH', creds);
+  "
   chmod 600 "$GOOGLE_CREDS_PATH"
-  echo "export GOOGLE_APPLICATION_CREDENTIALS=\"$GOOGLE_CREDS_PATH\"" >> "$CLAUDE_ENV_FILE"
-  echo "✅ Google credentials configured"
+
+  # Verify the credentials file is valid
+  if node -e "const c = require('$GOOGLE_CREDS_PATH'); if (!c.client_email) process.exit(1);" 2>/dev/null; then
+    SERVICE_ACCOUNT=$(node -e "console.log(require('$GOOGLE_CREDS_PATH').client_email)")
+    echo "export GOOGLE_APPLICATION_CREDENTIALS=\"$GOOGLE_CREDS_PATH\"" >> "$CLAUDE_ENV_FILE"
+    echo "✅ Google credentials configured for: $SERVICE_ACCOUNT"
+  else
+    echo "⚠️  Google credentials file created but may be invalid"
+  fi
 else
   echo "⚠️  GOOGLE_CREDENTIALS_BASE64 not set - GSC/GA access unavailable"
 fi
