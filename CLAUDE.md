@@ -80,7 +80,7 @@ npm install
 A SessionStart hook (`.claude/hooks/session-start.sh`) automatically installs dev tools:
 - **npm dependencies** including `mcp-server-gsc` for Google Search Console
 - **GitHub CLI** for repo/issue/PR management
-- **Netlify CLI** for deployment and site management
+- **Netlify API helper** for deployment and site management
 
 ### GitHub CLI Workaround
 
@@ -96,16 +96,36 @@ ghcli issue create
 
 The `ghcli` command is a symlink to the actual `gh` binary, created by the startup hook.
 
+### Netlify API Workaround
+
+The Netlify CLI has compatibility issues with personal access tokens. Use the `netlify-api` helper instead:
+
+```bash
+# List your sites
+netlify-api /sites | jq
+
+# Get site details
+netlify-api /sites/SITE_ID | jq
+
+# List recent deploys
+netlify-api /sites/SITE_ID/deploys | jq '.[0:5]'
+
+# Get current user info
+netlify-api /user | jq
+```
+
+The `netlify-api` script is a curl wrapper that handles authentication automatically using `NETLIFY_AUTH_TOKEN`.
+
 ### Environment Variables for Authentication
 
 Set these environment variables to enable service integrations:
 
 | Variable | Purpose | How to Get |
 |----------|---------|------------|
-| `NETLIFY_AUTH_TOKEN` | Netlify CLI access | [Netlify User Settings > Applications](https://app.netlify.com/user/applications) |
+| `NETLIFY_AUTH_TOKEN` | Netlify API access | [Netlify User Settings > Applications](https://app.netlify.com/user/applications) |
 | `GOOGLE_CREDENTIALS_BASE64` | Google Search Console & Analytics | Base64-encode your service account JSON: `cat creds.json \| base64 -w 0` |
 
 The startup hook will:
-- Authenticate Netlify CLI automatically if `NETLIFY_AUTH_TOKEN` is set
+- Create the `netlify-api` helper and verify access if `NETLIFY_AUTH_TOKEN` is set
 - Decode and store Google credentials if `GOOGLE_CREDENTIALS_BASE64` is set
 - Configure the GSC MCP server to use the credentials
