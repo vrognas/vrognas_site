@@ -1,5 +1,6 @@
 ---
 title: "Pathology Primers"
+description: "Disease overviews for pharmacometricians covering pathophysiology, biomarkers, treatment regimens, and PK/PD modeling approaches."
 ---
 
 ## Disease facts that are good to know

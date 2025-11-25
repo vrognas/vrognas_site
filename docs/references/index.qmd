@@ -1,6 +1,7 @@
 ---
 title: "References"
 subtitle: "All the information you need to learn more about the topics covered on this page."
+description: "Bibliography and references for pharmacometrics topics including key publications and learning resources."
 date: last-modified
 ---
 

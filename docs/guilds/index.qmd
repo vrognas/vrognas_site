@@ -1,6 +1,7 @@
 ---
 title: "Gathering of Guilds"
 subtitle: "Get in contact with the community"
+description: "Directory of pharmacometrics societies, conferences, journals, and professional communities including ISoP, PAGE, and ACoP."
 date: last-modified
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Auxiliary Arts"
+description: "Supplementary skills for pharmacometricians including data visualization, scientific writing, presentations, and coding best practices."
 ---
 
 **Auxiliary**:  

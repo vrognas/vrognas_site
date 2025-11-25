@@ -1,5 +1,6 @@
 ---
 title: "Pharmacopœia Pharmacometrika"
+description: "Drug classification reference using the ATC system with mechanism of action, drug classes, and pharmacological properties."
 date: last-modified
 ---
 

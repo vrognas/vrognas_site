@@ -15,7 +15,7 @@ date: last-modified
 * ABX C_T should be high enough.
 :::
 
-Antibacterials (@fig-abx-classes) are drugs used to treat bacterial infections.
+Antibacterials are drugs used to treat bacterial infections.
 We often use the words *antimicrobials*, *antibacterials*, and *antibiotics* for these compounds.
 They are similar terms, but each has a specific meaning:
 
@@ -27,7 +27,8 @@ The term "antibiotic" comes from the Greek words *anti* ("against") and *biotiko
 Strictly speaking, antibiotics refers only to naturally produced substances, and not synthetic or semi-synthetic types (e.g., quinolones).
 However, it is commonly used interchangeably with antibacterials.
 
-![Types and classes of antibacterials.](../images/abx-classes.png){#fig-abx-classes}
+<!-- TODO: Add image ../images/abx-classes.png -->
+<!-- ![Types and classes of antibacterials.](../images/abx-classes.png){#fig-abx-classes} -->
 
 ## How do antibacterials work?
 
@@ -38,7 +39,8 @@ Antibacterials interfere with vital processes in bacterial cells.
 
 The host's immune system then clears the remaining infecting pathogens.
 
-![Drug-Bug-Host disease triangle.](../images/bug-drug-host_disease-triangle.png){#fig-triangle}
+<!-- TODO: Add image ../images/bug-drug-host_disease-triangle.png -->
+<!-- ![Drug-Bug-Host disease triangle.](../images/bug-drug-host_disease-triangle.png){#fig-triangle} -->
 
 ### Antibiotic targets in bacteria
 
