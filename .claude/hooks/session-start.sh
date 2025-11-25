@@ -41,13 +41,41 @@ else
   echo "✅ Netlify CLI already installed"
 fi
 
-# Authenticate Netlify CLI if token is provided
+# Setup Netlify API access if token is provided
+# Note: The Netlify CLI has compatibility issues with personal access tokens,
+# so we create a helper script that uses the API directly via curl
 if [ -n "${NETLIFY_AUTH_TOKEN:-}" ]; then
-  echo "🔐 Authenticating Netlify CLI..."
-  netlify login --auth "$NETLIFY_AUTH_TOKEN"
-  echo "✅ Netlify authenticated"
+  echo "🔐 Setting up Netlify API access..."
+
+  # Create netlify-api helper script
+  cat > /usr/local/bin/netlify-api << 'NETLIFY_SCRIPT'
+#!/bin/bash
+# Netlify API helper - workaround for CLI token issues
+# Usage: netlify-api <endpoint> [curl-options]
+# Example: netlify-api /sites
+#          netlify-api /sites/SITE_ID/deploys
+
+if [ -z "${NETLIFY_AUTH_TOKEN:-}" ]; then
+  echo "Error: NETLIFY_AUTH_TOKEN not set" >&2
+  exit 1
+fi
+
+ENDPOINT="${1:-/user}"
+shift 2>/dev/null || true
+
+curl -s -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" \
+  "https://api.netlify.com/api/v1${ENDPOINT}" "$@"
+NETLIFY_SCRIPT
+  chmod +x /usr/local/bin/netlify-api
+
+  # Verify token works
+  if netlify-api /user | grep -q '"email"'; then
+    echo "✅ Netlify API access configured"
+  else
+    echo "⚠️  Netlify token may be invalid - check NETLIFY_AUTH_TOKEN"
+  fi
 else
-  echo "⚠️  NETLIFY_AUTH_TOKEN not set - run 'netlify login --auth <token>' manually"
+  echo "⚠️  NETLIFY_AUTH_TOKEN not set - Netlify access unavailable"
 fi
 
 # Setup Google credentials if provided (base64 encoded)
@@ -79,9 +107,10 @@ echo "✅ Development environment ready!"
 echo ""
 echo "Available tools:"
 echo "  - ghcli - GitHub CLI (use 'ghcli' not 'gh' - blocked by system)"
-echo "  - netlify - Deploy and manage Netlify sites"
+echo "  - netlify-api - Netlify API helper (e.g., 'netlify-api /sites | jq')"
 echo "  - npx mcp-server-gsc - Google Search Console MCP server"
 echo ""
 echo "Notes:"
+echo "  - Netlify CLI installed but use 'netlify-api' for API calls (CLI has token issues)"
 echo "  - Google Analytics: Use GA4 Data API or Google Analytics dashboard"
 echo "  - LinkedIn: API access requires OAuth app approval from LinkedIn"
