@@ -1,10 +1,11 @@
 {
   "dependencies": {
-    "@quarto/netlify-plugin-quarto": "^0.0.5",
-    "mcp-server-gsc": "^0.2.0"
+    "@quarto/netlify-plugin-quarto": "^0.0.5"
   },
   "devDependencies": {
     "@lhci/cli": "^0.15.1",
-    "@netlify/plugin-lighthouse": "^6.0.4"
+    "@netlify/plugin-lighthouse": "^6.0.4",
+    "googleapis": "^166.0.0",
+    "mcp-server-gsc": "^0.2.0"
   }
 }
