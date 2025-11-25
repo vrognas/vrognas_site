@@ -1,5 +1,6 @@
 ---
 title: "Regulatory Rites"
+description: "Regulatory science for pharmacometricians: GCP guidelines, EMA submission workflows, SmPC structure, and compliance requirements."
 date: last-modified
 ---
 

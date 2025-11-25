@@ -204,4 +204,4 @@ plot(layers)
         * any: `NA %in% vector`
         * sum: `vector %in% NA %>% sum`
 
-![](./images/dist-func.png)
+<!-- TODO: Add image ./images/dist-func.png -->

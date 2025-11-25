@@ -6,7 +6,8 @@ date: last-modified
 :::{.callout-caution title="Under construction"}
 :::
 
-![](../images/antivirals.png){#fig-antivirals}
+<!-- TODO: Add image ../images/antivirals.png -->
+<!-- ![](../images/antivirals.png){#fig-antivirals} -->
 
 | J05 | ANTIVIRALS FOR SYSTEMIC USE |
 | :--- | :--- |
