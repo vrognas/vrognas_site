@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  post-render:
+    - scripts/fix-sitemap.sh
 
 resources:
   - images/seedling_tiny_ps.svg
