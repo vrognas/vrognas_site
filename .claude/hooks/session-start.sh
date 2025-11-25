@@ -41,6 +41,28 @@ else
   echo "✅ Netlify CLI already installed"
 fi
 
+# Authenticate Netlify CLI if token is provided
+if [ -n "${NETLIFY_AUTH_TOKEN:-}" ]; then
+  echo "🔐 Authenticating Netlify CLI..."
+  netlify login --auth "$NETLIFY_AUTH_TOKEN"
+  echo "✅ Netlify authenticated"
+else
+  echo "⚠️  NETLIFY_AUTH_TOKEN not set - run 'netlify login --auth <token>' manually"
+fi
+
+# Setup Google credentials if provided (base64 encoded)
+GOOGLE_CREDS_PATH="${HOME}/.config/gcloud/application_default_credentials.json"
+if [ -n "${GOOGLE_CREDENTIALS_BASE64:-}" ]; then
+  echo "🔐 Setting up Google credentials..."
+  mkdir -p "$(dirname "$GOOGLE_CREDS_PATH")"
+  echo "$GOOGLE_CREDENTIALS_BASE64" | base64 -d > "$GOOGLE_CREDS_PATH"
+  chmod 600 "$GOOGLE_CREDS_PATH"
+  echo "export GOOGLE_APPLICATION_CREDENTIALS=\"$GOOGLE_CREDS_PATH\"" >> "$CLAUDE_ENV_FILE"
+  echo "✅ Google credentials configured"
+else
+  echo "⚠️  GOOGLE_CREDENTIALS_BASE64 not set - GSC/GA access unavailable"
+fi
+
 # Add helpful aliases to environment
 cat >> "$CLAUDE_ENV_FILE" << 'ENVEOF'
 # Quarto shortcuts

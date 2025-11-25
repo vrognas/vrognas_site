@@ -10,5 +10,14 @@
         ]
       }
     ]
+  },
+  "mcpServers": {
+    "gsc": {
+      "command": "npx",
+      "args": ["-y", "mcp-server-gsc"],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "${HOME}/.config/gcloud/application_default_credentials.json"
+      }
+    }
   }
 }
