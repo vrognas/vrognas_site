@@ -50,3 +50,41 @@
 
 # Note: Trailing slashes are handled automatically by Netlify's internal routing
 # No explicit redirects needed for /page → /page/ (prevents redirect chains)
+
+# =============================================================================
+# STRUCTURAL CHANGES: Pages moved to different locations
+# These redirects fix 404s from Google Search Console caused by URL restructuring
+# =============================================================================
+
+# Portfolio and About were moved from /docs/ to root level
+/docs/portfolio/                                    /portfolio/                                     301
+/docs/portfolio/index.html                          /portfolio/                                     301
+/docs/about/                                        /about/                                         301
+/docs/about/index.html                              /about/                                         301
+
+# "disease-primers" renamed to "pathology-primers"
+/docs/disease-primers/*                             /docs/pathology-primers/:splat                  301
+
+# "references/disease-primer" was an incorrect path variant
+/docs/references/disease-primer/*                   /docs/pathology-primers/:splat                  301
+
+# R tips page had incorrect path (missing 'r-' prefix)
+/docs/tools-of-the-trade/r/tips-n-tricks            /docs/tools-of-the-trade/r/r-tips-n-tricks/     301
+/docs/tools-of-the-trade/r/tips-n-tricks/           /docs/tools-of-the-trade/r/r-tips-n-tricks/     301
+
+# Pharmacopeia directory renamed from abbreviated to full ATC names
+/docs/pharmacopeia/C_cardio/*                       /docs/pharmacopeia/C_cardiovascular-system/:splat       301
+/docs/pharmacopeia/j_infections/antibacterials/*    /docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/   301
+/docs/pharmacopeia/immunology/immunosuppressants/*  /docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L04_immunosuppressants/L04A_immunosuppressants/  301
+
+# =============================================================================
+# REMOVED CONTENT: Pages that no longer exist (410 Gone)
+# These tell search engines to stop trying to index these URLs
+# =============================================================================
+
+# Old site sections that were removed during restructuring
+/collection/*                                       /                                               410
+/project/*                                          /                                               410
+/license/                                           /                                               410
+/categories/*                                       /                                               410
+/docs/how-tos/*                                     /                                               410
