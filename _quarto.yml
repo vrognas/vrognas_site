@@ -3,6 +3,7 @@ project:
   output-dir: _site
   post-render:
     - scripts/fix-sitemap.sh
+    - scripts/fix-canonical.sh
 
 resources:
   - images/seedling_tiny_ps.svg
