@@ -5,3 +5,217 @@ date: last-modified
 
 :::{.callout-caution title="Under construction"}
 :::
+
+## Why `C:` and Not `A:`?
+
+`A:` and `B:` were reserved for floppy disk drives.
+
+Most PCs in the 1980s shipped with one or two floppy drives (often a 5.25-inch and a 3.5-inch combination).
+Hard drives came later and got the next available letter: `C:`.
+MS-DOS 5.0 and later explicitly ensured that the boot drive would *always* be `C:`, even on systems with more than two floppy drives.
+
+Even after floppies disappeared, Microsoft kept the convention.
+Changing it would have broken countless programs that assumed `C:` was the system drive.
+
+So that's it---a 40-year-old legacy decision that outlived the technology it was designed for.
+
+## The Windows 11 File System: What Goes Where and Why
+
+Unlike Unix systems with a single unified tree, Windows uses drive letters as separate roots.
+Each drive is its own hierarchy.
+Here's how the main system drive is organized.
+
+### The Root: C:\
+
+| Folder | Purpose |
+| :----- | :------ |
+| **Windows** | The operating system itself |
+| **Program Files** | 64-bit applications |
+| **Program Files (x86)** | 32-bit applications |
+| **Users** | User profiles and personal files |
+| **ProgramData** | Shared application data (hidden) |
+
+## C:\Windows
+
+The OS lives here.
+Key subfolders:
+
+| Folder | Contents |
+| :----- | :------- |
+| **System32** | Core 64-bit binaries and DLLs (yes, 64-bit despite the name) |
+| **SysWOW64** | 32-bit binaries for legacy app compatibility |
+| **Fonts** | Installed fonts |
+| **Temp** | System-wide temporary files |
+| **WinSxS** | Side-by-side assemblies—multiple versions of DLLs for compatibility |
+
+The `System32`/`SysWOW64` naming confusion exists because Microsoft couldn't rename `System32` without breaking applications with hardcoded paths.
+
+### C:\Program Files
+
+Install location for 64-bit applications.
+Each app typically gets its own subfolder.
+
+**Program Files (x86)** exists because 64-bit Windows runs 32-bit apps through WoW64 emulation, requiring separate library paths.
+The two must stay isolated.
+
+### C:\Users
+
+Each user gets a profile folder under `C:\Users\%USERNAME%`:
+
+| Folder | Purpose |
+| :----- | :------ |
+| **Desktop** | Desktop files and shortcuts |
+| **Documents** | Default save location for documents |
+| **Downloads** | Browser and app downloads |
+| **Pictures, Music, Videos** | Media libraries |
+| **AppData** | Application settings and data (hidden) |
+
+#### The AppData Split
+
+`AppData` has three subfolders with distinct purposes:
+
+| Folder | Purpose | Example |
+| :----- | :------ | :------ |
+| **Local** | Machine-specific data, caches | Browser cache, large app data |
+| **LocalLow** | Low-integrity data for sandboxed apps | Browser plugins |
+| **Roaming** | Settings that sync across machines in domain environments | App preferences, configs |
+
+When you log in to a different work computer and your settings follow you, that's `Roaming` at work.
+
+### C:\ProgramData
+
+A hidden folder for application data shared across all users.
+Unlike `AppData` (per-user), this is machine-wide.
+Database files, shared configs, and license information often live here.
+
+### Why This Structure?
+
+Three forces shaped it:
+
+1. **Multi-user support** — Strict separation between system files, shared data, and per-user data
+2. **32/64-bit coexistence** — Legacy 32-bit apps must run alongside modern 64-bit apps
+3. **Backward compatibility** — Folder names and paths can't change without breaking existing software
+
+The result is pragmatic rather than elegant.
+Confusing names like `System32` and `SysWOW64` exist because Microsoft prioritized not breaking the world's software over logical naming.
+
+### Quick Reference
+
+| What you want | Where it lives |
+| :------------ | :-------------- |
+| OS files | C:\Windows |
+| Installed apps | C:\Program Files (or x86) |
+| Your documents | C:\Users\<you>\Documents |
+| App settings (your user) | C:\Users\%USERNAME%\AppData |
+| App settings (all users) | C:\ProgramData |
+| Temp files | C:\Windows\Temp or AppData\Local\Temp |
+
+## Windows Environment Variables: What %VAR% Means and How It Works
+
+When you see paths like `%USERPROFILE%\Documents` or `%APPDATA%`, you're looking at environment variables.
+They're placeholders that Windows expands to actual paths at runtime.
+
+### Why They Exist
+
+Hardcoding `C:\Users\MyUsername\AppData\Roaming` breaks when someone else runs your script.
+Using `%APPDATA%` works for everyone---Windows resolves it to the correct path for whoever is logged in.
+
+### Syntax
+
+| Context | Syntax | Example |
+|---------|--------|---------|
+| Command Prompt | `%VAR%` | `%USERPROFILE%` |
+| PowerShell | `$env:VAR` | `$env:USERPROFILE` |
+| Registry/GUI | `%VAR%` | `%SystemRoot%` |
+
+### Common System Variables
+
+| Variable | Expands To | Example Value |
+|----------|------------|---------------|
+| `%SystemRoot%` | Windows folder | `C:\Windows` |
+| `%SystemDrive%` | OS drive letter | `C:` |
+| `%ProgramFiles%` | 64-bit apps | `C:\Program Files` |
+| `%ProgramFiles(x86)%` | 32-bit apps | `C:\Program Files (x86)` |
+| `%ProgramData%` | Shared app data | `C:\ProgramData` |
+| `%TEMP%` / `%TMP%` | Temp folder | `C:\Users\<you>\AppData\Local\Temp` |
+
+### Common User Variables
+
+| Variable | Expands To | Example Value |
+|----------|------------|---------------|
+| `%USERPROFILE%` | User's home folder | `C:\Users\MyUsername` |
+| `%APPDATA%` | Roaming app data | `C:\Users\MyUsername\AppData\Roaming` |
+| `%LOCALAPPDATA%` | Local app data | `C:\Users\MyUsername\AppData\Local` |
+| `%HOMEPATH%` | Home relative to drive | `\Users\MyUsername` |
+| `%USERNAME%` | Current username | `MyUsername` |
+
+### User vs System Variables
+
+Windows maintains two scopes:
+
+- **System variables**: Machine-wide, same for all users
+- **User variables**: Per-user, can override system variables
+
+When both define the same variable, **user wins**.
+
+### The PATH Variable
+
+`%PATH%` is special.
+It's a semicolon-separated list of directories where Windows searches for executables.
+
+```
+C:\Windows\System32;C:\Windows;C:\Program Files\Git\cmd
+```
+
+When you type `git` in a terminal, Windows searches each `PATH` directory in order until it finds `git.exe`.
+
+Unlike other variables, user and system `PATH` values are **concatenated**, not overridden.
+
+### Viewing Variables
+
+**Command Prompt:**
+```cmd
+echo %APPDATA%
+set              # list all
+```
+
+**PowerShell:**
+```powershell
+$env:APPDATA
+Get-ChildItem Env:   # list all
+```
+
+### Setting Variables
+
+**Temporarily (current session only):**
+```cmd
+set MY_VAR=hello
+```
+```powershell
+$env:MY_VAR = "hello"
+```
+
+**Permanently:**
+- GUI: System Properties → Environment Variables
+- PowerShell: `[Environment]::SetEnvironmentVariable("MY_VAR", "value", "User")`
+- Command line: `setx MY_VAR "value"`
+
+Note: `setx` writes to the registry but doesn't update the current session.
+New terminals will see the change.
+
+### Expansion Timing
+
+Variables expand when evaluated, not when defined.
+If `%APPDATA%` changes mid-session (rare), subsequent uses reflect the new value.
+
+Some contexts support delayed expansion (`!VAR!` syntax in batch files) for variables that change inside loops—but that's a rabbit hole for another day.
+
+### Quick Reference
+
+| Task | Command Prompt | PowerShell |
+|------|----------------|------------|
+| Read variable | `echo %VAR%` | `$env:VAR` |
+| Set (session) | `set VAR=value` | `$env:VAR = "value"` |
+| Set (permanent) | `setx VAR "value"` | `[Environment]::SetEnvironmentVariable(...)` |
+| List all | `set` | `Get-ChildItem Env:` |
+
