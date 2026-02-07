@@ -22,6 +22,12 @@
   force = true
   conditions = { Host = ["www.vrognas.com"] }
 
+## Block CLAUDE.html from indexing (safety net)
+[[headers]]
+  for = "/CLAUDE.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
 ## Legacy blog redirect
 [[redirects]]
   from = "/blog/*"

@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "**/*.qmd"
+    - "404.md"
+    - "!CLAUDE.md"
   post-render:
     - scripts/fix-sitemap.sh
     - scripts/fix-canonical.sh
