@@ -56,11 +56,14 @@
 # These redirects fix 404s from Google Search Console caused by URL restructuring
 # =============================================================================
 
-# Portfolio and About were moved from /docs/ to root level
-/docs/portfolio/                                    /portfolio/                                     301
-/docs/portfolio/index.html                          /portfolio/                                     301
-/docs/about/                                        /about/                                         301
-/docs/about/index.html                              /about/                                         301
+# Portfolio, About, and CV were moved from /docs/ to root level
+# CV was renamed to About on Aug 30, 2025
+/docs/cv/                                              /about/                                         301
+/docs/cv/index.html                                    /about/                                         301
+/docs/portfolio/                                       /portfolio/                                     301
+/docs/portfolio/index.html                             /portfolio/                                     301
+/docs/about/                                           /about/                                         301
+/docs/about/index.html                                 /about/                                         301
 
 # "disease-primers" renamed to "pathology-primers"
 /docs/disease-primers/*                             /docs/pathology-primers/:splat                  301
