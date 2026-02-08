@@ -219,15 +219,15 @@ website:
           - section: "(J) Antiinfectives for systemic use"
             contents:
               - text: "(01) Antibacterials for systemic use"
-                href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/index.qmd
+                href: docs/pharmacopeia/j_antiinfectives-for-systemic-use/j01_antibacterials-for-systemic-use/index.qmd
               - text: "(05) Antivirals for systemic use"
-                href: docs/pharmacopeia/J_antiinfectives-for-systemic-use/J05_antivirals-for-systemic-use/index.qmd
+                href: docs/pharmacopeia/j_antiinfectives-for-systemic-use/j05_antivirals-for-systemic-use/index.qmd
           - section: "(L) Antineoplastic and immunomodulating agents"
             contents:
               - section: "(04) Immunosuppressants"
                 contents:
                   - text: "(A) Immunosuppressants"
-                    href: docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L04_immunosuppressants/L04A_immunosuppressants/index.qmd
+                    href: docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/l04_immunosuppressants/l04a_immunosuppressants/index.qmd
     - id: regulatory
       title: "Regulatory Rites"
       style: "floating"

@@ -28,9 +28,9 @@
 /docs/tools-of-the-trade/r/tips-n-tricks/           /docs/tools-of-the-trade/r/r-tips-n-tricks/     301
 
 # Pharmacopeia directory renamed from abbreviated to full ATC names
-/docs/pharmacopeia/C_cardio/*                       /docs/pharmacopeia/C_cardiovascular-system/:splat       301
-/docs/pharmacopeia/j_infections/antibacterials/*    /docs/pharmacopeia/J_antiinfectives-for-systemic-use/J01_antibacterials-for-systemic-use/   301
-/docs/pharmacopeia/immunology/immunosuppressants/*  /docs/pharmacopeia/L_antineoplastic-and-immunomodulating-agents/L04_immunosuppressants/L04A_immunosuppressants/  301
+/docs/pharmacopeia/C_cardio/*                       /docs/pharmacopeia/c_cardiovascular-system/:splat       301
+/docs/pharmacopeia/j_infections/antibacterials/*    /docs/pharmacopeia/j_antiinfectives-for-systemic-use/j01_antibacterials-for-systemic-use/   301
+/docs/pharmacopeia/immunology/immunosuppressants/*  /docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/l04_immunosuppressants/l04a_immunosuppressants/  301
 
 # =============================================================================
 # CANONICAL URLs: Remove index.html to prevent duplicate content issues
