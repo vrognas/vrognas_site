@@ -277,6 +277,7 @@ format:
     smooth-scroll: false
     link-external-icon: false # Also adds unwanted icon to lightbox
     include-in-header:
+      - theme-flash-fix.html
       - seo.html
       - pk-operators.html
     theme:

@@ -17,5 +17,6 @@ node_modules/
 *.html
 !seo.html
 !pk-operators.html
+!theme-flash-fix.html
 
 **/*.quarto_ipynb

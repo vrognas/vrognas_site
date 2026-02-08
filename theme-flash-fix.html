@@ -1,0 +1,10 @@
+<!-- Prevent dark-mode flash (FOUC): apply stored theme colors before CSS loads -->
+<script>
+(function() {
+  var s = localStorage.getItem('quarto-color-scheme');
+  if (s === 'alternate') {
+    document.documentElement.style.backgroundColor = '#282828';
+    document.documentElement.style.color = '#EBDBB2';
+  }
+})();
+</script>
