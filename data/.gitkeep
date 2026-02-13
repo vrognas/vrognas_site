@@ -1,0 +1,2 @@
+# This directory stores cached GSC data fetched by GitHub Actions
+# See .github/workflows/fetch-gsc-data.yml
