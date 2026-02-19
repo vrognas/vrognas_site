@@ -26,3 +26,5 @@ node_modules/
 # Claude Code
 .claude/settings.local.json
 /site_libs/
+_freeze/site_libs/
+**/index_files/
