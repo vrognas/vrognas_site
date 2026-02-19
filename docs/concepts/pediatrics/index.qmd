@@ -296,10 +296,10 @@ The reference range in the adult population (median and outer percentiles of obs
 
 See the [EMA M&S QA (2023)](https://www.ema.europa.eu/en/human-regulatory-overview/research-and-development/scientific-guidelines/clinical-pharmacology-and-pharmacokinetics/modelling-and-simulation-questions-and-answers) for more information.
 
-## PD extrapolation is often <span class="red-underline">not</span> feasible
+## PD extrapolation is often not feasible
 
 Unlike PK, PD models are disease- and therapy-specific, making direct extrapolation challenging.
-Thus, **response (E-R) and PD models from adults may not apply to children**.
+Thus, **response (E-R) and PD models from adults may <span class="red-underline">not apply to children</span>**.
 
 Unless there's clinical efficacy data in pediatric patients, be *very* cautious to extrapolate response or PD models from adults to pediatric patients.
 
