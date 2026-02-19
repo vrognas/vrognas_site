@@ -3,32 +3,45 @@
 window.MathJax = {
   tex: {
     macros: {
-      /* pharmacokinetic operators */
-      A: "\\operatorname{A}",
-      CL: "\\operatorname{\\color{red}{CL}}",
-      V: "\\operatorname{\\color{blue}{V}}",
-      Vd: "\\operatorname{\\color{blue}{V_d}}",
-      Vdss: "\\operatorname{\\color{blue}{V_{d,\\ ss}}}",
-      F: "\\operatorname{\\color{fuchsia}{F}}",
-      fu: "\\operatorname{f_{unbound}}",
-      fb: "\\operatorname{f_{bound}}",
-      fe: "\\operatorname{f_{excreted}}",
-      fm: "\\operatorname{f_{metabolized}}",
-      D: "\\operatorname{\\color{green}{Dose}}",
-      C: "\\operatorname{C}",
-      Cmax: "\\operatorname{C_max}",
-      Cmin: "\\operatorname{C_min}",
-      Cpl: "\\operatorname{C_pl}",
-      Cbl: "\\operatorname{C_bl}",
-      Cplss: "\\operatorname{C_{pl,\\ ss}}",
-      Cblss: "\\operatorname{C_{bl,\\ ss}}",
-      AUC: "\\operatorname{\\color{teal}{AUC}}",
-      AUCinf: "\\operatorname{\\color{teal}{AUC_{0-\\infty}}}",
-      AUCt: "\\operatorname{\\color{teal}{AUC_{0-t}}}",
-      ii: "\\operatorname{\\color{purple}{\\tau}}",
-      ke: "\\operatorname{\\color{orange}{k_e}}",
-      ka: "\\operatorname{\\color{lime}{k_a}}",
-      Rin: "\\operatorname{\\color{green}{R_in}}",
+      /* Pharmacokinetic parameter macros
+       * Palette: "Pharmacopoeia Pigments" — mineral/botanical dyes, Gruvbox-harmonized
+       * All hex colors verified for readability on both #ffffff and #282828 (L ≈ 0.19–0.26)
+       *
+       * Semantic families:
+       *   Elimination  → brick/rust  (#bf6050, #c07850)  CL, ke
+       *   Volume       → steel blue  (#4d7fa8)            V, Vd, Vdss
+       *   Absorption   → forest sage (#5a8c5a)            ka
+       *   Input/Dose   → harvest gold(#a08030)            D, Rin
+       *   Exposure     → amethyst    (#9070b8)            AUC
+       *   Bioavail.    → verdigris   (#368880)            F, fu, fb, fe, fm
+       *   Conc.        → dusty rose  (#a06878)            C, Cmax, Cmin, Cpl, Cbl
+       *   Time         → cool slate  (#7090a0)            τ
+       */
+      A:     "\\operatorname{A}",
+      CL:    "\\operatorname{\\color{#bf6050}{CL}}",          /* brick red    — clearance         */
+      V:     "\\operatorname{\\color{#4d7fa8}{V}}",           /* steel blue   — volume            */
+      Vd:    "\\operatorname{\\color{#4d7fa8}{V_d}}",
+      Vdss:  "\\operatorname{\\color{#4d7fa8}{V_{d,\\ ss}}}",
+      F:     "\\operatorname{\\color{#368880}{F}}",           /* verdigris    — bioavailability   */
+      fu:    "\\operatorname{\\color{#368880}{f_{unbound}}}",  /* verdigris    — fraction unbound  */
+      fb:    "\\operatorname{\\color{#368880}{f_{bound}}}",    /* verdigris    — fraction bound    */
+      fe:    "\\operatorname{\\color{#368880}{f_{excreted}}}", /* verdigris    — fraction excreted */
+      fm:    "\\operatorname{\\color{#368880}{f_{metabolized}}}",/* verdigris  — fraction metabol.  */
+      D:     "\\operatorname{\\color{#a08030}{Dose}}",        /* harvest gold — dose              */
+      C:     "\\operatorname{\\color{#a06878}{C}}",           /* dusty rose   — concentration     */
+      Cmax:  "\\operatorname{\\color{#a06878}{C_{max}}}",
+      Cmin:  "\\operatorname{\\color{#a06878}{C_{min}}}",
+      Cpl:   "\\operatorname{\\color{#a06878}{C_{pl}}}",
+      Cbl:   "\\operatorname{\\color{#a06878}{C_{bl}}}",
+      Cplss: "\\operatorname{\\color{#a06878}{C_{pl,\\ ss}}}",
+      Cblss: "\\operatorname{\\color{#a06878}{C_{bl,\\ ss}}}",
+      AUC:    "\\operatorname{\\color{#9070b8}{AUC}}",            /* amethyst     — total exposure    */
+      AUCinf: "\\operatorname{\\color{#9070b8}{AUC_{0-\\infty}}}",
+      AUCt:   "\\operatorname{\\color{#9070b8}{AUC_{0-t}}}",
+      ii:    "\\operatorname{\\color{#7090a0}{\\tau}}",       /* cool slate   — dosing interval   */
+      ke:    "\\operatorname{\\color{#c07850}{k_e}}",         /* rust copper  — elimination rate  */
+      ka:    "\\operatorname{\\color{#5a8c5a}{k_a}}",         /* forest sage  — absorption rate   */
+      Rin:   "\\operatorname{\\color{#a08030}{R_in}}",        /* harvest gold — input rate        */
       /* add more here … */
     }
   }

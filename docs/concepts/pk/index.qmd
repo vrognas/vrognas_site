@@ -59,8 +59,9 @@ tibble::tibble(
   time = c(0, 0.5, 1, 2, 4, 6, 8, 12), # h
   conc = c(0, 14, 12, 9, 6, 4, 3, 0) # mg/L (example)
 ) |>
-ggplot2::ggplot(ggplot2::aes(time, conc)) +
-  ggplot2::annotate( # shaded window
+  ggplot2::ggplot(ggplot2::aes(time, conc)) +
+  ggplot2::annotate(
+    # shaded window
     "rect",
     xmin = -Inf,
     xmax = Inf,
@@ -76,7 +77,8 @@ ggplot2::ggplot(ggplot2::aes(time, conc)) +
     x = "Time (h)",
     y = "Concentration (mg/L)"
   ) +
-  ggplot2::annotate( # labels
+  ggplot2::annotate(
+    # labels
     "text",
     x = 11.5,
     y = 10.4,
@@ -235,7 +237,7 @@ t_\text{max} =
         }
       \right)
   }{
-    \left(\ka - \ke}\right)
+    \left(\ka - \ke\right)
   }
 $$ {#eq-tmax-multiple-po-dose-1cmt}
 
