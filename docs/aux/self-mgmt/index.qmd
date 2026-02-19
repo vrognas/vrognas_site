@@ -3,7 +3,7 @@ title: "Self Management"
 date: "2025-08-31"
 ---
 
-:::{.callout-caution title="Under construction"}
+::: {.callout-caution title="Under construction"}
 :::
 
 **Modern knowledge work is not industrial factory work.**

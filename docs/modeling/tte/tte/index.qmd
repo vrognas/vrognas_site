@@ -5,7 +5,7 @@ code-overflow: scroll
 code-fold: true
 ---
 
-:::{.callout-caution title="Under construction"}
+::: {.callout-caution title="Under construction"}
 :::
 
 *Time-to-event (TTE) analysis*, also known as *survival analysis*, is a set of statistical methods focusing on the time until an event occurs.
@@ -23,7 +23,7 @@ An even further extension is **multi-state analysis**, which can accommodate **b
 
 ## Theory
 
-:::{.callout-tip}
+::: {.callout-tip}
 # Key takeaway
 
 Hazard is a rate, not a probability.
@@ -372,7 +372,7 @@ When there are no time-varying covariates involved, there is often an analytical
 For more flexible hazard functions involving time-varying covariates, analytical solutions are not usually available.
 With software like NONMEM that is able to numerically integrate the hazard function, there is no restriction on the way the hazard is expressed^[Except the user needs to ensure that the hazard does not go negative.].
 
-:::{.callout-tip}
+::: {.callout-tip}
 # Evaluate Weibull appropriateness
 
 The Weibull model also has another key property: the log(–log) of S(t) is linear with the log of time.
@@ -394,7 +394,7 @@ The key points are that **straight lines support the Weibull assumption and para
 :::
 
 
-:::{.callout-tip}
+::: {.callout-tip}
 # Evaluate log-logistic appropriateness
 
 The log-logistic assumption can be graphically evaluated by plotting $\ln{\frac{1-S(t)}{S(t)}}$ against $\ln{t}$ where $S(t)$ are the Kaplan–Meier survival estimates.

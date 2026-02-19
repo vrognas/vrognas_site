@@ -3,7 +3,7 @@ title: "Git (Version control)"
 date: last-modified
 ---
 
-:::{.callout-caution title="Under construction"}
+::: {.callout-caution title="Under construction"}
 :::
 
 ## How to Write a Git Commit Message

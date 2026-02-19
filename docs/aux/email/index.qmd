@@ -50,7 +50,7 @@ If it is a really short message, consider using only the subject line, ending it
     * Be polite, and not overly apologetic.
     * Use abbreviations, symbols, and emojis sparingly.
 
-:::{.callout-note title="Note on emojis"}
+::: {.callout-note title="Note on emojis"}
 Emojis are meant to convey emotion in writing.
 Correctly used, they are irreplaceable in making sure your message is read in the intended tone of voice, even in professional email.
 :::
@@ -94,7 +94,7 @@ Correctly used, they are irreplaceable in making sure your message is read in th
 
 : Assertive communication {#tbl-assertive-communication}
 
-:::{.callout-note title="Note on attachments"}
+::: {.callout-note title="Note on attachments"}
 Prefer links to secure servers over attaching files.
 :::
 
@@ -108,7 +108,7 @@ Prefer links to secure servers over attaching files.
 * Does the email contain links to draft working material? Write "draft" in the subject.
 * Avoid confidential info on the subject line.
 
-:::{.callout-tip}
+::: {.callout-tip}
 # Stick to one topic
 
 **New topic? New email.**
@@ -124,7 +124,7 @@ Do *not* take the opportunity to discuss a little bit of this and that.
   * If you put someone in CC, don't expect them to answer. It is either not actionable for them, or not directly related to them.
 * Don't overuse CC. Everybody does not need to know everything.
 
-:::{.callout-tip}
+::: {.callout-tip}
 # CC & BCC
 
 **CC = "carbon copy".**

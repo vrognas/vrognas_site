@@ -3,7 +3,7 @@ title: "Tuberculosis (TB)"
 date: last-modified
 ---
 
-:::{.callout-caution title="Under construction"}
+::: {.callout-caution title="Under construction"}
 :::
 
 ## What is TB?
@@ -16,7 +16,7 @@ About 25% of the global population is estimated to have been infected with TB ba
 About 7.5% of people infected with TB will eventually get symptoms and develop TB disease.
 If left untreated, active TB disease kills around 50% of those affected.
 
-:::{.callout-note title="TB and HIV"}
+::: {.callout-note title="TB and HIV"}
 
 People living with HIV are ~16 times more likely to fall ill with TB disease than people without HIV.
 TB is the leading cause of death among people with HIV.
@@ -98,7 +98,7 @@ The most common antibiotics used are:
 
 Such a regimen is also spelled as **2HRZE/4HR**, meaning 2 months of HRZE treatment followed by 4 months of HR treatment.
 
-:::{.callout-note}
+::: {.callout-note}
 # 12% of cases are resistant to at least rifampicin
 :::
 

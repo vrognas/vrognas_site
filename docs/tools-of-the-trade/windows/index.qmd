@@ -3,7 +3,7 @@ title: "Windows 11"
 date: last-modified
 ---
 
-:::{.callout-caution title="Under construction"}
+::: {.callout-caution title="Under construction"}
 :::
 
 ## Why `C:` and Not `A:`?
@@ -218,4 +218,3 @@ Some contexts support delayed expansion (`!VAR!` syntax in batch files) for vari
 | Set (session) | `set VAR=value` | `$env:VAR = "value"` |
 | Set (permanent) | `setx VAR "value"` | `[Environment]::SetEnvironmentVariable(...)` |
 | List all | `set` | `Get-ChildItem Env:` |
-

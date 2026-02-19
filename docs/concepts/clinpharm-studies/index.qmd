@@ -3,7 +3,7 @@ title: "Clinical pharmacology studies"
 date: last-modified
 ---
 
-:::{.callout-caution title="Under construction"}
+::: {.callout-caution title="Under construction"}
 * How can Modeling help in each phase?
 :::
 
@@ -26,7 +26,7 @@ date: last-modified
   * For how long does the study continue?
   * Run-in, active treatment, washout, and follow-up periods
 
-:::{.callout-tip}
+::: {.callout-tip}
 If a cross-over design with a washout period is used, always check that the predose concentration of the second dose is BLQ.
 :::
 
@@ -81,7 +81,7 @@ Data from Phase 1 studies are typically well-controlled and provide clean SDTM 
     * On some dosing occasions, only pre-dose samples might be taken.
     * Dose-adjustment rules can be in place to achieve desirable safety/efficacy.
 
-:::{.callout-note}
+::: {.callout-note}
 # Combined SAD-MAD studies
 
 SAD and MAD studies can be combined under one study, and subjects can participate in both.

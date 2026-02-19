@@ -90,7 +90,7 @@ The study design and statistical plans should consider changing numbers of patie
 
 : Approximate pediatric age groups. Neonates = "newborn infants". {#tbl-age-group}
 
-:::{.callout-note}
+::: {.callout-note}
 # A 17.9 year old belongs to the adolescent age group, until the 18^th^ birthday
 :::
 

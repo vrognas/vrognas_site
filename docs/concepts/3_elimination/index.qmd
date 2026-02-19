@@ -3,7 +3,7 @@ title: "The Elimination Concept"
 date: last-modified
 ---
 
-:::{.callout-caution title="Under construction"}
+::: {.callout-caution title="Under construction"}
 :::
 
 The pharmacokinetic parameter that quantifies drug elimination, is called *clearance* (CL).

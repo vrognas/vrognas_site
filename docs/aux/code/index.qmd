@@ -3,7 +3,7 @@ title: "Coding Practices"
 date: last-modified
 ---
 
-:::{.callout-caution title="Under construction"}
+::: {.callout-caution title="Under construction"}
 :::
 
 ## Coding
@@ -39,7 +39,7 @@ parameterToDelete <- ...
 performSimulation <- function (...)
 ```
 
-:::{.callout-note}
+::: {.callout-note}
 # Don't hesitate to choose lengthy names for test functions.
 
 Unlike regular functions, long names are less problematic for test functions because
@@ -110,7 +110,7 @@ Good names:
 
 Variable/object names should be **nouns** and function names should be **verbs**.
 
-:::{.callout-note}
+::: {.callout-note}
 # My own opinionated naming standards
 
 * Use **snake_case** for variable/object and (package)function names.
@@ -135,7 +135,7 @@ days_since_last_dose
 days_since_last_dose_floor_4_lab_23
 ```
 
-:::{.callout-note}
+::: {.callout-note}
 Don't hesitate to choose lengthy names for **test** functions.
 
 Unlike regular functions, long names are less problematic for test functions because
