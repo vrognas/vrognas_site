@@ -20,3 +20,9 @@ node_modules/
 !theme-flash-fix.html
 
 **/*.quarto_ipynb
+
+/.luarc.json
+
+# Claude Code
+.claude/settings.local.json
+/site_libs/

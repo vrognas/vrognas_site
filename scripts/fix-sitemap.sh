@@ -2,6 +2,9 @@
 # Post-render script to fix sitemap URLs
 # Converts /path/index.html → /path/ to match canonical URLs
 
+# Only run on Netlify
+[ -z "$NETLIFY" ] && exit 0
+
 SITEMAP="_site/sitemap.xml"
 
 if [ -f "$SITEMAP" ]; then

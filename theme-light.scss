@@ -35,10 +35,3 @@ code:not(pre code) {
   color: $body-color !important;
   background-color: rgba(175, 184, 193, 0.2) !important;
 }
-
-/* Red underline for light theme */
-.red-underline {
-  text-decoration: underline;
-  text-decoration-color: #dc3545;
-  text-decoration-thickness: 2px;
-}
