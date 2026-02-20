@@ -258,7 +258,7 @@ website:
                 - text: "Tips-n-tricks"
                   href: docs/tools-of-the-trade/r/r-tips-n-tricks/index.qmd
   page-footer:
-    left: "© 2025 Viktor Rognås"
+    left: "© 2026 Viktor Rognås"
     right:
       - icon: github
         href: https://github.com/vrognas

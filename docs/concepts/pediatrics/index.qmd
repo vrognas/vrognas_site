@@ -12,7 +12,7 @@ If you have ever felt uncomfortable with pharmacometric analysis in pediatric pa
 First things first: <span class="red-underline">**Children are not small adults**</span>.
 Children have quite different physiology (@fig-small-adult), which must be taken into condsideration when evaluating PK and PD.
 
-![A child and an adult human male scaled to the same height. Imagine how smart kids would be at this (brain) size. Another observation is the liver size, which would give them a much larger metabolic capacity that adults, which is true when scaled to body weight (more on this later).](../images/small-adult.png){#fig-small-adult}
+![A child and an adult human male scaled to the same height. Imagine how smart kids would be at this (brain) size. Another observation is the liver size, which would give them a much larger metabolic capacity that adults, which is true when scaled to body weight (more on this later).](../images/ped_small-adult.png){#fig-small-adult}
 
 The differences in child--adult physiology can be further visualized through the arm-length/head-size ratio difference (See @vid-size).
 
