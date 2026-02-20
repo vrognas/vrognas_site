@@ -14,16 +14,19 @@ This is Viktor Rognås's personal website built with Quarto and deployed on Netl
 ## Build and Development Commands
 
 ### Build the site
+
 ```bash
 quarto render
 ```
 
 ### Preview during development
+
 ```bash
 quarto preview
 ```
 
 ### Install dependencies
+
 ```bash
 npm install
 ```
@@ -31,11 +34,13 @@ npm install
 ## Project Architecture
 
 ### Content Structure
+
 - **Source files**: Content is written in `.qmd` (Quarto Markdown) files in the `docs/` directory
 - **Output**: Generated HTML files are placed in `_site/` directory
 - **Configuration**: `_quarto.yml` contains the main site configuration including navigation, themes, and formatting options
 
 ### Key Directories
+
 - `docs/`: Main content organized by topic areas:
   - `aux/`: Auxiliary skills (data visualization, communication, coding practices)
   - `concepts/`: Pharmacokinetics, pharmacodynamics, clinical studies concepts
@@ -48,12 +53,14 @@ npm install
 - `_freeze/`: Quarto's computational cache
 
 ### Specialized Content Features
+
 - **Bibliography**: Uses `refs.bib` for citations with `clinical-microbiology-and-infection.csl` style
 - **Mathematical content**: Includes pharmacokinetic operators loaded via `pk-operators.html`
 - **Code execution**: Quarto documents can include executable R, Python, and other code blocks
 - **Cross-references**: Extensive internal linking between concepts and topics
 
 ### Deployment
+
 - **Platform**: Netlify with automatic deployments from GitHub
 - **Plugin**: Uses `@quarto/netlify-plugin-quarto` for Quarto-specific build process
 - **Performance**: Includes Lighthouse CI for performance monitoring
@@ -62,70 +69,18 @@ npm install
 ## Content Guidelines
 
 ### File Naming
+
 - Use descriptive, lowercase names with hyphens (e.g., `hepatic-impairment-studies.qmd`)
 - Organize content files within appropriate subdirectories under `docs/`
 
 ### Navigation
+
 - Main navigation is defined in `_quarto.yml` sidebar configurations
 - Each major section has its own sidebar with hierarchical organization
 - Update navigation when adding new content files
 
 ### Styling and Themes
+
 - Dual theme support (light/dark) with custom SCSS files
 - Images should be optimized and use appropriate formats (`.avif` preferred for photos)
 - Code blocks are set to fold by default with copy functionality enabled
-
-## Claude Code Web
-
-A SessionStart hook (`.claude/hooks/session-start.sh`) automatically installs dev tools:
-- **npm dependencies** including `mcp-server-gsc` for Google Search Console
-- **GitHub CLI** for repo/issue/PR management
-- **Netlify API helper** for deployment and site management
-
-### GitHub CLI Workaround
-
-Claude Code Web blocks the literal `gh` command at system level to enforce branch naming conventions. Use `ghcli` instead:
-
-```bash
-# Instead of: gh pr list
-ghcli pr list
-
-# Instead of: gh issue create
-ghcli issue create
-```
-
-The `ghcli` command is a symlink to the actual `gh` binary, created by the startup hook.
-
-### Netlify API Workaround
-
-The Netlify CLI has compatibility issues with personal access tokens. Use the `netlify-api` helper instead:
-
-```bash
-# List your sites
-netlify-api /sites | jq
-
-# Get site details
-netlify-api /sites/SITE_ID | jq
-
-# List recent deploys
-netlify-api /sites/SITE_ID/deploys | jq '.[0:5]'
-
-# Get current user info
-netlify-api /user | jq
-```
-
-The `netlify-api` script is a curl wrapper that handles authentication automatically using `NETLIFY_AUTH_TOKEN`.
-
-### Environment Variables for Authentication
-
-Set these environment variables to enable service integrations:
-
-| Variable | Purpose | How to Get |
-|----------|---------|------------|
-| `NETLIFY_AUTH_TOKEN` | Netlify API access | [Netlify User Settings > Applications](https://app.netlify.com/user/applications) |
-| `GOOGLE_CREDENTIALS_BASE64` | Google Search Console & Analytics | Base64-encode your service account JSON: `cat creds.json \| base64 -w 0` |
-
-The startup hook will:
-- Create the `netlify-api` helper and verify access if `NETLIFY_AUTH_TOKEN` is set
-- Decode and store Google credentials if `GOOGLE_CREDENTIALS_BASE64` is set
-- Configure the GSC MCP server to use the credentials
