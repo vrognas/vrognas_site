@@ -30,3 +30,7 @@ pre code.sourceCode.nmtran span.ch { color: var(--nmtran-string) !important; }
 pre code.sourceCode.nmtran span.co { color: var(--nmtran-comment) !important; font-style: italic; }
 pre code.sourceCode.nmtran span.op { color: var(--nmtran-operator) !important; }
 pre code.sourceCode.nmtran span.pp { color: var(--nmtran-controlrecord) !important; font-weight: 700 !important; }
+
+.navbar-brand > img {
+  max-height: 40px;
+}

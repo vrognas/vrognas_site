@@ -108,6 +108,30 @@ A TOWS matrix evaluates interactions between these.
     * Time: 10% (6 h)
     * 1 unit/day
 
+## Tactical Improvisation
+
+* Linear problem: You can plan for it completely, and then execute the plan predictably.
+It can be solved completely by following a recipe.
+* Nonlinear problem:
+You can't plan for it, and you can't execute the plan predictably since it involves unpredictable variables.
+You can only solve it by trying something, seeing how it goes, and then adjusting your approach based on what you learn.
+Every action has the potential to change the entire situation, so you have to be ready to adapt and respond to new information as it comes in.
+
+So the first question to ask when facing a problem is: "Is this a linear problem or a nonlinear problem?"
+If it's a linear problem, you can plan for it and execute the plan.
+If it's a nonlinear problem, you need to be ready to improvise and adapt as you go.
+
+Tactical improvisation is the ability to adapt and respond effectively in the face of nonlinear problems.
+In the non-linear domain we need a meta-plan; a plan for how to plan.
+
+Exaptation is the process of repurposing existing skills, knowledge, or resources to solve new problems or adapt to new situations.
+It's a key component of tactical improvisation, allowing you to leverage what you already have in creative ways.
+
+A goal you wish for (vision) is not the same as a goal you can achieve (mission), and you shouldn't mix the two.
+Visions can be helpful if they inspire you, but they can also be detrimental if they point in a direction that isn't actually achievable.
+
+Knowledge-of-action is different from knowledge-of-theory.
+
 ## Conclusion – Sustainable productivity is about choice
 
 Productivity isn't about staying busy; it's about creating impact.
