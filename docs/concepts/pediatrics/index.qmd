@@ -12,7 +12,9 @@ If you have ever felt uncomfortable with pharmacometric analysis in pediatric pa
 First things first: <span class="red-underline">**Children are not small adults**</span>.
 Children have quite different physiology (@fig-small-adult), which must be taken into condsideration when evaluating PK and PD.
 
+::: {.column-margin}
 ![A child and an adult human male scaled to the same height. Imagine how smart kids would be at this (brain) size. Another observation is the liver size, which would give them a much larger metabolic capacity that adults, which is true when scaled to body weight (more on this later).](../images/ped_small-adult.png){#fig-small-adult}
+:::
 
 The differences in child--adult physiology can be further visualized through the arm-length/head-size ratio difference (See @vid-size).
 
@@ -28,10 +30,14 @@ Difference in arm-length/head-size ratio between child and adult.
 The age-related biological changes that occur as an individual matures from birth up to adulthood, is called **ontogeny**.
 The term ontogeny is especially used when talking about metabolic (enzyme) developement.
 
+::: {.callout-note title="MIDD approaches"}
+
 The use of *model informed drug development* (MIDD) approaches in pediatric drug development is highly recommended due to:
 
 * Practical and ethical **limitations in data collection**.
 * Ability to **quantify the effects of growth and maturation** by leveraging data from literature and older patients @ichE11R1ClinicalInvestigation2017.
+
+:::
 
 ## How do you measure the age of a child? {#sec-age}
 
@@ -222,7 +228,11 @@ The maturation half-life (TM~50~) is fixed to the literature value of 47.7 weeks
 The distribution (mean, [min--max]) of PMA (weeks) in this study population was (518, [57--1652]).
 Assuming renal maturation time differs in pre-term infants, a separate TM~50~ value could be estimated for them if the current model poorly describes this subgroup.
 
+::: {.column-margin}
+
 ![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full-term infant with a PMA of 40 weeks](../images/pediatric-gfr.png){#fig-gfr}
+
+:::
 
 ::: {.callout-warning}
 # Maturation functions and allometric exponents should not be estimated simultaneously

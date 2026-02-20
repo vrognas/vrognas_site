@@ -1,7 +1,7 @@
 ---
 title: "Gathering of Guilds"
-subtitle: "Get in contact with the community"
-description: "Directory of pharmacometrics societies, conferences, journals, and professional communities including ISoP, PAGE, and ACoP."
+subtitle: "A cartography of the community"
+description: "Herein lies a curated registry of pharmacometric landscape. Societies, conferences, journals, and communities."
 date: last-modified
 ---
 
@@ -15,12 +15,12 @@ date: last-modified
 A directory of fellowships, societies, and forums where professionals meet and interact.
 Find your chapter, share tales, and build alliances to sharpen your practice.
 
-## Mailing Lists
+## ✉️ Mailing Lists
 
 * NMusers
   * A mailing list for professionals that use the NONMEM software.
 
-## Communities
+## 👥 Communities
 
 * International Society of Pharmacometrics ([ISoP](https://www.isop.org/home))
   * A non-profit organization dedicated to the advancement and promotion of pharmacometrics.
@@ -29,7 +29,7 @@ Find your chapter, share tales, and build alliances to sharpen your practice.
 * [Pharmacometrics Africa](https://pmxafrica.org)
   * A non-profit company registered in South Africa with the goal to develop quantitative clinical pharmacology among African scientists, and more generally among pharmacometricians in low and middle income countries (LMIC).
 
-## Conferences
+## 📸 Conferences
 
 *  Population Approach Group Europe ([PAGE](https://www.page-meeting.org)).
   * Annually in June
@@ -39,7 +39,7 @@ Find your chapter, share tales, and build alliances to sharpen your practice.
 * Stockholm-Uppsala Pharmacometrics ([SUP](https://www.sup-meeting.se))
   *  Bianually, alternately in Stockholm and Uppsala. One spring- and one fall-meeting.
 
-## Journals
+## 📰 Journals
 
 * Clinical Pharmacology & Therapeutics (CPT) <https://ascpt.onlinelibrary.wiley.com/journal/15326535>
 * CPT: Pharmacometrics & Systems Pharmacology (CPT: PSP) <https://ascpt.onlinelibrary.wiley.com/journal/21638306>
@@ -51,7 +51,7 @@ Find your chapter, share tales, and build alliances to sharpen your practice.
 * Clinical Pharmacology in Drug Development (Clin Pharm Drug Dev), <https://accp1.onlinelibrary.wiley.com/journal/21607648>
 * Clinical Pharmacokinetics (Clin PK), <https://link.springer.com/journal/40262>
 
-## Websites
+## 🌐 Websites
 
 * <https://pmxrepo.com>
 * <https://www.pkpd-info.com>
