@@ -41,22 +41,26 @@ Find your metric.
 
 ## Build sustainable habits and routines
 
-* Take regular breaks.
+* **Take regular breaks.**
 Use a variant of the Pomodoro method, e.g., aim to work in units of 45 minutes of focused work followed by a 15-minute break.
 I believe that if you can focus intensely for about 45 minutes on a task, that should be considered adequate.
 Anything more is not realistically sustainable, and less than that is probably a sign of issues with concentration (can you make the environment less distracting?).
-* Plan only ~75% of your working time.
+* **Plan, do, then re-evaluate (Reflection-on-action).**
+However, you must distinguish between **Linear** and **Nonlinear** work:
+  * *Linear:* Predictable recipe-following. You can plan completely.
+  * *Non-linear:* Unpredictable variables. Every action changes the situation.
+Also practice "reflection-in-action"—the ability to adjust your approach *while* you are doing the work, rather than just reviewing it after the fact.
+* **Plan only ~75% of your working time.**
 Allow space for unforeseen tasks and creative exploration.
 Parkinson's law says that every task fills the time given to it, so giving a task less time makes it *take* less time.
-I also use the "law of π (pi)": everything takes at least 3.14 times longer than you think.
-* Plan, then do, then re-evaluate your plan.
-* Schedule important tasks.
-Block time for what matters most and commit to sticking to it.
-Try thinking of each item on your schedule as a flight to catch---you have to be there on time!
-* Think in terms of:
-  * 5 % Strategy: Define your direction.
-  * 15 % Position: Understand your current situation and what resources you have.
-  * 80 % Action: Most of your progress comes from doing.
+The "law of π (pi)" says: everything takes at least 3.14 times longer than you think.
+* **Schedule important tasks.**
+Block time for what matters most.
+Treat schedule items like a flight to catch---you have to be there on time!
+* **Think in terms of:**
+  * 5% Strategy: Define your direction.
+  * 15% Position: Understand your current situation and available resources.
+  * 80% Action: Most of your progress comes from doing.
 
 > Better to be in the arena getting stomped by the bull than to be up in the stands or out in the parking lot.
 
@@ -83,54 +87,33 @@ Finish the thinking!
 ## Prioritization
 
 To make the right prioritizations, focus on the *task*, not the solution.
+**Note:** A *vision* (unattainable) is not a *mission* (attainable).
+Ensure your projects are grounded in achievable missions.
+
 Frame projects using the project matrix (a variant of the project triangle):
 
 ![](../images/project-square.png)
 
 Mapping your work across these dimensions clarifies priorities and constraints.
 
-* Risk matrix (Impact vs Probability).
+* **Risk matrix** (Impact vs Probability).
 Where *Impact * Probability = Risk*.
-* Priority matrix (Important vs Urgent)
-* SWOT/TOWS.
+* **Priority matrix** (Important vs Urgent)
+* **SWOT/TOWS.**
 A SWOT matrix evaluates strengths, weaknesses, opportunities, and threats.
 A TOWS matrix evaluates interactions between these.
 
 ### Responsible allocation of time between projects
 
 1. What *already* supports me and *will* support me the coming 0--2 years.
-    * Time: 60% (36 h)
-    * 5 units/day
+  * Time: 60% (36 h)
+  * 5 units/day
 2. What *will* support me in 3--5 years.
-    * Time: 30% (18 h)
-    * 2 units/day
+  * Time: 30% (18 h)
+  * 2 units/day
 3. What *might* support me in 5--10 years.
-    * Time: 10% (6 h)
-    * 1 unit/day
-
-## Tactical Improvisation
-
-* Linear problem: You can plan for it completely, and then execute the plan predictably.
-It can be solved completely by following a recipe.
-* Nonlinear problem:
-You can't plan for it, and you can't execute the plan predictably since it involves unpredictable variables.
-You can only solve it by trying something, seeing how it goes, and then adjusting your approach based on what you learn.
-Every action has the potential to change the entire situation, so you have to be ready to adapt and respond to new information as it comes in.
-
-So the first question to ask when facing a problem is: "Is this a linear problem or a nonlinear problem?"
-If it's a linear problem, you can plan for it and execute the plan.
-If it's a nonlinear problem, you need to be ready to improvise and adapt as you go.
-
-Tactical improvisation is the ability to adapt and respond effectively in the face of nonlinear problems.
-In the non-linear domain we need a meta-plan; a plan for how to plan.
-
-Exaptation is the process of repurposing existing skills, knowledge, or resources to solve new problems or adapt to new situations.
-It's a key component of tactical improvisation, allowing you to leverage what you already have in creative ways.
-
-A goal you wish for (vision) is not the same as a goal you can achieve (mission), and you shouldn't mix the two.
-Visions can be helpful if they inspire you, but they can also be detrimental if they point in a direction that isn't actually achievable.
-
-Knowledge-of-action is different from knowledge-of-theory.
+  * Time: 10% (6 h)
+  * 1 unit/day
 
 ## Conclusion – Sustainable productivity is about choice
 

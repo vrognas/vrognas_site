@@ -27,60 +27,91 @@
  *   --rn-highlight-color
  */
 
-import { annotate } from 'https://unpkg.com/rough-notation?module';
+import { annotate } from "https://unpkg.com/rough-notation?module";
 
 const ANNOTATIONS = {
-  'rn-underline':  { type: 'underline',      light: '#dc3545', dark: '#f07c7b',                    padding: 1 },
-  'rn-highlight':  { type: 'highlight',      light: '#fff176', dark: 'rgba(255,241,118,0.35)' },
-  'rn-box':        { type: 'box',            light: 'currentColor', dark: 'currentColor' },
-  'rn-circle':     { type: 'circle',         light: 'currentColor', dark: 'currentColor' },
-  'rn-strike':     { type: 'strike-through', light: 'currentColor', dark: 'currentColor' },
-  'rn-crossed':    { type: 'crossed-off',    light: 'currentColor', dark: 'currentColor' },
-  'rn-bracket':    { type: 'bracket',        light: 'currentColor', dark: 'currentColor' },
-  'red-underline': { type: 'underline',      light: '#dc3545', dark: '#f07c7b',                    padding: 1 },
+  "rn-underline": {
+    type: "underline",
+    light: "#dc3545",
+    dark: "#f07c7b",
+    padding: 1,
+  },
+  "rn-highlight": {
+    type: "highlight",
+    light: "#fff176",
+    dark: "rgba(255,241,118,0.35)",
+  },
+  "rn-box": { type: "box", light: "currentColor", dark: "currentColor" },
+  "rn-circle": { type: "circle", light: "currentColor", dark: "currentColor" },
+  "rn-strike": {
+    type: "strike-through",
+    light: "currentColor",
+    dark: "currentColor",
+  },
+  "rn-crossed": {
+    type: "crossed-off",
+    light: "currentColor",
+    dark: "currentColor",
+  },
+  "rn-bracket": {
+    type: "bracket",
+    light: "currentColor",
+    dark: "currentColor",
+  },
+  "red-underline": {
+    type: "underline",
+    light: "#dc3545",
+    dark: "#f07c7b",
+    padding: 1,
+  },
 };
 
-function isDark() {
-  return document.body.classList.contains('quarto-dark');
+const isDark = () => document.body.classList.contains("quarto-dark");
+
+const parsePadding = (value, fallback = 5) => {
+  if (!value) return fallback;
+  const parts = value.split(",").map(Number);
+  return parts.length === 1 ? parts[0] : parts;
+};
+
+function buildOptions(el, defaults) {
+  const { dataset: d } = el;
+  const options = {
+    type: defaults.type,
+    color: d.rnColor ?? (isDark() ? defaults.dark : defaults.light),
+    strokeWidth: Number(d.rnStrokeWidth) || 1,
+    padding: parsePadding(d.rnPadding, defaults.padding ?? 5),
+    iterations: Number(d.rnIterations) || 2,
+    animate: d.rnAnimate === "true",
+    multiline: d.rnMultiline !== "false",
+  };
+  if (defaults.type === "bracket") {
+    options.brackets = d.rnBrackets?.split(",") ?? ["right"];
+  }
+  return options;
 }
 
-function parsePadding(value) {
-  if (!value) return 5;
-  const parts = value.split(',').map(Number);
-  return parts.length === 1 ? parts[0] : parts;
+function collectAnnotatedElements() {
+  return Object.entries(ANNOTATIONS).flatMap(([cls, defaults]) =>
+    [...document.querySelectorAll(`.${cls}`)].map((el) => ({ el, defaults })),
+  );
 }
 
 let instances = [];
 
 function annotateAll() {
-  instances.forEach(a => a.remove());
-  instances = [];
+  instances.forEach((a) => a.remove());
 
-  Object.entries(ANNOTATIONS).forEach(([cls, defaults]) => {
-    document.querySelectorAll(`.${cls}`).forEach(el => {
-      const d = el.dataset;
-      const options = {
-        type:       defaults.type,
-        color:      d.rnColor || (isDark() ? defaults.dark : defaults.light),
-        strokeWidth: Number(d.rnStrokeWidth) || 1,
-        padding:    d.rnPadding ? parsePadding(d.rnPadding) : (defaults.padding ?? 5),
-        iterations: Number(d.rnIterations) || 2,
-        animate:    d.rnAnimate === 'true',
-        multiline:  d.rnMultiline !== 'false',
-      };
-      if (defaults.type === 'bracket') {
-        options.brackets = d.rnBrackets ? d.rnBrackets.split(',') : ['right'];
-      }
-      const a = annotate(el, options);
-      a.show();
-      instances.push(a);
-    });
+  instances = collectAnnotatedElements().map(({ el, defaults }) => {
+    const annotation = annotate(el, buildOptions(el, defaults));
+    annotation.show();
+    return annotation;
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   annotateAll();
-
-  // Re-draw with correct colors when user toggles light/dark theme
-  new MutationObserver(annotateAll).observe(document.body, { attributeFilter: ['class'] });
+  new MutationObserver(annotateAll).observe(document.body, {
+    attributeFilter: ["class"],
+  });
 });
