@@ -17,6 +17,9 @@
 /docs/about/                                           /about/                                         301
 /docs/about/index.html                                 /about/                                         301
 
+# "guilds" renamed to "community"
+/docs/guilds/*                              /docs/community/:splat                          301
+
 # "disease-primers" renamed to "pathology-primers"
 /docs/disease-primers/*                             /docs/pathology-primers/:splat                  301
 
