@@ -11,9 +11,9 @@ pagetitle: "Viktor Rognås | Pharmacometric Engineer"
 description-meta: "Expert in pharmacometric DevOps, R data programming, and NONMEM modeling. PhD student at Uppsala University."
 ---
 
-[📩 **viktor@vrognas.com**](mailto:viktor@vrognas.com)
+👋 Hi, I'm Viktor.
 
-👋 Hi, I'm Viktor---this site is where I collect what I learn about pharmacometrics, clinical pharmacology, and data science.
+Here I collect my learnings in pharmacometrics, clinical pharmacology, and data science.
+If you find something useful, please don't keep it to yourself---share it with your colleagues! 💚
 
-**I believe in knowledge sharing.**  
-If you find something useful, don't keep it to yourself; share it with your colleagues! 💚
+[[viktor@vrognas.com](mailto:viktor@vrognas.com)]{.rn-box data-rn-color="#46465e" data-rn-stroke-width="2"}
