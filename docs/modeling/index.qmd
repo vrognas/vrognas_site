@@ -1,5 +1,5 @@
 ---
-title: "Modeling Mementoes"
+title: "Modeling Manual"
 date: last-modified
 description: "Comprehensive guide to pharmacometric modeling including PK/PD models, time-to-event analysis, goodness-of-fit assessment, and model building best practices."
 ---
@@ -8,9 +8,6 @@ description: "Comprehensive guide to pharmacometric modeling including PK/PD mod
 :::
 
 > Model-based analysis is more an art than a science. -Lewis B. Sheiner, MD
-
-**Mementoes**:  
-*Things that you keep as a reminder of something else.*
 
 In this section, you'll get access to tidbits of knowledge on many forms of pharmacometric models.
 It contains hands-on guides to model building that will spark your memory.

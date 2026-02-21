@@ -1,5 +1,5 @@
 ---
-title: "Gathering of Guilds"
+title: "Community Compendium"
 subtitle: "A cartography of the community"
 description: "Herein lies a curated registry of pharmacometric landscape. Societies, conferences, journals, and communities."
 date: last-modified
@@ -7,10 +7,6 @@ date: last-modified
 
 ::: {.callout-caution title="Under construction"}
 :::
-
-**Guild**:  
-*An association of professionals for mutual aid and pursuit of a common goal.*
-
 
 A directory of fellowships, societies, and forums where professionals meet and interact.
 Find your chapter, share tales, and build alliances to sharpen your practice.

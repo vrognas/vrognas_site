@@ -7,7 +7,8 @@ date: "2025-08-31"
 :::
 
 **Modern knowledge work is not industrial factory work.**
-Your value isn't measured by keystrokes, lines of code, or calendar hours, but by what you ship, solve, and create.
+Your value isn't measured by keystrokes, lines of code, or calendar hours
+It's measured by what you ship, solve, and create.
 Deep work looks like: thinking, pausing, reading, rewriting.
 Not pacing in meetings for 8 hours.
 
@@ -18,14 +19,12 @@ You didn't see the 1 am production bug fix.
 **"Ghostworking" is real---but it's not laziness.**
 It's a symptom of burnout, unclear roles, and broken systems.
 Faking busyness is often more exhausting than real work.
-And it's everywhere, not just Gen Z.
 
 If you get your work done, take breaks, and protect your mental energy---that's not slacking.
 That's called sustainable productivity.
-We still confuse "busy" with "useful".
-Still reward exhaustion over impact.
-Let's stop performance-policing people.
-The future of work needs better metrics than how often someone grabs coffee.
+Don't confuse "busy" with "useful".
+Reward impact not exhaustion.
+You don't earn a break, you're [entitled]{.rn-underline} to it.
 
 ## Choose meaningful metrics
 
@@ -37,7 +36,7 @@ So feeling lost can be a sign of not writing thoughtfully, even though goals are
 This is an example of metrics without meaning.
 In this example, try shifting to a different productivity metric: "time spent," "points made," or "progress on through-line" can serve as a measure for each session's progress.
 
-Find your metric.
+[Find your metric.]{.rn-circle data-rn-color="#46465e" data-rn-stroke-width="2"}
 
 ## Build sustainable habits and routines
 
@@ -92,7 +91,9 @@ Ensure your projects are grounded in achievable missions.
 
 Frame projects using the project matrix (a variant of the project triangle):
 
-![](../images/project-square.png)
+::: {.column-margin}
+![Project square](../images/project-square.png){#fig-project-square}
+:::
 
 Mapping your work across these dimensions clarifies priorities and constraints.
 

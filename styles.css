@@ -34,3 +34,13 @@ pre code.sourceCode.nmtran span.pp { color: var(--nmtran-controlrecord) !importa
 .navbar-brand > img {
   max-height: 40px;
 }
+
+.index-card {
+  background-color: #f3f3ee;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.quarto-dark .index-card {
+  background-color: #323230;
+}

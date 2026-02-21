@@ -3,11 +3,33 @@ title: "Auxiliary Arts"
 description: "Supplementary skills for pharmacometricians including data visualization, scientific writing, presentations, and coding best practices."
 ---
 
-**Auxiliary**:  
-*Providing supplementary help and support.*
+Skills that amplify your core craft. These are the disciplines that sit adjacent to pharmacometrics — sharpening how you think, communicate, and build.
 
-These are skills and knowledge in areas that amplify your core craft.
+::: {.grid}
 
-They are often interdisciplinary and can significantly contribute to personal and professional development.
+::: {.g-col-12 .g-col-md-6 .index-card}
+### [Data Visualization](data-viz/index.qmd)
+Communicating data clearly and truthfully through charts and visual design.
+:::
 
-![](./images/index_aux.png)
+::: {.g-col-12 .g-col-md-6 .index-card}
+### [Math Intuition](math-intuition/index.qmd)
+Building mental models for the mathematical concepts underlying your work.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+### [Communication](presentation/index.qmd)
+Writing, presenting, running meetings, and corresponding with clarity.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+### [Self Management](self-mgmt/index.qmd)
+Sustainable productivity — prioritization, habits, and focus.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+### [Practical Programming](code/index.qmd)
+Coding practices, reproducibility, and deployment for research workflows.
+:::
+
+:::

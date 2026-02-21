@@ -46,9 +46,9 @@ website:
             href: docs/aux/index.qmd
           - text: "Concepts of the Craft"
             href: docs/concepts/index.qmd
-          - text: "Gathering of Guilds"
-            href: docs/guilds/index.qmd
-          - text: "Modeling Mementoes"
+          - text: "Community Compendium"
+            href: docs/community/index.qmd
+          - text: "Modeling Manual"
             href: docs/modeling/index.qmd
           - text: "Pathology Primers"
             href: docs/pathology-primers/index.qmd
@@ -76,10 +76,8 @@ website:
         - section: "Auxiliary Arts"
           href: docs/aux/index.qmd
           contents:
-            - text: "Data Visualization"
-              href: docs/aux/data-viz/index.qmd
-            - text: "Math Intuition"
-              href: docs/aux/math-intuition/index.qmd
+            - text: "Self Management"
+              href: docs/aux/self-mgmt/index.qmd
             - section: "Communication"
               contents:
                 - text: "Presentation Technique"
@@ -90,12 +88,16 @@ website:
                   href: docs/aux/meetings/index.qmd
                 - text: "Writing Tactics"
                   href: docs/aux/writing-tactics/index.qmd
-            - text: "Reproducible Research"
-              href: docs/aux/repr/index.qmd
-            - text: "Coding Practices"
-              href: docs/aux/code/index.qmd
-            - text: "Self Management"
-              href: docs/aux/self-mgmt/index.qmd
+            - text: "Data Visualization"
+              href: docs/aux/data-viz/index.qmd
+            - section: "Practical Programming"
+              contents:
+                - text: "Coding Practices"
+                  href: docs/aux/code/index.qmd
+                - text: "Reproducible Research"
+                  href: docs/aux/repr/index.qmd
+            - text: "Math Intuition"
+              href: docs/aux/math-intuition/index.qmd
     - id: concepts
       title: "Concepts of the Craft"
       collapse-level: 2
@@ -132,21 +134,21 @@ website:
                 - text: "QT-prolongation"
                   href: docs/concepts/qt/index.qmd
     - id: guilds
-      title: "Gathering of Guilds"
+      title: "Community Compendium"
       collapse-level: 2
       style: "floating"
       contents:
-        - section: "Gathering of Guilds"
-          href: docs/guilds/index.qmd
+        - section: "Community Compendium"
+          href: docs/community/index.qmd
           contents:
             - text: "NMusers"
-              href: docs/guilds/nmusers/index.qmd
+              href: docs/community/nmusers/index.qmd
     - id: modeling
-      title: "Modeling Mementoes"
+      title: "Modeling Manual"
       collapse-level: 2
       style: floating
       contents:
-        - section: "Modeling Mementoes"
+        - section: "Modeling Manual"
           href: docs/modeling/index.qmd
           contents:
             - text: "PK"
