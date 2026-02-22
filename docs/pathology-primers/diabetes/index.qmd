@@ -1,6 +1,6 @@
 ---
 title: "Diabetes"
-date: "2026-02-20"
+date: "2025-03-20"
 ---
 
 ::: {.callout-caution title="Under construction"}
