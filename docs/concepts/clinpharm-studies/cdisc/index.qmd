@@ -1,41 +1,46 @@
 ---
 title: "CDISC data standards"
-date: last-modified
+date: "2026-02-22"
 ---
 
-::: {.callout-caution title="Under construction"}
-:::
+**CDISC** (Clinical Data Interchange Standards Consortium) defines the data formats required for regulatory submissions to the FDA and EMA.
+As a pharmacometrician, you will routinely work with SDTM and ADaM datasets --- understanding their structure is essential for efficient data preparation and analysis.
 
-**CDISC** stands for *Clinical Data Interchange Standards Consortium*.
-CDISC provides several interrelated standards, each addressing a specific stage of the data lifecycle @fig-cdisc.
-Each standard has an Implementation Guide (IG) that shows exactly how to apply that standard practically, e.g., SDTMIG for SDTM.
-All the implementations have version numbers that are important to keep track of.
+## The data pipeline
 
-CDISC also provides TAUGs (Therapeutic Area User Guides).
-A TAUG is a document that provides guidance on applying CDISC standards to a specific therapeutic area (e.g., oncology, diabetes, CNS, etc.).
+Data flows from the clinic through a series of transformations before reaching your analysis (@fig-cdisc).
 
-![](../images/cdisc.png){#fig-cdisc}
+![You'll most often encounter SDTM- or ADaM-formatted data if you're working with clinical data as a pharmacometrician.](../../images/cdisc.png){#fig-cdisc}
+
+Each standard has an Implementation Guide (IG) (like SDTMIG for SDTM) with version numbers that must be tracked and declared in submissions.
+CDISC also provides **TAUGs** (Therapeutic Area User Guides) that give domain-specific guidance (like for oncology, diabetes, CNS, etc.).
 
 ## CDASH
 
-CDASH (Clinical Data Acquisition Standards Harmonization) standardizes data entry into *case report forms (CRFs)* at clinical sites.
+CDASH (Clinical Data Acquisition Standards Harmonization) standardizes data entry on *case report forms (CRFs)* at clinical sites.
+It defines the fields that should be collected, ensuring consistency before data is ever entered into a database.
+As a pharmacometrician, you rarely work directly with CDASH --- but it determines the quality and completeness of the raw data you eventually receive.
 
 ## SDTM
 
-SDTM (Study Data Tabulation Model) organizes the data from CDASH into submission-ready datasets.
-It includes different **domains/datasets** (e.g., exposure and lab values) and controlled terminology (e.g., how to name variables).
+SDTM (Study Data Tabulation Model) organizes raw clinical data into submission-ready datasets.
+It defines **domains** (separate datasets on specific topics, like lab values, vital signs, or adverse events), along with controlled terminology for naming variables.
+
+### Domains most relevant to pharmacometricians
+
+| Domain | Name | What it contains |
+| :----: | :--- | :--------------- |
+| `PC` | PK concentrations | Drug and metabolite concentrations over time --- your primary dataset for popPK |
+| `PP` | PK parameters | NCA-derived parameters (AUC, Cmax, t½) per subject per period |
+| `EX` | Exposure | Dosing records --- dose amount, route, start/end date and time |
+| `LB` | Laboratory results | Lab values used as covariates (renal/hepatic function, biomarkers) |
+| `DM` | Demographics | Age, sex, race, weight --- the covariate backbone |
+| `VS` | Vital signs | Height, weight, blood pressure --- often used as time-varying covariates |
+| `AE` | Adverse events | Safety data --- relevant for E-R safety analyses |
 
 ### General Observation Classes
 
-General Observation Classes are high-level classifications within SDTM that group domains based on the data type they contain.
-
-There are three general observation classes: *Interventions*, *Events*, and *Findings*.
-There is also a fourth observation class: *Special purpose*.
-
-Observation classes are then grouped into **domains**, organized around a particular topic.
-Each "domain" is usually a separate dataset; for example, EX can be a dataset containing exposure (dosing) data.
-However, a domain can also be split into multiple datasets.
-A typical example is splitting the Laboratory Test Results (LB) domain due to size.
+All SDTM domains are grouped into observation classes:
 
 | Observation Class         | Domain Name                                 | Domain Abbreviation |
 | :------------------------ | :------------------------------------------ | :-----------------: |
@@ -106,181 +111,85 @@ A typical example is splitting the Laboratory Test Results (LB) domain due to si
 
 : General observation classes in SDTM. {#tbl-goc}
 
-### PC Domain (Pharmacokinetics Concentrations)
+### PC domain --- PK concentrations
 
-ref: <https://www.fda.gov/media/153632/download>
+The PC domain (along with the EX domain) is the most important SDTM domain for pharmacometricians.
+Each record is one concentration measurement for one subject at one time point.
 
-The PC domain should support the creation of time series graphs and automatic calculation of pharmacokinetic parameters from sets of related plasma concentrations.
-Three elements are necessary:
+Key variables:
 
-* Nominal timings relative to the dose in ISO 8601 duration format
-* Grouping of each different set of time series measurements used to calculate a related pharmacokinetic parameter
-* Identification of the start of each time series relative to the start of exposure
+| Variable   | Description |
+| :--------- | :---------- |
+| `USUBJID`  | Unique subject identifier |
+| `PCTESTCD` | Analyte code (e.g., `DRUG`, `METABOLITE`) |
+| `PCORRES`  | Result as collected (character, e.g., `<0.5`) |
+| `PCSTRESC` | Standardized result (character; `BLQ` if below LLOQ) |
+| `PCSTRESN` | Standardized result (numeric; blank if BLQ) |
+| `PCSTRESU` | Standardized units (e.g., `ng/mL`) |
+| `PCLLOQ`   | Lower limit of quantitation |
+| `PCDTC`    | Date/time of collection (ISO 8601) |
 
-If the nominal times are provided in PCELTM, nulls should be avoided for plasma concentrations used to calculate a profile.
-PCDTC and PCDY variables should be populated with actual/collected information when it available; however, for single dose, repeat dose, or carcinogenicity studies where actual/collected data are not readily available to be incorporated into the dataset, these variables may be left null or populated with calculated or nominal dates/times.
-The use of calculated or nominal dates and times should be mentioned in the nSDRG.
-When actual dose dates or date/time values are available for PCRFTDTC/PPRFTDTC, they can be included.
-When a test result is below a lower limit of quantitation (LLOQ), it should be submitted using the following instructions:
 
-* `PCORRES` should not contain a specific value.
-For example, the value in PCORRES may be `<LLOQ`, where LLOQ is the numerical value.
-• `BLQ`[^According to the FDA’s Bioanalytical Method Validation Guidance for Industry (May 2018), study samples with concentrations listed below the LLOQ should be reported as `BQL`; however, `BLQ`, as specified in FDA-supported SENDIG versions, is appropriate to use in SEND datasets to report this data.] should be in PCSTRESC to signify that the result is below the LLOQ.
-• `PCSTRESN` should be blank.
-• Standardized units for LOQ should be in `PCSTRESU`.
-• `PCLLOQ` should be populated with the lower limit of quantitation for the analyte.
-• When a numeric value has been assigned to a result that is below the LLOQ for the purpose of group summary statistics, that value should be submitted in SUPPPC as QNAM = `PCCALCN` to allow the group statistics presented in the study report to be reproduced.
-When a value that is below the LLOQ is excluded from group statistics, no PCCALCN entry is needed.
+### SDTM variable types
 
-### SDTM variables
+Variables in each domain are classified as *required*, *expected*, or *permissible*, and fall into four types:
 
-Variables are classified as *required*, *expected*, or *permissible* for each domain.
-
-#### Identifier
-
-* STUDYID
-* DOMAIN
-* USUBJID
-* --SEQ
-
-#### Topic
-
-Contain the focus of the observation.
-
-* --TRT
-* --TERM
-* --TESTCD
-
-#### Qualifier
-
-Qualifiers provide additional information about the topic variables.
-
-* Grouping
-* Result
-* Synonym
-* Record
-* Variable
-
-#### Timing
-
-Describes the timing of the observation.
-
-* Date/times
-* Study days
-* Durations
-* Intervals
-* Visits
-* Time points
-* Relative times
+| Type | Purpose | Examples |
+| :--- | :------ | :------- |
+| **Identifier** | Links records to study/subject | `STUDYID`, `USUBJID`, `--SEQ` |
+| **Topic** | The focus of the observation | `--TESTCD`, `--TRT`, `--TERM` |
+| **Qualifier** | Additional detail about the topic | Result, grouping, synonym, record, variable qualifiers |
+| **Timing** | When the observation occurred | `--DTC`, `--DY`, `VISIT`, `--ELTM` |
 
 ## ADaM
 
-ADaM (Analysis Data Model) transforms SDTM data into datasets suitable for statistical analysis.
-It contains derived datasets used for tables, listings, and figures.
-Like SDTM, it is organized into different **domains/datasets**, each with its specific setup.
+ADaM (Analysis Data Model) derives analysis-ready datasets from SDTM.
+Like SDTM, it is organized into different **domains**, each with its specific setup.
+Most of the time, an ADaM domain is derived from an SDTM domain (e.g., ADPC from PC) but with additional variables and transformations to facilitate analysis.
 
-https://www.cdisc.org/system/files/members/standard/foundational/ADaMIG_v1.3.pdf
+[ADaM Implementation Guide](https://www.cdisc.org/system/files/members/standard/foundational/ADaMIG_v1.3.pdf)
 
-### ADaM Standard data structures
+### ADaM dataset structures
 
-* **ADSL:** Subject-level analysis dataset
-  * One record per subject
-* **BDS:** Basic data structure
-  * One (or more) record per subject/parameter/timepoint
-* **OCCDS:** Occurrence data structure
-  * Designed for counting occurrences
-* ADaM Other data structure
+| Structure | Name | Description |
+| :-------- | :--- | :---------- |
+| **ADSL** | Subject-Level Analysis Dataset | One record per subject --- all baseline covariates and flags |
+| **BDS** | Basic Data Structure | One or more records per subject/parameter/timepoint --- used for ADPC, ADPP |
+| **OCCDS** | Occurrence Data Structure | Designed for counting occurrences (adverse events, medications) |
 
-### ADaM variable conventions
-
-####  General variable conventions
+### ADaM variable naming conventions
 
 All ADaM variable names must be no more than 8 characters in length, start with a letter (not underscore), and be composed only of letters (A--Z), underscore (_), and numerals (0--9).
-
-ADaM adheres to a principle of harmonization known as "same name, same meaning, same values."
-
-Generally, suppose an SDTM character variable is converted to a numeric variable in an ADaM dataset.
-In that case, it should be named as it is in the SDTM dataset with an "**N**" suffix added.
+ADaM adheres to a principle of harmonization known as "same name, same meaning, same values" across datasets.
 
 In a pair of corresponding variables (e.g., TRTP and TRTPN), the primary or most commonly used variable does not have the suffix or extension (i.e., **N** for numeric or **C** for character).
 The relevant suffix is used only on the name of the secondary member of the variable pair.
 
-Variables whose names end in **FL** are character flag (or indicator) variables.
-
-Variables whose names end in **GR*y***, **G*y***, or **CAT*y*** are grouping variables, where "*y*" refers to the grouping scheme or algorithm (not the category within the grouping).
-
-It is recommended that producer-defined grouping or categorization variables begin with the name of the variable being grouped and end in **GR*y*** (e.g., variable ABCGR*y* is a character description of a grouping or categorization of the values from the ABC variable for analysis purposes).
-
-#### Timing variable conventions
-
-Variables whose names end in **DT** are numeric dates.
-
-Variables whose names end in **DTM** are numeric datetimes.
-
-Variables whose names end in **TM** are numeric times.
-
-Names of timing **start variables** end with an **S** followed by the characters indicating the type of timing (i.e., SDT, STM, SDTM).
-
-Names of timing **end variables** end with an **E** followed by the characters indicating the type of timing (i.e., EDT, ETM, EDTM)
-
-Variables whose names end in **DY** are relative day variables.
-
-#### Variable naming fragments
-
-| Fragment | Notes |
-| :------- | :---- |
-| GR*y* | Grouping variables |
-| G*y* | Abbreviation of GR*y* |
-| FL | Flag/indicator |
-| DT | Numeric date |
-| TM | Numeric time |
-| DTM | Numeric datetime |
-| DTF | Date imputation flag |
-| TMF | Time imputation flag |
-| DY | Relative days (does not include day 0) |
-
-| Fragment | Notes |
-| :------- | :---- |
-| BL | Baseline |
-| CHG | Change |
-| FU | Follow-up |
-| OT | On treatment |
-| RU | Run-in |
-| SC | Screening |
-| TA | Taper |
-| TI | Titer |
-| U | Units |
-| WA | Washout |
-
-### ADSL variables
-
-| Variable | Notes |
-| :------- | :---- |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-
-| Variable | Notes |
-| :------- | :---- |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-
-### BDS variables
-
-### Analysis-enabling variables
+| Suffix | Meaning |
+| :-------------- | :------ |
+| `N`      | Numeric version of a character variable (e.g., `TRTPN`) |
+| `C`      | Character version of a numeric variable |
+| `FL`     | Flag/indicator variable (Y/N, 1/0) |
+| `GRy`, `Gy`, `CATy`    | Grouping variable (y = grouping scheme) |
+| `DT`            | Numeric date |
+| `DTM`           | Numeric datetime |
+| `TM`            | Numeric time |
+| `DTF`           | Date imputation flag |
+| `TMF`           | Time imputation flag |
+| `DY`            | Relative study day (no day 0) |
+| `BL` | Baseline |
+| `CHG` | Change |
+| `FU` | Follow-up |
+| `OT` | On treatment |
+| `RU` | Run-in |
+| `SC` | Screening |
+| `TA` | Taper |
+| `TI` | Titer |
+| `U` | Units |
+| `WA` | Washout |
 
 ## SEND
 
-SEND (Standard for Exchange of Nonclinical Data) mirrors SDTM but for non-clinical (animal) studies, describing how data is organized.
+SEND (Standard for Exchange of Nonclinical Data) is the nonclinical counterpart to SDTM --- it applies the same domain-based structure to pre-clinical studies such as toxicology and pharmacokinetic studies *in vivo*.
+
+SEND data can be a source for allometric scaling, preclinical PK/PD model development, and inter-species translation.

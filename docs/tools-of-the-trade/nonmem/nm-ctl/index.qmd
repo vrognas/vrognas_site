@@ -2,7 +2,7 @@
 title: "Speaking NM-TRAN"
 description-meta: "Complete guide to NONMEM NM-TRAN control stream syntax, modeling templates, best practices, and troubleshooting tips for pharmacometric modeling."
 code-overflow: scroll
-date: last-modified
+date: "2026-02-20"
 ---
 
 ::: {.callout-caution title="Under construction"}

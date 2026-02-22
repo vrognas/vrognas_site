@@ -1,4 +1,4 @@
 ---
 title: "D: Dermatologicals"
-date: last-modified
+date: "2026-02-08"
 ---

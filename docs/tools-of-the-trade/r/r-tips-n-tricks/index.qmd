@@ -1,6 +1,6 @@
 ---
 title: "R Tips-n-Tricks"
-date: last-modified
+date: "2025-11-25"
 ---
 
 ## Using the native pipe (`|>`)

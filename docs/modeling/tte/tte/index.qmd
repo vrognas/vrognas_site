@@ -1,6 +1,6 @@
 ---
 title: "Time-to-event analysis"
-date: last-modified
+date: "2026-02-20"
 code-overflow: scroll
 code-fold: true
 ---

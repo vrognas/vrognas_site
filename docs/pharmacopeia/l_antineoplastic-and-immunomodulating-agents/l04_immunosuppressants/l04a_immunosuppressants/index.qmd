@@ -1,6 +1,6 @@
 ---
 title: "L04A: Immunosuppressants"
-date: last-modified
+date: "2026-02-08"
 ---
 
 ## L04AF: Janus-associated kinase (JAK) inhibitors

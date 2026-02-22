@@ -2,7 +2,7 @@
 title: "Community Compendium"
 subtitle: "A curated directory of pharmacometric societies, conferences, and journals."
 description: "Herein lies a curated registry of pharmacometric landscape. Societies, conferences, journals, and communities."
-date: last-modified
+date: "2026-02-22"
 ---
 
 ::: {.callout-caution title="Under construction"}
@@ -56,7 +56,7 @@ Population Approach Group Europe. Held annually in June across various European 
 ::: {.g-col-12 .g-col-md-6 .index-card}
 [ACoP](https://acop2025.eventscribe.net/index.asp){.card-title}
 American Conference on Pharmacometrics. Organized annually during the fall by ISoP.
-[Annual · Autumn]{.badge .bg-secondary .card-badge}
+[Annual · Fall]{.badge .bg-secondary .card-badge}
 :::
 
 ::: {.g-col-12 .g-col-md-6 .index-card}
@@ -68,6 +68,12 @@ Population Approach Group of Australia and New Zealand. Annual meeting for the A
 ::: {.g-col-12 .g-col-md-6 .index-card}
 [SUP](https://www.sup-meeting.se){.card-title}
 Stockholm-Uppsala Pharmacometrics. Alternately in Stockholm (Spring) and Uppsala (Fall).
+[Biannual · Spring/Fall]{.badge .bg-secondary .card-badge}
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[PNB](https://www.pharmacometricsnetworkbenelux.org){.card-title}
+Pharmacometrics Network Benelux. Biannual meeting for the Benelux region.
 [Biannual · Spring/Fall]{.badge .bg-secondary .card-badge}
 :::
 

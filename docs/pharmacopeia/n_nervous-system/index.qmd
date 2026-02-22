@@ -1,4 +1,4 @@
 ---
 title: "N: Nervous system"
-date: last-modified
+date: "2026-02-08"
 ---

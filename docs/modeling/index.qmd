@@ -1,6 +1,6 @@
 ---
 title: "Modeling Manual"
-date: last-modified
+date: "2026-02-22"
 description: "Comprehensive guide to pharmacometric modeling including PK/PD models, time-to-event analysis, goodness-of-fit assessment, and model building best practices."
 ---
 

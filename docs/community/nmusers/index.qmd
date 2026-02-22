@@ -1,6 +1,6 @@
 ---
 title: "NMusers"
-date: last-modified
+date: "2026-02-21"
 ---
 
 The NONMEM Users Network (NMusers) is a mailing list for professionals that use the NONMEM software.

@@ -1,6 +1,6 @@
 ---
 title: "Giant cell arteretis (GCA)"
-date: last-modified
+date: "2026-02-22"
 ---
 
 ## What is GCA?

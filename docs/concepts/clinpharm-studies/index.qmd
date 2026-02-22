@@ -1,6 +1,6 @@
 ---
 title: "Clinical pharmacology studies"
-date: last-modified
+date: "2026-02-20"
 ---
 
 ::: {.callout-caution title="Under construction"}
