@@ -14,22 +14,22 @@ Hands-on guides to pharmacometric model building — tool-agnostic, with an emph
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6 .index-card}
-[PK Models](pk/pk/index.qmd){.card-title}
+[PK Models](pk/index.qmd){.card-title}
 Structural models for drug concentration-time profiles.
 :::
 
 ::: {.g-col-12 .g-col-md-6 .index-card}
-[PD Models](pd/pd/index.qmd){.card-title}
+[PD Models](pd/index.qmd){.card-title}
 Models linking drug concentrations to pharmacological effects.
 :::
 
 ::: {.g-col-12 .g-col-md-6 .index-card}
-[PKPD / E-R](pkpd/pkpd/index.qmd){.card-title}
+[PKPD / E-R](pkpd/index.qmd){.card-title}
 Integrated exposure-response models connecting PK and PD.
 :::
 
 ::: {.g-col-12 .g-col-md-6 .index-card}
-[Time-to-event](tte/tte/index.qmd){.card-title}
+[Time-to-event](tte/index.qmd){.card-title}
 Survival analysis and event-rate modeling.
 :::
 

@@ -1,6 +1,6 @@
 ---
 title: "Time-to-event analysis"
-date: "2026-02-20"
+date: "2024-12-10"
 code-overflow: scroll
 code-fold: true
 ---
@@ -485,7 +485,7 @@ Looking at @fig-landmark-1, an incorrect approach would be to classify Subject 1
   Time of response indicated with a square.
   Dashed lines represent time the subject has not responded to treatment;
   solid lines denote the time during which the subject has responded.
-](../images/landmark-1.png){#fig-landmark-1}
+](images/landmark-1.png){#fig-landmark-1}
 
 That is, "responders" and "nonresponders" are compared with regard to survival from the start of the study.
 This assumes that Subjects 2 and 3 responded to treatment immediately.
@@ -514,7 +514,7 @@ Subject 3 responded to treatment prior to the landmark time and is thus classi�
 ![
   Classiﬁcation of hypothetical subjects according to status at landmark.
   Subjects are classiﬁed as either responders (red) or non-responders (blue) based on their status at the landmark time.
-](../images/landmark-2.png){#fig-landmark-2}
+](images/landmark-2.png){#fig-landmark-2}
 
 * As can be seen in @fig-landmark-3, selecting a different landmark time (here, four months post-treatment) may change the classiﬁcation of some subjects.
 In this example, the later landmark allows Subject 2 enough time to respond to treatment, leading to this subject being placed in the responder group.
@@ -522,7 +522,7 @@ In this example, the later landmark allows Subject 2 enough time to respond to t
 ![
   Classiﬁcation of hypothetical subjects according to status at landmark.
   Subjects are classiﬁed as either responders (red) or non-responders (blue) based on their status at the landmark time.
-](../images/landmark-3.png){#fig-landmark-3}
+](images/landmark-3.png){#fig-landmark-3}
 
 Once the landmark has been chosen, any ineligible subjects have been excluded, and subjects have been classiﬁed according to their status at the landmark time, the usual survival analysis methods are applied.
 The results of these methods are interpreted as usual, with the important caveat that conclusions are only generalizable to subjects who have survived until the landmark time.

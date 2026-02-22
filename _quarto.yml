@@ -152,13 +152,13 @@ website:
           href: docs/modeling/index.qmd
           contents:
             - text: "PK"
-              href: docs/modeling/pk/pk/index.qmd
+              href: docs/modeling/pk/index.qmd
             - text: "PD"
-              href: docs/modeling/pd/pd/index.qmd
+              href: docs/modeling/pd/index.qmd
             - text: "PKPD/E-R"
-              href: docs/modeling/pkpd/pkpd/index.qmd
+              href: docs/modeling/pkpd/index.qmd
             - text: "Time-to-event"
-              href: docs/modeling/tte/tte/index.qmd
+              href: docs/modeling/tte/index.qmd
             - text: "C-QTc"
               href: docs/modeling/qt/index.qmd
             - section: "Goodness-of-fit"

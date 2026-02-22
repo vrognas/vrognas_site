@@ -33,6 +33,12 @@
 # "guilds" renamed to "community"
 /docs/guilds/*                              /docs/community/:splat                          301
 
+# Modeling double-nested folders flattened
+/docs/modeling/pk/pk/*                       /docs/modeling/pk/:splat                       301
+/docs/modeling/pd/pd/*                       /docs/modeling/pd/:splat                       301
+/docs/modeling/pkpd/pkpd/*                   /docs/modeling/pkpd/:splat                     301
+/docs/modeling/tte/tte/*                     /docs/modeling/tte/:splat                      301
+
 # Aux communication sub-folders moved under communication/
 /docs/aux/presentation/*                     /docs/aux/communication/presentation/:splat    301
 /docs/aux/email/*                            /docs/aux/communication/email/:splat           301
