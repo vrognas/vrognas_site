@@ -1,6 +1,6 @@
 ---
 title: "Reading Tactics"
-date: "2026-02-22"
+date: "2025-04-25"
 ---
 
 ::: {.callout-caution title="Under construction"}

@@ -1,7 +1,7 @@
 ---
 title: "Pharmacokinetics"
 subtitle: "Dose-Exposure"
-date: "2026-02-22"
+date: "2026-02-19"
 ---
 
 > "What the body does to the drug"

@@ -1,6 +1,6 @@
 ---
 title: "Math Intuition"
-date: "2026-02-20"
+date: "2025-03-27"
 ---
 
 ::: {.callout-caution title="Under construction"}

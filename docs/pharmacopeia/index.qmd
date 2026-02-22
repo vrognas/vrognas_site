@@ -1,7 +1,7 @@
 ---
 title: "Pharmacopœia Pharmacometrika"
 description: "Drug classification reference using the ATC system with mechanism of action, drug classes, and pharmacological properties."
-date: "2026-02-22"
+date: "2025-11-25"
 ---
 
 **Pharmacopœia**:

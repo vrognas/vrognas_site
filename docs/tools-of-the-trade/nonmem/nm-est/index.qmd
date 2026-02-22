@@ -1,7 +1,7 @@
 ---
 title: "Estimation and Solvers"
 description: "A Practitioner's Guide to $ESTIMATION and $SUBROUTINES"
-date: "2025-07-24"
+date: "2025-09-14"
 code-overflow: scroll
 code-tools: true
 ---

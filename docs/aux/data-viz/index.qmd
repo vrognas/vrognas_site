@@ -1,6 +1,6 @@
 ---
 title: "Data Visualization"
-date: "2026-02-20"
+date: "2025-03-16"
 ---
 
 ::: {.callout-caution title="Under construction"}

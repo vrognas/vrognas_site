@@ -2,7 +2,7 @@
 title: "Community Compendium"
 subtitle: "A curated directory of pharmacometric societies, conferences, and journals."
 description: "Herein lies a curated registry of pharmacometric landscape. Societies, conferences, journals, and communities."
-date: "2026-02-22"
+date: "2026-02-20"
 ---
 
 ::: {.callout-caution title="Under construction"}

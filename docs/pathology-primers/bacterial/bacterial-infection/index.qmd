@@ -1,6 +1,6 @@
 ---
 title: "Bacterial infections"
-date: "2026-02-22"
+date: "2025-09-14"
 ---
 
 ## What are bacterial infections?

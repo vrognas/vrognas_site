@@ -1,7 +1,7 @@
 ---
 title: "Pediatric Pharmacometrics"
 description-meta: "Essential guide to pediatric pharmacometrics covering ontogeny, physiological differences between children and adults, allometric scaling, and model-informed drug development approaches in pediatric populations."
-date: "2025-08-19"
+date: "2026-02-20"
 keywords:
   - Pharmacometrics
   - Pediactric drug development
