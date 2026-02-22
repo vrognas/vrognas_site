@@ -9,9 +9,51 @@ description: "Comprehensive guide to pharmacometric modeling including PK/PD mod
 
 > Model-based analysis is more an art than a science. -Lewis B. Sheiner, MD
 
-In this section, you'll get access to tidbits of knowledge on many forms of pharmacometric models.
-It contains hands-on guides to model building that will spark your memory.
-The guides are tool-agnostic, but with an emphasis on R and NONMEM.
+Hands-on guides to pharmacometric model building — tool-agnostic, with an emphasis on R and NONMEM.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[PK Models](pk/pk/index.qmd){.card-title}
+Structural models for drug concentration-time profiles.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[PD Models](pd/pd/index.qmd){.card-title}
+Models linking drug concentrations to pharmacological effects.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[PKPD / E-R](pkpd/pkpd/index.qmd){.card-title}
+Integrated exposure-response models connecting PK and PD.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Time-to-event](tte/tte/index.qmd){.card-title}
+Survival analysis and event-rate modeling.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[C-QTc](qt/index.qmd){.card-title}
+Cardiac safety modeling for QT interval prolongation.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Goodness-of-fit](gof/gof-cts/index.qmd){.card-title}
+Diagnostic tools for evaluating model performance.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Priors](priors/index.qmd){.card-title}
+Bayesian prior specification for population models.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Variability](variability/index.qmd){.card-title}
+Between-subject and residual variability in population models.
+:::
+
+:::
 
 ## Important considerations
 
@@ -43,7 +85,7 @@ The guides are tool-agnostic, but with an emphasis on R and NONMEM.
 **Shrinkage:** Shrinkage quantifies how much individual estimates regress towards the population mean under the given sampling schedule [@savicImportanceShrinkageEmpirical2009].
 It also measures the amount of information on a parameter in the current data used to estimate it.
 
-**Robustness:** Robustness describes a model’s ability to perform reliably under varying assumptions or when faced with unusual or extreme data points.
+**Robustness:** Robustness describes a model's ability to perform reliably under varying assumptions or when faced with unusual or extreme data points.
 Robust models produce stable parameter estimates even if underlying assumptions (normality, independence, linearity, etc.) are not perfectly met.
 Non-robust models may yield misleading results or parameter instability if assumptions are violated.
 
@@ -62,11 +104,9 @@ We recall:
 **Identifiability:** Whether parameters can be uniquely estimated from the data.
 Lack of identifiability means multiple parameter combinations yield the same likelihood.
 
-**Bias-variance tradeoff:** Balancing a model’s simplicity (high bias, low variance) versus complexity (low bias, high variance) to optimize predictive accuracy.
+**Bias-variance tradeoff:** Balancing a model's simplicity (high bias, low variance) versus complexity (low bias, high variance) to optimize predictive accuracy.
 
 ## References
 
 ::: {#refs}
 :::
-
-![](./images/index_modeling.png)

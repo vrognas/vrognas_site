@@ -33,7 +33,7 @@ There are **three main types** of skin cancer, depending on which cells have tur
   * Highest mortality
   * Can be cured if caught early
 
-![**BCC** begins in the basal cells. **SCC** starts in the squamous cells. **Melanoma** comes from the melanocytes.](../images/skin-cancers.avif)
+![**BCC** begins in the basal cells. **SCC** starts in the squamous cells. **Melanoma** comes from the melanocytes.](../../images/skin-cancers.avif)
 
 ### Non-melanoma skin cancer (NMSC)
 

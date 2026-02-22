@@ -8,27 +8,27 @@ Skills that amplify your core craft. These are the disciplines that sit adjacent
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6 .index-card}
-### [Data Visualization](data-viz/index.qmd)
+[Data Visualization](data-viz/index.qmd){.card-title}
 Communicating data clearly and truthfully through charts and visual design.
 :::
 
 ::: {.g-col-12 .g-col-md-6 .index-card}
-### [Math Intuition](math-intuition/index.qmd)
+[Math Intuition](math-intuition/index.qmd){.card-title}
 Building mental models for the mathematical concepts underlying your work.
 :::
 
 ::: {.g-col-12 .g-col-md-6 .index-card}
-### [Communication](presentation/index.qmd)
+[Communication](communication/presentation/index.qmd){.card-title}
 Writing, presenting, running meetings, and corresponding with clarity.
 :::
 
 ::: {.g-col-12 .g-col-md-6 .index-card}
-### [Self Management](self-mgmt/index.qmd)
+[Self Management](self-mgmt/index.qmd){.card-title}
 Sustainable productivity — prioritization, habits, and focus.
 :::
 
 ::: {.g-col-12 .g-col-md-6 .index-card}
-### [Practical Programming](code/index.qmd)
+[Practical Programming](practical-programming/code/index.qmd){.card-title}
 Coding practices, reproducibility, and deployment for research workflows.
 :::
 

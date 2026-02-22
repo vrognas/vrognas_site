@@ -3,6 +3,42 @@ title: "Pathology Primers"
 description: "Disease overviews for pharmacometricians covering pathophysiology, biomarkers, treatment regimens, and PK/PD modeling approaches."
 ---
 
+Concise disease overviews for pharmacometricians — pathophysiology, biomarkers, drug regimens, and modeling approaches.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Autoimmune Diseases](autoimmune/giant-cell-arteritis/index.qmd){.card-title}
+GCA, psoriasis, and rheumatoid arthritis.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Viral Infections](viral/hiv/index.qmd){.card-title}
+HIV/AIDS and viral disease pharmacology.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Bacterial Infections](bacterial/bacterial-infection/index.qmd){.card-title}
+Tuberculosis and antibacterial treatment strategies.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Cancer](cancer/lung-cancer/index.qmd){.card-title}
+Lung and skin cancer pharmacology and treatment.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Neurological Diseases](neurological/alzheimer/index.qmd){.card-title}
+Alzheimer, Parkinson, and schizophrenia.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Diabetes](diabetes/index.qmd){.card-title}
+Metabolic disease, glucose regulation, and antidiabetic drugs.
+:::
+
+:::
+
 ## Disease facts that are good to know
 
 Each primer provides a concise, high-level summary of a disease relevant to pharmacometricians, focusing on biomarkers, drug regimens, and modeling approaches.
@@ -25,5 +61,3 @@ Typical structure for disease "XYZ":
     * First-line vs. second-line treatments
     * Dose Adjustments (e.g., renal/liver impairment, pediatrics)
   * Commonly used PK-models
-
-![](./images/index_pathology.avif)

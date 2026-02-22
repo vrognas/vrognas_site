@@ -1,12 +1,29 @@
 ---
 title: "Tools of the Trade"
-subtitle: "All the information you need to learn more about the topics covered on this page."
 date: "2025-07-19"
 description: "Essential software tools and resources for pharmacometrics including NONMEM, R, Monolix, and development environments for quantitative pharmacology modeling."
 ---
 
 ::: {.callout-caution title="Under construction"}
 :::
+
+The software and workflows that power pharmacometric analysis — from nonlinear mixed-effects modeling to reproducible reporting.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[NONMEM](nonmem/nm-data/index.qmd){.card-title}
+Data preparation, estimation, troubleshooting, and model QA for NONMEM workflows.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[R](r/r-tips-n-tricks/index.qmd){.card-title}
+Statistical computing for pharmacometric analysis and reproducible reporting.
+:::
+
+:::
+
+## Other software
 
 * [NONMEM](https://nonmem.iconplc.com/)
 * [PsN](https://uupharmacometrics.github.io/PsN/)
@@ -35,5 +52,3 @@ description: "Essential software tools and resources for pharmacometrics includi
 * [Clinical Pharmacology Podcast with Nathan Teuscher (Spotify)](https://open.spotify.com/show/6QJ81a96Q9HeeFBX8EtHTu?si=1e05e7a31a2942e0)
 * <https://trc-p.nl/>
 * <https://nmhelp.tingjieguo.com/>
-
-![](./images/index_tools.png)

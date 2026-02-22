@@ -81,21 +81,21 @@ website:
             - section: "Communication"
               contents:
                 - text: "Presentation Technique"
-                  href: docs/aux/presentation/index.qmd
+                  href: docs/aux/communication/presentation/index.qmd
                 - text: "Email"
-                  href: docs/aux/email/index.qmd
+                  href: docs/aux/communication/email/index.qmd
                 - text: "Meetings"
-                  href: docs/aux/meetings/index.qmd
+                  href: docs/aux/communication/meetings/index.qmd
                 - text: "Writing Tactics"
-                  href: docs/aux/writing-tactics/index.qmd
+                  href: docs/aux/communication/writing-tactics/index.qmd
             - text: "Data Visualization"
               href: docs/aux/data-viz/index.qmd
             - section: "Practical Programming"
               contents:
                 - text: "Coding Practices"
-                  href: docs/aux/code/index.qmd
+                  href: docs/aux/practical-programming/code/index.qmd
                 - text: "Reproducible Research"
-                  href: docs/aux/repr/index.qmd
+                  href: docs/aux/practical-programming/repr/index.qmd
             - text: "Math Intuition"
               href: docs/aux/math-intuition/index.qmd
     - id: concepts
@@ -110,14 +110,14 @@ website:
               href: docs/concepts/pk/index.qmd
               contents:
                 - text: "Absorption"
-                  href: docs/concepts/1_absorption/index.qmd
+                  href: docs/concepts/pk/1_absorption/index.qmd
                 - text: "Distribution"
-                  href: docs/concepts/2_distribution/index.qmd
+                  href: docs/concepts/pk/2_distribution/index.qmd
                 - section: "Elimination"
-                  href: docs/concepts/3_elimination/index.qmd
+                  href: docs/concepts/pk/3_elimination/index.qmd
                   contents:
                     - text: "Augmented renal clearance (ARC)"
-                      href: docs/concepts/augmented-renal-clearance/index.qmd
+                      href: docs/concepts/pk/augmented-renal-clearance/index.qmd
             - text: "Pharmacodynamics"
               href: docs/concepts/pd/index.qmd
             - text: "Pediatrics"
@@ -126,13 +126,13 @@ website:
               href: docs/concepts/clinpharm-studies/index.qmd
               contents:
                 - text: "Data standards"
-                  href: docs/concepts/cdisc/index.qmd
+                  href: docs/concepts/clinpharm-studies/cdisc/index.qmd
                 - text: "Hepatic impairment (HI)"
-                  href: docs/concepts/hepatic-impairment-studies/index.qmd
+                  href: docs/concepts/clinpharm-studies/hepatic-impairment-studies/index.qmd
                 - text: "Renal impairment (RI)"
-                  href: docs/concepts/renal-impairment-studies/index.qmd
+                  href: docs/concepts/clinpharm-studies/renal-impairment-studies/index.qmd
                 - text: "QT-prolongation"
-                  href: docs/concepts/qt/index.qmd
+                  href: docs/concepts/clinpharm-studies/qt/index.qmd
     - id: guilds
       title: "Community Compendium"
       collapse-level: 2
@@ -182,34 +182,34 @@ website:
             - section: "Autoimmune diseases"
               contents:
                 - text: "Giant cell arteritis (GCA)"
-                  href: docs/pathology-primers/giant-cell-arteritis/index.qmd
+                  href: docs/pathology-primers/autoimmune/giant-cell-arteritis/index.qmd
                 - text: "Psoriasis"
-                  href: docs/pathology-primers/psoriasis/index.qmd
+                  href: docs/pathology-primers/autoimmune/psoriasis/index.qmd
                 - text: "Rheumatoid arthritis (RA)"
-                  href: docs/pathology-primers/rheumatoid-arthritis/index.qmd
+                  href: docs/pathology-primers/autoimmune/rheumatoid-arthritis/index.qmd
             - section: "Viral infections"
               contents:
                 - text: "HIV/AIDS"
-                  href: docs/pathology-primers/hiv/index.qmd
+                  href: docs/pathology-primers/viral/hiv/index.qmd
             - section: "Bacterial infections"
-              href: docs/pathology-primers/bacterial-infection/index.qmd
+              href: docs/pathology-primers/bacterial/bacterial-infection/index.qmd
               contents:
                 - text: "Tuberculosis"
-                  href: docs/pathology-primers/tuberculosis/index.qmd
+                  href: docs/pathology-primers/bacterial/tuberculosis/index.qmd
             - section: "Cancer"
               contents:
                 - text: "Lung cancers"
-                  href: docs/pathology-primers/lung-cancer/index.qmd
+                  href: docs/pathology-primers/cancer/lung-cancer/index.qmd
                 - text: "Skin cancers"
-                  href: docs/pathology-primers/skin-cancer/index.qmd
+                  href: docs/pathology-primers/cancer/skin-cancer/index.qmd
             - section: "Neurological diseases"
               contents:
                 - text: "Alzheimer"
-                  href: docs/pathology-primers/alzheimer/index.qmd
+                  href: docs/pathology-primers/neurological/alzheimer/index.qmd
                 - text: "Parkinson"
-                  href: docs/pathology-primers/parkinson/index.qmd
+                  href: docs/pathology-primers/neurological/parkinson/index.qmd
                 - text: "Schizophrenia"
-                  href: docs/pathology-primers/schizophrenia/index.qmd
+                  href: docs/pathology-primers/neurological/schizophrenia/index.qmd
             - text: "Diabetes"
               href: docs/pathology-primers/diabetes/index.qmd
     - id: pharmacopeia

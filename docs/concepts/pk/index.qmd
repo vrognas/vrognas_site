@@ -529,4 +529,16 @@ ABW = IBW + 0.4 * (TBW-IBW)
 
 #### Race
 
+The [FDA guidance](https://www.fda.gov/media/75453/download) defines race and ethnicity as "not anthropologically or scientifically-based designations, but categories that described the sociocultural construct of our society" --- originally devised by the Office of Management and Budget for US population classification.
+
+Observed pharmacokinetic and pharmacodynamic differences between racial groups more likely reflect socioeconomic disparities, environmental risk factors, and genetic variation in drug-metabolizing enzymes --- not race per se.
+Race is, by definition, a subjective and imperfect proxy for these underlying determinants.
+
+Despite this, race retains pragmatic value in drug development.
+BiDil --- approved specifically for self-identified African Americans with heart failure --- illustrates this: a broad-population trial failed, but a subgroup analysis in Black patients led to a dedicated trial confirming efficacy.
+Cardiovascular drugs also generally show attenuated effects in Black patients, occasionally informing alternative dosing in labeling and clinical practice.
+
+CYP2D6 poor metabolizer prevalence differs substantially across African, Asian, and European populations.
+Since genotyping and phenotyping remain uncommon in drug development, race --- despite its imprecision --- captures more metabolic variation than no stratification at all.
+
 ### DDI

@@ -8,7 +8,26 @@ Regulatory documents are generally filled with walls of text, and much is up for
 
 This is why a clear yes/no answer from regulatory agencies are not possible until the final assessment, when an assessment and interpretation of the totality of evidence has been made.
 
-## Good Clinical Practice (GCP)
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Good Clinical Practice](#good-clinical-practice-gcp){.card-title}
+Ethics, data quality, and compliance standards for clinical trials.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[EMA Submission](#submission-workflow-at-the-ema){.card-title}
+Navigating pharmacometric content in marketing authorization dossiers.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[SmPC](#smpc-summary-of-product-characteristics){.card-title}
+Structure and content of the Summary of Product Characteristics.
+:::
+
+:::
+
+## Good Clinical Practice (GCP) {#good-clinical-practice-gcp}
 
 GCP is an international ethical and scientific quality standard for designing, conducting, recording, and reporting trials involving human subjects' participation.
 Compliance with this standard provides public assurance that trial subjects' rights, safety, and well-being are protected, consistent with the principles in the **Declaration of Helsinki**, and that the clinical trial data are credible.
@@ -41,7 +60,7 @@ Other ICH guidelines relevant to the conduct of clinical trials are:
 | :-------- | :-------------- |
 | 2.4 Adequate prior data | Dose‑setting PK modeling must rest on solid non‑clinical & early clinical results. |
 | 2.5 Scientific soundness | Protocol must pre‑define sampling times, bioanalytical methods, population‑PK or NCA strategy. |
-| 2.10 Accurate recording/storage | Raw concentration data ⇒ audit‑trails, ALCOA (Attributable‑Legible‑Contemporaneous‑Original‑Accurate). |
+| 2.10 Accurate recording/storage | Raw concentration data ⇒ audit‑trails, ALCOA (Attributable‑Legible‑Contemporaneous‑Original‑Accurate). |
 | 2.13 Quality systems | Risk‑based checks on data pipelines, LIMS, PK analysis scripts. |
 
 : Principles {#tbl-principles tbl-colwidths="[30, 70]"}
@@ -50,15 +69,15 @@ Take‑home checklist for pharmacometricians
 
 | Task | GCP Hook |
 | :--- | :------- |
-| Build a sampling‑time QC script | §5.0 Risk control; §4.9 Source data integrity |
-| Store raw, cleaned, and analysis datasets with hashes | §2.10 Data verifiability; §5.5.3 Audit‑trail |
-| Validate NONMEM/R scripts (unit tests) | §5.5.3 Computerised‑system validation |
-| Document model decisions in a contemporaneous log | §4.9 ALCOA; §5.18 Monitoring evidence |
-| Archive assays, datasets, reports ≥ 2 years post‑marketing | §4.9.5 & §5.5.11 Record retention |
+| Build a sampling‑time QC script | §5.0 Risk control; §4.9 Source data integrity |
+| Store raw, cleaned, and analysis datasets with hashes | §2.10 Data verifiability; §5.5.3 Audit‑trail |
+| Validate NONMEM/R scripts (unit tests) | §5.5.3 Computerised‑system validation |
+| Document model decisions in a contemporaneous log | §4.9 ALCOA; §5.18 Monitoring evidence |
+| Archive assays, datasets, reports ≥ 2 years post‑marketing | §4.9.5 & §5.5.11 Record retention |
 
 : Checklist {#tbl-checklist tbl-colwidths="[50, 50]"}
 
-## Submission workflow at the EMA
+## Submission workflow at the EMA {#submission-workflow-at-the-ema}
 
 Finding your way through and assessing pharmacometric modeling in a submission dossier:
 
@@ -82,7 +101,7 @@ Finding your way through and assessing pharmacometric modeling in a submission d
   * Is the **covariate evaluation** reasonable?
 * Finally, does you conclusion align with the one in the dossier?
 
-## SmPC, Summary of product characteristics
+## SmPC, Summary of product characteristics {#smpc-summary-of-product-characteristics}
 
 The SmPC is a legal document approved as part of the marketing authorisation of each medicine.
 It is the basis of information for healthcare professional on how to use the medicine.
@@ -99,7 +118,7 @@ Information is presented according to a predefined structure:
   * **4.2 Posology and method of administration**
     * Specifies the dose for each indication(s) and each relevant subpopulation (e.g. depending on age, concomitant disease):
       * With information on frequency of intake, influence of food, duration of treatment,
-      * Advice on dose adjustment (e.g. to optimise the benefits according to patient’s response or to limit the risk e.g. in relation to drug interactions),
+      * Advice on dose adjustment (e.g. to optimise the benefits according to patient's response or to limit the risk e.g. in relation to drug interactions),
       * Additional information on dosing as necessary (e.g. need for dose titration or tapering off, maximum recommended dose, action to be taken if an intake is missed)
     * Also informs on the method of administration, which information can be complemented with special instructions for handling the medicine in section 6.6.
     * Possible dose adjustments due to e.g. hepatic/renal impairment or concomitant diseases

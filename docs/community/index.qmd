@@ -1,6 +1,6 @@
 ---
 title: "Community Compendium"
-subtitle: "A cartography of the community"
+subtitle: "A curated directory of pharmacometric societies, conferences, and journals."
 description: "Herein lies a curated registry of pharmacometric landscape. Societies, conferences, journals, and communities."
 date: last-modified
 ---
@@ -11,43 +11,100 @@ date: last-modified
 A directory of fellowships, societies, and forums where professionals meet and interact.
 Find your chapter, share tales, and build alliances to sharpen your practice.
 
-## ✉️ Mailing Lists
+## ✉️ Mailing Lists {#mailing-lists}
 
-* NMusers
-  * A mailing list for professionals that use the NONMEM software.
+::: {.grid}
 
-## 👥 Communities
+::: {.g-col-12 .g-col-md-6 .index-card}
+[NMusers](nmusers/index.qmd){.card-title}
+The primary mailing list for professionals using the NONMEM software for population pharmacokinetic modeling.
+:::
 
-* International Society of Pharmacometrics ([ISoP](https://www.isop.org/home))
-  * A non-profit organization dedicated to the advancement and promotion of pharmacometrics.
-* [RedIF](https://www.redifar.org)
-  * Ibero-American network in the field of pharmacometrics.
-* [Pharmacometrics Africa](https://pmxafrica.org)
-  * A non-profit company registered in South Africa with the goal to develop quantitative clinical pharmacology among African scientists, and more generally among pharmacometricians in low and middle income countries (LMIC).
+:::
 
-## 📸 Conferences
+## 👥 Communities {#communities}
 
-*  Population Approach Group Europe ([PAGE](https://www.page-meeting.org)).
-  * Annually in June
-* The American Conference on Pharmacometrics ([ACoP](https://acop2025.eventscribe.net/index.asp))
-  * Organized annually during the fall by ISoP.
-* Population Approach Group of Australia and New Zealand ([PAGANZ](https://www.paganz.org))
-* Stockholm-Uppsala Pharmacometrics ([SUP](https://www.sup-meeting.se))
-  *  Bianually, alternately in Stockholm and Uppsala. One spring- and one fall-meeting.
+::: {.grid}
 
-## 📰 Journals
+::: {.g-col-12 .g-col-md-6 .index-card}
+[International Society of Pharmacometrics (ISoP)](https://www.isop.org/home){.card-title}
+A non-profit organization dedicated to the advancement and promotion of pharmacometrics globally.
+:::
 
-* Clinical Pharmacology & Therapeutics (CPT) <https://ascpt.onlinelibrary.wiley.com/journal/15326535>
-* CPT: Pharmacometrics & Systems Pharmacology (CPT: PSP) <https://ascpt.onlinelibrary.wiley.com/journal/21638306>
-* The Journal of Clinical Pharmacology (J Clin Pharm), <https://accp1.onlinelibrary.wiley.com/journal/15524604>
-* Journal of Pharmacokinetics and Pharmacodynamics (JPKPD), <https://link.springer.com/journal/10928>
-* Translational and Clinical Pharmacology (TCP), <https://tcpharm.org/>
-* The AAPS Journal (AAPS), <https://link.springer.com/journal/12248>
-* British Journal of Clinical Pharmacology (BJCP), <https://bpspubs.onlinelibrary.wiley.com/journal/13652125>
-* Clinical Pharmacology in Drug Development (Clin Pharm Drug Dev), <https://accp1.onlinelibrary.wiley.com/journal/21607648>
-* Clinical Pharmacokinetics (Clin PK), <https://link.springer.com/journal/40262>
+::: {.g-col-12 .g-col-md-6 .index-card}
+[RedIF](https://www.redifar.org){.card-title}
+Ibero-American network in the field of pharmacometrics, fostering collaboration across the region.
+:::
 
-## 🌐 Websites
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Pharmacometrics Africa](https://pmxafrica.org){.card-title}
+A non-profit developing quantitative clinical pharmacology capacity among African scientists and low/middle income countries.
+:::
 
-* <https://pmxrepo.com>
-* <https://www.pkpd-info.com>
+:::
+
+## 📸 Conferences {#conferences}
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[PAGE](https://www.page-meeting.org){.card-title}
+Population Approach Group Europe. Held annually in June across various European cities.
+[Annual · June]{.badge .bg-secondary .card-badge}
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[ACoP](https://acop2025.eventscribe.net/index.asp){.card-title}
+American Conference on Pharmacometrics. Organized annually during the fall by ISoP.
+[Annual · Autumn]{.badge .bg-secondary .card-badge}
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[PAGANZ](https://www.paganz.org){.card-title}
+Population Approach Group of Australia and New Zealand. Annual meeting for the Australasian region.
+[Annual]{.badge .bg-secondary .card-badge}
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[SUP](https://www.sup-meeting.se){.card-title}
+Stockholm-Uppsala Pharmacometrics. Alternately in Stockholm (Spring) and Uppsala (Fall).
+[Biannual · Spring/Fall]{.badge .bg-secondary .card-badge}
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[ASCPT](https://www.ascpt.org){.card-title}
+American Society for Clinical Pharmacology and Therapeutics. Annual meeting for the American region.
+[Annual · Spring]{.badge .bg-secondary .card-badge}
+:::
+
+:::
+
+## 📰 Journals {#journals}
+
+| Journal Title | Abbr. | Publisher |
+| :------------ | :------ | :------ |
+| [Clinical Pharmacology & Therapeutics](https://ascpt.onlinelibrary.wiley.com/journal/15326535) | CPT | Wiley (US) |
+| [CPT: Pharmacometrics & Systems Pharmacology](https://ascpt.onlinelibrary.wiley.com/journal/21638306) | CPT: PSP | Wiley (US) |
+| [The Journal of Clinical Pharmacology](https://accp1.onlinelibrary.wiley.com/journal/15524604) | J Clin Pharm | Wiley (US) |
+| [Journal of Pharmacokinetics and Pharmacodynamics](https://link.springer.com/journal/10928) | JPKPD | Springer (DE) |
+| [Translational and Clinical Pharmacology](https://tcpharm.org/) | TCP | KSCPT (KR) |
+| [The AAPS Journal](https://link.springer.com/journal/12248) | AAPS | Springer (DE) |
+| [British Journal of Clinical Pharmacology](https://bpspubs.onlinelibrary.wiley.com/journal/13652125) | BJCP | Wiley (US) |
+| [Clinical Pharmacology in Drug Development](https://accp1.onlinelibrary.wiley.com/journal/21607648) | Clin Pharm Drug Dev | Wiley (US) |
+| [Clinical Pharmacokinetics](https://link.springer.com/journal/40262) | Clin PK | Springer (DE) |
+
+## 🌐 Websites {#websites}
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[pmxrepo.com](https://pmxrepo.com){.card-title}
+A repository of pharmacometric resources and tools.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[pkpd-info.com](https://www.pkpd-info.com){.card-title}
+PK/PD information and educational resources.
+:::
+
+:::

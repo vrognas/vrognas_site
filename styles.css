@@ -39,8 +39,29 @@ pre code.sourceCode.nmtran span.pp { color: var(--nmtran-controlrecord) !importa
   background-color: #f3f3ee;
   padding: 1rem;
   border-radius: 4px;
+  position: relative;
 }
 
 .quarto-dark .index-card {
   background-color: #323230;
+}
+
+.card-title {
+  display: block;
+  font-size: 1.15em;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--bs-link-color);
+}
+
+.card-title:hover {
+  color: var(--bs-link-hover-color);
+}
+
+.card-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-size: 0.7em;
+  border-radius: 6px;
 }

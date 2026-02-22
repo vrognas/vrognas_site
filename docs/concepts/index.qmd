@@ -3,8 +3,28 @@ title: "Concepts of the Craft"
 description: "Comprehensive guide to pharmacokinetics, pharmacodynamics, pediatric pharmacology, clinical studies, and drug development concepts for pharmacometricians."
 ---
 
-This section provides a high-level overview of specific theories and principles at pharmacometrics' heart.
+A high-level overview of the theories and principles at pharmacometrics' heart — each concept with definitions, use cases, and implementation details.
 
-Each concept includes information on the definition, use cases, and implementation details.
+::: {.grid}
 
-![](./images/index_concepts.png)
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Pharmacokinetics](pk/index.qmd){.card-title}
+How the body handles drugs — absorption, distribution, metabolism, and elimination.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Pharmacodynamics](pd/index.qmd){.card-title}
+How drugs act on the body — mechanisms, receptor interactions, and dose-response.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Pediatrics](pediatrics/index.qmd){.card-title}
+Special PK/PD considerations for pediatric populations.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Clinical Studies](clinpharm-studies/index.qmd){.card-title}
+Study design, regulatory frameworks, and data standards for clinical pharmacology.
+:::
+
+:::

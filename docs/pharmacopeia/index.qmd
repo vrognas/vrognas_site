@@ -4,10 +4,24 @@ description: "Drug classification reference using the ATC system with mechanism 
 date: last-modified
 ---
 
-**Pharmacopœia**:  
+**Pharmacopœia**:
 *A collection of directions for the identification of medicines.*
 
-This section presents a high-level overview of selected drug classes and their mechanisms of action.
+A high-level overview of selected drug classes and their mechanisms of action, organized by the ATC classification system.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[(J) Antiinfectives](j_antiinfectives-for-systemic-use/j01_antibacterials-for-systemic-use/index.qmd){.card-title}
+Antibacterials and antivirals for systemic use.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[(L) Antineoplastic & Immunomodulating](l_antineoplastic-and-immunomodulating-agents/l04_immunosuppressants/l04a_immunosuppressants/index.qmd){.card-title}
+Cancer treatments and immunosuppressants.
+:::
+
+:::
 
 ## Drug modalities
 
@@ -28,7 +42,7 @@ In practice: modality = "What kind of therapeutic thing is this?"
 : Modality categories {#tbl-modality}
 
 ATMP (Advanced Therapy Medicinal Product) is another term that is being used to describe a group of modalities.
-In essence, ATMPs are a class of medicines that use living materials like cells, tissues, or genetic material to treat or prevent diseases. 
+In essence, ATMPs are a class of medicines that use living materials like cells, tissues, or genetic material to treat or prevent diseases.
 
 ## ATC
 
@@ -91,5 +105,3 @@ The complete classification of metformin illustrates the structure of the code:
 Thus, in the ATC system all plain metformin preparations are given the code A10BA02.
 For the chemical substance, the [International Nonproprietary Name (INN)](https://www.who.int/teams/health-product-and-policy-standards/inn) is preferred.
 If INN names are not assigned, USAN (United States Adopted Name) or BAN (British Approved Name) names are usually chosen.
-
-![](./images/index_pharmacopeia.png)

@@ -17,8 +17,45 @@
 /docs/about/                                           /about/                                         301
 /docs/about/index.html                                 /about/                                         301
 
+# Pathology primers grouped by disease category
+/docs/pathology-primers/giant-cell-arteritis/*   /docs/pathology-primers/autoimmune/giant-cell-arteritis/:splat  301
+/docs/pathology-primers/psoriasis/*              /docs/pathology-primers/autoimmune/psoriasis/:splat             301
+/docs/pathology-primers/rheumatoid-arthritis/*   /docs/pathology-primers/autoimmune/rheumatoid-arthritis/:splat  301
+/docs/pathology-primers/hiv/*                    /docs/pathology-primers/viral/hiv/:splat                        301
+/docs/pathology-primers/bacterial-infection/*    /docs/pathology-primers/bacterial/bacterial-infection/:splat    301
+/docs/pathology-primers/tuberculosis/*           /docs/pathology-primers/bacterial/tuberculosis/:splat           301
+/docs/pathology-primers/lung-cancer/*            /docs/pathology-primers/cancer/lung-cancer/:splat               301
+/docs/pathology-primers/skin-cancer/*            /docs/pathology-primers/cancer/skin-cancer/:splat               301
+/docs/pathology-primers/alzheimer/*              /docs/pathology-primers/neurological/alzheimer/:splat           301
+/docs/pathology-primers/parkinson/*              /docs/pathology-primers/neurological/parkinson/:splat           301
+/docs/pathology-primers/schizophrenia/*          /docs/pathology-primers/neurological/schizophrenia/:splat       301
+
 # "guilds" renamed to "community"
 /docs/guilds/*                              /docs/community/:splat                          301
+
+# Aux communication sub-folders moved under communication/
+/docs/aux/presentation/*                     /docs/aux/communication/presentation/:splat    301
+/docs/aux/email/*                            /docs/aux/communication/email/:splat           301
+/docs/aux/meetings/*                         /docs/aux/communication/meetings/:splat        301
+/docs/aux/writing-tactics/*                  /docs/aux/communication/writing-tactics/:splat 301
+/docs/aux/reading-tactics/*                  /docs/aux/communication/reading-tactics/:splat 301
+
+# Aux practical programming sub-folders moved under practical-programming/
+/docs/aux/code/*                             /docs/aux/practical-programming/code/:splat    301
+/docs/aux/repr/*                             /docs/aux/practical-programming/repr/:splat    301
+/docs/aux/devops/*                           /docs/aux/practical-programming/devops/:splat  301
+
+# Clinical studies sub-folders moved under clinpharm-studies/
+/docs/concepts/cdisc/*                       /docs/concepts/clinpharm-studies/cdisc/:splat                       301
+/docs/concepts/hepatic-impairment-studies/*  /docs/concepts/clinpharm-studies/hepatic-impairment-studies/:splat  301
+/docs/concepts/renal-impairment-studies/*    /docs/concepts/clinpharm-studies/renal-impairment-studies/:splat    301
+/docs/concepts/qt/*                          /docs/concepts/clinpharm-studies/qt/:splat                          301
+
+# ADME folders moved under pk/
+/docs/concepts/1_absorption/*                /docs/concepts/pk/1_absorption/:splat          301
+/docs/concepts/2_distribution/*              /docs/concepts/pk/2_distribution/:splat        301
+/docs/concepts/3_elimination/*               /docs/concepts/pk/3_elimination/:splat         301
+/docs/concepts/augmented-renal-clearance/*   /docs/concepts/pk/augmented-renal-clearance/:splat  301
 
 # "disease-primers" renamed to "pathology-primers"
 /docs/disease-primers/*                             /docs/pathology-primers/:splat                  301
