@@ -1,32 +1,46 @@
 ---
 title: "Renal Impairment (RI) studies"
-date: "2026-02-20"
+date: "2026-03-18"
 ---
 
-::: {.callout-caution title="Under construction"}
-:::
+## When is an RI study required?
+
+* Fraction excreted unchanged in urine (f~e~) >30% (FDA).
+  EMA has no fixed cutoff but recommends a study when RI is likely to significantly alter PK.
+* Even drugs **primarily cleared non-renally** should consider a severe RI study -- impaired renal function can alter absorption, protein binding, distribution, and hepatic/gut metabolism and transport.
+* Almost all small molecules require RI studies.
+* Biologics <69 kDa: generally required.
+* mAbs (>69 kDa): generally not required.
+
+## Classification of renal function
+
+GFR should be expressed as mL/min (absolute GFR).
+If a formula providing BSA-normalized GFR (mL/min/1.73 m^2^) has been used, recalculate to absolute GFR in mL/min in each individual.
+Preferably use exogenous markers (iohexol, inulin) or eGFR; avoid Cockcroft-Gault.
 
 | RI severity | GFR (mL/min) |
 | :---------- | :----------- |
 | Normal      | > 90         |
 | Mild        | 60--90       |
 | Moderate    | 30--60       |
-| Severe (differs between FDA and EMA)| < 30, not requiring dialysis (EMA)|
-| ESRD (differs between FDA and EMA)| < 15, requiring dialysis|
+| Severe (differs between FDA and EMA) | < 30, not requiring dialysis (EMA) |
+| ESRD (differs between FDA and EMA) | < 15, requiring dialysis |
 
-Studies:
+## Study design
 
-Full or reduced.
-Subjects "HV", apart from the RI.
-Full: All RI groups
-Reduced: Only Normal, severe, and ESRD.
+* **Full design**: All RI groups (normal, mild, moderate, severe, ESRD).
+* **Reduced design**: Only normal, severe, and ESRD (skipping mild and moderate).
+  If no PK difference between severe/ESRD and normal, no further study needed.
+* **Adaptive/staggered design**: Start with one severity group + matched controls; extend based on results.
+* 6--8 subjects in each RI group.
+  This gives 80% power to detect ±40% change in exposure.
+* Subjects are otherwise healthy ("HV"), apart from the RI.
+* For safety reasons, the dose given to moderately/severely impaired groups may be lower.
 
-6-8 subjects in each RI group.
-This gives 80% power to detect plus/minus 40% change in exposure.
+::: {.callout-tip title="Practical tips"}
 
-When:
-Almost all small molecules.
-Biologics <69 kDa
+* **Measure unbound drug** if the drug has high or nonlinear plasma protein binding -- uremia alters protein binding.
+* **Include a PD marker** when possible: if PK changes but PD does not, dose adjustment may be unnecessary.
+* **Measure active metabolites**: they may accumulate in RI and drive the dose adjustment recommendation.
 
-When not:
-mAbs (>69 kDa)
+:::

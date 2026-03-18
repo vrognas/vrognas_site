@@ -1,0 +1,67 @@
+---
+title: "Mass Balance / ADME studies"
+date: "2026-03-18"
+---
+
+One of the most informative studies for a small molecule -- determines routes and rates of elimination, clearance mechanisms, and circulating metabolites.
+
+## Study design
+
+* Nonrandomized, open-label, **≥6 healthy adult male** subjects, generally single-dose.
+* Small, **radiolabeled dose** (typically ^14^C) to accurately track drug disposition in biological matrices (blood, plasma, urine, feces).
+  * Standard radio dose: ~50--100 µCi (LC-MS profiling).
+  * Alternatively: <1 µCi analyzed by AMS (accelerator mass spectrometry) -- avoids dosimetry requirement.
+* **Dose**: Final intended dose, or at least in the anticipated therapeutic dose range (linear PK range).
+* **Route**: Oral at final intended route.
+  Fit-for-purpose formulation (solution, suspension, or capsule; uniform distribution of unlabeled/radiolabeled drug).
+
+## Timing
+
+Common in Phase 2b; at the latest before initiating Phase 3 (FDA/EMA).
+
+::: {.callout-warning title="Lead time"}
+
+Must be started **≥12 months** ahead of planned dosing date due to radiolabel synthesis, pre-study activities, and limited CRO availability.
+Only a few CROs worldwide can perform this study.
+
+:::
+
+## Pre-study activities
+
+* Synthesis and manufacture of the radioactive drug; stability and purity (>98%) assessment for at least 6 months.
+* **Radiolabel position**: Must be chemically and metabolically stable so the radionuclide is not lost during metabolism.
+  Two separate labeling positions can be used if needed.
+* **QWBA** (quantitative whole-body autoradiography) study in a rodent species for human dosimetry report (required for standard radio doses; not needed for AMS-level doses).
+* Nonclinical mass balance in at least one species (preferably bile-duct cannulated) -- not required but useful to learn about metabolic profiles and radiolabel stability before the human study.
+
+## Sample collection
+
+* **Urine and feces** collected continuously.
+  Aim to recover **>90% of radioactivity**.
+* Consider that the radioactivity half-life is often **much longer** than the parent drug half-life.
+* Stop collection when cumulative radioactivity in urine and feces is **<1% of administered dose** over a 24-hour period on 2 consecutive days.
+* Record the volume of urine, feces' weight, and collection duration for accurate excretion calculations.
+
+## What to measure and characterize
+
+* **Characterize excreted radioactivity** (urine and feces): Identify parent compound and metabolites.
+  Aim to characterize >80% of excreted radioactivity.
+* **Metabolites in Safety Testing (MIST)**: Identify metabolites contributing to **>10% of total plasma radioactivity** AUC.
+  Metabolites with significant plasma exposure or pharmacological activity -- consider DDI liability, plasma protein binding, and safety testing coverage (ICH M12).
+* Construct a **quantitative mass balance diagram** and **metabolic scheme** showing enzymes/transporters involved in pathways accounting for >25% of elimination.
+* If parent drug is found in feces, distinguish between nonabsorbed drug and biliary excretion -- may require an **IV arm** to resolve.
+
+## Key outputs
+
+The mass balance study informs:
+
+* Elimination pathways (renal vs. metabolic vs. biliary).
+* Whether hepatic and/or renal impairment studies are needed.
+* Which enzymes and transporters to investigate for DDI.
+* The regulatory submission (CTD Module 2.7) and SmPC/labeling (sections 4.2 and 5.2).
+
+::: {.callout-warning title="Don't perform this study too late"}
+
+Discovering a unique human metabolite late in development can force expensive repeat of toxicology studies.
+
+:::

@@ -1,0 +1,40 @@
+---
+title: "Drug-drug interaction (DDI) studies *in vivo*"
+date: "2026-03-18"
+---
+
+The drug under investigation can be the **object drug** or the **precipitant drug** in the interaction.
+
+::: {.callout-note title="ICH M12 terminology (2024)"}
+
+ICH M12 (Step 4, May 2024) replaced the older "victim/perpetrator" terminology with **object drug** (the drug whose PK is affected) and **precipitant drug** (the drug causing the interaction).
+
+:::
+
+## Object drug study
+
+Evaluates how another drug affects the PK of the drug under investigation.
+
+* Inhibitor/inducer dosed to steady state (or maximum inhibition); own drug given as a single dose.
+* Measures effect on own drug's PK (AUC, C~max~).
+* Also assess impact on active metabolite formation and elimination.
+
+## Precipitant drug study
+
+Evaluates how the drug under investigation affects the PK of other drugs.
+
+* Own drug dosed to steady state at maximum therapeutic dose; sensitive probe substrate given as a single dose.
+* Measures effect on probe's PK.
+* Cocktail studies (e.g. Geneva expanded cocktail) can assess multiple CYP/transporter pathways simultaneously.
+* Probe sensitivity can be improved by measuring metabolite ratios (e.g. hydroxybupropion for CYP2B6, or pravastatin urine collection to isolate hepatic clearance from renal excretion).
+
+## Study design
+
+* Several designs are possible, including cross-over or parallel groups; single-dose or multi-dose administration.
+
+## Alternatives to dedicated clinical DDI studies
+
+* **Endogenous biomarkers** can provide early DDI signals for certain enzymes and transporters without a dedicated clinical study.
+  No validated biomarkers currently exist for intestinal transporters (P-gp, BCRP, intestinal CYP3A).
+* **Pharmacogenomics** (e.g. CYP or transporter polymorphisms) can inform or replace DDI studies.
+* **PBPK modeling** may be accepted by regulators to waive certain clinical DDI studies, particularly for CYP-mediated interactions.

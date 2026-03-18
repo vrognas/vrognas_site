@@ -98,11 +98,11 @@ Depending on the antimicrobial class, three relevant indices are traditionally d
 * ***f*C~max~/MIC**: Concentration-dependent effect.
 * ***f*T~>MIC~**: Time above MIC. Time-dependent effect.
 
-Decided by plotting log-kill against AUC, and fitting a non-linear (sigmoid) regression.
+Decided by plotting log-kill against AUC, and fitting a nonlinear (sigmoid) regression.
 Highest R^2 decides the index.
 
 ::: {.callout-warning}
-R^2 is used by convention, even though it's not suitable for non-linear regressions.
+R^2 is used by convention, even though it's not suitable for nonlinear regressions.
 :::
 
 These indices help set efficacy targets based on outcomes like bacterial stasis or log reductions in bacterial count.

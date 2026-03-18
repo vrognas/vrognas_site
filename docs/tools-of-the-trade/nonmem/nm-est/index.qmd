@@ -561,7 +561,7 @@ If `IACCEPT=0.0`, and `IACCEPTL` > 0, then a search for the best `IACCEPTL` for 
 7. `DF`: Integer.
 Degrees of freedom for the proposal density.
 Default `DF=0` is normal distribution, else *d.f.* for t-distrubution.
-For very sparse data or highly non-linear posterior densities (such as with categorical data), you may want to set `DF` to somewhere between 2--10.
+For very sparse data or highly nonlinear posterior densities (such as with categorical data), you may want to set `DF` to somewhere between 2--10.
 8. `ISCALE_MIN` and `ISCALE_MAX`: Real.
 Boundaries for the scale factor used to vary the size of the variance of the proposal density in order to meet the `IACCEPT` condition.
 On very rare occasions, the OFV varies widely, and these options may need to be reduced (e.g., `ISCALE_MIN=0.3 ISAMPLE_MAX=3`).
@@ -1229,7 +1229,7 @@ In general, EM tends to perform better than MLE in the following situations:
 Relatively **complex models**, such as:
 
 * Parent-metabolite
-* Non-linear clearance
+* Nonlinear clearance
 * Target-mediated drug disposition (TMDD) [@gibianskyComparisonNonmem722012]
 * Mixture models (`$MIX`)
 * Many covariates (like during FFEM)

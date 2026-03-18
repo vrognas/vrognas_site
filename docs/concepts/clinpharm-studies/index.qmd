@@ -1,11 +1,25 @@
 ---
 title: "Clinical pharmacology studies"
-date: "2026-02-20"
+date: "2026-03-18"
 ---
 
 ::: {.callout-caution title="Under construction"}
+
 * How can Modeling help in each phase?
+
 :::
+
+The clinical pharmacology strategy must be tailored to the molecule's properties:
+
+* Size: Small molecule vs. antibody vs. peptide vs. oligonucleotide
+* Target/mechanism of action
+* Disease and patient population
+* Co-medications (any that are common in the target population?)
+* Safety profile
+* Formulation (e.g., oral vs. parenteral)
+* Commercial product vision
+
+A *Target Product Profile* (TPP) should guide all clinical pharmacology decisions from the start.
 
 ## General clinical study design
 
@@ -27,7 +41,9 @@ date: "2026-02-20"
   * Run-in, active treatment, washout, and follow-up periods
 
 ::: {.callout-tip}
+
 If a cross-over design with a washout period is used, always check that the predose concentration of the second dose is BLQ.
+
 :::
 
 ## Phases of drug development
@@ -43,9 +59,9 @@ They would then receive a letter from him stating, "I tried it out on eight pati
 
 ### An overview of clinical trial "phases"
 
-Most clinical pharmacology studies are Phase 1 studies, during which we **learn** about the drug's PK.
-In Phase 2, we **learn** about the PD of the drug.
-In Phase 3, we **confirm** our efficacy and safety hypotheses in the target population.
+Most clinical pharmacology studies are Phase 1 studies, during which we **learn** about the drug's PK.
+In Phase 2, we **learn** about the PD of the drug.
+In Phase 3, we **confirm** our efficacy and safety hypotheses in the target population.
 
 George Box views scientific progress as consisting of and requiring alternating steps of induction and deduction: the former is learning from experience, and the latter confirms what has been learned.
 A simplified application of this view to clinical drug development would break development into two learn-confirm cycles @fig-cycles.
@@ -53,122 +69,130 @@ A simplified application of this view to clinical drug development would break d
 ![A "Double Diamond" illustrating the two learn-confirm cycles of clinical drug development. After the first cycle, a point is reached where further development is decided upon. Finally, the drug is approved.](../images/learn-confirm-cycles.png){#fig-cycles}
 
 * First cycle (Proof-of-Concept)
-  * Phase 1: **Learn** what is the tolerated dose? (Max tolerated dose?)
-  * Phase 2a: **Confirm** that this dose has the promise of efficacy in a selected group of patients. (Is that dose efficacious?)
+  * Phase 1: **Learn** what is the tolerated dose? (Max tolerated dose?)
+  * Phase 2a: **Confirm** that this dose has the promise of efficacy in a selected group of patients. (Is that dose efficacious?)
 * Decision point: Is there a sufficiently positive indication of efficacy (and lack of toxicity) to justify further development? (Go/No go)
 * Second cycle
-  * Phase 2b: **Learn** how to use the drug in representative patients to make acceptable benefits/risks likely. (Effect on patients?)
-  * Phase 3/4: **Confirm** in a large and representative patient population that acceptable benefit/risk is achieved. (Acceptable B/R-ratio?)
+  * Phase 2b: **Learn** how to use the drug in representative patients to make acceptable benefits/risks likely. (Effect on patients?)
+  * Phase 3/4: **Confirm** in a large and representative patient population that acceptable benefit/risk is achieved. (Acceptable B/R-ratio?)
 * Approval is granted.
-
-### Studies within the phases
 
 ![Clinical pharmacology in drug development and evaluation.](../images/clinpharm-studies.jpg){#fig-clinpharm-studies}
 
 ![Timing of human pharmacology studies.](../images/pharmacology-studies.png){#fig-pharmacology-studies}
 
-#### Phase 1: Human pharmacology
+### Phase 1: Human pharmacology
 
-Data from Phase 1 studies are typically well-controlled and provide clean SDTM input datasets.
+Primary objective: **safety and tolerability**.
 
-##### 👨‍⚕️"First in human" (FIH) PK
+Secondary: **characterize PK profile** (single and repeated dosing), PD/biomarker readout (to predict therapeutic dose range), and establish a dose range.
+Need to reach exposures **higher than therapeutic** to account for potential DDI and organ impairment scenarios later.
 
-  * Single ascending dose (SAD)
-    * Subjects receive a **single dose** of the investigational drug at **one dose level**, with dose escalation in subsequent cohorts.
-    * PK, safety, and/or PD can be of interest. 
-  * Multiple ascending dose (MAD)
-    * Like SAD, but each subject receives **multiple doses** at **one dose level**.
-    * On some dosing occasions, only pre-dose samples might be taken.
-    * Dose-adjustment rules can be in place to achieve desirable safety/efficacy.
+Data from Phase 1 studies are typically well-controlled and provide clean SDTM input datasets.
 
-::: {.callout-note}
-# Combined SAD-MAD studies
+#### 👨‍⚕️ First-in-human (FIH) PK
 
-SAD and MAD studies can be combined under one study, and subjects can participate in both.
-:::
+Single ascending dose (SAD) and multiple ascending dose (MAD) studies in healthy volunteers.
+Starting dose from nonclinical data (NOAEL/MABEL); dose escalation typically 2--3 fold; sentinel dosing (2 subjects first).
+Typical cohort: 6 active + 2 placebo.
+Intensive PK sampling (plasma + urine; >3--5 half-lives), ECGs, PD biomarkers, safety labs, genotyping.
+See the [FIH subpage](fih/index.qmd) for details on dose selection, escalation, sampling, and study design.
 
-##### 🍝Food effect (for oral drugs)
+#### 🍝 Food effect (for oral drugs)
 
-* Typically, a cross-over (fed/fasted), randomized, single-dose (one for each period) in healthy participants.
-  * Similar to bioequivalence (BE) studies.
+Crossover study (fed vs. fasted) to characterize the effect of food on PK.
+Structurally a type of relative BA study -- no predefined acceptance criteria.
+Can be included as a cohort within FIH or run standalone.
+See the [BA/BE subpage](ba-be/index.qmd#food-effect-studies) for details.
 
-##### 💊+💊 Drug-drug interaction (DDI) *in vivo*
+### Phase 2: Therapeutic exploratory
 
-  * Evaluate the effect of co-administration with another drug.
-  * Several study designs are possible in a DDI study, including parallel groups or cross-over designs.
-  * The study can have either single-dose or multi-dose administration. 
+Phase 2/3 studies are performed on patients and often consist of separate study parts/cohorts to investigate multiple scenarios (e.g. different patient populations) in one study.
+In most cases, PD measurements will be part of the analysis (and should be included in the analysis dataset to enable PK-PD evaluations).
+The study design can be very diverse.
+Phase 2/3 studies are less controlled than Phase 1, resulting in unrecorded dosing times, missing laboratory measurements, etc.
 
-##### ☢️ Mass Balance/ADME
+#### ☢️ Mass Balance/ADME
 
-  * Usually single-dose, open-label trials.
-  * Small, radiolabeled dose to accurately track drug elimination in biological matrices (blood, plasma, urine, feces).
-  * Often include metabolite identification and characterization.
-  * Record the volume of urine, feces' weight, and collection duration for accurate excretion calculations.
+Single-dose, open-label, radiolabeled (^14^C) study in ≥6 healthy subjects.
+Determines routes/rates of elimination, clearance mechanisms, and circulating metabolites.
+Common in Phase 2b; ≥12 months lead time required.
+See the [Mass Balance subpage](mass-balance/index.qmd) for details on radiolabeling, collection criteria, MIST, and study outputs.
 
-##### 💊=💊 Bioequivalence (BE)
-
-  * Typically, a cross-over randomized, single-dose (one for each period) in healthy participants.
-  * Between formulations or drug combinations.
-  * Evaluate the rate (Cmax and Tmax) and extent (AUC) of absorption
-
-##### 💓 (T)QT study
-
-  * Identifies medicines that prolong QT and thus need more thorough ECG monitoring in Phase 3 pivotal trials.
-
-##### 🧬 Pharmacogenomics (CYP genotyping)
-
-  * Often include metabolite identification and characterization.
-
-##### 🚮 Organ dysfunction PK
-
-  * Renal impairment (RI)
-    * Subjects are typically separated into parallel cohorts with varying degrees of impairment (normal, mild, moderate, severe).
-    * Impairment is often determined by estimated glomerular filtration rate (eGFR), preferably not using Cockcroft-Gault.
-    * For safety reasons, the dose given to the moderately/severely impaired groups may be lower than that given to the other groups.
-    * PK/PD and safety can be of interest. 
-  * Hepatic impairment (HI)
-    * Similar to RI studies.
-    * Impairment is often determined by Child-Pugh scores or (in oncology) NCI-ODWG scores.
-
-#### Phase 2: Therapeutic exploratory
-
-Phase 2/3 studies are performed on patients and often consist of separate study parts/cohorts to investigate multiple scenarios (e.g., different patient populations) in one study.
-In most cases, PD measurements will be part of the analysis (and should be included in the analysis dataset to enable PK-PD evaluations). The study design can be very diverse. 
-Phase 2/3 studies are less controlled than Phase 1, resulting in unrecorded dosing times, missing laboratory measurements, etc.
-
-##### 🤒 Healthy vs Patient PK/PD
+#### 🤒 Healthy vs Patient PK/PD
 
 * Proof-of-Concept (PoC)
 
-##### 📈 Dose-response
+#### 📈 Dose-response
 
-  * Typically, randomized parallel group studies
-  * Three or more dosage levels, one of which may be zero (placebo).
-  * Including one or more doses of an existing medicine as a control may also be helpful.
-  * As a rule, PoC is tested at the maximum tolerated doses (MTD) or the maximal administered dose if MTD was not defined.
-  * Identify a reasonable starting (minimum effective) dose, ideally with specific adjustments.
-  * Identify response-guided stepwise dose adjustment (titration) and the intervals at which they should be taken.
-  * Identify a dose, or a response (desirable or undesirable), beyond which titration should not ordinarily be attempted because of lack of further benefit or an unacceptable increase in undesirable effect.
-  * Identify optimal dose
+* Typically, randomized parallel group studies.
+* Three or more dosage levels, one of which may be zero (placebo).
+* Including one or more doses of an existing medicine as a control may also be helpful.
+* As a rule, PoC is tested at the maximum tolerated doses (MTD) or the maximal administered dose if MTD was not defined.
+* Identify a reasonable starting (minimum effective) dose, ideally with specific adjustments.
+* Identify response-guided stepwise dose adjustment (titration) and the intervals at which they should be taken.
+* Identify a dose, or a response (desirable or undesirable), beyond which titration should not ordinarily be attempted because of lack of further benefit or an unacceptable increase in undesirable effect.
+* Identify optimal dose.
 
-##### 👩‍👦 Special populations
+### Phase 3: Therapeutic confirmatory
 
-  * Pediatrics
-  * Elderly
-  * Pregnant
-  * Lactating
-  * Obese
-  * Other
+* PK and Exposure-Response (efficacy/safety) in the target population.
 
-#### Phase 3: Therapeutic confirmatory
-
-* PK and Exposure-Response (efficacy/safety) in the target population
-
-#### Phase 4: Post-approval
+### Phase 4: Post-approval
 
 Post-approval studies can, e.g., be studies in new indications.
 
+### Studies spanning multiple phases
+
+#### 💊+💊 Drug-drug interaction (DDI) *in vivo* (Phase 1--3)
+
+Evaluates how the drug under investigation affects or is affected by co-administered drugs.
+Two study types: **object drug** (own drug's PK affected by inhibitor/inducer) and **precipitant drug** (own drug affects probe substrate PK).
+Endogenous biomarkers and pharmacogenomics can sometimes replace dedicated clinical studies.
+See the [DDI subpage](ddi/index.qmd) for details on study design, probe selection, and alternatives.
+
+#### 💊=💊 Bioavailability (BA) and bioequivalence (BE) (Phase 1--post-approval)
+
+Formulation bridging studies with increasing confidence as development progresses.
+**Relative BA** (early development): effect estimation, no predefined boundaries.
+**Bioequivalence** (pivotal/post-approval): 90% CI of GMR within 0.80--1.25.
+See the [BA/BE subpage](ba-be/index.qmd) for details on study design, fasted/fed requirements, and biowaivers.
+
+#### 💓 (T)QT study (Phase 1--2)
+
+Regulatory requirement (ICH E14) to assess QT prolongation risk for all small molecules with systemic exposure.
+Large targeted proteins and mAbs are generally exempt.
+Options range from a standalone Thorough QT (TQT) study, to Concentration-QTc (C-QTc) modeling built into SAD/MAD, to a "double negative" waiver (negative hERG + negative in vivo CV).
+See the [QT prolongation subpage](qt/index.qmd) for details.
+
+#### 🧬 Pharmacogenomics (all phases)
+
+Genotyping of drug-metabolizing enzymes (e.g. CYP2D6, CYP2C19) and transporters (e.g. OATP1B1) throughout development.
+Used to explain PK variability, identify poor/rapid metabolizers, inform dose adjustments, and can sometimes replace dedicated DDI studies.
+Samples are typically collected in FIH and carried forward into later phases.
+
+#### 🚮 Organ impairment PK (Phase 2--3)
+
+Parallel-group studies in subjects with varying degrees of organ impairment vs. matched healthy controls.
+Full, reduced, or adaptive/staggered designs.
+Measure unbound drug if high protein binding; include PD markers when possible.
+
+* [Renal impairment (RI)](renal-impairment-studies/index.qmd) -- classified by GFR; required when f~e~ >30% (FDA), but even non-renally cleared drugs should consider severe RI.
+* [Hepatic impairment (HI)](hepatic-impairment-studies/index.qmd) -- classified by Child-Pugh (or NCI-ODWG in oncology); required when hepatic elimination >20% (FDA).
+
+#### 👩‍👦 Special populations (Phase 3--4)
+
+PK studies in populations not adequately represented in the main clinical program.
+Often required for regulatory approval even if the primary indication is in adults.
+
+* Pediatrics -- required if seeking an adult indication (pediatric investigation plan / IPSP).
+* Elderly
+* Pregnant
+* Lactating -- required even for large molecules.
+* Obese
+* Ethnic bridging (Japanese/Chinese PK) -- see [FIH subpage](fih/index.qmd) for ethnic PK requirements.
+
 ## References
 
-* https://www.wma.net/policies-post/wma-declaration-of-helsinki/
-* https://www.ich.org/page/efficacy-guidelines
+* <https://www.wma.net/policies-post/wma-declaration-of-helsinki/>
+* <https://www.ich.org/page/efficacy-guidelines>

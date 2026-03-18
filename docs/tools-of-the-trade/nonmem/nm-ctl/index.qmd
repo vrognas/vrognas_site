@@ -24,7 +24,7 @@ On the website you'll find example code for various absorption models including:
 * Transit compartments
 
 * Linear clearance models
-* Non-linear clearance models
+* Nonlinear clearance models
 * Time varying clearance models
 * Various interaction models
 

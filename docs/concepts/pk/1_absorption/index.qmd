@@ -50,14 +50,22 @@ $$
   \right)
 $$
 
-![Oral absorption.](../images/absorption.png){#fig-absorption}
+![Oral absorption.](../../images/absorption.png){#fig-absorption}
+
+## Biopharmaceutics Classification System (BCS) {#sec-bcs}
+
+The BCS classifies oral drugs by solubility and intestinal permeability.
+High solubility: highest single therapeutic dose dissolves in ≤250 mL aqueous media across pH 1.2--6.8 at 37°C.
+BCS-based biowaivers (ICH M9) allow in vitro dissolution testing to substitute for in vivo bioequivalence studies for class 1 and class 3 drugs.
+
+![Biopharmaceutical Classification System (BCS).](../../images/bcs.png){#fig-bcs}
 
 ## Enterohepatic recirculation
 
 @fig-enterohepatic-recirculation depicts enterohepatic recirculation, which can also influence bioavailability.
 If a drug exhibits enterohepatic recirculation, it is common to see two or more absorption "peaks".
 
-![Enterohepatic recirculation.](../images/enterohepatic-recirculation.png){#fig-enterohepatic-recirculation}
+![Enterohepatic recirculation.](../../images/enterohepatic-recirculation.png){#fig-enterohepatic-recirculation}
 
 ## References
 

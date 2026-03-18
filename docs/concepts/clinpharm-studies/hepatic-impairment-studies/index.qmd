@@ -12,6 +12,10 @@ A pharmacokinetic (PK) study in subjects with hepatic impairment (HI) is recomme
 * HI is likely to significantly alter the PK (especially metabolism and biliary excretion) of the drug and/or its active metabolites and
 * A posology adjustment may be needed for such patients taking into account the PK/PD relationship.
 
+As a quantitative trigger: FDA recommends a study when hepatic metabolism and/or biliary excretion accounts for **>20%** of elimination of parent drug or active metabolite.
+EMA has no fixed cutoff but recommends a study when HI is likely to significantly alter PK.
+Always required for **narrow therapeutic index** drugs.
+
 No obvious marker exists for characterising hepatic function with respect to prediction of drug elimination capacity, in contrast to renal impairment (RI).
 Therefore, dose recommendations may not be as accurate for HI as they can be for RI.
 Therefore, one of the primary aims of studies in patients with HI might be to identify patients at risk.
@@ -64,3 +68,25 @@ Even subjects with a normal hepatic function are given a total score of 5 points
 | C     | Severe   | 10--15                |
 
 : Hepatic impairment groups {#tbl-hi}
+
+FDA/EMA recommend **Child-Pugh** for dedicated HI PK studies (in non-cancer subjects).
+**NCI-ODWG** is commonly used in cancer patient studies -- it uses only bilirubin and AST (no subjective assessments like ascites or encephalopathy), making it simpler and more consistent across sites.
+However, NCI-ODWG tends to classify patients as **less impaired** than Child-Pugh (~65--74% of Child-Pugh mild/moderate/severe patients are classified at least one category lower by NCI) [@elmeliegyClinicalPharmacologyDiscordanceBetweenChildPugh2021].
+When Child-Pugh is used for study enrollment, FDA recommends also conducting exploratory PK analyses based on NCI classification.
+
+## Study design
+
+* **Full design**: Mild, moderate, and severe HI groups + matched healthy controls.
+* **Adaptive/staggered design**: Start with moderate HI + matched controls; if a significant PK effect is detected, extend to include mild and/or severe groups.
+* **Reduced design**: Moderate HI + matched controls only.
+  If no PK difference, extrapolate.
+  However, this precludes dosing recommendations in severe HI.
+* Ensure spread within each Child-Pugh class (not all subjects at the same score).
+
+::: {.callout-tip title="Practical tips"}
+
+* **Measure unbound drug** if the drug has high or nonlinear plasma protein binding -- total concentrations may be misleading in HI (albumin is often reduced).
+* **Include a PD marker** when possible: if PK changes but PD does not, dose adjustment may be unnecessary.
+* **Measure active metabolites**: they may accumulate differently than parent and may drive the dose adjustment recommendation.
+
+:::

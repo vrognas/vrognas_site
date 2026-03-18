@@ -1,0 +1,55 @@
+---
+title: "First-in-human (FIH) studies"
+date: "2026-03-18"
+---
+
+Primary objective: **safety and tolerability**.
+Secondary: characterize PK profile (single and repeated dosing), PD/biomarker readout (to predict therapeutic dose range), and establish a dose range.
+Need to reach exposures **higher than therapeutic** to account for potential DDI and organ impairment scenarios later.
+
+## Starting dose
+
+Derived from nonclinical data:
+
+* NOAEL (No Observed Adverse Effect Level) with allometric scaling.
+* MABEL (Minimum Anticipated Biological Effect Level) -- preferred when pharmacology-driven toxicity is expected.
+* PKPD, PBPK, and/or QSP modeling to predict human PK and target exposures.
+
+## Dose escalation
+
+Typically 2--3 fold between cohorts, adjusted for nonlinearity of PK and steepness of the dose-response curve.
+
+## Sentinel dosing
+
+Dose 2 subjects first (1 active, 1 placebo), observe through C~max~, evaluate safety, then dose the remaining cohort.
+
+## Single ascending dose (SAD)
+
+* Subjects receive a **single dose** of the investigational drug at **one dose level**, with dose escalation in subsequent cohorts.
+* Typical cohort: 6 active + 2 placebo.
+* Target exposures **above the expected therapeutic dose** to cover later TQT assessment and DDI/organ impairment-related exposure increases.
+* **Sampling**: Intensive PK (plasma + urine; >3--5 half-lives to capture full elimination).
+  Can sometimes include triplicate ECGs timed with PK (especially around C~max~), PD biomarkers, safety labs, genotyping, and samples for metabolite profiling.
+
+## Multiple ascending dose (MAD)
+
+* Like SAD, but each subject receives **multiple doses** at **one dose level**.
+* Essential for detecting time-dependent PK and accumulation.
+* On some dosing occasions, only pre-dose (trough) samples might be taken.
+* Dose-adjustment rules can be in place to achieve desirable safety/efficacy.
+
+::: {.callout-note title="Combined SAD-MAD studies"}
+
+SAD and MAD studies can be combined under one study, and subjects can participate in both.
+
+:::
+
+## Planning considerations
+
+::: {.callout-tip title="FIH planning"}
+
+* **Validated PK and PD assays** must be in place before starting -- these can take months to develop and validate.
+* **Predefined stopping rules** at trial, cohort, and individual subject level (e.g. liver signals, cardiac events, renal markers, severe AEs).
+* Protocols must be flexible enough to add/remove cohorts or adjust dose levels without amendments.
+
+:::

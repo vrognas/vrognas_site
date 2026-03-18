@@ -9,7 +9,7 @@ The cardiac conduction system (CCS, also called the electrical conduction system
 * **QRS-complex**: depolarization of the chambers.
 * **ST-segment** and **T-wave**: repolarization of the chambers (return to "normal").
 
-![ECG of a heart in normal sinus rhythm.](../images/SinusRhythmLabels.svg)
+![ECG of a heart in normal sinus rhythm.](../../images/SinusRhythmLabels.svg)
 
 ## Causes of QT-prolongation
 
@@ -19,7 +19,7 @@ The cardiac conduction system (CCS, also called the electrical conduction system
 
 * Can in rare cases lead to fainting or death through **torsades de pointes (TdP)**, french for "twisting of peaks".
 
-![Torsade de pointes ("twisting of peaks").](../images/tdp.avif)
+![Torsade de pointes ("twisting of peaks").](../../images/tdp.avif)
 
 ::: {.callout-note}
 QT-prolongation ≠ risk for TdP
@@ -27,7 +27,7 @@ QT-prolongation ≠ risk for TdP
 There are more factors needed for TdP, e.g. "early afterdepolarizations".
 :::
 
-* QT-time is affected by heat rate: Corrected QTc-time (Bazetts and Fridericia's formulas)
+* QT-time is affected by heart rate: Corrected QTc-time (Bazetts and Fridericia's formulas)
 
 $$
 \begin{aligned}
@@ -46,22 +46,23 @@ $$
 
 ### How to perform the study
 
-* The study is *typically* carried out in **healthy volunteers**
-* Well controlled; **positive control group** recommended (assay sensitivity)
-* **Crossover or parallel** group study designs
-* Timing of the collection of ECGs and the study design (e.g., single or multiple dose, duration) should be guided by PK.
-For drugs with short half-lives and no metabolites, a single dose study might be sufficient.
+* Randomized, **double-blind**, **placebo- and positive-controlled** (typically moxifloxacin), **crossover** in **healthy volunteers**.
+* **Dosing**: Therapeutic and supratherapeutic doses (usually 2--3 fold higher exposure, AUC and/or C~max~).
+* **Sample size**: 40--60 subjects, dependent on variability and crossover design.
+* **Endpoint**: Change from baseline in QTc (QT interval corrected for heart rate), using time-matched comparisons.
+  Upper bound of the two-sided **90% CI** for the mean difference vs. placebo must be **below 10 ms**.
+* Timing of ECG collection and study design (single or multiple dose, duration) should be guided by PK.
+  For drugs with short half-lives and no metabolites, a single dose study might be sufficient.
 * Studies should characterize the effect of a drug on the QT/QTc throughout the dosing interval.
-* Dose-response and generally the concentration-response for QT/QTc prolongation should be characterized
-* **The drug should be tested at substantial multiples of the anticipated maximum therapeutic exposure**, unless there are other safety/tolerability concerns.
-* The QT/QTc interval data should be presented both as analyses of central tendency (e.g., means, medians) and categorical analyses.
+* Dose-response and generally the concentration-response for QT/QTc prolongation should be characterized.
+* The QT/QTc interval data should be presented both as analyses of central tendency (e.g. means, medians) and categorical analyses.
 
 ## Concentration-QTc (C-QTc) study
 
 A well-designed and conducted QTc assessment based on C-QTc modeling in early phase 1 studies can be an alternative approach to a thorough QT study for some drugs to reliably exclude clinically relevant QTc effects.
 
 Aim is to assess drug effect on heart repolarization (same as a TQT-study).
-A C-QT study can be samller than a TQT-study, since all data from all doses can be used.
+A C-QT study can be smaller than a TQT-study, since all data from all doses can be used.
 Does not need to be a separate dedicated study.
 Can measure e.g. ECG during Phase 1.
 
@@ -71,12 +72,20 @@ Usually done early (Phase 1), to answer the question "what intensity of ECG-moni
 
 SAD/MAD data are well suited for early assessment of C-QTc.
 
-* Sample size---usually 4--8 persons per dose cohort + 2--4 persons getting placebo
-  * Placebo makes it possible to rule out small QTc effects, allows detection of circadian rythms in QTc-data
-* Baseline ECG
-* Positive control is usually missing---demands the study of high exposures
-  * 2 times maximal therapeutic exposure
-* Data from several studies are not recommended where bias can be introduced
+* **Frequent Holter ECGs** matched with PK sampling, especially around C~max~.
+* Must cover an adequate (supratherapeutic) exposure range and be prespecified with reliable analysis.
+* Must account for DDI and hepatic impairment worst-case exposures.
+* Sample size -- usually 4--8 persons per dose cohort + 2--4 persons getting placebo.
+  * Placebo makes it possible to rule out small QTc effects, allows detection of circadian rhythms in QTc data.
+* Baseline ECG.
+* Positive control is usually missing -- demands the study of high exposures.
+  * 2 times maximal therapeutic exposure.
+* Data from several studies are not recommended where bias can be introduced.
+
+## "Double negative" waiver
+
+If the in vitro **hERG assay** and in vivo **cardiovascular study** (e.g. telemetry) are both negative, a clinical QT study may be waived entirely.
+Requires health authority agreement.
 
 ## References
 

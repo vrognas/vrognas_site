@@ -1,0 +1,91 @@
+---
+title: "Bioavailability (BA) and bioequivalence (BE) studies"
+date: "2026-03-18"
+---
+
+Formulations change across development:
+
+1. Solution/capsule-in-envelope (Phase 1)
+2. Tablet/capsule (Phase 2)
+3. Commercial formulation (Phase 3/launch)
+4. Post-approval changes.
+
+Each switch may require a bridging study, with **increasing confidence required** as development progresses.
+Clinical studies are the primary tool for managing formulation changes, but other methods exist (e.g. in vitro dissolution-based biowaivers).
+
+## Absolute bioavailability (F~abs~)
+
+Compares oral (or other extravascular) administration to an IV reference.
+Gives the true fraction of dose reaching systemic circulation.
+Should be determined for new active substances intended for systemic action.
+Important for interpreting mass balance data (distinguishing incomplete absorption from first-pass metabolism), evaluating elimination route contributions, and supporting BCS-based biowaivers.
+When no IV formulation is available, an IV microdose can sometimes be used.
+
+## Relative bioavailability (F~rel~)
+
+Compares two extravascular formulations.
+Used in early development (Phase 1--2b) when formulations change.
+
+## BA vs. BE: the key distinction
+
+Both BE and relative BA studies share the same objective, design, and statistical analysis (comparing AUC and C~max~ via the geometric mean ratio (GMR) and its 90% CI).
+The key distinction:
+
+* **Relative BA**: GMR and 90% CI reported **without pre-defined boundaries** (effect estimation).
+* **Bioequivalence**: GMR and 90% CI must fall **within pre-defined boundaries** (generally 0.80--1.25).
+
+BE demonstrates that two formulations deliver the drug at the same **rate** and **extent** of absorption:
+
+* **Rate of absorption** is estimated by C~max~ (and t~max~).
+* **Extent of absorption** is estimated by AUC.
+
+## When to conduct BE
+
+* New formulation vs. marketed product (generics, line extensions, fixed-dose combinations).
+* Post-approval changes to a marketed product (new excipient composition/supplier, new equipment, new manufacturing site).
+* Comparators reformulated for blinding in pivotal clinical studies.
+* Marketed formulation vs. formulation used in pivotal clinical studies ("BE-like").
+
+## BE study design
+
+* 90% CI of the GMR (test/reference) for AUC and C~max~ must fall within **0.80--1.25**.
+
+::: {.callout-note title="Why 0.80--1.25?" collapse="true"}
+
+The acceptance range appears asymmetric on the original scale but is **symmetric on the log scale**: ln(0.80) ≈ −0.223 and ln(1.25) ≈ +0.223.
+PK parameters are log-normally distributed, so statistical analysis is performed on log-transformed data.
+The ±20% threshold is based on the assumption that differences in systemic exposure smaller than 20% are not clinically significant for most drugs.
+
+:::
+
+* Randomized, two-way crossover, single dose.
+  The number of subjects with evaluable data should not be less than 12 for a crossover design or less than 12 per treatment group for a parallel design (ICH M13A).
+  Actual sample size based on a power calculation.
+* **Replicate design** for highly variable drugs (intra-subject CV >30%).
+* **BCS class 1 and class 3** drugs may qualify for biowaivers (in vitro dissolution-based BE).
+  See [BCS (Biopharmaceutics Classification System)](../../pk/1_absorption/index.qmd#sec-bcs) for the solubility/permeability classification that underpins biowaivers.
+* A **biowaiver** for lower strengths may be applied if formulations are proportionally similar (immediate-release and multiple-unit modified-release formulations only).
+* **Sampling**: ≥12 blood samples per subject; <20% of AUC extrapolated; adequate density around t~max~.
+  Analyte: parent drug (even for prodrugs).
+  PK analysis: non-compartmental analysis (NCA) of AUC and C~max~.
+
+## Food effect studies
+
+Characterizes the effect of food on the PK of an oral drug to inform dosing recommendations (e.g. "take with or without food", dose adjustments).
+Structurally a type of relative BA study -- same formulation under two conditions (fed vs. fasted) with no predefined acceptance criteria.
+
+* Randomized, single-dose, two-period crossover (fed vs. fasted), in healthy participants.
+* Fed condition: high-fat (~50% of calories), high-calorie (~800--1000 kcal) standardized meal; dose 30 minutes after start of meal.
+* Fasted condition: overnight fast ≥10 hours; water allowed until 1 hour before dosing.
+* The result informs labeling (e.g. no food restriction, take with food, avoid with high-fat meals).
+* Can be included as a cohort within the FIH study or run as a standalone study.
+* Minimum 12 evaluable subjects (FDA).
+
+## Fasted vs. fed BE studies (ICH M13A)
+
+* A fasting study provides the greatest discrimination between formulations and is sufficient for **most immediate-release (IR)** products.
+* Both fasted and fed studies are required for:
+  * **High-risk IR** products (solid dispersions, lipid-based, nanotech, or other specialized formulations).
+  * **Modified-release (MR)** formulations (e.g. extended-release, delayed-release).
+* A **fed-only** study is acceptable when the product is labelled "take with food only" (e.g. for tolerability reasons).
+* Fed condition: high-calorie (~800--1000 kcal), high-fat (~50% of calories) standardized meal; dose 30 minutes after start of meal.

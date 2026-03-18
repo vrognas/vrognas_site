@@ -47,7 +47,7 @@ Anything more is not realistically sustainable, and less than that is probably a
 * **Plan, do, then re-evaluate (Reflection-on-action).**
 However, you must distinguish between **Linear** and **Nonlinear** work:
   * *Linear:* Predictable recipe-following. You can plan completely.
-  * *Non-linear:* Unpredictable variables. Every action changes the situation.
+  * *Nonlinear:* Unpredictable variables. Every action changes the situation.
 Also practice "reflection-in-action"—the ability to adjust your approach *while* you are doing the work, rather than just reviewing it after the fact.
 * **Plan only ~75% of your working time.**
 Allow space for unforeseen tasks and creative exploration.
