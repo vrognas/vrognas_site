@@ -136,11 +136,27 @@ See the [Mass Balance subpage](mass-balance/index.qmd) for details on radiolabel
 
 ### Phase 3: Therapeutic confirmatory
 
-* PK and Exposure-Response (efficacy/safety) in the target population.
+By Phase 3, the clinical pharmacology development is largely complete.
+All preceding studies (FIH, DDI, organ impairment, BA/BE, mass balance, QT, etc.) have informed the dose, formulation, and labeling strategy.
+The pivotal trial provides the **conclusive evidence** of efficacy and safety in the target population at the final dose.
+
+PK sampling is typically sparse (population PK).
+Phase 3 data characterizes PK in the target population and feeds the regulatory submission and labeling:
+
+* PK parameters for the label: half-life, clearance (CL), volume of distribution (V~d~), bioavailability (F).
+* Exposure-response relationships for efficacy and safety.
+* Covariate effects (body weight, age, sex, race, organ function, concomitant medications).
+* Data feeds CTD Module 2.7 and SmPC/labeling (sections 4.2 and 5.2).
+
+PK is seldom a reason for regulatory rejection.
+If the benefit/risk ratio (efficacy/safety) is positive, it is usually grounds for approval.
 
 ### Phase 4: Post-approval
 
-Post-approval studies can, e.g., be studies in new indications.
+* Post-marketing commitments/requirements (PMC/PMR).
+* Studies in new indications or new populations.
+* Label updates based on real-world data.
+* Safety surveillance.
 
 ### Studies spanning multiple phases
 

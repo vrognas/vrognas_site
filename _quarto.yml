@@ -125,14 +125,22 @@ website:
             - section: "Clinical studies"
               href: docs/concepts/clinpharm-studies/index.qmd
               contents:
-                - text: "Data standards"
-                  href: docs/concepts/clinpharm-studies/cdisc/index.qmd
+                - text: "First-in-human (FIH)"
+                  href: docs/concepts/clinpharm-studies/fih/index.qmd
+                - text: "Mass Balance / ADME"
+                  href: docs/concepts/clinpharm-studies/mass-balance/index.qmd
+                - text: "Drug-drug interactions (DDI)"
+                  href: docs/concepts/clinpharm-studies/ddi/index.qmd
+                - text: "Bioavailability / Bioequivalence"
+                  href: docs/concepts/clinpharm-studies/ba-be/index.qmd
+                - text: "QT-prolongation"
+                  href: docs/concepts/clinpharm-studies/qt/index.qmd
                 - text: "Hepatic impairment (HI)"
                   href: docs/concepts/clinpharm-studies/hepatic-impairment-studies/index.qmd
                 - text: "Renal impairment (RI)"
                   href: docs/concepts/clinpharm-studies/renal-impairment-studies/index.qmd
-                - text: "QT-prolongation"
-                  href: docs/concepts/clinpharm-studies/qt/index.qmd
+                - text: "Data standards"
+                  href: docs/concepts/clinpharm-studies/cdisc/index.qmd
     - id: guilds
       title: "Community Compendium"
       collapse-level: 2
