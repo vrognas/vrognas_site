@@ -140,5 +140,10 @@
 /categories/*                                       /                                               410
 /docs/how-tos/*                                     /                                               410
 
+# CLAUDE.md is excluded from rendering; tell bots to stop trying
+/CLAUDE.html                                        /                                               410
+/CLAUDE                                             /                                               410
+/claude                                             /                                               410
+
 # Google auto-generated search URL (no search functionality on this site)
 /search                                             /                                               301
