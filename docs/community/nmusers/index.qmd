@@ -9,6 +9,8 @@ It is maintained by ICON Clinical Research LLC, and has been running since at le
 The mail archive can be accessed here: [https://www.mail-archive.com/nmusers@globomaxnm.com/](https://www.mail-archive.com/nmusers@globomaxnm.com/).
 It was previously hosted at `https://www.cognigen.com/nonmem/nm/`.
 
+A searchable archive of 12,600+ messages from 1995 to present is available at [nmusers.vrognas.com](https://nmusers.vrognas.com).
+
 NMusers has an RSS-feed: [https://www.mail-archive.com/nmusers@globomaxnm.com/maillist.xml](https://www.mail-archive.com/nmusers@globomaxnm.com/maillist.xml)
 
 ## Subscribe
