@@ -22,13 +22,14 @@
   force = true
   conditions = { Host = ["www.vrognas.com"] }
 
-## Redirect the Netlify default subdomain to apex (prevents duplicate-content indexing)
+## Redirect the Netlify default subdomain to apex (prevents duplicate-content indexing).
+## Netlify's own *.netlify.app host is not matched by a Host condition, so the
+## origin host must be given in the `from` URL itself.
 [[redirects]]
-  from = "/*"
+  from = "https://vrognas.netlify.app/*"
   to = "https://vrognas.com/:splat"
   status = 301
   force = true
-  conditions = { Host = ["vrognas.netlify.app"] }
 
 ## Legacy blog redirect
 [[redirects]]
