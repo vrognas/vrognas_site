@@ -7,10 +7,10 @@ project:
     - "!CLAUDE.md"
   post-render:
     - scripts/fix-sitemap.py
-    - scripts/fix-canonical.py
 
 resources:
   - images/seedling_tiny_ps.svg
+  - images/vrognas_full.png # referenced by the Person JSON-LD in seo.html
   - robots.txt
   - _redirects
 

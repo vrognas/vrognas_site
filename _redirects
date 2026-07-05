@@ -64,10 +64,34 @@
 /docs/concepts/augmented-renal-clearance/*   /docs/concepts/pk/augmented-renal-clearance/:splat  301
 
 # "disease-primers" renamed to "pathology-primers"
-/docs/disease-primers/*                             /docs/pathology-primers/:splat                  301
+# Re-categorized diseases map straight to their final destination (avoids 2-hop chains
+# through the category rules above); the trailing wildcard catches the rest (e.g. diabetes)
+/docs/disease-primers/giant-cell-arteritis/*   /docs/pathology-primers/autoimmune/giant-cell-arteritis/:splat  301
+/docs/disease-primers/psoriasis/*              /docs/pathology-primers/autoimmune/psoriasis/:splat             301
+/docs/disease-primers/rheumatoid-arthritis/*   /docs/pathology-primers/autoimmune/rheumatoid-arthritis/:splat  301
+/docs/disease-primers/hiv/*                    /docs/pathology-primers/viral/hiv/:splat                        301
+/docs/disease-primers/bacterial-infection/*    /docs/pathology-primers/bacterial/bacterial-infection/:splat    301
+/docs/disease-primers/tuberculosis/*           /docs/pathology-primers/bacterial/tuberculosis/:splat           301
+/docs/disease-primers/lung-cancer/*            /docs/pathology-primers/cancer/lung-cancer/:splat               301
+/docs/disease-primers/skin-cancer/*            /docs/pathology-primers/cancer/skin-cancer/:splat               301
+/docs/disease-primers/alzheimer/*              /docs/pathology-primers/neurological/alzheimer/:splat           301
+/docs/disease-primers/parkinson/*              /docs/pathology-primers/neurological/parkinson/:splat           301
+/docs/disease-primers/schizophrenia/*          /docs/pathology-primers/neurological/schizophrenia/:splat       301
+/docs/disease-primers/*                        /docs/pathology-primers/:splat                                  301
 
-# "references/disease-primer" was an incorrect path variant
-/docs/references/disease-primer/*                   /docs/pathology-primers/:splat                  301
+# "references/disease-primer" was an incorrect path variant (same de-chaining as above)
+/docs/references/disease-primer/giant-cell-arteritis/*   /docs/pathology-primers/autoimmune/giant-cell-arteritis/:splat  301
+/docs/references/disease-primer/psoriasis/*              /docs/pathology-primers/autoimmune/psoriasis/:splat             301
+/docs/references/disease-primer/rheumatoid-arthritis/*   /docs/pathology-primers/autoimmune/rheumatoid-arthritis/:splat  301
+/docs/references/disease-primer/hiv/*                    /docs/pathology-primers/viral/hiv/:splat                        301
+/docs/references/disease-primer/bacterial-infection/*    /docs/pathology-primers/bacterial/bacterial-infection/:splat    301
+/docs/references/disease-primer/tuberculosis/*           /docs/pathology-primers/bacterial/tuberculosis/:splat           301
+/docs/references/disease-primer/lung-cancer/*            /docs/pathology-primers/cancer/lung-cancer/:splat               301
+/docs/references/disease-primer/skin-cancer/*            /docs/pathology-primers/cancer/skin-cancer/:splat               301
+/docs/references/disease-primer/alzheimer/*              /docs/pathology-primers/neurological/alzheimer/:splat           301
+/docs/references/disease-primer/parkinson/*              /docs/pathology-primers/neurological/parkinson/:splat           301
+/docs/references/disease-primer/schizophrenia/*          /docs/pathology-primers/neurological/schizophrenia/:splat       301
+/docs/references/disease-primer/*                        /docs/pathology-primers/:splat                                  301
 
 # R tips page had incorrect path (missing 'r-' prefix)
 /docs/tools-of-the-trade/r/tips-n-tricks            /docs/tools-of-the-trade/r/r-tips-n-tricks/     301
@@ -112,11 +136,11 @@
 # nm-run.html never existed - redirect to main NONMEM tools page
 /docs/tools-of-the-trade/nonmem/nm-run.html     /docs/tools-of-the-trade/                   301
 
-## Modeling pages
-/docs/modeling/pkpd/pkpd.html                   /docs/modeling/pkpd/pkpd/                   301
-/docs/modeling/pk/pk.html                       /docs/modeling/pk/pk/                       301
-/docs/modeling/pd/pd.html                       /docs/modeling/pd/pd/                       301
-/docs/modeling/tte/tte.html                     /docs/modeling/tte/tte/                     301
+## Modeling pages (target the flattened dirs directly — the old nested dirs are themselves redirected)
+/docs/modeling/pkpd/pkpd.html                   /docs/modeling/pkpd/                        301
+/docs/modeling/pk/pk.html                       /docs/modeling/pk/                          301
+/docs/modeling/pd/pd.html                       /docs/modeling/pd/                          301
+/docs/modeling/tte/tte.html                     /docs/modeling/tte/                         301
 /docs/modeling/gof/gof-cts.html                 /docs/modeling/gof/gof-cts/                 301
 /docs/modeling/gof/gof-cat.html                 /docs/modeling/gof/gof-cat/                 301
 
