@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "M: Musculo-skeletal system"
 date: "2026-02-08"
 ---

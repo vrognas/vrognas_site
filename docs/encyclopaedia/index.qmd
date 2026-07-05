@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Encyclopædia Pharmacometrika"
 description: "Comprehensive pharmacometrics reference covering PK/PD concepts, modeling techniques, drug information, and regulatory guidance."
 ---

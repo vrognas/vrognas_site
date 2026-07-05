@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Zsh"
 date: "2026-02-20"
 ---

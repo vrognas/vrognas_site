@@ -1,3 +1,8 @@
+---
+title: "L01FX: Other monoclonal antibodies and antibody-drug conjugates"
+draft: true
+---
+
 # Blinatumumab
 
 * Very short half-life, 2h, 28d 24/7 cts inf. in a backpack.

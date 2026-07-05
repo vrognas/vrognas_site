@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "G: Genito-urinary system and sex hormones"
 date: "2026-02-08"
 ---

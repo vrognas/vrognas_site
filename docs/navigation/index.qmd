@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Novice's Navigation"
 description: "Getting started in pharmacometrics: career paths, training courses, workshops, and mentoring resources for beginners."
 ---

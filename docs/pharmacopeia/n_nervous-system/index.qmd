@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "N: Nervous system"
 date: "2026-02-08"
 ---
