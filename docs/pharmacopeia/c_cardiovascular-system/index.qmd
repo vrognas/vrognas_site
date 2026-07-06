@@ -1,5 +1,18 @@
 ---
-draft: true
-title: "Cardio"
+title: "C: Cardiovascular system"
 date: "2026-02-08"
 ---
+
+| Level 2 code | Description |
+| ---: | :--- |
+| C01 | Cardiac therapy |
+| C02 | Antihypertensives |
+| C03 | Diuretics |
+| C04 | Peripheral vasodilators |
+| C05 | Vasoprotectives |
+| C07 | Beta blocking agents |
+| C08 | Calcium channel blockers |
+| C09 | Agents acting on the renin-angiotensin system |
+| C10 | Lipid modifying agents |
+
+: ATC C level 2 codes {#tbl-atc-c-lvl-2 tbl-colwidths="[20, 80]"}

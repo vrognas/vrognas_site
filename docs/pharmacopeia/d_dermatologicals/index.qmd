@@ -1,5 +1,20 @@
 ---
-draft: true
 title: "D: Dermatologicals"
 date: "2026-02-08"
 ---
+
+| Level 2 code | Description |
+| ---: | :--- |
+| D01 | Antifungals for dermatological use |
+| D02 | Emollients and protectives |
+| D03 | Preparations for treatment of wounds and ulcers |
+| D04 | Antipruritics, incl. antihistamines, anesthetics, etc. |
+| D05 | Antipsoriatics |
+| D06 | Antibiotics and chemotherapeutics for dermatological use |
+| D07 | Corticosteroids, dermatological preparations |
+| D08 | Antiseptics and disinfectants |
+| D09 | Medicated dressings |
+| D10 | Anti-acne preparations |
+| D11 | Other dermatological preparations |
+
+: ATC D level 2 codes {#tbl-atc-d-lvl-2 tbl-colwidths="[20, 80]"}

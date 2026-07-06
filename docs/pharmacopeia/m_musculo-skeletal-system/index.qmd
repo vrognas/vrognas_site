@@ -1,5 +1,15 @@
 ---
-draft: true
 title: "M: Musculo-skeletal system"
 date: "2026-02-08"
 ---
+
+| Level 2 code | Description |
+| ---: | :--- |
+| M01 | Antiinflammatory and antirheumatic products |
+| M02 | Topical products for joint and muscular pain |
+| M03 | Muscle relaxants |
+| M04 | Antigout preparations |
+| M05 | Drugs for treatment of bone diseases |
+| M09 | Other drugs for disorders of the musculo-skeletal system |
+
+: ATC M level 2 codes {#tbl-atc-m-lvl-2 tbl-colwidths="[20, 80]"}

@@ -1,5 +1,18 @@
 ---
-draft: true
 title: "V: Various"
 date: "2026-02-08"
 ---
+
+| Level 2 code | Description |
+| ---: | :--- |
+| V01 | Allergens |
+| V03 | All other therapeutic products |
+| V04 | Diagnostic agents |
+| V06 | General nutrients |
+| V07 | All other non-therapeutic products |
+| V08 | Contrast media |
+| V09 | Diagnostic radiopharmaceuticals |
+| V10 | Therapeutic radiopharmaceuticals |
+| V20 | Surgical dressings |
+
+: ATC V level 2 codes {#tbl-atc-v-lvl-2 tbl-colwidths="[20, 80]"}

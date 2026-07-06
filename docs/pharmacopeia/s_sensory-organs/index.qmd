@@ -1,5 +1,12 @@
 ---
-draft: true
 title: "S: Sensory organs"
 date: "2026-02-08"
 ---
+
+| Level 2 code | Description |
+| ---: | :--- |
+| S01 | Ophthalmologicals |
+| S02 | Otologicals |
+| S03 | Ophthalmological and otological preparations |
+
+: ATC S level 2 codes {#tbl-atc-s-lvl-2 tbl-colwidths="[20, 80]"}

@@ -1,3 +1,17 @@
+---
+title: "L: Antineoplastic and immunomodulating agents"
+date: "2026-02-08"
+---
+
+| Level 2 code | Description |
+| ---: | :--- |
+| L01 | Antineoplastic agents |
+| L02 | Endocrine therapy |
+| L03 | Immunostimulants |
+| L04 | Immunosuppressants |
+
+: ATC L level 2 codes {#tbl-atc-l-lvl-2 tbl-colwidths="[20, 80]"}
+
 # Immunotherapy
 
 ![](https://pub.mdpi-res.com/pharmaceutics/pharmaceutics-14-01630/article_deploy/html/images/pharmaceutics-14-01630-g001.png?1659607210)

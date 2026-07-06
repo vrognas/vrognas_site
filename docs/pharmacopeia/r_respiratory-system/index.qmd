@@ -1,5 +1,15 @@
 ---
-draft: true
 title: "R: Respiratory system"
 date: "2026-02-08"
 ---
+
+| Level 2 code | Description |
+| ---: | :--- |
+| R01 | Nasal preparations |
+| R02 | Throat preparations |
+| R03 | Drugs for obstructive airway diseases |
+| R05 | Cough and cold preparations |
+| R06 | Antihistamines for systemic use |
+| R07 | Other respiratory system products |
+
+: ATC R level 2 codes {#tbl-atc-r-lvl-2 tbl-colwidths="[20, 80]"}

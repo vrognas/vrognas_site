@@ -1,5 +1,16 @@
 ---
-draft: true
 title: "N: Nervous system"
 date: "2026-02-08"
 ---
+
+| Level 2 code | Description |
+| ---: | :--- |
+| N01 | Anesthetics |
+| N02 | Analgesics |
+| N03 | Antiepileptics |
+| N04 | Anti-Parkinson drugs |
+| N05 | Psycholeptics |
+| N06 | Psychoanaleptics |
+| N07 | Other nervous system drugs |
+
+: ATC N level 2 codes {#tbl-atc-n-lvl-2 tbl-colwidths="[20, 80]"}

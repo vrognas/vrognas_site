@@ -1,5 +1,14 @@
 ---
-draft: true
-title: "H: Hormones"
+title: "H: Systemic hormonal preparations, excluding sex hormones and insulins"
 date: "2026-02-08"
 ---
+
+| Level 2 code | Description |
+| ---: | :--- |
+| H01 | Pituitary and hypothalamic hormones and analogues |
+| H02 | Corticosteroids for systemic use |
+| H03 | Thyroid therapy |
+| H04 | Pancreatic hormones |
+| H05 | Calcium homeostasis |
+
+: ATC H level 2 codes {#tbl-atc-h-lvl-2 tbl-colwidths="[20, 80]"}

@@ -1,5 +1,12 @@
 ---
-draft: true
-title: "P: Parasistic products"
+title: "P: Antiparasitic products, insecticides and repellents"
 date: "2026-02-08"
 ---
+
+| Level 2 code | Description |
+| ---: | :--- |
+| P01 | Antiprotozoals |
+| P02 | Anthelmintics |
+| P03 | Ectoparasiticides, incl. scabicides, insecticides and repellents |
+
+: ATC P level 2 codes {#tbl-atc-p-lvl-2 tbl-colwidths="[20, 80]"}

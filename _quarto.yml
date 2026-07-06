@@ -225,21 +225,47 @@ website:
       collapse-level: 2
       style: "floating"
       contents:
-        - text: "Pharmacopœia"
+        - section: "Pharmacopœia"
           href: docs/pharmacopeia/index.qmd
           contents:
+            - text: "(A) Alimentary tract and metabolism"
+              href: docs/pharmacopeia/a_alimentary-tract-and-metabolism/index.qmd
+            - text: "(B) Blood and blood forming organs"
+              href: docs/pharmacopeia/b_blood-and-blood-forming-organs/index.qmd
+            - text: "(C) Cardiovascular system"
+              href: docs/pharmacopeia/c_cardiovascular-system/index.qmd
+            - text: "(D) Dermatologicals"
+              href: docs/pharmacopeia/d_dermatologicals/index.qmd
+            - text: "(G) Genito-urinary system and sex hormones"
+              href: docs/pharmacopeia/g_genito-urinary-system-and-sex-hormones/index.qmd
+            - text: "(H) Systemic hormonal preparations"
+              href: docs/pharmacopeia/h_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/index.qmd
             - section: "(J) Antiinfectives for systemic use"
+              href: docs/pharmacopeia/j_antiinfectives-for-systemic-use/index.qmd
               contents:
                 - text: "(01) Antibacterials for systemic use"
                   href: docs/pharmacopeia/j_antiinfectives-for-systemic-use/j01_antibacterials-for-systemic-use/index.qmd
                 - text: "(05) Antivirals for systemic use"
                   href: docs/pharmacopeia/j_antiinfectives-for-systemic-use/j05_antivirals-for-systemic-use/index.qmd
             - section: "(L) Antineoplastic and immunomodulating agents"
+              href: docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/index.qmd
               contents:
                 - section: "(04) Immunosuppressants"
                   contents:
                     - text: "(A) Immunosuppressants"
                       href: docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/l04_immunosuppressants/l04a_immunosuppressants/index.qmd
+            - text: "(M) Musculo-skeletal system"
+              href: docs/pharmacopeia/m_musculo-skeletal-system/index.qmd
+            - text: "(N) Nervous system"
+              href: docs/pharmacopeia/n_nervous-system/index.qmd
+            - text: "(P) Antiparasitic products"
+              href: docs/pharmacopeia/p_antiparasitic-products-insecticides-and-repellents/index.qmd
+            - text: "(R) Respiratory system"
+              href: docs/pharmacopeia/r_respiratory-system/index.qmd
+            - text: "(S) Sensory organs"
+              href: docs/pharmacopeia/s_sensory-organs/index.qmd
+            - text: "(V) Various"
+              href: docs/pharmacopeia/v_various/index.qmd
     - id: regulatory
       title: "Regulatory Rites"
       style: "floating"

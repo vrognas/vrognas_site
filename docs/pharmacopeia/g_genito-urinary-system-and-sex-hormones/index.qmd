@@ -1,5 +1,13 @@
 ---
-draft: true
 title: "G: Genito-urinary system and sex hormones"
 date: "2026-02-08"
 ---
+
+| Level 2 code | Description |
+| ---: | :--- |
+| G01 | Gynecological antiinfectives and antiseptics |
+| G02 | Other gynecologicals |
+| G03 | Sex hormones and modulators of the genital system |
+| G04 | Urologicals |
+
+: ATC G level 2 codes {#tbl-atc-g-lvl-2 tbl-colwidths="[20, 80]"}

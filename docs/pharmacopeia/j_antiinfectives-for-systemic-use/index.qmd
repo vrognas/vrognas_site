@@ -1,0 +1,15 @@
+---
+title: "J: Antiinfectives for systemic use"
+date: "2026-02-08"
+---
+
+| Level 2 code | Description |
+| ---: | :--- |
+| J01 | Antibacterials for systemic use |
+| J02 | Antimycotics for systemic use |
+| J04 | Antimycobacterials |
+| J05 | Antivirals for systemic use |
+| J06 | Immune sera and immunoglobulins |
+| J07 | Vaccines |
+
+: ATC J level 2 codes {#tbl-atc-j-lvl-2 tbl-colwidths="[20, 80]"}

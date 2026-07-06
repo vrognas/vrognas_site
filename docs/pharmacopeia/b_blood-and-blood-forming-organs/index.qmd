@@ -1,1 +1,14 @@
+---
+title: "B: Blood and blood forming organs"
+date: "2026-02-08"
+---
 
+| Level 2 code | Description |
+| ---: | :--- |
+| B01 | Antithrombotic agents |
+| B02 | Antihemorrhagics |
+| B03 | Antianemic preparations |
+| B05 | Blood substitutes and perfusion solutions |
+| B06 | Other hematological agents |
+
+: ATC B level 2 codes {#tbl-atc-b-lvl-2 tbl-colwidths="[20, 80]"}
