@@ -111,7 +111,24 @@ function annotateAll() {
 
 document.addEventListener("DOMContentLoaded", () => {
   annotateAll();
+
+  // Theme colors depend on the body class, so redraw when it flips.
   new MutationObserver(annotateAll).observe(document.body, {
     attributeFilter: ["class"],
   });
+
+  // rough-notation freezes each annotation's position at draw time and only
+  // re-renders when the element itself resizes or the window resizes — never
+  // when the element moves because content elsewhere settled (late images,
+  // theme CSS swap, consent banner). Redraw whenever page layout shifts.
+  // No feedback loop: the annotation SVGs are absolutely positioned, so
+  // redrawing them does not change the body size.
+  let raf = 0;
+  const reannotate = () => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(annotateAll);
+  };
+  window.addEventListener("load", reannotate);
+  if (document.fonts?.ready) document.fonts.ready.then(reannotate);
+  new ResizeObserver(reannotate).observe(document.body);
 });
