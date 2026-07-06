@@ -1,5 +1,6 @@
 ---
 title: "Augmented Renal Clearance (ARC)"
+description: "Augmented renal clearance (ARC): creatinine clearance above 130 mL/min/1.73m² in critically ill young patients, risking underexposure of renally cleared drugs."
 date: "2026-02-20"
 ---
 

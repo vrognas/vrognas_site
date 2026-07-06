@@ -1,5 +1,6 @@
 ---
-title: "CDISC data standards"
+title: "CDISC data standards (SDTM, ADaM, CDASH)"
+description: "How CDISC standards work for pharmacometrics — SDTM, ADaM, CDASH, and SEND — including the PC and EX domains you'll use to build population PK datasets."
 date: "2026-02-22"
 ---
 

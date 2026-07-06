@@ -1,5 +1,6 @@
 ---
-title: "Concentration-QT (C-QT) modeling"
+title: "Concentration-QTc (C-QTc) modeling"
+description: "Concentration-QTc (C-QTc) analysis explained: the linear mixed-effects model for ΔQTcF used to assess a drug's effect on cardiac repolarization."
 date: "2026-02-20"
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: "Priors"
+title: "Priors in NONMEM ($PRIOR)"
+description: "Using NONMEM's $PRIOR control record to stabilize population PK models on sparse data by carrying parameters from earlier models instead of fixing them."
 date: "2026-02-20"
 ---
 

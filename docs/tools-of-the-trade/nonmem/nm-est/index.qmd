@@ -1,6 +1,6 @@
 ---
-title: "Estimation and Solvers"
-description: "A Practitioner's Guide to $ESTIMATION and $SUBROUTINES"
+title: "NONMEM Estimation Methods & Solvers"
+description: "Choosing between NONMEM's estimation methods — FOCE, LAPLACE, IMP, and SAEM — plus the $ESTIMATION options that make runs faster and more robust."
 date: "2025-09-14"
 code-overflow: scroll
 code-tools: true
