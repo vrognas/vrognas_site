@@ -6,6 +6,11 @@ date: "2025-03-27"
 ::: {.callout-caution title="Under construction"}
 :::
 
+In every quantitative endeavour, one question matters most: **what is the estimand?**
+The estimand is the precise quantity we use data to draw inference about.
+Too often the estimand is not defined before leaping straight to describing data and methods.
+This renders it *impossible* to assess the appropriateness of those data and methods.
+
 ## Mathematics
 
 ### Updated mental models
@@ -23,6 +28,7 @@ $$
 $$
 
 or
+
 $$
 \mathrm{growth}^{\mathrm{duration}} = \frac{\mathrm{new}}{\mathrm{original}}
 $$
@@ -74,6 +80,23 @@ Or more mathy: (d/dx)*(e^x) = e^x
 * **Statistics** is seeing a footprint, and guessing the animal.
 
 ![https://wetlandscapes.com/blog/a-brief-visualization-of-rs-distribution-functions/](../images/fig-1.png)
+
+{{< video https://youtu.be/jvoxEYmQHNM title="Central Limit Theorem" >}}
+
+Law of Large Numbers (LLN): More data = More accurate estimate.
+
+* Weak LLN: Convergence in probability
+* Strong LLN: Convergence almost surely
+
+### Frequentist vs Bayesian statistics
+
+* In **frequentist** (e.g., maximum likelihood), one does not consider prior info, and lets the "data speak for itself" (makes sense with rich data, and/or no prior beliefs).
+* In **Bayesian**, one considers prior data in the estimation, which is helpful when you have sparse data and/or strong prior beliefs.
+
+MLE and Bayesian estimates converge with large/rich samples or weak (or even uninformative/"flat") priors, and diverge with strong/informative priors or little/sparse data.
+They will be equal iff having an infinite amount of data (priors won't matter then).
+
+The Bayesian analog to a confidence interval is a *credible interval*.
 
 ### Common statistical tests are linear models
 
