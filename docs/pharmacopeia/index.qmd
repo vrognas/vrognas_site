@@ -7,48 +7,30 @@ date: "2025-11-25"
 **Pharmacopœia**:
 *A collection of directions for the identification of medicines.*
 
-A high-level overview of selected drug classes and their mechanisms of action, organized by the ATC classification system.
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-6 .index-card}
-[(J) Antiinfectives](j_antiinfectives-for-systemic-use/j01_antibacterials-for-systemic-use/index.qmd){.card-title}
-Antibacterials and antivirals for systemic use.
-:::
-
-::: {.g-col-12 .g-col-md-6 .index-card}
-[(L) Antineoplastic & Immunomodulating](l_antineoplastic-and-immunomodulating-agents/l04_immunosuppressants/l04a_immunosuppressants/index.qmd){.card-title}
-Cancer treatments and immunosuppressants.
-:::
-
-:::
-
-## Drug modalities
-
-In drug development, a modality (@tbl-modality) is the broad "type" or "format" of therapeutic intervention defined primarily by its molecular (or cellular) nature and the way it produces a clinical effect.
-
-In practice: modality = "What kind of therapeutic thing is this?"
-
-| Category | Modalities |
-| :------- | :--------- |
-| Conventional | Small molecules |
-| Antibodies | Monoclonal antibody (mAb), Antibody–Drug Conjugate (ADC), Bi-specific antibody (BsAb) |
-| Proteins and peptides | Recombinant |
-| Cell therapies | Cell therapies, CAR-T, Stem cells, TCRT, CAR-NK, TILs |
-| Gene therapies | Gene augmentation, Gene editing |
-| Nucleic acids | DNA and RNA therapies, RNAi, mRNA |
-| Other new modalities | Oncolytic viruses, Microbiomes, PROTAC |
-
-: Modality categories {#tbl-modality}
-
-ATMP (Advanced Therapy Medicinal Product) is another term that is being used to describe a group of modalities.
-In essence, ATMPs are a class of medicines that use living materials like cells, tissues, or genetic material to treat or prevent diseases.
+A drug can be classified two ways: by what it treats (ATC) and by what it is (modality).
+This section provides a high-level overview of drugs, organized by the ATC classification system.
 
 ## ATC
 
-Drugs are organized according to the [**Anatomical Therapeutic Chemical (ATC)** classification system](https://atcddd.fhi.no/atc_ddd_index/).
-The ATC system was developed in Norway and was introduced in 1976 and is maintained by the World Health Organization Collaborating Centre for Drug Statistics Methodology (WHOCC).
+The [**Anatomical Therapeutic Chemical (ATC)** classification system](https://atcddd.fhi.no/atc_ddd_index/) was developed in Norway and was introduced in 1976 and is maintained by the World Health Organization Collaborating Centre for Drug Statistics Methodology (WHOCC).
 It classifies active substances based on the organ or system they act on, as well as their therapeutic, pharmacological, and chemical properties.
+
+The complete ATC classification of metformin illustrates the structure of the code:
+
+| Level                           | Code        | Description |
+| :------------------------------ | :---------- | :---------- |
+| **1:** Anatomical main group    | **A**       | Alimentary tract and metabolism |
+| **2:** Therapeutic subgroup     | A**10**     | Drugs used in diabetes |
+| **3:** Pharmacological subgroup | A10**B**    | Blood glucose lowering drugs, excl. insulins |
+| **4:** Chemical subgroup        | A10B**A**   | Biguanides |
+| **5:** Chemical substance       | A10BA**02** | Metformin |
+
+: ATC classification of metformin {#tbl-mtf tbl-colwidths="[40, 10, 50]"}
+
+Thus, in the ATC system all plain metformin preparations are given the code **A10BA02**.
+Metformin's modality would be a **small molecule**.
+For the chemical substance, the [International Nonproprietary Name (INN)](https://www.who.int/teams/health-product-and-policy-standards/inn) is preferred.
+If INN names are not assigned, USAN (United States Adopted Name) or BAN (British Approved Name) names are usually chosen.
 
 Drugs are classified in groups at five different levels.
 
@@ -57,51 +39,55 @@ Drugs are classified in groups at five different levels.
 * **ATC 3^rd^ & 4^th^ levels:** Chemical, Pharmacological or Therapeutic subgroup
 * **ATC 5^th^ level:** Chemical substance
 
-| ATC level | Codes | Different names/pharmaceuticals |
-| :--- | ---: | ---: |
-| Level 1 | 14 | 14 |
-| Level 2 | 94 | 94 |
-| Level 3 | 267 | 262 |
-| Level 4 | 889 | 819 |
-| Level 5 | 5067 | 4363 |
+| ATC level                       | Codes | Different names/pharmaceuticals |
+| :------------------------------ | ----: | ----: |
+| **1:** Anatomical main group    |    14 |    14 |
+| **2:** Therapeutic subgroup     |    94 |    94 |
+| **3:** Pharmacological subgroup |   267 |   262 |
+| **4:** Chemical subgroup        |   889 |   819 |
+| **5:** Chemical substance       |  5067 |  4363 |
 
 : ATC count per level {#tbl-atc-count}
 
 The 2^nd^, 3^rd^ and 4^th^ levels are often used to identify pharmacological subgroups when that is considered more appropriate than therapeutic or chemical subgroups.
 
-| ATC code | Contents |
-| :------: | :------- |
-| A | Alimentary tract and metabolism |
-| B | Blood and blood forming organs |
-| C | Cardiovascular system |
-| D | Dermatologicals |
-| G | Genito-urinary system and sex hormones |
-| H | Systemic hormonal preparations, excluding sex hormones and insulins |
-| J | Antiinfectives for systemic use |
-| L | Antineoplastic and immunomodulating agents |
-| M | Musculo-skeletal system |
-| N | Nervous system |
-| P | Antiparasitic products, insecticides and repellents |
-| R | Respiratory system |
-| S | Sensory organs |
-| V | Various |
+|      | ATC code | Contents |
+| ---: | :------: | :------- |
+|    1 | **A**    | Alimentary tract and metabolism |
+|    2 | **B**    | Blood and blood forming organs |
+|    3 | **C**    | Cardiovascular system |
+|    4 | **D**    | Dermatologicals |
+|    5 | **G**    | Genito-urinary system and sex hormones |
+|    6 | **H**    | Systemic hormonal preparations, excluding sex hormones and insulins |
+|    7 | **J**    | Antiinfectives for systemic use |
+|    8 | **L**    | Antineoplastic and immunomodulating agents |
+|    9 | **M**    | Musculo-skeletal system |
+|   10 | **N**    | Nervous system |
+|   11 | **P**    | Antiparasitic products, insecticides and repellents |
+|   12 | **R**    | Respiratory system |
+|   13 | **S**    | Sensory organs |
+|   14 | **V**    | Various |
 
-: Codes in the first ATC level, the *Anatomical main group* {#tbl-atc-lvl-1 tbl-colwidths="[10, 90]"}
+: Codes in the first ATC level, the *Anatomical main group* {#tbl-atc-lvl-1 tbl-colwidths="[5, 5, 90]"}
 
-## Example: metformin
+## Modality
 
-The complete classification of metformin illustrates the structure of the code:
+In drug development, a **drug modality** (@tbl-modality) is the broad "type" or "format" of therapeutic intervention defined primarily by its molecular (or cellular) nature and the way it produces a clinical effect.
+Modality is **orthogonal to ATC**, a drug has both an ATC code *and* a modality.
 
-| Level                           | Code        | Description |
-| :------------------------------ | :---------- | :---------- |
-| **1:** Anatomical main group    | **A**       | Alimentary tract and metabolism |
-| **2:** Therapeutic subgroup     | A**10**     | Drugs used in diabetes |
-| **3:** Pharmacological subgroup | A10**B**    | Blood glucose lowering drues, excl. insulins |
-| **4:** Chemical subgroup        | A10B**A**   | Biguanides |
-| **5:** Chemical substance       | A10BA**02** | Metformin |
+In practice: modality = "What kind of therapeutic thing is this?"
 
-: Anatomical Therapeutic Chemical (ATC) Classification System {#tbl-mtf tbl-colwidths="[30, 10, 60]"}
+| Category              | Modalities |
+| :-------------------- | :--------- |
+| Conventional          | Small molecules |
+| Antibodies            | Monoclonal antibody (mAb), Antibody–Drug Conjugate (ADC), Bi-specific antibody (BsAb) |
+| Proteins and peptides | Recombinant |
+| Cell therapies        | Cell therapies, CAR-T, Stem cells, TCRT, CAR-NK, TILs |
+| Gene therapies        | Gene augmentation, Gene editing |
+| Nucleic acids         | DNA and RNA therapies, RNAi, mRNA |
+| Other new modalities  | Oncolytic viruses, Microbiomes, PROTAC |
 
-Thus, in the ATC system all plain metformin preparations are given the code A10BA02.
-For the chemical substance, the [International Nonproprietary Name (INN)](https://www.who.int/teams/health-product-and-policy-standards/inn) is preferred.
-If INN names are not assigned, USAN (United States Adopted Name) or BAN (British Approved Name) names are usually chosen.
+: Modality categories {#tbl-modality tbl-colwidths="[30, 70]"}
+
+ATMP (Advanced Therapy Medicinal Product) is another term that is being used to describe a group of modalities.
+In essence, ATMPs are a class of medicines that use living materials like cells, tissues, or genetic material to treat or prevent diseases.
