@@ -31,6 +31,7 @@ Evaluates how the drug under investigation affects the PK of other drugs.
 ## Study design
 
 * Several designs are possible, including cross-over or parallel groups; single-dose or multi-dose administration.
+* Concentration and dosing data are delivered as [CDISC SDTM/ADaM datasets](../cdisc/index.qmd) (PC and EX domains), as in other clinical PK studies.
 
 ## Alternatives to dedicated clinical DDI studies
 

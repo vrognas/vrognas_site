@@ -30,6 +30,7 @@ Dose 2 subjects first (1 active, 1 placebo), observe through C~max~, evaluate sa
 * Target exposures **above the expected therapeutic dose** to cover later TQT assessment and DDI/organ impairment-related exposure increases.
 * **Sampling**: Intensive PK (plasma + urine; >3--5 half-lives to capture full elimination).
   Can sometimes include triplicate ECGs timed with PK (especially around C~max~), PD biomarkers, safety labs, genotyping, and samples for metabolite profiling.
+* **Data**: concentrations and dosing records are delivered as [CDISC SDTM/ADaM datasets](../cdisc/index.qmd) (PC and EX domains).
 
 ## Multiple ascending dose (MAD)
 
