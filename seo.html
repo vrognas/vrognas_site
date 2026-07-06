@@ -104,3 +104,11 @@
 <!-- Browser UI tint; values must match $navbar-bg in theme-light.scss / theme-dark.scss -->
 <meta name="theme-color" content="#f3f3ee" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1D2021" media="(prefers-color-scheme: dark)">
+
+<!-- Suppress analytics for automated/headless browsers to reduce bot noise in GA4.
+     Uses Google's official ga-disable flag, set synchronously before Quarto's
+     consent-gated gtag runs. Catches honest automation (Selenium/Puppeteer/
+     Playwright set navigator.webdriver); will not catch bots that spoof it. -->
+<script>
+  if (navigator.webdriver) { window["ga-disable-G-83Y8K7VV1M"] = true; }
+</script>
