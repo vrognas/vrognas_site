@@ -295,6 +295,10 @@ website:
               contents:
                 - text: "Tips-n-tricks"
                   href: docs/tools-of-the-trade/r/r-tips-n-tricks/index.qmd
+            - text: "AI & LLMs"
+              href: docs/tools-of-the-trade/ai/index.qmd
+            - text: "Windows 11"
+              href: docs/tools-of-the-trade/windows/index.qmd
   page-footer:
     left: "© 2026 Viktor Rognås"
     right:

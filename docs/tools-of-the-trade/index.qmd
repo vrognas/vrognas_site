@@ -21,6 +21,16 @@ Data preparation, estimation, troubleshooting, and model QA for NONMEM workflows
 Statistical computing for pharmacometric analysis and reproducible reporting.
 :::
 
+::: {.g-col-12 .g-col-md-6 .index-card}
+[AI & LLMs](ai/index.qmd){.card-title}
+Working effectively with LLMs — prompt engineering, RAG, MCP, and the lethal trifecta.
+:::
+
+::: {.g-col-12 .g-col-md-6 .index-card}
+[Windows 11](windows/index.qmd){.card-title}
+Filesystem layout and environment variables for Windows-based workflows.
+:::
+
 :::
 
 ## Other software

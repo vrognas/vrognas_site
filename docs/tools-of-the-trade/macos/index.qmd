@@ -1,0 +1,225 @@
+---
+title: "macOS"
+draft: true
+date: "2026-07-07"
+---
+
+::: {.callout-caution title="Under construction"}
+:::
+
+## Why No Drive Letters?
+
+macOS is Unix.
+Unix has a single unified file tree that starts at the root, `/`.
+There are no `C:` or `D:` drives.
+
+Every disk and volume attaches somewhere inside that one tree.
+External drives, disk images, and USB sticks mount under `/Volumes`.
+Your startup disk is the root itself, so its files live directly under `/`.
+
+This is the opposite of the Windows model, where each drive is its own separate root.
+
+## The macOS File System: What Goes Where and Why
+
+Here is how the root of the startup disk is organized.
+Most of these folders come straight from Unix tradition; a few are Apple additions.
+
+### The Root: /
+
+| Folder | Purpose |
+| :----- | :------ |
+| **/Applications** | Installed apps, shared by all users |
+| **/System** | The operating system itself (read-only) |
+| **/Library** | System-wide application support and settings |
+| **/Users** | Home folders for each user |
+| **/Volumes** | Mount points for other disks and images |
+| **/usr**, **/bin**, **/sbin** | Unix command-line programs and libraries |
+| **/opt** | Optional software; Homebrew lives here on Apple Silicon |
+| **/private** | The real location of `/tmp`, `/var`, and `/etc` |
+
+Several classic Unix paths (`/tmp`, `/var`, `/etc`) are symbolic links into `/private`.
+Apple keeps the mutable system state under `/private` and presents the familiar names as links.
+
+### /System and the read-only volume
+
+Since macOS Catalina, the operating system lives on a separate, sealed **read-only system volume**.
+The apps you install, your files, and your settings live on a separate **Data volume**.
+macOS stitches the two together so they look like one tree, using **firmlinks**.
+
+The practical effect: you cannot modify `/System`, even as an administrator.
+This protects the OS from tampering and makes updates reliable.
+
+### The three Library folders
+
+macOS keeps resources at three levels, each in its own `Library` folder.
+This mirrors the Windows split between system, shared, and per-user data.
+
+| Location | Scope | Example contents |
+| :------- | :---- | :--------------- |
+| **/System/Library** | Apple's OS resources (read-only) | Core frameworks, built-in fonts |
+| **/Library** | All users on this Mac | App support, fonts, `LaunchDaemons` |
+| **~/Library** | Just you (hidden by default) | Preferences, caches, app containers |
+
+When a resource exists at more than one level, the **more specific one wins**: user over local over system.
+
+### /Applications and the .app bundle
+
+An app on macOS is not a folder of loose files.
+It is a single `.app` **bundle**, which is really a directory that Finder shows as one icon.
+Right-click an app and choose *Show Package Contents* to look inside.
+
+A bundle keeps the executable, resources, and metadata together, so installing is often just dragging one item.
+
+### /Users and your home folder
+
+Each user gets a home folder at `/Users/<username>`, also written `~`.
+
+| Folder | Purpose |
+| :----- | :------ |
+| **Desktop** | Files and shortcuts on the desktop |
+| **Documents** | Default save location |
+| **Downloads** | Browser and app downloads |
+| **Pictures, Music, Movies** | Media libraries |
+| **Public** | Files shared with other users on the Mac |
+| **Library** | Your personal app data and settings (hidden) |
+
+Finder hides `~/Library` by default.
+Press `Cmd`+`Shift`+`.` in Finder to reveal hidden files, or use `Go > Go to Folder` and type `~/Library`.
+
+#### Inside ~/Library
+
+| Folder | Purpose |
+| :----- | :------ |
+| **Application Support** | Per-app data files and state |
+| **Preferences** | Settings, stored as `.plist` files |
+| **Caches** | Disposable cached data |
+| **Containers** | Sandboxed apps' private data (Mac App Store apps) |
+| **LaunchAgents** | Programs that start when you log in |
+| **Logs** | Per-user log files |
+
+Settings are `.plist` (property list) files, named like `com.apple.finder.plist`.
+Read or write them with the `defaults` command rather than editing by hand.
+
+### Homebrew: /opt/homebrew vs /usr/local
+
+Homebrew is the de facto package manager for developer tools on macOS.
+Its location depends on the chip.
+
+| Mac | Homebrew prefix |
+| :-- | :-------------- |
+| **Apple Silicon** (M1 and later) | `/opt/homebrew` |
+| **Intel** | `/usr/local` |
+
+This is why a shell config copied from an Intel Mac often cannot find `brew` on an Apple Silicon Mac.
+The `PATH` points at the wrong prefix.
+
+### A note on case sensitivity
+
+The default macOS file system (APFS) is **case-insensitive but case-preserving**.
+`Makefile` and `makefile` are treated as the same name, but the original casing is kept.
+This trips up projects moved from Linux, where the file system is case-sensitive.
+
+### Quick Reference
+
+| What you want | Where it lives |
+| :------------ | :------------- |
+| OS files | /System (read-only) |
+| Installed apps | /Applications |
+| Your documents | ~/Documents |
+| App settings (your user) | ~/Library |
+| App settings (all users) | /Library |
+| Command-line tools (Homebrew) | /opt/homebrew (Apple Silicon) |
+| Temp files | `$TMPDIR` (under /private/var) |
+
+## macOS Environment Variables: $VAR and PATH
+
+When you see `$HOME` or `$PATH` in a terminal, you are looking at environment variables.
+They are placeholders the shell expands to real values at runtime.
+
+### Syntax
+
+macOS has shipped with **zsh** as the default shell since Catalina.
+
+| Task | Syntax | Example |
+| :--- | :----- | :------ |
+| Read a variable | `$VAR` | `echo $HOME` |
+| Read, with braces | `${VAR}` | `echo ${HOME}/Documents` |
+| Set for this session | `export VAR=value` | `export EDITOR=nano` |
+| List all | `printenv` or `env` | |
+
+### Common Variables
+
+| Variable | Holds | Example value |
+| :------- | :---- | :------------ |
+| `$HOME` | Your home folder | `/Users/viktor` |
+| `$USER` | Your username | `viktor` |
+| `$SHELL` | Your login shell | `/bin/zsh` |
+| `$PATH` | Where to find programs | `/opt/homebrew/bin:/usr/bin:/bin` |
+| `$TMPDIR` | Per-user temp folder | `/var/folders/.../T/` |
+| `$LANG` | Locale | `en_US.UTF-8` |
+
+### The PATH Variable
+
+`$PATH` is a colon-separated list of folders the shell searches for programs.
+
+```
+/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+```
+
+When you type `git`, the shell checks each folder in order until it finds an executable named `git`.
+Order matters: earlier folders win.
+Putting `/opt/homebrew/bin` first is how a Homebrew tool overrides the system version.
+
+macOS builds the base `PATH` with a helper called `path_helper`, which reads `/etc/paths` and any files in `/etc/paths.d`.
+Your shell config then prepends or appends to it.
+
+### Where variables are set
+
+Zsh reads different files depending on how the shell starts.
+
+| File | When it runs | Use it for |
+| :--- | :----------- | :--------- |
+| `~/.zprofile` | Login shells (a new Terminal window) | `PATH`, one-time setup |
+| `~/.zshrc` | Interactive shells | Aliases, prompt, per-session tweaks |
+| `/etc/paths`, `/etc/paths.d/` | System-wide, via `path_helper` | Base `PATH` entries |
+
+`~/.bash_profile` and `~/.bashrc` are the equivalents if you switch back to bash.
+
+### The GUI app gotcha
+
+Variables you `export` in `~/.zshrc` reach programs launched **from the terminal**.
+They do **not** reach GUI apps launched from the Dock or Finder.
+GUI apps inherit their environment from `launchd`, not from your shell.
+
+To set a variable for GUI apps, use `launchctl`:
+
+```zsh
+launchctl setenv MY_VAR value
+```
+
+This is why a tool that works in the terminal sometimes cannot be found by an app launched from the Dock.
+
+### Viewing and setting
+
+```zsh
+echo $PATH                    # read one variable
+printenv                      # list all variables
+export API_HOST=example.com   # set for this session only
+```
+
+To make a variable permanent, add the `export` line to `~/.zprofile` (for `PATH`) or `~/.zshrc`:
+
+```zsh
+echo 'export EDITOR=nano' >> ~/.zshrc
+source ~/.zshrc               # apply without opening a new terminal
+```
+
+### Quick Reference
+
+| Task | Command (zsh) |
+| :--- | :------------ |
+| Read variable | `echo $VAR` |
+| Set (session) | `export VAR=value` |
+| Set (permanent) | add `export` to `~/.zprofile` or `~/.zshrc` |
+| Set for GUI apps | `launchctl setenv VAR value` |
+| List all | `printenv` |
