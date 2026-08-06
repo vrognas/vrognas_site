@@ -9,7 +9,7 @@ description: "Professional portfolio showcasing pharmacometric modeling projects
 
 ## Software
 
-::: {.callout title="VSCode/VSX extension for NMTRAN (NONMEM)" collapse="true"}
+### VSCode/VSX extension for NMTRAN (NONMEM)
 
 <https://github.com/vrognas/vscode-nmtran>
 
@@ -44,7 +44,7 @@ By tokenization according to [TextMate 1.5.1 naming conventions](https://macroma
 
 ![Animated demonstration of ADVAN snippet completion in VS Code, showing autocomplete suggestions for NONMEM subroutine selection with ADVAN and TRANS options](./images/demo_advan-snippets.gif)
 
-###### Selection of available snippets
+::: {.callout title="Selection of available snippets" collapse="true"}
 
 * Subroutine selection
   * ADVAN and TRANS
@@ -63,9 +63,23 @@ By tokenization according to [TextMate 1.5.1 naming conventions](https://macroma
 
 :::
 
+### Sven: VSX extension for SVN
+
+<https://github.com/vrognas/vrognas-sven>
+
+Git-like SVN experience with staging, inline blame, file locking, and sparse checkout.
+
+### Redmyne: VSX extension for Redmine
+
+<https://github.com/vrognas/vrognas-redmyne>
+
+Personal workload management for [Redmine](https://www.redmine.org/) (project management software).
+
+Complete with a Kanban board, a fully-featured Gantt chart, and time-tracking.
+
 ## Science
 
-### Population pharmacokinetics of colistin and the relation to survival in critically ill patients infected with colistin susceptible and carbapenem-resistant bacteria
+### Population pharmacokinetics of colistin and the relation to survival in critically ill patients infected with colistin-susceptible and carbapenem-resistant bacteria
 
 Kristoffersson AN^\*^, **Rognås V^\*^**, Brill MJE^\*^, et al. (^\*^shared first authorship)
 
@@ -75,13 +89,12 @@ Kristoffersson AN^\*^, **Rognås V^\*^**, Brill MJE^\*^, et al. (^\*^shared firs
 
 #### Objectives
 
-The aim was to analyse the population pharmacokinetics of colistin and to explore the
-relationship between colistin exposure and time to death.
+The aim was to analyze the population pharmacokinetics of colistin and to explore the relationship between colistin exposure and time to death.
 
 #### Methods
 
 Patients included in the AIDA randomized controlled trial were treated with colistin for severe infections caused by carbapenem-resistant Gram-negative bacteria.
-All subjects received a 9 million units (MU) loading dose, followed by a 4.5 MU twice daily maintenance dose, with dose reduction if creatinine clearance (CrCL) <50 mL/min.
+All subjects received a 9 million units (MU) loading dose, followed by a 4.5 MU twice-daily maintenance dose, with dose reduction if creatinine clearance (CrCL) <50 mL/min.
 Individual colistin exposures were estimated from the developed population pharmacokinetic model and an optimized two-sample per patient sampling design.
 Time to death was evaluated in a **parametric survival analysis**.
 
@@ -97,9 +110,9 @@ Other significant predictors included SOFA score at baseline (HR 1.24 (1.19--1.3
 #### Discussion
 
 The population pharmacokinetic model predicted that >90% of the patients had colistin concentrations >2 mg/L at steady state, but only 66% at 4 h after start of treatment.
-High colistin exposure was associated with poor kidney function, and was not related to a prolonged survival.
+High colistin exposure was associated with poor kidney function, and was not related to prolonged survival.
 
-### Turn-over model characterizing effect of colistin on serum-creatinine in critically ill patients
+### Turn-over model characterizing effect of colistin on serum creatinine in critically ill patients
 
 **Rognås V** et al.
 
@@ -107,7 +120,7 @@ High colistin exposure was associated with poor kidney function, and was not rel
 
 ![Scientific poster showing turn-over model characterizing effect of colistin on serum creatinine in critically ill patients with mathematical equations and population pharmacokinetic modeling results](./images/phd-2-scr.avif)
 
-### Bounded integer approach to model time-varying SOFA scores from patients with carbapenem resistant infections
+### Bounded integer approach to model time-varying SOFA scores from patients with carbapenem-resistant infections
 
 **Rognås V** et al.
 
@@ -123,8 +136,8 @@ High colistin exposure was associated with poor kidney function, and was not rel
 
 <https://doi.org/10.1007/s10928-025-09990-7>
 
-Erythropoiesis is a complex process that results in the production of erythrocytes from hematopoietic stem cells in the bone marrow.
-This work aimed to develop a population pharmacokinetic-pharmacodynamic (PKPD) model describing **erythropoiesis and hemoglobin synthesis** following bitopertin, an inhibitor of glycine transporter 1 (GlyT1), administration.
+Erythropoiesis is a complex process by which erythrocytes are produced from hematopoietic stem cells in the bone marrow.
+This work aimed to develop a population pharmacokinetic-pharmacodynamic (PKPD) model describing **erythropoiesis and hemoglobin synthesis** following administration of bitopertin, an inhibitor of glycine transporter 1 (GlyT1).
 Data from a Phase 1 clinical trial in 67 healthy subjects administered bitopertin (10, 30, or 60 mg) or placebo for 120 days were analyzed.
 Hematological assessments included erythrocyte and reticulocyte counts, immature reticulocyte fraction, hemoglobin concentration, and mean corpuscular hemoglobin.
 The proposed semi-mechanistic model, which leverages data and physiological knowledge, was found to adequately **simultaneously describe the dose- and time-dependent changes** in the biomarkers.
