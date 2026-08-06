@@ -11,10 +11,9 @@ description: "Professional portfolio showcasing pharmacometric modeling projects
 
 ### VSCode/VSX extension for NMTRAN (NONMEM)
 
-<https://github.com/vrognas/vscode-nmtran>
+<https://github.com/vrognas/vrognas-nmtran>
 
-![](https://img.shields.io/github/license/vrognas/vscode-nmtran)
-![](https://img.shields.io/visual-studio-marketplace/azure-devops/installs/total/vrognas.nmtran)
+![](https://img.shields.io/github/license/vrognas/vrognas-nmtran)
 
 An extension written in **TypeScript**, adding support for the NMTRAN language used in [**NONMEM**](https://www.iconplc.com/solutions/technologies/nonmem/) control streams.
 
