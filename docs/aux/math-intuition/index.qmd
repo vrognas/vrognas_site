@@ -15,7 +15,7 @@ This renders it *impossible* to assess the appropriateness of those data and met
 
 ### Updated mental models
 
-Numbers aren’t just a count; a better viewpoint is a *position on a line*.
+Numbers aren't just a count; a better viewpoint is a *position on a line*.
 This position can be negative ($-1$), between other numbers ($\sqrt{2}$), or in another dimension ($i$).
 
 Arithmetic became a general way to transform a number.
@@ -98,6 +98,38 @@ They will be equal iff having an infinite amount of data (priors won't matter th
 
 The Bayesian analog to a confidence interval is a *credible interval*.
 
-### Common statistical tests are linear models
+### Models
+
+"Model" here is a way of saying "set of assumptions about the data generating procedure."
+So saying that some equation is a "model" is the same as saying that we think this is where the data came from.
+We can "turn the crank" that is, generate data through the process that's specified in those equations, such as by pulling numbers from a normal distribution with mean  and standard deviation 
+In essence, we're committing to the idea that this process will give us data that are substantively similar to the ones we have already.
+
+#### Regression
+
+Conventionally, regression models are written with $\beta$ symbols for all parameters, and $\epsilon$ for error terms.
+In NONMEM these would be $\theta$ and $\eta$.
+
+$Y_i$ would be DV in NONMEM.
+$X_i$ would be the independent variables which is always TIME, but also any covariates.
+
+$$
+Y_i = \beta_0 + \beta_1 X_i + \epsilon_i
+$$
+
+$\beta_0 + \beta_1 X_i$ is called the **linear predictor**, and it describes the *expected value* of the outcome.
+$\beta_0$ and $\beta_1$ are called **regression coefficients**.
+
+#### Generalized linear model
+
+* Logistic regression
+
+#### Mixed-effects/hierarchical models
+
+Repeated measures.
+
+#### Common statistical tests are linear models
+
+"Unfortunately, stats intro courses are usually taught as if each test is an independent tool, needlessly making life more complicated for students and teachers alike."
 
 ![https://lindeloev.github.io/tests-as-linear/](../images/linear-tests.png)
