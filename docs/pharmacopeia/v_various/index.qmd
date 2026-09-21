@@ -1,7 +1,13 @@
 ---
 title: "V: Various"
+description: "ATC group V for modellers: absorbed dose in Gy as the radiopharmaceutical endpoint, binding models for reversal agents, and contrast media as a pharmacokinetic problem."
 date: "2026-02-08"
 ---
+
+ATC group V is the catch-all letter of the classification [@whoccATCDDDIndex2026].
+The notes below cover three of its nine level 2 codes: therapeutic radiopharmaceuticals, reversal agents and contrast media.
+
+In 2002 Anton Bom and colleagues at Organon described a cyclodextrin that reverses rocuronium block by encapsulating the relaxant itself rather than acting on a receptor [@bomNovelConceptReversing2002].
 
 | Level 2 code | Description |
 | ---: | :--- |
@@ -16,3 +22,34 @@ date: "2026-02-08"
 | V20 | Surgical dressings |
 
 : ATC V level 2 codes {#tbl-atc-v-lvl-2 tbl-colwidths="[20, 80]"}
+
+## Modelling notes
+
+**Endpoint.**
+For therapeutic radiopharmaceuticals the driver is a physical quantity, the **absorbed dose** in Gy to tumour and organs at risk, reconstructed from serial post-infusion imaging rather than from a plasma concentration-time curve [@hebertAbsorbedDoseResponse2024].
+In ^177^Lu-PSMA-617 therapy the lesion dose-response relationship is real but only moderate, Spearman rho about -0.3 [@grkovskiLesionAbsorbedDose2025].
+
+**Decay is not clearance.**
+Imaging measures activity, which falls by radioactive decay and by biological clearance together, so what is fitted is an effective half-life [@oliveiraAnalysisResidenceTime2022].
+With few imaging time points the fit is unstable, and population fitting stabilises the time-integrated activity [@hardiansyahPopulationBasedMethod2021].
+
+**Typical structure, reversal agents.**
+Sugammadex encapsulates rocuronium and the complex is cleared by the kidney, so clearance of both falls in [renal impairment](/docs/concepts/clinpharm-studies/renal-impairment-studies/) [@staalsReducedClearanceRocuronium2010].
+A population analysis nonetheless found renal function did not affect reversal time [@kleijnPopulationPharmacokineticPharmacodynamic2011].
+The fitted model is complex formation using the *in vitro* dissociation constant, with effect driven by the fall in free rocuronium rather than by an E~max~ on sugammadex [@ploegerPharmacokineticPharmacodynamicModel2009].
+
+**Gotcha.**
+The short duration of action of naloxone is a pharmacokinetic property, so reversal can wear off while the opioid is still present [@ngaiPharmacokineticsNaloxoneRats1976].
+Judging a reversal dose therefore calls for a mechanistic model linking both drugs to ventilation [@yangMechanisticPharmacokineticPharmacodynamic2024].
+
+**Contrast media, a pharmacokinetic problem.**
+Iodinated X-ray media distribute differentially to organs and between normal and abnormal tissue, and are excreted largely unchanged, with a hepatic and biliary route that matters in renal impairment [@bourinOverviewClinicalPharmacokinetics1997].
+Iohexol clearance is itself used as a measured GFR [@mohamedDiverseProtocolsMeasuring2024], and the practical question is the safe interval before the next study [@vandermolenWaitingTimesBetween2024].
+
+**Mechanistic extrapolation.**
+PBPK has been applied in radiopharmaceutical therapy to predict time-integrated activity for treatment planning [@klettingPhysiologicallyBasedPharmacokinetic2015; @hardiansyahSensitivityAnalysisPhysiologically2016].
+
+## References
+
+::: {#refs}
+:::

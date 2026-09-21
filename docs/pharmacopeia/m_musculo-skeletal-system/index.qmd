@@ -1,7 +1,13 @@
 ---
 title: "M: Musculo-skeletal system"
+description: "ATC group M for modellers: four unrelated PD paradigms under one letter, pain endpoints ruled by placebo and dropout, and bone effects that take years."
 date: "2026-02-08"
 ---
+
+Drugs for joint, bone and muscle disease, plus the neuromuscular blockers given under anaesthesia [@sheinerSimultaneousModelingPharmacokinetics1979].
+Published models here span a subjective pain score [@mandemaPopulationPharmacodynamicModel1996] and an evoked muscle twitch [@sheinerSimultaneousModelingPharmacokinetics1979].
+
+In 1938 Richard Gill returned from the Amazon with 11 kg of curare, from which Squibb isolated a standardised extract; Harold Griffith and Enid Johnson gave it in the operating room in 1942 [@elsherbiniConnectionHaroldGriffith2024; @griffithUseCurareGeneral1942].
 
 | Level 2 code | Description |
 | ---: | :--- |
@@ -13,3 +19,36 @@ date: "2026-02-08"
 | M09 | Other drugs for disorders of the musculo-skeletal system |
 
 : ATC M level 2 codes {#tbl-atc-m-lvl-2 tbl-colwidths="[20, 80]"}
+
+## Modelling notes
+
+**Endpoint.**
+Each level 2 code brings its own: WOMAC pain in M01 [@wenPlaceboResponseOral2022], serum urate in M04 [@murakiPopulationPharmacodynamicAnalysis2018], bone markers and density in M05 [@wuQuantitativePredictionBone2021], evoked twitch in M03 [@jiReversalRocuroniumInducedIntense2023].
+
+**Pain needs a fitted placebo time course.**
+In oral osteoarthritis trials the WOMAC placebo response is large and reaches 90% of its maximum only after 5 to 7 weeks [@wenPlaceboResponseOral2022].
+In an acute postoperative model, pain relief was fitted as a function of ketorolac concentration (**E~max~**), a subject random effect and time, the last capturing the waxing and waning of placebo [@mandemaPopulationPharmacodynamicModel1996].
+
+**Gotcha.**
+Patients remedicate when relief is insufficient, with a probability driven by the observed level of pain relief and rising with time, and ignoring that informative dropout biases the drug effect [@mandemaPopulationPharmacodynamicModel1996; @bjornsson2015dropout].
+
+**Urate is a turnover problem.**
+Serum urate under febuxostat is fitted with an indirect response model [@murakiPopulationPharmacodynamicAnalysis2018]; such a model predicted real-world urate with r = 0.68, rising to 0.77 once comorbidities, eGFR and loop diuretics were accounted for [@hiraiEvaluationPharmacokineticPharmacodynamic2018].
+
+**Bone markers and density are asynchronous.**
+Antiresorptives move serum CTX long before bone mineral density, and an indirect response model bridges the lag, predicting later density gain from one year of data [@wuQuantitativePredictionBone2021].
+
+**Relaxants are the effect compartment case.**
+Twitch depression lags plasma concentration, and the hysteresis collapses under an effect compartment, as fitted for d-tubocurarine [@sheinerSimultaneousModelingPharmacokinetics1979].
+
+**Easy to overlook.**
+For M02 the relevant exposure is local, in skin and synovial fluid, and dermal PBPK is what links measured plasma concentration to that site, so [bioequivalence](/docs/concepts/clinpharm-studies/ba-be/) is argued at the site of action alongside, not instead of, a plasma study [@tsakalozouPhysiologicallyBasedPharmacokinetic2021].
+
+**Mechanistic extrapolation.**
+A multiscale model of calcium homeostasis and bone remodelling [@petersonPhysiologicallyBasedMathematical2010] was extended to predict lumbar spine density under denosumab, including the decline after discontinuation [@petersonPredictingNonlinearChanges2012].
+For M02, dermal PBPK replaced a comparative clinical endpoint study in an FDA generic approval of topical diclofenac gel [@tsakalozouPhysiologicallyBasedPharmacokinetic2021].
+
+## References
+
+::: {#refs}
+:::

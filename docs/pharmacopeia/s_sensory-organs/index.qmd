@@ -1,7 +1,14 @@
 ---
 title: "S: Sensory organs"
+description: "ATC group S for modellers: a circadian intraocular pressure baseline, vitreous exposure that is predicted rather than sampled, and plasma as a safety readout."
 date: "2026-02-08"
 ---
+
+Drugs applied to the eye and the ear.
+The notes below come from S01, ophthalmologicals, where the difficulty is an organ of limited accessibility, for administering drug and for sampling tissue [@kuepferQuantitativeSystemsPharmacology2023].
+
+In 1977 Thom Zimmerman and Herbert Kaufman studied single-dose timolol at four strengths in twenty patients with chronic open-angle glaucoma.
+Every strength, down to 0.1%, lowered pressure for at least 24 hours, which led them to propose a once a day topical agent [@zimmermanTimololDoseResponse1977].
 
 | Level 2 code | Description |
 | ---: | :--- |
@@ -10,3 +17,35 @@ date: "2026-02-08"
 | S03 | Ophthalmological and otological preparations |
 
 : ATC S level 2 codes {#tbl-atc-s-lvl-2 tbl-colwidths="[20, 80]"}
+
+## Modelling notes
+
+**Endpoint.**
+In S01E the endpoint is **intraocular pressure**, read as a 24 hour series rather than one clinic value, because the baseline itself carries a circadian rhythm [@durairajMechanismBasedTranslational2014].
+Posterior segment endpoints vary: the pegcetacoplan analysis used geographic atrophy lesion area [@crassPharmacokineticPharmacodynamicAnalysis2025], the faricimab analysis best corrected visual acuity [@diackOcularPharmacokineticsFaricimab2024].
+
+**Typical structure.**
+For pressure, a physiological baseline built from aqueous humour dynamics, with the drug entering as an effect on those parameters, which is what carries the model from rabbit and dog into patients [@durairajMechanismBasedTranslational2014].
+
+**Dosing time is design, not noise.**
+Morning and evening instillation of the same fixed combination both lowered 24 hour pressure but differed in fluctuation, so clock time belongs in the model [@fengEfficacyMorningVersus2024].
+
+**Vitreous exposure is predicted, not sampled.**
+Faricimab vitreous concentrations were inferred from aqueous humour and plasma samples, with plasma exposure roughly 6000-fold below vitreous [@diackOcularPharmacokineticsFaricimab2024].
+The aflibercept population model was fitted to plasma alone, ocular concentrations being a model output [@bihorelIntegratedPopulationPharmacokinetic2026].
+
+**Gotcha.**
+Here plasma reports systemic safety, not the driver of effect: ophthalmic timolol is absorbed systemically, and paroxetine raised its plasma exposure 1.6-fold from 0.1% gel and 1.8-fold from 0.5% drops, with standing heart rate significantly lower only after the drops [@maenpaaParoxetineMarkedlyIncreases2014].
+That makes it a [drug interaction](/docs/concepts/clinpharm-studies/ddi/) question.
+
+**Easy to overlook.**
+For faricimab, vitreous elimination is the slowest step, so vitreous, aqueous and plasma concentrations decline in parallel and the plasma curve reports ocular release rather than systemic clearance [@diackOcularPharmacokineticsFaricimab2024].
+
+**Mechanistic extrapolation.**
+Ocular PBPK is used for tissue too invasive to access in humans: atropine, predicted to penetrate the posterior segment after topical dosing [@zhengOcularExposurePrediction2025], and an ofloxacin ointment, extrapolated from rabbit aqueous humour to human ocular exposure [@lemerdyClinicalOcularExposure2025].
+Ocular QSP exists but is still assembling its data and cellular systems [@kuepferQuantitativeSystemsPharmacology2023].
+
+## References
+
+::: {#refs}
+:::
