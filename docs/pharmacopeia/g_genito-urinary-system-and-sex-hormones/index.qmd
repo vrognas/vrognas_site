@@ -30,7 +30,7 @@ Testosterone follows a circadian rhythm, most pronounced in younger men [@brambi
 A pre-dose sample drawn at an arbitrary hour is one point on a rhythm, not a baseline [@dansirikul2008baseline; @bhasin2018guideline].
 
 **Response outlasts exposure.**
-Steroids act through nuclear receptors and gene transcription [@burris2013nr], so endpoints such as luteinising hormone, spermatogenesis and prostate specific antigen move on the timescale of the affected system, not of plasma concentration [@bi2018testosterone; @gisleskog1998dht].
+Steroids act through nuclear receptors and gene transcription [@burris2013nr], so endpoints such as luteinising hormone, spermatogenesis and prostate specific antigen move on the timescale of the affected system, not of plasma concentration [@bi2018tc; @gisleskog1998dht].
 
 **Flip-flop is the norm.**
 Depot injections, implants, transdermal systems and vaginal rings make the formulation set the input rate [@francis2021dmpa; @timmer2000nuvaring].

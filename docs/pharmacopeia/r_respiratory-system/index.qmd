@@ -28,8 +28,8 @@ Part deposits in the lung and is absorbed without first pass; the **swallowed fr
 Plasma concentration is the sum of two inputs with different rates and bioavailabilities [@borghardt2016olodaterol; @hochhaus2021fpdpi] (see [absorption](/docs/concepts/pk/1_absorption/)).
 
 **Plasma is a poor surrogate for local effect.**
-It tracks systemic safety, adrenal suppression for corticosteroids and tremor for beta-2 agonists, far better than it tracks bronchodilation [@daleyyatesInhaledCorticosteroidsPotency2015; @whaleSystemicBronchodilatorEffects2008].
-Modern inhaled corticosteroids are designed to widen that gap through near-complete first-pass removal of the swallowed fraction [@daleyyates2015ics; @borghardtPharmacometricModelsCharacterizing2015].
+It tracks systemic safety, adrenal suppression for corticosteroids and tremor for beta-2 agonists, far better than it tracks bronchodilation [@daleyyates2015ics; @whaleSystemicBronchodilatorEffects2008].
+Modern inhaled corticosteroids are designed to widen that gap through near-complete first-pass removal of the swallowed fraction [@daleyyates2015ics; @borghardt2015pharmacometric].
 
 **Isolating the lung dose.**
 A charcoal block prevents gut absorption and is the established way to measure the pulmonary portion [@vanhaarstReviewDrugDevelopment2019; @chrystynMethodsIdentifyDrug2001].
