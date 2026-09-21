@@ -1,6 +1,7 @@
 ---
 title: "Wisdom Notes"
 date: "2026-09-20"
+draft: true
 ---
 
 ::: {.callout-caution title="Under construction"}
