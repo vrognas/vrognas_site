@@ -1,0 +1,15 @@
+---
+title: "M03: Muscle relaxants"
+description: "ATC M03 muscle relaxants for modellers: relaxants are the effect compartment case."
+date: "2026-02-08"
+---
+
+Part of [M: Musculo-skeletal system](../).
+
+**Relaxants are the effect compartment case.**
+Twitch depression lags plasma concentration, and the hysteresis collapses under an effect compartment, as fitted for d-tubocurarine [@sheinerSimultaneousModelingPharmacokinetics1979].
+
+## References
+
+::: {#refs}
+:::

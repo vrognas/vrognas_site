@@ -1,0 +1,15 @@
+---
+title: "V10: Therapeutic radiopharmaceuticals"
+description: "Pharmacometric modelling notes for ATC V10, therapeutic radiopharmaceuticals."
+date: "2026-02-08"
+---
+
+Part of [V: Various](../).
+
+**Mechanistic extrapolation.**
+PBPK has been applied in radiopharmaceutical therapy to predict time-integrated activity for treatment planning [@klettingPhysiologicallyBasedPharmacokinetic2015; @hardiansyahSensitivityAnalysisPhysiologically2016].
+
+## References
+
+::: {#refs}
+:::

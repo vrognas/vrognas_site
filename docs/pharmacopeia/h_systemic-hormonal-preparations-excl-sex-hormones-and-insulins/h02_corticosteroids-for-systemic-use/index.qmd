@@ -1,0 +1,23 @@
+---
+title: "H02: Corticosteroids for systemic use"
+description: "ATC H02 corticosteroids for systemic use for modellers: baseline is rhythmic and it moves; duration matters separately from intensity; cumulative exposure is a poor fix."
+date: "2026-02-08"
+---
+
+Part of [H: Systemic hormonal preparations, excluding sex hormones and insulins](../).
+
+**Baseline is rhythmic and it moves.**
+Cortisol has a pronounced diurnal pattern, so a constant baseline cannot describe a 24-hour profile [@chakraborty1999]; a time-varying production rate is the usual remedy [@ayyar2019].
+Baseline also falls during treatment and recovers slowly after withdrawal [@baker2021; @krzyzanski2021], which is one reason long courses are tapered [@burmester2020].
+
+**Duration matters separately from intensity.**
+Fracture risk tracks current daily dose, and adrenal suppression rises with dose *and* treatment duration [@broersen2015adrenal; @magee2002prednisolonepkpd].
+An analysis carrying only average concentration misses the duration-dependent toxicities.
+
+**Cumulative exposure is a poor fix.**
+A single cumulative-exposure term is a poor fix: it forces duration and intensity to be interchangeable, and can manufacture an apparent exposure-response even when intensity carries no signal at all.
+
+## References
+
+::: {#refs}
+:::

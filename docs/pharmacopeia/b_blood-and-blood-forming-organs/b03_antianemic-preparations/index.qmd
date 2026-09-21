@@ -1,0 +1,16 @@
+---
+title: "B03: Antianemic preparations"
+description: "ATC B03 antianemic preparations for modellers: longest delays in the group."
+date: "2026-02-08"
+---
+
+Part of [B: Blood and blood forming organs](../).
+
+**Longest delays in the group.**
+Erythropoiesis-stimulating agents act on precursors, so hemoglobin is separated from exposure by maturation and red cell lifespan [@uehlinger1992epo; @ramakrishnan2004epo].
+Lifespan models with an explicit endogenous baseline and feedback are standard [@krzyzanski2008lifespan; @olssongisleskog2007epo].
+
+## References
+
+::: {#refs}
+:::

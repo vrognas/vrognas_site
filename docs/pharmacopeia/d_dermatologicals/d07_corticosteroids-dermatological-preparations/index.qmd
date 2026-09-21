@@ -1,0 +1,15 @@
+---
+title: "D07: Corticosteroids, dermatological preparations"
+description: "ATC D07 corticosteroids, dermatological preparations for modellers: the vehicle is part of the drug."
+date: "2026-02-08"
+---
+
+Part of [D: Dermatologicals](../).
+
+**The vehicle is part of the drug.**
+Fitting **E~max~** to blanching, a [pharmacodynamic](/docs/concepts/pd/) readout, reversed the potency ranking of clobetasol and mometasone once each was formulated as a cream, which the authors suggest may be due to formulation factors [@rathApplicationEmaxModel2022].
+
+## References
+
+::: {#refs}
+:::

@@ -1,0 +1,21 @@
+---
+title: "V03: All other therapeutic products"
+description: "ATC V03 all other therapeutic products for modellers: typical structure, reversal agents; reversal can wear off first."
+date: "2026-02-08"
+---
+
+Part of [V: Various](../).
+
+**Typical structure, reversal agents.**
+Sugammadex encapsulates rocuronium and the complex is cleared by the kidney, so clearance of both falls in [renal impairment](/docs/concepts/clinpharm-studies/renal-impairment-studies/) [@staalsReducedClearanceRocuronium2010].
+A population analysis nonetheless found renal function did not affect reversal time [@kleijnPopulationPharmacokineticPharmacodynamic2011].
+The fitted model is complex formation using the *in vitro* dissociation constant, with effect driven by the fall in free rocuronium rather than by an E~max~ on sugammadex [@ploegerPharmacokineticPharmacodynamicModel2009].
+
+**Reversal can wear off first.**
+The short duration of action of naloxone is a pharmacokinetic property, so reversal can wear off while the opioid is still present [@ngaiPharmacokineticsNaloxoneRats1976].
+Judging a reversal dose therefore calls for a mechanistic model linking both drugs to ventilation [@yangMechanisticPharmacokineticPharmacodynamic2024].
+
+## References
+
+::: {#refs}
+:::

@@ -1,0 +1,26 @@
+---
+title: "B01: Antithrombotic agents"
+description: "ATC B01 antithrombotic agents for modellers: delayed effect is the default; benefit-risk is asymmetric."
+date: "2026-02-08"
+---
+
+Part of [B: Blood and blood forming organs](../).
+
+**Delayed effect is the default.**
+Vitamin K antagonists suppress synthesis of clotting factors [@holford1986warfarin], and irreversible antiplatelet agents outlast the drug [@jiang2015clopidogrel], so effect follows the turnover of a protein or cell pool rather than plasma concentration.
+Turnover and indirect response models are the natural starting point [@dayneka1993indirect; @ooi2017joint].
+
+**The exception worth knowing.**
+Direct oral anticoagulants inhibit an existing enzyme, so their effect on clotting assays tracks concentration with little delay and direct models are what is actually fitted [@mueck2014rivaroxaban; @stangier2007dabigatran; @parasrampuria2016edoxaban].
+
+**Benefit-risk is asymmetric.**
+Exposure-response detects the bleeding limb far more reliably than the efficacy limb, which is often flat across the range studied [@nyberg2016edoxaban; @roshammar2017ticagrelor].
+Covariates that raise exposure (renal function, body size, age, P-glycoprotein and CYP3A inhibitors) move bleeding first, which is why dose-reduction criteria are written in exactly those terms [@terrier2022doacpopk; @lin2025fxaage].
+
+**Mechanistic extrapolation.**
+QSP models of the coagulation network, built from literature kinetics, are well established for predicting how anticoagulants shift thrombin generation and INR, extrapolating efficacy and bleeding risk across doses [@wajimaComprehensiveModelHumoral2009; @burghausEvaluationEfficacySafety2011].
+
+## References
+
+::: {#refs}
+:::

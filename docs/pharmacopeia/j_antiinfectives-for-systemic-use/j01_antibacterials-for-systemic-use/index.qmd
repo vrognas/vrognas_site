@@ -1,5 +1,6 @@
 ---
 title: "J01: Antibacterials for systemic use"
+description: "ATC J01 antibacterials for systemic use for modellers: the index is class-specific; resistance is a compartment."
 date: "2026-02-20"
 ---
 
@@ -133,6 +134,18 @@ The immune response significantly influences antibiotic efficacy.
 Most antibiotic studies occur in neutropenic models, isolating antibiotic effects but overlooking immune interactions.
 Immune variability among patients impacts real-world efficacy.
 Incorporating immune response data into PKPD models may enhance the translation of preclinical findings to clinical practice, especially in patients with varying degrees of immunocompetence.
+
+## Modelling notes
+
+**The index is class-specific.**
+For antibacterials, exposure is summarised as **unbound** concentration referenced to the **MIC**: *f*T~>MIC~, *f*AUC/MIC or *f*C~max~/MIC [@moutonStandardizationPharmacokineticPharmacodynamic2005].
+Which index predicts effect is settled by dose fractionation and differs between antibacterial classes, so no single index covers J01 [@craigPharmacokineticPharmacodynamicParameters1998; @nielsenPharmacokineticPharmacodynamicModelingAntibacterial2013].
+
+**Typical structure.**
+Semi-mechanistic models give the bacteria a growth rate, a capacity limit and a drug-driven kill rate, fitted to whole time-kill curves rather than one summary index [@nielsenSemimechanisticPharmacokineticPharmacodynamic2007].
+
+**Resistance is a compartment.**
+Regrowth is usually modelled as a pre-existing less susceptible subpopulation that treatment selects for, though published models differ in how resistance arises [@jumbeApplicationMathematicalModel2003; @nielsenPharmacokineticPharmacodynamicModelingAntibacterial2013].
 
 ## References
 

@@ -1,6 +1,6 @@
 ---
 title: "G: Genito-urinary system and sex hormones"
-description: "ATC group G for modellers: dosing into a self-regulating hormonal axis, rhythmic baselines, flip-flop depots and patient-reported urological endpoints."
+description: "ATC group G for modellers: the level 2 map with current standards, and notes held at G03 (sex hormones) and G04 (urologicals)."
 date: "2026-02-08"
 ---
 
@@ -10,40 +10,16 @@ Two subgroups set the agenda: sex hormones (G03) are dosed into an axis that alr
 Margaret Sanger pushed for an oral contraceptive, Katharine Dexter McCormick paid for it, and Gregory Pincus and John Rock did the work.
 The FDA approved Enovid in 1957 for menstrual disorders, and only in 1960 for contraception [@dhontHistoryOralContraception2010; @junodWomensTrialsApproval2002].
 
-| Level 2 code | Description |
-| ---: | :--- |
-| G01 | Gynecological antiinfectives and antiseptics |
-| G02 | Other gynecologicals |
-| G03 | Sex hormones and modulators of the genital system |
-| G04 | Urologicals |
+| Level 2 code | Description | In plain terms | Current standard |
+| ---: | :--- | :--- | :--- |
+| G01 | Gynecological antiinfectives and antiseptics |  | Clotrimazole (G01AF02) / metronidazole (G01AF01), both vaginal |
+| G02 | Other gynecologicals | uterus drugs: labour induction, tocolytics, prolactin inhibitors | Misoprostol (G02AD06) / dinoprostone (G02AD02) |
+| [G03](g03_sex-hormones-and-modulators-of-the-genital-system/) | Sex hormones and modulators of the genital system | contraceptives, menopause hormone therapy, fertility drugs | Levonorgestrel and ethinylestradiol (G03AA07) / estradiol (G03CA03) |
+| [G04](g04_urologicals/) | Urologicals | for bladder and prostate problems | Tamsulosin (G04CA02) / solifenacin (G04BD08) |
 
-: ATC G level 2 codes {#tbl-atc-g-lvl-2 tbl-colwidths="[20, 80]"}
+: ATC G level 2 codes {#tbl-atc-g-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
 ## Modelling notes
-
-**You are dosing into a feedback loop (G03).**
-Exogenous hormone suppresses endogenous secretion, so the measured concentration is the drug plus a baseline that moves in response to it [@bi2018tc; @pastuszak2021tu].
-Start from turnover (indirect response), not a direct-effect model [@pechstein2000cetrorelix; @snelder2019leuprorelin], and add an explicit feedback term when modelling the axis itself [@tornoe2007hpg] (see [pharmacodynamics](/docs/concepts/pd/)).
-
-**Baseline is rhythmic, so sampling time is a covariate (G03).**
-Testosterone follows a circadian rhythm, most pronounced in younger men [@brambilla2009diurnal; @diver2003diurnal]; in premenopausal women LH, FSH, estradiol and progesterone vary across the menstrual cycle [@stricker2006menstrual; @roblitz2013menstrual].
-A pre-dose sample drawn at an arbitrary hour is one point on a rhythm, not a baseline [@dansirikul2008baseline; @bhasin2018guideline].
-
-**Response outlasts exposure (G03).**
-Steroids act through nuclear receptors and gene transcription [@burris2013nr], so endpoints such as luteinising hormone, spermatogenesis and prostate specific antigen move on the timescale of the affected system, not of plasma concentration [@bi2018tc; @gisleskog1998dht].
-
-**Flip-flop is the norm (G03).**
-Depot injections, implants, transdermal systems and vaginal rings make the formulation set the input rate [@francis2021dmpa; @timmer2000nuvaring].
-For non-removable depots absorption is slower than elimination, so the apparent terminal half-life belongs to the vehicle [@kuan2023flipflop; @periti2002leuprorelin].
-
-**Urological endpoints are not continuous (G04).**
-Symptom scores, voiding diaries and incontinence counts are ordered categorical or count data; fitting E~max~ to a group mean discards most of the information [@lyauk2021boundedinteger; @lyauk2020irtipss].
-
-**Placebo response is large and time-varying (G04).**
-In benign prostatic hyperplasia the placebo effect on symptom score has been several times the tamsulosin effect [@dagate2020ipss], so model its time course rather than treating it as a fixed offset [@mostafaei2022placebo].
-
-**Mechanistic extrapolation (G03).**
-PBPK dominates here, predicting how CYP3A inducers such as efavirenz or rifampicin lower ethinylestradiol and progestin exposure, and whether dose adjustment preserves contraceptive efficacy [@lewisPhysiologicallyBasedPharmacokinetic2024; @adeojoPhysiologicallyBasedPharmacokinetic2024].
 
 **Non-monotonic response**
 GnRH agonists produce a flare before downregulation, so the response is not monotonic [@romero2012triptorelin; @lim2015leuprolide], and ATC files them outside this group entirely, under L02AE and H01CA.

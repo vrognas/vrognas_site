@@ -1,0 +1,15 @@
+---
+title: "M05: Drugs for treatment of bone diseases"
+description: "ATC M05 drugs for treatment of bone diseases for modellers: bone markers and density are asynchronous."
+date: "2026-02-08"
+---
+
+Part of [M: Musculo-skeletal system](../).
+
+**Bone markers and density are asynchronous.**
+Antiresorptives move serum CTX long before bone mineral density, and an indirect response model bridges the lag, predicting later density gain from one year of data [@wuQuantitativePredictionBone2021].
+
+## References
+
+::: {#refs}
+:::

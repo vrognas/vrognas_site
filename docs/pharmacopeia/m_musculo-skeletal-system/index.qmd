@@ -1,6 +1,6 @@
 ---
 title: "M: Musculo-skeletal system"
-description: "ATC group M for modellers: four unrelated PD paradigms under one letter, pain endpoints ruled by placebo and dropout, and bone effects that take years."
+description: "ATC group M for modellers: four unrelated PD paradigms under one letter, with notes held at M01, M03, M04 and M05."
 date: "2026-02-08"
 ---
 
@@ -9,37 +9,21 @@ Published models here span a subjective pain score [@mandemaPopulationPharmacody
 
 In 1938 Richard Gill returned from the Amazon with 11 kg of curare, from which Squibb isolated a standardised extract; Harold Griffith and Enid Johnson gave it in the operating room in 1942 [@elsherbiniConnectionHaroldGriffith2024; @griffithUseCurareGeneral1942].
 
-| Level 2 code | Description |
-| ---: | :--- |
-| M01 | Antiinflammatory and antirheumatic products |
-| M02 | Topical products for joint and muscular pain |
-| M03 | Muscle relaxants |
-| M04 | Antigout preparations |
-| M05 | Drugs for treatment of bone diseases |
-| M09 | Other drugs for disorders of the musculo-skeletal system |
+| Level 2 code | Description | In plain terms | Current standard |
+| ---: | :--- | :--- | :--- |
+| [M01](m01_antiinflammatory-and-antirheumatic-products/) | Antiinflammatory and antirheumatic products |  | Ibuprofen (M01AE01) / naproxen (M01AE02) |
+| M02 | Topical products for joint and muscular pain |  | Topical diclofenac (M02AA15) / topical ketoprofen (M02AA10) |
+| [M03](m03_muscle-relaxants/) | Muscle relaxants |  | Rocuronium bromide (M03AC09) for neuromuscular block / baclofen (M03BX01) for spasticity |
+| [M04](m04_antigout-preparations/) | Antigout preparations |  | Allopurinol (M04AA01) / febuxostat (M04AA03) |
+| [M05](m05_drugs-for-treatment-of-bone-diseases/) | Drugs for treatment of bone diseases |  | Alendronic acid (M05BA04) / denosumab (M05BX04) |
+| M09 | Other drugs for disorders of the musculo-skeletal system | leftover bone, joint and muscle drugs | Residual catch-all group, but it now carries real drug-level standards for rare neuromuscular disease: nusinersen (M09AX07) and risdiplam (M09AX10) for spinal muscular atrophy |
 
-: ATC M level 2 codes {#tbl-atc-m-lvl-2 tbl-colwidths="[20, 80]"}
+: ATC M level 2 codes {#tbl-atc-m-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
 ## Modelling notes
 
 **Endpoint.**
 Each level 2 code brings its own: WOMAC pain in M01 [@wenPlaceboResponseOral2022], serum urate in M04 [@murakiPopulationPharmacodynamicAnalysis2018], bone markers and density in M05 [@wuQuantitativePredictionBone2021], evoked twitch in M03 [@jiReversalRocuroniumInducedIntense2023].
-
-**Pain needs a fitted placebo time course (M01).**
-In oral osteoarthritis trials the WOMAC placebo response is large and reaches 90% of its maximum only after 5 to 7 weeks [@wenPlaceboResponseOral2022].
-In an acute postoperative model, pain relief was fitted as a function of ketorolac concentration (**E~max~**), a subject random effect and time, the last capturing the waxing and waning of placebo [@mandemaPopulationPharmacodynamicModel1996].
-
-**Remedication is informative dropout (M01).**
-Patients remedicate when relief is insufficient, with a probability driven by the observed level of pain relief and rising with time, and ignoring that informative dropout biases the drug effect [@mandemaPopulationPharmacodynamicModel1996; @bjornsson2015dropout].
-
-**Urate is a turnover problem (M04).**
-Serum urate under febuxostat is fitted with an indirect response model [@murakiPopulationPharmacodynamicAnalysis2018]; such a model predicted real-world urate with r = 0.68, rising to 0.77 once comorbidities, eGFR and loop diuretics were accounted for [@hiraiEvaluationPharmacokineticPharmacodynamic2018].
-
-**Bone markers and density are asynchronous (M05).**
-Antiresorptives move serum CTX long before bone mineral density, and an indirect response model bridges the lag, predicting later density gain from one year of data [@wuQuantitativePredictionBone2021].
-
-**Relaxants are the effect compartment case (M03).**
-Twitch depression lags plasma concentration, and the hysteresis collapses under an effect compartment, as fitted for d-tubocurarine [@sheinerSimultaneousModelingPharmacokinetics1979].
 
 **Easy to overlook.**
 For M02 the relevant exposure is local, in skin and synovial fluid, and dermal PBPK is what links measured plasma concentration to that site, so [bioequivalence](/docs/concepts/clinpharm-studies/ba-be/) is argued at the site of action alongside, not instead of, a plasma study [@tsakalozouPhysiologicallyBasedPharmacokinetic2021].

@@ -1,0 +1,18 @@
+---
+title: "A02: Drugs for acid related disorders"
+description: "Pharmacometric modelling notes for ATC A02, drugs for acid related disorders."
+date: "2026-02-08"
+---
+
+Part of [A: Alimentary tract and metabolism](../).
+
+**Easy to overlook.**
+Omeprazole inactivates the gastric H^+^/K^+^-ATPase irreversibly, so in dogs the duration of inhibition was set by enzyme turnover after long exposure and by transfer of pumps between active and resting states after short exposure, not by drug elimination [@abeloGastricAcidSecretion2002].
+
+**Mechanistic extrapolation.**
+PBPK has been applied in the reverse direction, asking whether acid suppression changes the [absorption](/docs/concepts/pk/1_absorption/) of a co-medication: it described the lack of an acid-reducing-agent effect for tapentadol, darunavir and saxagliptin and qualitatively predicted reduced erlotinib absorption [@dongApplicationPhysiologicallyBased2020], and predicted a minor pH-dependent interaction for the entrectinib market formulation [@parrottPhysiologicallyBasedAbsorption2020].
+
+## References
+
+::: {#refs}
+:::

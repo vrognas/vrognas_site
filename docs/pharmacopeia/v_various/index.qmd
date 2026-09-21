@@ -1,6 +1,6 @@
 ---
 title: "V: Various"
-description: "ATC group V for modellers: absorbed dose in Gy as the radiopharmaceutical endpoint, binding models for reversal agents, and contrast media as a pharmacokinetic problem."
+description: "ATC group V for modellers: the catch-all letter, effective half-life for radiopharmaceuticals, and notes held at V03, V08 and V10."
 date: "2026-02-08"
 ---
 
@@ -9,19 +9,19 @@ The notes below cover three of its nine level 2 codes: therapeutic radiopharmace
 
 In 2002 Anton Bom and colleagues at Organon described a cyclodextrin that reverses rocuronium block by encapsulating the relaxant itself rather than acting on a receptor [@bomNovelConceptReversing2002].
 
-| Level 2 code | Description |
-| ---: | :--- |
-| V01 | Allergens |
-| V03 | All other therapeutic products |
-| V04 | Diagnostic agents |
-| V06 | General nutrients |
-| V07 | All other non-therapeutic products |
-| V08 | Contrast media |
-| V09 | Diagnostic radiopharmaceuticals |
-| V10 | Therapeutic radiopharmaceuticals |
-| V20 | Surgical dressings |
+| Level 2 code | Description | In plain terms | Current standard |
+| ---: | :--- | :--- | :--- |
+| V01 | Allergens | extracts for allergy testing and desensitisation | Grass pollen allergen extract (V01AA02) / house dust mite allergen extract (V01AA03) |
+| [V03](v03_all-other-therapeutic-products/) | All other therapeutic products | catch-all: antidotes, chelators, medical gases | Naloxone (V03AB15) / acetylcysteine (V03AB23) |
+| V04 | Diagnostic agents |  | Tuberculin (V04CF01) / 13C-urea (V04CX05) |
+| V06 | General nutrients |  | No drug-level standard: enteral and parenteral nutrition products are classified at group level only (V06A, V06B, V06C, V06DA, V06DB, V06DD, V06DE, V06DF, V06DX carry no level 5 substances). The only level 5 entries in the whole group are glucose (V06DC01) and fructose (V06DC02). |
+| V07 | All other non-therapeutic products | non-medicines: dressings, solvents, disinfectants, cosmetics | No drug-level standard and no level 5 codes anywhere in the group: every subgroup stops at level 4, e.g. solvents and diluting agents (V07AB), blood transfusion auxiliary products (V07AC), technical disinfectants (V07AV). |
+| [V08](v08_contrast-media/) | Contrast media | injected agents that make scans visible | Iohexol (V08AB02) / gadobutrol (V08CA09) |
+| V09 | Diagnostic radiopharmaceuticals | radioactive tracers injected to image the body | Fludeoxyglucose (18F) (V09IX04) / technetium (99mTc) medronic acid (V09BA02) |
+| [V10](v10_therapeutic-radiopharmaceuticals/) | Therapeutic radiopharmaceuticals | radioactive drugs given to treat disease | Sodium iodide (131I) (V10XA01) / lutetium (177Lu) vipivotide tetraxetan (V10XX05) |
+| V20 | Surgical dressings |  | No drug-level standard: V20 has no subdivisions at all. The classification stops at the level 2 group code V20 (surgical dressings), with no level 3, 4 or 5 entries. |
 
-: ATC V level 2 codes {#tbl-atc-v-lvl-2 tbl-colwidths="[20, 80]"}
+: ATC V level 2 codes {#tbl-atc-v-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
 ## Modelling notes
 
@@ -32,22 +32,6 @@ In ^177^Lu-PSMA-617 therapy the lesion dose-response relationship is real but on
 **Decay is not clearance (V09, V10).**
 Imaging measures activity, which falls by radioactive decay and by biological clearance together, so what is fitted is an effective half-life [@oliveiraAnalysisResidenceTime2022].
 With few imaging time points the fit is unstable, and population fitting stabilises the time-integrated activity [@hardiansyahPopulationBasedMethod2021].
-
-**Typical structure, reversal agents.**
-Sugammadex encapsulates rocuronium and the complex is cleared by the kidney, so clearance of both falls in [renal impairment](/docs/concepts/clinpharm-studies/renal-impairment-studies/) [@staalsReducedClearanceRocuronium2010].
-A population analysis nonetheless found renal function did not affect reversal time [@kleijnPopulationPharmacokineticPharmacodynamic2011].
-The fitted model is complex formation using the *in vitro* dissociation constant, with effect driven by the fall in free rocuronium rather than by an E~max~ on sugammadex [@ploegerPharmacokineticPharmacodynamicModel2009].
-
-**Reversal can wear off first (V03).**
-The short duration of action of naloxone is a pharmacokinetic property, so reversal can wear off while the opioid is still present [@ngaiPharmacokineticsNaloxoneRats1976].
-Judging a reversal dose therefore calls for a mechanistic model linking both drugs to ventilation [@yangMechanisticPharmacokineticPharmacodynamic2024].
-
-**Contrast media, a pharmacokinetic problem.**
-Iodinated X-ray media distribute differentially to organs and between normal and abnormal tissue, and are excreted largely unchanged, with a hepatic and biliary route that matters in renal impairment [@bourinOverviewClinicalPharmacokinetics1997].
-Iohexol clearance is itself used as a measured GFR [@mohamedDiverseProtocolsMeasuring2024], and the practical question is the safe interval before the next study [@vandermolenWaitingTimesBetween2024].
-
-**Mechanistic extrapolation (V10).**
-PBPK has been applied in radiopharmaceutical therapy to predict time-integrated activity for treatment planning [@klettingPhysiologicallyBasedPharmacokinetic2015; @hardiansyahSensitivityAnalysisPhysiologically2016].
 
 ## References
 

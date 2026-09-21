@@ -1,6 +1,6 @@
 ---
 title: "S: Sensory organs"
-description: "ATC group S for modellers: a circadian intraocular pressure baseline, vitreous exposure that is predicted rather than sampled, and plasma as a safety readout."
+description: "ATC group S for modellers: an organ of limited accessibility, with the ophthalmological modelling notes held at S01."
 date: "2026-02-08"
 ---
 
@@ -10,33 +10,19 @@ The notes below come from S01, ophthalmologicals, where the difficulty is an org
 In 1977 Thom Zimmerman and Herbert Kaufman studied single-dose timolol at four strengths in twenty patients with chronic open-angle glaucoma.
 Every strength, down to 0.1%, lowered pressure for at least 24 hours, which led them to propose a once a day topical agent [@zimmermanTimololDoseResponse1977].
 
-| Level 2 code | Description |
-| ---: | :--- |
-| S01 | Ophthalmologicals |
-| S02 | Otologicals |
-| S03 | Ophthalmological and otological preparations |
+| Level 2 code | Description | In plain terms | Current standard |
+| ---: | :--- | :--- | :--- |
+| [S01](s01_ophthalmologicals/) | Ophthalmologicals | medicines applied to the eye | Latanoprost (S01EE01) / aflibercept (S01LA05) |
+| S02 | Otologicals | ear medicines, mostly drops | Ciprofloxacin ear drops (S02AA15) / dexamethasone with antiinfectives (S02CA06) |
+| S03 | Ophthalmological and otological preparations | drops licensed for both eye and ear | Residual group for drops licensed for both eye and ear; no separate standard of care. Closest is dexamethasone with antiinfectives (S03CA01); single-agent example ciprofloxacin (S03AA07). Eye and ear disease is treated from S01 and S02 instead. |
 
-: ATC S level 2 codes {#tbl-atc-s-lvl-2 tbl-colwidths="[20, 80]"}
+: ATC S level 2 codes {#tbl-atc-s-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
 ## Modelling notes
 
 **Endpoint.**
 In S01E the endpoint is **intraocular pressure**, read as a 24 hour series rather than one clinic value, because the baseline itself carries a circadian rhythm [@durairajMechanismBasedTranslational2014].
 Posterior segment endpoints vary: the pegcetacoplan analysis used geographic atrophy lesion area [@crassPharmacokineticPharmacodynamicAnalysis2025], the faricimab analysis best corrected visual acuity [@diackOcularPharmacokineticsFaricimab2024].
-
-**Typical structure (S01E).**
-For pressure, a physiological baseline built from aqueous humour dynamics, with the drug entering as an effect on those parameters, which is what carries the model from rabbit and dog into patients [@durairajMechanismBasedTranslational2014].
-
-**Dosing time is design, not noise (S01E).**
-Morning and evening instillation of the same fixed combination both lowered 24 hour pressure but differed in fluctuation, so clock time belongs in the model [@fengEfficacyMorningVersus2024].
-
-**Vitreous exposure is predicted, not sampled (S01L).**
-Faricimab vitreous concentrations were inferred from aqueous humour and plasma samples, with plasma exposure roughly 6000-fold below vitreous [@diackOcularPharmacokineticsFaricimab2024].
-The aflibercept population model was fitted to plasma alone, ocular concentrations being a model output [@bihorelIntegratedPopulationPharmacokinetic2026].
-
-**Plasma reports safety, not effect (S01E).**
-Here plasma reports systemic safety, not the driver of effect: ophthalmic timolol is absorbed systemically, and paroxetine raised its plasma exposure 1.6-fold from 0.1% gel and 1.8-fold from 0.5% drops, with standing heart rate significantly lower only after the drops [@maenpaaParoxetineMarkedlyIncreases2014].
-That makes it a [drug interaction](/docs/concepts/clinpharm-studies/ddi/) question.
 
 **Easy to overlook.**
 For faricimab, vitreous elimination is the slowest step, so vitreous, aqueous and plasma concentrations decline in parallel and the plasma curve reports ocular release rather than systemic clearance [@diackOcularPharmacokineticsFaricimab2024].

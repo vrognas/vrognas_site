@@ -1,6 +1,6 @@
 ---
 title: "D: Dermatologicals"
-description: "ATC group D for modellers: the vehicle is part of the drug, skin severity scores need a bounded likelihood, and site-of-action exposure is sampled invasively or predicted."
+description: "ATC group D for modellers: bounded skin severity scores and site-of-action exposure sampled or predicted, with D05, D07 and D11 notes on their own pages."
 date: "2026-02-08"
 ---
 
@@ -10,39 +10,29 @@ For the topical majority the target tissue is also the site of administration, s
 In 1962 A. W. McKenzie and R. B. Stoughton published a method for comparing the percutaneous absorption of steroids [@mckenzieMethodComparingPercutaneous1962].
 The skin blanching assay that grew from it is still called the Stoughton-McKenzie assay [@herkenneVivoMethodsAssessment2008], and the FDA accepts it as a surrogate for the bioequivalence of topical glucocorticoids [@alomariUpdateAdvancesChallenges2024].
 
-| Level 2 code | Description |
-| ---: | :--- |
-| D01 | Antifungals for dermatological use |
-| D02 | Emollients and protectives |
-| D03 | Preparations for treatment of wounds and ulcers |
-| D04 | Antipruritics, incl. antihistamines, anesthetics, etc. |
-| D05 | Antipsoriatics |
-| D06 | Antibiotics and chemotherapeutics for dermatological use |
-| D07 | Corticosteroids, dermatological preparations |
-| D08 | Antiseptics and disinfectants |
-| D09 | Medicated dressings |
-| D10 | Anti-acne preparations |
-| D11 | Other dermatological preparations |
+| Level 2 code | Description | In plain terms | Current standard |
+| ---: | :--- | :--- | :--- |
+| D01 | Antifungals for dermatological use |  | Terbinafine, topical (D01AE15) / terbinafine, oral (D01BA02) |
+| D02 | Emollients and protectives | moisturisers and barrier creams | Carbamide, i.e. urea (D02AE01). Most emollient bases carry no level 5 substance code: D02AC (soft paraffin and fat products) is group-level only. |
+| D03 | Preparations for treatment of wounds and ulcers |  | Cadexomer iodine (D03AX01) / collagenase (D03BA02). Both are adjuncts: wound and ulcer care is led by dressings, offloading and debridement rather than by a drug-level standard. |
+| D04 | Antipruritics, incl. antihistamines, anesthetics, etc. | anti-itch creams and numbing agents | Lidocaine (D04AB01) / doxepin (D04AX01) |
+| [D05](d05_antipsoriatics/) | Antipsoriatics |  | Calcipotriol, combinations, i.e. with betamethasone (D05AX52) / acitretin (D05BB02) |
+| D06 | Antibiotics and chemotherapeutics for dermatological use | topical antibacterials and antivirals, not anticancer | Mupirocin (D06AX09) / imiquimod (D06BB10) |
+| [D07](d07_corticosteroids-dermatological-preparations/) | Corticosteroids, dermatological preparations |  | Mometasone (D07AC13) / hydrocortisone (D07AA02) |
+| D08 | Antiseptics and disinfectants |  | Chlorhexidine (D08AC02) / povidone-iodine (D08AG02) |
+| D09 | Medicated dressings | bandages impregnated with a drug | Povidone-iodine dressings (D09AA09) / chlorhexidine dressings (D09AA12). Modern silver, foam and hydrocolloid dressings have no level 5 code; D09AX (soft paraffin dressings) is group-level only. |
+| D10 | Anti-acne preparations |  | Adapalene (D10AD03) / isotretinoin, oral (D10BA01) |
+| [D11](d11_other-dermatological-preparations/) | Other dermatological preparations |  | Tacrolimus, topical (D11AH01) / dupilumab (D11AH05) |
 
-: ATC D level 2 codes {#tbl-atc-d-lvl-2 tbl-colwidths="[20, 80]"}
+: ATC D level 2 codes {#tbl-atc-d-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
 ## Modelling notes
 
 **Endpoint.**
 Bounded composite severity scores: PASI in psoriasis [@ooiBoundedIntegerModelbased2023] and EASI in atopic dermatitis [@okadaContinuousTimeMarkovPopulation2025].
 
-**A bounded score needs a bounded likelihood (D05).**
-PASI has been fitted with a bounded integer model, to respect the discrete and bounded nature of the data [@ooiBoundedIntegerModelbased2023], and with a zero-inflated beta distribution, for the bounded nature and distributional characteristics of the score [@tsamandourasEmployingZeroinflatedBeta2024].
-In one psoriasis analysis, fitting the 6-point physician's global assessment alone carried a substantial structural bias that joint modelling with PASI removed [@huImprovingCategoricalEndpoint2022].
-
-**The vehicle is part of the drug (D07).**
-Fitting **E~max~** to blanching, a [pharmacodynamic](/docs/concepts/pd/) readout, reversed the potency ranking of clobetasol and mometasone once each was formulated as a cream, which the authors suggest may be due to formulation factors [@rathApplicationEmaxModel2022].
-
 **Site-of-action exposure is sampled directly or not at all.**
 Dermal open flow microperfusion measures dermal concentrations *in vivo*, and separated [bioequivalent](/docs/concepts/clinpharm-studies/ba-be/) from non-bioequivalent lidocaine and prilocaine products on dermal AUC and C~max~ [@tiffnerCutaneousPharmacokineticsbasedBioequivalence2024].
-
-**Dropout is informative (D11).**
-Dropout is informative: in a four-state Markov model of EASI the dropout probability was highest in the non-responding category [@okadaContinuousTimeMarkovPopulation2025].
 
 **Easy to overlook.**
 The D11 biologics are an ordinary systemic PKPD problem: nemolizumab exposure fell as bodyweight rose, yet simulated EASI, pruritus and IGA response rates were similar above and below 90 kg [@fauchetModelinformedDrugDevelopment2026].

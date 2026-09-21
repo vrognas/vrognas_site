@@ -1,58 +1,35 @@
 ---
 title: "A: Alimentary tract and metabolism"
-description: "ATC group A for modellers: HbA1c as a lagged glycation readout, glucose-insulin feedback under provocation, and notes drawn from A10 and A02."
+description: "ATC group A for modellers: the level 2 map with current standards, and modelling notes held with A10 (diabetes) and A02 (acid-related disorders)."
 date: "2026-02-08"
 ---
 
 Drugs acting on the gut, on metabolism and on nutrition, from mouthwashes to insulins.
-The notes below are drawn from A10, drugs used in diabetes, and A02, drugs for acid related disorders, not conventions for the whole letter.
+Modelling notes live with the subgroups they belong to: [A10, drugs used in diabetes](a10_drugs-used-in-diabetes/), and [A02, drugs for acid related disorders](a02_drugs-for-acid-related-disorders/).
 
 In January 1922 a first pancreatic extract given to Leonard Thompson, 14 and ketoacidotic at Toronto General Hospital, left a sterile abscess and barely moved his glycaemia.
 Collip's purified extract on 23 January cleared the ketonuria [@vecchioDiscoveryInsulinImportant2018].
 
-| Level 2 code | Description |
-| ---: | :--- |
-| A01 | Stomatological preparations |
-| A02 | Drugs for acid related disorders |
-| A03 | Drugs for functional gastrointestinal disorders |
-| A04 | Antiemetics and antinauseants |
-| A05 | Bile and liver therapy |
-| A06 | Drugs for constipation |
-| A07 | Antidiarrheals, intestinal antiinflammatory/antiinfective agents |
-| A08 | Antiobesity preparations, excl. diet products |
-| A09 | Digestives, incl. enzymes |
-| A10 | Drugs used in diabetes |
-| A11 | Vitamins |
-| A12 | Mineral supplements |
-| A13 | Tonics |
-| A14 | Anabolic agents for systemic use |
-| A15 | Appetite stimulants |
-| A16 | Other alimentary tract and metabolism products |
+| Level 2 code | Description | In plain terms | Current standard |
+| ---: | :--- | :--- | :--- |
+| A01 | Stomatological preparations | of the mouth and teeth | Chlorhexidine (A01AB03) / sodium fluoride (A01AA01) |
+| [A02](a02_drugs-for-acid-related-disorders/) | Drugs for acid related disorders |  | Omeprazole (A02BC01) / pantoprazole (A02BC02) |
+| A03 | Drugs for functional gastrointestinal disorders | gut cramp and motility problems without structural disease | Metoclopramide (A03FA01) / butylscopolamine (A03BB01) |
+| A04 | Antiemetics and antinauseants | stop vomiting and nausea | Ondansetron (A04AA01) / aprepitant (A04AD12) |
+| A05 | Bile and liver therapy |  | Ursodeoxycholic acid (A05AA02) / obeticholic acid (A05AA04) |
+| A06 | Drugs for constipation |  | Macrogol (A06AD15) / lactulose (A06AD11) |
+| A07 | Antidiarrheals, intestinal antiinflammatory/antiinfective agents |  | Mesalazine (A07EC02) / loperamide (A07DA03) |
+| A08 | Antiobesity preparations, excl. diet products |  | Orlistat (A08AB01) / bupropion and naltrexone (A08AA62) |
+| A09 | Digestives, incl. enzymes | replace missing digestive enzymes | Pancreatin, indexed as multienzymes (A09AA02) |
+| [A10](a10_drugs-used-in-diabetes/) | Drugs used in diabetes |  | Metformin (A10BA02) / dapagliflozin (A10BK01) |
+| A11 | Vitamins |  | Colecalciferol (A11CC05) / thiamine (A11DA01) |
+| A12 | Mineral supplements |  | Calcium carbonate (A12AA04) / potassium chloride (A12BA01) |
+| A13 | Tonics | old general-strengthening preparations, not evidence-based | No modern drug-level standard: A13A carries no level 5 substances, a residual historical category. |
+| A14 | Anabolic agents for systemic use | tissue-building steroids acting body-wide | Nandrolone (A14AB01) / oxandrolone (A14AA08) |
+| A15 | Appetite stimulants |  | No drug-level standard: A15 is subdivided no further and holds no substances or DDDs. |
+| A16 | Other alimentary tract and metabolism products | leftovers: mostly rare inherited metabolic disease drugs | Nitisinone (A16AX04) / sapropterin (A16AX07) |
 
-: ATC A level 2 codes {#tbl-atc-a-lvl-2 tbl-colwidths="[20, 80]"}
-
-## Modelling notes
-
-**Endpoint (A10).**
-HbA1c, glycated hemoglobin, is the most commonly used biomarker of glycaemic management and a surrogate endpoint for anti-diabetic drug approval [@lledogarciaSemimechanisticModelRelationship2013].
-
-**HbA1c is not an E~max~ on concentration (A10).**
-It accumulates by glycation over the red cell lifespan, so it lags mean glucose and is written as a transformation of the glucose profile, not as a drug effect [@lledogarciaSemimechanisticModelRelationship2013; @hamrenModelsPlasmaGlucose2008].
-
-**Typical structure (A10).**
-Provocations (OGTT, IVGTT) need the glucose-insulin feedback loop stated explicitly, and integrated models carrying both species have been built for intravenous and for oral provocation data [@silberIntegratedModelGlucose2007; @jauslinIntegratedGlucoseInsulin2007].
-
-**Long trials drift (A10).**
-Type 2 diabetes progresses under treatment, so comparing drugs over a year needs disease progression on beta cell function and insulin sensitivity, not a fixed baseline [@dewinterMechanismbasedDiseaseProgression2006].
-
-**Clamp readouts (A10).**
-Insulin degludec was profiled by the glucose infusion rate of a euglycaemic clamp, a [pharmacodynamic](/docs/concepts/pd/) readout: in 65 healthy men, body mass index was inversely correlated with the 24 hour GIR AUC [@liEffectBMIPharmacokinetic2023].
-
-**Easy to overlook (A02).**
-Omeprazole inactivates the gastric H^+^/K^+^-ATPase irreversibly, so in dogs the duration of inhibition was set by enzyme turnover after long exposure and by transfer of pumps between active and resting states after short exposure, not by drug elimination [@abeloGastricAcidSecretion2002].
-
-**Mechanistic extrapolation (A02).**
-PBPK has been applied in the reverse direction, asking whether acid suppression changes the [absorption](/docs/concepts/pk/1_absorption/) of a co-medication: it described the lack of an acid-reducing-agent effect for tapentadol, darunavir and saxagliptin and qualitatively predicted reduced erlotinib absorption [@dongApplicationPhysiologicallyBased2020], and predicted a minor pH-dependent interaction for the entrectinib market formulation [@parrottPhysiologicallyBasedAbsorption2020].
+: ATC A level 2 codes {#tbl-atc-a-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
 ## References
 

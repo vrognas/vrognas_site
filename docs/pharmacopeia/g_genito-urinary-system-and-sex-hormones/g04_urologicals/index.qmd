@@ -1,0 +1,18 @@
+---
+title: "G04: Urologicals"
+description: "ATC G04 urologicals for modellers: urological endpoints are not continuous; placebo response is large and time-varying."
+date: "2026-02-08"
+---
+
+Part of [G: Genito-urinary system and sex hormones](../).
+
+**Urological endpoints are not continuous.**
+Symptom scores, voiding diaries and incontinence counts are ordered categorical or count data; fitting E~max~ to a group mean discards most of the information [@lyauk2021boundedinteger; @lyauk2020irtipss].
+
+**Placebo response is large and time-varying.**
+In benign prostatic hyperplasia the placebo effect on symptom score has been several times the tamsulosin effect [@dagate2020ipss], so model its time course rather than treating it as a fixed offset [@mostafaei2022placebo].
+
+## References
+
+::: {#refs}
+:::

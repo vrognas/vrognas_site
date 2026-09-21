@@ -9,19 +9,19 @@ The large classes are developed against continuous biomarkers, blood pressure an
 
 In July 1973, after screening thousands of fungal broths at Sankyo in Tokyo, Akira Endo isolated the first statin, ML-236B, from a *Penicillium citrinum* strain found on rice from a Kyoto grain shop [@endoHistoricalPerspectiveDiscovery2010].
 
-| Level 2 code | Description |
-| ---: | :--- |
-| C01 | Cardiac therapy |
-| C02 | Antihypertensives |
-| C03 | Diuretics |
-| C04 | Peripheral vasodilators |
-| C05 | Vasoprotectives |
-| C07 | Beta blocking agents |
-| C08 | Calcium channel blockers |
-| C09 | Agents acting on the renin-angiotensin system |
-| C10 | Lipid modifying agents |
+| Level 2 code | Description | In plain terms | Current standard |
+| ---: | :--- | :--- | :--- |
+| C01 | Cardiac therapy | drugs acting directly on the heart | Amiodarone (C01BD01) / digoxin (C01AA05) |
+| C02 | Antihypertensives |  | Methyldopa (C02AB01), still standard in pregnancy / doxazosin (C02CA04), add-on in resistant hypertension. Note most first-line antihypertensives now sit in C03, C07, C08 and C09, not here. |
+| C03 | Diuretics |  | Furosemide (C03CA01) / spironolactone (C03DA01) |
+| C04 | Peripheral vasodilators | widen arteries in the arms and legs | Largely obsolete group; naftidrofuryl (C04AX21) is the only agent still guideline-recommended, for intermittent claudication. Pentoxifylline (C04AD03) is used but evidence is weak. |
+| C05 | Vasoprotectives | for hemorrhoids, varicose veins, fragile capillaries | No modern drug-level standard; symptomatic only. The commonest are topical hydrocortisone (C05AA01) for hemorrhoids and oral diosmin (C05CA03) for chronic venous disease. |
+| C07 | Beta blocking agents |  | Bisoprolol (C07AB07) / metoprolol (C07AB02) |
+| C08 | Calcium channel blockers |  | Amlodipine (C08CA01) / diltiazem (C08DB01) |
+| C09 | Agents acting on the renin-angiotensin system | blood-pressure hormone system: ACE inhibitors, ARBs | Ramipril (C09AA05) / candesartan (C09CA06) |
+| [C10](c10_lipid-modifying-agents/) | Lipid modifying agents | cholesterol- and triglyceride-lowering drugs | Atorvastatin (C10AA05) / rosuvastatin (C10AA07) |
 
-: ATC C level 2 codes {#tbl-atc-c-lvl-2 tbl-colwidths="[20, 80]"}
+: ATC C level 2 codes {#tbl-atc-c-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
 ## Modelling notes
 
@@ -47,9 +47,6 @@ A data-driven search is underpowered at realistic dataset sizes [@ribbing2004cov
 **Safety.**
 A concentration-QTc analysis is expected under ICH E14 for essentially every new drug, as a separate pre-specified analysis [@garnett2018cqtc; @darpo2015iqcsrc] (see [C-QTc modelling](/docs/modeling/qt/)).
 Class-matched effects such as hypotension and bradycardia are exaggerated on-target pharmacology, and keep climbing after the efficacy curve flattens [@johnston1992doseresponse; @overgaard2015er].
-
-**Mechanistic extrapolation (C10).**
-PBPK dominates here, predicting OATP1B1 transporter-mediated statin interactions and SLCO1B1 genotype effects on exposure; cardiorenal QSP models extrapolate blood-pressure and renal responses for antihypertensives [@yoshikadoQuantitativeAnalysesHepatic2016; @jameiMechanisticFrameworkVitro2014].
 
 **Approval rests on the surrogate.**
 Approval often rests on the surrogate, with the outcome trial reporting years later [@sabatine2017fourier; @nissen2023clear].

@@ -1,0 +1,26 @@
+---
+title: "S01: Ophthalmologicals"
+description: "ATC S01 ophthalmologicals for modellers: dosing time is design, not noise; vitreous exposure is predicted, not sampled; plasma reports safety, not effect."
+date: "2026-02-08"
+---
+
+Part of [S: Sensory organs](../).
+
+**Typical structure.**
+For pressure, a physiological baseline built from aqueous humour dynamics, with the drug entering as an effect on those parameters, which is what carries the model from rabbit and dog into patients [@durairajMechanismBasedTranslational2014].
+
+**Dosing time is design, not noise.**
+Morning and evening instillation of the same fixed combination both lowered 24 hour pressure but differed in fluctuation, so clock time belongs in the model [@fengEfficacyMorningVersus2024].
+
+**Vitreous exposure is predicted, not sampled.**
+Faricimab vitreous concentrations were inferred from aqueous humour and plasma samples, with plasma exposure roughly 6000-fold below vitreous [@diackOcularPharmacokineticsFaricimab2024].
+The aflibercept population model was fitted to plasma alone, ocular concentrations being a model output [@bihorelIntegratedPopulationPharmacokinetic2026].
+
+**Plasma reports safety, not effect.**
+Here plasma reports systemic safety, not the driver of effect: ophthalmic timolol is absorbed systemically, and paroxetine raised its plasma exposure 1.6-fold from 0.1% gel and 1.8-fold from 0.5% drops, with standing heart rate significantly lower only after the drops [@maenpaaParoxetineMarkedlyIncreases2014].
+That makes it a [drug interaction](/docs/concepts/clinpharm-studies/ddi/) question.
+
+## References
+
+::: {#refs}
+:::

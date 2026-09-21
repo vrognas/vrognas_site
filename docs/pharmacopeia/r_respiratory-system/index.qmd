@@ -1,54 +1,26 @@
 ---
 title: "R: Respiratory system"
-description: "ATC group R for modellers: inhaled delivery splits the dose, plasma tracks safety not effect, and the device is a major source of exposure variability."
+description: "ATC group R for modellers: the level 2 map with current standards, and the inhaled-route modelling notes held at R03."
 date: "2026-02-08"
 ---
 
 Drugs acting on the airways, centred on R03 for obstructive airway disease.
 The interesting part for a modeller is the inhaled route, where the target tissue is also the site of administration [@borghardt2018pulmkinetics; @daleyyates2015ics].
+Those modelling notes live with [R03, drugs for obstructive airway diseases](r03_drugs-for-obstructive-airway-diseases/).
 
 In April 1955 Susie Maison asked her father George, president of Riker Laboratories, why her asthma medicine could not come in a spray can like hairspray.
 The first pressurised metered dose inhalers were approved on 9 March 1956 [@steinHistoryTherapeuticAerosols2017].
 
-| Level 2 code | Description |
-| ---: | :--- |
-| R01 | Nasal preparations |
-| R02 | Throat preparations |
-| R03 | Drugs for obstructive airway diseases |
-| R05 | Cough and cold preparations |
-| R06 | Antihistamines for systemic use |
-| R07 | Other respiratory system products |
+| Level 2 code | Description | In plain terms | Current standard |
+| ---: | :--- | :--- | :--- |
+| R01 | Nasal preparations |  | Mometasone (R01AD09) / fluticasone furoate (R01AD12), intranasal corticosteroids for allergic rhinitis; xylometazoline (R01AA07) for short-term decongestion |
+| R02 | Throat preparations |  | No disease-modifying standard; symptomatic relief only. Benzydamine (R02AX03) is the best-supported topical analgesic, chlorhexidine (R02AA05) the common antiseptic lozenge |
+| [R03](r03_drugs-for-obstructive-airway-diseases/) | Drugs for obstructive airway diseases | asthma and COPD inhalers | Budesonide with formoterol (R03AK07, listed as "formoterol and budesonide") / salbutamol (R03AC02) |
+| R05 | Cough and cold preparations |  | No strong evidence-based standard; acetylcysteine (R05CB01) and dextromethorphan (R05DA09) are the most used. Dornase alfa (R05CB13) is a genuine standard, but only in cystic fibrosis |
+| R06 | Antihistamines for systemic use |  | Cetirizine (R06AE07) / loratadine (R06AX13) |
+| R07 | Other respiratory system products | leftovers: surfactants, cystic-fibrosis drugs, nitric oxide | Ivacaftor, tezacaftor and elexacaftor (R07AX32) for cystic fibrosis; neonatal surfactant sits under natural phospholipids (R07AA02), which covers poractant alfa and beractant with no substance-specific code |
 
-: ATC R level 2 codes {#tbl-atc-r-lvl-2 tbl-colwidths="[20, 80]"}
-
-## Modelling notes
-
-**The dose splits before you model anything (R03).**
-Part deposits in the lung and is absorbed without first pass; the **swallowed fraction** goes to the gut and is subject to it [@donnelly2001budesonide; @daleyyates2001bdp].
-Plasma concentration is the sum of two inputs with different rates and bioavailabilities [@borghardt2016olodaterol; @hochhaus2021fpdpi] (see [absorption](/docs/concepts/pk/1_absorption/)).
-
-**Plasma is a poor surrogate for local effect (R03).**
-It tracks systemic safety, adrenal suppression for corticosteroids and tremor for beta-2 agonists, far better than it tracks bronchodilation [@daleyyates2015ics; @whaleSystemicBronchodilatorEffects2008].
-Modern inhaled corticosteroids are designed to widen that gap through near-complete first-pass removal of the swallowed fraction [@daleyyates2015ics; @borghardt2015pharmacometric].
-
-**Isolating the lung dose (R03).**
-A charcoal block prevents gut absorption and is the established way to measure the pulmonary portion [@vanhaarstReviewDrugDevelopment2019; @chrystynMethodsIdentifyDrug2001].
-It is redundant for corticosteroids whose swallowed fraction is already non-bioavailable.
-
-**Endpoint (R03).**
-FEV1, strongly baseline-dependent, so models use change from baseline with an explicit placebo component [@wu2011fev1lama; @yang2022mbmaasthma], plus a circadian term when spirometry is serial.
-Bronchodilator dose-response on FEV1 saturates early and is noisy [@blake2008albuterolpd], which is why methacholine challenge is used to separate closely spaced doses [@hendeles2015pdbioequivalence].
-
-**Corticosteroid effect is not concentration-driven (R03).**
-It builds over repeated dosing, so the model needs a time-course component rather than a direct link [@back2020budesonideformoterol; @musuamba2015copdprogression].
-The registrational endpoint is often exacerbation rate, an over-dispersed count [@llanospaez2023jointmbma; @chia2019benralizumaber].
-
-**Mechanistic extrapolation (R03).**
-Lung PBPK is established here, predicting regional deposition, dissolution and local versus systemic exposure for inhaled drugs whose plasma levels cannot report airway concentration, and supporting inhaled bioequivalence [@bogerSystemsPharmacologyApproach2016; @millerPhysiologicallyBasedPharmacokinetic2021].
-
-**Device variability (R03).**
-The device is a major source of exposure variability that oral and intravenous drugs do not have [@borghardt2015pharmacometric].
-The same molecule from different devices can differ roughly two-fold in pulmonary bioavailability [@usmani2017inhaledbe], and airway obstruction itself alters deposition, so the most obstructed patients may receive the least drug [@mortimer2006airflow; @borghardt2016olodaterolpatients].
+: ATC R level 2 codes {#tbl-atc-r-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
 ## References
 

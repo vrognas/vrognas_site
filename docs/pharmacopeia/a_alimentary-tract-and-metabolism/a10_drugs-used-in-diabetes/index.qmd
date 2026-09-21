@@ -1,0 +1,27 @@
+---
+title: "A10: Drugs used in diabetes"
+description: "ATC A10 drugs used in diabetes for modellers: hbA1c is not an E~max~ on concentration; long trials drift; clamp readouts."
+date: "2026-02-08"
+---
+
+Part of [A: Alimentary tract and metabolism](../).
+
+**Endpoint.**
+HbA1c, glycated hemoglobin, is the most commonly used biomarker of glycaemic management and a surrogate endpoint for anti-diabetic drug approval [@lledogarciaSemimechanisticModelRelationship2013].
+
+**HbA1c is not an E~max~ on concentration.**
+It accumulates by glycation over the red cell lifespan, so it lags mean glucose and is written as a transformation of the glucose profile, not as a drug effect [@lledogarciaSemimechanisticModelRelationship2013; @hamrenModelsPlasmaGlucose2008].
+
+**Typical structure.**
+Provocations (OGTT, IVGTT) need the glucose-insulin feedback loop stated explicitly, and integrated models carrying both species have been built for intravenous and for oral provocation data [@silberIntegratedModelGlucose2007; @jauslinIntegratedGlucoseInsulin2007].
+
+**Long trials drift.**
+Type 2 diabetes progresses under treatment, so comparing drugs over a year needs disease progression on beta cell function and insulin sensitivity, not a fixed baseline [@dewinterMechanismbasedDiseaseProgression2006].
+
+**Clamp readouts.**
+Insulin degludec was profiled by the glucose infusion rate of a euglycaemic clamp, a [pharmacodynamic](/docs/concepts/pd/) readout: in 65 healthy men, body mass index was inversely correlated with the 24 hour GIR AUC [@liEffectBMIPharmacokinetic2023].
+
+## References
+
+::: {#refs}
+:::

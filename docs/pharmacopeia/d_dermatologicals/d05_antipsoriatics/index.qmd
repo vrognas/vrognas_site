@@ -1,0 +1,16 @@
+---
+title: "D05: Antipsoriatics"
+description: "ATC D05 antipsoriatics for modellers: a bounded score needs a bounded likelihood."
+date: "2026-02-08"
+---
+
+Part of [D: Dermatologicals](../).
+
+**A bounded score needs a bounded likelihood.**
+PASI has been fitted with a bounded integer model, to respect the discrete and bounded nature of the data [@ooiBoundedIntegerModelbased2023], and with a zero-inflated beta distribution, for the bounded nature and distributional characteristics of the score [@tsamandourasEmployingZeroinflatedBeta2024].
+In one psoriasis analysis, fitting the 6-point physician's global assessment alone carried a substantial structural bias that joint modelling with PASI removed [@huImprovingCategoricalEndpoint2022].
+
+## References
+
+::: {#refs}
+:::

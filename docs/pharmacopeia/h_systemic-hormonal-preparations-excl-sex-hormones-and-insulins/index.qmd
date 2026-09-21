@@ -1,6 +1,6 @@
 ---
 title: "H: Systemic hormonal preparations, excluding sex hormones and insulins"
-description: "ATC group H for modellers: replacement versus pharmacological dosing, feedback-suppressed baselines, circadian cortisol and duration-dependent toxicity."
+description: "ATC group H for modellers: replacement versus pharmacological dosing, the assay that cannot tell drug from hormone, and turnover as the default structure."
 date: "2026-02-08"
 ---
 
@@ -10,15 +10,15 @@ Sex hormones sit in group G and insulins in group A, so what remains is mainly H
 On 21 September 1948 at the Mayo Clinic, Charles Slocumb gave a woman crippled by rheumatoid arthritis 100 mg of Kendall's "compound E" (now known as **cortisone**), and within three days she was markedly improved.
 Hench, Kendall and Reichstein shared the 1950 Nobel Prize [@mattesonPhilipHenchDiscovery2024].
 
-| Level 2 code | Description |
-| ---: | :--- |
-| H01 | Pituitary and hypothalamic hormones and analogues |
-| H02 | Corticosteroids for systemic use |
-| H03 | Thyroid therapy |
-| H04 | Pancreatic hormones |
-| H05 | Calcium homeostasis |
+| Level 2 code | Description | In plain terms | Current standard |
+| ---: | :--- | :--- | :--- |
+| H01 | Pituitary and hypothalamic hormones and analogues | hormones of the brain's master glands | Somatropin (H01AC01) / desmopressin (H01BA02) |
+| [H02](h02_corticosteroids-for-systemic-use/) | Corticosteroids for systemic use |  | Prednisolone (H02AB06) / dexamethasone (H02AB02) |
+| [H03](h03_thyroid-therapy/) | Thyroid therapy |  | Levothyroxine sodium (H03AA01) / thiamazole (H03BB02) |
+| H04 | Pancreatic hormones | pancreas hormones; here glucagon only, not insulin | Glucagon (H04AA01) / dasiglucagon (H04AA02) |
+| [H05](h05_calcium-homeostasis/) | Calcium homeostasis | keeping blood calcium and parathyroid hormone balanced | Teriparatide (H05AA02) / cinacalcet (H05BX01) |
 
-: ATC H level 2 codes {#tbl-atc-h-lvl-2 tbl-colwidths="[20, 80]"}
+: ATC H level 2 codes {#tbl-atc-h-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
 ## Modelling notes
 
@@ -32,24 +32,6 @@ Pharmacological dosing deliberately overshoots to exploit an effect the hormone 
 **Typical structure.**
 Turnover (indirect response), not direct concentration-effect [@dayneka1993indirect; @lonnebo2007], with a feedback term when the axis itself is modelled [@bindellini2024] (see [PKPD](/docs/modeling/pkpd/)).
 Steroid and thyroid effects run through nuclear receptors and gene transcription [@hollenberg1985], so response lags concentration and shows hysteresis [@ramakrishnan2002].
-
-**Baseline is rhythmic and it moves (H02).**
-Cortisol has a pronounced diurnal pattern, so a constant baseline cannot describe a 24-hour profile [@chakraborty1999]; a time-varying production rate is the usual remedy [@ayyar2019].
-Baseline also falls during treatment and recovers slowly after withdrawal [@baker2021; @krzyzanski2021], which is one reason long courses are tapered [@burmester2020].
-
-**Duration matters separately from intensity (H02).**
-Fracture risk tracks current daily dose, and adrenal suppression rises with dose *and* treatment duration [@broersen2015adrenal; @magee2002prednisolonepkpd].
-An analysis carrying only average concentration misses the duration-dependent toxicities.
-
-**Mechanistic extrapolation (H05).**
-QSP is the characteristic modality here: multiscale calcium homeostasis and bone remodelling models predict bone mineral density, and FDA used one reviewing rhPTH(1-84) dosing in hypoparathyroidism [@petersonFDAAdvisoryMeeting2015; @riggsPharmacometricsSystemsPharmacology2019].
-
-**Cumulative exposure is a poor fix (H02).**
-A single cumulative-exposure term is a poor fix: it forces duration and intensity to be interchangeable, and can manufacture an apparent exposure-response even when intensity carries no signal at all.
-
-**Also worth knowing (H03).**
-Levothyroxine is treated as a narrow therapeutic index drug, with bioequivalence tightened to 0.90-1.11 [@concordet2019levothyrox; @concordet2020be200].
-Binding globulins shift with pregnancy and oral oestrogen, changing unbound fraction [@arafah2001estrogen; @alexander2004pregnancy].
 
 ## References
 

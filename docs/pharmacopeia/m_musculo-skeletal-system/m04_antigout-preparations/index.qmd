@@ -1,0 +1,15 @@
+---
+title: "M04: Antigout preparations"
+description: "ATC M04 antigout preparations for modellers: urate is a turnover problem."
+date: "2026-02-08"
+---
+
+Part of [M: Musculo-skeletal system](../).
+
+**Urate is a turnover problem.**
+Serum urate under febuxostat is fitted with an indirect response model [@murakiPopulationPharmacodynamicAnalysis2018]; such a model predicted real-world urate with r = 0.68, rising to 0.77 once comorbidities, eGFR and loop diuretics were accounted for [@hiraiEvaluationPharmacokineticPharmacodynamic2018].
+
+## References
+
+::: {#refs}
+:::

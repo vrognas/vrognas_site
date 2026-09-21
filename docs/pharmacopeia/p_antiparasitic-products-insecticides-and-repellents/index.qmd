@@ -1,6 +1,6 @@
 ---
 title: "P: Antiparasitic products, insecticides and repellents"
-description: "ATC group P for modellers: life cycle stages as separate targets, parasitaemia decline as the endpoint, and exposure sustained across a cycle rather than peak."
+description: "ATC group P for modellers: life cycle stages as separate targets, parasitaemia decline as the endpoint, and wide patient-driven variability."
 date: "2026-02-08"
 ---
 
@@ -10,13 +10,13 @@ Their targets resemble host cells far more closely than a bacterium does, so sel
 A fourth-century recipe by Ge Hong said to wring qinghao out in cold water, so Tu Youyou switched to low-temperature ether extraction.
 Her extract 191, dated 4 October 1971, gave complete inhibition of rodent malaria, and artemisinin won her a share of the 2015 Nobel Prize [@suDiscoveryArtemisininNobel2015].
 
-| Level 2 code | Description |
-| ---: | :--- |
-| P01 | Antiprotozoals |
-| P02 | Anthelmintics |
-| P03 | Ectoparasiticides, incl. scabicides, insecticides and repellents |
+| Level 2 code | Description | In plain terms | Current standard |
+| ---: | :--- | :--- | :--- |
+| [P01](p01_antiprotozoals/) | Antiprotozoals | kill single-celled parasites: malaria, amoebiasis, giardiasis | Artemether/lumefantrine (P01BF01) / metronidazole (P01AB01) |
+| P02 | Anthelmintics | deworming drugs against parasitic worms | Albendazole (P02CA03) / praziquantel (P02BA01) |
+| P03 | Ectoparasiticides, incl. scabicides, insecticides and repellents | kill skin parasites: scabies mites, lice; repellents | Permethrin (P03AC04) / diethyltoluamide, i.e. DEET (P03BX01) |
 
-: ATC P level 2 codes {#tbl-atc-p-lvl-2 tbl-colwidths="[20, 80]"}
+: ATC P level 2 codes {#tbl-atc-p-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
 ## Modelling notes
 
@@ -28,22 +28,9 @@ Synchronised replication, sequestration of mature forms and dormant liver forms 
 Parasitaemia decline for the blood-dwelling protozoa [@krausePharmacokineticPharmacodynamicModelling2016], estimated as a clearance slope from the whole profile rather than a single visit [@fleggStandardizingMeasurementParasite2011; @stepniewskaVivoParasitologicalMeasures2010].
 For helminths it is the faecal egg count, reported as cure rate and egg reduction rate [@moserOneMeanRule2020; @brusseePopulationPharmacokineticsExposure2021].
 
-**PK/PD indices carry over, with caveats (P01).**
-Dose-fractionation studies in murine and humanised mouse models identify the governing index [@lakshminarayana2015spiroindolone; @gibhard2024dosefractionation], but these analyses usually work with *total* rather than unbound concentrations, since the compounds are often bound above 99% [@white2013antimalarial].
-Which index wins is compound-specific, not a class property.
-
-**Sustained exposure beats peak (P01).**
-For slowly eliminated antimalarials the driver is exposure maintained across a full asexual cycle [@white2013antimalarial; @pica2026antimalarialpkpd].
-
 **Variability is wide, and mostly about the patient.**
 Endemic populations skew [paediatric](/docs/concepts/pediatrics/), so weight-band dosing [@waalewijn2025weightbands; @banda2025infants] and allometric scaling with maturation [@germovsek2017scaling] are the starting point.
 For the lipophilic agents, fat-dependent absorption is the first thing to characterise: a normal meal roughly doubles lumefantrine bioavailability [@ezzet2000LumefantrinePkpd; @jain2017LumefantrineBioavailability].
-
-**Mechanistic extrapolation (P01).**
-PBPK is the established modality, used to extrapolate antimalarial exposure into groups trials rarely reach, young children, pregnancy and breastmilk, and to select doses there [@johnsonDevelopmentPhysiologicallyBased2019; @almondPBPKLedAssessmentAntimalarial2025].
-
-**Combination therapy (P01).**
-Combination therapy pairs a short-acting drug with a long-acting partner [@hastings2014MatchingHalfLives], and the partner's terminal tail is itself a resistance selection pressure [@stepniewska2008WindowSelection].
 
 ## References
 

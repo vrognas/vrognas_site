@@ -1,0 +1,36 @@
+---
+title: "L01: Antineoplastic agents"
+description: "ATC L01 antineoplastic agents for modellers: toxicity sets the dose, not efficacy; efficacy is modelled in two steps; antibodies are nonlinear where it matters."
+date: "2026-02-08"
+---
+
+Part of [L: Antineoplastic and immunomodulating agents](../).
+
+**Toxicity sets the dose, not efficacy.**
+Dose-limiting toxicity is a binary readout in a short early window [@letourneau2009dose; @yin2024handling].
+For cytotoxics, neutropenia is the continuous alternative, captured by semi-mechanistic myelosuppression models with a proliferating compartment, maturation transit compartments and a feedback term [@friberg2002myelo; @camaradesouza2018transit].
+
+**Efficacy is modelled in two steps.**
+A longitudinal tumour size model (RECIST sum of diameters) balances drug-driven shrinkage against regrowth [@ribba2014review; @stein2008tumor]; quantities derived from it feed a [time-to-event](/docs/modeling/tte/) analysis of survival [@claret2014tgimetrics; @bruno2014evaluation].
+That is what lets early imaging inform an endpoint reading out much later [@claret2009phase3os; @chan2021tgios].
+
+**Antibodies are nonlinear where it matters.**
+Target-mediated drug disposition makes binding itself an elimination pathway that saturates [@mager2001tmdd; @dua2015tmddtutorial], so a model fitted only to the top of the dose range will mislead at the bottom [@gibiansky2008tmddapprox].
+Antibody-drug conjugates add conjugate, total antibody and payload as separate analytes [@li2020adcquant; @khan2025adcbioanalysis].
+
+**Cell therapies replace PK with cellular kinetics.**
+A living product expands, contracts and persists [@liu2021carkinetics; @stein2019tisacell], and the administered dose is a weak predictor of the exposure that follows [@he2022cartdosing].
+
+**Covariates carrying dosing guidance.**
+DPYD for fluoropyrimidines, TPMT and NUDT15 for thiopurines, UGT1A1 for irinotecan, CYP2D6 for tamoxifen [@kicken2025precision; @chatelut2018smki].
+
+## CAR T cell therapy
+
+![](https://pub.mdpi-res.com/pharmaceutics/pharmaceutics-14-01630/article_deploy/html/images/pharmaceutics-14-01630-g001.png?1659607210)
+
+Emily Whitehead, the first child treated with CD19-directed CAR T cells for refractory acute lymphoblastic leukaemia, entered a durable complete remission [@grupp2013carall].
+
+## References
+
+::: {#refs}
+:::
