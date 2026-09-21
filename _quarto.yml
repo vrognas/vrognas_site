@@ -6,6 +6,7 @@ project:
     - "404.md"
     - "!CLAUDE.md"
   post-render:
+    - scripts/stamp-modified.py
     - scripts/fix-sitemap.py
     - scripts/prune-empty-drafts.py
 
