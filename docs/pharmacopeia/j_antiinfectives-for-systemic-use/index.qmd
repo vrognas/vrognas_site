@@ -7,7 +7,8 @@ date: "2026-02-08"
 Drugs given systemically against an invading organism, bacteria, fungi, mycobacteria and viruses, plus immune sera and vaccines under the same letter [@whoccATCDDDIndex2026].
 The potency term is a property of the pathogen isolate, its MIC, rather than of the patient (see [PKPD](/docs/modeling/pkpd/)) [@moutonStandardizationPharmacokineticPharmacodynamic2005].
 
-Fleming's mould plate of 1928 became a medicine only in February 1941, when Florey's Oxford group treated an Oxford policeman; the supply ran out mid-course and he died [@gaynesDiscoveryPenicillinNew2017; @barrettLegacyPenicillinFirst2023].
+Fleming's mould plate of 1928 became a medicine only in February 1941, when Florey's Oxford group treated a constable, Albert Alexander [@sheppardShortcourseAntibioticTherapy2022; @barrettLegacyPenicillinFirst2023].
+He responded, but penicillin re-purified from his urine was not enough to keep the course going, the supply ran out and he died [@sheppardShortcourseAntibioticTherapy2022; @gaynesDiscoveryPenicillinNew2017].
 Fleming, Florey and Chain shared the 1945 Nobel Prize [@gaynesDiscoveryPenicillinNew2017].
 
 | Level 2 code | Description |
