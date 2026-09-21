@@ -1,7 +1,14 @@
 ---
 title: "G: Genito-urinary system and sex hormones"
+description: "ATC group G for modellers: dosing into a self-regulating hormonal axis, rhythmic baselines, flip-flop depots and patient-reported urological endpoints."
 date: "2026-02-08"
 ---
+
+Sex hormones and their modulators, together with the drugs acting on the genito-urinary tract.
+Two subgroups set the agenda: sex hormones (G03) are dosed into an axis that already produces them [@tornoe2007hpg], and the urologicals (G04) are judged on patient-reported endpoints [@lyauk2020integratedirt].
+
+Margaret Sanger pushed for an oral contraceptive, Katharine Dexter McCormick paid for it, and Gregory Pincus and John Rock did the work.
+The FDA approved Enovid in 1957 for menstrual disorders, and only in 1960 for contraception [@dhontHistoryOralContraception2010; @junodWomensTrialsApproval2002].
 
 | Level 2 code | Description |
 | ---: | :--- |
@@ -11,3 +18,37 @@ date: "2026-02-08"
 | G04 | Urologicals |
 
 : ATC G level 2 codes {#tbl-atc-g-lvl-2 tbl-colwidths="[20, 80]"}
+
+## Modelling notes
+
+**You are dosing into a feedback loop.**
+Exogenous hormone suppresses endogenous secretion, so the measured concentration is the drug plus a baseline that moves in response to it [@bi2018tc; @pastuszak2021tu].
+Start from turnover (indirect response), not a direct-effect model [@pechstein2000cetrorelix; @snelder2019leuprorelin], and add an explicit feedback term when modelling the axis itself [@tornoe2007hpg] (see [pharmacodynamics](/docs/concepts/pd/)).
+
+**Baseline is rhythmic, so sampling time is a covariate.**
+Testosterone follows a circadian rhythm, most pronounced in younger men [@brambilla2009diurnal; @diver2003diurnal]; in premenopausal women LH, FSH, estradiol and progesterone vary across the menstrual cycle [@stricker2006menstrual; @roblitz2013menstrual].
+A pre-dose sample drawn at an arbitrary hour is one point on a rhythm, not a baseline [@dansirikul2008baseline; @bhasin2018guideline].
+
+**Response outlasts exposure.**
+Steroids act through nuclear receptors and gene transcription [@burris2013nr], so endpoints such as luteinising hormone, spermatogenesis and prostate specific antigen move on the timescale of the affected system, not of plasma concentration [@bi2018testosterone; @gisleskog1998dht].
+
+**Flip-flop is the norm.**
+Depot injections, implants, transdermal systems and vaginal rings make the formulation set the input rate [@francis2021dmpa; @timmer2000nuvaring].
+For non-removable depots absorption is slower than elimination, so the apparent terminal half-life belongs to the vehicle [@kuan2023flipflop; @periti2002leuprorelin].
+
+**Urological endpoints are not continuous.**
+Symptom scores, voiding diaries and incontinence counts are ordered categorical or count data; fitting E~max~ to a group mean discards most of the information [@lyauk2021boundedinteger; @lyauk2020irtipss].
+
+**Placebo response is large and time-varying.**
+In benign prostatic hyperplasia the placebo effect on symptom score has been several times the tamsulosin effect [@dagate2020ipss], so model its time course rather than treating it as a fixed offset [@mostafaei2022placebo].
+
+**Mechanistic extrapolation.**
+PBPK dominates here, predicting how CYP3A inducers such as efavirenz or rifampicin lower ethinylestradiol and progestin exposure, and whether dose adjustment preserves contraceptive efficacy [@lewisPhysiologicallyBasedPharmacokinetic2024; @adeojoPhysiologicallyBasedPharmacokinetic2024].
+
+**Non-monotonic response**
+GnRH agonists produce a flare before downregulation, so the response is not monotonic [@romero2012triptorelin; @lim2015leuprolide], and ATC files them outside this group entirely, under L02AE and H01CA.
+
+## References
+
+::: {#refs}
+:::

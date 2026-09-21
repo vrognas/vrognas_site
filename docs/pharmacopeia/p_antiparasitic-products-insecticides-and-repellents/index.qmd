@@ -1,7 +1,14 @@
 ---
 title: "P: Antiparasitic products, insecticides and repellents"
+description: "ATC group P for modellers: life cycle stages as separate targets, parasitaemia decline as the endpoint, and exposure sustained across a cycle rather than peak."
 date: "2026-02-08"
 ---
+
+Drugs directed at eukaryotic parasites: protozoa, helminths and ectoparasites.
+Their targets resemble host cells far more closely than a bacterium does, so selective targets are harder to find [@chan2026anthelmintic; @horn2014antiparasitic], though the therapeutic window varies sharply across the group rather than being uniformly narrow.
+
+A fourth-century recipe by Ge Hong said to wring qinghao out in cold water, so Tu Youyou switched to low-temperature ether extraction.
+Her extract 191, dated 4 October 1971, gave complete inhibition of rodent malaria, and artemisinin won her a share of the 2015 Nobel Prize [@suDiscoveryArtemisininNobel2015].
 
 | Level 2 code | Description |
 | ---: | :--- |
@@ -10,3 +17,35 @@ date: "2026-02-08"
 | P03 | Ectoparasiticides, incl. scabicides, insecticides and repellents |
 
 : ATC P level 2 codes {#tbl-atc-p-lvl-2 tbl-colwidths="[20, 80]"}
+
+## Modelling notes
+
+**Life cycle stages are separate targets.**
+A drug active against one stage may be inactive against the next [@delves2012lifecycle; @white2014malaria], so the model must declare which stage the effect attaches to.
+Synchronised replication, sequestration of mature forms and dormant liver forms all produce behaviour a direct-effect model on total burden will not reproduce [@saralamba2011intrahost; @hodelIncorporatingStageSpecificDrug2016].
+
+**Endpoint.**
+Parasitaemia decline for the blood-dwelling protozoa [@krausePharmacokineticPharmacodynamicModelling2016], estimated as a clearance slope from the whole profile rather than a single visit [@fleggStandardizingMeasurementParasite2011; @stepniewskaVivoParasitologicalMeasures2010].
+For helminths it is the faecal egg count, reported as cure rate and egg reduction rate [@moserOneMeanRule2020; @brusseePopulationPharmacokineticsExposure2021].
+
+**PK/PD indices carry over, with caveats.**
+Dose-fractionation studies in murine and humanised mouse models identify the governing index [@lakshminarayana2015spiroindolone; @gibhard2024dosefractionation], but these analyses usually work with *total* rather than unbound concentrations, since the compounds are often bound above 99% [@white2013antimalarial].
+Which index wins is compound-specific, not a class property.
+
+**Sustained exposure beats peak.**
+For slowly eliminated antimalarials the driver is exposure maintained across a full asexual cycle [@white2013antimalarial; @pica2026antimalarialpkpd].
+
+**Variability is wide, and mostly about the patient.**
+Endemic populations skew [paediatric](/docs/concepts/pediatrics/), so weight-band dosing [@waalewijn2025weightbands; @banda2025infants] and allometric scaling with maturation [@germovsek2017scaling] are the starting point.
+For the lipophilic agents, fat-dependent absorption is the first thing to characterise: a normal meal roughly doubles lumefantrine bioavailability [@ezzet2000LumefantrinePkpd; @jain2017LumefantrineBioavailability].
+
+**Mechanistic extrapolation.**
+PBPK is the established modality, used to extrapolate antimalarial exposure into groups trials rarely reach, young children, pregnancy and breastmilk, and to select doses there [@johnsonDevelopmentPhysiologicallyBased2019; @almondPBPKLedAssessmentAntimalarial2025].
+
+**Combination therapy.**
+Combination therapy pairs a short-acting drug with a long-acting partner [@hastings2014MatchingHalfLives], and the partner's terminal tail is itself a resistance selection pressure [@stepniewska2008WindowSelection].
+
+## References
+
+::: {#refs}
+:::

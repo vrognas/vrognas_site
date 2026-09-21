@@ -1,7 +1,14 @@
 ---
 title: "B: Blood and blood forming organs"
+description: "ATC group B for modellers: lab biomarkers as PD drivers, delayed effects from turnover and cell lifespan, and the bleeding-thrombosis trade-off."
 date: "2026-02-08"
 ---
+
+Drugs acting on blood itself and on the organs that make it.
+Antithrombotics (B01) carry an extensive pharmacometric literature [@mueck2014rivaroxaban; @hamberg2010warfarin; @zhou2026milvexian]; the rest of the group is modelled rarely and quite differently.
+
+In February 1933 the farmer Ed Carlson drove 190 miles to Karl Paul Link's laboratory in Madison with a dead heifer, a milk churn of her unclotted blood and mouldy sweet clover hay.
+Six years later Link's group isolated dicoumarol, the parent of warfarin [@ballHistoryWarfarin2025].
 
 | Level 2 code | Description |
 | ---: | :--- |
@@ -12,3 +19,35 @@ date: "2026-02-08"
 | B06 | Other hematological agents |
 
 : ATC B level 2 codes {#tbl-atc-b-lvl-2 tbl-colwidths="[20, 80]"}
+
+## Modelling notes
+
+**Endpoint.**
+The PD driver is typically a laboratory measure: clotting time, anti-Xa activity, factor activity, hemoglobin [@byon2019apixaban; @wong2025efanesoctocog; @chanu2020epoetin].
+Clinical events are carried separately, in exposure-response or [time-to-event](/docs/modeling/tte/) analyses [@nyberg2016edoxaban; @leil2014apixaban].
+
+**Delayed effect is the default.**
+Vitamin K antagonists suppress synthesis of clotting factors [@holford1986warfarin], and irreversible antiplatelet agents outlast the drug [@jiang2015clopidogrel], so effect follows the turnover of a protein or cell pool rather than plasma concentration.
+Turnover and indirect response models are the natural starting point [@dayneka1993indirect; @ooi2017joint].
+
+**The exception worth knowing.**
+Direct oral anticoagulants inhibit an existing enzyme, so their effect on clotting assays tracks concentration with little delay and direct models are what is actually fitted [@mueck2014rivaroxaban; @stangier2007dabigatran; @parasrampuria2016edoxaban].
+
+**Benefit-risk is asymmetric.**
+Exposure-response detects the bleeding limb far more reliably than the efficacy limb, which is often flat across the range studied [@nyberg2016edoxaban; @roshammar2017ticagrelor].
+Covariates that raise exposure (renal function, body size, age, P-glycoprotein and CYP3A inhibitors) move bleeding first, which is why dose-reduction criteria are written in exactly those terms [@terrier2022doacpopk; @lin2025fxaage].
+
+**Longest delays in the group.**
+Erythropoiesis-stimulating agents act on precursors, so hemoglobin is separated from exposure by maturation and red cell lifespan [@uehlinger1992epo; @ramakrishnan2004epo].
+Lifespan models with an explicit endogenous baseline and feedback are standard [@krzyzanski2008lifespan; @olssongisleskog2007epo].
+
+**Easy to overlook.**
+Blood substitutes and perfusion solutions have their own tradition, volume kinetics, fitted to hemoglobin-derived plasma dilution [@hahn2019albumin; @balan2025gelofusine].
+
+**Mechanistic extrapolation.**
+QSP models of the coagulation network, built from literature kinetics, are well established for predicting how anticoagulants shift thrombin generation and INR, extrapolating efficacy and bleeding risk across doses [@wajimaComprehensiveModelHumoral2009; @burghausEvaluationEfficacySafety2011].
+
+## References
+
+::: {#refs}
+:::

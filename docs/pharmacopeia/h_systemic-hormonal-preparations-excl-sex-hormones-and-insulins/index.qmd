@@ -1,7 +1,14 @@
 ---
 title: "H: Systemic hormonal preparations, excluding sex hormones and insulins"
+description: "ATC group H for modellers: replacement versus pharmacological dosing, feedback-suppressed baselines, circadian cortisol and duration-dependent toxicity."
 date: "2026-02-08"
 ---
+
+Corticosteroids, thyroid therapy and the pituitary and hypothalamic hormones.
+Sex hormones sit in group G and insulins in group A, so what remains is mainly H01 to H03.
+
+On 21 September 1948 at the Mayo Clinic, Charles Slocumb gave a woman crippled by rheumatoid arthritis 100 mg of Kendall's "compound E" (now known as **cortisone**), and within three days she was markedly improved.
+Hench, Kendall and Reichstein shared the 1950 Nobel Prize [@mattesonPhilipHenchDiscovery2024].
 
 | Level 2 code | Description |
 | ---: | :--- |
@@ -12,3 +19,39 @@ date: "2026-02-08"
 | H05 | Calcium homeostasis |
 
 : ATC H level 2 codes {#tbl-atc-h-lvl-2 tbl-colwidths="[20, 80]"}
+
+## Modelling notes
+
+**The assay cannot tell drug from hormone.**
+Where the agent is the natural hormone, as with thyroxine and hydrocortisone, the model needs an explicit baseline or suppression step rather than a plain PK structure [@waltersack2004; @melin2018].
+
+**Two regimes, two problems.**
+Replacement restores physiological concentrations and is judged on a feedback biomarker, thyrotropin [@chaker2017], or for glucocorticoids on clinical assessment with no equivalent marker [@janssendaalen2024].
+Pharmacological dosing deliberately overshoots to exploit an effect the hormone does not produce at normal concentrations [@simon2010; @czock2005].
+
+**Typical structure.**
+Turnover (indirect response), not direct concentration-effect [@dayneka1993indirect; @lonnebo2007], with a feedback term when the axis itself is modelled [@bindellini2024] (see [PKPD](/docs/modeling/pkpd/)).
+Steroid and thyroid effects run through nuclear receptors and gene transcription [@hollenberg1985], so response lags concentration and shows hysteresis [@ramakrishnan2002].
+
+**Baseline is rhythmic and it moves.**
+Cortisol has a pronounced diurnal pattern, so a constant baseline cannot describe a 24-hour profile [@chakraborty1999]; a time-varying production rate is the usual remedy [@ayyar2019].
+Baseline also falls during treatment and recovers slowly after withdrawal [@baker2021; @krzyzanski2021], which is one reason long courses are tapered [@burmester2020].
+
+**Duration matters separately from intensity.**
+Fracture risk tracks current daily dose, and adrenal suppression rises with dose *and* treatment duration [@broersen2015adrenal; @magee2002prednisolonepkpd].
+An analysis carrying only average concentration misses the duration-dependent toxicities.
+
+**Mechanistic extrapolation.**
+QSP is the characteristic modality here: multiscale calcium homeostasis and bone remodelling models predict bone mineral density, and FDA used one reviewing rhPTH(1-84) dosing in hypoparathyroidism [@petersonFDAAdvisoryMeeting2015; @riggsPharmacometricsSystemsPharmacology2019].
+
+**Gotcha.**
+A single cumulative-exposure term is a poor fix: it forces duration and intensity to be interchangeable, and can manufacture an apparent exposure-response even when intensity carries no signal at all.
+
+**Also worth knowing.**
+Levothyroxine is treated as a narrow therapeutic index drug, with bioequivalence tightened to 0.90-1.11 [@concordet2019levothyrox; @concordet2020be200].
+Binding globulins shift with pregnancy and oral oestrogen, changing unbound fraction [@arafah2001estrogen; @alexander2004pregnancy].
+
+## References
+
+::: {#refs}
+:::

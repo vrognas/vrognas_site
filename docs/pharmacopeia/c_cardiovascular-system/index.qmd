@@ -1,7 +1,13 @@
 ---
 title: "C: Cardiovascular system"
+description: "ATC group C for modellers: blood pressure and LDL as continuous surrogates, indirect response models, counter-regulation, and baseline as a trap."
 date: "2026-02-08"
 ---
+
+Drugs acting on the heart, the blood vessels and circulating lipids.
+The large classes are developed against continuous biomarkers, blood pressure and LDL cholesterol [@kim2017fimasartan; @jadhav2023bempedoic], which is what makes dense exposure-response work practical here.
+
+In July 1973, after screening thousands of fungal broths at Sankyo in Tokyo, Akira Endo isolated the first statin, ML-236B, from a *Penicillium citrinum* strain found on rice from a Kyoto grain shop [@endoHistoricalPerspectiveDiscovery2010].
 
 | Level 2 code | Description |
 | ---: | :--- |
@@ -16,3 +22,40 @@ date: "2026-02-08"
 | C10 | Lipid modifying agents |
 
 : ATC C level 2 codes {#tbl-atc-c-lvl-2 tbl-colwidths="[20, 80]"}
+
+## Modelling notes
+
+**Endpoint.**
+Continuous surrogates measured repeatedly: blood pressure, LDL cholesterol [@bdwg2001biomarkers; @liaigre2025surrogacy].
+Both lag plasma concentration, because the drug acts on the turnover of the measured quantity [@sharma1998indirect; @nicolas2019alirocumab].
+
+**Typical structure.**
+Indirect response models [@dayneka1993indirect; @jusko1994physiologic], near-universal for LDL [@kakara2014; @faltaos2006] and common for blood pressure.
+Effect-compartment models only where the delay is genuinely short, as for the acute heart rate effect of a beta blocker [@francheteau1993; @belz1988].
+
+**Counter-regulation.**
+Baroreflex activation, renin release and renal sodium handling push back against blood pressure effects [@sica2007], which is why feedback and tolerance terms appear in antihypertensive models [@brynne2001].
+
+**Baseline is the trap.**
+Blood pressure has a circadian rhythm, large measurement error and regression to the mean on enrolment [@hempel1998; @sumner1988], and placebo arms show genuine falls [@preston2000placebo; @patel2015placebo].
+How baseline is handled changes bias and precision in the estimated drug effect, and normalising each observation by its own baseline is the worst common option [@dansirikul2008; @sun1999].
+
+**Covariates worth pre-specifying.**
+Renal function for diuretics and renally cleared renin-angiotensin agents [@hammarlund1989furosemide; @elungjensen2003enalapril], CYP2D6 for metoprolol and flecainide [@meloche2020cyp2d6; @thomas2020metoprolol], SLCO1B1 for statins [@turkmen2022slco1b1].
+A data-driven search is underpowered at realistic dataset sizes [@ribbing2004covariate; @sanghavi2024covariate].
+
+**Safety.**
+A concentration-QTc analysis is expected under ICH E14 for essentially every new drug, as a separate pre-specified analysis [@garnett2018cqtc; @darpo2015iqcsrc] (see [C-QTc modelling](/docs/modeling/qt/)).
+Class-matched effects such as hypotension and bradycardia are exaggerated on-target pharmacology, and keep climbing after the efficacy curve flattens [@johnston1992doseresponse; @overgaard2015er].
+
+**Mechanistic extrapolation.**
+PBPK dominates here, predicting OATP1B1 transporter-mediated statin interactions and SLCO1B1 genotype effects on exposure; cardiorenal QSP models extrapolate blood-pressure and renal responses for antihypertensives [@yoshikadoQuantitativeAnalysesHepatic2016; @jameiMechanisticFrameworkVitro2014].
+
+**Approval gotcha**
+Approval often rests on the surrogate, with the outcome trial reporting years later [@sabatine2017fourier; @nissen2023clear].
+The pharmacometric job is linking biomarker change to event hazard [@holford2013tte; @zhudenkov2022joint], and handling the adherence and dropout endemic to chronic outpatient dosing [@vrijens2014adherence; @bjornsson2015dropout].
+
+## References
+
+::: {#refs}
+:::

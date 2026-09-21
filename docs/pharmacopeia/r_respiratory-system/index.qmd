@@ -1,7 +1,14 @@
 ---
 title: "R: Respiratory system"
+description: "ATC group R for modellers: inhaled delivery splits the dose, plasma tracks safety not effect, and the device is a major source of exposure variability."
 date: "2026-02-08"
 ---
+
+Drugs acting on the airways, centred on R03 for obstructive airway disease.
+The interesting part for a modeller is the inhaled route, where the target tissue is also the site of administration [@borghardt2018pulmkinetics; @daleyyates2015ics].
+
+In April 1955 Susie Maison asked her father George, president of Riker Laboratories, why her asthma medicine could not come in a spray can like hairspray.
+The first pressurised metered dose inhalers were approved on 9 March 1956 [@steinHistoryTherapeuticAerosols2017].
 
 | Level 2 code | Description |
 | ---: | :--- |
@@ -13,3 +20,37 @@ date: "2026-02-08"
 | R07 | Other respiratory system products |
 
 : ATC R level 2 codes {#tbl-atc-r-lvl-2 tbl-colwidths="[20, 80]"}
+
+## Modelling notes
+
+**The dose splits before you model anything.**
+Part deposits in the lung and is absorbed without first pass; the **swallowed fraction** goes to the gut and is subject to it [@donnelly2001budesonide; @daleyyates2001bdp].
+Plasma concentration is the sum of two inputs with different rates and bioavailabilities [@borghardt2016olodaterol; @hochhaus2021fpdpi] (see [absorption](/docs/concepts/pk/1_absorption/)).
+
+**Plasma is a poor surrogate for local effect.**
+It tracks systemic safety, adrenal suppression for corticosteroids and tremor for beta-2 agonists, far better than it tracks bronchodilation [@daleyyatesInhaledCorticosteroidsPotency2015; @whaleSystemicBronchodilatorEffects2008].
+Modern inhaled corticosteroids are designed to widen that gap through near-complete first-pass removal of the swallowed fraction [@daleyyates2015ics; @borghardtPharmacometricModelsCharacterizing2015].
+
+**Isolating the lung dose.**
+A charcoal block prevents gut absorption and is the established way to measure the pulmonary portion [@vanhaarstReviewDrugDevelopment2019; @chrystynMethodsIdentifyDrug2001].
+It is redundant for corticosteroids whose swallowed fraction is already non-bioavailable.
+
+**Endpoint.**
+FEV1, strongly baseline-dependent, so models use change from baseline with an explicit placebo component [@wu2011fev1lama; @yang2022mbmaasthma], plus a circadian term when spirometry is serial.
+Bronchodilator dose-response on FEV1 saturates early and is noisy [@blake2008albuterolpd], which is why methacholine challenge is used to separate closely spaced doses [@hendeles2015pdbioequivalence].
+
+**Corticosteroid effect is not concentration-driven.**
+It builds over repeated dosing, so the model needs a time-course component rather than a direct link [@back2020budesonideformoterol; @musuamba2015copdprogression].
+The registrational endpoint is often exacerbation rate, an over-dispersed count [@llanospaez2023jointmbma; @chia2019benralizumaber].
+
+**Mechanistic extrapolation.**
+Lung PBPK is established here, predicting regional deposition, dissolution and local versus systemic exposure for inhaled drugs whose plasma levels cannot report airway concentration, and supporting inhaled bioequivalence [@bogerSystemsPharmacologyApproach2016; @millerPhysiologicallyBasedPharmacokinetic2021].
+
+**Device variability.**
+The device is a major source of exposure variability that oral and intravenous drugs do not have [@borghardt2015pharmacometric].
+The same molecule from different devices can differ roughly two-fold in pulmonary bioavailability [@usmani2017inhaledbe], and airway obstruction itself alters deposition, so the most obstructed patients may receive the least drug [@mortimer2006airflow; @borghardt2016olodaterolpatients].
+
+## References
+
+::: {#refs}
+:::
