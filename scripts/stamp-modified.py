@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Add a "Modified" date to rendered pages, taken from git.
+"""Replace the rendered "Published" date with a "Modified" date taken from git.
 
-Quarto renders the frontmatter `date:` as "Published" and only shows a
-"Modified" line when a page also declares `date-modified:`. Keeping that field
-accurate by hand does not scale, and deriving it from file mtime is wrong in
-CI: Netlify clones fresh, so every mtime is the checkout time and every page
+Quarto renders the frontmatter `date:` as "Published", which went stale the
+moment a page was rewritten. Every page now shows a single date, labelled
+Modified, derived from the last commit that touched its source. Keeping such a
+field accurate by hand does not scale, and deriving it from file mtime is wrong
+in CI: Netlify clones fresh, so every mtime is the checkout time and every page
 would claim it changed at build time.
 
 Git is the only reliable source, which is why this mirrors fix-sitemap.py: one
@@ -17,12 +18,12 @@ has no R, so the next deploy would die on "Unable to locate an installed
 version of R" - a failure this project has already hit once from a one-word
 prose edit. Patching output keeps sources byte-stable and the freeze valid.
 
-Pages whose source or git history cannot be resolved are left alone, and pages
-whose last commit is the same day they were published get no Modified line,
-since "Modified" repeating "Published" is noise.
+Pages whose source or git history cannot be resolved are left alone, as are
+pages that carry no date at all. The dcterms.date meta tag is moved to the same
+git date so the machine-readable date agrees with the visible one.
 
-If the Published block cannot be found on ANY page the script fails the render,
-so a Quarto markup change cannot silently stop stamping dates.
+If the date block cannot be found on ANY page the script fails the render, so a
+Quarto markup change cannot silently stop stamping dates.
 """
 import os
 import re
@@ -124,7 +125,7 @@ dates = git_commit_dates()
 if not dates:
     sys.exit(0)
 
-stamped = same_day = no_source = no_block = 0
+stamped = no_source = no_block = 0
 for page in sorted(OUT.rglob("*.html")):
     try:
         html = page.read_text(encoding="utf-8")
@@ -142,34 +143,43 @@ for page in sorted(OUT.rglob("*.html")):
         no_source += 1
         continue
 
-    m = PUBLISHED.search(html)
-    if not m:
+    has_published = bool(PUBLISHED.search(html))
+    has_modified = bool(EXISTING.search(html))
+    if not has_published and not has_modified:
         no_block += 1
         continue
 
-    modified = pretty(iso)
-    if modified == m.group(2).strip():
-        same_day += 1
-        continue
-
     block = (
-        '\n    <div>\n    <div class="quarto-title-meta-heading">Modified</div>\n'
+        '<div>\n    <div class="quarto-title-meta-heading">Modified</div>\n'
         '    <div class="quarto-title-meta-contents">\n'
-        f'      <p class="date-modified">{modified}</p>\n'
-        "    </div>\n  </div>\n  "
+        f'      <p class="date-modified">{pretty(iso)}</p>\n'
+        "    </div>\n  </div>"
     )
-    html = EXISTING.sub("", html)
-    html = PUBLISHED.sub(lambda mm: mm.group(1) + block, html, count=1)
+    # Replace whichever block the page has with a single Modified block, so a
+    # second run over already-stamped output is a no-op rather than a failure.
+    # Quarto emits Modified only when the page declares date-modified itself;
+    # after one pass it is the block this script wrote.
+    if has_published:
+        html = EXISTING.sub("", html)
+        html = PUBLISHED.sub(lambda _: block, html, count=1)
+    else:
+        html = EXISTING.sub(lambda _: block, html, count=1)
+    html = re.sub(
+        r'(<meta name="dcterms.date" content=")[^"]*(")',
+        lambda mm: mm.group(1) + iso[:10] + mm.group(2),
+        html,
+        count=1,
+    )
     page.write_text(html, encoding="utf-8")
     stamped += 1
 
-print(f"Modified dates: {stamped} stamped from git, {same_day} unchanged since publication")
+print(f"Modified dates: {stamped} pages stamped from git")
 if no_source or no_block:
-    print(f"  skipped: {no_source} without git history, {no_block} without a Published block")
+    print(f"  skipped: {no_source} without git history, {no_block} without a date block")
 
-if stamped == 0 and same_day == 0:
+if stamped == 0:
     print(
-        "ERROR: no page received a Modified date; the Published block markup "
+        "ERROR: no page received a Modified date; the date block markup "
         "may have changed (format drift?)",
         file=sys.stderr,
     )
