@@ -52,13 +52,13 @@ The severity of HE is graded with the West Haven Criteria (@tbl-he); this is bas
 | :---: | :---------- |
 |   0   | No obvious changes other than a potentially mild decrease in intellectual ability and coordination |
 |   1   | Trivial lack of awareness; euphoria or anxiety; shortened attention span; impaired performance of addition or subtraction |
-|   2   | Lethargy or apathy; minimal disorientation for time or place; subtle personality change; inappropriate behaviour |
+|   2   | Lethargy or apathy; minimal disorientation for time or place; subtle personality change; inappropriate behavior |
 |   3   | Somnolence to semistupor, but responsive to verbal stimuli; confusion; gross disorientation |
 |   4   | Coma |
 
 : West Haven Criteria for Hepatic encephalopathy (HE) {#tbl-he tbl-colwidths="[10, 90]"}
 
-HI is categorised into groups (@tbl-hi).
+HI is categorized into groups (@tbl-hi).
 Even subjects with a normal hepatic function are given a total score of 5 points (since each variable gives a score of 1 point even within the normal range) and would consequently be classified as having mild HI.
 
 | Group | Severity | Total Child-Pugh Score|

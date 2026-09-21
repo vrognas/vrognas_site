@@ -1,15 +1,15 @@
 ---
 title: "M: Musculo-skeletal system"
-description: "ATC group M for modellers: four unrelated PD paradigms under one letter, with notes held at M01, M03, M04 and M05."
+description: "ATC group M for modelers: four unrelated PD paradigms under one letter, with notes held at M01, M03, M04 and M05."
 date: "2026-02-08"
 ---
 
-Drugs for joint, bone and muscle disease, plus the neuromuscular blockers given under anaesthesia [@sheinerSimultaneousModelingPharmacokinetics1979].
+Drugs for joint, bone and muscle disease, plus the neuromuscular blockers given under anesthesia [@sheinerSimultaneousModelingPharmacokinetics1979].
 Published models here span a subjective pain score [@mandemaPopulationPharmacodynamicModel1996] and an evoked muscle twitch [@sheinerSimultaneousModelingPharmacokinetics1979].
 
-In 1938 Richard Gill returned from the Amazon with 11 kg of curare, from which Squibb isolated a standardised extract; Harold Griffith and Enid Johnson gave it in the operating room in 1942 [@elsherbiniConnectionHaroldGriffith2024; @griffithUseCurareGeneral1942].
+In 1938 Richard Gill returned from the Amazon with 11 kg of curare, from which Squibb isolated a standardized extract; Harold Griffith and Enid Johnson gave it in the operating room in 1942 [@elsherbiniConnectionHaroldGriffith2024; @griffithUseCurareGeneral1942].
 
-| Level 2 code | Description | In plain terms | Current standard |
+| Level 2 code | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
 | [M01](m01_antiinflammatory-and-antirheumatic-products/) | Antiinflammatory and antirheumatic products |  | Ibuprofen (M01AE01) / naproxen (M01AE02) |
 | M02 | Topical products for joint and muscular pain |  | Topical diclofenac (M02AA15) / topical ketoprofen (M02AA10) |
@@ -20,7 +20,7 @@ In 1938 Richard Gill returned from the Amazon with 11 kg of curare, from which S
 
 : ATC M level 2 codes {#tbl-atc-m-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modelling notes
+## Modeling notes
 
 **Endpoint.**
 Each level 2 code brings its own: WOMAC pain in M01 [@wenPlaceboResponseOral2022], serum urate in M04 [@murakiPopulationPharmacodynamicAnalysis2018], bone markers and density in M05 [@wuQuantitativePredictionBone2021], evoked twitch in M03 [@jiReversalRocuroniumInducedIntense2023].
@@ -29,7 +29,7 @@ Each level 2 code brings its own: WOMAC pain in M01 [@wenPlaceboResponseOral2022
 For M02 the relevant exposure is local, in skin and synovial fluid, and dermal PBPK is what links measured plasma concentration to that site, so [bioequivalence](/docs/concepts/clinpharm-studies/ba-be/) is argued at the site of action alongside, not instead of, a plasma study [@tsakalozouPhysiologicallyBasedPharmacokinetic2021].
 
 **Mechanistic extrapolation.**
-A multiscale model of calcium homeostasis and bone remodelling [@petersonPhysiologicallyBasedMathematical2010] was extended to predict lumbar spine density under denosumab, including the decline after discontinuation [@petersonPredictingNonlinearChanges2012].
+A multiscale model of calcium homeostasis and bone remodeling [@petersonPhysiologicallyBasedMathematical2010] was extended to predict lumbar spine density under denosumab, including the decline after discontinuation [@petersonPredictingNonlinearChanges2012].
 For M02, dermal PBPK replaced a comparative clinical endpoint study in an FDA generic approval of topical diclofenac gel [@tsakalozouPhysiologicallyBasedPharmacokinetic2021].
 
 ## References

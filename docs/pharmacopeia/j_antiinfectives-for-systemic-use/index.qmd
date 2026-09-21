@@ -1,6 +1,6 @@
 ---
 title: "J: Antiinfectives for systemic use"
-description: "ATC group J for modellers: potency as a property of the pathogen isolate, with antibacterial and antiviral notes held at J01 and J05."
+description: "ATC group J for modelers: potency as a property of the pathogen isolate, with antibacterial and antiviral notes held at J01 and J05."
 date: "2026-02-08"
 ---
 
@@ -11,7 +11,7 @@ Fleming's mould plate of 1928 became a medicine only in February 1941, when Flor
 He responded, but penicillin re-purified from his urine was not enough to keep the course going, the supply ran out and he died [@sheppardShortcourseAntibioticTherapy2022; @gaynesDiscoveryPenicillinNew2017].
 Fleming, Florey and Chain shared the 1945 Nobel Prize [@gaynesDiscoveryPenicillinNew2017].
 
-| Level 2 code | Description | In plain terms | Current standard |
+| Level 2 code | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
 | [J01](j01_antibacterials-for-systemic-use/) | Antibacterials for systemic use |  | Amoxicillin (J01CA04) / ceftriaxone (J01DD04) |
 | J02 | Antimycotics for systemic use | antifungals taken into the bloodstream | Fluconazole (J02AC01) / caspofungin (J02AX04) |
@@ -22,7 +22,7 @@ Fleming, Florey and Chain shared the 1945 Nobel Prize [@gaynesDiscoveryPenicilli
 
 : ATC J level 2 codes {#tbl-atc-j-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modelling notes
+## Modeling notes
 
 **Endpoint.**
 For antibacterials it is bacterial count, log CFU, from time-kill or animal infection experiments [@craigPharmacokineticPharmacodynamicParameters1998; @nielsenSemimechanisticPharmacokineticPharmacodynamic2007].
@@ -35,7 +35,7 @@ After hepatitis A vaccination, antibody titres decay multiphasically, set by the
 
 **Mechanistic extrapolation.**
 PBPK has been applied to antiretrovirals where trials are hard: exposure in pregnancy [@desousamendesPhysiologicallyBasedPharmacokinetic2015] and release from long-acting intramuscular depots [@bettonteDevelopmentPhysiologicallyBased2024].
-For J04 the hollow fibre system is qualified by the EMA as a methodology supporting the development of antituberculosis regimens [@cavaleriHollowFiberSystem2015].
+For J04 the hollow fiber system is qualified by the EMA as a methodology supporting the development of antituberculosis regimens [@cavaleriHollowFiberSystem2015].
 
 ## References
 

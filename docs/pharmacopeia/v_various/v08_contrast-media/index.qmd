@@ -1,6 +1,6 @@
 ---
 title: "V08: Contrast media"
-description: "ATC V08 contrast media for modellers: contrast media, a pharmacokinetic problem."
+description: "ATC V08 contrast media for modelers: contrast media, a pharmacokinetic problem."
 date: "2026-02-08"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "B05: Blood substitutes and perfusion solutions"
-description: "Pharmacometric modelling notes for ATC B05, blood substitutes and perfusion solutions."
+description: "Pharmacometric modeling notes for ATC B05, blood substitutes and perfusion solutions."
 date: "2026-02-08"
 ---
 

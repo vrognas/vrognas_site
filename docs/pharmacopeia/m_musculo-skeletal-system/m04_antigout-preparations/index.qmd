@@ -1,6 +1,6 @@
 ---
 title: "M04: Antigout preparations"
-description: "ATC M04 antigout preparations for modellers: urate is a turnover problem."
+description: "ATC M04 antigout preparations for modelers: urate is a turnover problem."
 date: "2026-02-08"
 ---
 

@@ -1,26 +1,26 @@
 ---
 title: "B: Blood and blood forming organs"
-description: "ATC group B for modellers: laboratory measures as the PD driver, with antithrombotic, antianemic and perfusion-solution notes held at B01, B03 and B05."
+description: "ATC group B for modelers: laboratory measures as the PD driver, with antithrombotic, antianemic and perfusion-solution notes held at B01, B03 and B05."
 date: "2026-02-08"
 ---
 
 Drugs acting on blood itself and on the organs that make it.
-Antithrombotics (B01) carry an extensive pharmacometric literature [@mueck2014rivaroxaban; @hamberg2010warfarin; @zhou2026milvexian]; the rest of the group is modelled rarely and quite differently.
+Antithrombotics (B01) carry an extensive pharmacometric literature [@mueck2014rivaroxaban; @hamberg2010warfarin; @zhou2026milvexian]; the rest of the group is modeled rarely and quite differently.
 
 In February 1933 the farmer Ed Carlson drove 190 miles to Karl Paul Link's laboratory in Madison with a dead heifer, a milk churn of her unclotted blood and mouldy sweet clover hay.
 Six years later Link's group isolated dicoumarol, the parent of warfarin [@ballHistoryWarfarin2025].
 
-| Level 2 code | Description | In plain terms | Current standard |
+| Level 2 code | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
 | [B01](b01_antithrombotic-agents/) | Antithrombotic agents | prevent or dissolve blood clots | Apixaban (B01AF02) / clopidogrel (B01AC04) |
 | B02 | Antihemorrhagics | stop or prevent bleeding | Tranexamic acid (B02AA02) / phytomenadione (B02BA01) |
 | [B03](b03_antianemic-preparations/) | Antianemic preparations |  | Ferrous sulfate (B03AA07) / cyanocobalamin (B03BA01); parenteral iron carries only the group code B03AC, with no level 5 substance |
-| [B05](b05_blood-substitutes-and-perfusion-solutions/) | Blood substitutes and perfusion solutions | intravenous fluids, nutrition, dialysis and irrigation solutions | No INN-level standard: ATC codes solution classes, not substances. Crystalloid resuscitation fluid sits at electrolytes (B05BB01) and dextrose infusion at carbohydrates (B05BA03) |
+| [B05](b05_blood-substitutes-and-perfusion-solutions/) | Blood substitutes and perfusion solutions | intravenous fluids, nutrition, dialysis and irrigation solutions | No single INN to name: ATC codes solution classes, not substances. Crystalloid resuscitation fluid sits at electrolytes (B05BB01) and dextrose infusion at carbohydrates (B05BA03) |
 | B06 | Other hematological agents | leftover blood drugs: angioedema, sickle cell | Lanadelumab (B06AC05) / icatibant (B06AC02) |
 
 : ATC B level 2 codes {#tbl-atc-b-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modelling notes
+## Modeling notes
 
 **Endpoint.**
 The PD driver is typically a laboratory measure: clotting time, anti-Xa activity, factor activity, hemoglobin [@byon2019apixaban; @wong2025efanesoctocog; @chanu2020epoetin].

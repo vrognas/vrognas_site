@@ -1,13 +1,13 @@
 ---
 title: "H05: Calcium homeostasis"
-description: "Pharmacometric modelling notes for ATC H05, calcium homeostasis."
+description: "Pharmacometric modeling notes for ATC H05, calcium homeostasis."
 date: "2026-02-08"
 ---
 
 Part of [H: Systemic hormonal preparations, excluding sex hormones and insulins](../).
 
 **Mechanistic extrapolation.**
-QSP is the characteristic modality here: multiscale calcium homeostasis and bone remodelling models predict bone mineral density, and FDA used one reviewing rhPTH(1-84) dosing in hypoparathyroidism [@petersonFDAAdvisoryMeeting2015; @riggsPharmacometricsSystemsPharmacology2019].
+QSP is the characteristic modality here: multiscale calcium homeostasis and bone remodeling models predict bone mineral density, and FDA used one reviewing rhPTH(1-84) dosing in hypoparathyroidism [@petersonFDAAdvisoryMeeting2015; @riggsPharmacometricsSystemsPharmacology2019].
 
 ## References
 

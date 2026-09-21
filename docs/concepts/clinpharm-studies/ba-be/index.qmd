@@ -87,5 +87,5 @@ Structurally a type of relative BA study -- same formulation under two condition
 * Both fasted and fed studies are required for:
   * **High-risk IR** products (solid dispersions, lipid-based, nanotech, or other specialized formulations).
   * **Modified-release (MR)** formulations (e.g. extended-release, delayed-release).
-* A **fed-only** study is acceptable when the product is labelled "take with food only" (e.g. for tolerability reasons).
+* A **fed-only** study is acceptable when the product is labeled "take with food only" (e.g. for tolerability reasons).
 * Fed condition: high-calorie (~800--1000 kcal), high-fat (~50% of calories) standardized meal; dose 30 minutes after start of meal.

@@ -1,6 +1,6 @@
 ---
 title: "C10: Lipid modifying agents"
-description: "Pharmacometric modelling notes for ATC C10, lipid modifying agents."
+description: "Pharmacometric modeling notes for ATC C10, lipid modifying agents."
 date: "2026-02-08"
 ---
 

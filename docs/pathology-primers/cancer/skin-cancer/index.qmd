@@ -91,11 +91,11 @@ BCC doesn't need staging because it's very rare for it to spread.
 
 #### TNM staging for melanoma
 
-TNM stands for Tumour, Node, Metastasis.
+TNM stands for Tumor, Node, Metastasis.
 
 * (T)umour
   * 6 stages
-  * Tumour thickness
+  * Tumor thickness
 * (N)ode
   * 4 stages
   * Describes whether cancer cells are in the nearby lymph nodes.

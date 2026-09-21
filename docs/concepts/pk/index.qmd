@@ -12,7 +12,7 @@ date: "2026-02-19"
 
 > *“Given an input (dose & regimen), what exposure (concentration-time profile) will the body create?”*
 
-This page is your quick-reference for that mapping. It is organised as follows:
+This page is your quick-reference for that mapping. It is organized as follows:
 
 | Section | What you get | Key take-aways |
 |---------|--------------|----------------|

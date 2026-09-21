@@ -1,13 +1,13 @@
 ---
 title: "N05: Psycholeptics"
-description: "ATC N05 psycholeptics for modellers: dropout is informative."
+description: "ATC N05 psycholeptics for modelers: dropout is informative."
 date: "2026-02-08"
 ---
 
 Part of [N: Nervous system](../).
 
 **Dropout is informative.**
-Dropout probability rises with a high observed PANSS score, so the dropout hazard is modelled jointly with the score as a [time-to-event](/docs/modeling/tte/) process [@pillareddyModellingSimulationPositive2012].
+Dropout probability rises with a high observed PANSS score, so the dropout hazard is modeled jointly with the score as a [time-to-event](/docs/modeling/tte/) process [@pillareddyModellingSimulationPositive2012].
 Ignoring it biases parameter estimates, though simulation put that bias relatively low; the model matters most for realistic trial simulation [@bjornsson2015dropout].
 
 ## References

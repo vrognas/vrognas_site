@@ -1,6 +1,6 @@
 ---
 title: "V10: Therapeutic radiopharmaceuticals"
-description: "Pharmacometric modelling notes for ATC V10, therapeutic radiopharmaceuticals."
+description: "Pharmacometric modeling notes for ATC V10, therapeutic radiopharmaceuticals."
 date: "2026-02-08"
 ---
 

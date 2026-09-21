@@ -1,6 +1,6 @@
 ---
 title: "S01: Ophthalmologicals"
-description: "ATC S01 ophthalmologicals for modellers: dosing time is design, not noise; vitreous exposure is predicted, not sampled; plasma reports safety, not effect."
+description: "ATC S01 ophthalmologicals for modelers: dosing time is design, not noise; vitreous exposure is predicted, not sampled; plasma reports safety, not effect."
 date: "2026-02-08"
 ---
 

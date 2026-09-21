@@ -1,6 +1,6 @@
 ---
 title: "H02: Corticosteroids for systemic use"
-description: "ATC H02 corticosteroids for systemic use for modellers: baseline is rhythmic and it moves; duration matters separately from intensity; cumulative exposure is a poor fix."
+description: "ATC H02 corticosteroids for systemic use for modelers: baseline is rhythmic and it moves; duration matters separately from intensity; cumulative exposure is a poor fix."
 date: "2026-02-08"
 ---
 

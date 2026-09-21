@@ -1,6 +1,6 @@
 ---
 title: "M03: Muscle relaxants"
-description: "ATC M03 muscle relaxants for modellers: relaxants are the effect compartment case."
+description: "ATC M03 muscle relaxants for modelers: relaxants are the effect compartment case."
 date: "2026-02-08"
 ---
 

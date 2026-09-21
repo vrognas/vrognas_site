@@ -1,6 +1,6 @@
 ---
 title: "J05: Antivirals for systemic use"
-description: "ATC J05 antivirals for systemic use for modellers: models the host too."
+description: "ATC J05 antivirals for systemic use for modelers: models the host too."
 date: "2026-02-20"
 ---
 
@@ -28,7 +28,7 @@ date: "2026-02-20"
 
 : Codes for antivirals. {#tbl-antivirals tbl-colwidths="[10, 90]"}
 
-## Modelling notes
+## Modeling notes
 
 **Models the host too.**
 The hepatitis C model carries uninfected cells, infected cells and virions, with interferon entering as a fractional block of virion production [@neumannHepatitisCViral1998].

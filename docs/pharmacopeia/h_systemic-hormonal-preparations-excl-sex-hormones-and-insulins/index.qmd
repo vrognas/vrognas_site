@@ -1,6 +1,6 @@
 ---
 title: "H: Systemic hormonal preparations, excluding sex hormones and insulins"
-description: "ATC group H for modellers: replacement versus pharmacological dosing, the assay that cannot tell drug from hormone, and turnover as the default structure."
+description: "ATC group H for modelers: replacement versus pharmacological dosing, the assay that cannot tell drug from hormone, and turnover as the default structure."
 date: "2026-02-08"
 ---
 
@@ -10,7 +10,7 @@ Sex hormones sit in group G and insulins in group A, so what remains is mainly H
 On 21 September 1948 at the Mayo Clinic, Charles Slocumb gave a woman crippled by rheumatoid arthritis 100 mg of Kendall's "compound E" (now known as **cortisone**), and within three days she was markedly improved.
 Hench, Kendall and Reichstein shared the 1950 Nobel Prize [@mattesonPhilipHenchDiscovery2024].
 
-| Level 2 code | Description | In plain terms | Current standard |
+| Level 2 code | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
 | H01 | Pituitary and hypothalamic hormones and analogues | hormones of the brain's master glands | Somatropin (H01AC01) / desmopressin (H01BA02) |
 | [H02](h02_corticosteroids-for-systemic-use/) | Corticosteroids for systemic use |  | Prednisolone (H02AB06) / dexamethasone (H02AB02) |
@@ -20,7 +20,7 @@ Hench, Kendall and Reichstein shared the 1950 Nobel Prize [@mattesonPhilipHenchD
 
 : ATC H level 2 codes {#tbl-atc-h-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modelling notes
+## Modeling notes
 
 **The assay cannot tell drug from hormone.**
 Where the agent is the natural hormone, as with thyroxine and hydrocortisone, the model needs an explicit baseline or suppression step rather than a plain PK structure [@waltersack2004; @melin2018].
@@ -30,7 +30,7 @@ Replacement restores physiological concentrations and is judged on a feedback bi
 Pharmacological dosing deliberately overshoots to exploit an effect the hormone does not produce at normal concentrations [@simon2010; @czock2005].
 
 **Typical structure.**
-Turnover (indirect response), not direct concentration-effect [@dayneka1993indirect; @lonnebo2007], with a feedback term when the axis itself is modelled [@bindellini2024] (see [PKPD](/docs/modeling/pkpd/)).
+Turnover (indirect response), not direct concentration-effect [@dayneka1993indirect; @lonnebo2007], with a feedback term when the axis itself is modeled [@bindellini2024] (see [PKPD](/docs/modeling/pkpd/)).
 Steroid and thyroid effects run through nuclear receptors and gene transcription [@hollenberg1985], so response lags concentration and shows hysteresis [@ramakrishnan2002].
 
 ## References

@@ -1,6 +1,6 @@
 ---
 title: "M01: Antiinflammatory and antirheumatic products"
-description: "ATC M01 antiinflammatory and antirheumatic products for modellers: pain needs a fitted placebo time course; remedication is informative dropout."
+description: "ATC M01 antiinflammatory and antirheumatic products for modelers: pain needs a fitted placebo time course; remedication is informative dropout."
 date: "2026-02-08"
 ---
 

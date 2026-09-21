@@ -71,7 +71,7 @@ Take‑home checklist for pharmacometricians
 | :--- | :------- |
 | Build a sampling‑time QC script | §5.0 Risk control; §4.9 Source data integrity |
 | Store raw, cleaned, and analysis datasets with hashes | §2.10 Data verifiability; §5.5.3 Audit‑trail |
-| Validate NONMEM/R scripts (unit tests) | §5.5.3 Computerised‑system validation |
+| Validate NONMEM/R scripts (unit tests) | §5.5.3 Computerized‑system validation |
 | Document model decisions in a contemporaneous log | §4.9 ALCOA; §5.18 Monitoring evidence |
 | Archive assays, datasets, reports ≥ 2 years post‑marketing | §4.9.5 & §5.5.11 Record retention |
 
@@ -118,7 +118,7 @@ Information is presented according to a predefined structure:
   * **4.2 Posology and method of administration**
     * Specifies the dose for each indication(s) and each relevant subpopulation (e.g. depending on age, concomitant disease):
       * With information on frequency of intake, influence of food, duration of treatment,
-      * Advice on dose adjustment (e.g. to optimise the benefits according to patient's response or to limit the risk e.g. in relation to drug interactions),
+      * Advice on dose adjustment (e.g. to optimize the benefits according to patient's response or to limit the risk e.g. in relation to drug interactions),
       * Additional information on dosing as necessary (e.g. need for dose titration or tapering off, maximum recommended dose, action to be taken if an intake is missed)
     * Also informs on the method of administration, which information can be complemented with special instructions for handling the medicine in section 6.6.
     * Possible dose adjustments due to e.g. hepatic/renal impairment or concomitant diseases
@@ -131,14 +131,14 @@ Information is presented according to a predefined structure:
   * 4.9 Overdose
 * 5. Pharmacological properties
   * *5.1 Pharmacodynamic properties*
-    * Summarises the benefits of the medicine in presenting:
+    * Summarizes the benefits of the medicine in presenting:
       * Its mechanism of action
       * The main results of the clinical trials supporting the marketing authorisation
         * In giving the main characteristics of the patient population studied
         * And presenting the effects qualitatively and quantitatively
       * Additional clinically relevant information in special populations:
         * In a balanced way (i.e., informing on uncertainties as appropriate)
-        * Including study results in the paediatric population, even if the product is not (yet) indicated, to improve the information available on the use of medicine in the various paediatric populations
+        * Including study results in the pediatric population, even if the product is not (yet) indicated, to improve the information available on the use of medicine in the various pediatric populations
   * **5.2 Pharmacokinetic properties**
     * Descriptive information on general PK
     * Differences in PK due to e.g. hepatic/renal impairment or concomitant diseases

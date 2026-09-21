@@ -1,6 +1,6 @@
 ---
 title: "D11: Other dermatological preparations"
-description: "ATC D11 other dermatological preparations for modellers: dropout is informative."
+description: "ATC D11 other dermatological preparations for modelers: dropout is informative."
 date: "2026-02-08"
 ---
 

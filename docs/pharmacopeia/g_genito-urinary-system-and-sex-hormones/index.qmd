@@ -1,6 +1,6 @@
 ---
 title: "G: Genito-urinary system and sex hormones"
-description: "ATC group G for modellers: the level 2 map with current standards, and notes held at G03 (sex hormones) and G04 (urologicals)."
+description: "ATC group G for modelers: the level 2 map with example drugs, and notes held at G03 (sex hormones) and G04 (urologicals)."
 date: "2026-02-08"
 ---
 
@@ -10,7 +10,7 @@ Two subgroups set the agenda: sex hormones (G03) are dosed into an axis that alr
 Margaret Sanger pushed for an oral contraceptive, Katharine Dexter McCormick paid for it, and Gregory Pincus and John Rock did the work.
 The FDA approved Enovid in 1957 for menstrual disorders, and only in 1960 for contraception [@dhontHistoryOralContraception2010; @junodWomensTrialsApproval2002].
 
-| Level 2 code | Description | In plain terms | Current standard |
+| Level 2 code | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
 | G01 | Gynecological antiinfectives and antiseptics |  | Clotrimazole (G01AF02) / metronidazole (G01AF01), both vaginal |
 | G02 | Other gynecologicals | uterus drugs: labour induction, tocolytics, prolactin inhibitors | Misoprostol (G02AD06) / dinoprostone (G02AD02) |
@@ -19,7 +19,7 @@ The FDA approved Enovid in 1957 for menstrual disorders, and only in 1960 for co
 
 : ATC G level 2 codes {#tbl-atc-g-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modelling notes
+## Modeling notes
 
 **Non-monotonic response**
 GnRH agonists produce a flare before downregulation, so the response is not monotonic [@romero2012triptorelin; @lim2015leuprolide], and ATC files them outside this group entirely, under L02AE and H01CA.

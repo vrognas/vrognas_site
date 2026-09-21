@@ -1,6 +1,6 @@
 ---
 title: "B03: Antianemic preparations"
-description: "ATC B03 antianemic preparations for modellers: longest delays in the group."
+description: "ATC B03 antianemic preparations for modelers: longest delays in the group."
 date: "2026-02-08"
 ---
 

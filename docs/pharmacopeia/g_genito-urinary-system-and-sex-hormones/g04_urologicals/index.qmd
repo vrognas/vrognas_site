@@ -1,6 +1,6 @@
 ---
 title: "G04: Urologicals"
-description: "ATC G04 urologicals for modellers: urological endpoints are not continuous; placebo response is large and time-varying."
+description: "ATC G04 urologicals for modelers: urological endpoints are not continuous; placebo response is large and time-varying."
 date: "2026-02-08"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "N03: Antiepileptics"
-description: "ATC N03 antiepileptics for modellers: counts, not concentrations."
+description: "ATC N03 antiepileptics for modelers: counts, not concentrations."
 date: "2026-02-08"
 ---
 

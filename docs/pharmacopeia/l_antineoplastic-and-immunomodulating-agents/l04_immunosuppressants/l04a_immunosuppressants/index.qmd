@@ -1,6 +1,6 @@
 ---
 title: "L04A: Immunosuppressants"
-description: "Pharmacometric modelling notes for ATC L04A, immunosuppressants."
+description: "Pharmacometric modeling notes for ATC L04A, immunosuppressants."
 date: "2026-02-08"
 ---
 

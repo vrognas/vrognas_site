@@ -1,16 +1,16 @@
 ---
 title: "A: Alimentary tract and metabolism"
-description: "ATC group A for modellers: the level 2 map with current standards, and modelling notes held with A10 (diabetes) and A02 (acid-related disorders)."
+description: "ATC group A for modelers: the level 2 map with example drugs, and modeling notes held with A10 (diabetes) and A02 (acid-related disorders)."
 date: "2026-02-08"
 ---
 
 Drugs acting on the gut, on metabolism and on nutrition, from mouthwashes to insulins.
-Modelling notes live with the subgroups they belong to: [A10, drugs used in diabetes](a10_drugs-used-in-diabetes/), and [A02, drugs for acid related disorders](a02_drugs-for-acid-related-disorders/).
+Modeling notes live with the subgroups they belong to: [A10, drugs used in diabetes](a10_drugs-used-in-diabetes/), and [A02, drugs for acid related disorders](a02_drugs-for-acid-related-disorders/).
 
-In January 1922 a first pancreatic extract given to Leonard Thompson, 14 and ketoacidotic at Toronto General Hospital, left a sterile abscess and barely moved his glycaemia.
+In January 1922 a first pancreatic extract given to Leonard Thompson, 14 and ketoacidotic at Toronto General Hospital, left a sterile abscess and barely moved his glycemia.
 Collip's purified extract on 23 January cleared the ketonuria [@vecchioDiscoveryInsulinImportant2018].
 
-| Level 2 code | Description | In plain terms | Current standard |
+| Level 2 code | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
 | A01 | Stomatological preparations | of the mouth and teeth | Chlorhexidine (A01AB03) / sodium fluoride (A01AA01) |
 | [A02](a02_drugs-for-acid-related-disorders/) | Drugs for acid related disorders |  | Omeprazole (A02BC01) / pantoprazole (A02BC02) |
@@ -24,9 +24,9 @@ Collip's purified extract on 23 January cleared the ketonuria [@vecchioDiscovery
 | [A10](a10_drugs-used-in-diabetes/) | Drugs used in diabetes |  | Metformin (A10BA02) / dapagliflozin (A10BK01) |
 | A11 | Vitamins |  | Colecalciferol (A11CC05) / thiamine (A11DA01) |
 | A12 | Mineral supplements |  | Calcium carbonate (A12AA04) / potassium chloride (A12BA01) |
-| A13 | Tonics | old general-strengthening preparations, not evidence-based | No modern drug-level standard: A13A carries no level 5 substances, a residual historical category. |
+| A13 | Tonics | old general-strengthening preparations, not evidence-based | No substance to name: A13A carries no level 5 substances, a residual historical category. |
 | A14 | Anabolic agents for systemic use | tissue-building steroids acting body-wide | Nandrolone (A14AB01) / oxandrolone (A14AA08) |
-| A15 | Appetite stimulants |  | No drug-level standard: A15 is subdivided no further and holds no substances or DDDs. |
+| A15 | Appetite stimulants |  | No substance to name: A15 is subdivided no further and holds no substances or DDDs. |
 | A16 | Other alimentary tract and metabolism products | leftovers: mostly rare inherited metabolic disease drugs | Nitisinone (A16AX04) / sapropterin (A16AX07) |
 
 : ATC A level 2 codes {#tbl-atc-a-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}

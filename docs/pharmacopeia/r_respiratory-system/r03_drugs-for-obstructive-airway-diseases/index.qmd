@@ -1,6 +1,6 @@
 ---
 title: "R03: Drugs for obstructive airway diseases"
-description: "ATC R03 drugs for obstructive airway diseases for modellers: the dose splits before you model anything; plasma is a poor surrogate for local effect; isolating the lung dose."
+description: "ATC R03 drugs for obstructive airway diseases for modelers: the dose splits before you model anything; plasma is a poor surrogate for local effect; isolating the lung dose."
 date: "2026-02-08"
 ---
 

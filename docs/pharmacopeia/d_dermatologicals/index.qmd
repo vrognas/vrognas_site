@@ -1,6 +1,6 @@
 ---
 title: "D: Dermatologicals"
-description: "ATC group D for modellers: bounded skin severity scores and site-of-action exposure sampled or predicted, with D05, D07 and D11 notes on their own pages."
+description: "ATC group D for modelers: bounded skin severity scores and site-of-action exposure sampled or predicted, with D05, D07 and D11 notes on their own pages."
 date: "2026-02-08"
 ---
 
@@ -10,7 +10,7 @@ For the topical majority the target tissue is also the site of administration, s
 In 1962 A. W. McKenzie and R. B. Stoughton published a method for comparing the percutaneous absorption of steroids [@mckenzieMethodComparingPercutaneous1962].
 The skin blanching assay that grew from it is still called the Stoughton-McKenzie assay [@herkenneVivoMethodsAssessment2008], and the FDA accepts it as a surrogate for the bioequivalence of topical glucocorticoids [@alomariUpdateAdvancesChallenges2024].
 
-| Level 2 code | Description | In plain terms | Current standard |
+| Level 2 code | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
 | D01 | Antifungals for dermatological use |  | Terbinafine, topical (D01AE15) / terbinafine, oral (D01BA02) |
 | D02 | Emollients and protectives | moisturisers and barrier creams | Carbamide, i.e. urea (D02AE01). Most emollient bases carry no level 5 substance code: D02AC (soft paraffin and fat products) is group-level only. |
@@ -26,7 +26,7 @@ The skin blanching assay that grew from it is still called the Stoughton-McKenzi
 
 : ATC D level 2 codes {#tbl-atc-d-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modelling notes
+## Modeling notes
 
 **Endpoint.**
 Bounded composite severity scores: PASI in psoriasis [@ooiBoundedIntegerModelbased2023] and EASI in atopic dermatitis [@okadaContinuousTimeMarkovPopulation2025].

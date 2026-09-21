@@ -1,6 +1,6 @@
 ---
 title: "M05: Drugs for treatment of bone diseases"
-description: "ATC M05 drugs for treatment of bone diseases for modellers: bone markers and density are asynchronous."
+description: "ATC M05 drugs for treatment of bone diseases for modelers: bone markers and density are asynchronous."
 date: "2026-02-08"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "V03: All other therapeutic products"
-description: "ATC V03 all other therapeutic products for modellers: typical structure, reversal agents; reversal can wear off first."
+description: "ATC V03 all other therapeutic products for modelers: typical structure, reversal agents; reversal can wear off first."
 date: "2026-02-08"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "S: Sensory organs"
-description: "ATC group S for modellers: an organ of limited accessibility, with the ophthalmological modelling notes held at S01."
+description: "ATC group S for modelers: an organ of limited accessibility, with the ophthalmological modeling notes held at S01."
 date: "2026-02-08"
 ---
 
@@ -10,7 +10,7 @@ The notes below come from S01, ophthalmologicals, where the difficulty is an org
 In 1977 Thom Zimmerman and Herbert Kaufman studied single-dose timolol at four strengths in twenty patients with chronic open-angle glaucoma.
 Every strength, down to 0.1%, lowered pressure for at least 24 hours, which led them to propose a once a day topical agent [@zimmermanTimololDoseResponse1977].
 
-| Level 2 code | Description | In plain terms | Current standard |
+| Level 2 code | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
 | [S01](s01_ophthalmologicals/) | Ophthalmologicals | medicines applied to the eye | Latanoprost (S01EE01) / aflibercept (S01LA05) |
 | S02 | Otologicals | ear medicines, mostly drops | Ciprofloxacin ear drops (S02AA15) / dexamethasone with antiinfectives (S02CA06) |
@@ -18,7 +18,7 @@ Every strength, down to 0.1%, lowered pressure for at least 24 hours, which led 
 
 : ATC S level 2 codes {#tbl-atc-s-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modelling notes
+## Modeling notes
 
 **Endpoint.**
 In S01E the endpoint is **intraocular pressure**, read as a 24 hour series rather than one clinic value, because the baseline itself carries a circadian rhythm [@durairajMechanismBasedTranslational2014].

@@ -90,7 +90,7 @@ A key reason why the Cox model is widely popular is that it does not rely on dis
 Also, an estimation of the baseline hazard is not necessary for the estimation of a hazard ratio because the baseline hazard cancels in the calculation.
 
 In pharmacometrics we often use *parametric survival models*.
-A parametric survival model is one in which the survival time (the outcome) is assumed to follow a known distribution, and the parameters of this distribution is modelled.
+A parametric survival model is one in which the survival time (the outcome) is assumed to follow a known distribution, and the parameters of this distribution is modeled.
 
 Survival estimates obtained from parametric survival models typically yield plots more consistent with a theoretical survival curve.
 If the investigator is comfortable with the underlying distributional assumption, then parameters can be estimated that completely specify the survival and hazard functions.
@@ -445,7 +445,7 @@ An acceleration factor greater than one for the effect of an exposure implies th
 
 ### Adding covariates
 
-There are four approaches to modelling survival data with covariates^[[Rodríguez G. (2010)](https://grodri.github.io/survival/ParametricSurvival.pdf)]:
+There are four approaches to modeling survival data with covariates^[[Rodríguez G. (2010)](https://grodri.github.io/survival/ParametricSurvival.pdf)]:
 
 * Parametric Families
 * Accelerated Life
@@ -469,7 +469,7 @@ Where h~0~(t) is the baseline hazard function (see @tbl-dist).
 ### Frailty
 
 Frailty accounts for unobserved heterogeneity.
-This can be modelled using a ETA in NONMEM, using the same approach as adding a covariate.
+This can be modeled using a ETA in NONMEM, using the same approach as adding a covariate.
 This can be viewed as adding all possible covariates, even unobserved ones.
 
 ## Landmark analysis

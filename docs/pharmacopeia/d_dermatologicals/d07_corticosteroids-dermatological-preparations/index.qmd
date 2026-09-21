@@ -1,6 +1,6 @@
 ---
 title: "D07: Corticosteroids, dermatological preparations"
-description: "ATC D07 corticosteroids, dermatological preparations for modellers: the vehicle is part of the drug."
+description: "ATC D07 corticosteroids, dermatological preparations for modelers: the vehicle is part of the drug."
 date: "2026-02-08"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "B01: Antithrombotic agents"
-description: "ATC B01 antithrombotic agents for modellers: delayed effect is the default; benefit-risk is asymmetric."
+description: "ATC B01 antithrombotic agents for modelers: delayed effect is the default; benefit-risk is asymmetric."
 date: "2026-02-08"
 ---
 

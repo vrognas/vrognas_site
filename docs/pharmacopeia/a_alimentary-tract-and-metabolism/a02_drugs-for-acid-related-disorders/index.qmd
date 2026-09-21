@@ -1,6 +1,6 @@
 ---
 title: "A02: Drugs for acid related disorders"
-description: "Pharmacometric modelling notes for ATC A02, drugs for acid related disorders."
+description: "Pharmacometric modeling notes for ATC A02, drugs for acid related disorders."
 date: "2026-02-08"
 ---
 

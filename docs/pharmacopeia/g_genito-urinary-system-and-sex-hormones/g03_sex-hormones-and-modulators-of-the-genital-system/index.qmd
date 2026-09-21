@@ -1,6 +1,6 @@
 ---
 title: "G03: Sex hormones and modulators of the genital system"
-description: "ATC G03 sex hormones and modulators of the genital system for modellers: you are dosing into a feedback loop; baseline is rhythmic, so sampling time is a covariate; response outlasts exposure."
+description: "ATC G03 sex hormones and modulators of the genital system for modelers: you are dosing into a feedback loop; baseline is rhythmic, so sampling time is a covariate; response outlasts exposure."
 date: "2026-02-08"
 ---
 
@@ -8,7 +8,7 @@ Part of [G: Genito-urinary system and sex hormones](../).
 
 **You are dosing into a feedback loop.**
 Exogenous hormone suppresses endogenous secretion, so the measured concentration is the drug plus a baseline that moves in response to it [@bi2018tc; @pastuszak2021tu].
-Start from turnover (indirect response), not a direct-effect model [@pechstein2000cetrorelix; @snelder2019leuprorelin], and add an explicit feedback term when modelling the axis itself [@tornoe2007hpg] (see [pharmacodynamics](/docs/concepts/pd/)).
+Start from turnover (indirect response), not a direct-effect model [@pechstein2000cetrorelix; @snelder2019leuprorelin], and add an explicit feedback term when modeling the axis itself [@tornoe2007hpg] (see [pharmacodynamics](/docs/concepts/pd/)).
 
 **Baseline is rhythmic, so sampling time is a covariate.**
 Testosterone follows a circadian rhythm, most pronounced in younger men [@brambilla2009diurnal; @diver2003diurnal]; in premenopausal women LH, FSH, estradiol and progesterone vary across the menstrual cycle [@stricker2006menstrual; @roblitz2013menstrual].
