@@ -295,7 +295,17 @@ If you have pediatric data, you can overlay observed pediatric exposure with the
 Relevant predefined exposure metrics should be presented graphically versus body weight and age on a continuous scale (@fig-cov).
 If the drug is indicated to be used in the age range below one year, exposure vs body weight and age should be depicted in an additional separate figure focused on children 0--1 years.
 
-![Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions). The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated pediatric patients. The *horizontal gray band* encompasses 90% of the simulated adult patients receiving 100 mg BID [@schoemakerBrivaracetamPopulationPharmacokinetics2017].](../images/pediatric-cov.png){#fig-cov}
+::: {#fig-cov}
+
+![](../images/pediatric-cov.png){fig-alt="Two scatter plots of predicted steady-state concentration, against body weight on the left and against age on the right, showing individual predictions, the simulated pediatric median and 90% interval, and the adult reference band."}
+
+Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions).
+The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated pediatric patients.
+The *horizontal gray band* encompasses 90% of the simulated adult patients receiving 100 mg BID.
+
+:::
+
+The figure is taken from the brivaracetam pediatric population pharmacokinetic analysis [@schoemakerBrivaracetamPopulationPharmacokinetics2017].
 
 Often plots that show the distribution of AUC~pediatric,simulated~ along with the distribution of AUC~adult,observed~ or simulated values from individual adult subjects using the final popPK model using box-plots can be useful (@fig-box).
 If different doses are proposed for bands of weight or/and age, exposure ranges predicted for the proposed doses for the subsets of the pediatric population should be visualized as box-plots (@fig-box).
