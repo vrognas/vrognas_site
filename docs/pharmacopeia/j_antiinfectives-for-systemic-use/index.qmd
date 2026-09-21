@@ -28,14 +28,14 @@ Fleming, Florey and Chain shared the 1945 Nobel Prize [@gaynesDiscoveryPenicilli
 For antibacterials it is bacterial count, log CFU, from time-kill or animal infection experiments [@craigPharmacokineticPharmacodynamicParameters1998; @nielsenSemimechanisticPharmacokineticPharmacodynamic2007].
 For J05 it is plasma viral load [@perelsonHIV1DynamicsVivo1996; @neumannHepatitisCViral1998].
 
-**The index is class-specific.**
+**The index is class-specific (J01).**
 For antibacterials, exposure is summarised as **unbound** concentration referenced to the **MIC**: *f*T~>MIC~, *f*AUC/MIC or *f*C~max~/MIC [@moutonStandardizationPharmacokineticPharmacodynamic2005].
 Which index predicts effect is settled by dose fractionation and differs between antibacterial classes, so no single index covers J01 [@craigPharmacokineticPharmacodynamicParameters1998; @nielsenPharmacokineticPharmacodynamicModelingAntibacterial2013].
 
-**Typical structure.**
+**Typical structure (J01).**
 Semi-mechanistic models give the bacteria a growth rate, a capacity limit and a drug-driven kill rate, fitted to whole time-kill curves rather than one summary index [@nielsenSemimechanisticPharmacokineticPharmacodynamic2007].
 
-**Resistance is a compartment.**
+**Resistance is a compartment (J01).**
 Regrowth is usually modelled as a pre-existing less susceptible subpopulation that treatment selects for, though published models differ in how resistance arises [@jumbeApplicationMathematicalModel2003; @nielsenPharmacokineticPharmacodynamicModelingAntibacterial2013].
 
 **J05 models the host too.**

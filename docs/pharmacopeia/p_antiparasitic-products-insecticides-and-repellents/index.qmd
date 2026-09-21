@@ -28,21 +28,21 @@ Synchronised replication, sequestration of mature forms and dormant liver forms 
 Parasitaemia decline for the blood-dwelling protozoa [@krausePharmacokineticPharmacodynamicModelling2016], estimated as a clearance slope from the whole profile rather than a single visit [@fleggStandardizingMeasurementParasite2011; @stepniewskaVivoParasitologicalMeasures2010].
 For helminths it is the faecal egg count, reported as cure rate and egg reduction rate [@moserOneMeanRule2020; @brusseePopulationPharmacokineticsExposure2021].
 
-**PK/PD indices carry over, with caveats.**
+**PK/PD indices carry over, with caveats (P01).**
 Dose-fractionation studies in murine and humanised mouse models identify the governing index [@lakshminarayana2015spiroindolone; @gibhard2024dosefractionation], but these analyses usually work with *total* rather than unbound concentrations, since the compounds are often bound above 99% [@white2013antimalarial].
 Which index wins is compound-specific, not a class property.
 
-**Sustained exposure beats peak.**
+**Sustained exposure beats peak (P01).**
 For slowly eliminated antimalarials the driver is exposure maintained across a full asexual cycle [@white2013antimalarial; @pica2026antimalarialpkpd].
 
 **Variability is wide, and mostly about the patient.**
 Endemic populations skew [paediatric](/docs/concepts/pediatrics/), so weight-band dosing [@waalewijn2025weightbands; @banda2025infants] and allometric scaling with maturation [@germovsek2017scaling] are the starting point.
 For the lipophilic agents, fat-dependent absorption is the first thing to characterise: a normal meal roughly doubles lumefantrine bioavailability [@ezzet2000LumefantrinePkpd; @jain2017LumefantrineBioavailability].
 
-**Mechanistic extrapolation.**
+**Mechanistic extrapolation (P01).**
 PBPK is the established modality, used to extrapolate antimalarial exposure into groups trials rarely reach, young children, pregnancy and breastmilk, and to select doses there [@johnsonDevelopmentPhysiologicallyBased2019; @almondPBPKLedAssessmentAntimalarial2025].
 
-**Combination therapy.**
+**Combination therapy (P01).**
 Combination therapy pairs a short-acting drug with a long-acting partner [@hastings2014MatchingHalfLives], and the partner's terminal tail is itself a resistance selection pressure [@stepniewska2008WindowSelection].
 
 ## References

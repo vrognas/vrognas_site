@@ -33,7 +33,7 @@ Both lag plasma concentration, because the drug acts on the turnover of the meas
 Indirect response models [@dayneka1993indirect; @jusko1994physiologic], near-universal for LDL [@kakara2014; @faltaos2006] and common for blood pressure.
 Effect-compartment models only where the delay is genuinely short, as for the acute heart rate effect of a beta blocker [@francheteau1993; @belz1988].
 
-**Counter-regulation.**
+**Counter-regulation (C02, C03, C09).**
 Baroreflex activation, renin release and renal sodium handling push back against blood pressure effects [@sica2007], which is why feedback and tolerance terms appear in antihypertensive models [@brynne2001].
 
 **Baseline is the trap.**
@@ -48,10 +48,10 @@ A data-driven search is underpowered at realistic dataset sizes [@ribbing2004cov
 A concentration-QTc analysis is expected under ICH E14 for essentially every new drug, as a separate pre-specified analysis [@garnett2018cqtc; @darpo2015iqcsrc] (see [C-QTc modelling](/docs/modeling/qt/)).
 Class-matched effects such as hypotension and bradycardia are exaggerated on-target pharmacology, and keep climbing after the efficacy curve flattens [@johnston1992doseresponse; @overgaard2015er].
 
-**Mechanistic extrapolation.**
+**Mechanistic extrapolation (C10).**
 PBPK dominates here, predicting OATP1B1 transporter-mediated statin interactions and SLCO1B1 genotype effects on exposure; cardiorenal QSP models extrapolate blood-pressure and renal responses for antihypertensives [@yoshikadoQuantitativeAnalysesHepatic2016; @jameiMechanisticFrameworkVitro2014].
 
-**Approval gotcha**
+**Approval rests on the surrogate.**
 Approval often rests on the surrogate, with the outcome trial reporting years later [@sabatine2017fourier; @nissen2023clear].
 The pharmacometric job is linking biomarker change to event hazard [@holford2013tte; @zhudenkov2022joint], and handling the adherence and dropout endemic to chronic outpatient dosing [@vrijens2014adherence; @bjornsson2015dropout].
 

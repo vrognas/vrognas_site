@@ -29,7 +29,7 @@ In 2002 Anton Bom and colleagues at Organon described a cyclodextrin that revers
 For therapeutic radiopharmaceuticals the driver is a physical quantity, the **absorbed dose** in Gy to tumour and organs at risk, reconstructed from serial post-infusion imaging rather than from a plasma concentration-time curve [@hebertAbsorbedDoseResponse2024].
 In ^177^Lu-PSMA-617 therapy the lesion dose-response relationship is real but only moderate, Spearman rho about -0.3 [@grkovskiLesionAbsorbedDose2025].
 
-**Decay is not clearance.**
+**Decay is not clearance (V09, V10).**
 Imaging measures activity, which falls by radioactive decay and by biological clearance together, so what is fitted is an effective half-life [@oliveiraAnalysisResidenceTime2022].
 With few imaging time points the fit is unstable, and population fitting stabilises the time-integrated activity [@hardiansyahPopulationBasedMethod2021].
 
@@ -38,7 +38,7 @@ Sugammadex encapsulates rocuronium and the complex is cleared by the kidney, so 
 A population analysis nonetheless found renal function did not affect reversal time [@kleijnPopulationPharmacokineticPharmacodynamic2011].
 The fitted model is complex formation using the *in vitro* dissociation constant, with effect driven by the fall in free rocuronium rather than by an E~max~ on sugammadex [@ploegerPharmacokineticPharmacodynamicModel2009].
 
-**Gotcha.**
+**Reversal can wear off first (V03).**
 The short duration of action of naloxone is a pharmacokinetic property, so reversal can wear off while the opioid is still present [@ngaiPharmacokineticsNaloxoneRats1976].
 Judging a reversal dose therefore calls for a mechanistic model linking both drugs to ventilation [@yangMechanisticPharmacokineticPharmacodynamic2024].
 
@@ -46,7 +46,7 @@ Judging a reversal dose therefore calls for a mechanistic model linking both dru
 Iodinated X-ray media distribute differentially to organs and between normal and abnormal tissue, and are excreted largely unchanged, with a hepatic and biliary route that matters in renal impairment [@bourinOverviewClinicalPharmacokinetics1997].
 Iohexol clearance is itself used as a measured GFR [@mohamedDiverseProtocolsMeasuring2024], and the practical question is the safe interval before the next study [@vandermolenWaitingTimesBetween2024].
 
-**Mechanistic extrapolation.**
+**Mechanistic extrapolation (V10).**
 PBPK has been applied in radiopharmaceutical therapy to predict time-integrated activity for treatment planning [@klettingPhysiologicallyBasedPharmacokinetic2015; @hardiansyahSensitivityAnalysisPhysiologically2016].
 
 ## References

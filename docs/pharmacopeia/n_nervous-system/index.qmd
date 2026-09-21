@@ -26,18 +26,18 @@ On 29 March 1948 John Cade gave lithium citrate to W.B., in manic excitement for
 Analysing composite PANSS totals as continuous data discards information and violates the scale's numerical nature; item response theory models the items instead [@krekelsItemResponseTheory2017].
 Depression trials have been modelled on the HAMD-17 total [@gomeniBayesianModellingROC2007].
 
-**Placebo first.**
+**Placebo first (N05, N06).**
 Placebo arms in schizophrenia and depression improve over weeks, so a placebo time course is fitted before estimating any drug effect [@pillareddyStructuralModelsDescribing2011].
 
-**Dropout is informative.**
+**Dropout is informative (N05).**
 Dropout probability rises with a high observed PANSS score, so the dropout hazard is modelled jointly with the score as a [time-to-event](/docs/modeling/tte/) process [@pillareddyModellingSimulationPositive2012].
 Ignoring it biases parameter estimates, though simulation put that bias relatively low; the model matters most for realistic trial simulation [@bjornsson2015dropout].
 
-**Counts, not concentrations.**
+**Counts, not concentrations (N03).**
 Daily seizure counts in N03 are overdispersed and depend on the previous day, so negative binomial models with a Markov element beat Poisson [@troconizModellingOverdispersionMarkovian2009].
 Add-on [exposure-response](/docs/modeling/pkpd/) is fitted on seizure rate, not a continuous score [@millerExposureResponseAnalysis2003].
 
-**Anaesthesia is the hysteresis case.**
+**Anaesthesia is the hysteresis case (N01).**
 Processed EEG lags plasma concentration in N01, so the link is an effect site with an equilibration rate constant k~e0~ [@schniderInfluenceAgePropofol1999].
 One effect compartment failed to describe the bispectral index across different propofol infusion rates; a two-compartment effect site succeeded [@bjornssonTwoCompartmentEffectSite2010].
 

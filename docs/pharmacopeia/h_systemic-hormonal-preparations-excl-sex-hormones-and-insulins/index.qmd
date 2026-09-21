@@ -33,21 +33,21 @@ Pharmacological dosing deliberately overshoots to exploit an effect the hormone 
 Turnover (indirect response), not direct concentration-effect [@dayneka1993indirect; @lonnebo2007], with a feedback term when the axis itself is modelled [@bindellini2024] (see [PKPD](/docs/modeling/pkpd/)).
 Steroid and thyroid effects run through nuclear receptors and gene transcription [@hollenberg1985], so response lags concentration and shows hysteresis [@ramakrishnan2002].
 
-**Baseline is rhythmic and it moves.**
+**Baseline is rhythmic and it moves (H02).**
 Cortisol has a pronounced diurnal pattern, so a constant baseline cannot describe a 24-hour profile [@chakraborty1999]; a time-varying production rate is the usual remedy [@ayyar2019].
 Baseline also falls during treatment and recovers slowly after withdrawal [@baker2021; @krzyzanski2021], which is one reason long courses are tapered [@burmester2020].
 
-**Duration matters separately from intensity.**
+**Duration matters separately from intensity (H02).**
 Fracture risk tracks current daily dose, and adrenal suppression rises with dose *and* treatment duration [@broersen2015adrenal; @magee2002prednisolonepkpd].
 An analysis carrying only average concentration misses the duration-dependent toxicities.
 
-**Mechanistic extrapolation.**
+**Mechanistic extrapolation (H05).**
 QSP is the characteristic modality here: multiscale calcium homeostasis and bone remodelling models predict bone mineral density, and FDA used one reviewing rhPTH(1-84) dosing in hypoparathyroidism [@petersonFDAAdvisoryMeeting2015; @riggsPharmacometricsSystemsPharmacology2019].
 
-**Gotcha.**
+**Cumulative exposure is a poor fix (H02).**
 A single cumulative-exposure term is a poor fix: it forces duration and intensity to be interchangeable, and can manufacture an apparent exposure-response even when intensity carries no signal at all.
 
-**Also worth knowing.**
+**Also worth knowing (H03).**
 Levothyroxine is treated as a narrow therapeutic index drug, with bioequivalence tightened to 0.90-1.11 [@concordet2019levothyrox; @concordet2020be200].
 Binding globulins shift with pregnancy and oral oestrogen, changing unbound fraction [@arafah2001estrogen; @alexander2004pregnancy].
 

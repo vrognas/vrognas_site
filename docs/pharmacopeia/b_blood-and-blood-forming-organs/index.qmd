@@ -26,25 +26,25 @@ Six years later Link's group isolated dicoumarol, the parent of warfarin [@ballH
 The PD driver is typically a laboratory measure: clotting time, anti-Xa activity, factor activity, hemoglobin [@byon2019apixaban; @wong2025efanesoctocog; @chanu2020epoetin].
 Clinical events are carried separately, in exposure-response or [time-to-event](/docs/modeling/tte/) analyses [@nyberg2016edoxaban; @leil2014apixaban].
 
-**Delayed effect is the default.**
+**Delayed effect is the default (B01).**
 Vitamin K antagonists suppress synthesis of clotting factors [@holford1986warfarin], and irreversible antiplatelet agents outlast the drug [@jiang2015clopidogrel], so effect follows the turnover of a protein or cell pool rather than plasma concentration.
 Turnover and indirect response models are the natural starting point [@dayneka1993indirect; @ooi2017joint].
 
-**The exception worth knowing.**
+**The exception worth knowing (B01).**
 Direct oral anticoagulants inhibit an existing enzyme, so their effect on clotting assays tracks concentration with little delay and direct models are what is actually fitted [@mueck2014rivaroxaban; @stangier2007dabigatran; @parasrampuria2016edoxaban].
 
-**Benefit-risk is asymmetric.**
+**Benefit-risk is asymmetric (B01).**
 Exposure-response detects the bleeding limb far more reliably than the efficacy limb, which is often flat across the range studied [@nyberg2016edoxaban; @roshammar2017ticagrelor].
 Covariates that raise exposure (renal function, body size, age, P-glycoprotein and CYP3A inhibitors) move bleeding first, which is why dose-reduction criteria are written in exactly those terms [@terrier2022doacpopk; @lin2025fxaage].
 
-**Longest delays in the group.**
+**Longest delays in the group (B03).**
 Erythropoiesis-stimulating agents act on precursors, so hemoglobin is separated from exposure by maturation and red cell lifespan [@uehlinger1992epo; @ramakrishnan2004epo].
 Lifespan models with an explicit endogenous baseline and feedback are standard [@krzyzanski2008lifespan; @olssongisleskog2007epo].
 
-**Easy to overlook.**
+**Easy to overlook (B05).**
 Blood substitutes and perfusion solutions have their own tradition, volume kinetics, fitted to hemoglobin-derived plasma dilution [@hahn2019albumin; @balan2025gelofusine].
 
-**Mechanistic extrapolation.**
+**Mechanistic extrapolation (B01).**
 QSP models of the coagulation network, built from literature kinetics, are well established for predicting how anticoagulants shift thrombin generation and INR, extrapolating efficacy and bleeding risk across doses [@wajimaComprehensiveModelHumoral2009; @burghausEvaluationEfficacySafety2011].
 
 ## References

@@ -21,28 +21,28 @@ The FDA approved Enovid in 1957 for menstrual disorders, and only in 1960 for co
 
 ## Modelling notes
 
-**You are dosing into a feedback loop.**
+**You are dosing into a feedback loop (G03).**
 Exogenous hormone suppresses endogenous secretion, so the measured concentration is the drug plus a baseline that moves in response to it [@bi2018tc; @pastuszak2021tu].
 Start from turnover (indirect response), not a direct-effect model [@pechstein2000cetrorelix; @snelder2019leuprorelin], and add an explicit feedback term when modelling the axis itself [@tornoe2007hpg] (see [pharmacodynamics](/docs/concepts/pd/)).
 
-**Baseline is rhythmic, so sampling time is a covariate.**
+**Baseline is rhythmic, so sampling time is a covariate (G03).**
 Testosterone follows a circadian rhythm, most pronounced in younger men [@brambilla2009diurnal; @diver2003diurnal]; in premenopausal women LH, FSH, estradiol and progesterone vary across the menstrual cycle [@stricker2006menstrual; @roblitz2013menstrual].
 A pre-dose sample drawn at an arbitrary hour is one point on a rhythm, not a baseline [@dansirikul2008baseline; @bhasin2018guideline].
 
-**Response outlasts exposure.**
+**Response outlasts exposure (G03).**
 Steroids act through nuclear receptors and gene transcription [@burris2013nr], so endpoints such as luteinising hormone, spermatogenesis and prostate specific antigen move on the timescale of the affected system, not of plasma concentration [@bi2018tc; @gisleskog1998dht].
 
-**Flip-flop is the norm.**
+**Flip-flop is the norm (G03).**
 Depot injections, implants, transdermal systems and vaginal rings make the formulation set the input rate [@francis2021dmpa; @timmer2000nuvaring].
 For non-removable depots absorption is slower than elimination, so the apparent terminal half-life belongs to the vehicle [@kuan2023flipflop; @periti2002leuprorelin].
 
-**Urological endpoints are not continuous.**
+**Urological endpoints are not continuous (G04).**
 Symptom scores, voiding diaries and incontinence counts are ordered categorical or count data; fitting E~max~ to a group mean discards most of the information [@lyauk2021boundedinteger; @lyauk2020irtipss].
 
-**Placebo response is large and time-varying.**
+**Placebo response is large and time-varying (G04).**
 In benign prostatic hyperplasia the placebo effect on symptom score has been several times the tamsulosin effect [@dagate2020ipss], so model its time course rather than treating it as a fixed offset [@mostafaei2022placebo].
 
-**Mechanistic extrapolation.**
+**Mechanistic extrapolation (G03).**
 PBPK dominates here, predicting how CYP3A inducers such as efavirenz or rifampicin lower ethinylestradiol and progestin exposure, and whether dose adjustment preserves contraceptive efficacy [@lewisPhysiologicallyBasedPharmacokinetic2024; @adeojoPhysiologicallyBasedPharmacokinetic2024].
 
 **Non-monotonic response**

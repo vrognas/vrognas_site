@@ -33,25 +33,25 @@ Collip's purified extract on 23 January cleared the ketonuria [@vecchioDiscovery
 
 ## Modelling notes
 
-**Endpoint.**
+**Endpoint (A10).**
 HbA1c, glycated hemoglobin, is the most commonly used biomarker of glycaemic management and a surrogate endpoint for anti-diabetic drug approval [@lledogarciaSemimechanisticModelRelationship2013].
 
-**HbA1c is not an E~max~ on concentration.**
+**HbA1c is not an E~max~ on concentration (A10).**
 It accumulates by glycation over the red cell lifespan, so it lags mean glucose and is written as a transformation of the glucose profile, not as a drug effect [@lledogarciaSemimechanisticModelRelationship2013; @hamrenModelsPlasmaGlucose2008].
 
-**Typical structure.**
+**Typical structure (A10).**
 Provocations (OGTT, IVGTT) need the glucose-insulin feedback loop stated explicitly, and integrated models carrying both species have been built for intravenous and for oral provocation data [@silberIntegratedModelGlucose2007; @jauslinIntegratedGlucoseInsulin2007].
 
-**Long trials drift.**
+**Long trials drift (A10).**
 Type 2 diabetes progresses under treatment, so comparing drugs over a year needs disease progression on beta cell function and insulin sensitivity, not a fixed baseline [@dewinterMechanismbasedDiseaseProgression2006].
 
-**Clamp readouts.**
+**Clamp readouts (A10).**
 Insulin degludec was profiled by the glucose infusion rate of a euglycaemic clamp, a [pharmacodynamic](/docs/concepts/pd/) readout: in 65 healthy men, body mass index was inversely correlated with the 24 hour GIR AUC [@liEffectBMIPharmacokinetic2023].
 
-**Easy to overlook.**
+**Easy to overlook (A02).**
 Omeprazole inactivates the gastric H^+^/K^+^-ATPase irreversibly, so in dogs the duration of inhibition was set by enzyme turnover after long exposure and by transfer of pumps between active and resting states after short exposure, not by drug elimination [@abeloGastricAcidSecretion2002].
 
-**Mechanistic extrapolation.**
+**Mechanistic extrapolation (A02).**
 PBPK has been applied in the reverse direction, asking whether acid suppression changes the [absorption](/docs/concepts/pk/1_absorption/) of a co-medication: it described the lack of an acid-reducing-agent effect for tapentadol, darunavir and saxagliptin and qualitatively predicted reduced erlotinib absorption [@dongApplicationPhysiologicallyBased2020], and predicted a minor pH-dependent interaction for the entrectinib market formulation [@parrottPhysiologicallyBasedAbsorption2020].
 
 ## References

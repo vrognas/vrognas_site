@@ -21,19 +21,19 @@ Ten daily doses left no tumour on biopsy, though it returned by day 49 [@christa
 
 ## Modelling notes
 
-**Toxicity sets the dose, not efficacy.**
+**Toxicity sets the dose, not efficacy (L01).**
 Dose-limiting toxicity is a binary readout in a short early window [@letourneau2009dose; @yin2024handling].
 For cytotoxics, neutropenia is the continuous alternative, captured by semi-mechanistic myelosuppression models with a proliferating compartment, maturation transit compartments and a feedback term [@friberg2002myelo; @camaradesouza2018transit].
 
-**Efficacy is modelled in two steps.**
+**Efficacy is modelled in two steps (L01).**
 A longitudinal tumour size model (RECIST sum of diameters) balances drug-driven shrinkage against regrowth [@ribba2014review; @stein2008tumor]; quantities derived from it feed a [time-to-event](/docs/modeling/tte/) analysis of survival [@claret2014tgimetrics; @bruno2014evaluation].
 That is what lets early imaging inform an endpoint reading out much later [@claret2009phase3os; @chan2021tgios].
 
-**Antibodies are nonlinear where it matters.**
+**Antibodies are nonlinear where it matters (L01).**
 Target-mediated drug disposition makes binding itself an elimination pathway that saturates [@mager2001tmdd; @dua2015tmddtutorial], so a model fitted only to the top of the dose range will mislead at the bottom [@gibiansky2008tmddapprox].
 Antibody-drug conjugates add conjugate, total antibody and payload as separate analytes [@li2020adcquant; @khan2025adcbioanalysis].
 
-**Cell therapies replace PK with cellular kinetics.**
+**Cell therapies replace PK with cellular kinetics (L01).**
 A living product expands, contracts and persists [@liu2021carkinetics; @stein2019tisacell], and the administered dose is a weak predictor of the exposure that follows [@he2022cartdosing].
 
 **Mechanistic extrapolation.**
@@ -42,7 +42,7 @@ PBPK is routine for kinase inhibitors, predicting CYP3A and gastric-pH interacti
 **E-R**
 Exposure-response for targeted agents is drug-specific, not class-wide: no efficacy relationship was detectable across the osimertinib dose range [@brown2017osimertinib], while trough concentrations separated progression-free survival for crizotinib and alectinib [@groenland2021alk].
 
-**Covariates carrying dosing guidance.**
+**Covariates carrying dosing guidance (L01).**
 DPYD for fluoropyrimidines, TPMT and NUDT15 for thiopurines, UGT1A1 for irinotecan, CYP2D6 for tamoxifen [@kicken2025precision; @chatelut2018smki].
 
 ## CAR T cell therapy

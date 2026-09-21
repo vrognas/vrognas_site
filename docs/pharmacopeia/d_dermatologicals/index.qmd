@@ -31,17 +31,17 @@ The skin blanching assay that grew from it is still called the Stoughton-McKenzi
 **Endpoint.**
 Bounded composite severity scores: PASI in psoriasis [@ooiBoundedIntegerModelbased2023] and EASI in atopic dermatitis [@okadaContinuousTimeMarkovPopulation2025].
 
-**A bounded score needs a bounded likelihood.**
+**A bounded score needs a bounded likelihood (D05).**
 PASI has been fitted with a bounded integer model, to respect the discrete and bounded nature of the data [@ooiBoundedIntegerModelbased2023], and with a zero-inflated beta distribution, for the bounded nature and distributional characteristics of the score [@tsamandourasEmployingZeroinflatedBeta2024].
 In one psoriasis analysis, fitting the 6-point physician's global assessment alone carried a substantial structural bias that joint modelling with PASI removed [@huImprovingCategoricalEndpoint2022].
 
-**The vehicle is part of the drug.**
+**The vehicle is part of the drug (D07).**
 Fitting **E~max~** to blanching, a [pharmacodynamic](/docs/concepts/pd/) readout, reversed the potency ranking of clobetasol and mometasone once each was formulated as a cream, which the authors suggest may be due to formulation factors [@rathApplicationEmaxModel2022].
 
 **Site-of-action exposure is sampled directly or not at all.**
 Dermal open flow microperfusion measures dermal concentrations *in vivo*, and separated [bioequivalent](/docs/concepts/clinpharm-studies/ba-be/) from non-bioequivalent lidocaine and prilocaine products on dermal AUC and C~max~ [@tiffnerCutaneousPharmacokineticsbasedBioequivalence2024].
 
-**Gotcha.**
+**Dropout is informative (D11).**
 Dropout is informative: in a four-state Markov model of EASI the dropout probability was highest in the non-responding category [@okadaContinuousTimeMarkovPopulation2025].
 
 **Easy to overlook.**

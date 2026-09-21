@@ -25,20 +25,20 @@ In 1938 Richard Gill returned from the Amazon with 11 kg of curare, from which S
 **Endpoint.**
 Each level 2 code brings its own: WOMAC pain in M01 [@wenPlaceboResponseOral2022], serum urate in M04 [@murakiPopulationPharmacodynamicAnalysis2018], bone markers and density in M05 [@wuQuantitativePredictionBone2021], evoked twitch in M03 [@jiReversalRocuroniumInducedIntense2023].
 
-**Pain needs a fitted placebo time course.**
+**Pain needs a fitted placebo time course (M01).**
 In oral osteoarthritis trials the WOMAC placebo response is large and reaches 90% of its maximum only after 5 to 7 weeks [@wenPlaceboResponseOral2022].
 In an acute postoperative model, pain relief was fitted as a function of ketorolac concentration (**E~max~**), a subject random effect and time, the last capturing the waxing and waning of placebo [@mandemaPopulationPharmacodynamicModel1996].
 
-**Gotcha.**
+**Remedication is informative dropout (M01).**
 Patients remedicate when relief is insufficient, with a probability driven by the observed level of pain relief and rising with time, and ignoring that informative dropout biases the drug effect [@mandemaPopulationPharmacodynamicModel1996; @bjornsson2015dropout].
 
-**Urate is a turnover problem.**
+**Urate is a turnover problem (M04).**
 Serum urate under febuxostat is fitted with an indirect response model [@murakiPopulationPharmacodynamicAnalysis2018]; such a model predicted real-world urate with r = 0.68, rising to 0.77 once comorbidities, eGFR and loop diuretics were accounted for [@hiraiEvaluationPharmacokineticPharmacodynamic2018].
 
-**Bone markers and density are asynchronous.**
+**Bone markers and density are asynchronous (M05).**
 Antiresorptives move serum CTX long before bone mineral density, and an indirect response model bridges the lag, predicting later density gain from one year of data [@wuQuantitativePredictionBone2021].
 
-**Relaxants are the effect compartment case.**
+**Relaxants are the effect compartment case (M03).**
 Twitch depression lags plasma concentration, and the hysteresis collapses under an effect compartment, as fitted for d-tubocurarine [@sheinerSimultaneousModelingPharmacokinetics1979].
 
 **Easy to overlook.**
