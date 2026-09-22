@@ -109,9 +109,17 @@ Where a named drug has an ATC code, give it inline in parentheses on first menti
 `Pembrolizumab (Keytruda, L01FF02)`, `Metformin, A10BA02`. This is what joins the
 pathology primers to the Pharmacopœia. **Always verify the code against the WHO ATC/DDD
 index** (<https://atcddd.fhi.no/atc_ddd_index/>, level-4 group pages list the substances)
-— never write one from memory. Where a substance has two codes, use the one matching the
-indication under discussion (methotrexate is L01BA01 as an antineoplastic but L04AX03 as
-an immunosuppressant, which is the relevant one for RA and psoriasis).
+— it is the register of record, and never write a code from memory. The Swedish
+[FASS registry](https://fass.se/health/atc) mirrors the same hierarchy and is easier to
+browse, but it is a mirror, not the authority. Where a substance has two codes, use the
+one matching the indication under discussion (methotrexate is L01BA01 as an antineoplastic
+but L04AX03 as an immunosuppressant, which is the relevant one for RA and psoriasis).
+
+**ATC page URLs.** Pages under `docs/pharmacopeia/atc/` use pure lowercase ATC codes, one
+path segment per level, so any code maps to exactly one predictable URL:
+`atc/a/a10/a10b/a10ba/a10ba02/`. The descriptive name lives in the page `title:`, the
+sidebar label and the breadcrumb — never in the path. When adding a page at depth, add
+every intermediate level too, or truncating the URL will 404.
 
 ### Styling and Themes
 

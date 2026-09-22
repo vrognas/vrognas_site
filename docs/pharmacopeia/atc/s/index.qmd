@@ -1,0 +1,37 @@
+---
+title: "S: Sensory organs"
+description: "ATC group S for modelers: an organ of limited accessibility, with the ophthalmological modeling notes held at S01."
+date: "2026-02-08"
+---
+
+Drugs applied to the eye and the ear.
+The notes below come from S01, ophthalmologicals, where the difficulty is an organ of limited accessibility, for administering drug and for sampling tissue [@kuepferQuantitativeSystemsPharmacology2023].
+
+In 1977 Thom Zimmerman and Herbert Kaufman studied single-dose timolol at four strengths in twenty patients with chronic open-angle glaucoma.
+Every strength, down to 0.1%, lowered pressure for at least 24 hours, which led them to propose a once a day topical agent [@zimmermanTimololDoseResponse1977].
+
+| Level 2 code | Description | In plain terms | Example drug |
+| ---: | :--- | :--- | :--- |
+| [S01](s01/) | Ophthalmologicals | medicines applied to the eye | Latanoprost (S01EE01) / aflibercept (S01LA05) |
+| S02 | Otologicals | ear medicines, mostly drops | Ciprofloxacin ear drops (S02AA15) / dexamethasone with antiinfectives (S02CA06) |
+| S03 | Ophthalmological and otological preparations | drops licensed for both eye and ear | Residual group for drops licensed for both eye and ear; no separate standard of care. Closest is dexamethasone with antiinfectives (S03CA01); single-agent example ciprofloxacin (S03AA07). Eye and ear disease is treated from S01 and S02 instead. |
+
+: ATC S level 2 codes {#tbl-atc-s-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
+
+## Modeling notes
+
+**Endpoint.**
+In S01E the endpoint is **intraocular pressure**, read as a 24 hour series rather than one clinic value, because the baseline itself carries a circadian rhythm [@durairajMechanismBasedTranslational2014].
+Posterior segment endpoints vary: the pegcetacoplan analysis used geographic atrophy lesion area [@crassPharmacokineticPharmacodynamicAnalysis2025], the faricimab analysis best corrected visual acuity [@diackOcularPharmacokineticsFaricimab2024].
+
+**Easy to overlook.**
+For faricimab, vitreous elimination is the slowest step, so vitreous, aqueous and plasma concentrations decline in parallel and the plasma curve reports ocular release rather than systemic clearance [@diackOcularPharmacokineticsFaricimab2024].
+
+**Mechanistic extrapolation.**
+Ocular PBPK is used for tissue too invasive to access in humans: atropine, predicted to penetrate the posterior segment after topical dosing [@zhengOcularExposurePrediction2025], and an ofloxacin ointment, extrapolated from rabbit aqueous humour to human ocular exposure [@lemerdyClinicalOcularExposure2025].
+Ocular QSP exists but is still assembling its data and cellular systems [@kuepferQuantitativeSystemsPharmacology2023].
+
+## References
+
+::: {#refs}
+:::

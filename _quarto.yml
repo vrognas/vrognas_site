@@ -231,115 +231,118 @@ website:
           href: docs/pharmacopeia/index.qmd
           contents:
             - section: "(A) Alimentary tract and metabolism"
-              href: docs/pharmacopeia/a_alimentary-tract-and-metabolism/index.qmd
+              href: docs/pharmacopeia/atc/a/index.qmd
               contents:
                 - text: "(02) Drugs for acid related disorders"
-                  href: docs/pharmacopeia/a_alimentary-tract-and-metabolism/a02_drugs-for-acid-related-disorders/index.qmd
+                  href: docs/pharmacopeia/atc/a/a02/index.qmd
                 - text: "(10) Drugs used in diabetes"
-                  href: docs/pharmacopeia/a_alimentary-tract-and-metabolism/a10_drugs-used-in-diabetes/index.qmd
+                  href: docs/pharmacopeia/atc/a/a10/index.qmd
             - section: "(B) Blood and blood forming organs"
-              href: docs/pharmacopeia/b_blood-and-blood-forming-organs/index.qmd
+              href: docs/pharmacopeia/atc/b/index.qmd
               contents:
                 - text: "(01) Antithrombotic agents"
-                  href: docs/pharmacopeia/b_blood-and-blood-forming-organs/b01_antithrombotic-agents/index.qmd
+                  href: docs/pharmacopeia/atc/b/b01/index.qmd
                 - text: "(03) Antianemic preparations"
-                  href: docs/pharmacopeia/b_blood-and-blood-forming-organs/b03_antianemic-preparations/index.qmd
+                  href: docs/pharmacopeia/atc/b/b03/index.qmd
                 - text: "(05) Blood substitutes and perfusion solutions"
-                  href: docs/pharmacopeia/b_blood-and-blood-forming-organs/b05_blood-substitutes-and-perfusion-solutions/index.qmd
+                  href: docs/pharmacopeia/atc/b/b05/index.qmd
             - section: "(C) Cardiovascular system"
-              href: docs/pharmacopeia/c_cardiovascular-system/index.qmd
+              href: docs/pharmacopeia/atc/c/index.qmd
               contents:
-                - text: "(10) Lipid modifying agents"
-                  href: docs/pharmacopeia/c_cardiovascular-system/c10_lipid-modifying-agents/index.qmd
-                - section: "Statins"
+                - section: "(10) Lipid modifying agents"
+                  href: docs/pharmacopeia/atc/c/c10/index.qmd
                   contents:
-                  - text: "Statins"
-                    href: docs/pharmacopeia/c_cardiovascular-system/statins/statins/index.qmd
+                    - section: "(10A) Lipid modifying agents, plain"
+                      href: docs/pharmacopeia/atc/c/c10/c10a/index.qmd
+                      contents:
+                        - text: "(10AA) HMG CoA reductase inhibitors"
+                          href: docs/pharmacopeia/atc/c/c10/c10a/c10aa/index.qmd
             - section: "(D) Dermatologicals"
-              href: docs/pharmacopeia/d_dermatologicals/index.qmd
+              href: docs/pharmacopeia/atc/d/index.qmd
               contents:
                 - text: "(05) Antipsoriatics"
-                  href: docs/pharmacopeia/d_dermatologicals/d05_antipsoriatics/index.qmd
+                  href: docs/pharmacopeia/atc/d/d05/index.qmd
                 - text: "(07) Corticosteroids, dermatological preparations"
-                  href: docs/pharmacopeia/d_dermatologicals/d07_corticosteroids-dermatological-preparations/index.qmd
+                  href: docs/pharmacopeia/atc/d/d07/index.qmd
                 - text: "(11) Other dermatological preparations"
-                  href: docs/pharmacopeia/d_dermatologicals/d11_other-dermatological-preparations/index.qmd
+                  href: docs/pharmacopeia/atc/d/d11/index.qmd
             - section: "(G) Genito-urinary system and sex hormones"
-              href: docs/pharmacopeia/g_genito-urinary-system-and-sex-hormones/index.qmd
+              href: docs/pharmacopeia/atc/g/index.qmd
               contents:
                 - text: "(03) Sex hormones and modulators of the genital system"
-                  href: docs/pharmacopeia/g_genito-urinary-system-and-sex-hormones/g03_sex-hormones-and-modulators-of-the-genital-system/index.qmd
+                  href: docs/pharmacopeia/atc/g/g03/index.qmd
                 - text: "(04) Urologicals"
-                  href: docs/pharmacopeia/g_genito-urinary-system-and-sex-hormones/g04_urologicals/index.qmd
+                  href: docs/pharmacopeia/atc/g/g04/index.qmd
             - section: "(H) Systemic hormonal preparations"
-              href: docs/pharmacopeia/h_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/index.qmd
+              href: docs/pharmacopeia/atc/h/index.qmd
               contents:
                 - text: "(02) Corticosteroids for systemic use"
-                  href: docs/pharmacopeia/h_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/h02_corticosteroids-for-systemic-use/index.qmd
+                  href: docs/pharmacopeia/atc/h/h02/index.qmd
                 - text: "(03) Thyroid therapy"
-                  href: docs/pharmacopeia/h_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/h03_thyroid-therapy/index.qmd
+                  href: docs/pharmacopeia/atc/h/h03/index.qmd
                 - text: "(05) Calcium homeostasis"
-                  href: docs/pharmacopeia/h_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/h05_calcium-homeostasis/index.qmd
+                  href: docs/pharmacopeia/atc/h/h05/index.qmd
             - section: "(J) Antiinfectives for systemic use"
-              href: docs/pharmacopeia/j_antiinfectives-for-systemic-use/index.qmd
+              href: docs/pharmacopeia/atc/j/index.qmd
               contents:
                 - text: "(01) Antibacterials for systemic use"
-                  href: docs/pharmacopeia/j_antiinfectives-for-systemic-use/j01_antibacterials-for-systemic-use/index.qmd
+                  href: docs/pharmacopeia/atc/j/j01/index.qmd
                 - text: "(05) Antivirals for systemic use"
-                  href: docs/pharmacopeia/j_antiinfectives-for-systemic-use/j05_antivirals-for-systemic-use/index.qmd
+                  href: docs/pharmacopeia/atc/j/j05/index.qmd
             - section: "(L) Antineoplastic and immunomodulating agents"
-              href: docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/index.qmd
+              href: docs/pharmacopeia/atc/l/index.qmd
               contents:
                 - text: "(01) Antineoplastic agents"
-                  href: docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/l01_antineoplastic-agents/index.qmd
-                - section: "Immunosuppressants"
+                  href: docs/pharmacopeia/atc/l/l01/index.qmd
+                - section: "(04) Immunosuppressants"
+                  href: docs/pharmacopeia/atc/l/l04/index.qmd
                   contents:
-                  - text: "(04A) Immunosuppressants"
-                    href: docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/l04_immunosuppressants/l04a_immunosuppressants/index.qmd
+                    - text: "(04A) Immunosuppressants"
+                      href: docs/pharmacopeia/atc/l/l04/l04a/index.qmd
             - section: "(M) Musculo-skeletal system"
-              href: docs/pharmacopeia/m_musculo-skeletal-system/index.qmd
+              href: docs/pharmacopeia/atc/m/index.qmd
               contents:
                 - text: "(01) Antiinflammatory and antirheumatic products"
-                  href: docs/pharmacopeia/m_musculo-skeletal-system/m01_antiinflammatory-and-antirheumatic-products/index.qmd
+                  href: docs/pharmacopeia/atc/m/m01/index.qmd
                 - text: "(03) Muscle relaxants"
-                  href: docs/pharmacopeia/m_musculo-skeletal-system/m03_muscle-relaxants/index.qmd
+                  href: docs/pharmacopeia/atc/m/m03/index.qmd
                 - text: "(04) Antigout preparations"
-                  href: docs/pharmacopeia/m_musculo-skeletal-system/m04_antigout-preparations/index.qmd
+                  href: docs/pharmacopeia/atc/m/m04/index.qmd
                 - text: "(05) Drugs for treatment of bone diseases"
-                  href: docs/pharmacopeia/m_musculo-skeletal-system/m05_drugs-for-treatment-of-bone-diseases/index.qmd
+                  href: docs/pharmacopeia/atc/m/m05/index.qmd
             - section: "(N) Nervous system"
-              href: docs/pharmacopeia/n_nervous-system/index.qmd
+              href: docs/pharmacopeia/atc/n/index.qmd
               contents:
                 - text: "(01) Anesthetics"
-                  href: docs/pharmacopeia/n_nervous-system/n01_anesthetics/index.qmd
+                  href: docs/pharmacopeia/atc/n/n01/index.qmd
                 - text: "(03) Antiepileptics"
-                  href: docs/pharmacopeia/n_nervous-system/n03_antiepileptics/index.qmd
+                  href: docs/pharmacopeia/atc/n/n03/index.qmd
                 - text: "(05) Psycholeptics"
-                  href: docs/pharmacopeia/n_nervous-system/n05_psycholeptics/index.qmd
+                  href: docs/pharmacopeia/atc/n/n05/index.qmd
             - section: "(P) Antiparasitic products"
-              href: docs/pharmacopeia/p_antiparasitic-products-insecticides-and-repellents/index.qmd
+              href: docs/pharmacopeia/atc/p/index.qmd
               contents:
                 - text: "(01) Antiprotozoals"
-                  href: docs/pharmacopeia/p_antiparasitic-products-insecticides-and-repellents/p01_antiprotozoals/index.qmd
+                  href: docs/pharmacopeia/atc/p/p01/index.qmd
             - section: "(R) Respiratory system"
-              href: docs/pharmacopeia/r_respiratory-system/index.qmd
+              href: docs/pharmacopeia/atc/r/index.qmd
               contents:
                 - text: "(03) Drugs for obstructive airway diseases"
-                  href: docs/pharmacopeia/r_respiratory-system/r03_drugs-for-obstructive-airway-diseases/index.qmd
+                  href: docs/pharmacopeia/atc/r/r03/index.qmd
             - section: "(S) Sensory organs"
-              href: docs/pharmacopeia/s_sensory-organs/index.qmd
+              href: docs/pharmacopeia/atc/s/index.qmd
               contents:
                 - text: "(01) Ophthalmologicals"
-                  href: docs/pharmacopeia/s_sensory-organs/s01_ophthalmologicals/index.qmd
+                  href: docs/pharmacopeia/atc/s/s01/index.qmd
             - section: "(V) Various"
-              href: docs/pharmacopeia/v_various/index.qmd
+              href: docs/pharmacopeia/atc/v/index.qmd
               contents:
                 - text: "(03) All other therapeutic products"
-                  href: docs/pharmacopeia/v_various/v03_all-other-therapeutic-products/index.qmd
+                  href: docs/pharmacopeia/atc/v/v03/index.qmd
                 - text: "(08) Contrast media"
-                  href: docs/pharmacopeia/v_various/v08_contrast-media/index.qmd
+                  href: docs/pharmacopeia/atc/v/v08/index.qmd
                 - text: "(10) Therapeutic radiopharmaceuticals"
-                  href: docs/pharmacopeia/v_various/v10_therapeutic-radiopharmaceuticals/index.qmd
+                  href: docs/pharmacopeia/atc/v/v10/index.qmd
     - id: regulatory
       title: "Regulatory Rites"
       collapse-level: 2

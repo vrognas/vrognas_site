@@ -1,0 +1,17 @@
+---
+title: "C10: Lipid modifying agents"
+description: "Pharmacometric modeling notes for ATC C10, lipid modifying agents."
+date: "2026-02-08"
+---
+
+Part of [C: Cardiovascular system](../).
+
+**Mechanistic extrapolation.**
+PBPK dominates here, predicting OATP1B1 transporter-mediated statin interactions and SLCO1B1 genotype effects on exposure; cardiorenal QSP models extrapolate blood-pressure and renal responses for antihypertensives [@yoshikadoQuantitativeAnalysesHepatic2016; @jameiMechanisticFrameworkVitro2014].
+
+The [statins](c10a/c10aa/) (C10AA) are the chemical subgroup those transporter interactions concern.
+
+## References
+
+::: {#refs}
+:::

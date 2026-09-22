@@ -538,9 +538,9 @@ Is also avoids both the problem of selecting a landmark time and any misclassiï¬
 
 Drug classes on this site where a time-to-event analysis is the endpoint that decides the programme:
 
-* [B01 Antithrombotic agents](../../pharmacopeia/b_blood-and-blood-forming-organs/b01_antithrombotic-agents/index.qmd) --- bleeding and thrombotic events carried separately from the PK.
-* [L01 Antineoplastic agents](../../pharmacopeia/l_antineoplastic-and-immunomodulating-agents/l01_antineoplastic-agents/index.qmd) --- tumour-size metrics feeding a survival analysis.
-* [N05 Psycholeptics](../../pharmacopeia/n_nervous-system/n05_psycholeptics/index.qmd) --- dropout hazard modelled jointly with the PANSS score.
+* [B01 Antithrombotic agents](../../pharmacopeia/atc/b/b01/index.qmd) --- bleeding and thrombotic events carried separately from the PK.
+* [L01 Antineoplastic agents](../../pharmacopeia/atc/l/l01/index.qmd) --- tumour-size metrics feeding a survival analysis.
+* [N05 Psycholeptics](../../pharmacopeia/atc/n/n05/index.qmd) --- dropout hazard modelled jointly with the PANSS score.
 
 ## References
 

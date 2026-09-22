@@ -98,9 +98,60 @@
 /docs/tools-of-the-trade/r/tips-n-tricks/           /docs/tools-of-the-trade/r/r-tips-n-tricks/     301
 
 # Pharmacopeia directory renamed from abbreviated to full ATC names
-/docs/pharmacopeia/C_cardio/*                       /docs/pharmacopeia/c_cardiovascular-system/:splat       301
-/docs/pharmacopeia/j_infections/antibacterials/*    /docs/pharmacopeia/j_antiinfectives-for-systemic-use/j01_antibacterials-for-systemic-use/   301
-/docs/pharmacopeia/immunology/immunosuppressants/*  /docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/l04_immunosuppressants/l04a_immunosuppressants/  301
+/docs/pharmacopeia/C_cardio/*                       /docs/pharmacopeia/atc/c/:splat                 301
+/docs/pharmacopeia/j_infections/antibacterials/*    /docs/pharmacopeia/atc/j/j01/                   301
+/docs/pharmacopeia/immunology/immunosuppressants/*  /docs/pharmacopeia/atc/l/l04/l04a/              301
+
+# ATC tree re-path (2026-09-22): descriptive dir names -> pure ATC codes under /atc/,
+# one path segment per ATC level. Deepest paths first so a level-2 rule is matched
+# before its level-1 parent wildcard (Netlify is first-match-wins).
+/docs/pharmacopeia/c_cardiovascular-system/statins/statins/*                                                                                                /docs/pharmacopeia/atc/c/c10/c10a/c10aa/:splat  301
+/docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/l01_antineoplastic-agents/l01fx_other-monoclonal-antibodies-and-antibody-drug-conjugates/*  /docs/pharmacopeia/atc/l/l01/l01f/l01fx/:splat  301
+/docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/l04_immunosuppressants/l04a_immunosuppressants/*                                            /docs/pharmacopeia/atc/l/l04/l04a/:splat        301
+/docs/pharmacopeia/a_alimentary-tract-and-metabolism/a02_drugs-for-acid-related-disorders/*                                                                 /docs/pharmacopeia/atc/a/a02/:splat             301
+/docs/pharmacopeia/a_alimentary-tract-and-metabolism/a10_drugs-used-in-diabetes/*                                                                           /docs/pharmacopeia/atc/a/a10/:splat             301
+/docs/pharmacopeia/b_blood-and-blood-forming-organs/b01_antithrombotic-agents/*                                                                             /docs/pharmacopeia/atc/b/b01/:splat             301
+/docs/pharmacopeia/b_blood-and-blood-forming-organs/b03_antianemic-preparations/*                                                                           /docs/pharmacopeia/atc/b/b03/:splat             301
+/docs/pharmacopeia/b_blood-and-blood-forming-organs/b05_blood-substitutes-and-perfusion-solutions/*                                                         /docs/pharmacopeia/atc/b/b05/:splat             301
+/docs/pharmacopeia/c_cardiovascular-system/c10_lipid-modifying-agents/*                                                                                     /docs/pharmacopeia/atc/c/c10/:splat             301
+/docs/pharmacopeia/d_dermatologicals/d05_antipsoriatics/*                                                                                                   /docs/pharmacopeia/atc/d/d05/:splat             301
+/docs/pharmacopeia/d_dermatologicals/d07_corticosteroids-dermatological-preparations/*                                                                      /docs/pharmacopeia/atc/d/d07/:splat             301
+/docs/pharmacopeia/d_dermatologicals/d11_other-dermatological-preparations/*                                                                                /docs/pharmacopeia/atc/d/d11/:splat             301
+/docs/pharmacopeia/g_genito-urinary-system-and-sex-hormones/g03_sex-hormones-and-modulators-of-the-genital-system/*                                         /docs/pharmacopeia/atc/g/g03/:splat             301
+/docs/pharmacopeia/g_genito-urinary-system-and-sex-hormones/g04_urologicals/*                                                                               /docs/pharmacopeia/atc/g/g04/:splat             301
+/docs/pharmacopeia/h_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/h02_corticosteroids-for-systemic-use/*                                   /docs/pharmacopeia/atc/h/h02/:splat             301
+/docs/pharmacopeia/h_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/h03_thyroid-therapy/*                                                    /docs/pharmacopeia/atc/h/h03/:splat             301
+/docs/pharmacopeia/h_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/h05_calcium-homeostasis/*                                                /docs/pharmacopeia/atc/h/h05/:splat             301
+/docs/pharmacopeia/j_antiinfectives-for-systemic-use/j01_antibacterials-for-systemic-use/*                                                                  /docs/pharmacopeia/atc/j/j01/:splat             301
+/docs/pharmacopeia/j_antiinfectives-for-systemic-use/j05_antivirals-for-systemic-use/*                                                                      /docs/pharmacopeia/atc/j/j05/:splat             301
+/docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/l01_antineoplastic-agents/*                                                                 /docs/pharmacopeia/atc/l/l01/:splat             301
+/docs/pharmacopeia/m_musculo-skeletal-system/m01_antiinflammatory-and-antirheumatic-products/*                                                              /docs/pharmacopeia/atc/m/m01/:splat             301
+/docs/pharmacopeia/m_musculo-skeletal-system/m03_muscle-relaxants/*                                                                                         /docs/pharmacopeia/atc/m/m03/:splat             301
+/docs/pharmacopeia/m_musculo-skeletal-system/m04_antigout-preparations/*                                                                                    /docs/pharmacopeia/atc/m/m04/:splat             301
+/docs/pharmacopeia/m_musculo-skeletal-system/m05_drugs-for-treatment-of-bone-diseases/*                                                                     /docs/pharmacopeia/atc/m/m05/:splat             301
+/docs/pharmacopeia/n_nervous-system/n01_anesthetics/*                                                                                                       /docs/pharmacopeia/atc/n/n01/:splat             301
+/docs/pharmacopeia/n_nervous-system/n03_antiepileptics/*                                                                                                    /docs/pharmacopeia/atc/n/n03/:splat             301
+/docs/pharmacopeia/n_nervous-system/n05_psycholeptics/*                                                                                                     /docs/pharmacopeia/atc/n/n05/:splat             301
+/docs/pharmacopeia/p_antiparasitic-products-insecticides-and-repellents/p01_antiprotozoals/*                                                                /docs/pharmacopeia/atc/p/p01/:splat             301
+/docs/pharmacopeia/r_respiratory-system/r03_drugs-for-obstructive-airway-diseases/*                                                                         /docs/pharmacopeia/atc/r/r03/:splat             301
+/docs/pharmacopeia/s_sensory-organs/s01_ophthalmologicals/*                                                                                                 /docs/pharmacopeia/atc/s/s01/:splat             301
+/docs/pharmacopeia/v_various/v03_all-other-therapeutic-products/*                                                                                           /docs/pharmacopeia/atc/v/v03/:splat             301
+/docs/pharmacopeia/v_various/v08_contrast-media/*                                                                                                           /docs/pharmacopeia/atc/v/v08/:splat             301
+/docs/pharmacopeia/v_various/v10_therapeutic-radiopharmaceuticals/*                                                                                         /docs/pharmacopeia/atc/v/v10/:splat             301
+/docs/pharmacopeia/a_alimentary-tract-and-metabolism/*                                                                                                      /docs/pharmacopeia/atc/a/:splat                 301
+/docs/pharmacopeia/b_blood-and-blood-forming-organs/*                                                                                                       /docs/pharmacopeia/atc/b/:splat                 301
+/docs/pharmacopeia/c_cardiovascular-system/*                                                                                                                /docs/pharmacopeia/atc/c/:splat                 301
+/docs/pharmacopeia/d_dermatologicals/*                                                                                                                      /docs/pharmacopeia/atc/d/:splat                 301
+/docs/pharmacopeia/g_genito-urinary-system-and-sex-hormones/*                                                                                               /docs/pharmacopeia/atc/g/:splat                 301
+/docs/pharmacopeia/h_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/*                                                                        /docs/pharmacopeia/atc/h/:splat                 301
+/docs/pharmacopeia/j_antiinfectives-for-systemic-use/*                                                                                                      /docs/pharmacopeia/atc/j/:splat                 301
+/docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/*                                                                                           /docs/pharmacopeia/atc/l/:splat                 301
+/docs/pharmacopeia/m_musculo-skeletal-system/*                                                                                                              /docs/pharmacopeia/atc/m/:splat                 301
+/docs/pharmacopeia/n_nervous-system/*                                                                                                                       /docs/pharmacopeia/atc/n/:splat                 301
+/docs/pharmacopeia/p_antiparasitic-products-insecticides-and-repellents/*                                                                                   /docs/pharmacopeia/atc/p/:splat                 301
+/docs/pharmacopeia/r_respiratory-system/*                                                                                                                   /docs/pharmacopeia/atc/r/:splat                 301
+/docs/pharmacopeia/s_sensory-organs/*                                                                                                                       /docs/pharmacopeia/atc/s/:splat                 301
+/docs/pharmacopeia/v_various/*                                                                                                                              /docs/pharmacopeia/atc/v/:splat                 301
 
 # =============================================================================
 # CANONICAL URLs: Remove index.html to prevent duplicate content issues

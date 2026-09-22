@@ -58,7 +58,7 @@ Treatment aims at restoring dopamine signaling, improving motor function, and re
 
 ### Common Drug Classes & Regimens
 
-Anti-parkinson drugs are ATC N04, within [N: Nervous system](../../../pharmacopeia/n_nervous-system/index.qmd).
+Anti-parkinson drugs are ATC N04, within [N: Nervous system](../../../pharmacopeia/atc/n/index.qmd).
 
 #### Dopamine replacement therapy *(first-line treatment)*
 

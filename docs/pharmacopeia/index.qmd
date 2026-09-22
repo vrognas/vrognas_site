@@ -32,6 +32,11 @@ Metformin's modality would be a **small molecule**.
 For the chemical substance, the [International Nonproprietary Name (INN)](https://www.who.int/teams/health-product-and-policy-standards/inn) is preferred.
 If INN names are not assigned, USAN (United States Adopted Name) or BAN (British Approved Name) names are usually chosen.
 
+The WHOCC index above is the register of record.
+For browsing, the Swedish [FASS ATC registry](https://fass.se/health/atc) steps through the same hierarchy one level at a time and lists the products marketed under each code, with a URL that follows the code directly --- metformin sits at `fass.se/health/atc/a10ba02`.
+It is in Swedish, and it reflects the Swedish market, so a code with no Swedish product shows an empty list rather than an error.
+The pages in this section follow the same one-segment-per-level scheme.
+
 Drugs are classified in groups at five different levels.
 
 * **ATC 1^st^ level:** Main anatomical or pharmacological group, shown in @tbl-atc-lvl-1 below.
@@ -53,20 +58,20 @@ The 2^nd^, 3^rd^ and 4^th^ levels are often used to identify pharmacological sub
 
 |      | ATC code | Contents |
 | ---: | :------: | :------- |
-|    1 | [**A**](a_alimentary-tract-and-metabolism/)    | Alimentary tract and metabolism |
-|    2 | [**B**](b_blood-and-blood-forming-organs/)    | Blood and blood forming organs |
-|    3 | [**C**](c_cardiovascular-system/)    | Cardiovascular system |
-|    4 | [**D**](d_dermatologicals/)    | Dermatologicals |
-|    5 | [**G**](g_genito-urinary-system-and-sex-hormones/)    | Genito-urinary system and sex hormones |
-|    6 | [**H**](h_systemic-hormonal-preparations-excl-sex-hormones-and-insulins/)    | Systemic hormonal preparations, excluding sex hormones and insulins |
-|    7 | [**J**](j_antiinfectives-for-systemic-use/)    | Antiinfectives for systemic use |
-|    8 | [**L**](l_antineoplastic-and-immunomodulating-agents/)    | Antineoplastic and immunomodulating agents |
-|    9 | [**M**](m_musculo-skeletal-system/)    | Musculo-skeletal system |
-|   10 | [**N**](n_nervous-system/)    | Nervous system |
-|   11 | [**P**](p_antiparasitic-products-insecticides-and-repellents/)    | Antiparasitic products, insecticides and repellents |
-|   12 | [**R**](r_respiratory-system/)    | Respiratory system |
-|   13 | [**S**](s_sensory-organs/)    | Sensory organs |
-|   14 | [**V**](v_various/)    | Various |
+|    1 | [**A**](atc/a/)    | Alimentary tract and metabolism |
+|    2 | [**B**](atc/b/)    | Blood and blood forming organs |
+|    3 | [**C**](atc/c/)    | Cardiovascular system |
+|    4 | [**D**](atc/d/)    | Dermatologicals |
+|    5 | [**G**](atc/g/)    | Genito-urinary system and sex hormones |
+|    6 | [**H**](atc/h/)    | Systemic hormonal preparations, excluding sex hormones and insulins |
+|    7 | [**J**](atc/j/)    | Antiinfectives for systemic use |
+|    8 | [**L**](atc/l/)    | Antineoplastic and immunomodulating agents |
+|    9 | [**M**](atc/m/)    | Musculo-skeletal system |
+|   10 | [**N**](atc/n/)    | Nervous system |
+|   11 | [**P**](atc/p/)    | Antiparasitic products, insecticides and repellents |
+|   12 | [**R**](atc/r/)    | Respiratory system |
+|   13 | [**S**](atc/s/)    | Sensory organs |
+|   14 | [**V**](atc/v/)    | Various |
 
 : Codes in the first ATC level, the *Anatomical main group* {#tbl-atc-lvl-1 tbl-colwidths="[5, 5, 90]"}
 

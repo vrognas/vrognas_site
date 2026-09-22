@@ -1,0 +1,12 @@
+---
+title: "C10AA: HMG CoA reductase inhibitors"
+description: "ATC C10AA HMG CoA reductase inhibitors (statins): competitive inhibition of HMG-CoA reductase to block hepatic cholesterol synthesis."
+date: "2026-02-08"
+---
+
+Part of [C10A: Lipid modifying agents, plain](../).
+
+Statins (or **HMG-CoA reductase inhibitors**) are a class of medications that reduce illness and mortality in people who are at high risk of cardiovascular disease.
+
+Statins act by competitively inhibiting HMG-CoA reductase.
+By inhibiting HMG-CoA reductase, statins block the pathway for synthesizing cholesterol in the liver.

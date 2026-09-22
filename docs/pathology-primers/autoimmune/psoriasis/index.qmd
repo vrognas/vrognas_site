@@ -60,7 +60,7 @@ Key inflammatory mediators driving psoriasis include cytokines like TNF-α, IL-1
 
 ### Common Drug Classes & Regimens
 
-The classes below sit in ATC [D05 Antipsoriatics](../../../pharmacopeia/d_dermatologicals/d05_antipsoriatics/index.qmd) and [D07 Dermatological corticosteroids](../../../pharmacopeia/d_dermatologicals/d07_corticosteroids-dermatological-preparations/index.qmd); the biologics are [L04A Immunosuppressants](../../../pharmacopeia/l_antineoplastic-and-immunomodulating-agents/l04_immunosuppressants/l04a_immunosuppressants/index.qmd).
+The classes below sit in ATC [D05 Antipsoriatics](../../../pharmacopeia/atc/d/d05/index.qmd) and [D07 Dermatological corticosteroids](../../../pharmacopeia/atc/d/d07/index.qmd); the biologics are [L04A Immunosuppressants](../../../pharmacopeia/atc/l/l04/l04a/index.qmd).
 
 #### Topical Agents *(first-line for mild psoriasis)*
 

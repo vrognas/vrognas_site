@@ -68,7 +68,7 @@ PD-targets include insulin secretion, insulin sensitivity, glucose absorption, a
 
 ### Common Drug Classes & Regimens
 
-All of the classes below sit in ATC [A10 Drugs used in diabetes](../../pharmacopeia/a_alimentary-tract-and-metabolism/a10_drugs-used-in-diabetes/index.qmd), which carries the pharmacometric modelling notes for them.
+All of the classes below sit in ATC [A10 Drugs used in diabetes](../../pharmacopeia/atc/a/a10/index.qmd), which carries the pharmacometric modelling notes for them.
 
 #### Insulin *(mandatory in T1DM, second-line or advanced-stage T2DM)*
 

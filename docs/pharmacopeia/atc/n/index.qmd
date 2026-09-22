@@ -1,0 +1,42 @@
+---
+title: "N: Nervous system"
+description: "ATC group N for modelers: the endpoint sets the structure, placebo needs its own submodel, and PET occupancy bridges dose to effect."
+date: "2026-02-08"
+---
+
+The level 2 codes in @tbl-atc-n-lvl-2 run from anesthetics to other nervous system drugs, and the **endpoint**, not the drug, sets the model structure: processed EEG in N01 [@bjornssonTwoCompartmentEffectSite2010], daily seizure counts in N03 [@troconizModellingOverdispersionMarkovian2009] and bounded PANSS scores in N05 [@krekelsItemResponseTheory2017] each demand a different likelihood.
+
+On 29 March 1948 John Cade gave lithium citrate to W.B., in manic excitement for five years; W.B. left hospital months later and returned to his old job [@cadeLithiumSaltsTreatment1949; @lopezmunozHistoryPharmacologicalTreatment2018].
+
+| Level 2 code | Description | In plain terms | Example drug |
+| ---: | :--- | :--- | :--- |
+| [N01](n01/) | Anesthetics |  | Propofol (N01AX10) / bupivacaine (N01BB01) |
+| N02 | Analgesics |  | Paracetamol (N02BE01) / morphine (N02AA01) |
+| [N03](n03/) | Antiepileptics |  | Levetiracetam (N03AX14) / lamotrigine (N03AX09) |
+| N04 | Anti-Parkinson drugs |  | Levodopa and decarboxylase inhibitor (N04BA02) / pramipexole (N04BC05) |
+| [N05](n05/) | Psycholeptics | calming: antipsychotics, anxiolytics, hypnotics | Olanzapine (N05AH03) / lorazepam (N05BA06) |
+| N06 | Psychoanaleptics | stimulating: antidepressants, stimulants, anti-dementia drugs | Sertraline (N06AB06) / escitalopram (N06AB10) |
+| N07 | Other nervous system drugs |  | Buprenorphine (N07BC01) / varenicline (N07BA03) |
+
+: ATC N level 2 codes {#tbl-atc-n-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
+
+## Modeling notes
+
+**Endpoint.**
+Analysing composite PANSS totals as continuous data discards information and violates the scale's numerical nature; item response theory models the items instead [@krekelsItemResponseTheory2017].
+Depression trials have been modeled on the HAMD-17 total [@gomeniBayesianModellingROC2007].
+
+**Placebo first (N05, N06).**
+Placebo arms in schizophrenia and depression improve over weeks, so a placebo time course is fitted before estimating any drug effect [@pillareddyStructuralModelsDescribing2011].
+
+**Easy to overlook.**
+PET occupancy bridges dose and effect in N05: patients with acute extrapyramidal syndromes had higher D2 occupancy than those without [@fardePositronEmissionTomographic1992], and model-based analysis quantifies it against efficacy and those symptoms [@degreefDopamineD2Occupancy2011].
+
+**Mechanistic extrapolation.**
+Human CNS distribution data are scarce, so physiologically based models combined with microdialysis predict unbound extracellular concentrations at the target site [@yamamotoMicrodialysisKeyPhysiologically2017].
+A separately developed pediatric brain PBPK model predicted CSF concentrations and was checked against CSF observed in children, meningitis included [@verscheijdenDevelopmentPhysiologicallyBased2019].
+
+## References
+
+::: {#refs}
+:::

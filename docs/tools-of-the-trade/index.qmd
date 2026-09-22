@@ -67,3 +67,5 @@ Filesystem layout, the three Library folders, Homebrew, and PATH handling on mac
 * [Clinical Pharmacology Podcast with Nathan Teuscher (Spotify)](https://open.spotify.com/show/6QJ81a96Q9HeeFBX8EtHTu?si=1e05e7a31a2942e0)
 * <https://trc-p.nl/>
 * <https://nmhelp.tingjieguo.com/>
+* [WHO ATC/DDD Index](https://atcddd.fhi.no/atc_ddd_index/) --- the register of record for ATC codes
+* [FASS ATC registry](https://fass.se/health/atc) --- Swedish drug registry, browsable by ATC code

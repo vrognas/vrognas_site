@@ -1,0 +1,33 @@
+---
+title: "L: Antineoplastic and immunomodulating agents"
+description: "ATC group L for modelers: the level 2 map with example drugs, and the antineoplastic modeling notes held at L01."
+date: "2026-02-08"
+---
+
+Agents used to kill malignant cells and to push the immune system either way, from cytotoxics through targeted small molecules to antibodies and cell products.
+The endpoint that decides the program, survival, reads out late and is linked to exposure only through intermediates such as tumor size [@bender2015pkpd].
+
+On 27 August 1942 a Yale team under Louis Goodman and Alfred Gilman gave intravenous nitrogen mustard, a chemical warfare agent, to a factory worker with lymphosarcoma.
+Ten daily doses left no tumor on biopsy, though it returned by day 49 [@christakisBirthChemotherapyYale2011].
+
+| Level 2 code | Description | In plain terms | Example drug |
+| ---: | :--- | :--- | :--- |
+| [L01](l01/) | Antineoplastic agents | drugs that kill or block tumor cells | Pembrolizumab (L01FF02) / trastuzumab (L01FD01) |
+| L02 | Endocrine therapy | hormone-blocking therapy, mainly breast and prostate cancer | Tamoxifen (L02BA01) / anastrozole (L02BG03) |
+| L03 | Immunostimulants |  | Filgrastim (L03AA02) / pegfilgrastim (L03AA13) |
+| [L04](l04/) | Immunosuppressants |  | Tacrolimus (L04AD02) / adalimumab (L04AB04) |
+
+: ATC L level 2 codes {#tbl-atc-l-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
+
+## Modeling notes
+
+**Mechanistic extrapolation.**
+PBPK is routine for kinase inhibitors, predicting CYP3A and gastric-pH interactions that reach labels; QSP extrapolates immuno-oncology dosing, notably CD3 bispecific T-cell engagers, from preclinical data [@yoshidaImpactPhysiologicallyBased2017; @bettsTranslationalQuantitativeSystems2019].
+
+**E-R**
+Exposure-response for targeted agents is drug-specific, not class-wide: no efficacy relationship was detectable across the osimertinib dose range [@brown2017osimertinib], while trough concentrations separated progression-free survival for crizotinib and alectinib [@groenland2021alk].
+
+## References
+
+::: {#refs}
+:::
