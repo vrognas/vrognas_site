@@ -149,7 +149,7 @@ IF (CP > CMAXM) THEN
 ENDIF
 ```
 
-<!-- TODO: Add image ./images/tmax-vs-dt.png -->
+![Absolute difference between measured and theoretical T~max~, by `DT`. Tightening `DT` from NA through 5, 2, 0.5, 0.2 to 0.1 narrows the error towards zero, at the CPU cost shown below.](../images/tmax-vs-dt.png){#fig-tmax-vs-dt}
 
 |          | Total CPU time(s) |
 | :------- | :---: |

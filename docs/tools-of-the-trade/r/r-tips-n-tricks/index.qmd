@@ -204,4 +204,4 @@ plot(layers)
         * any: `NA %in% vector`
         * sum: `vector %in% NA %>% sum`
 
-<!-- TODO: Add image ./images/dist-func.png -->
+![R's four distribution functions for the normal distribution: `dnorm()` gives probability density at a quantile, `rnorm()` draws random quantiles, `pnorm()` gives cumulative probability up to a quantile, and `qnorm()` inverts that, returning the quantile for a given cumulative probability.](../images/dist-func.png){#fig-dist-func}
