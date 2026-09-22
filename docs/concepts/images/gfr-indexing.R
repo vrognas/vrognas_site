@@ -65,12 +65,12 @@ anchor <- data.frame(weight = weight_at(1, 170), height = 170)
 extremes <- data.frame(
   weight = c(45, 120),
   height = c(150, 190),
-  label  = c("150 cm, 45 kg\n0.79×  →  71 mL/min",
-             "190 cm, 120 kg\n1.43×  →  128 mL/min"),
+  label  = c("150 cm, 45 kg: 0.79×\n90 mL/min/1.73 m² → 71 mL/min",
+             "190 cm, 120 kg: 1.43×\n90 mL/min/1.73 m² → 128 mL/min"),
   # offset the box in data units rather than with hjust/vjust: out-of-range
   # justification also staggers the individual text lines inside the box
-  dx     = c(11, -11.5),
-  dy     = c(0, -4)
+  dx     = c(16, -16.5),
+  dy     = c(-5.2, -4)
 )
 
 p <- ggplot(grid, aes(weight, height)) +
