@@ -143,3 +143,17 @@ every intermediate level too, or truncating the URL will 404.
 - Dual theme support (light/dark) with custom SCSS files
 - Images should be optimized and use appropriate formats (`.avif` preferred for photos)
 - Code blocks are set to fold by default with copy functionality enabled
+
+### Figures
+
+Figure sources live beside their output in `docs/concepts/images/`, and are not published
+(Quarto only copies files a page references). Diagrams are `.excalidraw`; generated plots
+are `.R` scripts run by hand, never Quarto code cells, which keeps their page out of the
+freeze cache and away from the "Netlify has no R" failure. Regenerate with, for example:
+
+```bash
+Rscript docs/concepts/images/gfr-indexing.R   # from the repo root
+```
+
+Generated plots stay in the device default sans, not the hand-drawn face the
+`.excalidraw` diagrams use. A quantitative surface should not look sketched.

@@ -16,6 +16,7 @@ date: "2026-03-18"
 
 GFR should be expressed as mL/min (absolute GFR).
 If a formula providing BSA-normalized GFR (mL/min/1.73 m^2^) has been used, recalculate to absolute GFR in mL/min in each individual.
+See [indexed vs absolute GFR](../../pk/3_elimination/index.qmd#indexed-vs-absolute-gfr) for how large that correction gets across body sizes.
 Preferably use exogenous markers (iohexol, inulin) or eGFR; avoid Cockcroft-Gault.
 
 | RI severity | GFR (mL/min) |

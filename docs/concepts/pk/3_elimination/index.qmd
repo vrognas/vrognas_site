@@ -260,6 +260,44 @@ $$ {#eq-ckd-epi-2021}
 
 In general, if the serum creatinine rises at 2--3 mg/dl per day then the GFR is near zero.
 
+### Indexed vs absolute GFR
+
+Every equation above returns eGFR *indexed* to a body surface area of 1.73 m^2^, the convention CKD staging is built on.
+Clearance is not indexed to anything.
+A dose meets a whole patient, so the quantity that governs elimination is absolute GFR in mL/min, which is the reported value multiplied by BSA/1.73.
+
+![The de-indexing factor across adult body sizes. Each contour is one value of BSA/1.73 by Du Bois. The heavy line is 1.73 m^2^, where the indexed and absolute values coincide; to the left of it indexing overstates clearance, to the right it understates it. The dashed pair bounds the WHO normal BMI range, 18.5 to 25.](../../images/gfr-indexing.png){#fig-gfr-indexing}
+
+Between the two bodies marked in @fig-gfr-indexing the factor runs from 0.79× to 1.43×.
+The same reported eGFR of 90 mL/min/1.73 m^2^ is 71 mL/min in one and 128 mL/min in the other, a 1.80-fold spread hidden inside a single number on a lab report.
+This is not an obesity correction either.
+Staying inside the dashed corridor, a 150 cm adult at the lower bound and a 190 cm adult at the upper bound sit at 0.77× and 1.26×, so the same 90 mL/min/1.73 m^2^ is 69 mL/min in one and 114 mL/min in the other.
+That is why indexing misleads at the extremes of body size [@delanayeErrorsInducedIndexing2009], and why [renal impairment studies](../../clinpharm-studies/renal-impairment-studies/index.qmd) ask for absolute GFR to be recovered in each individual.
+
+Read a body off the figure, or convert one directly:
+
+```{ojs}
+//| echo: false
+viewof height_cm = Inputs.range([140, 200], {value: 170, step: 1, label: "Height (cm)"})
+viewof weight_kg = Inputs.range([40, 140], {value: 70, step: 1, label: "Weight (kg)"})
+viewof egfr_indexed = Inputs.range([5, 180], {value: 90, step: 1, label: "Reported eGFR (mL/min/1.73 m²)"})
+```
+
+```{ojs}
+//| echo: false
+bsa = 0.007184 * Math.pow(weight_kg, 0.425) * Math.pow(height_cm, 0.725)
+
+html`<p style="font-size:1.15em; line-height:1.8; margin:0.4em 0 0;">
+BSA <strong>${bsa.toFixed(2)} m²</strong>
+&nbsp;·&nbsp; factor <strong>${(bsa / 1.73).toFixed(2)}×</strong>
+&nbsp;·&nbsp; absolute GFR <strong>${(egfr_indexed * bsa / 1.73).toFixed(0)} mL/min</strong>
+</p>`
+```
+
+BSA here is Du Bois and Du Bois [@duboisFormulaEstimateApproximate1916], which both the figure and the calculator use.
+Mosteller is the usual alternative and does not agree with it: across bodies of BMI 18.5--40 it sits between 2.7% below and 5.8% above Du Bois.
+The formula therefore belongs in the methods whenever a de-indexed GFR is reported.
+
 ### Unit conversions
 
 Clinical labs report these markers in either unit, so data pooled across sites usually needs converting before any of the equations above are applied.
