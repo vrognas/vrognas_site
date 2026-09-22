@@ -4,8 +4,6 @@ description: "ATC R03 drugs for obstructive airway diseases for modelers: the do
 date: "2026-02-08"
 ---
 
-Part of [R: Respiratory system](../).
-
 **The dose splits before you model anything.**
 Part deposits in the lung and is absorbed without first pass; the **swallowed fraction** goes to the gut and is subject to it [@donnelly2001budesonide; @daleyyates2001bdp].
 Plasma concentration is the sum of two inputs with different rates and bioavailabilities [@borghardt2016olodaterol; @hochhaus2021fpdpi] (see [absorption](/docs/concepts/pk/1_absorption/)).

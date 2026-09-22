@@ -4,8 +4,6 @@ description: "ATC D11 other dermatological preparations for modelers: dropout is
 date: "2026-02-08"
 ---
 
-Part of [D: Dermatologicals](../).
-
 **Dropout is informative.**
 Dropout is informative: in a four-state Markov model of EASI the dropout probability was highest in the non-responding category [@okadaContinuousTimeMarkovPopulation2025].
 

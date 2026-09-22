@@ -4,7 +4,5 @@ description: "ATC L04 immunosuppressants: the level-2 group covering L04A, from 
 date: "2026-09-22"
 ---
 
-Part of [L: Antineoplastic and immunomodulating agents](../).
-
 L04 has a single level-3 subgroup, [L04A](l04a/), which carries the whole group: calcineurin inhibitors (ciclosporin, tacrolimus), TNF-α inhibitors, interleukin inhibitors, and the JAK inhibitors.
 WHO gives L04 and L04A the same name.

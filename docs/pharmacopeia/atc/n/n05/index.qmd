@@ -4,8 +4,6 @@ description: "ATC N05 psycholeptics for modelers: dropout is informative."
 date: "2026-02-08"
 ---
 
-Part of [N: Nervous system](../).
-
 The main indication for these drugs is covered in the [schizophrenia primer](/docs/pathology-primers/neurological/schizophrenia/).
 
 **Dropout is informative.**

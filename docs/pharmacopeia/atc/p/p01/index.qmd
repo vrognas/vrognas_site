@@ -4,8 +4,6 @@ description: "ATC P01 antiprotozoals for modelers: pK/PD indices carry over, wit
 date: "2026-02-08"
 ---
 
-Part of [P: Antiparasitic products, insecticides and repellents](../).
-
 **PK/PD indices carry over, with caveats.**
 Dose-fractionation studies in murine and humanized mouse models identify the governing index [@lakshminarayana2015spiroindolone; @gibhard2024dosefractionation], but these analyses usually work with *total* rather than unbound concentrations, since the compounds are often bound above 99% [@white2013antimalarial].
 Which index wins is compound-specific, not a class property.

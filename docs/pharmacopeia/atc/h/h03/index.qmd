@@ -4,8 +4,6 @@ description: "Pharmacometric modeling notes for ATC H03, thyroid therapy."
 date: "2026-02-08"
 ---
 
-Part of [H: Systemic hormonal preparations, excluding sex hormones and insulins](../).
-
 **Also worth knowing.**
 Levothyroxine is treated as a narrow therapeutic index drug, with bioequivalence tightened to 0.90-1.11 [@concordet2019levothyrox; @concordet2020be200].
 Binding globulins shift with pregnancy and oral estrogen, changing unbound fraction [@arafah2001estrogen; @alexander2004pregnancy].

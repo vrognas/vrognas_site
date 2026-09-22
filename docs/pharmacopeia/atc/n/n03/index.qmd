@@ -4,8 +4,6 @@ description: "ATC N03 antiepileptics for modelers: counts, not concentrations."
 date: "2026-02-08"
 ---
 
-Part of [N: Nervous system](../).
-
 **Counts, not concentrations.**
 Daily seizure counts in N03 are overdispersed and depend on the previous day, so negative binomial models with a Markov element beat Poisson [@troconizModellingOverdispersionMarkovian2009].
 Add-on [exposure-response](/docs/modeling/pkpd/) is fitted on seizure rate, not a continuous score [@millerExposureResponseAnalysis2003].

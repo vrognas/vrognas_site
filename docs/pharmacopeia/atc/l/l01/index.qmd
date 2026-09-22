@@ -4,8 +4,6 @@ description: "ATC L01 antineoplastic agents for modelers: toxicity sets the dose
 date: "2026-02-08"
 ---
 
-Part of [L: Antineoplastic and immunomodulating agents](../).
-
 **Toxicity sets the dose, not efficacy.**
 Dose-limiting toxicity is a binary readout in a short early window [@letourneau2009dose; @yin2024handling].
 For cytotoxics, neutropenia is the continuous alternative, captured by semi-mechanistic myelosuppression models with a proliferating compartment, maturation transit compartments and a feedback term [@friberg2002myelo; @camaradesouza2018transit].

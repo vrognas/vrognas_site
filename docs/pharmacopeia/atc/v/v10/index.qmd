@@ -4,8 +4,6 @@ description: "Pharmacometric modeling notes for ATC V10, therapeutic radiopharma
 date: "2026-02-08"
 ---
 
-Part of [V: Various](../).
-
 **Mechanistic extrapolation.**
 PBPK has been applied in radiopharmaceutical therapy to predict time-integrated activity for treatment planning [@klettingPhysiologicallyBasedPharmacokinetic2015; @hardiansyahSensitivityAnalysisPhysiologically2016].
 

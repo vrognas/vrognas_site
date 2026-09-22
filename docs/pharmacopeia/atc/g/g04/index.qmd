@@ -4,8 +4,6 @@ description: "ATC G04 urologicals for modelers: urological endpoints are not con
 date: "2026-02-08"
 ---
 
-Part of [G: Genito-urinary system and sex hormones](../).
-
 **Urological endpoints are not continuous.**
 Symptom scores, voiding diaries and incontinence counts are ordered categorical or count data; fitting E~max~ to a group mean discards most of the information [@lyauk2021boundedinteger; @lyauk2020irtipss].
 

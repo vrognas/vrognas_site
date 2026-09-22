@@ -4,8 +4,6 @@ description: "ATC M04 antigout preparations for modelers: urate is a turnover pr
 date: "2026-02-08"
 ---
 
-Part of [M: Musculo-skeletal system](../).
-
 **Urate is a turnover problem.**
 Serum urate under febuxostat is fitted with an indirect response model [@murakiPopulationPharmacodynamicAnalysis2018]; such a model predicted real-world urate with r = 0.68, rising to 0.77 once comorbidities, eGFR and loop diuretics were accounted for [@hiraiEvaluationPharmacokineticPharmacodynamic2018].
 

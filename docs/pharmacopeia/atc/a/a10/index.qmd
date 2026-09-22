@@ -4,8 +4,6 @@ description: "ATC A10 drugs used in diabetes for modelers: hbA1c is not an E~max
 date: "2026-02-08"
 ---
 
-Part of [A: Alimentary tract and metabolism](../).
-
 The disease these drugs treat is covered in the [diabetes primer](/docs/pathology-primers/diabetes/).
 
 **Endpoint.**

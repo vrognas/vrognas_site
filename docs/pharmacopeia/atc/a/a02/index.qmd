@@ -4,8 +4,6 @@ description: "Pharmacometric modeling notes for ATC A02, drugs for acid related 
 date: "2026-02-08"
 ---
 
-Part of [A: Alimentary tract and metabolism](../).
-
 **Easy to overlook.**
 Omeprazole inactivates the gastric H^+^/K^+^-ATPase irreversibly, so in dogs the duration of inhibition was set by enzyme turnover after long exposure and by transfer of pumps between active and resting states after short exposure, not by drug elimination [@abeloGastricAcidSecretion2002].
 

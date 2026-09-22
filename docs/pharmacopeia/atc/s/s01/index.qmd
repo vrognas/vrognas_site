@@ -4,8 +4,6 @@ description: "ATC S01 ophthalmologicals for modelers: dosing time is design, not
 date: "2026-02-08"
 ---
 
-Part of [S: Sensory organs](../).
-
 **Typical structure.**
 For pressure, a physiological baseline built from aqueous humour dynamics, with the drug entering as an effect on those parameters, which is what carries the model from rabbit and dog into patients [@durairajMechanismBasedTranslational2014].
 

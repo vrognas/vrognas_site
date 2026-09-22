@@ -4,8 +4,6 @@ description: "ATC D05 antipsoriatics for modelers: a bounded score needs a bound
 date: "2026-02-08"
 ---
 
-Part of [D: Dermatologicals](../).
-
 The disease these drugs treat, and where PASI sits among its biomarkers, is covered in the [psoriasis primer](/docs/pathology-primers/autoimmune/psoriasis/).
 
 **A bounded score needs a bounded likelihood.**

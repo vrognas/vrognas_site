@@ -4,8 +4,6 @@ description: "Pharmacometric modeling notes for ATC B05, blood substitutes and p
 date: "2026-02-08"
 ---
 
-Part of [B: Blood and blood forming organs](../).
-
 **Easy to overlook.**
 Blood substitutes and perfusion solutions have their own tradition, volume kinetics, fitted to hemoglobin-derived plasma dilution [@hahn2019albumin; @balan2025gelofusine].
 

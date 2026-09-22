@@ -4,8 +4,6 @@ description: "ATC V03 all other therapeutic products for modelers: typical struc
 date: "2026-02-08"
 ---
 
-Part of [V: Various](../).
-
 **Typical structure, reversal agents.**
 Sugammadex encapsulates rocuronium and the complex is cleared by the kidney, so clearance of both falls in [renal impairment](/docs/concepts/clinpharm-studies/renal-impairment-studies/) [@staalsReducedClearanceRocuronium2010].
 A population analysis nonetheless found renal function did not affect reversal time [@kleijnPopulationPharmacokineticPharmacodynamic2011].

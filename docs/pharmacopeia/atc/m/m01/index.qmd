@@ -4,8 +4,6 @@ description: "ATC M01 antiinflammatory and antirheumatic products for modelers: 
 date: "2026-02-08"
 ---
 
-Part of [M: Musculo-skeletal system](../).
-
 **Pain needs a fitted placebo time course.**
 In oral osteoarthritis trials the WOMAC placebo response is large and reaches 90% of its maximum only after 5 to 7 weeks [@wenPlaceboResponseOral2022].
 In an acute postoperative model, pain relief was fitted as a function of ketorolac concentration (**E~max~**), a subject random effect and time, the last capturing the waxing and waning of placebo [@mandemaPopulationPharmacodynamicModel1996].

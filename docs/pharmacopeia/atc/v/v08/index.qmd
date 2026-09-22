@@ -4,8 +4,6 @@ description: "ATC V08 contrast media for modelers: contrast media, a pharmacokin
 date: "2026-02-08"
 ---
 
-Part of [V: Various](../).
-
 **Contrast media, a pharmacokinetic problem.**
 Iodinated X-ray media distribute differentially to organs and between normal and abnormal tissue, and are excreted largely unchanged, with a hepatic and biliary route that matters in renal impairment [@bourinOverviewClinicalPharmacokinetics1997].
 Iohexol clearance is itself used as a measured GFR [@mohamedDiverseProtocolsMeasuring2024], and the practical question is the safe interval before the next study [@vandermolenWaitingTimesBetween2024].

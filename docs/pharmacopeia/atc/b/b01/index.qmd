@@ -4,8 +4,6 @@ description: "ATC B01 antithrombotic agents for modelers: delayed effect is the 
 date: "2026-02-08"
 ---
 
-Part of [B: Blood and blood forming organs](../).
-
 **Delayed effect is the default.**
 Vitamin K antagonists suppress synthesis of clotting factors [@holford1986warfarin], and irreversible antiplatelet agents outlast the drug [@jiang2015clopidogrel], so effect follows the turnover of a protein or cell pool rather than plasma concentration.
 Turnover and indirect response models are the natural starting point [@dayneka1993indirect; @ooi2017joint].

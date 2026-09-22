@@ -4,8 +4,6 @@ description: "ATC N01 anesthetics for modelers: anesthesia is the hysteresis cas
 date: "2026-02-08"
 ---
 
-Part of [N: Nervous system](../).
-
 **Anesthesia is the hysteresis case.**
 Processed EEG lags plasma concentration in N01, so the link is an effect site with an equilibration rate constant k~e0~ [@schniderInfluenceAgePropofol1999].
 One effect compartment failed to describe the bispectral index across different propofol infusion rates; a two-compartment effect site succeeded [@bjornssonTwoCompartmentEffectSite2010].
