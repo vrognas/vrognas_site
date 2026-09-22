@@ -8,15 +8,15 @@ The level 2 codes in @tbl-atc-n-lvl-2 run from anesthetics to other nervous syst
 
 On 29 March 1948 John Cade gave lithium citrate to W.B., in manic excitement for five years; W.B. left hospital months later and returned to his old job [@cadeLithiumSaltsTreatment1949; @lopezmunozHistoryPharmacologicalTreatment2018].
 
-| Level 2 code | Description | In plain terms | Example drug |
+|  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
-| [N01](n01/) | Anesthetics |  | Propofol (N01AX10) / bupivacaine (N01BB01) |
-| N02 | Analgesics |  | Paracetamol (N02BE01) / morphine (N02AA01) |
-| [N03](n03/) | Antiepileptics |  | Levetiracetam (N03AX14) / lamotrigine (N03AX09) |
-| N04 | Anti-Parkinson drugs |  | Levodopa and decarboxylase inhibitor (N04BA02) / pramipexole (N04BC05) |
-| [N05](n05/) | Psycholeptics | calming: antipsychotics, anxiolytics, hypnotics | Olanzapine (N05AH03) / lorazepam (N05BA06) |
-| N06 | Psychoanaleptics | stimulating: antidepressants, stimulants, anti-dementia drugs | Sertraline (N06AB06) / escitalopram (N06AB10) |
-| N07 | Other nervous system drugs |  | Buprenorphine (N07BC01) / varenicline (N07BA03) |
+| [**N01**](n01/) | Anesthetics |  | Propofol (N01AX10) / bupivacaine (N01BB01) |
+| **N02** | Analgesics |  | Paracetamol (N02BE01) / morphine (N02AA01) |
+| [**N03**](n03/) | Antiepileptics |  | Levetiracetam (N03AX14) / lamotrigine (N03AX09) |
+| **N04** | Anti-Parkinson drugs |  | Levodopa and decarboxylase inhibitor (N04BA02) / pramipexole (N04BC05) |
+| [**N05**](n05/) | Psycholeptics | calming: antipsychotics, anxiolytics, hypnotics | Olanzapine (N05AH03) / lorazepam (N05BA06) |
+| **N06** | Psychoanaleptics | stimulating: antidepressants, stimulants, anti-dementia drugs | Sertraline (N06AB06) / escitalopram (N06AB10) |
+| **N07** | Other nervous system drugs |  | Buprenorphine (N07BC01) / varenicline (N07BA03) |
 
 : ATC N level 2 codes {#tbl-atc-n-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 

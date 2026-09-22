@@ -39,7 +39,17 @@ Antibacterials interfere with vital processes in bacterial cells.
 
 The host's immune system then clears the remaining infecting pathogens.
 
-![Drug-Bug-Host disease triangle.](images/bug-drug-host_disease-triangle.png){#fig-triangle}
+The traditional paradigm in severe infection is the interaction between the bug and the drug, and its central fallacy is that it misses the role of the host [@shorrAntibioticsCriticallyIll2012].
+PK/PD ties all three together: how the host metabolizes the drug, how the drug reaches the target site, how it kills the bacteria, and how susceptible the pathogen is to it [@shorrAntibioticsCriticallyIll2012].
+
+::: {#fig-triangle}
+
+![](images/bug-drug-host_disease-triangle.png){fig-alt="A triangle labelled Bug at the top vertex, Drug at the lower left and Host at the lower right, with Disease in the shaded centre."}
+
+The bug, drug, host triad.
+Antimicrobial pharmacodynamics is usually framed as the bug-drug interaction, but the host determines both the exposure achieved and how much killing the drug has to do.
+
+:::
 
 ### Antibiotic targets in bacteria
 

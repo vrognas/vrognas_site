@@ -10,11 +10,11 @@ The notes below come from S01, ophthalmologicals, where the difficulty is an org
 In 1977 Thom Zimmerman and Herbert Kaufman studied single-dose timolol at four strengths in twenty patients with chronic open-angle glaucoma.
 Every strength, down to 0.1%, lowered pressure for at least 24 hours, which led them to propose a once a day topical agent [@zimmermanTimololDoseResponse1977].
 
-| Level 2 code | Description | In plain terms | Example drug |
+|  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
-| [S01](s01/) | Ophthalmologicals | medicines applied to the eye | Latanoprost (S01EE01) / aflibercept (S01LA05) |
-| S02 | Otologicals | ear medicines, mostly drops | Ciprofloxacin ear drops (S02AA15) / dexamethasone with antiinfectives (S02CA06) |
-| S03 | Ophthalmological and otological preparations | drops licensed for both eye and ear | Residual group for drops licensed for both eye and ear; no separate standard of care. Closest is dexamethasone with antiinfectives (S03CA01); single-agent example ciprofloxacin (S03AA07). Eye and ear disease is treated from S01 and S02 instead. |
+| [**S01**](s01/) | Ophthalmologicals | medicines applied to the eye | Latanoprost (S01EE01) / aflibercept (S01LA05) |
+| **S02** | Otologicals | ear medicines, mostly drops | Ciprofloxacin ear drops (S02AA15) / dexamethasone with antiinfectives (S02CA06) |
+| **S03** | Ophthalmological and otological preparations | drops licensed for both eye and ear | Residual group for drops licensed for both eye and ear; no separate standard of care. Closest is dexamethasone with antiinfectives (S03CA01); single-agent example ciprofloxacin (S03AA07). Eye and ear disease is treated from S01 and S02 instead. |
 
 : ATC S level 2 codes {#tbl-atc-s-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 

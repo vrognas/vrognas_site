@@ -9,14 +9,14 @@ Published models here span a subjective pain score [@mandemaPopulationPharmacody
 
 In 1938 Richard Gill returned from the Amazon with 11 kg of curare, from which Squibb isolated a standardized extract; Harold Griffith and Enid Johnson gave it in the operating room in 1942 [@elsherbiniConnectionHaroldGriffith2024; @griffithUseCurareGeneral1942].
 
-| Level 2 code | Description | In plain terms | Example drug |
+|  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
-| [M01](m01/) | Antiinflammatory and antirheumatic products |  | Ibuprofen (M01AE01) / naproxen (M01AE02) |
-| M02 | Topical products for joint and muscular pain |  | Topical diclofenac (M02AA15) / topical ketoprofen (M02AA10) |
-| [M03](m03/) | Muscle relaxants |  | Rocuronium bromide (M03AC09) for neuromuscular block / baclofen (M03BX01) for spasticity |
-| [M04](m04/) | Antigout preparations |  | Allopurinol (M04AA01) / febuxostat (M04AA03) |
-| [M05](m05/) | Drugs for treatment of bone diseases |  | Alendronic acid (M05BA04) / denosumab (M05BX04) |
-| M09 | Other drugs for disorders of the musculo-skeletal system | leftover bone, joint and muscle drugs | Residual catch-all group, but it now carries real drug-level standards for rare neuromuscular disease: nusinersen (M09AX07) and risdiplam (M09AX10) for spinal muscular atrophy |
+| [**M01**](m01/) | Antiinflammatory and antirheumatic products |  | Ibuprofen (M01AE01) / naproxen (M01AE02) |
+| **M02** | Topical products for joint and muscular pain |  | Topical diclofenac (M02AA15) / topical ketoprofen (M02AA10) |
+| [**M03**](m03/) | Muscle relaxants |  | Rocuronium bromide (M03AC09) for neuromuscular block / baclofen (M03BX01) for spasticity |
+| [**M04**](m04/) | Antigout preparations |  | Allopurinol (M04AA01) / febuxostat (M04AA03) |
+| [**M05**](m05/) | Drugs for treatment of bone diseases |  | Alendronic acid (M05BA04) / denosumab (M05BX04) |
+| **M09** | Other drugs for disorders of the musculo-skeletal system | leftover bone, joint and muscle drugs | Residual catch-all group, but it now carries real drug-level standards for rare neuromuscular disease: nusinersen (M09AX07) and risdiplam (M09AX10) for spinal muscular atrophy |
 
 : ATC M level 2 codes {#tbl-atc-m-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 

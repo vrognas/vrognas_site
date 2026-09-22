@@ -9,17 +9,17 @@ The large classes are developed against continuous biomarkers, blood pressure an
 
 In July 1973, after screening thousands of fungal broths at Sankyo in Tokyo, Akira Endo isolated the first statin, ML-236B, from a *Penicillium citrinum* strain found on rice from a Kyoto grain shop [@endoHistoricalPerspectiveDiscovery2010].
 
-| Level 2 code | Description | In plain terms | Example drug |
+|  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
-| C01 | Cardiac therapy | drugs acting directly on the heart | Amiodarone (C01BD01) / digoxin (C01AA05) |
-| C02 | Antihypertensives |  | Methyldopa (C02AB01), still standard in pregnancy / doxazosin (C02CA04), add-on in resistant hypertension. Note most first-line antihypertensives now sit in C03, C07, C08 and C09, not here. |
-| C03 | Diuretics |  | Furosemide (C03CA01) / spironolactone (C03DA01) |
-| C04 | Peripheral vasodilators | widen arteries in the arms and legs | Largely obsolete group; naftidrofuryl (C04AX21) is the only agent still guideline-recommended, for intermittent claudication. Pentoxifylline (C04AD03) is used but evidence is weak. |
-| C05 | Vasoprotectives | for hemorrhoids, varicose veins, fragile capillaries | Symptomatic only, with no single agent to name. The commonest are topical hydrocortisone (C05AA01) for hemorrhoids and oral diosmin (C05CA03) for chronic venous disease. |
-| C07 | Beta blocking agents |  | Bisoprolol (C07AB07) / metoprolol (C07AB02) |
-| C08 | Calcium channel blockers |  | Amlodipine (C08CA01) / diltiazem (C08DB01) |
-| C09 | Agents acting on the renin-angiotensin system | blood-pressure hormone system: ACE inhibitors, ARBs | Ramipril (C09AA05) / candesartan (C09CA06) |
-| [C10](c10/) | Lipid modifying agents | cholesterol- and triglyceride-lowering drugs | Atorvastatin (C10AA05) / rosuvastatin (C10AA07) |
+| **C01** | Cardiac therapy | drugs acting directly on the heart | Amiodarone (C01BD01) / digoxin (C01AA05) |
+| **C02** | Antihypertensives |  | Methyldopa (C02AB01), still standard in pregnancy / doxazosin (C02CA04), add-on in resistant hypertension. Note most first-line antihypertensives now sit in C03, C07, C08 and C09, not here. |
+| **C03** | Diuretics |  | Furosemide (C03CA01) / spironolactone (C03DA01) |
+| **C04** | Peripheral vasodilators | widen arteries in the arms and legs | Largely obsolete group; naftidrofuryl (C04AX21) is the only agent still guideline-recommended, for intermittent claudication. Pentoxifylline (C04AD03) is used but evidence is weak. |
+| **C05** | Vasoprotectives | for hemorrhoids, varicose veins, fragile capillaries | Symptomatic only, with no single agent to name. The commonest are topical hydrocortisone (C05AA01) for hemorrhoids and oral diosmin (C05CA03) for chronic venous disease. |
+| **C07** | Beta blocking agents |  | Bisoprolol (C07AB07) / metoprolol (C07AB02) |
+| **C08** | Calcium channel blockers |  | Amlodipine (C08CA01) / diltiazem (C08DB01) |
+| **C09** | Agents acting on the renin-angiotensin system | blood-pressure hormone system: ACE inhibitors, ARBs | Ramipril (C09AA05) / candesartan (C09CA06) |
+| [**C10**](c10/) | Lipid modifying agents | cholesterol- and triglyceride-lowering drugs | Atorvastatin (C10AA05) / rosuvastatin (C10AA07) |
 
 : ATC C level 2 codes {#tbl-atc-c-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
