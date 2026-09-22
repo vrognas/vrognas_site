@@ -19,7 +19,7 @@ Provocations (OGTT, IVGTT) need the glucose-insulin feedback loop stated explici
 Type 2 diabetes progresses under treatment, so comparing drugs over a year needs disease progression on beta cell function and insulin sensitivity, not a fixed baseline [@dewinterMechanismbasedDiseaseProgression2006].
 
 **Clamp readouts.**
-Insulin degludec was profiled by the glucose infusion rate of a euglycemic clamp, a [pharmacodynamic](/docs/concepts/pd/) readout: in 65 healthy men, body mass index was inversely correlated with the 24 hour GIR AUC [@liEffectBMIPharmacokinetic2023].
+Insulin degludec was profiled by the glucose infusion rate of a euglycemic clamp, a [pharmacodynamic](/docs/concepts/pd/) readout: in 65 healthy men, body mass index was inversely correlated with the 24 hour GIR AUC [@liEffectBMIPharmacokinetic2023].
 
 ## References
 

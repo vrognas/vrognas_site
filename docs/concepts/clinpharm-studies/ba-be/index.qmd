@@ -76,7 +76,7 @@ Structurally a type of relative BA study -- same formulation under two condition
 
 * Randomized, single-dose, two-period crossover (fed vs. fasted), in healthy participants.
 * Fed condition: high-fat (~50% of calories), high-calorie (~800--1000 kcal) standardized meal; dose 30 minutes after start of meal.
-* Fasted condition: overnight fast ≥10 hours; water allowed until 1 hour before dosing.
+* Fasted condition: overnight fast ≥10 hours; water allowed until 1 hour before dosing.
 * The result informs labeling (e.g. no food restriction, take with food, avoid with high-fat meals).
 * Can be included as a cohort within the FIH study or run as a standalone study.
 * Minimum 12 evaluable subjects (FDA).

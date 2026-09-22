@@ -8,7 +8,7 @@ date: "2026-02-08"
 For pressure, a physiological baseline built from aqueous humour dynamics, with the drug entering as an effect on those parameters, which is what carries the model from rabbit and dog into patients [@durairajMechanismBasedTranslational2014].
 
 **Dosing time is design, not noise.**
-Morning and evening instillation of the same fixed combination both lowered 24 hour pressure but differed in fluctuation, so clock time belongs in the model [@fengEfficacyMorningVersus2024].
+Morning and evening instillation of the same fixed combination both lowered 24 hour pressure but differed in fluctuation, so clock time belongs in the model [@fengEfficacyMorningVersus2024].
 
 **Vitreous exposure is predicted, not sampled.**
 Faricimab vitreous concentrations were inferred from aqueous humour and plasma samples, with plasma exposure roughly 6000-fold below vitreous [@diackOcularPharmacokineticsFaricimab2024].

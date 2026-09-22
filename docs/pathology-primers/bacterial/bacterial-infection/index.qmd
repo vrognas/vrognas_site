@@ -82,7 +82,7 @@ In almost all cases, an empirical treatment is used first.
 There is no time to wait for culture results.
 The "right" treatment is 90% successful, and the "wrong" treatment is 60% successful (known as the **"90/60 rule"**).
 
-Most infections can be treated in 5--7 days.
+Most infections can be treated in 5--7 days.
 
 ### What we want to know before treating an infection
 
@@ -109,10 +109,10 @@ Most infections can be treated in 5--7 days.
 
 ### After initial treatment
 
-* Treatment re-evaluation after 3 days
-    * 48 hours needed to evaluate antibiotic efficacy
+* Treatment re-evaluation after 3 days
+    * 48 hours needed to evaluate antibiotic efficacy
     * The efficacy of antibiotic treatment is judged by **signs and symptoms** (Are you feeling better than yesterday?), and the course of **inflammatory markers** (WBC, CRP, PCT)
-* Empiric treatment should ideally be switched to targeted therapy once culture results are available (2--3 days)
+* Empiric treatment should ideally be switched to targeted therapy once culture results are available (2--3 days)
 
 ## References
 

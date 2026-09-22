@@ -35,7 +35,7 @@ Bounded composite severity scores: PASI in psoriasis [@ooiBoundedIntegerModelbas
 Dermal open flow microperfusion measures dermal concentrations *in vivo*, and separated [bioequivalent](/docs/concepts/clinpharm-studies/ba-be/) from non-bioequivalent lidocaine and prilocaine products on dermal AUC and C~max~ [@tiffnerCutaneousPharmacokineticsbasedBioequivalence2024].
 
 **Easy to overlook.**
-The D11 biologics are an ordinary systemic PKPD problem: nemolizumab exposure fell as bodyweight rose, yet simulated EASI, pruritus and IGA response rates were similar above and below 90 kg [@fauchetModelinformedDrugDevelopment2026].
+The D11 biologics are an ordinary systemic PKPD problem: nemolizumab exposure fell as bodyweight rose, yet simulated EASI, pruritus and IGA response rates were similar above and below 90 kg [@fauchetModelinformedDrugDevelopment2026].
 
 **Mechanistic extrapolation.**
 Dermal PBPK ties formulation and skin physiology to systemic kinetics [@shahDermalPBPKModeling2026], and contributed to an FDA generic approval of topical diclofenac gel within a totality of evidence [@tsakalozouPhysiologicallyBasedPharmacokinetic2021].

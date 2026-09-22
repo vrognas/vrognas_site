@@ -21,14 +21,14 @@ Common in Phase 2b; at the latest before initiating Phase 3 (FDA/EMA).
 
 ::: {.callout-warning title="Lead time"}
 
-Must be started **≥12 months** ahead of planned dosing date due to radiolabel synthesis, pre-study activities, and limited CRO availability.
+Must be started **≥12 months** ahead of planned dosing date due to radiolabel synthesis, pre-study activities, and limited CRO availability.
 Only a few CROs worldwide can perform this study.
 
 :::
 
 ## Pre-study activities
 
-* Synthesis and manufacture of the radioactive drug; stability and purity (>98%) assessment for at least 6 months.
+* Synthesis and manufacture of the radioactive drug; stability and purity (>98%) assessment for at least 6 months.
 * **Radiolabel position**: Must be chemically and metabolically stable so the radionuclide is not lost during metabolism.
   Two separate labeling positions can be used if needed.
 * **QWBA** (quantitative whole-body autoradiography) study in a rodent species for human dosimetry report (required for standard radio doses; not needed for AMS-level doses).

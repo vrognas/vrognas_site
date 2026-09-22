@@ -79,7 +79,7 @@ TB is particularly difficult to diagnose in children.
 
 Tuberculosis is preventable and curable.
 Treatment is recommended for both TB infection and disease.
-Active pulmonary TB is treated with <span class="red-underline">**several antibiotics for a minimum of 6 months**</span>.
+Active pulmonary TB is treated with <span class="red-underline">**several antibiotics for a minimum of 6 months**</span>.
 
 The most common antibiotics used are:
 
@@ -88,12 +88,12 @@ The most common antibiotics used are:
 * pyrazinamide (Z, J04AK01)
 * ethambutol (E, J04AK02)
 
-### Drug-susceptible TB (DS-TB) (6 months of treatment)
+### Drug-susceptible TB (DS-TB) (6 months of treatment)
 
-1. **2 months**: isoniazid, rifampicin, pyrazinamide, ethambutol (2HRZE)
-2. **4 months**: isoniazid, rifampicin (4HR)
+1. **2 months**: isoniazid, rifampicin, pyrazinamide, ethambutol (2HRZE)
+2. **4 months**: isoniazid, rifampicin (4HR)
 
-Such a regimen is also spelled as **2HRZE/4HR**, meaning 2 months of HRZE treatment followed by 4 months of HR treatment.
+Such a regimen is also spelled as **2HRZE/4HR**, meaning 2 months of HRZE treatment followed by 4 months of HR treatment.
 
 ::: {.callout-note}
 # 12% of cases are resistant to at least rifampicin
@@ -101,11 +101,11 @@ Such a regimen is also spelled as **2HRZE/4HR**, meaning 2 months of HRZE treatm
 
 For **children** (3 mo -- 16 y), **2HRZ(E)/2HR** should be used.
 
-### Multi-drug/rifampicin resistant TB (MDR/RR-TB) (6--18 months of treatment)
+### Multi-drug/rifampicin resistant TB (MDR/RR-TB) (6--18 months of treatment)
 
-* **6 months**: bedaquiline (J04AK05), pretomanid (J04AK08), linezolid (J01XX08), moxifloxacin (J01MA14) (BPaLM)
+* **6 months**: bedaquiline (J04AK05), pretomanid (J04AK08), linezolid (J01XX08), moxifloxacin (J01MA14) (BPaLM)
 
-The second-line treatment contains bedaquiline, levofloxacin (J01MA12)/moxifloxacin, ethionamide (J04AD03), ethambutol, isoniazid, pyrazinamide and clofazimine (J04BA01) (all-oral regimen) administered for up to 9 months.
+The second-line treatment contains bedaquiline, levofloxacin (J01MA12)/moxifloxacin, ethionamide (J04AD03), ethambutol, isoniazid, pyrazinamide and clofazimine (J04BA01) (all-oral regimen) administered for up to 9 months.
 
 ### Drug characteristics
 
@@ -144,7 +144,7 @@ Old drug.
 
 Approved 2019.
 
-* HL: 14--26 h 
+* HL: 14--26 h 
 * Food effect: AUC +88% (dosed with food)
 * Saturated bioavailability (F) at high dose
 * 1 CMT PK

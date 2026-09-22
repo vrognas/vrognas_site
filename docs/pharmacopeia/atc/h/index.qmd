@@ -7,7 +7,7 @@ date: "2026-02-08"
 Corticosteroids, thyroid therapy and the pituitary and hypothalamic hormones.
 Sex hormones sit in group G and insulins in group A, so what remains is mainly H01 to H03.
 
-On 21 September 1948 at the Mayo Clinic, Charles Slocumb gave a woman crippled by rheumatoid arthritis 100 mg of Kendall's "compound E" (now known as **cortisone**), and within three days she was markedly improved.
+On 21 September 1948 at the Mayo Clinic, Charles Slocumb gave a woman crippled by rheumatoid arthritis 100 mg of Kendall's "compound E" (now known as **cortisone**), and within three days she was markedly improved.
 Hench, Kendall and Reichstein shared the 1950 Nobel Prize [@mattesonPhilipHenchDiscovery2024].
 
 |  | Description | In plain terms | Example drug |

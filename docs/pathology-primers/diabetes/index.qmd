@@ -26,7 +26,7 @@ Type 2 diabetes (T2DM) is characterized by insulin resistance combined with prog
 
 ### Typical patient population
 
-T1DM commonly presents in childhood or adolescence (<20 years), though adult-onset is possible.  
+T1DM commonly presents in childhood or adolescence (<20 years), though adult-onset is possible.  
 T2DM usually appears after age 40 but increasingly occurs earlier due to rising obesity rates.  
 T2DM is more prevalent, accounting for >90% of diabetes cases globally.
 
@@ -43,10 +43,10 @@ Disease progression indicated by rising HbA1c, decreasing beta-cell function (lo
 ### Key Clinical Biomarkers
 
 Diagnosis relies primarily on blood glucose criteria:
-- Fasting plasma glucose (FPG) ≥126 mg/dL (≥7.0 mmol/L)
-- 2-hour plasma glucose ≥200 mg/dL (≥11.1 mmol/L) after oral glucose tolerance test (OGTT)
+- Fasting plasma glucose (FPG) ≥126 mg/dL (≥7.0 mmol/L)
+- 2-hour plasma glucose ≥200 mg/dL (≥11.1 mmol/L) after oral glucose tolerance test (OGTT)
 - HbA1c ≥6.5%
-- Random plasma glucose ≥200 mg/dL (≥11.1 mmol/L) with classical symptoms
+- Random plasma glucose ≥200 mg/dL (≥11.1 mmol/L) with classical symptoms
 
 HbA1c is key for monitoring glycemic control over time.
 

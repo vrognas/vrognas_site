@@ -116,7 +116,7 @@ Phase 2/3 studies are less controlled than Phase 1, resulting in unrecorded dosi
 
 Single-dose, open-label, radiolabeled (^14^C) study in ≥6 healthy subjects.
 Determines routes/rates of elimination, clearance mechanisms, and circulating metabolites.
-Common in Phase 2b; ≥12 months lead time required.
+Common in Phase 2b; ≥12 months lead time required.
 See the [Mass Balance subpage](mass-balance/index.qmd) for details on radiolabeling, collection criteria, MIST, and study outputs.
 
 #### 🤒 Healthy vs Patient PK/PD

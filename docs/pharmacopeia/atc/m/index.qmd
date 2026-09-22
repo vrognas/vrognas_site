@@ -7,7 +7,7 @@ date: "2026-02-08"
 Drugs for joint, bone and muscle disease, plus the neuromuscular blockers given under anesthesia [@sheinerSimultaneousModelingPharmacokinetics1979].
 Published models here span a subjective pain score [@mandemaPopulationPharmacodynamicModel1996] and an evoked muscle twitch [@sheinerSimultaneousModelingPharmacokinetics1979].
 
-In 1938 Richard Gill returned from the Amazon with 11 kg of curare, from which Squibb isolated a standardized extract; Harold Griffith and Enid Johnson gave it in the operating room in 1942 [@elsherbiniConnectionHaroldGriffith2024; @griffithUseCurareGeneral1942].
+In 1938 Richard Gill returned from the Amazon with 11 kg of curare, from which Squibb isolated a standardized extract; Harold Griffith and Enid Johnson gave it in the operating room in 1942 [@elsherbiniConnectionHaroldGriffith2024; @griffithUseCurareGeneral1942].
 
 |  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |

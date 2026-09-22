@@ -60,7 +60,7 @@ However, the terminology in @tbl-age-term is generally accepted [@committeeonfet
 
 : Age terminology during the perinatal period {#tbl-age-term tbl-colwidths="[30, 5, 65]"}
 
-When patients are very young (< 1 year after birth), age is often related to the mothers last menstrual period.
+When patients are very young (< 1 year after birth), age is often related to the mothers last menstrual period.
 This is done because most women know when their last period began but not when ovulation occurred.
 This method of estimating the date of delivery is reliable as long as menstrual dates are remembered accurately (@fig-age-term).
 
@@ -68,7 +68,7 @@ This method of estimating the date of delivery is reliable as long as menstrual 
 
 **Methods of determining GA should be <span class="red-underline">clearly stated</span>** so that the variability inherent in these estimations can be considered when outcomes are interpreted.
 The convention for calculating GA when the date of conception is known is to add 2 weeks to the conceptional age.
-CGA is PNA reduced by the number of weeks born before 40 weeks of gestation (@eq-cga).
+CGA is PNA reduced by the number of weeks born before 40 weeks of gestation (@eq-cga).
 
 $$
 \text{Corrected gestational age}_\text{weeks} = \text{PNA}_\text{weeks} - (40 - \text{GA}_\text{weeks})
@@ -205,12 +205,12 @@ In neonates, the maturation level of eliminating organs influences the estimates
 Data from pediatric development programs are often too limited to confirm whether allometric exponents differ from theoretical values.
 EMA MWP (Methodology Working Party) considers the use of fixed exponents both scientifically justified and practical when developing popPK models in children.
 
-In lower ages (**< 2 years**), there are also maturation functions that come into play.
+In lower ages (**< 2 years**), there are also maturation functions that come into play.
 For these pediatric patients, it is <span class="red-underline">**important to include maturation function(s)**</span> to describe pediatric PK.
 One maturation function is the Schwartz (bedside) formula (@lst-cl-bedside), where height is in cm, and SCr is in mg/dL.
 
 ```nmtran {#lst-cl-bedside lst-cap="Schwartz bedside formula [@schwartzNewEquationsEstimate2009]"}
-CLR = 0.413 * HT / SCr ; mL/min/1.73 m2
+CLR = 0.413 * HT / SCr ; mL/min/1.73 m2
 ```
 
 But more commonly, the Rhodin formula is seen (@lst-cl-mat).
@@ -224,13 +224,13 @@ Hill = 3.4
 CLR = CLR * PMA**Hill / (TM_50**Hill + PMA**Hill) ; Maturation
 ```
 
-The maturation half-life (TM~50~) is fixed to the literature value of 47.7 weeks and the Hill-exponent to the value of 3.4 [@rhodinHumanRenalFunction2009].
+The maturation half-life (TM~50~) is fixed to the literature value of 47.7 weeks and the Hill-exponent to the value of 3.4 [@rhodinHumanRenalFunction2009].
 The distribution (mean, [min--max]) of PMA (weeks) in this study population was (518, [57--1652]).
 Assuming renal maturation time differs in pre-term infants, a separate TM~50~ value could be estimated for them if the current model poorly describes this subgroup.
 
 ::: {.column-margin}
 
-![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full-term infant with a PMA of 40 weeks](../images/pediatric-gfr.png){#fig-gfr}
+![Maturation of GFR showing the predictions of the sigmoid hyperbolic function. The abscissa is expressed as weeks of postnatal age so that 0 would be a full-term infant with a PMA of 40 weeks](../images/pediatric-gfr.png){#fig-gfr}
 
 :::
 
@@ -242,14 +242,14 @@ This is due to the high correlation between body weight and age in pediatric pat
 
 #### Step 2: Prepare a data set of pediatric simulation subjects
 
-To generate pediatric simulation subjects, two main data sources are commonly used: [NHANES](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023) (U.S. subjects, 2--18 years) and growth charts (e.g., WHO or CDC).
+To generate pediatric simulation subjects, two main data sources are commonly used: [NHANES](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2021-2023) (U.S. subjects, 2--18 years) and growth charts (e.g., WHO or CDC).
 
 ::: {.callout-warning}
 # NHANES has limited data for younger age groups
 
 While NHANES provides individual-level subject data, its coverage of younger age groups is limited.
 This makes it less reliable for simulations involving infants or very young children.
-In such cases---typically for patients under 2 years of age---consider using growth charts.
+In such cases---typically for patients under 2 years of age---consider using growth charts.
 :::
 
 Create at least 250 simulation subjects in each age group of interest (@tbl-age-group).
@@ -301,7 +301,7 @@ If the drug is indicated to be used in the age range below one year, exposure vs
 
 Predicted C~ss~ by **body weight (*left*)** and **age (*right*)** using the final pediatric population PK model (*red circles*: individual predictions).
 The *blue line* is the median simulated pediatric C~ss~ and the *blue shaded area* encompasses 90% of the simulated pediatric patients.
-The *horizontal gray band* encompasses 90% of the simulated adult patients receiving 100 mg BID.
+The *horizontal gray band* encompasses 90% of the simulated adult patients receiving 100 mg BID.
 
 :::
 

@@ -513,11 +513,11 @@ Therefore, including age as a covariate on drug clearance is always a sensible c
 
 ##### Male
 
-IBW = 50 kg + 2.3 kg for each inch over 5ft in height
+IBW = 50 kg + 2.3 kg for each inch over 5ft in height
 
 ##### Female
 
-IBW = 45.5 kg + 2.3 kg for each inch over 5ft in height
+IBW = 45.5 kg + 2.3 kg for each inch over 5ft in height
 
 ##### Obese
 

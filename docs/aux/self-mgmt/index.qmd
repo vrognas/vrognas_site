@@ -7,7 +7,7 @@ date: "2025-08-31"
 Your value isn't measured by keystrokes, lines of code, or calendar hours
 It's measured by what you ship, solve, and create.
 Deep work looks like: thinking, pausing, reading, rewriting.
-Not pacing in meetings for 8 hours.
+Not pacing in meetings for 8 hours.
 
 **Social media shows the sugar, not the stress.**
 You saw the team building and coffee break.
@@ -103,14 +103,14 @@ A TOWS matrix evaluates interactions between these.
 
 ### Responsible allocation of time between projects
 
-1. What *already* supports me and *will* support me the coming 0--2 years.
-  * Time: 60% (36 h)
+1. What *already* supports me and *will* support me the coming 0--2 years.
+  * Time: 60% (36 h)
   * 5 units/day
-2. What *will* support me in 3--5 years.
-  * Time: 30% (18 h)
+2. What *will* support me in 3--5 years.
+  * Time: 30% (18 h)
   * 2 units/day
-3. What *might* support me in 5--10 years.
-  * Time: 10% (6 h)
+3. What *might* support me in 5--10 years.
+  * Time: 10% (6 h)
   * 1 unit/day
 
 ## Conclusion – Sustainable productivity is about choice

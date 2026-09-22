@@ -103,6 +103,23 @@ Use relative paths (`../cdisc/index.qmd`). Note that `@sec-` cross-references re
 **within a document only** in a `type: website` project — to link a section on another
 page, write a markdown anchor (`../../pk/1_absorption/index.qmd#sec-bcs`).
 
+### Non-breaking spaces
+
+**Units take a literal non-breaking space (U+00A0), not an ordinary one:**
+`130 mL/min/1.73 m^2^`, `50 years`, `4.5 MU`. The source files are full of them
+and they are deliberate — a number must never be orphaned from its unit across a
+line break.
+
+Two consequences when editing:
+
+- **Matching text will fail if you assume ordinary spaces.** Search with a
+  whitespace class (`[\s  ]`) or normalise before comparing. U+202F
+  (narrow no-break space) also appears.
+- **Preserve them when rewriting a sentence**, and add them to any new
+  number-unit pair you introduce.
+
+Percentages and bare nouns attach normally: `17.9%`, `20 patients`, `day 28`.
+
 ### Drug names
 
 Where a named drug has an ATC code, give it inline in parentheses on first mention:

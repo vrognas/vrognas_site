@@ -73,7 +73,7 @@ Take‑home checklist for pharmacometricians
 | Store raw, cleaned, and analysis datasets with hashes | §2.10 Data verifiability; §5.5.3 Audit‑trail |
 | Validate NONMEM/R scripts (unit tests) | §5.5.3 Computerized‑system validation |
 | Document model decisions in a contemporaneous log | §4.9 ALCOA; §5.18 Monitoring evidence |
-| Archive assays, datasets, reports ≥ 2 years post‑marketing | §4.9.5 & §5.5.11 Record retention |
+| Archive assays, datasets, reports ≥ 2 years post‑marketing | §4.9.5 & §5.5.11 Record retention |
 
 : Checklist {#tbl-checklist tbl-colwidths="[50, 50]"}
 

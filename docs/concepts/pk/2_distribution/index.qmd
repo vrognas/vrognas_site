@@ -21,7 +21,7 @@ $\Vd$ usually has 30% inter-individual variability.
   Extensive binding and partitioning in tissue creates a large tissue distribution volume.
 ](../../images/distribution.png){#fig-distribution}
 
-Typical physiological valoumes for a 70 kg adult:
+Typical physiological valoumes for a 70 kg adult:
 
 * V~plasma~ ≈ 3 L
 * V~interstitial~ ≈ 12 L

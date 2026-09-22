@@ -8,7 +8,7 @@ Drugs applied to the eye and the ear.
 The notes below come from S01, ophthalmologicals, where the difficulty is an organ of limited accessibility, for administering drug and for sampling tissue [@kuepferQuantitativeSystemsPharmacology2023].
 
 In 1977 Thom Zimmerman and Herbert Kaufman studied single-dose timolol at four strengths in twenty patients with chronic open-angle glaucoma.
-Every strength, down to 0.1%, lowered pressure for at least 24 hours, which led them to propose a once a day topical agent [@zimmermanTimololDoseResponse1977].
+Every strength, down to 0.1%, lowered pressure for at least 24 hours, which led them to propose a once a day topical agent [@zimmermanTimololDoseResponse1977].
 
 |  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
@@ -21,7 +21,7 @@ Every strength, down to 0.1%, lowered pressure for at least 24 hours, which led 
 ## Modeling notes
 
 **Endpoint.**
-In S01E the endpoint is **intraocular pressure**, read as a 24 hour series rather than one clinic value, because the baseline itself carries a circadian rhythm [@durairajMechanismBasedTranslational2014].
+In S01E the endpoint is **intraocular pressure**, read as a 24 hour series rather than one clinic value, because the baseline itself carries a circadian rhythm [@durairajMechanismBasedTranslational2014].
 Posterior segment endpoints vary: the pegcetacoplan analysis used geographic atrophy lesion area [@crassPharmacokineticPharmacodynamicAnalysis2025], the faricimab analysis best corrected visual acuity [@diackOcularPharmacokineticsFaricimab2024].
 
 **Easy to overlook.**

@@ -19,7 +19,7 @@ Children may have more rapid disease progression and accelerated damage of the d
 **An HIV-positive person today who is on effective treatment can <span class="red-underline">live as long and be as healthy as a person who does not have HIV</span>**.
 With treatment, the viral load in patients can be reduced and maintained at such a low level that the risk of transmitting the virus to someone else can be almost eliminated.
 However, it is a **life-long infection as it’s <span class="red-underline">impossible to clear it from your system**</span>, even when treated with drugs that target the virus.
-Without treatment, the average survival time after infection with HIV is estimated to be 9--11 years, depending on the HIV subtype.
+Without treatment, the average survival time after infection with HIV is estimated to be 9--11 years, depending on the HIV subtype.
 
 ### Subtypes
 
@@ -64,9 +64,9 @@ The immune system then kicks in, and the symptoms go away---so it can be easy to
 
 Rapid diagnostic tests that provide same-day results are used.
 Most widely used HIV diagnostic tests detect antibodies produced by a person as part of their immune response to fight HIV.
-In most cases, people develop antibodies to HIV within 28 days of infection.
+In most cases, people develop antibodies to HIV within 28 days of infection.
 During this time, people are in the so-called "window period" when they have low levels of antibodies that many rapid tests cannot detect, but they may still transmit HIV to others.
-People who have had a recent high-risk exposure and test negative can have a further test after 28 days.
+People who have had a recent high-risk exposure and test negative can have a further test after 28 days.
 
 ## How can it be treated?
 

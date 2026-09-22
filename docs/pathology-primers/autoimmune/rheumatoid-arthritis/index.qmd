@@ -30,7 +30,7 @@ Two major "types": seropositive and seronegative, with seropositive presenting m
 ## Diagnosis
 
 * Number and location of affected joints
-* Duration of disease >= 6 weeks
+* Duration of disease >= 6 weeks
 * Acute-phase reactants
 * X-ray for bone erosion
 * Serum samples to determine seropositive/seronegative

@@ -17,7 +17,7 @@ Aim to operate at **A-energy** by having clear strategies and ownership.
 
 ## Synthesis of meeting workflow (ref Alfred Sloan)
 
-1. Send out invitation ~1 week in advance (No agenda = no meeting!)
+1. Send out invitation ~1 week in advance (No agenda = no meeting!)
     1. Announce purpose/topic and desired outcome.
     2. List agenda topics as questions.
     3. Compile and attach "reading guide"^[SE: "läsanvisning"].
@@ -34,7 +34,7 @@ Aim to operate at **A-energy** by having clear strategies and ownership.
       * Decisions
       * Action-points (What should be done, by when, and who's responsible?)
         * MoSCoW
-    7. 5 min to wrap up/summarize
+    7. 5 min to wrap up/summarize
         1. !: Align on decisions and action list.
         2. +: “What did we do well?”  
         3. Δ: “What do we want to do differently?”
@@ -88,10 +88,10 @@ If you feel that you are floundering (as every student sometimes does), ask your
 Be structured before (agenda) and after (memo) the meeting, but unstructured within the agenda.
 * Implement [Maker-Manager schedules](https://paulgraham.com/makersschedule.html).
 Managers thrive on 30-minute blocks for decisions.
-Makers need 3--4 hour blocks for deep work-schedule afternoon meetings for makers to protect creative flow.
+Makers need 3--4 hour blocks for deep work-schedule afternoon meetings for makers to protect creative flow.
     * Maker: **deep work** in the AM (8--12), Manager: **meetings** in the PM (13--17).
     * Meetings mostly need to fall into a fairly narrow range of time slots to be reasonable for everyone.
-    That means almost all meetings land in a 2 h time slot each day and the number than can be scheduled are limited so if it doesn't have to be a meeting, it isn't.
+    That means almost all meetings land in a 2 h time slot each day and the number than can be scheduled are limited so if it doesn't have to be a meeting, it isn't.
 * Use the 4-bullet update:
     * Here's what you asked me to do...
     * Here's what I did...
