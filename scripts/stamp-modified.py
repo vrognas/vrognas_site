@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Replace the rendered "Published" date with a "Modified" date taken from git.
+"""Replace the rendered "Published" date with an "Updated" date taken from git.
 
 Quarto renders the frontmatter `date:` as "Published", which went stale the
 moment a page was rewritten. Every page now shows a single date, labelled
-Modified, derived from the last commit that touched its source. Keeping such a
+Updated, derived from the last commit that touched its source. Keeping such a
 field accurate by hand does not scale, and deriving it from file mtime is wrong
 in CI: Netlify clones fresh, so every mtime is the checkout time and every page
 would claim it changed at build time.
@@ -114,12 +114,22 @@ PUBLISHED = re.compile(
     r"</div>\s*</div>)",
     re.S,
 )
-EXISTING = re.compile(
-    r'<div>\s*<div class="quarto-title-meta-heading">Modified</div>\s*'
-    r'<div class="quarto-title-meta-contents">\s*<p class="date-modified">([^<]*)</p>\s*'
-    r"</div>\s*</div>",
-    re.S,
-)
+def _meta_block(heading: str, cls: str) -> re.Pattern:
+    return re.compile(
+        rf'<div>\s*<div class="quarto-title-meta-heading">{heading}</div>\s*'
+        rf'<div class="quarto-title-meta-contents">\s*<p class="{cls}">([^<]*)</p>\s*'
+        r"</div>\s*</div>",
+        re.S,
+    )
+
+
+# What Quarto emits when a page declares date-modified itself, and what this
+# script wrote before the label was renamed to "Updated". Still matched so an
+# already-deployed page is relabelled rather than left with two date blocks.
+MODIFIED = _meta_block("Modified", "date-modified")
+# What this script writes now. Matched so a second pass over already-stamped
+# output is a no-op rather than a duplicate.
+UPDATED = _meta_block("Updated", "date-modified")
 
 dates = git_commit_dates()
 if not dates:
@@ -144,26 +154,30 @@ for page in sorted(OUT.rglob("*.html")):
         continue
 
     has_published = bool(PUBLISHED.search(html))
-    has_modified = bool(EXISTING.search(html))
-    if not has_published and not has_modified:
+    has_modified = bool(MODIFIED.search(html))
+    has_updated = bool(UPDATED.search(html))
+    if not (has_published or has_modified or has_updated):
         no_block += 1
         continue
 
     block = (
-        '<div>\n    <div class="quarto-title-meta-heading">Modified</div>\n'
+        '<div>\n    <div class="quarto-title-meta-heading">Updated</div>\n'
         '    <div class="quarto-title-meta-contents">\n'
         f'      <p class="date-modified">{pretty(iso)}</p>\n'
         "    </div>\n  </div>"
     )
-    # Replace whichever block the page has with a single Modified block, so a
-    # second run over already-stamped output is a no-op rather than a failure.
-    # Quarto emits Modified only when the page declares date-modified itself;
-    # after one pass it is the block this script wrote.
+    # Collapse whichever blocks the page has into a single Updated block, so a
+    # second run over already-stamped output is a no-op rather than a duplicate.
+    # Order matters: Published wins, then a legacy Modified block, then our own.
     if has_published:
-        html = EXISTING.sub("", html)
+        html = MODIFIED.sub("", html)
+        html = UPDATED.sub("", html)
         html = PUBLISHED.sub(lambda _: block, html, count=1)
+    elif has_modified:
+        html = UPDATED.sub("", html)
+        html = MODIFIED.sub(lambda _: block, html, count=1)
     else:
-        html = EXISTING.sub(lambda _: block, html, count=1)
+        html = UPDATED.sub(lambda _: block, html, count=1)
     html = re.sub(
         r'(<meta name="dcterms.date" content=")[^"]*(")',
         lambda mm: mm.group(1) + iso[:10] + mm.group(2),
@@ -173,13 +187,13 @@ for page in sorted(OUT.rglob("*.html")):
     page.write_text(html, encoding="utf-8")
     stamped += 1
 
-print(f"Modified dates: {stamped} pages stamped from git")
+print(f"Updated dates: {stamped} pages stamped from git")
 if no_source or no_block:
     print(f"  skipped: {no_source} without git history, {no_block} without a date block")
 
 if stamped == 0:
     print(
-        "ERROR: no page received a Modified date; the date block markup "
+        "ERROR: no page received an Updated date; the date block markup "
         "may have changed (format drift?)",
         file=sys.stderr,
     )
