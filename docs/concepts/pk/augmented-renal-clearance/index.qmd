@@ -19,6 +19,8 @@ Futhermore, standard CrCL estimation equations were developed for steady-state c
 
 The main concern is that the increased renal function will lead to suboptimal therapy with drugs that are primarily eliminated by renal excretion.
 Most notably, in the context of renally excreted antimicrobials like aminonglycosides.
+The same holds for β-lactams: across a cohort of critically ill patients, 42% had initial trough concentrations below the MIC, and among those with a measured creatinine clearance at or above the 130 mL/min/1.73 m^2^ threshold used here, 82% did [@udySubtherapeuticInitialLactam2012].
+How that exposure is referenced to the MIC in the first place is covered under [antibacterials for systemic use](../../../pharmacopeia/atc/j/j01/index.qmd).
 Despite this, the underlying prognosis of patients with ARC is generally more favorable that than of patients with lower creatinine clearances.
 
 In a study by Andrew Udy et al., 85% of patients with traumatic brain injury who needed saline infusion and vasopressor agents to maintain cerebral perfusion pressure had ARC.
@@ -47,7 +49,10 @@ Introduce a scalar above 130 mL/min.
 The idea is that this will estimate, and correct for, the bias of estimating equations in ARC.
 Ofcourse, this assumes that the bias is linear.
 
-# References
+## References
+
+::: {#refs}
+:::
 
 * Kristoffersson et al. (2020) https://doi.org/10.1016/j.cmi.2020.03.016
 * Atkinson (2018) https://doi.org/10.12793/tcp.2018.26.3.111

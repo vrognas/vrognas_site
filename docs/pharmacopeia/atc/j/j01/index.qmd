@@ -155,6 +155,11 @@ Semi-mechanistic models give the bacteria a growth rate, a capacity limit and a 
 **Resistance is a compartment.**
 Regrowth is usually modeled as a pre-existing less susceptible subpopulation that treatment selects for, though published models differ in how resistance arises [@jumbeApplicationMathematicalModel2003; @nielsenPharmacokineticPharmacodynamicModelingAntibacterial2013].
 
+**The host sets the exposure.**
+An index is only as good as the concentration achieved, and in the critically ill that is not the concentration the dose was chosen for.
+Among critically ill patients given β-lactams, 42% had initial trough concentrations below the MIC; where measured creatinine clearance was ≥130 mL/min/1.73 m^2^ that figure was 82% [@udySubtherapeuticInitialLactam2012].
+This is the host vertex of @fig-triangle, and it has its own page: [augmented renal clearance](/docs/concepts/pk/augmented-renal-clearance/).
+
 ## References
 
 1. [EMA: PKPD for antibiotics](https://www.ema.europa.eu/en/use-pharmacokinetics-pharmacodynamics-development-antibacterial-medicinal-products-scientific-guideline)
