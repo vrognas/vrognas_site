@@ -3,9 +3,6 @@ title: "Tuberculosis (TB)"
 date: "2025-07-14"
 ---
 
-::: {.callout-caution title="Under construction"}
-:::
-
 ## What is TB?
 
 Tuberculosis (TB) is an infectious disease caused by **bacteria** (*Mycobacterium tuberculosis*).
@@ -18,7 +15,7 @@ If left untreated, active TB disease kills around 50% of those affected.
 
 ::: {.callout-note title="TB and HIV"}
 
-People living with HIV are ~16 times more likely to fall ill with TB disease than people without HIV.
+People living with [HIV](../../viral/hiv/index.qmd) are ~16 times more likely to fall ill with TB disease than people without HIV.
 TB is the leading cause of death among people with HIV.
 HIV and TB form a lethal combination, each speeding the other's progress.
 
@@ -86,10 +83,10 @@ Active pulmonary TB is treated with <span class="red-underline">**several antibi
 
 The most common antibiotics used are:
 
-* isoniazid (H)
-* rifampicin (R)
-* pyrazinamide (Z)
-* ethambutol (E)
+* isoniazid (H, J04AC01)
+* rifampicin (R, J04AB02)
+* pyrazinamide (Z, J04AK01)
+* ethambutol (E, J04AK02)
 
 ### Drug-susceptible TB (DS-TB) (6 months of treatment)
 
@@ -106,13 +103,13 @@ For **children** (3 mo -- 16 y), **2HRZ(E)/2HR** should be used.
 
 ### Multi-drug/rifampicin resistant TB (MDR/RR-TB) (6--18 months of treatment)
 
-* **6 months**: bedaquiline, pretomanid, linezolid, moxifloxacin (BPaLM)
+* **6 months**: bedaquiline (J04AK05), pretomanid (J04AK08), linezolid (J01XX08), moxifloxacin (J01MA14) (BPaLM)
 
-The second-line treatment contains bedaquiline, levofloxacin/moxifloxacin, ethionamide, ethambutol, isoniazid, pyrazinamide and clofazimine (all-oral regimen) administered for up to 9 months.
+The second-line treatment contains bedaquiline, levofloxacin (J01MA12)/moxifloxacin, ethionamide (J04AD03), ethambutol, isoniazid, pyrazinamide and clofazimine (J04BA01) (all-oral regimen) administered for up to 9 months.
 
 ### Drug characteristics
 
-#### Delamanid
+#### Delamanid (J04AK06)
 
 Approved 2014 in adults, 2021 in children.
 
@@ -120,14 +117,14 @@ Approved 2014 in adults, 2021 in children.
 * AUC ~2.7--4 after meal, dose with food
 * 2 CMT PK, with 2 CMT metabolite.
 
-#### Bedaquiline
+#### Bedaquiline (J04AK05)
 
 * f~b~ ≈ 99%
 * Food effect
 * CYP3A4 metabolism
 * Most common adverse events: QTc-prolongation, and hepatotoxicity
 
-#### Linezolid
+#### Linezolid (J01XX08)
 
 * Highly variable PK
 * Inhibits its own CL
@@ -136,14 +133,14 @@ Approved 2014 in adults, 2021 in children.
 * "Non-enzymatic metabolism"
 * Known toxicity at higher doses and/or longer durations
 
-#### Rifampicin
+#### Rifampicin (J04AB02)
 
 Old drug.
 
 * Strong enzyme inducer of enzymes and pumps, it thus induces its own CL
 * Also saturable biliary excretion -> higher than dose-prop exposures -> F is dose dependent.
 
-#### Pretomanid
+#### Pretomanid (J04AK08)
 
 Approved 2019.
 

@@ -6,6 +6,8 @@ date: "2026-02-08"
 
 Part of [A: Alimentary tract and metabolism](../).
 
+The disease these drugs treat is covered in the [diabetes primer](/docs/pathology-primers/diabetes/).
+
 **Endpoint.**
 HbA1c, glycated hemoglobin, is the most commonly used biomarker of glycemic management and a surrogate endpoint for anti-diabetic drug approval [@lledogarciaSemimechanisticModelRelationship2013].
 

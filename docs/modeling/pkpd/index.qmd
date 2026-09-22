@@ -45,6 +45,11 @@ They are most of the time highly correlated (>0.95), i.e., any of them can be us
   * BI
   * PO
 
+## See also
+
+* [Pharmacodynamics](../../concepts/pd/index.qmd) --- the effect models being joined to the PK.
+* [Time-to-event analysis](../tte/index.qmd) --- when the response is an event rather than a measurement.
+
 ## References
 
 1. PAGE 31 (2023) Abstr 10663 [https://www.page-meeting.org/?abstract=10663]

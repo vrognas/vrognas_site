@@ -3,6 +3,7 @@ name: Quarto build check
 on:
   push:
     branches: [ main ]
+  pull_request:
 
 jobs:
   render:
@@ -10,7 +11,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: quarto-dev/quarto-actions/setup@v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - name: Check site
         run: quarto check
       - name: Render site
         run: quarto render
+      # Navigation is hand-maintained by design, so nothing derives the nav from the
+      # filesystem. This is the step that reconciles them: it fails on orphan pages,
+      # nav entries pointing at pruned drafts, dead links/images, and redirects that
+      # 301 into a 404.
+      - name: Check site structure
+        run: python scripts/check-site.py

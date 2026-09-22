@@ -5,9 +5,6 @@ code-overflow: scroll
 date: "2026-02-20"
 ---
 
-::: {.callout-caution title="Under construction"}
-:::
-
 ## Modeling: Writing the control stream
 
 One hint on control files: never write one from scratch.

@@ -63,15 +63,17 @@ Main therapeutic aim is symptom reduction through modulation of neurotransmitter
 
 ### Common Drug Classes & Regimens
 
+Antipsychotics sit in ATC [N05 Psycholeptics](../../../pharmacopeia/n_nervous-system/n05_psycholeptics/index.qmd), where the dropout-hazard modelling for PANSS trials is described.
+
 #### First-generation (typical) antipsychotics *(historically first-line, now less preferred)*
 
-Examples include Haloperidol, Chlorpromazine.
+Examples include Haloperidol (N05AD01), Chlorpromazine (N05AA01).
 
 **MoA:** Strong dopamine D2 receptor antagonism reduces positive symptoms but carries high risk of extrapyramidal side effects.
 
 #### Second-generation (atypical) antipsychotics *(current first-line treatment)*
 
-Examples include Risperidone, Olanzapine, Quetiapine, Aripiprazole, Clozapine (reserved for treatment-resistant cases).
+Examples include Risperidone (N05AX08), Olanzapine (N05AH03), Quetiapine (N05AH04), Aripiprazole (N05AX12), Clozapine (N05AH02, reserved for treatment-resistant cases).
 
 **MoA:** Mixed serotonin (5-HT2A) and dopamine D2 receptor antagonism; improves negative and cognitive symptoms, with lower risk of extrapyramidal side effects.
 

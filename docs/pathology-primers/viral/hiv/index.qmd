@@ -90,7 +90,7 @@ There are eight classes of antiretroviral agents (ARVs) and over 30 individual d
 7. CD4 T lymphocyte (CD4) post-attachment inhibitor
 8. gp120 attachment inhibitor
 
-There are also two drugs, ritonavir (RTV) and cobicistat (COBI), which can be used as PK-enhancers ("boosters") to improve the PK profiles of PIs and the INI elvitegravir.
+There are also two drugs, ritonavir (RTV, J05AE03) and cobicistat (COBI, V03AX03), which can be used as PK-enhancers ("boosters") to improve the PK profiles of PIs and the INI elvitegravir (J05AJ02).
 
 Depending on the guidelines, initial treatment generally consists of two NRTIs and a third ARV, either an INI, an NNRTI, or a PI with a booster.
 

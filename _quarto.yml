@@ -290,11 +290,8 @@ website:
             - section: "(L) Antineoplastic and immunomodulating agents"
               href: docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/index.qmd
               contents:
-                - section: "(01) Antineoplastic agents"
+                - text: "(01) Antineoplastic agents"
                   href: docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/l01_antineoplastic-agents/index.qmd
-                  contents:
-                  - text: "(01FX) Other monoclonal antibodies and antibody-drug conjugates"
-                    href: docs/pharmacopeia/l_antineoplastic-and-immunomodulating-agents/l01_antineoplastic-agents/l01fx_other-monoclonal-antibodies-and-antibody-drug-conjugates/index.qmd
                 - section: "Immunosuppressants"
                   contents:
                   - text: "(04A) Immunosuppressants"
@@ -345,7 +342,18 @@ website:
                   href: docs/pharmacopeia/v_various/v10_therapeutic-radiopharmaceuticals/index.qmd
     - id: regulatory
       title: "Regulatory Rites"
+      collapse-level: 2
       style: "floating"
+      contents:
+        - section: "Regulatory Rites"
+          href: docs/regulatory/index.qmd
+          contents:
+            - text: "Good Clinical Practice (GCP)"
+              href: docs/regulatory/index.qmd#good-clinical-practice-gcp
+            - text: "EMA submission workflow"
+              href: docs/regulatory/index.qmd#submission-workflow-at-the-ema
+            - text: "SmPC"
+              href: docs/regulatory/index.qmd#smpc-summary-of-product-characteristics
     - id: tools-of-the-trade
       title: "Tools of the Trade"
       collapse-level: 2
@@ -376,6 +384,8 @@ website:
               href: docs/tools-of-the-trade/ai/index.qmd
             - text: "Windows 11"
               href: docs/tools-of-the-trade/windows/index.qmd
+            - text: "macOS"
+              href: docs/tools-of-the-trade/macos/index.qmd
   page-footer:
     left: "© 2026 Viktor Rognås"
     right:

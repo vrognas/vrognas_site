@@ -78,6 +78,40 @@ npm install
 - Main navigation is defined in `_quarto.yml` sidebar configurations
 - Each major section has its own sidebar with hierarchical organization
 - Update navigation when adding new content files
+- **Navigation is hand-maintained on purpose.** Do not introduce Quarto `listing:` blocks
+  or `contents: auto` sidebars; the manual trees exist to control ordering (the ATC letter
+  sequence, absorption → distribution → elimination) and the curated card blurbs.
+  Adding a page therefore takes three synced edits: the file, the `_quarto.yml` sidebar
+  entry, and the parent hub's `.index-card`. `scripts/check-site.py` (run in CI after
+  `quarto render`) fails the build if they drift apart.
+- **There is deliberately no `/docs/` landing page.** The "Encyclopædia" navbar entry is a
+  `menu:` with no `href:`, so clicking it expands the dropdown rather than navigating.
+  Do not add `docs/index.qmd`, and do not add a `_redirects` rule pointing at `/docs/`.
+
+### Cross-linking
+
+The sidebar handles hierarchy; prose handles relevance. Link *sideways*, never *upwards*.
+
+- **Do not add parent/"Part of" links.** The sidebar and the breadcrumb already show a
+  page's place in the tree, so restating it in prose is redundant.
+- **`## See also`.** A plain bulleted list placed immediately *above* the existing
+  `## References` block, one line per target, each saying why the reader would go there.
+  Prefer weaving the link into the prose where it has a natural home — that is the house
+  style in `docs/pharmacopeia/` and `docs/concepts/clinpharm-studies/`.
+
+Use relative paths (`../cdisc/index.qmd`). Note that `@sec-` cross-references resolve
+**within a document only** in a `type: website` project — to link a section on another
+page, write a markdown anchor (`../../pk/1_absorption/index.qmd#sec-bcs`).
+
+### Drug names
+
+Where a named drug has an ATC code, give it inline in parentheses on first mention:
+`Pembrolizumab (Keytruda, L01FF02)`, `Metformin, A10BA02`. This is what joins the
+pathology primers to the Pharmacopœia. **Always verify the code against the WHO ATC/DDD
+index** (<https://atcddd.fhi.no/atc_ddd_index/>, level-4 group pages list the substances)
+— never write one from memory. Where a substance has two codes, use the one matching the
+indication under discussion (methotrexate is L01BA01 as an antineoplastic but L04AX03 as
+an immunosuppressant, which is the relevant one for RA and psoriasis).
 
 ### Styling and Themes
 

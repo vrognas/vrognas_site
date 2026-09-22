@@ -3,9 +3,6 @@ title: "Math Intuition"
 date: "2025-03-27"
 ---
 
-::: {.callout-caution title="Under construction"}
-:::
-
 In every quantitative endeavour, one question matters most: **what is the estimand?**
 The estimand is the precise quantity we use data to draw inference about.
 Too often the estimand is not defined before leaping straight to describing data and methods.

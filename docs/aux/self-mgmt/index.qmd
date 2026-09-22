@@ -3,9 +3,6 @@ title: "Self Management"
 date: "2025-08-31"
 ---
 
-::: {.callout-caution title="Under construction"}
-:::
-
 **Modern knowledge work is not industrial factory work.**
 Your value isn't measured by keystrokes, lines of code, or calendar hours
 It's measured by what you ship, solve, and create.

@@ -1,5 +1,5 @@
 ---
-title: "Rheumatiod Arthritis (RA)"
+title: "Rheumatoid arthritis (RA)"
 date: "2024-12-04"
 ---
 
@@ -41,30 +41,30 @@ Two major "types": seropositive and seronegative, with seropositive presenting m
 
 * DMARDs (Disease-Modifying Antirheumatic Drugs)
   * Conventional
-    * Methotrexate (folate antagonist)
+    * Methotrexate (folate antagonist, L04AX03)
       * Typical treatment, 33% response rate.
-    * Leflunomide
-    * Sulfasalazine
-    * Hydroxychloroquine
+    * Leflunomide (L04AK01)
+    * Sulfasalazine (A07EC01)
+    * Hydroxychloroquine (P01BA02)
   * Biologic (either alone or combo with conventionals)
     * Anti TNF-alpha
-      * Adalimumab
-      * Certolizumab
-      * Etanercept
-      * Golimumab
-      * Infliximab
+      * Adalimumab (L04AB04)
+      * Certolizumab pegol (L04AB05)
+      * Etanercept (L04AB01)
+      * Golimumab (L04AB06)
+      * Infliximab (L04AB02)
     * Anti IL6
-      * Tocilizumab
-      * Sarilumab
+      * Tocilizumab (L04AC07)
+      * Sarilumab (L04AC14)
     * B-cell depletion
-      * Rituximab
+      * Rituximab (L01FA01)
     * T-Cell co-stimulatory inhibitor
-      * Abatacept
+      * Abatacept (L04AA24)
   * Targeted synthetic
     * JAK inhibitor
-      * Tofacitinib
-      * Baricitinib
-      * Upadacitinib
+      * Tofacitinib (L04AF01)
+      * Baricitinib (L04AF02)
+      * Upadacitinib (L04AF03)
 
 ## References
 

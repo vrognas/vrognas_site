@@ -20,7 +20,7 @@ This page is your quick-reference for that mapping. It is organized as follows:
 | **Single-dose kinetics** | IV bolus + oral equations | How *V~d~* and *k~e~* shape curves |
 | **Repeated/continuous input** | Multiple-dose & infusion profiles | Why accumulation ratio (*R~ac~*) matters |
 | **Equations at a glance** | One-liner table of canonical PK formulae | Copy-paste cheatsheet |
-| **Deep dives** | Absorption · Distribution · Elimination | Mechanistic levers behind each parameter |
+| **Deep dives** | [Absorption](1_absorption/index.qmd) · [Distribution](2_distribution/index.qmd) · [Elimination](3_elimination/index.qmd) | Mechanistic levers behind each parameter |
 
 Use the overview to **choose the right regimen**, then jump to the deep-dive pages when you need mechanism-level detail.
 

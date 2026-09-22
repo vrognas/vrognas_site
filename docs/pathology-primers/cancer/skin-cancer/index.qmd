@@ -112,13 +112,13 @@ TNM stands for Tumor, Node, Metastasis.
 * Targeted drugs
 * Checkpoint inhibitors (immunotherapy)
   * PD-1 inhibitor
-    * Nivolumab (Opdivo)
-    * Pembrolizumab (Keytruda)
-    * Cemiplimab (Libtayo)
+    * Nivolumab (Opdivo, L01FF01)
+    * Pembrolizumab (Keytruda, L01FF02)
+    * Cemiplimab (Libtayo, L01FF06)
   * PD-L1 inhibitor
-    * Atezolizumab (Tecentriq)
+    * Atezolizumab (Tecentriq, L01FF05)
   * CTLA-4 inhibitor
-    * Ipilimumab (Yervoy)
+    * Ipilimumab (Yervoy, L01FX04)
 
 ## References
 

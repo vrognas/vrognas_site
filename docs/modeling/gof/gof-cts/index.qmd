@@ -8,13 +8,7 @@ date: "2026-02-20"
 
 The graphs are broadly separated into two categories: prediction-based (basic) and simulation-based tools.
 
-| Plot | Model assumption tested | What to evaluate | Model impact |
-| :--- | :--- | :--- | :--- |
-| **Exploratory plots** |  |  |  |
-| Time course of HR stratified by dose | No drug effect on HR | Consistency of change from baseline HR ΔHR with time, dose and treatment | If dose- or concentration-dependent effects on HR are observed, the relationship between QT and RR may differ between on- and off-treatment, impacting the QT correction differently between the two conditions <br> This could potentially violate the assumption that the applied QTc correction is an adequate heart rate correction method |
-| QTc versus RR intervals | QTc is independent of HR for drug-free and/or placebo treatments | Linear regression line should show the lack of relationship between QTc and RR intervals <br> Range of HR are similar off- and on-drug | Individual correction factor is potentially poorly estimated due to narrow range of RR intervals within each subject which could bias the C-QTc model |
-| Time course of mean concentrations and mean ΔQTc, ΔΔQTc intervals | Explore direct effect assumption <br> Evaluate PK/PD hysteresis | Shape of PK- and QTc-time profiles, e.g., time course of effect, time of peak, return to baseline <br> Magnitude of variability in PK and QTc | High inter-subject variability in ΔQTc can mask signal in mean curves-this is important in small-sized studies |
-| C-ΔQTc | Evaluate linearity and heterogeneity assumptions between exposure and QTc across doses and studies | Shape of C-QTc relationship <br> Magnitude of ΔQTc over observed concentration range <br> Concentration range covers worse case clinical exposure scenario | Model-independent observations are not corrected for covariates and might therefore not appear to match model prediction <br> Confounding factors not accounted for Heterogeneity between doses/trials |
+For the exploratory plots specific to a concentration-QTc analysis, see [C-QTc modeling](../../qt/index.qmd).
 
 ## Prediction-based evaluation
 

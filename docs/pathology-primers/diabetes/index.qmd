@@ -68,26 +68,28 @@ PD-targets include insulin secretion, insulin sensitivity, glucose absorption, a
 
 ### Common Drug Classes & Regimens
 
+All of the classes below sit in ATC [A10 Drugs used in diabetes](../../pharmacopeia/a_alimentary-tract-and-metabolism/a10_drugs-used-in-diabetes/index.qmd), which carries the pharmacometric modelling notes for them.
+
 #### Insulin *(mandatory in T1DM, second-line or advanced-stage T2DM)*
 
-- **Rapid-acting (lispro, aspart, glulisine), long-acting (glargine, detemir, degludec):**  
+- **Rapid-acting (lispro A10AB04, aspart A10AB05, glulisine A10AB06), long-acting (glargine A10AE04, detemir A10AE05, degludec A10AE06):**  
   - **MoA:** Directly reduces blood glucose by stimulating glucose uptake into tissues.
 
 #### Oral anti-diabetic agents *(first-line in T2DM)*
 
-- **Biguanides (Metformin):**  
+- **Biguanides (Metformin, A10BA02):**  
   - **MoA:** Reduces hepatic glucose production, improves insulin sensitivity.
 
-- **Sulfonylureas (Gliclazide, Glimepiride):**  
+- **Sulfonylureas (Gliclazide A10BB09, Glimepiride A10BB12):**  
   - **MoA:** Stimulates pancreatic insulin secretion.
 
-- **SGLT2 inhibitors (Empagliflozin, Dapagliflozin):**  
+- **SGLT2 inhibitors (Empagliflozin A10BK03, Dapagliflozin A10BK01):**  
   - **MoA:** Increases renal glucose excretion by blocking glucose reabsorption.
 
-- **GLP-1 receptor agonists (Semaglutide, Liraglutide, Dulaglutide):**  
+- **GLP-1 receptor agonists (Semaglutide A10BJ06, Liraglutide A10BJ02, Dulaglutide A10BJ05):**  
   - **MoA:** Enhances insulin secretion, suppresses glucagon secretion, promotes weight loss.
 
-- **DPP-4 inhibitors (Sitagliptin, Linagliptin):**  
+- **DPP-4 inhibitors (Sitagliptin A10BH01, Linagliptin A10BH05):**  
   - **MoA:** Enhances endogenous GLP-1 activity, improving insulin secretion.
 
 #### Dose Adjustments

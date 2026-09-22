@@ -1,5 +1,5 @@
 ---
-title: "Giant cell arteretis (GCA)"
+title: "Giant cell arteritis (GCA)"
 date: "2024-12-04"
 ---
 
@@ -43,9 +43,9 @@ This type of arteritis causes the arteries in the head, neck, and arm area to sw
 ## How can it be treated?
 
 * Corticosteroids
-  * Prednisone
+  * Prednisone (H02AB07)
 * IL-6 inhibitors
-  * Tocilizumab
+  * Tocilizumab (L04AC07)
 
 ## References
 

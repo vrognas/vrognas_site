@@ -66,19 +66,21 @@ Emerging therapies target disease modification by reducing amyloid-beta plaques 
 
 ### Common Drug Classes & Regimens
 
+Anti-dementia drugs are ATC N06D, within [N: Nervous system](../../../pharmacopeia/n_nervous-system/index.qmd).
+
 #### Cholinesterase inhibitors *(first-line treatment for mild-to-moderate AD)*
 
-- **Donepezil, Rivastigmine, Galantamine:**  
+- **Donepezil (N06DA02), Rivastigmine (N06DA03), Galantamine (N06DA04):**  
   - **MoA:** Enhance cholinergic neurotransmission by inhibiting acetylcholinesterase, temporarily stabilizing cognitive function.
 
 #### NMDA receptor antagonists *(moderate-to-severe AD)*
 
-- **Memantine:**  
+- **Memantine (N06DX01):**  
   - **MoA:** Modulates glutamate activity, reducing excitotoxicity and neuronal damage; often combined with cholinesterase inhibitors in advanced disease.
 
 #### Disease-modifying biologics *(emerging treatments)*
 
-- **Anti-amyloid antibodies:** Aducanumab, Lecanemab, Donanemab  
+- **Anti-amyloid antibodies:** Aducanumab (N06DX03), Lecanemab (N06DX04), Donanemab (N06DX05)  
   - **MoA:** Target amyloid-beta, promoting clearance or reducing plaque formation.
 
 #### Dose Adjustments

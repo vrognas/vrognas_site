@@ -194,3 +194,13 @@ The relevant suffix is used only on the name of the secondary member of the vari
 SEND (Standard for Exchange of Nonclinical Data) is the nonclinical counterpart to SDTM --- it applies the same domain-based structure to pre-clinical studies such as toxicology and pharmacokinetic studies *in vivo*.
 
 SEND data can be a source for allometric scaling, preclinical PK/PD model development, and inter-species translation.
+
+## See also
+
+The studies whose concentration and dosing data arrive in the PC and EX domains described above:
+
+* [First-in-human (FIH) studies](../fih/index.qmd) --- the first clinical source of SDTM PK data, and the cleanest.
+* [Drug-drug interaction (DDI) studies](../ddi/index.qmd) --- object and precipitant designs, delivered in the same domains.
+* [Bioavailability and bioequivalence](../ba-be/index.qmd) --- crossover designs, where period and sequence variables matter for ADaM derivation.
+* [Mass balance / ADME studies](../mass-balance/index.qmd) --- radiolabelled excreta and metabolite data, which do not fit PC cleanly.
+* [Clinical pharmacology studies](../index.qmd) --- how these studies fit across the development phases.

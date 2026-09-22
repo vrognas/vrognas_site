@@ -1,11 +1,8 @@
 ---
 title: "macOS"
-draft: true
+description: "Filesystem layout, the three Library folders, firmlinks, Homebrew, APFS case sensitivity, and PATH handling for macOS-based pharmacometric workflows."
 date: "2026-07-07"
 ---
-
-::: {.callout-caution title="Under construction"}
-:::
 
 ## Why No Drive Letters?
 

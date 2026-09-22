@@ -58,24 +58,26 @@ Treatment aims at restoring dopamine signaling, improving motor function, and re
 
 ### Common Drug Classes & Regimens
 
+Anti-parkinson drugs are ATC N04, within [N: Nervous system](../../../pharmacopeia/n_nervous-system/index.qmd).
+
 #### Dopamine replacement therapy *(first-line treatment)*
 
-- **Levodopa (+ carbidopa or benserazide):** 
+- **Levodopa (N04BA01; with carbidopa or benserazide, N04BA02):** 
   - **MoA:** Levodopa is converted to dopamine in the brain, restoring dopaminergic neurotransmission; peripheral decarboxylase inhibitors (carbidopa/benserazide) minimize peripheral side effects.
 
 #### Dopamine agonists *(alternative first-line or adjunctive)*
 
-- **Pramipexole, ropinirole, rotigotine:** 
+- **Pramipexole (N04BC05), ropinirole (N04BC04), rotigotine (N04BC09):** 
   - **MoA:** Directly activate dopamine receptors (D2/D3), reducing motor symptoms and potentially delaying levodopa-induced dyskinesias.
 
 #### Monoamine Oxidase B inhibitors *(adjunctive or mild cases)*
 
-- **Selegiline, rasagiline, safinamide:**
+- **Selegiline (N04BD01), rasagiline (N04BD02), safinamide (N04BD03):**
   - **MoA:** Inhibit dopamine metabolism, prolonging dopamine action and enhancing levodopa effectiveness.
 
 #### Catechol-O-methyltransferase (COMT) inhibitors *(adjunctive therapy)*
 
-- **Entacapone, opicapone, tolcapone:** 
+- **Entacapone (N04BX02), opicapone (N04BX04), tolcapone (N04BX01):** 
   - **MoA:** Reduce peripheral breakdown of levodopa, prolonging its availability and reducing motor fluctuations.
 
 #### Dose Adjustments

@@ -3,9 +3,6 @@ title: "The Elimination Concept"
 date: "2026-02-20"
 ---
 
-::: {.callout-caution title="Under construction"}
-:::
-
 The pharmacokinetic parameter that quantifies drug elimination, is called *clearance* (CL).
 
 CL describes the relationship between concentration and the rate of elimination of drug from the body.
@@ -262,6 +259,19 @@ $$ {#eq-ckd-epi-2021}
 | max() | | indicates the maximum of $\frac{\text{Scr}}{K}$ or 1 |
 
 In general, if the serum creatinine rises at 2--3 mg/dl per day then the GFR is near zero.
+
+### Unit conversions
+
+Clinical labs report these markers in either unit, so data pooled across sites usually needs converting before any of the equations above are applied.
+
+| Marker | Conversion |
+| :--- | :--- |
+| Creatinine | mg/dL $\rightarrow$ μmol/L: multiply by 88.4 (divide to reverse) |
+| Bilirubin | mg/dL $\rightarrow$ μmol/L: multiply by 17.1 (divide to reverse) |
+
+: Serum marker unit conversions {#tbl-unit-conversions tbl-colwidths="[20, 80]"}
+
+Bilirubin is the hepatic counterpart, and feeds the Child-Pugh score used to grade [hepatic impairment](../../clinpharm-studies/hepatic-impairment-studies/index.qmd).
 
 ### k~e~ for aminoglycosides
 

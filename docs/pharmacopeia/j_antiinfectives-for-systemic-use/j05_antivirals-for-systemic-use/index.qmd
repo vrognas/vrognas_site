@@ -7,8 +7,7 @@ date: "2026-02-20"
 ::: {.callout-caution title="Under construction"}
 :::
 
-<!-- TODO: Add image ../images/antivirals.png -->
-<!-- ![](../images/antivirals.png){#fig-antivirals} -->
+![Classes of antivirals for systemic use.](images/antivirals.png){#fig-antivirals}
 
 | J05 | ANTIVIRALS FOR SYSTEMIC USE |
 | :--- | :--- |

@@ -6,7 +6,16 @@ date: "2026-02-20"
 ::: {.callout-caution title="Under construction"}
 :::
 
+The drug effect models themselves --- the E~max~/sigmoid and linear-slope forms, and the symbols they use --- are defined on the concept page, [Pharmacodynamics](../../concepts/pd/index.qmd).
+This page covers how those forms are fitted and which response type each suits.
+
 ## Types of responses
+
+## See also
+
+* [Pharmacodynamics](../../concepts/pd/index.qmd) --- E~max~, EC~50~ and the exposure-response vocabulary.
+* [PKPD / exposure-response modeling](../pkpd/index.qmd) --- linking a PK model to these response models.
+* [Modeling variability](../variability/index.qmd) --- IIV and residual error on PD parameters.
 
 ## References
 

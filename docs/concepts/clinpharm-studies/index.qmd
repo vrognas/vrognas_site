@@ -193,7 +193,7 @@ Parallel-group studies in subjects with varying degrees of organ impairment vs. 
 Full, reduced, or adaptive/staggered designs.
 Measure unbound drug if high protein binding; include PD markers when possible.
 
-* [Renal impairment (RI)](renal-impairment-studies/index.qmd) -- classified by GFR; required when f~e~ >30% (FDA), but even non-renally cleared drugs should consider severe RI.
+* [Renal impairment (RI)](renal-impairment-studies/index.qmd) -- classified by GFR; required when f~e~ >30% (FDA), but even non-renally cleared drugs should consider severe RI. The mirror case, accelerated rather than reduced elimination, is [augmented renal clearance](../pk/augmented-renal-clearance/index.qmd).
 * [Hepatic impairment (HI)](hepatic-impairment-studies/index.qmd) -- classified by Child-Pugh (or NCI-ODWG in oncology); required when hepatic elimination >20% (FDA).
 
 #### 👩‍👦 Special populations (Phase 3--4)
@@ -201,7 +201,7 @@ Measure unbound drug if high protein binding; include PD markers when possible.
 PK studies in populations not adequately represented in the main clinical program.
 Often required for regulatory approval even if the primary indication is in adults.
 
-* Pediatrics -- required if seeking an adult indication (pediatric investigation plan / IPSP).
+* [Pediatrics](../pediatrics/index.qmd) -- required if seeking an adult indication (pediatric investigation plan / IPSP).
 * Elderly
 * Pregnant
 * Lactating -- required even for large molecules.

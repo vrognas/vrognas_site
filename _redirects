@@ -113,7 +113,9 @@
 /portfolio/index.html               /portfolio/                         301
 
 # Documentation pages - multiple depth levels
-/docs/index.html                                            /docs/                                           301
+# NOTE: no rule for /docs/index.html. There is deliberately no /docs/ landing page --
+# the "Encyclopaedia" navbar entry is a dropdown that expands, it does not navigate.
+# Redirecting to /docs/ would 301 into an intentional 404, so the old URL 404s directly.
 /docs/*/index.html                                          /docs/:splat/                                    301
 /docs/*/*/index.html                                        /docs/:splat/                                    301
 /docs/*/*/*/index.html                                      /docs/:splat/                                    301
@@ -169,5 +171,6 @@
 /CLAUDE                                             /                                               410
 /claude                                             /                                               410
 
-# Google auto-generated search URL (no search functionality on this site)
+# Google auto-generated search URL. Quarto's search IS enabled, but it is client-side
+# (navbar widget + search.json), so /search is not a real route and must not 404.
 /search                                             /                                               301

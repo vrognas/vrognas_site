@@ -4,8 +4,7 @@ description: "Concentration-QTc (C-QTc) analysis explained: the linear mixed-eff
 date: "2026-02-20"
 ---
 
-::: {.callout-caution title="Under construction"}
-:::
+For the regulatory context --- why ICH E14 requires this analysis, and when a standalone TQT study or a "double negative" waiver applies instead --- see [QT prolongation](../../concepts/clinpharm-studies/qt/index.qmd).
 
 ## Data
 

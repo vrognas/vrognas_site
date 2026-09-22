@@ -6,6 +6,8 @@ date: "2026-02-08"
 
 Part of [D: Dermatologicals](../).
 
+The disease these drugs treat, and where PASI sits among its biomarkers, is covered in the [psoriasis primer](/docs/pathology-primers/autoimmune/psoriasis/).
+
 **A bounded score needs a bounded likelihood.**
 PASI has been fitted with a bounded integer model, to respect the discrete and bounded nature of the data [@ooiBoundedIntegerModelbased2023], and with a zero-inflated beta distribution, for the bounded nature and distributional characteristics of the score [@tsamandourasEmployingZeroinflatedBeta2024].
 In one psoriasis analysis, fitting the 6-point physician's global assessment alone carried a substantial structural bias that joint modeling with PASI removed [@huImprovingCategoricalEndpoint2022].

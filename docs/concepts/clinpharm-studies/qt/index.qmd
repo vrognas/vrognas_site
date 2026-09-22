@@ -87,6 +87,10 @@ SAD/MAD data are well suited for early assessment of C-QTc.
 If the in vitro **hERG assay** and in vivo **cardiovascular study** (e.g. telemetry) are both negative, a clinical QT study may be waived entirely.
 Requires health authority agreement.
 
+## See also
+
+* [C-QTc modeling](../../../modeling/qt/index.qmd) --- the pre-specified linear mixed-effects model for ΔQTcF that the concentration-QTc route on this page relies on, and how to evaluate it.
+
 ## References
 
 ::: {#refs}

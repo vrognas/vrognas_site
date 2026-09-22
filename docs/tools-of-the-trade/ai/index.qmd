@@ -3,9 +3,6 @@ title: "Artificial Intelligence (AI) and Large Language Models (LLMs)"
 date: "2026-02-20"
 ---
 
-::: {.callout-caution title="Under construction"}
-:::
-
 Anthropic has devised something they call "AI Fluency"---a way to approach and work with AI that outlives evanescent tips and tricks that quickly become outdated.
 The proposed "4D framework" for AI Fluency rests on these four core competencies:
 

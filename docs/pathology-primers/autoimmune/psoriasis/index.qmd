@@ -60,9 +60,11 @@ Key inflammatory mediators driving psoriasis include cytokines like TNF-α, IL-1
 
 ### Common Drug Classes & Regimens
 
+The classes below sit in ATC [D05 Antipsoriatics](../../../pharmacopeia/d_dermatologicals/d05_antipsoriatics/index.qmd) and [D07 Dermatological corticosteroids](../../../pharmacopeia/d_dermatologicals/d07_corticosteroids-dermatological-preparations/index.qmd); the biologics are [L04A Immunosuppressants](../../../pharmacopeia/l_antineoplastic-and-immunomodulating-agents/l04_immunosuppressants/l04a_immunosuppressants/index.qmd).
+
 #### Topical Agents *(first-line for mild psoriasis)*
 
-- Corticosteroids, Vitamin D analogs (calcipotriol), Retinoids (tazarotene)  
+- Corticosteroids, Vitamin D analogs (calcipotriol, D05AX02), Retinoids (tazarotene, D05AX05)  
 **MoA:** Anti-inflammatory and antiproliferative actions on keratinocytes
 
 #### Phototherapy *(moderate disease or resistant cases)*
@@ -72,15 +74,15 @@ Key inflammatory mediators driving psoriasis include cytokines like TNF-α, IL-1
 
 #### Systemic treatments (oral) *(moderate-to-severe psoriasis)*
 
-- Methotrexate, Cyclosporine, Acitretin  
+- Methotrexate (L04AX03), Cyclosporine (ciclosporin, L04AD01), Acitretin (D05BB02)  
 **MoA:** Immunosuppressive, anti-inflammatory, antiproliferative effects
 
 #### Biologic therapies *(moderate-to-severe psoriasis, second-line after systemic therapies)*
 
-- **TNF-α inhibitors:** Adalimumab, Etanercept, Infliximab
-- **IL-17 inhibitors:** Secukinumab, Ixekizumab, Brodalumab
-- **IL-23 inhibitors:** Guselkumab, Risankizumab, Tildrakizumab
-- **IL-12/23 inhibitor:** Ustekinumab  
+- **TNF-α inhibitors:** Adalimumab (L04AB04), Etanercept (L04AB01), Infliximab (L04AB02)
+- **IL-17 inhibitors:** Secukinumab (L04AC10), Ixekizumab (L04AC13), Brodalumab (L04AC12)
+- **IL-23 inhibitors:** Guselkumab (L04AC16), Risankizumab (L04AC18), Tildrakizumab (L04AC17)
+- **IL-12/23 inhibitor:** Ustekinumab (L04AC05)  
 **MoA:** Targeted suppression of specific inflammatory cytokines
 
 #### Dose Adjustments

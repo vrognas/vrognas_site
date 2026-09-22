@@ -4,9 +4,6 @@ code-overflow: scroll
 date: "2026-02-20"
 ---
 
-::: {.callout-caution title="Under construction"}
-:::
-
 ## Output
 
 `.cnv` means "convergence", contains convergence-testing statistics.  

@@ -3,9 +3,6 @@ title: "Presentation Technique"
 date: "2025-04-21"
 ---
 
-::: {.callout-caution title="Under construction"}
-:::
-
 ## First: Plan
 
 The absolute first thing you need to understand about your talk, is **who** you will be talking to.

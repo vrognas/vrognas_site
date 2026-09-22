@@ -3,9 +3,6 @@ title: "Windows 11"
 date: "2026-02-20"
 ---
 
-::: {.callout-caution title="Under construction"}
-:::
-
 ## Why `C:` and Not `A:`?
 
 `A:` and `B:` were reserved for floppy disk drives.

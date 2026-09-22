@@ -3,9 +3,6 @@ title: "Coding Practices"
 date: "2026-02-22"
 ---
 
-::: {.callout-caution title="Under construction"}
-:::
-
 ## Coding
 
 Create and share beautiful images of your source code.

@@ -33,3 +33,8 @@ $$
 $$
 
 (1-compartment)
+
+## See also
+
+* [Pharmacodynamic (response) modeling](../../modeling/pd/index.qmd) --- fitting these forms.
+* [PKPD / exposure-response](../../modeling/pkpd/index.qmd) --- joining them to a PK model.

@@ -6,6 +6,8 @@ date: "2026-02-08"
 
 Part of [N: Nervous system](../).
 
+The main indication for these drugs is covered in the [schizophrenia primer](/docs/pathology-primers/neurological/schizophrenia/).
+
 **Dropout is informative.**
 Dropout probability rises with a high observed PANSS score, so the dropout hazard is modeled jointly with the score as a [time-to-event](/docs/modeling/tte/) process [@pillareddyModellingSimulationPositive2012].
 Ignoring it biases parameter estimates, though simulation put that bias relatively low; the model matters most for realistic trial simulation [@bjornsson2015dropout].

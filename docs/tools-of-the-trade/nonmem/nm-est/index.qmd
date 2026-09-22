@@ -1286,6 +1286,14 @@ Next, the first order conditional estimation method will be implemented, using a
 
 Up to 20 estimations may be performed within a problem.
 
+## See also
+
+* [NONMEM troubleshooting](../nm-err/index.qmd) --- what to do when the methods on this page terminate abnormally, round poorly, or fail the covariance step.
+* [NONMEM model quality assurance](../nm-qa/index.qmd) --- shrinkage, condition number, and dOFV thresholds for judging whether a converged run is actually trustworthy.
+* [Speaking NM-TRAN](../nm-ctl/index.qmd) --- the `$ESTIMATION` and `$COVARIANCE` records that configure everything described here.
+* [Priors in NONMEM (`$PRIOR`)](../../../modeling/priors/index.qmd) --- required by the Bayesian methods (`BAYES`, `NUTS`) and useful for stabilising sparse-data EM runs.
+* [Modeling variability](../../../modeling/variability/index.qmd) --- the OMEGA and SIGMA structures these methods estimate.
+
 ## References
 
 ::: {#refs}
