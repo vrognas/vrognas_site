@@ -66,7 +66,19 @@ Two major "types": positive or negative for RA-linked antibodies in the blood (s
       * Baricitinib (L04AF02)
       * Upadacitinib (L04AF03)
 
+## Clinical studies
+
+The European Medicines Agency (EMA) guideline on RA trials asks for randomized, double-blind confirmatory trials with parallel placebo or active comparator arms, run separately in patients new to DMARDs (DMARD-naive) and in patients who have already been treated with them.
+The primary endpoint should be a target disease state, ideally remission or at least low disease activity, defined by a cut-off on a validated composite score.
+For the Disease Activity Score for 28 joints, with erythrocyte sedimentation rate or C-reactive protein (DAS28-ESR or DAS28-CRP), remission is a score below 2.6 and low disease activity a score below 3.2.
+Each patient either reaches the target or not (a binary endpoint), assessed at 3 to 6 months for remission in DMARD-naive patients and at 3 or 6 months for low disease activity in patients who responded inadequately to earlier DMARDs.
+The American College of Rheumatology response criteria ACR20, ACR50 and ACR70 (20%, 50% or 70% improvement in signs and symptoms from baseline) measure relative change and are in general not primary endpoints, except in patients who have failed several DMARDs from different classes, where ACR20 at month 6 is an acceptable primary endpoint.
+Placebo control may need to be kept short for ethical reasons, and maintenance of efficacy should be shown in a long-term randomized study lasting 12 months in total [@emaGuidelineClinicalInvestigation2017].
+
 ## References
 
 * https://www.nejm.org/doi/full/10.1056/NEJMra2103726
 * https://www.youtube.com/watch?v=e_NZk8nFSPA
+
+::: {#refs}
+:::

@@ -73,8 +73,7 @@ The diseases themselves are described in the primers on [rheumatoid arthritis](.
 In the phase 2 and 3 rheumatoid arthritis studies of upadacitinib (L04AF03), efficacy was the proportion of patients reaching an ACR20, ACR50 or ACR70 response (American College of Rheumatology 20%, 50% or 70% improvement), or a DAS28-CRP (Disease Activity Score for 28 joints with C-reactive protein) disease activity threshold.
 These categorical endpoints were described over time with continuous-time Markov models, and the proportion of responders increased with plasma exposure [@naderExposureResponseAnalysesUpadacitinib2020].
 
-In a phase 2a study of brepocitinib in plaque psoriasis, the Psoriasis Area and Severity Index (PASI), a score bounded between 0 and 72, was modeled with a zero-inflated beta distribution to handle its bounds and its observations at 0.
-The model also predicted the derived responder endpoints PASI75, PASI90 and PASI100 (75%, 90% and 100% improvement) [@tsamandourasEmployingZeroinflatedBeta2024].
+Models of the Psoriasis Area and Severity Index (PASI) are covered in the [psoriasis primer](../../../../../pathology-primers/autoimmune/psoriasis/index.qmd#modeling-pasi-and-pga).
 
 ## Safety
 

@@ -96,3 +96,25 @@ The classes below sit in ATC [D05 Antipsoriatics](../../../pharmacopeia/atc/d/d0
 - One- or two-compartment pharmacokinetic models (particularly for biologics)
 - Population PK-models incorporating covariates (body weight, immunogenicity, PASI scores)
 - Exposure-response models linking drug concentration/exposure to PASI improvement
+
+## Clinical studies
+
+The European Medicines Agency (EMA) guideline on psoriasis trials recommends a homogeneous population in pivotal trials, generally mild to moderate psoriasis for drugs applied to the skin (topical) and moderate to severe psoriasis for systemic drugs.
+For a systemic drug, it strongly recommends a three-arm, parallel-group trial against both placebo and an active comparator.
+PASI, which ranges from 0 to 72, has been the most frequently used primary endpoint, and the guideline strongly recommends pairing it with a validated global score such as the PGA.
+The guideline takes the best evidence of efficacy to be the percentage of patients who become clear or almost clear, defined as an improvement in PASI of more than 90%, so each patient either responds or does not (a binary endpoint).
+Short-term efficacy is generally shown after 8 to 12 weeks of treatment (4 weeks for a potent topical corticosteroid), and trials of systemic drugs should also follow patients for 3 to 6 months after treatment stops, to capture relapse and rebound [@emaGuidelineClinicalInvestigation2004].
+
+### Modeling PASI and PGA
+
+In a phase 3b trial of ustekinumab, PASI was a near-continuous score from 0 to 72 in steps of 0.1, while the primary endpoint was based on the 6-point physician's global assessment (PGA), an ordered categorical score.
+A latent-variable indirect response model of the PGA alone had a substantial structural bias, which was corrected by modeling PGA jointly with PASI [@huImprovingCategoricalEndpoint2022].
+
+In a phase 2a study of brepocitinib in plaque psoriasis, PASI, a score bounded between 0 and 72, was modeled with a zero-inflated beta distribution to handle its bounds and its observations at 0.
+The model also predicted the derived responder endpoints PASI75, PASI90 and PASI100 (75%, 90% and 100% improvement) [@tsamandourasEmployingZeroinflatedBeta2024].
+PASI has also been fitted with a bounded integer model, which respects the discrete and bounded nature of the score [@ooiBoundedIntegerModelbased2023].
+
+## References
+
+::: {#refs}
+:::

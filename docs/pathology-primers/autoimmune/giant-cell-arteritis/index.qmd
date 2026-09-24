@@ -47,6 +47,18 @@ This type of artery inflammation (arteritis) causes the arteries in the head, ne
 * IL-6 inhibitors
   * Tocilizumab (L04AC07)
 
+## Clinical studies
+
+A systematic review of 11 randomized controlled trials and 104 observational studies in GCA found no unified definition of response to treatment.
+Most of the trials used composite endpoints, and remission and relapse were the main outcomes.
+Remission usually combined the absence of signs and symptoms of GCA with normal inflammatory markers (erythrocyte sedimentation rate and C-reactive protein).
+Some trials also defined sustained remission: remission maintained over 12 to 52 weeks, depending on the trial, together with adherence to a prespecified treatment protocol.
+Relapse, also called flare, was generally defined by returning symptoms together with raised inflammatory markers, mostly with a treatment component such as the need to restart or increase glucocorticoids.
+Drugs that act directly or indirectly on the interleukin-6 (IL-6) pathway make these markers unreliable for judging disease activity [@sanchez-alvarezMeasuringTreatmentOutcomes2023].
+
 ## References
 
 * https://en.wikipedia.org/wiki/Giant_cell_arteritis
+
+::: {#refs}
+:::

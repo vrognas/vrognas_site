@@ -19,6 +19,8 @@ The clinical pharmacology strategy must be tailored to the molecule's properties
 * Formulation (e.g., oral vs. parenteral)
 * Commercial product vision
 
+Some study designs are driven by the drug class: for antibacterials, a preclinical dose-fractionation study gives the same total daily dose at different dosing intervals to find which PK/PD index governs the effect, as explained under [antibacterials](../../pharmacopeia/atc/j/j01/index.qmd#index-based-approaches).
+
 A *Target Product Profile* (TPP) should guide all clinical pharmacology decisions from the start.
 
 ## General clinical study design

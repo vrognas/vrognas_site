@@ -20,13 +20,7 @@ Esterases rapidly hydrolyze tazarotene to its active metabolite, tazarotenic aci
 ## Efficacy
 
 In a systematic review of 37 trials of calcipotriol, efficacy was compared as the percentage change in the Psoriasis Area and Severity Index (PASI) and as the rate of marked improvement or better on patients' and investigators' overall assessments [@ashcroftSystematicReviewComparative2000].
-
-In a phase 3b trial of ustekinumab, PASI was a near-continuous score from 0 to 72 in steps of 0.1, while the primary endpoint was based on the 6-point physician's global assessment (PGA), an ordered categorical score.
-A latent-variable indirect response model of the PGA alone had a substantial structural bias, which was corrected by modeling PGA jointly with PASI [@huImprovingCategoricalEndpoint2022].
-
-For brepocitinib, a zero-inflated beta distribution was used to account for the bounded nature of PASI, and the same model predicted the derived responder rates well: the proportions of patients with an improvement of 75%, 90% and 100% from baseline (PASI75, PASI90 and PASI100) [@tsamandourasEmployingZeroinflatedBeta2024].
-PASI has also been fitted with a bounded integer model, which respects the discrete and bounded nature of the score [@ooiBoundedIntegerModelbased2023].
-Neither ustekinumab nor brepocitinib belongs to D05; they are included here for how they model the endpoint.
+How psoriasis trials use PASI and the physician's global assessment (PGA), and how the two scores are modeled, is covered in the [psoriasis primer](../../../../pathology-primers/autoimmune/psoriasis/index.qmd#clinical-studies).
 
 For PUVA, sensitivity has been measured as the minimal phototoxic dose of UVA.
 Patients with a high methoxsalen clearance and a low C~max~ usually show less sensitivity to PUVA than low-clearance patients, and frequently a less favorable clinical response [@dewolffClinicalPharmacokineticsMethoxsalen1986].

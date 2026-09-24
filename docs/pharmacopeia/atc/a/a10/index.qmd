@@ -30,9 +30,8 @@ Only pioglitazone improved beta cell function over time [@tanReviewSemimechanist
 
 ## Efficacy
 
-The standard endpoint is glycated hemoglobin (HbA1c), a continuous measure and the gold standard for long-term glycemic efficacy, while fasting plasma glucose follows glycemic control in real time.
-HbA1c forms as glucose glycates hemoglobin in red blood cells, which live about 120 days, so it reflects mean glucose over 2 to 3 months, and early-phase studies are often too short for it to reach steady state.
-Semi-mechanistic models link the drug to glucose, and glucose to HbA1c, with indirect response models or with transit compartments that follow the aging red blood cells.
+The efficacy endpoints, glycated hemoglobin (HbA1c) and fasting plasma glucose, are the same whichever drug class is used, and are described with the design of diabetes trials in the [diabetes primer](../../../../pathology-primers/diabetes/index.qmd#clinical-studies).
+Semi-mechanistic models link the drug to glucose, and glucose to HbA1c, with indirect response models or with transit compartments that follow the aging red blood cells [@tanReviewSemimechanisticHbA1c2026].
 In a model built on a phase 2 study of tesaglitazar, the red blood cell lifespan was estimated at 135 days [@hamrenModelsPlasmaGlucose2008].
 
 Glucose tolerance tests, given intravenously or orally, are used to estimate insulin sensitivity, insulin secretion and beta cell function.

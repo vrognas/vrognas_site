@@ -27,7 +27,7 @@ HIV and TB form a lethal combination, each speeding the other's progress.
 
 ### Drug resistant TB
 
-*Myobacterium tuberculosis* divides more slowly (~q18h) than most bacteria, making development of antibiotic resistance more likely.
+*Mycobacterium tuberculosis* divides more slowly (~q18h) than most bacteria, making development of [antibiotic resistance](../../../pharmacopeia/atc/j/j01/index.qmd#resistance) more likely.
 In addition, the mycolic acids in its cell wall limit the effectiveness of some antibiotics.
 
 Multidrug-resistant TB (**MDR-TB**) has been defined as <span class="red-underline">**resistance to rifampicin plus isoniazid**</span>.
@@ -71,9 +71,19 @@ About half of all people with TB can be found in 8 countries:
 ## Diagnosis
 
 A sample of coughed-up mucus (sputum) is collected and tested using the **Xpert MTB/RIF Ultra assay** (Cepheid, Sunnyvale, USA).
-This diagnoses TB and the detects rifampicin resistance.
+This diagnoses TB and detects rifampicin resistance.
 
 TB is particularly difficult to diagnose in children.
+
+### Measuring the bacterial load
+
+In treatment trials, sputum also shows how many live bacteria it holds (the bacterial load) and how fast treatment lowers it.
+One measure is the number of [colonies](../bacterial-infection/index.qmd#diagnosis) grown from the sample, given as colony-forming units (CFU) per mL of sputum.
+The other is the time to positivity (TTP), the time until an automated system detects growth in a liquid culture of the sample.
+In Phase 2a, early bactericidal activity (EBA) studies treat small groups of patients for 14 days to show whether a drug is active in humans and to relate its dose and exposure to how fast it kills the bacteria.
+EBA is read as the fall in CFU or as the rise in TTP, two highly correlated measures, and TTP is now the primary one, with CFU secondary.
+Counting colonies is laborious, costly and relatively slow, while TTP is easier to standardize and more sensitive.
+These repeated CFU and TTP measurements are the usual data that pharmacometric models of treatment response are built on: nonlinear mixed-effects models pool the measurements of all patients, handle samples lost to contamination, and relate drug exposure to response [@alffenaarPharmacokineticsPharmacodynamicsAntituberculosis2022].
 
 ## How can TB be treated?
 
@@ -154,3 +164,6 @@ Approved 2019.
 * WHO consolidated guidelines on TB. 2022. *https://iris.who.int/bitstream/handle/10665/353829/9789240048126-eng.pdf*
 
 * Clewe O, Aulin L, Hu Y, Coates ARM, Simonsson USH. A multistate tuber- culosis pharmacometric model: a framework for studying anti-tubercular drug effects in vitro. J Antimicrob Chemother. 2016 Apr;71(4):964–74
+
+::: {#refs}
+:::

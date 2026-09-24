@@ -76,8 +76,13 @@ The onset of symptoms marks the transition from subclinical to clinical disease.
 * MALDI-TOF (mass spectrometry)
     * Identifies the species quickly, but does not test susceptibility
 
+In the laboratory, bacteria are grown in broth, a liquid growth medium, or on agar plates, which hold a solid growth medium.
+On agar, a cell that divides again and again gives a heap of cells visible to the eye (a colony), although two cells that land on the same spot, or a clump of cells, also give a single colony [@daveyLifeDeathInbetween2011].
+
 A pure culture grown from a single colony is called an isolate, and it usually descends from a single bacterium.
 Below the species, a strain is a set of genetically similar descendants of one colony or cell, although the word is often used loosely.
+In classic microbiology, a subspecies is a named group of strains within one species that differ from the rest genetically or in their observable traits, such as *Bacillus subtilis* subsp. *subtilis*.
+In medicine and epidemiology, bacteria are also grouped by the molecules on their cell surface (antigens) into serotypes, or serovars, and different strains can share a serotype.
 The type strain of a species is the living culture its name is tied to, descended from the isolate used to describe the species [@vanrossumDiversityWithinSpecies2020].
 The name of a species includes its genus, so *Staphylococcus aureus* is a species of the genus *Staphylococcus*.
 Species are grouped into genera, genera into families, families into orders and orders into classes, up to the domain [@parteListProkaryoticNames2020].
@@ -91,7 +96,7 @@ How the MICs of wild-type isolates spread, and where the epidemiological cut-off
 
 ::: {#fig-culture-to-mic}
 
-![](../../images/bac-inf_culture-to-mic.png){fig-alt="Hand-drawn diagram in three parts. Top: a sample tube, an agar plate with mixed colonies of three colors, a plate with only golden colonies labelled isolate, a tube of cloudy suspension labelled inoculum, and a row of six wells with drug concentrations from 0.5 to 16 mg/L, the first three cloudy and the rest clear, with the MIC at 4 mg/L. Bottom left: two plates of golden colonies on a time axis, the index isolate on day 1 and a repeat isolate on day 7. Bottom right: nested boxes, family Staphylococcaceae containing genus Staphylococcus, containing the species S. aureus and S. epidermidis, each containing strains drawn as dashed boxes with dots for isolates."}
+![](../../images/bac-inf_culture-to-mic.png){fig-alt="Hand-drawn diagram in three parts. Top: a sample tube, an agar plate with mixed colonies of three colors, a plate with only golden colonies labelled isolate, a tube of cloudy suspension labelled inoculum, and a row of six wells with drug concentrations from 0.5 to 16 mg/L, the first three cloudy and the rest clear, with the MIC at 4 mg/L. Bottom left: two plates of golden colonies on a time axis, the index isolate on day 1 and a repeat isolate on day 7. Bottom right: nested boxes, family Staphylococcaceae containing genus Staphylococcus, containing the species S. aureus and S. epidermidis, each containing strains drawn as dashed boxes with dots for isolates."}
 
 From a patient sample to an MIC (top), the same patient in a trial over time (bottom left), and where an isolate belongs among strains, species, genus and family (bottom right).
 The golden colonies are *Staphylococcus aureus* throughout.

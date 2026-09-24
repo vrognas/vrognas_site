@@ -62,6 +62,8 @@ Many mixed-effects models of tumor growth and drug effect have been published, a
 Metrics derived from these models, such as the change in tumor size at an early week, then enter parametric time-to-event models of overall survival.
 In colorectal cancer, this approach, using the change in tumor size at week 7, predicted survival in a phase 3 trial of capecitabine (L01BC06) from phase 2 data [@bender2015pkpd].
 
+How trials in non-small cell lung cancer use overall survival, progression-free survival and response rate is covered in the [lung cancer primer](../../../../pathology-primers/cancer/lung-cancer/index.qmd#clinical-studies).
+
 ### Exposure-response
 
 For osimertinib (L01EB04), no relationship between exposure and efficacy was found over doses of 20 to 240 mg [@brown2017osimertinib].

@@ -540,7 +540,7 @@ Drug classes on this site where a time-to-event analysis is the endpoint that de
 
 * [B01 Antithrombotic agents](../../pharmacopeia/atc/b/b01/index.qmd) --- bleeding and thrombotic events carried separately from the PK.
 * [L01 Antineoplastic agents](../../pharmacopeia/atc/l/l01/index.qmd) --- tumour-size metrics feeding a survival analysis.
-* [N05 Psycholeptics](../../pharmacopeia/atc/n/n05/index.qmd) --- dropout hazard modelled jointly with the PANSS score.
+* [Antipsychotics in schizophrenia](../../pathology-primers/neurological/schizophrenia/index.qmd#clinical-studies) --- dropout hazard modelled jointly with the PANSS score.
 
 ## References
 

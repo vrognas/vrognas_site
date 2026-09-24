@@ -1,0 +1,28 @@
+---
+title: "P02: Anthelmintics"
+description: "ATC P02 holds the anthelmintics, deworming drugs against parasitic worms: flukes, roundworms and tapeworms."
+date: "2026-09-25"
+---
+
+P02 holds the anthelmintics: drugs against flukes (antitrematodals, P02B), roundworms (antinematodal agents, P02C) and tapeworms (anticestodals, P02D) [@whoccATCDDDIndex2026].
+
+## How do they work?
+
+Many anthelmintics were first found by screening compounds against worms, without a known target, and only later found to act on ion channels.
+Praziquantel (P02BA01) is the current treatment for infection with flatworms that live in the blood (schistosomiasis).
+It activates a transient receptor potential (TRP) channel of the parasite, causing a massive and persistent influx of calcium.
+The worms are paralyzed and their outer surface (tegument) is damaged, which triggers detection by the host immune system and clearance of the parasites.
+Among the drugs against roundworms, ivermectin (P02CF01) acts on a different kind of ion channel, the glutamate-gated chloride channels [@chan2026anthelmintic].
+
+## Efficacy
+
+In trials against worms spread through soil (soil-transmitted helminths), anthelmintic efficacy is expressed as the cure rate, the percentage of patients whose stools become free of eggs, and the egg reduction rate [@keiserEfficacyCurrentDrugs2008].
+
+For tribendimidine against hookworm in children and adolescents, E~max~ models linked exposure to its active metabolite with the cure rate and the egg reduction rate.
+The curves were shallow: a 12-fold higher dose would have been needed to reach an egg reduction rate of 95% and a cure rate above 90%, so the authors suggested combination therapy.
+The tribendimidine pharmacokinetic model included [allometric scaling](../../../../concepts/pediatrics/index.qmd) to account for growth and development [@brusseePopulationPharmacokineticsExposure2021].
+
+## References
+
+::: {#refs}
+:::

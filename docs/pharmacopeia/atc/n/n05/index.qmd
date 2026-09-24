@@ -15,21 +15,9 @@ In structures deep in the brain (basal ganglia), clinical doses of classical ant
 **Benzodiazepines**, such as diazepam (N05BA01) and lorazepam (N05BA06), are used as anxiolytics and hypnotics, and also as anticonvulsants, muscle relaxants and anesthetics [@laderBenzodiazepineHarmHow2014].
 Like the benzodiazepines, the hypnotics zolpidem (N05CF02), zopiclone (N05CF01) and zaleplon (N05CF03) act at the GABA receptor complex, but they appear to be more selective for certain receptor subunits [@droverComparativePharmacokineticsPharmacodynamics2004].
 
-## Placebo response and dropout
-
-In a pooled analysis of placebo arms from 16 schizophrenia trials with 1436 patients, the time course of the Positive and Negative Syndrome Scale (PANSS) score was best described by a Weibull model or an indirect response model.
-The probability of dropping out was associated with a high observed PANSS score.
-Dropout was modeled as a hazard in a [time-to-event](../../../../modeling/tte/index.qmd) model, fitted jointly with the PANSS model, and exponential, Weibull and Gompertz hazards described it equally well [@pillareddyModellingSimulationPositive2012].
-
-In a simulation study of informative dropout, where dropout depended on the efficacy variable being measured, ignoring it biased parameter estimates by up to 21% with the FOCE-I estimation method, against less than 5% with a dropout model in the base scenario.
-Even without a dropout model, the bias translated into only small effects on predictions of the efficacy variable, but the dropout model was crucial for simulating realistic trial outcomes [@bjornsson2015dropout].
-
 ## Efficacy
 
-Disease severity in schizophrenia trials is scored on rating scales such as the PANSS, which has 30 items, each rated by a psychiatrist from 1 (absent) to 7 (extreme), in positive, negative and general subscales.
-An analysis of three 6-week trials of paliperidone (N05AX13) used [item response theory](../../../../modeling/pkpd/index.qmd#ordinal-data) (IRT) instead, because analyzing the total score as continuous data discards information and violates the numerical nature of the scale.
-IRT models each item as ordered categorical data, driven by an unobserved disease severity.
-The model described the placebo and drug effects at the item, subscale and total score levels, and 41.5% of the patients had dropped out by the end of the trials [@krekelsItemResponseTheory2017].
+Efficacy in schizophrenia trials is measured on symptom rating scales such as the Positive and Negative Syndrome Scale (PANSS), described in the [schizophrenia primer](../../../../pathology-primers/neurological/schizophrenia/index.qmd#clinical-studies) together with the placebo response and dropout [@emaGuidelineSchizophrenia2012].
 
 D~2~ receptor occupancy has also been used as a biomarker linking dose to efficacy.
 A model connecting antipsychotic dose, pharmacokinetics, D~2~ occupancy, PANSS response and drug-induced movement disorders (extrapyramidal symptoms) on the Simpson-Angus Scale was used to choose doses of asenapine (N05AH05) for its phase II and III trials [@degreefDopamineD2Occupancy2011].

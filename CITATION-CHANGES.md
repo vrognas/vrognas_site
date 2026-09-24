@@ -1,9 +1,9 @@
 # Citation changes
 
 Papers cited on the site now versus the committed (live) state, compared by DOI.
-**179 added, 139 removed.**
+**192 added, 139 removed.**
 
-## Added (179)
+## Added (192)
 
 - Agoston, Sandor et al. (1992). Clinical Pharmacokinetics of Neuromuscular Blocking Drugs. *Clinical Pharmacokinetics*. <https://doi.org/10.2165/00003088-199222020-00002>  
   Cited on: ATC m/m03
@@ -13,6 +13,8 @@ Papers cited on the site now versus the committed (live) state, compared by DOI.
   Cited on: ATC v/v08
 - Ajmera, I et al. (2013). The impact of mathematical modeling on the understanding of diabetes and related complications. *CPT: Pharmacometrics & Systems Pharmacology*. <https://doi.org/10.1038/psp.2013.30>  
   Cited on: ATC a/a10
+- Alffenaar, Jan-Willem C. et al. (2022). Pharmacokinetics and Pharmacodynamics of Anti-Tuberculosis Drugs: An Evaluation of in Vitro, in Vivo Methodologies and Human Studies. *Frontiers in Pharmacology*. <https://doi.org/10.3389/fphar.2022.1063453>  
+  Cited on: pathology-primers/bacterial/tuberculosis
 - Alfirevic, A et al. (2014). Phenotype Standardization for Statin-Induced Myotoxicity. *Clinical Pharmacology & Therapeutics*. <https://doi.org/10.1038/clpt.2014.121>  
   Cited on: ATC c/c10/c10a/c10aa
 - American Diabetes Association Professional Practice Committee (2025). 2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes--2025. *Diabetes Care*. <https://doi.org/10.2337/dc25-s002>  
@@ -60,7 +62,7 @@ Papers cited on the site now versus the committed (live) state, compared by DOI.
 - Danesi, Romano et al. (2002). Pharmacokinetic-Pharmacodynamic Relationships of the Anthracycline Anticancer Drugs. *Clinical Pharmacokinetics*. <https://doi.org/10.2165/00003088-200241060-00004>  
   Cited on: ATC l/l01
 - Davey, Hazel M. (2011). Life, Death, and In-Between: Meanings and Methods in Microbiology. *Applied and Environmental Microbiology*. <https://doi.org/10.1128/aem.00744-11>  
-  Cited on: ATC j/j01
+  Cited on: ATC j/j01, pathology-primers/bacterial/bacterial-infection
 - Day, Richard O et al. (2007). Clinical Pharmacokinetics and Pharmacodynamics of Allopurinol and Oxypurinol. *Clinical Pharmacokinetics*. <https://doi.org/10.2165/00003088-200746080-00001>  
   Cited on: ATC m/m04
 - De Clercq, Erik et al. (2016). Approved Antiviral Drugs over the Past 50 Years. *Clinical Microbiology Reviews*. <https://doi.org/10.1128/cmr.00102-15>  
@@ -87,11 +89,27 @@ Papers cited on the site now versus the committed (live) state, compared by DOI.
   Cited on: ATC p/p01
 - European Committee on Antimicrobial Susceptibility Testing (2019). Definition of S, I and R. *EUCAST website*. <https://www.eucast.org/newsiandr>  
   Cited on: ATC j/j01
+- European Committee on Antimicrobial Susceptibility Testing (2024). EUCAST Reading Guide for Broth Microdilution, Version 5.0. *EUCAST website*. <https://www.eucast.org/fileadmin/src/media/PDFs/EUCAST_files/MIC_testing/Reading_guide_BMD_v_5.0_2024.pdf>  
+  Cited on: ATC j/j01
+- European Medicines Agency (2004). Guideline on Clinical Investigation of Medicinal Products Indicated for the Treatment of Psoriasis. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-indicated-treatment-psoriasis-scientific-guideline>  
+  Cited on: pathology-primers/autoimmune/psoriasis
+- European Medicines Agency (2012). Guideline on Clinical Investigation of Medicinal Products in the Treatment of Parkinson's Disease. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-parkinsons-disease-scientific-guideline>  
+  Cited on: pathology-primers/neurological/parkinson
+- European Medicines Agency (2012). Guideline on Clinical Investigation of Medicinal Products, Including Depot Preparations in the Treatment of Schizophrenia. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-including-depot-preparations-treatment-schizophrenia-scientific-guideline>  
+  Cited on: ATC n/n05, pathology-primers/neurological/schizophrenia
 - European Medicines Agency (2016). Guideline on the Use of Pharmacokinetics and Pharmacodynamics in the Development of Antimicrobial Medicinal Products. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/use-pharmacokinetics-pharmacodynamics-development-antibacterial-medicinal-products-scientific-guideline>  
   Cited on: ATC j/j01
-- European Medicines Agency (2026). Forsteo (teriparatide): EPAR - Product information. *EMA product information*. <https://www.ema.europa.eu/en/documents/product-information/forsteo-epar-product-information_en.pdf>  
-  Cited on: ATC h/h05
+- European Medicines Agency (2016). Guideline on the Clinical Development of Medicinal Products for the Treatment of HIV Infection. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/clinical-development-medicinal-products-treatment-hiv-infection-scientific-guideline>  
+  Cited on: pathology-primers/viral/hiv
+- European Medicines Agency (2017). Guideline on Clinical Investigation of Medicinal Products for the Treatment of Rheumatoid Arthritis. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-rheumatoid-arthritis-scientific-guideline>  
+  Cited on: pathology-primers/autoimmune/rheumatoid-arthritis
+- European Medicines Agency (2018). Guideline on the Clinical Investigation of Medicines for the Treatment of Alzheimer's Disease. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/clinical-investigation-medicines-treatment-alzheimers-disease-scientific-guideline>  
+  Cited on: pathology-primers/neurological/alzheimer
+- European Medicines Agency (2023). Guideline on Clinical Investigation of Medicinal Products in the Treatment or Prevention of Diabetes Mellitus. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-or-prevention-diabetes-mellitus-scientific-guideline>  
+  Cited on: pathology-primers/diabetes
 - European Medicines Agency (2026). Mimpara (cinacalcet): EPAR - Product information. *EMA product information*. <https://www.ema.europa.eu/en/medicines/human/EPAR/mimpara>  
+  Cited on: ATC h/h05
+- European Medicines Agency (2026). Forsteo (teriparatide): EPAR - Product information. *EMA product information*. <https://www.ema.europa.eu/en/documents/product-information/forsteo-epar-product-information_en.pdf>  
   Cited on: ATC h/h05
 - Filippone, EJ et al. (2017). The Nephrotoxicity of Vancomycin. *Clinical Pharmacology & Therapeutics*. <https://doi.org/10.1002/cpt.726>  
   Cited on: ATC j/j01
@@ -133,6 +151,8 @@ Papers cited on the site now versus the committed (live) state, compared by DOI.
   Cited on: ATC c/c10/c10a/c10aa
 - Insull, William (2006). Clinical Utility of Bile Acid Sequestrants in the Treatment of Dyslipidemia: A Scientific Review. *Southern Medical Journal*. <https://doi.org/10.1097/01.smj.0000208120.73327.db>  
   Cited on: ATC c/c10
+- International Organization for Standardization (2019). Susceptibility Testing of Infectious Agents and Evaluation of Performance of Antimicrobial Susceptibility Test Devices — Part 1: Broth Micro-Dilution Reference Method for Testing the in Vitro Activity of Antimicrobial Agents against Rapidly Growing Aerobic Bacteria Involved in Infectious Diseases. *ISO standard*. <https://www.iso.org/standard/70464.html>  
+  Cited on: ATC j/j01
 - Istvan, Eva S. et al. (2001). Structural Mechanism for Statin Inhibition of HMG-CoA Reductase. *Science*. <https://doi.org/10.1126/science.1059344>  
   Cited on: ATC c/c10/c10a/c10aa
 - Iwere, Roli B. et al. (2015). Myopathy in older people receiving statin therapy: a systematic review and meta-analysis. *British Journal of Clinical Pharmacology*. <https://doi.org/10.1111/bcp.12687>  
@@ -150,7 +170,7 @@ Papers cited on the site now versus the committed (live) state, compared by DOI.
 - Kasichayanula, Sreeneeranj et al. (2018). Clinical Pharmacokinetics and Pharmacodynamics of Evolocumab, a PCSK9 Inhibitor. *Clinical Pharmacokinetics*. <https://doi.org/10.1007/s40262-017-0620-7>  
   Cited on: ATC c/c10
 - Keiser, Jennifer et al. (2008). Efficacy of Current Drugs Against Soil-Transmitted Helminth Infections. *JAMA*. <https://doi.org/10.1001/jama.299.16.1937>  
-  Cited on: ATC p
+  Cited on: ATC p/p02
 - Khan, Aliya A et al. (2015). Diagnosis and Management of Osteonecrosis of the Jaw: A Systematic Review and International Consensus. *Journal of Bone and Mineral Research*. <https://doi.org/10.1002/jbmr.2405>  
   Cited on: ATC m/m05
 - Kirchner, Gabriele I et al. (2004). Clinical Pharmacokinetics of Everolimus. *Clinical Pharmacokinetics*. <https://doi.org/10.2165/00003088-200443020-00002>  
@@ -267,6 +287,8 @@ Papers cited on the site now versus the committed (live) state, compared by DOI.
   Cited on: ATC v/v03
 - Sahinovic, Marko M. et al. (2018). Clinical Pharmacokinetics and Pharmacodynamics of Propofol. *Clinical Pharmacokinetics*. <https://doi.org/10.1007/s40262-018-0672-3>  
   Cited on: ATC n/n01
+- Sanchez-Alvarez, Catalina et al. (2023). Measuring Treatment Outcomes and Change in Disease Activity in Giant Cell Arteritis: A Systematic Literature Review Informing the Development of the EULAR-ACR Response Criteria on Behalf of the EULAR-ACR Response Criteria in Giant Cell Arteritis Task Force. *RMD Open*. <https://doi.org/10.1136/rmdopen-2023-003233>  
+  Cited on: pathology-primers/autoimmune/giant-cell-arteritis
 - Saporta, Raphaël et al. (2025). Simulation-Based Evaluation of the Impact of Dose Fractionation Study Design on Antibiotic PKPD Analyses. *JAC-Antimicrobial Resistance*. <https://doi.org/10.1093/jacamr/dlaf057>  
   Cited on: ATC j/j01
 - Sathyan, Gayatri et al. (2001). Effect of OROS ® controlled-release delivery on the pharmacokinetics and pharmacodynamics of oxybutynin chloride. *British Journal of Clinical Pharmacology*. <https://doi.org/10.1046/j.0306-5251.2001.01463.x>  
@@ -289,6 +311,8 @@ Papers cited on the site now versus the committed (live) state, compared by DOI.
   Cited on: ATC m/m05
 - Smith, Deborah A. et al. (2011). Pharmacokinetics and Pharmacodynamics of Mepolizumab, an Anti-Interleukin-5 Monoclonal Antibody. *Clinical Pharmacokinetics*. <https://doi.org/10.2165/11584340-000000000-00000>  
   Cited on: ATC r/r03
+- Smith, Kenneth P. et al. (2018). The Inoculum Effect in the Era of Multidrug Resistance: Minor Differences in Inoculum Have Dramatic Effect on MIC Determination. *Antimicrobial Agents and Chemotherapy*. <https://doi.org/10.1128/aac.00433-18>  
+  Cited on: ATC j/j01
 - Snoeck, E et al. (2010). A Comprehensive Hepatitis C Viral Kinetic Model Explaining Cure. *Clinical Pharmacology & Therapeutics*. <https://doi.org/10.1038/clpt.2010.35>  
   Cited on: ATC j/j05
 - Soveri, Inga et al. (2014). Measuring GFR: A Systematic Review. *Am J Kidney Dis*. <https://doi.org/10.1053/j.ajkd.2014.04.010>  
@@ -308,7 +332,7 @@ Papers cited on the site now versus the committed (live) state, compared by DOI.
 - Tamma, Pranita D. et al. (2017). Association of Adverse Events With Antibiotic Use in Hospitalized Patients. *JAMA Internal Medicine*. <https://doi.org/10.1001/jamainternmed.2017.1938>  
   Cited on: ATC j/j01
 - Tan, Austin Yue Feng et al. (2026). A Review of Semi-Mechanistic HbA1c Models in People with Type 2 Diabetes: Strengths, Limitations, and Applications. *The Journal of Clinical Pharmacology*. <https://doi.org/10.1002/jcph.70274>  
-  Cited on: ATC a/a10
+  Cited on: ATC a/a10, pathology-primers/diabetes
 - Tang-Liu, DD-S et al. (1999). Clinical Pharmacokinetics and Drug Metabolism of Tazarotene. *Clinical Pharmacokinetics*. <https://doi.org/10.2165/00003088-199937040-00001>  
   Cited on: ATC d/d05
 - Tanswell, Paul et al. (2002). Pharmacokinetics and Pharmacodynamics of Tenecteplase in Fibrinolytic Therapy of Acute Myocardial Infarction. *Clinical Pharmacokinetics*. <https://doi.org/10.2165/00003088-200241150-00001>  
@@ -325,6 +349,8 @@ Papers cited on the site now versus the committed (live) state, compared by DOI.
   Cited on: ATC n/n01
 - Turtle, CJ et al. (2016). CD19-Targeted chimeric antigen receptor-modified T-cell immunotherapy for B-cell malignancies. *Clinical Pharmacology & Therapeutics*. <https://doi.org/10.1002/cpt.392>  
   Cited on: ATC l/l01
+- U.S. Food et al. (2015). Clinical Trial Endpoints for the Approval of Non-Small Cell Lung Cancer Drugs and Biologics: Guidance for Industry. *FDA guidance for industry*. <https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-trial-endpoints-approval-non-small-cell-lung-cancer-drugs-and-biologics>  
+  Cited on: pathology-primers/cancer/lung-cancer
 - U.S. Food et al. (2024). PRILOSEC (omeprazole magnesium) for delayed-release oral suspension: full prescribing information (revised 3/2024). *FDA label*. <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b6761f84-53ac-4745-a8c8-1e5427d7e179>  
   Cited on: ATC a/a02
 - Valk, Beatrijs I. et al. (2021). Etomidate and its Analogs: A Review of Pharmacokinetics and Pharmacodynamics. *Clinical Pharmacokinetics*. <https://doi.org/10.1007/s40262-021-01038-6>  

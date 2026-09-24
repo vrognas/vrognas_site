@@ -94,7 +94,19 @@ There are also two drugs, ritonavir (RTV, J05AE03) and cobicistat (COBI, V03AX03
 
 Depending on the guidelines, initial treatment generally consists of two NRTIs and a third ARV, either an INI, an NNRTI, or a PI with a booster.
 
+## Clinical studies
+
+The European Medicines Agency (EMA) guideline expects new antiretrovirals to be tested in randomized, double-blind trials in patients who have not had antiretroviral therapy and whose virus carries no resistance mutations (treatment-naive), in which the new drug or a comparator is given with an otherwise identical regimen, and these trials are expected to use a non-inferiority design.
+Suppressing viral replication is an established surrogate endpoint for clinical benefit.
+The primary endpoint is the proportion of patients with plasma HIV RNA below the lower limit of quantification of the assay at 48 weeks, a binary outcome.
+Patients should be stratified at least by baseline viral load and CD4 count, and the trial should include a representative proportion with a viral load of at least 100,000 copies/mL.
+The total study duration should be at least 2 years, to provide long-term safety and efficacy data.
+Earlier dose-finding studies give the new drug alone for a short time, normally 7 to 10 days, and use the mean change in HIV RNA from baseline, a continuous outcome, as the primary endpoint [@emaGuidelineHIVInfection2016].
+
 ## References
 
 * https://www.who.int/news-room/fact-sheets/detail/hiv-aids
 * https://www.science.org.au/curious/people-medicine/hiv
+
+::: {#refs}
+:::

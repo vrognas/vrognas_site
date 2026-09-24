@@ -28,7 +28,7 @@ Cade published the results in 1949 [@lopezmunozHistoryPharmacologicalTreatment20
 In psychiatry, large variation in the placebo response within and between clinical trials can substantially affect the conclusions about a new drug's efficacy.
 A model of the placebo time course helps separate the drug effect from this response, and such models have been published for schizophrenia, depression, [Alzheimer's disease](../../../pathology-primers/neurological/alzheimer/index.qmd) and [Parkinson's disease](../../../pathology-primers/neurological/parkinson/index.qmd).
 High dropout rates are also common in the placebo arms of psychiatric trials [@pillareddyStructuralModelsDescribing2011].
-How dropout is modeled in schizophrenia trials is described under [N05](n05/index.qmd).
+How dropout is modeled in schizophrenia trials is described in the [schizophrenia primer](../../../pathology-primers/neurological/schizophrenia/index.qmd#clinical-studies).
 
 In antidepressant trials, about 40% of patients have a placebo response.
 In 691 patients from seven depression trials, a Weibull/linear model described the placebo time course of the Hamilton Rating Scale for Depression (HAMD-17) total score, and the scores at weeks 2 and 4 predicted which patients would turn out to be placebo responders [@gomeniBayesianModellingROC2007].

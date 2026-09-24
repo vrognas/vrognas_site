@@ -102,7 +102,8 @@ Growth only becomes visible at about 10^7^ to 10^8^ colony-forming units (CFU) 
 In broth microdilution, a plate of small wells holds broth with the drug in a two-fold dilution series, and every well receives the same inoculum, 5 × 10^5^ CFU/mL.
 How a patient's sample becomes an inoculum is sketched in the [bacterial infection primer](../../../../pathology-primers/bacterial/bacterial-infection/index.qmd#fig-culture-to-mic).
 A well without drug checks that the bacteria grow (growth control), and a well without bacteria checks that the broth is sterile (sterility control).
-After incubation, a well with growth is cloudy (turbid) or has a sediment at the bottom, and the MIC is the lowest concentration in a clear well (@fig-mic-plate).
+After incubation, a well with growth is cloudy (turbid) or has a sediment at the bottom, and the MIC is read by eye, with a mirror if it helps, as the lowest concentration in a clear well (@fig-mic-plate); an automated reader or camera must be calibrated to manual reading.
+Some drug and species combinations give endpoints that fade over two or three wells, and a few drugs have their own reading rules: for drugs that stop growth without killing (bacteriostatic), such as the tetracyclines (J01AA) and linezolid (J01XX08), tiny specks of sediment (pinpoint growth) are ignored when growth trails off, and trimethoprim (J01EA01) is read at the lowest concentration that inhibits at least 80% of growth [@eucastReadingGuideBroth2024].
 A larger inoculum can raise the MIC, especially when the bacteria make an enzyme that destroys the drug, as β-lactamase producers do with β-lactams [@wiegandAgarBrothDilution2008].
 
 ::: {#fig-mic-plate}
@@ -120,8 +121,6 @@ Cropped from ["Pseudomonas aeruginosa antibiotic susceptibility testing"](https:
 A colony-forming unit is whatever gave rise to one colony on an agar plate: usually a single bacterium, but possibly two cells that landed together or a clump of cells, so the count is of units, not cells.
 Only bacteria that can grow on the plate are counted, so plate counts often underestimate how many are alive [@daveyLifeDeathInbetween2011].
 To count them, a sample is diluted in steps of ten, a fixed volume of each dilution is spread on a plate, and after incubation the colonies on a plate with a countable number are scaled back up by the dilution (@fig-cfu-plates).
-The inoculum of a broth microdilution test is checked this way, by plating a sample from the growth control well.
-For scale, the turbidity standard used to set up the inoculum (0.5 McFarland) matches 1 to 2 × 10^8^ CFU/mL [@wiegandAgarBrothDilution2008], so a well that starts at 5 × 10^5^ CFU/mL has to multiply 20- to 200-fold before its growth becomes visible.
 
 ::: {#fig-cfu-plates}
 
@@ -131,6 +130,14 @@ Colonies grown from ten-fold dilutions of yogurt containing *Lactobacillus casei
 ["Serial Dilutions"](https://commons.wikimedia.org/wiki/File:Serial_Dilutions.png) by Eunice Laurent, licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
 :::
+
+The inoculum is set by turbidity and dilution and checked only afterwards, by plating a sample from the growth control well immediately after inoculation; the test is valid only if that count is right.
+For scale, the turbidity standard used to set up the inoculum (0.5 McFarland) matches 1 to 2 × 10^8^ CFU/mL, so a well that starts at 5 × 10^5^ CFU/mL has to multiply 20- to 200-fold before its growth becomes visible.
+Where the inoculum is instead grown from an overnight broth culture, an option outside the CLSI and EUCAST methods, the link between turbidity and colony count has to be calibrated by plating for each isolate, because such a culture may be less viable than a freshly grown one, which makes a turbidity reading alone unreliable [@wiegandAgarBrothDilution2008].
+
+The reference method requires this count for every isolate and aims for 5 × 10^5^ CFU/mL, within a target range of 2 to 8 × 10^5^ CFU/mL.
+The dilution needed depends on the species, the number of live bacteria in the final inoculum depends on the growth phase of the culture, and colony counts in preliminary tests may call for a different dilution [@isoSusceptibilityTestingInfectious2019].
+In one laboratory study, the meropenem (J01DH02) MIC of carbapenem-resistant Enterobacterales could differ 8-fold between the two ends of that range, enough to change the susceptibility category of some isolates, whereas the MIC of susceptible isolates rose only when the inoculum was more than 10 times the target [@smithInoculumEffectEra2018].
 
 Strains without acquired resistance (the wild type) usually span three to five dilutions; the top of that range is the epidemiological cut-off (ECOFF).
 Repeat tests of one strain scatter too, with a standard deviation of about 0.3 to 0.5 of a dilution within a laboratory and 0.5 to 1 between laboratories.
@@ -145,6 +152,14 @@ Exposure here is what reaches the bacteria at the site of infection, which depen
 Breakpoints are set from the MIC distributions of the relevant species, the drug's PK/PD and clinical outcome data [@wiegandAgarBrothDilution2008].
 PK/PD relationships are usually described with unbound serum concentrations as a stand-in for the site of infection [@moutonMICbasedDoseAdjustment2018].
 For a drug meant to treat infections outside the blood, the EMA asks developers for concentrations at that site too: in urine for urinary tract infections, in the fluid lining the airways (epithelial lining fluid) for pneumonia, and in the fluid around the brain and spinal cord (cerebrospinal fluid) for meningitis [@emaGuidelineUsePharmacokinetics2016].
+
+::: {.callout-tip title="Reading an MIC result"}
+- One MIC reading is uncertain: repeat tests of one strain scatter with a standard deviation of up to half a dilution within a laboratory, and up to one dilution between laboratories.
+- Check that the inoculum was counted, above all for a β-lactamase producer tested with a β-lactam, where a larger inoculum can raise the MIC.
+- Whether the isolate is wild type is a comparison with the ECOFF.
+- The treatment category (S, I or R) is a comparison with the clinical breakpoint for that drug and species, and the exposure it refers to is exposure at the site of infection.
+- The MIC is not a drug concentration in the patient, and a single MIC is a poor basis for an individual dose: an error of two dilutions changes the exposure needed 4-fold.
+:::
 
 ## Translating antibiotic PKPD
 
@@ -178,7 +193,6 @@ In simulated dose-fractionation studies of meropenem and polymyxin B in mice, *f
 :::
 
 These indices help set efficacy targets based on outcomes like bacterial stasis or log reductions in bacterial count.
-Dose fractionation studies identify which index best predicts efficacy [@craigPharmacokineticPharmacodynamicParameters1998], and simulations then predict outcomes in diverse patient populations.
 The probability of target attainment (PTA), estimated by simulation, supports the choice of dose regimen, and the same PK/PD analyses are a cornerstone of setting susceptibility breakpoints [@emaGuidelineUsePharmacokinetics2016].
 
 However, limitations of PK/PD indices include:
