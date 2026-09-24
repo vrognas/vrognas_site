@@ -156,6 +156,14 @@ How bacteria become resistant, and how resistance is handled in PK/PD, is covere
     * The efficacy of antibiotic treatment is judged by **signs and symptoms** (Are you feeling better than yesterday?), and the course of **inflammatory markers** (WBC, CRP, PCT)
 * Empiric treatment should ideally be switched to targeted therapy once culture results are available (2--3 days)
 
+## Clinical studies
+
+### Clinical pharmacology studies
+
+During an active infection, the volume of distribution of a drug may rise considerably and then fall quickly as the patient recovers, so its plasma concentrations can change markedly over the course of treatment.
+The European Medicines Agency (EMA) ties the [PK/PD target](../../../pharmacopeia/atc/j/j01/index.qmd#index-based-approaches) used to choose the dose to the infection: for potentially life-threatening infections that usually carry a high bacterial load and rarely resolve on their own, such as HAP/VAP, it generally expects the target for at least a tenfold (1-log~10~) fall in the bacterial count, whereas for infections with a lower load or also treated by other means, such as some ABSSSI and IAI where surgery is often used, the target for no net change in the count (stasis) may be enough.
+Drug concentrations in the fluid lining the airways (epithelial lining fluid, ELF) and in the fluid around the brain and spinal cord (cerebrospinal fluid), which the EMA asks for when a drug is meant to treat pneumonia or meningitis ([antibacterials](../../../pharmacopeia/atc/j/j01/index.qmd#resistance-measurement-mic)), typically come from uninfected patients, each given a single dose at a set time before a scheduled airway examination (bronchoscopy) or spinal tap (lumbar puncture), although some ELF data from infected patients are encouraged [@emaGuidelineUsePharmacokinetics2016].
+
 ## References
 
 ::: {#refs}

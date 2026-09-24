@@ -116,3 +116,7 @@ The new drug should be superior to placebo when given alone (monotherapy) in at 
 Add-on trials should enroll patients who are not at target on an established drug, at a stable dose for the 8 to 12 weeks before the study, and keep that background dose unchanged unless safety requires a change.
 Dose-ranging studies of 8 to 12 weeks should use glucose-based measures as the primary endpoint, and those of 12 weeks or more should use HbA1c.
 The development program is expected to characterize cardiovascular safety, especially for a new mechanism of action, but a benefit on long-term complications, which only large and long trials can show, is not required for approval [@emaGuidelineClinicalInvestigation2023].
+
+### Clinical pharmacology studies
+
+Pharmacokinetic studies should take into consideration that, in a significant number of patients with type 2 diabetes, slow emptying of the stomach (delayed gastric emptying) or a change in how long the gut takes to move its contents along (gastrointestinal transit time) can be expected to complicate drug absorption [@emaGuidelineClinicalInvestigation2023].

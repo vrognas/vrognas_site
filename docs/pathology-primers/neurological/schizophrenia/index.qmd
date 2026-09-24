@@ -113,6 +113,13 @@ Dropout was modeled as a hazard in a [time-to-event](../../../modeling/tte/index
 In a simulation study of informative dropout, where dropout depended on the efficacy variable being measured, ignoring it biased parameter estimates by up to 21% with the FOCE-I estimation method, against less than 5% with a dropout model in the base scenario.
 Even without a dropout model, the bias translated into only small effects on predictions of the efficacy variable, but the dropout model was crucial for simulating realistic trial outcomes [@bjornsson2015dropout].
 
+### Clinical pharmacology studies
+
+For long-acting injections (depot preparations), an appendix to the EMA guideline sets the aims of the development: to establish the full pharmacokinetics of the new formulation, including its release properties, to compare its [bioavailability](../../../concepts/clinpharm-studies/ba-be/index.qmd) with that of the oral form, and to assess how long it keeps an acceptable level of the drug.
+The release rate over time, the drug remaining at the injection site and accumulation may be estimated by pharmacokinetic modeling of the oral data together with single-dose depot data.
+Clinical studies comparing efficacy with the oral form and justifying the dosing interval are needed in principle, unless a clear pharmacokinetic/pharmacodynamic relationship has been shown for the oral formulation.
+Because patients are first stabilized on the oral drug, the switch to the depot (the matching depot dose, and whether the oral dose can be stopped at once or should be phased out) should be justified by pharmacokinetic and clinical data [@emaGuidelineSchizophrenia2012].
+
 ## References
 
 ::: {#refs}

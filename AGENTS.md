@@ -200,6 +200,10 @@ the pathology primer; the ATC page names it and links there. If it follows from 
 belongs on the ATC page. Likewise, how clinical studies are designed for a disease (endpoints,
 duration, population) goes in the primer, and studies driven by the drug class (thorough QT, DDI
 studies for strong CYP inhibitors) go on the ATC page.
+On either page, clinical pharmacology content must be unique to that disease or drug (depot pharmacokinetics
+in schizophrenia, interactions with rifampicin in tuberculosis). Requirements every guideline repeats, such as
+pharmacokinetics in patients, dose-finding, or kidney and liver impairment studies, live once under
+`docs/concepts/clinpharm-studies/` and are linked, not restated.
 Letter pages hold the level-2 table and only notes that span several subgroups, with no
 mechanism section. The drug class belongs on the ATC page; the disease (pathophysiology,
 diagnosis, clinical course, treatment strategy) belongs in the matching pathology primer, and

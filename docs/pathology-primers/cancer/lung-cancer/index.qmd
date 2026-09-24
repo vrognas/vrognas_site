@@ -37,6 +37,12 @@ Because tumor assessments are subjective and depend on how often, accurately and
 Effects on ORR have not been shown to reliably predict effects on survival in NSCLC, and the FDA considers ORR alone reasonably likely to predict clinical benefit only when the effect is large and the responses are durable.
 Because response to treatment varies across molecular and histological subgroups of NSCLC, the FDA recommends designing trials prospectively to evaluate these differences [@fdaClinicalTrialEndpoints2015].
 
+### Clinical pharmacology studies
+
+The European Medicines Agency (EMA) guideline on anticancer drugs, which covers cancer in general, says that phase 1 [dose-finding](../../../pharmacopeia/atc/l/l01/index.qmd#dose-finding) trials of cell-killing chemotherapy (cytotoxic drugs) should normally be run in cancer patients without established treatment options, while early trials of non-cytotoxic drugs may sometimes be run in healthy volunteers.
+If a [hepatic impairment study](../../../concepts/clinpharm-studies/hepatic-impairment-studies/index.qmd) is needed and cancer that has spread to the liver (liver metastases) is common in the target population, a study in patients with liver metastases is warranted as a first step.
+Exploratory studies, including pharmacokinetics, are encouraged in patients with fluid collecting in body spaces (third-space conditions), such as fluid in the abdomen caused by the cancer (malignant ascites) or a large amount of fluid around the lungs, where these occur in the cancer being treated [@emaGuidelineClinicalEvaluation2023].
+
 ## References
 
 ::: {#refs}

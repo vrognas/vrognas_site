@@ -159,6 +159,17 @@ Approved 2019.
 * Saturated bioavailability (F) at high dose
 * 1 CMT PK
 
+## Clinical studies
+
+Since most relapses in patients with susceptible bacteria happen within 6 months of the end of treatment, the European Medicines Agency (EMA) guideline allows the primary analysis of a pivotal trial of a regimen meant to shorten treatment to be based on the proportion of patients whose sputum cultures have turned negative and stayed negative (sustained sputum culture conversion), a binary outcome, at a visit at least 6 months after the last dose of the longest regimen in the trial [@emaAddendumGuidelineEvaluation2017].
+
+### Clinical pharmacology studies
+
+At least for drugs that kill the bacteria quickly in the laboratory, a short trial of the new drug given alone is usually recommended, unless laboratory data suggest an unacceptable risk of selecting resistant bacteria.
+Such a trial can, for example, measure the [EBA](#measuring-the-bacterial-load) of a range of doses in previously untreated patients whose bacteria are known or expected to be susceptible to all first-line drugs, but EBA does not show whether a drug clears the bacteria that remain (sterilizing activity).
+For some drugs, the concentration in sputum even 24 h after the last dose could be enough to stop the bacteria growing in culture, giving a falsely negative result although live bacteria remain, so negative cultures during treatment should be backed by laboratory studies of this carryover, which can affect TTP too.
+Interactions with combination antiretroviral therapy can be a particular difficulty in people who also have [HIV](../../viral/hiv/index.qmd), and those whose HIV is adequately treated may be studied separately or in the same trials as people without HIV, provided that interactions or added toxicities are not expected to impair the efficacy of the regimen [@emaAddendumGuidelineEvaluation2017].
+
 # References
 
 * WHO consolidated guidelines on TB. 2022. *https://iris.who.int/bitstream/handle/10665/353829/9789240048126-eng.pdf*

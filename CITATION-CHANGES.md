@@ -1,9 +1,9 @@
 # Citation changes
 
-Papers cited on the site now versus the committed (live) state, compared by DOI.
-**192 added, 139 removed.**
+Papers cited on the site now versus the site before the citation audit (commit b8a18a8), compared by DOI.
+**194 added, 139 removed.**
 
-## Added (192)
+## Added (194)
 
 - Agoston, Sandor et al. (1992). Clinical Pharmacokinetics of Neuromuscular Blocking Drugs. *Clinical Pharmacokinetics*. <https://doi.org/10.2165/00003088-199222020-00002>  
   Cited on: ATC m/m03
@@ -98,18 +98,22 @@ Papers cited on the site now versus the committed (live) state, compared by DOI.
 - European Medicines Agency (2012). Guideline on Clinical Investigation of Medicinal Products, Including Depot Preparations in the Treatment of Schizophrenia. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-including-depot-preparations-treatment-schizophrenia-scientific-guideline>  
   Cited on: ATC n/n05, pathology-primers/neurological/schizophrenia
 - European Medicines Agency (2016). Guideline on the Use of Pharmacokinetics and Pharmacodynamics in the Development of Antimicrobial Medicinal Products. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/use-pharmacokinetics-pharmacodynamics-development-antibacterial-medicinal-products-scientific-guideline>  
-  Cited on: ATC j/j01
+  Cited on: ATC j/j01, pathology-primers/bacterial/bacterial-infection
 - European Medicines Agency (2016). Guideline on the Clinical Development of Medicinal Products for the Treatment of HIV Infection. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/clinical-development-medicinal-products-treatment-hiv-infection-scientific-guideline>  
   Cited on: pathology-primers/viral/hiv
+- European Medicines Agency (2017). Addendum to the Guideline on the Evaluation of Medicinal Products Indicated for Treatment of Bacterial Infections to Address the Clinical Development of New Agents to Treat Pulmonary Disease Due to \emphMycobacterium tuberculosis. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/addendum-note-guidance-evaluation-medicinal-products-indicated-treatment-bacterial-infections-specifically-address-clinical-development-new-agents-treat-disease-due-mycobacterium-tuberculosis>  
+  Cited on: pathology-primers/bacterial/tuberculosis
 - European Medicines Agency (2017). Guideline on Clinical Investigation of Medicinal Products for the Treatment of Rheumatoid Arthritis. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-rheumatoid-arthritis-scientific-guideline>  
   Cited on: pathology-primers/autoimmune/rheumatoid-arthritis
 - European Medicines Agency (2018). Guideline on the Clinical Investigation of Medicines for the Treatment of Alzheimer's Disease. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/clinical-investigation-medicines-treatment-alzheimers-disease-scientific-guideline>  
   Cited on: pathology-primers/neurological/alzheimer
+- European Medicines Agency (2023). Guideline on the Clinical Evaluation of Anticancer Medicinal Products. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/evaluation-anticancer-medicinal-products-man-scientific-guideline>  
+  Cited on: pathology-primers/cancer/lung-cancer
 - European Medicines Agency (2023). Guideline on Clinical Investigation of Medicinal Products in the Treatment or Prevention of Diabetes Mellitus. *CHMP scientific guideline*. <https://www.ema.europa.eu/en/clinical-investigation-medicinal-products-treatment-or-prevention-diabetes-mellitus-scientific-guideline>  
   Cited on: pathology-primers/diabetes
-- European Medicines Agency (2026). Mimpara (cinacalcet): EPAR - Product information. *EMA product information*. <https://www.ema.europa.eu/en/medicines/human/EPAR/mimpara>  
-  Cited on: ATC h/h05
 - European Medicines Agency (2026). Forsteo (teriparatide): EPAR - Product information. *EMA product information*. <https://www.ema.europa.eu/en/documents/product-information/forsteo-epar-product-information_en.pdf>  
+  Cited on: ATC h/h05
+- European Medicines Agency (2026). Mimpara (cinacalcet): EPAR - Product information. *EMA product information*. <https://www.ema.europa.eu/en/medicines/human/EPAR/mimpara>  
   Cited on: ATC h/h05
 - Filippone, EJ et al. (2017). The Nephrotoxicity of Vancomycin. *Clinical Pharmacology & Therapeutics*. <https://doi.org/10.1002/cpt.726>  
   Cited on: ATC j/j01

@@ -114,6 +114,12 @@ In a phase 2a study of brepocitinib in plaque psoriasis, PASI, a score bounded b
 The model also predicted the derived responder endpoints PASI75, PASI90 and PASI100 (75%, 90% and 100% improvement) [@tsamandourasEmployingZeroinflatedBeta2024].
 PASI has also been fitted with a bounded integer model, which respects the discrete and bounded nature of the score [@ooiBoundedIntegerModelbased2023].
 
+### Clinical pharmacology studies
+
+For a drug applied to the skin, the EMA guideline asks that pharmacokinetics be explored after repeated application to psoriatic versus healthy skin, together with systemic exposure in relation to BSA, the effect of the drug stored in the skin (skin reservoir) on how often it must be applied, and differences between skin sites such as skin folds (flexures) and other areas.
+Comparisons within the same patient (for example left versus right side) should be restricted to exploratory trials, where the psoriasis plaque test is another way to compare doses and formulations.
+Because psoriasis is thought to be driven by persistent T-cell activation and cytokine production, the guideline asks, for systemic drugs that modulate the immune system, for pharmacodynamic studies of the levels of the different lymphocyte types in the blood (lymphocyte subpopulations) or of cytokine responses, which could include studies in the skin [@emaGuidelineClinicalInvestigation2004].
+
 ## References
 
 ::: {#refs}

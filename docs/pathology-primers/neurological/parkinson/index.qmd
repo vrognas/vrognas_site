@@ -101,6 +101,10 @@ In patients on levodopa with less predictable motor fluctuations, the new drug i
 In untreated patients, trials aimed at slowing disease progression should be randomized, placebo-controlled and probably up to 24 months long, with the change in UPDRS or the time until levodopa or a dopamine agonist is needed as the endpoint.
 The guideline recommends expressing efficacy in clinically interpretable terms, as success or failure (responders) or as the time to an event [@emaGuidelineParkinsonsDisease2012].
 
+### Clinical pharmacology studies
+
+The guideline notes that there is no specific human pharmacodynamic model for anti-Parkinson drugs, and it considers the apomorphine (N04BC07) and levodopa tests, used as models of the response to single doses of the new drug in advanced disease, too insensitive [@emaGuidelineParkinsonsDisease2012].
+
 ## References
 
 ::: {#refs}

@@ -106,6 +106,11 @@ For symptomatic treatments, the effect is measured as the change from baseline, 
 For disease-modifying treatments in prodromal and mild to moderate AD, a trial duration of at least 18 months has been assumed sufficient.
 To show disease modification, the guideline favors comparing the rate of decline between groups over time (slope analysis), or else the time to a clinically important event such as dementia, rather than to a set decline on a rating scale such as the ADAS-Cog [@emaGuidelineAlzheimersDisease2018].
 
+### Clinical pharmacology studies
+
+For disease-modifying treatments, evidence of a slower clinical decline should be accompanied by biomarker evidence that the degeneration of the brain (neurodegeneration) also progresses more slowly.
+The choice of biomarker is left open, with more weight given to biomarkers showing an effect on the downstream disease mechanisms, not only that the drug reaches its target (target engagement); where the biomarker changes are unclear, a change in the disease course shown with a suitable trial design may be accepted instead [@emaGuidelineAlzheimersDisease2018].
+
 ## References
 
 ::: {#refs}

@@ -75,6 +75,13 @@ Each patient either reaches the target or not (a binary endpoint), assessed at 3
 The American College of Rheumatology response criteria ACR20, ACR50 and ACR70 (20%, 50% or 70% improvement in signs and symptoms from baseline) measure relative change and are in general not primary endpoints, except in patients who have failed several DMARDs from different classes, where ACR20 at month 6 is an acceptable primary endpoint.
 Placebo control may need to be kept short for ethical reasons, and maintenance of efficacy should be shown in a long-term randomized study lasting 12 months in total [@emaGuidelineClinicalInvestigation2017].
 
+### Clinical pharmacology studies
+
+Because phase 2 trials in RA may show efficacy without revealing the full potency of a new drug over time, the EMA guideline considers sensitive endpoints such as ACR20 or the mean DAS28-CRP possibly appropriate as the primary outcome of exploratory dose-finding trials.
+Assessing them early, for example at weeks 2 to 8, before the effect has reached its plateau, may help detect differences between doses.
+In dose finding for patients with obesity, both plasma exposure and clinical response should be taken into account, since response may be lower in overweight patients for reasons other than pharmacokinetics.
+The efficacy and safety effects of [interactions](../../../concepts/clinpharm-studies/ddi/index.qmd) with drugs likely to be given alongside in practice, such as methotrexate, should be evaluated [@emaGuidelineClinicalInvestigation2017].
+
 ## References
 
 * https://www.nejm.org/doi/full/10.1056/NEJMra2103726

@@ -103,6 +103,11 @@ Patients should be stratified at least by baseline viral load and CD4 count, and
 The total study duration should be at least 2 years, to provide long-term safety and efficacy data.
 Earlier dose-finding studies give the new drug alone for a short time, normally 7 to 10 days, and use the mean change in HIV RNA from baseline, a continuous outcome, as the primary endpoint [@emaGuidelineHIVInfection2016].
 
+### Clinical pharmacology studies
+
+Because HIV is treated with combination regimens and patients are likely to take a range of other medicines, the initial [drug-drug interaction studies](../../../concepts/clinpharm-studies/ddi/index.qmd) should give priority to other HIV drugs, drugs for co-infections such as hepatitis B and C and invasive fungal and bacterial infections, including tuberculosis and related infections (mycobacterial disease), hormonal contraceptives, and drugs for high blood lipids (hyperlipidemia), acid reflux (gastroesophageal reflux) and substance dependence.
+Tuberculosis is frequent in people with HIV, so before trials start, particularly in regions where tuberculosis is common, it is crucial that the relevant interaction studies have been done, so that patients who need tuberculosis drugs during the trial can use them adequately [@emaGuidelineHIVInfection2016].
+
 ## References
 
 * https://www.who.int/news-room/fact-sheets/detail/hiv-aids
