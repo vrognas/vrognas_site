@@ -1,26 +1,60 @@
 ---
 title: "G03: Sex hormones and modulators of the genital system"
-description: "ATC G03 sex hormones and modulators of the genital system for modelers: you are dosing into a feedback loop; baseline is rhythmic, so sampling time is a covariate; response outlasts exposure."
+description: "ATC G03 holds the sex hormones: contraceptives, estrogens, progestogens and androgens, fertility drugs that stimulate ovulation, antiandrogens and others."
 date: "2026-02-08"
 ---
 
-**You are dosing into a feedback loop.**
-Exogenous hormone suppresses endogenous secretion, so the measured concentration is the drug plus a baseline that moves in response to it [@bi2018tc; @pastuszak2021tu].
-Start from turnover (indirect response), not a direct-effect model [@pechstein2000cetrorelix; @snelder2019leuprorelin], and add an explicit feedback term when modeling the axis itself [@tornoe2007hpg] (see [pharmacodynamics](/docs/concepts/pd/)).
+G03 holds the sex hormones and related drugs: hormonal contraceptives, androgens, estrogens, progestogens and their combinations, gonadotropins and other ovulation stimulants, antiandrogens, and other modulators of the genital system [@whoccATCDDDIndex2026].
 
-**Baseline is rhythmic, so sampling time is a covariate.**
-Testosterone follows a circadian rhythm, most pronounced in younger men [@brambilla2009diurnal; @diver2003diurnal]; in premenopausal women LH, FSH, estradiol and progesterone vary across the menstrual cycle [@stricker2006menstrual; @roblitz2013menstrual].
-A pre-dose sample drawn at an arbitrary hour is one point on a rhythm, not a baseline [@dansirikul2008baseline; @bhasin2018guideline].
+The first oral contraceptive owed its development to a handful of people: two feminists, Margaret Sanger and Katharine Dexter McCormick, the biologist Gregory Pincus and the gynecologist John Rock [@dhontHistoryOralContraception2010].
 
-**Response outlasts exposure.**
-Steroids act through nuclear receptors and gene transcription [@burris2013nr], so endpoints such as luteinising hormone, spermatogenesis and prostate specific antigen move on the timescale of the affected system, not of plasma concentration [@bi2018tc; @gisleskog1998dht].
+## How do sex hormones work?
 
-**Flip-flop is the norm.**
-Depot injections, implants, transdermal systems and vaginal rings make the formulation set the input rate [@francis2021dmpa; @timmer2000nuvaring].
-For non-removable depots absorption is slower than elimination, so the apparent terminal half-life belongs to the vehicle [@kuan2023flipflop; @periti2002leuprorelin].
+The steroid sex hormones act through nuclear receptors, which are ligand-activated transcription factors.
+Some ligands of these receptors act as agonists in one tissue and as antagonists in another; these are called selective modulators [@burris2013nr].
 
-**Mechanistic extrapolation.**
-PBPK dominates here, predicting how CYP3A inducers such as efavirenz or rifampicin lower ethinylestradiol and progestin exposure, and whether dose adjustment preserves contraceptive efficacy [@lewisPhysiologicallyBasedPharmacokinetic2024; @adeojoPhysiologicallyBasedPharmacokinetic2024].
+Most **hormonal contraceptives** (G03A) contain a progestogen, either alone or combined with an estrogen [@whoccATCDDDIndex2026].
+The main contraceptive effect of the combined pill is inhibition of ovulation [@dhontHistoryOralContraception2010].
+
+**Androgens** (G03B), such as testosterone (G03BA03), are used to treat men with symptoms of testosterone deficiency and consistently low testosterone concentrations [@bhasin2018guideline].
+
+**Selective estrogen receptor modulators** (G03XC), such as raloxifene (G03XC01), are the selective modulators that act on the estrogen receptor [@whoccATCDDDIndex2026].
+
+## Endogenous hormones
+
+Testosterone is also made by the body, so a measured concentration can combine drug and endogenous hormone.
+A population PK model of intramuscular testosterone undecanoate described the measured testosterone in this way, with a time-dependent suppression of endogenous production during treatment and a gradual recovery [@pastuszak2021tu].
+
+The endogenous baseline also moves over time.
+In men aged 30 to 40 years, testosterone was 20--25% lower at 16:00 than at 08:00, and the difference fell to about 10% by age 70 [@brambilla2009diurnal].
+The Endocrine Society recommends measuring testosterone in the fasting morning state [@bhasin2018guideline].
+In premenopausal women, serum luteinizing hormone, follicle-stimulating hormone, estradiol and progesterone vary widely across the menstrual cycle, both between cycles of the same woman and between women [@stricker2006menstrual].
+
+## Efficacy
+
+What is measured depends on what the hormone is given for.
+
+For contraceptives, the clinical endpoint is pregnancy; one model-based meta-analysis summarized it as the Pearl Index (a pregnancy rate) and compared groups by incidence rate ratios.
+Integrated with a PBPK model, it linked levonorgestrel exposure to the Pearl Index and estimated the concentrations needed for efficacy.
+It predicted that [drug-drug interactions](../../../../concepts/clinpharm-studies/ddi/index.qmd) with strong CYP3A4 inducers lower levonorgestrel exposure from combined pills of levonorgestrel and ethinylestradiol (G03AA07) by 50--65% in women with a body mass index below 25 kg/m^2^, and by 70--75% in obese women [@lingineniDeterminingExposureThreshold2021].
+
+A pooled population PK analysis of depot medroxyprogesterone acetate (G03AC06) in women on antiretroviral or antituberculosis treatment took concentrations below 0.1 ng/mL as subtherapeutic, with a risk of contraceptive failure.
+In its simulations, re-dosing every 8 to 10 weeks instead of every 12 avoided subtherapeutic concentrations in women taking interacting treatment [@francis2021dmpa].
+
+For testosterone replacement, treatment is monitored by the serum testosterone concentration, a continuous measure, and the Endocrine Society suggests aiming for the mid-normal range [@bhasin2018guideline].
+Simulations of intramuscular testosterone undecanoate compared dosing regimens by the share of patients with an average concentration in the normal range or a trough above 300 ng/dL, and by the likelihood of a peak above 2500 ng/dL [@pastuszak2021tu].
+
+## Safety
+
+The first oral contraceptives had life-threatening side effects that were due to their high steroid doses, which led to preparations with less estrogen [@dhontHistoryOralContraception2010].
+
+Combined oral contraceptives still raise the risk of blood clots in the deep veins or the lungs (venous thromboembolism, VTE).
+In a Danish national cohort, the absolute risk of venous thrombosis was 3.01 per 10 000 woman-years in non-users and 6.29 in current users.
+The relative risk was highest in the first year of use and fell with lower estrogen doses.
+At the same estrogen dose, pills combining ethinylestradiol with desogestrel (G03AA09), gestodene (G03AA10) or drospirenone (G03AA12) carried a higher risk than pills with levonorgestrel.
+Progestogen-only pills were not associated with an increased risk [@lidegaardHormonalContraceptionRisk2009].
+
+For testosterone therapy, the Endocrine Society recommends monitoring serum testosterone and the share of the blood made up of red cells (hematocrit), and advises against starting treatment in men whose hematocrit is already elevated [@bhasin2018guideline].
 
 ## References
 

@@ -1,14 +1,58 @@
 ---
 title: "G04: Urologicals"
-description: "ATC G04 urologicals for modelers: urological endpoints are not continuous; placebo response is large and time-varying."
+description: "ATC G04 holds the urologicals, drugs for the urinary tract and male sexual function: incontinence, erectile dysfunction, an enlarged prostate and more."
 date: "2026-02-08"
 ---
 
-**Urological endpoints are not continuous.**
-Symptom scores, voiding diaries and incontinence counts are ordered categorical or count data; fitting E~max~ to a group mean discards most of the information [@lyauk2021boundedinteger; @lyauk2020irtipss].
+G04 holds the urologicals, among them drugs for urinary frequency and incontinence, drugs for erectile dysfunction, and drugs for an enlarged prostate (benign prostatic hyperplasia, BPH) [@whoccATCDDDIndex2026].
 
-**Placebo response is large and time-varying.**
-In benign prostatic hyperplasia the placebo effect on symptom score has been several times the tamsulosin effect [@dagate2020ipss], so model its time course rather than treating it as a fixed offset [@mostafaei2022placebo].
+## How do urologicals work?
+
+Lower urinary tract symptoms can be treated by acting on the smooth muscle of the prostate and bladder [@uckertPhosphodiesterasePDEInhibitors2011].
+
+**Alpha-1-adrenoceptor antagonists** (G04CA) include tamsulosin (G04CA02), which is used for lower urinary tract symptoms suggestive of BPH [@franco-salinasPharmacokineticsPharmacodynamicsTamsulosin2010].
+
+**5α-reductase inhibitors** (G04CB) include finasteride (G04CB01) and dutasteride (G04CB02).
+A turnover model fitted to healthy men described how both block the conversion of testosterone to dihydrotestosterone (DHT): finasteride as an irreversible inhibitor of the type 2 enzyme, and dutasteride as an irreversible inhibitor of both types [@gisleskog1998dht].
+
+**Drugs for urinary frequency and incontinence** (G04BD) treat overactive bladder, a syndrome of a sudden need to urinate (urgency), with or without urgency incontinence, usually with frequent daytime urination (voiding) and waking at night to void (nocturia).
+Muscarinic receptor antagonists, such as oxybutynin (G04BD04) and solifenacin (G04BD08), are the main drugs used [@anderssonCardiacEffectsMuscarinic2011].
+Mirabegron (G04BD12) acts differently, as a selective β~3~-adrenoceptor agonist [@malikProarrhythmicSafetyRepeat2012].
+
+**Phosphodiesterase type 5 (PDE5) inhibitors** (G04BE), such as sildenafil (G04BE03), tadalafil (G04BE08) and vardenafil (G04BE09), are oral treatments for erectile dysfunction.
+They slow the breakdown of the second messenger cyclic GMP [@uckertPhosphodiesterasePDEInhibitors2011].
+
+## Efficacy
+
+BPH trials have used the change from baseline in the International Prostate Symptom Score (IPSS) as their endpoint, with little attention to the time course of symptoms.
+A model-based meta-analysis of 10 238 patients on placebo, tamsulosin, dutasteride or their combination, followed for up to four years, separated the drug effect on the IPSS from placebo response and disease progression with a sigmoid function [@dagate2020ipss].
+
+The IPSS is a questionnaire of seven patient-rated items, each an ordered category scored from 0 to 5, so the total is a bounded integer from 0 to 35.
+The items can be grouped into voiding and storage symptoms.
+In a phase II trial of 403 patients, item response theory (IRT) models of the individual items reduced the sample size needed to detect a drug effect by 5.9--11.7% compared with a model of the total score.
+These longitudinal models had considerably more power than a cross-sectional analysis of covariance [@lyauk2020irtipss].
+
+Overactive bladder trials measure patient-reported urinary outcomes: daily counts of urinations (micturitions), nocturia episodes, urgency episodes and incontinence episodes, and the volume voided per micturition.
+In a meta-analysis of 57 placebo-controlled trials, placebo alone improved all of these outcomes.
+The placebo effect on nocturia depended on age [@mostafaei2022placebo].
+
+For the 5α-reductase inhibitors, the effect can be followed as plasma DHT.
+The same model, with resynthesis of the inhibited enzyme, explained the different onset and offset of finasteride and dutasteride [@gisleskog1998dht].
+
+## Safety
+
+Tamsulosin can cause cardiovascular adverse effects: an oral controlled-absorption formulation was as effective as the modified-release formulation and caused somewhat fewer of them.
+Potent CYP3A4 inhibitors can more than double tamsulosin exposure [@franco-salinasPharmacokineticsPharmacodynamicsTamsulosin2010].
+
+In a crossover study in healthy volunteers, dry mouth with oxybutynin followed the concentration of the metabolite R-desethyloxybutynin, with no apparent relationship to that of R-oxybutynin.
+A controlled-release formulation that lowered metabolite exposure caused less dry mouth [@sathyanEffectOROSControlledrelease2001].
+
+Central nervous system side effects of antimuscarinics may be of particular concern in the elderly, and depend on muscarinic receptor subtype selectivity and on how well the drug crosses the blood-brain barrier.
+In rats, antimuscarinics that are substrates of the efflux transporter P-glycoprotein, such as trospium (G04BD09), reached the brain poorly, while oxybutynin reached it readily [@callegariComprehensiveNonclinicalEvaluation2011].
+
+The cardiac concerns with antimuscarinics are a raised heart rate and [QT prolongation](../../../../concepts/clinpharm-studies/qt/index.qmd).
+QT prolongation comes from inhibition of the cardiac hERG potassium channel, which is unrelated to muscarinic blockade [@anderssonCardiacEffectsMuscarinic2011].
+In a thorough QT study, mirabegron did not prolong the QTc interval at the 50 mg therapeutic or 100 mg supratherapeutic dose, but did at 200 mg in women [@malikProarrhythmicSafetyRepeat2012].
 
 ## References
 

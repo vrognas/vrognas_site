@@ -1,8 +1,8 @@
 ---
 title: "L04: Immunosuppressants"
-description: "ATC L04 immunosuppressants: the level-2 group covering L04A, from calcineurin inhibitors to the interleukin and JAK inhibitors."
+description: "ATC L04 holds the immunosuppressants, drugs that dampen the immune system, from calcineurin inhibitors used after transplants to TNF and JAK inhibitors."
 date: "2026-09-22"
 ---
 
-L04 has a single level-3 subgroup, [L04A](l04a/), which carries the whole group: calcineurin inhibitors (ciclosporin, tacrolimus), TNF-α inhibitors, interleukin inhibitors, and the JAK inhibitors.
-WHO gives L04 and L04A the same name.
+L04 has a single level-3 group, [L04A](l04a/), and WHO gives both the same name.
+L04A sorts the immunosuppressants into level-4 groups, mostly by what they block, such as calcineurin, TNF-α, interleukins and the Janus kinases.

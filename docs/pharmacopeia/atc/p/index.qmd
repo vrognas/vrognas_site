@@ -1,14 +1,12 @@
 ---
 title: "P: Antiparasitic products, insecticides and repellents"
-description: "ATC group P for modelers: life cycle stages as separate targets, parasitemia decline as the endpoint, and wide patient-driven variability."
+description: "ATC group P covers drugs against parasites: antimalarials and other antiprotozoals, anthelmintics against worms, and treatments for lice and scabies."
 date: "2026-02-08"
 ---
 
-Drugs directed at eukaryotic parasites: protozoa, helminths and ectoparasites.
-Their targets resemble host cells far more closely than a bacterium does, so selective targets are harder to find [@chan2026anthelmintic; @horn2014antiparasitic], though the therapeutic window varies sharply across the group rather than being uniformly narrow.
-
-A fourth-century recipe by Ge Hong said to wring qinghao out in cold water, so Tu Youyou switched to low-temperature ether extraction.
-Her extract 191, dated 4 October 1971, gave complete inhibition of rodent malaria, and artemisinin won her a share of the 2015 Nobel Prize [@suDiscoveryArtemisininNobel2015].
+ATC group P holds drugs against parasites: antiprotozoals (P01), anthelmintics against worms (P02), and ectoparasiticides, insecticides and repellents (P03) [@whoccATCDDDIndex2026].
+Compared with viruses and bacteria, eukaryotic parasites have genomes and proteins that closely resemble those of their human hosts.
+Many anti-infective drugs act on host targets as well as on pathogen targets [@chan2026anthelmintic].
 
 |  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
@@ -18,19 +16,23 @@ Her extract 191, dated 4 October 1971, gave complete inhibition of rodent malari
 
 : ATC P level 2 codes {#tbl-atc-p-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modeling notes
+## Anthelmintics
 
-**Life cycle stages are separate targets.**
-A drug active against one stage may be inactive against the next [@delves2012lifecycle; @white2014malaria], so the model must declare which stage the effect attaches to.
-Synchronized replication, sequestration of mature forms and dormant liver forms all produce behavior a direct-effect model on total burden will not reproduce [@saralamba2011intrahost; @hodelIncorporatingStageSpecificDrug2016].
+In trials against worms spread through soil (soil-transmitted helminths), anthelmintic efficacy is expressed as the cure rate, the percentage of patients whose stools become free of eggs, and the egg reduction rate [@keiserEfficacyCurrentDrugs2008].
 
-**Endpoint.**
-Parasitemia decline for the blood-dwelling protozoa [@krausePharmacokineticPharmacodynamicModelling2016], estimated as a clearance slope from the whole profile rather than a single visit [@fleggStandardizingMeasurementParasite2011; @stepniewskaVivoParasitologicalMeasures2010].
-For helminths it is the faecal egg count, reported as cure rate and egg reduction rate [@moserOneMeanRule2020; @brusseePopulationPharmacokineticsExposure2021].
+For tribendimidine against hookworm in children and adolescents, E~max~ models linked exposure to its active metabolite with the cure rate and the egg reduction rate.
+The curves were shallow: a 12-fold higher dose would have been needed to reach an egg reduction rate of 95% and a cure rate above 90%, so the authors suggested combination therapy [@brusseePopulationPharmacokineticsExposure2021].
 
-**Variability is wide, and mostly about the patient.**
-Endemic populations skew [pediatric](/docs/concepts/pediatrics/), so weight-band dosing [@waalewijn2025weightbands; @banda2025infants] and allometric scaling with maturation [@germovsek2017scaling] are the starting point.
-For the lipophilic agents, fat-dependent absorption is the first thing to characterize: a normal meal roughly doubles lumefantrine bioavailability [@ezzet2000LumefantrinePkpd; @jain2017LumefantrineBioavailability].
+## Dosing children
+
+WHO treatment guidelines give children's doses as weight bands, fixed dose steps by body weight.
+The bands differ between diseases, which complicates dosing a child treated for several diseases at once.
+A harmonized set of weight bands for tuberculosis, HIV, malaria and hepatitis C was judged feasible [@waalewijn2025weightbands].
+
+Infants are usually excluded from early dose-finding studies of antimalarials, so their doses are often extrapolated from older children or adults.
+Population PKPD modeling can support dose optimization from the sparse data that can be collected in infants [@banda2025infants].
+The tribendimidine model included [allometric scaling](../../../concepts/pediatrics/index.qmd) to account for growth and development [@brusseePopulationPharmacokineticsExposure2021].
+For scaling clearance in children, allometric weight scaling with an exponent of 0.75 combined with a sigmoid maturation function has been proposed as a standard model, against which published models were compared [@germovsekScalingClearancePaediatric2017].
 
 ## References
 

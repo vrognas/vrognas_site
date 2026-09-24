@@ -1,11 +1,50 @@
 ---
 title: "M04: Antigout preparations"
-description: "ATC M04 antigout preparations for modelers: urate is a turnover problem."
+description: "ATC M04 holds gout treatments: drugs that cut uric acid production or raise its excretion, enzymes that break it down, and drugs for gout attacks."
 date: "2026-02-08"
 ---
 
-**Urate is a turnover problem.**
-Serum urate under febuxostat is fitted with an indirect response model [@murakiPopulationPharmacodynamicAnalysis2018]; such a model predicted real-world urate with r = 0.68, rising to 0.77 once comorbidities, eGFR and loop diuretics were accounted for [@hiraiEvaluationPharmacokineticPharmacodynamic2018].
+M04 groups the antigout preparations by their effect on uric acid: preparations that inhibit its production (M04AA), preparations that increase its excretion (M04AB), preparations with no effect on uric acid metabolism (M04AC), and others (M04AX) [@whoccATCDDDIndex2026].
+
+## How do antigout drugs work?
+
+**Xanthine oxidase inhibitors** reduce the production of uric acid.
+Allopurinol (M04AA01), an analog of hypoxanthine, inhibits the conversion of hypoxanthine and xanthine to uric acid by xanthine oxidase, and febuxostat (M04AA03) is a non-purine inhibitor of the same enzyme [@hershfieldClinicalPharmacogeneticsImplementation2012].
+Allopurinol is rapidly and extensively metabolized to oxypurinol, which accounts for most of its urate-lowering effect [@dayClinicalPharmacokineticsPharmacodynamics2007].
+
+**Uricosuric drugs**, such as probenecid (M04AB01), lower plasma urate by increasing its excretion in urine [@dayClinicalPharmacokineticsPharmacodynamics2007].
+
+Humans lack a working uricase, the enzyme that converts urate to allantoin.
+**Pegloticase** (M04AX02) is a PEGylated recombinant uricase, approved for chronic gout that resists standard treatment (refractory gout) [@lipskyPegloticaseImmunogenicityRelationship2014].
+
+**Colchicine** (M04AC01) sits among the preparations with no effect on uric acid metabolism [@whoccATCDDDIndex2026].
+It binds tubulin and blocks the assembly of microtubules, and in joint inflammation caused by crystals (crystal arthritis) it inhibits the movement toward chemical signals (chemotaxis), adhesion and mobilization of white blood cells (neutrophils) and the protein complex that switches on inflammation (NALP3 inflammasome) [@leungColchicineUpdateMechanisms2015].
+
+## Efficacy
+
+Allopurinol is given to lower the blood concentration of urate and so reduce repeated attacks of gout [@dayClinicalPharmacokineticsPharmacodynamics2007].
+The goal of therapy is to keep serum or plasma urate, a continuous laboratory value, below 0.36 mmol/L (6 mg/dL), so that monosodium urate does not crystallize and existing deposits can dissolve [@hershfieldClinicalPharmacogeneticsImplementation2012].
+
+In a semi-mechanistic model of uric acid kinetics, built from 12 clinical studies, xanthine oxidase inhibitors reduced the production of uric acid, and the investigational urate transporter (URAT1) inhibitor verinurad reduced its reuptake.
+The model took renal function and the baseline fractional excretion of uric acid into account [@leanderSemimechanisticExposureresponseModel2021].
+
+For allopurinol, a population analysis of 133 patients with gout described the urate response to oxypurinol concentrations with a direct effect model.
+In that model, body size and diuretic use determined the dose needed to reach the urate target more than renal function did [@wrightPredictingAllopurinolResponse2015].
+
+## Safety
+
+Allopurinol is one of the most common causes of severe skin (cutaneous) adverse reactions, which include drug hypersensitivity syndrome, Stevens-Johnson syndrome and toxic epidermal necrolysis.
+These reactions are strongly associated with the HLA-B*58:01 allele, and the Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline bases allopurinol use on HLA-B genotype [@hershfieldClinicalPharmacogeneticsImplementation2012].
+
+Oxypurinol is cleared almost entirely by urinary excretion, and reduced allopurinol doses have long been recommended in renal impairment.
+Measuring oxypurinol concentrations may help reduce the risk of toxicity, particularly in renal impairment [@dayClinicalPharmacokineticsPharmacodynamics2007].
+
+In a population PK analysis of 78 people with gout, colchicine doses of 1.5 mg daily or less were predicted to carry a low risk of exceeding the nominal therapeutic range of 0.5 to 3 ng/mL.
+Higher doses may exceed its upper limit, particularly in patients of low body weight who take statins [@wrightInfluencePatientFactors2025].
+
+In two 6-month trials, about 40% of patients treated with pegloticase developed high-titer antibodies against it.
+These antibodies increase its clearance and are associated with loss of the urate-lowering effect and a higher risk of infusion reactions.
+Loss of the urate response preceded most infusion reactions, so urate measured before each infusion can serve as a surrogate for the antibodies [@lipskyPegloticaseImmunogenicityRelationship2014].
 
 ## References
 

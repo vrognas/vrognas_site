@@ -1,12 +1,44 @@
 ---
 title: "V08: Contrast media"
-description: "ATC V08 contrast media for modelers: contrast media, a pharmacokinetic problem."
+description: "ATC V08 holds the contrast media used in imaging: iodinated and non-iodinated X-ray contrast, MRI contrast agents and ultrasound contrast agents."
 date: "2026-02-08"
 ---
 
-**Contrast media, a pharmacokinetic problem.**
-Iodinated X-ray media distribute differentially to organs and between normal and abnormal tissue, and are excreted largely unchanged, with a hepatic and biliary route that matters in renal impairment [@bourinOverviewClinicalPharmacokinetics1997].
-Iohexol clearance is itself used as a measured GFR [@mohamedDiverseProtocolsMeasuring2024], and the practical question is the safe interval before the next study [@vandermolenWaitingTimesBetween2024].
+V08 holds the contrast media: iodinated and non-iodinated X-ray contrast media, and contrast media for magnetic resonance imaging (MRI) and ultrasound [@whoccATCDDDIndex2026].
+
+Iohexol (V08AB02) has a second use: its plasma clearance is a sufficiently accurate measure of the glomerular filtration rate (GFR), and so of [kidney function](../../../../concepts/clinpharm-studies/renal-impairment-studies/index.qmd) [@soveriMeasuringGFRSystematic2014].
+
+## How do contrast media work?
+
+On computed tomography (CT), contrast comes from atoms that attenuate X-rays strongly, and the current water-soluble CT contrast media use iodine [@ahmadHeavyMetalbasedNanoparticles2023].
+MRI contrast agents are almost all small, water-soluble chelates of gadolinium(III), meaning the metal ion is held in a binding molecule [@wahsnerChemistryMRIContrast2018].
+
+Imaging with X-ray contrast media relies on their uneven distribution: to some organs more than others, and to abnormal tissue differently from normal tissue.
+Apart from the biliary agents, iodinated X-ray contrast media bind little to plasma proteins and are not metabolized.
+For iopamidol (V08AB04), 66--72% of a dose is excreted in the urine.
+In patients with renal impairment, the metabolic clearance of X-ray contrast media was abnormally high, which suggests compensating routes such as biliary elimination [@bourinOverviewClinicalPharmacokinetics1997].
+
+## Efficacy
+
+The effect of a contrast medium is the enhancement it produces on the image.
+On CT, that enhancement depends on patient factors, on the contrast medium and how it is injected, and on scanner factors including scan timing.
+One review used contrast medium pharmacokinetics and computer simulation to propose injection protocols and scan timing for common CT examinations [@baeIntravenousContrastMedium2010].
+
+For MRI, the benefit of the contrast agent is improved diagnostic accuracy [@wahsnerChemistryMRIContrast2018].
+
+## Safety
+
+A fall in renal function after contrast medium is now called post-contrast acute kidney injury (PC-AKI), and it has many possible causes.
+The risk of acute kidney injury caused by intravascular contrast medium has been overstated.
+The important patient risk factors are chronic kidney disease and dehydration [@vandermolenPostcontrastAcuteKidney2018].
+
+Renal function also sets how long to wait between two contrast-enhanced examinations.
+With an estimated GFR (eGFR) above 60 mL/min/1.73 m^2^, the Contrast Media Safety Committee of the European Society of Urogenital Radiology suggests waiting optimally 12 hours between iodinated contrast examinations, which allows near-complete clearance, and at least 4 hours if a rapid follow-up is needed.
+The safe waiting time increases as renal function falls [@vandermolenWaitingTimesBetween2024].
+
+Gadolinium-based agents can cause a disease that thickens and scars the skin and internal organs (nephrogenic systemic fibrosis) in patients with severe renal impairment.
+Exposure to these agents can also leave gadolinium deposited in bone and brain, even when renal function is normal.
+Whether this deposition causes disease has been debated [@layneGadoliniumDepositionPotential2018].
 
 ## References
 

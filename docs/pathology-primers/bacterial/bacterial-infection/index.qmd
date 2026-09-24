@@ -20,7 +20,7 @@ A bacterial infection is classified according to the site of infection and somet
     * Probably *Streptococcus pneumoniae*, *Haemophilus influenzae*, *Mycoplasma pneumoniae*)
   * Hospital-acquired/ventilator-associated pneumonia (HAP/VAP)
     * Probably *S. aureus*, *Pseudomonas aeruginosa*, *Enterobacteria*
-    * *Pseudomonas aeruginosa* is not in the gut but on shower heads or sinks. It can only infect after antibiotic treatment when the gut flora is compromised.
+    * *Pseudomonas aeruginosa* lives in moist hospital environments such as sinks and shower heads, and can also colonize the gut. It mainly infects vulnerable patients, such as those on ventilators, with burns or with weakened immune systems, and earlier antibiotic treatment raises the risk.
 * Intra-abdominal infection (IAI)
 * Blood-stream infection (BSI)
 * Urinary-tract infection (UTI)
@@ -29,10 +29,10 @@ A bacterial infection is classified according to the site of infection and somet
 
 ### Sepsis
 
-Sepsis is a special life-threatening state.
-Occurs rarely during UTI, mostly in lung infections.
+Sepsis is a life-threatening state.
+Respiratory tract infections, especially pneumonia (including HAP and VAP), are its most common source, but infections of the urinary and genital tract (genitourinary infections) are among its sources too [@mayrEpidemiologySevereSepsis2014].
 
-The SOFA score is often used to assess organ failure in septic patients.
+The Sequential Organ Failure Assessment (SOFA) score is often used to assess organ failure in septic patients.
 
 #### Septic shock
 
@@ -48,7 +48,7 @@ Infectious diseases can be contagious during all five of the periods of disease.
 |   #   | Period/Phase/Stage | Description |
 | :---: | :----------------- | :---------- |
 |   1   | Incubation/latency | Pathogen replicates. No signs or symptoms. |
-|   2   | Prodromal (subclinical disease) | Pathogeon replicates. General signs and symptoms. The immune system is active. |
+|   2   | Prodromal (subclinical disease) | Pathogen replicates. General signs and symptoms. The immune system is active. |
 |   3   | Illness (clinical disease) | Most severe and characteristic signs and symptoms. **Usual time of diagnosis is early in this period.** |
 |   4   | Decline            | Pathogen particle-count declines. Signs and symptoms improve. Immune system possibly weakened---susceptibility to secondary infection. |
 |   5   | Convalescence      | Patient returns to normal function. Signs and symptoms resolve. Some permanent damage might have occurred. |
@@ -65,20 +65,47 @@ The onset of symptoms marks the transition from subclinical to clinical disease.
 ![Typical plasma concentration-time profiles of different biomarkers of bacterial infections. Adapted from Meisner M., (1999) @meisnerProcalcitoninErfahrungenMit1999](../../images/bac-inf_biomarkers.avif){#fig-biomarkers}
 
 * Biomarkers not specific
-    * 3 markers + WBC (but unspecific)
-        * CRP (comes late)
-        * PCT (quicker than CRP)
+    * 3 markers + white blood cell count (WBC, but unspecific)
+        * C-reactive protein (CRP, comes late)
+        * Procalcitonin (PCT, quicker than CRP)
         * IL-6
-* Microbroth
+* Broth microdilution susceptibility testing (microbroth)
     * Accurate + expensive
-* Vitek (turbidity), (will be replaced by MALDI-TOF?)
+* Vitek (automated susceptibility testing by turbidity)
     * Not as accurate as microbroth
+* MALDI-TOF (mass spectrometry)
+    * Identifies the species quickly, but does not test susceptibility
+
+A pure culture grown from a single colony is called an isolate, and it usually descends from a single bacterium.
+Below the species, a strain is a set of genetically similar descendants of one colony or cell, although the word is often used loosely.
+The type strain of a species is the living culture its name is tied to, descended from the isolate used to describe the species [@vanrossumDiversityWithinSpecies2020].
+The name of a species includes its genus, so *Staphylococcus aureus* is a species of the genus *Staphylococcus*.
+Species are grouped into genera, genera into families, families into orders and orders into classes, up to the domain [@parteListProkaryoticNames2020].
+
+An isolate from a patient's sample is a clinical isolate.
+PK/PD studies are recommended to test several clinical isolates alongside a reference strain, kept in a culture collection such as the American Type Culture Collection (ATCC) and used throughout to show that results are reproducible [@bulittaGeneratingRobustInformative2019].
+In the protocol of one antibiotic trial, the index isolate is the one from the culture that qualified the patient for the trial, and repeat isolates from later samples are kept alongside it for analysis [@dicksteinMulticentreOpenlabelRandomised2016].
+
+An isolate is wild type for a drug when it has no resistance to that drug gained through mutation or from other bacteria (acquired resistance) [@moutonMICbasedDoseAdjustment2018], so the same isolate can be wild type for one drug and resistant to another.
+How the MICs of wild-type isolates spread, and where the epidemiological cut-off falls, is covered under [antibacterials](../../../pharmacopeia/atc/j/j01/index.qmd#resistance-measurement-mic).
+
+::: {#fig-culture-to-mic}
+
+![](../../images/bac-inf_culture-to-mic.png){fig-alt="Hand-drawn diagram in three parts. Top: a sample tube, an agar plate with mixed colonies of three colors, a plate with only golden colonies labelled isolate, a tube of cloudy suspension labelled inoculum, and a row of six wells with drug concentrations from 0.5 to 16 mg/L, the first three cloudy and the rest clear, with the MIC at 4 mg/L. Bottom left: two plates of golden colonies on a time axis, the index isolate on day 1 and a repeat isolate on day 7. Bottom right: nested boxes, family Staphylococcaceae containing genus Staphylococcus, containing the species S. aureus and S. epidermidis, each containing strains drawn as dashed boxes with dots for isolates."}
+
+From a patient sample to an MIC (top), the same patient in a trial over time (bottom left), and where an isolate belongs among strains, species, genus and family (bottom right).
+The golden colonies are *Staphylococcus aureus* throughout.
+The inoculum follows the broth microdilution protocol of Wiegand et al. [@wiegandAgarBrothDilution2008], and the classification is from LPSN [@parteListProkaryoticNames2020].
+
+:::
 
 ## How can it be treated?
 
-> "Hit hard and hit early" -Paul Erlich
+> "Hit hard and hit early" (paraphrasing Paul Ehrlich)
 
-In almost all cases, an empirical treatment is used first.
+The rules of thumb below come from clinical practice: they are empirical guidance, not findings from a single study.
+
+In almost all cases, a treatment chosen before the bacteria are identified (empirical treatment) is used first.
 There is no time to wait for culture results.
 The "right" treatment is 90% successful, and the "wrong" treatment is 60% successful (known as the **"90/60 rule"**).
 
@@ -93,19 +120,29 @@ Most infections can be treated in 5--7 days.
     * Medical training
     * Local epidemiology
     * Resistance rates: How many percent are resistant?
-      * ESKAPE
-3. Individual resistance risk
+      * Six often-resistant hospital pathogens (ESKAPE)
+3. Individual risk of resistant bacteria
     * Previous infection with resistant bacteria
     * Recent travel
     * Hospitalization or antibiotics
 4. Other considerations
     * Allergy
     * Other drugs (interaction risk)
-    * Co-morbidities
+    * Other diseases (co-morbidities)
     * PK
 
-* Clinical dogmas: Foreign body infection -> biofilm
+* Clinical dogmas: Infection of an implant or other foreign object (foreign body infection) -> bacteria growing in a protective slime layer on its surface (biofilm)
 * Immunosuppressive
+
+### Resistance
+
+::: {.callout-important title="The patient is not resistant"}
+Antibiotic resistance belongs to the bacteria, not to the patient.
+It is the bacteria that do not respond to the antibiotic [@whoAntimicrobialResistance2026], so a patient is never "resistant"; they are infected with, or carry, resistant bacteria.
+:::
+
+Resistant bacteria travel through food, water, global trade, or human travel.
+How bacteria become resistant, and how resistance is handled in PK/PD, is covered under [antibacterials](../../../pharmacopeia/atc/j/j01/index.qmd#resistance).
 
 ### After initial treatment
 

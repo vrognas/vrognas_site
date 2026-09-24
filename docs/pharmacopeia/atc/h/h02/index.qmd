@@ -1,19 +1,51 @@
 ---
 title: "H02: Corticosteroids for systemic use"
-description: "ATC H02 corticosteroids for systemic use for modelers: baseline is rhythmic and it moves; duration matters separately from intensity; cumulative exposure is a poor fix."
+description: "ATC H02 holds corticosteroids that act throughout the body, taken by mouth or injected rather than put on the skin or inhaled, plus adrenal suppressants."
 date: "2026-02-08"
 ---
 
-**Baseline is rhythmic and it moves.**
-Cortisol has a pronounced diurnal pattern, so a constant baseline cannot describe a 24-hour profile [@chakraborty1999]; a time-varying production rate is the usual remedy [@ayyar2019].
-Baseline also falls during treatment and recovers slowly after withdrawal [@baker2021; @krzyzanski2021], which is one reason long courses are tapered [@burmester2020].
+H02 includes the glucocorticoids (H02AB), the mineralocorticoids (H02AA), such as fludrocortisone (H02AA02), and the antiadrenal preparations (H02C) [@whoccATCDDDIndex2026].
+The most commonly used systemic glucocorticoids are hydrocortisone (H02AB09), prednisolone (H02AB06), methylprednisolone (H02AB04) and dexamethasone (H02AB02) [@czock2005].
+This page is about the glucocorticoids.
 
-**Duration matters separately from intensity.**
-Fracture risk tracks current daily dose, and adrenal suppression rises with dose *and* treatment duration [@broersen2015adrenal; @magee2002prednisolonepkpd].
-An analysis carrying only average concentration misses the duration-dependent toxicities.
+## How do glucocorticoids work?
 
-**Cumulative exposure is a poor fix.**
-A single cumulative-exposure term is a poor fix: it forces duration and intensity to be interchangeable, and can manufacture an apparent exposure-response even when intensity carries no signal at all.
+Glucocorticoids act through genomic and possibly nongenomic mechanisms.
+In the genomic route, the drug activates the glucocorticoid receptor in the cytosol, which switches the synthesis of proteins up or down, including cytokines, chemokines, inflammatory enzymes and adhesion molecules.
+In this way, glucocorticoids may modify inflammation and the immune response.
+Nongenomic mechanisms might play an additional role in short courses of very high doses (pulse therapy) [@czock2005].
+
+## Endogenous cortisol
+
+In a model of the hypothalamic-pituitary-adrenal (HPA) axis built on data from 30 healthy volunteers, adrenocorticotropic hormone (ACTH) from the pituitary drove a time-dependent production of cortisol, the body's own glucocorticoid, and cortisol inhibited ACTH secretion in turn [@bindellini2024].
+
+When the drug is hydrocortisone, which is cortisol, the assay measures the dose and the body's own cortisol together.
+In one healthy-volunteer study, endogenous cortisol was therefore suppressed with dexamethasone before and after the hydrocortisone doses, and the final model still carried a constant endogenous baseline [@melin2018].
+
+## Efficacy
+
+What is measured depends on why the drug is given.
+
+In 50 patients with underactive adrenal glands (adrenal insufficiency) on their usual hydrocortisone replacement regimen, dosed on clinical evaluation, plasma cortisol was compared with the physiological range, and 79%, 55% and 45% of them were over- or under-treated at 08:00, 16:00 and midnight [@simon2010].
+
+In [rheumatoid arthritis](../../../../pathology-primers/autoimmune/rheumatoid-arthritis/index.qmd), an inflammatory disease, the SEMIRA trial compared tapering with continuing prednisone (H02AB07) on the mean change in a clinical score, the Disease Activity Score for 28 joints with erythrocyte sedimentation rate (DAS28-ESR).
+In patients with low disease activity on tocilizumab (L04AC07), continuing 5 mg prednisone daily gave better disease control than tapering it to zero, although two-thirds of patients tapered safely [@burmester2020].
+
+In a study in 48 healthy women given single doses of dexamethasone or betamethasone (H02AB01), the effects were followed on six continuous biomarkers: cortisol, T helper cells, basophils, glucose, neutrophils and T cytotoxic cells, four of which had circadian rhythms.
+Each was described with an indirect response (turnover) model, in which the drug inhibited or stimulated the production or influx of the biomarker, and cortisol was the most sensitive [@krzyzanski2021].
+Simulations with T helper cells and endogenous cortisol as biomarkers suggested that low-dose methylprednisolone might be more effective given twice daily [@czock2005].
+
+## Safety
+
+Glucocorticoids cause severe adverse reactions, particularly when taken systemically at high doses for long periods [@baker2021].
+In a survey of 2446 long-term users in a US managed care population, more than 90% reported at least one adverse effect associated with glucocorticoids.
+Weight gain was the most common, reported by 70%, and cataracts (15%) and fractures (12%) were among the most serious.
+All eight adverse effects studied showed a dose-dependent association with cumulative glucocorticoid use, and among users of 7.5 mg prednisone per day or less, longer use was associated with acne, skin bruising, weight gain and cataracts [@curtisPopulationbasedAssessmentAdverse2006].
+
+Suppression of the HPA axis causes adrenal insufficiency, which is potentially life-threatening and can become symptomatic when treatment is withdrawn.
+Long-term systemic glucocorticoids should therefore be withdrawn slowly [@baker2021].
+In a meta-analysis of 74 studies of corticosteroid users, the proportion with adrenal insufficiency among patients with asthma rose from 2.4% at low doses to 21.5% at high doses, and from 1.4% after less than 28 days of treatment to 27.4% after more than a year.
+No dose, duration, route or disease excluded adrenal insufficiency with certainty [@broersen2015adrenal].
 
 ## References
 

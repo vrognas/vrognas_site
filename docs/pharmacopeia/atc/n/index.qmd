@@ -1,12 +1,15 @@
 ---
 title: "N: Nervous system"
-description: "ATC group N for modelers: the endpoint sets the structure, placebo needs its own submodel, and PET occupancy bridges dose to effect."
+description: "ATC group N covers the nervous system: anesthetics, painkillers, antiepileptics, Parkinson's drugs, antipsychotics, sedatives, antidepressants and more."
 date: "2026-02-08"
 ---
 
-The level 2 codes in @tbl-atc-n-lvl-2 run from anesthetics to other nervous system drugs, and the **endpoint**, not the drug, sets the model structure: processed EEG in N01 [@bjornssonTwoCompartmentEffectSite2010], daily seizure counts in N03 [@troconizModellingOverdispersionMarkovian2009] and bounded PANSS scores in N05 [@krekelsItemResponseTheory2017] each demand a different likelihood.
+ATC group N holds the drugs acting on the nervous system, from the anesthetics (N01) to other nervous system drugs (N07) [@whoccATCDDDIndex2026].
+Their effects are measured in very different ways: as [processed electroencephalogram (EEG) under anesthesia](n01/index.qmd), as [daily seizure counts](n03/index.qmd), and on [psychiatric rating scales](n05/index.qmd) such as the Positive and Negative Syndrome Scale (PANSS).
 
-On 29 March 1948 John Cade gave lithium citrate to W.B., in manic excitement for five years; W.B. left hospital months later and returned to his old job [@cadeLithiumSaltsTreatment1949; @lopezmunozHistoryPharmacologicalTreatment2018].
+On 29 March 1948 John Cade gave lithium (N05AN01), as lithium citrate, to W.B., a man who had been in manic excitement for five years.
+W.B. left hospital four months later and returned to the job he had held before his admission.
+Cade published the results in 1949 [@lopezmunozHistoryPharmacologicalTreatment2018].
 
 |  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
@@ -20,21 +23,21 @@ On 29 March 1948 John Cade gave lithium citrate to W.B., in manic excitement for
 
 : ATC N level 2 codes {#tbl-atc-n-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modeling notes
+## Placebo response in psychiatric trials
 
-**Endpoint.**
-Analysing composite PANSS totals as continuous data discards information and violates the scale's numerical nature; item response theory models the items instead [@krekelsItemResponseTheory2017].
-Depression trials have been modeled on the HAMD-17 total [@gomeniBayesianModellingROC2007].
+In psychiatry, large variation in the placebo response within and between clinical trials can substantially affect the conclusions about a new drug's efficacy.
+A model of the placebo time course helps separate the drug effect from this response, and such models have been published for schizophrenia, depression, [Alzheimer's disease](../../../pathology-primers/neurological/alzheimer/index.qmd) and [Parkinson's disease](../../../pathology-primers/neurological/parkinson/index.qmd).
+High dropout rates are also common in the placebo arms of psychiatric trials [@pillareddyStructuralModelsDescribing2011].
+How dropout is modeled in schizophrenia trials is described under [N05](n05/index.qmd).
 
-**Placebo first (N05, N06).**
-Placebo arms in schizophrenia and depression improve over weeks, so a placebo time course is fitted before estimating any drug effect [@pillareddyStructuralModelsDescribing2011].
+In antidepressant trials, about 40% of patients have a placebo response.
+In 691 patients from seven depression trials, a Weibull/linear model described the placebo time course of the Hamilton Rating Scale for Depression (HAMD-17) total score, and the scores at weeks 2 and 4 predicted which patients would turn out to be placebo responders [@gomeniBayesianModellingROC2007].
 
-**Easy to overlook.**
-PET occupancy bridges dose and effect in N05: patients with acute extrapyramidal syndromes had higher D2 occupancy than those without [@fardePositronEmissionTomographic1992], and model-based analysis quantifies it against efficacy and those symptoms [@degreefDopamineD2Occupancy2011].
+## Reaching the brain
 
-**Mechanistic extrapolation.**
-Human CNS distribution data are scarce, so physiologically based models combined with microdialysis predict unbound extracellular concentrations at the target site [@yamamotoMicrodialysisKeyPhysiologically2017].
-A separately developed pediatric brain PBPK model predicted CSF concentrations and was checked against CSF observed in children, meningitis included [@verscheijdenDevelopmentPhysiologicallyBased2019].
+For a drug acting in the central nervous system (CNS), it is the unbound drug that crosses membranes and reaches the target, so the unbound concentration in brain extracellular fluid is the one of interest.
+Microdialysis is the only technique that measures it over time in vivo.
+Human CNS distribution data are scarce, so preclinical microdialysis data are combined with physiologically based pharmacokinetic (PBPK) models to predict human target-site concentrations [@yamamotoMicrodialysisKeyPhysiologically2017].
 
 ## References
 

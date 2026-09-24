@@ -1,11 +1,42 @@
 ---
 title: "D07: Corticosteroids, dermatological preparations"
-description: "ATC D07 corticosteroids, dermatological preparations for modelers: the vehicle is part of the drug."
+description: "ATC D07 holds corticosteroids for the skin, the steroid creams and ointments used for inflammation such as eczema, alone or in combinations."
 date: "2026-02-08"
 ---
 
-**The vehicle is part of the drug.**
-Fitting **E~max~** to blanching, a [pharmacodynamic](/docs/concepts/pd/) readout, reversed the potency ranking of clobetasol and mometasone once each was formulated as a cream, which the authors suggest may be due to formulation factors [@rathApplicationEmaxModel2022].
+D07 holds the corticosteroids for use on the skin, either plain (D07A) or combined with antiseptics, antibiotics or other drugs (D07B, D07C and D07X).
+The plain corticosteroids are grouped by potency, from weak (group I, D07AA) to very potent (group IV, D07AD).
+Hydrocortisone (D07AA02) is in group I, and clobetasol (D07AD01) in group IV [@whoccATCDDDIndex2026].
+
+## How do topical corticosteroids work?
+
+Glucocorticoids change which proteins a cell makes, either by acting directly on DNA or indirectly by modulating specific transcription factors.
+Several enzymes induced in inflammation are sites of their inhibitory action.
+Exactly how they act in the skin was still uncertain in 1998 [@ahluwaliaTopicalGlucocorticoidsSkin1998].
+
+## Efficacy
+
+The clinical scores for the diseases these drugs treat are described under [D05](../d05/index.qmd) and [D11](../d11/index.qmd).
+
+Topical corticosteroids blanch the skin where they are applied, and this response has been correlated with clinical efficacy.
+Blanching is an accepted pharmacodynamic measure for establishing bioequivalence between corticosteroid formulations, but the approach cannot be applied to all drugs [@herkenneVivoMethodsAssessment2008].
+
+In the Stoughton-McKenzie vasoconstriction assay, trained observers grade the blanching on a 0 to 4 intensity scale, an ordered categorical observation, or it is measured with a quantitative method, such as reflectance spectroscopy.
+The FDA accepts the assay as a surrogate method for the bioequivalence of topical corticosteroid products.
+The intensity of blanching depends on the vehicle, the concentration, the application site, posture and covering of the treated skin (occlusion) [@alomariUpdateAdvancesChallenges2024].
+
+Rath and colleagues fitted an E~max~ model to blanching from the FDA vasoconstrictor assay to compare two marketed creams.
+The clobetasol cream came out more potent than the mometasone (D07AC13) cream, although mometasone had the greater inherent potency when the two corticosteroids were tested on their own.
+The authors suggest that this reversal may be due to formulation factors [@rathApplicationEmaxModel2022].
+
+## Safety
+
+Skin (cutaneous) adverse effects occur regularly with prolonged treatment, and depend on the drug, the vehicle and where it is applied.
+The most frequent are thinning of the skin (skin atrophy), stretch marks (striae), persistent facial redness (rosacea), a rash around the mouth (perioral dermatitis), acne and purple spots from bleeding under the skin (purpura) [@henggeAdverseEffectsTopical2006].
+In a systematic review of topical treatments for eczema (atopic dermatitis) in children, topical corticosteroids were the only class associated with reports of skin atrophy [@zhaoSafetyTopicalMedications2023].
+
+Systemic reactions, such as high blood glucose (hyperglycemia), glaucoma and too little cortisol from the adrenal glands (adrenal insufficiency), have also been reported after topical application.
+Children are more prone to systemic reactions, because of their higher ratio of body surface area to body weight [@henggeAdverseEffectsTopical2006].
 
 ## References
 

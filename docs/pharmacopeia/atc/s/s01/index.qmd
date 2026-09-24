@@ -1,22 +1,58 @@
 ---
 title: "S01: Ophthalmologicals"
-description: "ATC S01 ophthalmologicals for modelers: dosing time is design, not noise; vitreous exposure is predicted, not sampled; plasma reports safety, not effect."
+description: "ATC S01 holds eye drugs, such as anti-infectives, anti-inflammatories, glaucoma drugs, pupil-dilating and allergy drops, and macular degeneration drugs."
 date: "2026-02-08"
 ---
 
-**Typical structure.**
-For pressure, a physiological baseline built from aqueous humour dynamics, with the drug entering as an effect on those parameters, which is what carries the model from rabbit and dog into patients [@durairajMechanismBasedTranslational2014].
+Ophthalmologicals are medicines for the eye.
+S01 covers anti-infectives, anti-inflammatory agents, glaucoma drugs, pupil-dilating drugs (mydriatics), decongestants and antiallergics, local anesthetics, diagnostic agents, surgical aids and drugs for ocular vascular disorders [@whoccATCDDDIndex2026].
+This page follows the glaucoma drugs and the drugs injected into the eye for retinal disease.
 
-**Dosing time is design, not noise.**
-Morning and evening instillation of the same fixed combination both lowered 24 hour pressure but differed in fluctuation, so clock time belongs in the model [@fengEfficacyMorningVersus2024].
+## How do ophthalmologicals work?
 
-**Vitreous exposure is predicted, not sampled.**
-Faricimab vitreous concentrations were inferred from aqueous humour and plasma samples, with plasma exposure roughly 6000-fold below vitreous [@diackOcularPharmacokineticsFaricimab2024].
-The aflibercept population model was fitted to plasma alone, ocular concentrations being a model output [@bihorelIntegratedPopulationPharmacokinetic2026].
+**Antiglaucoma preparations** (S01E) lower the pressure inside the eye (intraocular pressure).
+The pressure is set by the balance between secretion of the clear fluid in the front of the eye (aqueous humor) by the ciliary body and its drainage, through the main drainage tissue (trabecular meshwork) and a second route through the eye wall (uveoscleral pathway).
 
-**Plasma reports safety, not effect.**
-Here plasma reports systemic safety, not the driver of effect: ophthalmic timolol is absorbed systemically, and paroxetine raised its plasma exposure 1.6-fold from 0.1% gel and 1.8-fold from 0.5% drops, with standing heart rate significantly lower only after the drops [@maenpaaParoxetineMarkedlyIncreases2014].
-That makes it a [drug interaction](/docs/concepts/clinpharm-studies/ddi/) question.
+* Prostaglandin analogues, such as latanoprost (S01EE01), increase drainage through the uveoscleral pathway.
+* Beta-blockers, such as timolol (S01ED01), and carbonic anhydrase inhibitors, such as dorzolamide (S01EC03), reduce the production of aqueous humor.
+* Alpha-adrenergic agonists, such as brimonidine (S01EA05), first reduce production and later increase outflow [@weinrebPathophysiologyTreatmentGlaucoma2014].
+
+The **anti-VEGF agents** among the ocular vascular disorder agents (S01L) are injected into the gel that fills the back of the eye (vitreous).
+They block vascular endothelial growth factor (VEGF), which regulates the growth of blood vessels and increases vascular permeability.
+Aflibercept (S01LA05) is a soluble fusion protein built from the VEGF-binding domains of VEGF receptors 1 and 2 [@kwongAntivascularEndothelialGrowth2014].
+
+## Limited access to the eye
+
+The eye is hard to reach, both for giving a drug and for sampling its tissues to measure drug concentrations, and ocular physiologically based pharmacokinetic (PBPK) models are needed to describe drug concentrations in its different regions [@kuepferQuantitativeSystemsPharmacology2023].
+Eye drops must cross anatomical and physiological barriers to reach the fluid-filled front of the eye (anterior chamber), and the posterior segment (vitreous, retina, choroid and optic nerve) has further barriers.
+Because concentrations at the target site are hard to obtain, ocular clinical pharmacokinetics, and with it ocular PKPD, are rarely available [@novackOcularPharmacology2016].
+
+For faricimab (S01LA09), a bispecific antibody that binds both VEGF-A and angiopoietin-2, a population model with sequential vitreous, aqueous humor and plasma compartments was fitted to aqueous humor and plasma samples.
+Elimination from the vitreous was the slowest step, with a half-life of 7.5 days, so concentrations in all three declined in parallel.
+Plasma exposure was about 6000-fold lower than vitreous exposure [@diackOcularPharmacokineticsFaricimab2024].
+
+## Efficacy
+
+For glaucoma drugs, the endpoint is intraocular pressure, a continuous measurement in mmHg, and lowering it is the only proven way to treat glaucoma [@weinrebPathophysiologyTreatmentGlaucoma2014].
+A translational model described baseline pressure, whose daily rhythm differs between rabbits and humans, with a physiological model of aqueous humor dynamics, and then added the effect of the drug.
+With human aqueous humor parameters substituted for the animal ones, it predicted pressure in patients after treatment [@durairajMechanismBasedTranslational2014].
+
+In the faricimab phase 3 trials, the primary endpoint was the change from baseline in best-corrected visual acuity (BCVA), and an exposure-response analysis found similar BCVA gains across faricimab exposures and dosing regimens [@diackOcularPharmacokineticsFaricimab2024].
+
+For pegcetacoplan (S01XA31), a complement C3 and C3b inhibitor used in patchy loss of the central retina (geographic atrophy), the endpoint was the area of the geographic atrophy lesion.
+In sham-treated and untreated fellow eyes, lesion area grew linearly with time over 24 months, and this formed the disease progression model.
+A dose-response model estimated that pegcetacoplan reduced the growth rate to 0.80 of sham with monthly dosing, and to 0.83 with dosing every other month.
+The PK/PD model related the growth rate to the vitreous concentration of pegcetacoplan [@crassPharmacokineticPharmacodynamicAnalysis2025].
+
+## Safety
+
+Ocular medicines are applied locally but can be absorbed systemically, which can cause low blood pressure (hypotension), narrowing of the airways (bronchospasm) and a slow heart rate (bradycardia) [@novackOcularPharmacology2016].
+Beta-blocker eye drops are contraindicated in patients with asthma, chronic obstructive pulmonary disease or bradycardia.
+Prostaglandin analogues have few systemic adverse effects, and their local adverse effects include red eyes (conjunctival hyperemia), longer and darker eyelashes, and darkening of the iris [@weinrebPathophysiologyTreatmentGlaucoma2014].
+
+In a [drug interaction](../../../../concepts/clinpharm-studies/ddi/index.qmd) study in 12 healthy volunteers, the strong CYP2D6 inhibitor paroxetine (N06AB05) raised the plasma AUC of ophthalmic timolol 1.6-fold with 0.1% gel and 1.8-fold with 0.5% drops.
+With paroxetine, six subjects on the 0.5% drops, and none on the gel, exceeded a timolol concentration of 0.7 ng/mL, which the authors note can cause systemic adverse effects in patients at risk.
+After the 0.5% drops, heart rate on standing was lower with paroxetine than with placebo [@maenpaaParoxetineMarkedlyIncreases2014].
 
 ## References
 

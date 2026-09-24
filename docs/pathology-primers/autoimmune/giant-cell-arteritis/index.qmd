@@ -5,7 +5,7 @@ date: "2024-12-04"
 
 ## What is GCA?
 
-Also called **temporal arteritis**, because of the frequent involvement of the temporal artery.
+Also called **temporal arteritis**, because of the frequent involvement of the artery at the temple (temporal artery).
 Also known as "cranial arteritis" and "Horton's disease".
 The name (giant cell arteritis) reflects the type of inflammatory cell involved.
 
@@ -13,7 +13,7 @@ It is an inflammatory autoimmune disease of large blood vessels.
 
 ## What are the symptoms?
 
-This type of arteritis causes the arteries in the head, neck, and arm area to swell to abnormal sizes.
+This type of artery inflammation (arteritis) causes the arteries in the head, neck, and arm area to swell to abnormal sizes.
 
 ### Typical patient population
 
@@ -21,21 +21,21 @@ This type of arteritis causes the arteries in the head, neck, and arm area to sw
 * ~70% Females
 * Northern European descent
 * Normal life expectancy
-* 50% also diagnosed with polymyalgia rheumatica (PMR)
+* 50% also diagnosed with an inflammatory condition causing aching and stiffness of the shoulders and hips (polymyalgia rheumatica, PMR)
 
 ## Diagnosis
 
 ### Physical exam
 
-* Palpation of the head reveals prominent temporal arteries with or without pulsation.
+* Feeling the head by hand (palpation) reveals prominent temporal arteries with or without pulsation.
 * The temporal area may be tender.
 * Decreased pulses may be found throughout the body
-* Evidence of ischemia may be noted on fundal exam.
-* Bruits may be heard over the subclavian and axillary arteries
+* Evidence of reduced blood supply (ischemia) may be noted on examination of the back of the eye (fundal exam).
+* Whooshing sounds from turbulent blood flow (bruits) may be heard over the arteries below the collarbone and in the armpit (subclavian and axillary arteries)
 
 ### Laboratory tests
 
-* Erythrocyte sedimentation rate, an inflammatory marker, > 60 mm/h (normal 1–40 mm/h)
+* Erythrocyte sedimentation rate, an inflammatory marker, > 60 mm/h (normal 1–40 mm/h)
 * C-reactive protein, another inflammatory marker, may be elevated
 * LFTs, liver function tests, are abnormal particularly raised ALP- alkaline phosphatase
 * Platelets may also be elevated

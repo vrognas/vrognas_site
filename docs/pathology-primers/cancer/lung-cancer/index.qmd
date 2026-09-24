@@ -9,8 +9,8 @@ There are three main types of two cancer, depending on which cells have turned c
 
 * Small-cell lung cancer (SCLC) ~15% of cases
 * Non-small-cell lung cancer (NSCLC) ~85% of cases
-  * Adenocarcinomas ~40% of cases
-  * Squamous-cell carcinomas ~30% of cases
+  * Gland-cell cancers (adenocarcinomas) ~40% of cases
+  * Flat-cell cancers (squamous-cell carcinomas) ~30% of cases
   * Large-cell carcinomas ~15% of cases
 
 There are also other, rare types of lung cancer.
@@ -19,7 +19,7 @@ There are also other, rare types of lung cancer.
 
 ### Diagnosis
 
-Definitive diagnosis of lung cancer requires a biopsy of the suspected tumor be examined by a pathologist under a microscope.
+Definitive diagnosis of lung cancer requires a tissue sample (biopsy) of the suspected tumor be examined by a pathologist under a microscope.
 
 ## How can it be treated?
 

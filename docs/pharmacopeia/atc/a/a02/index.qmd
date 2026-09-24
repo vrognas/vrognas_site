@@ -1,14 +1,51 @@
 ---
 title: "A02: Drugs for acid related disorders"
-description: "Pharmacometric modeling notes for ATC A02, drugs for acid related disorders."
+description: "ATC A02 holds drugs for stomach acid problems: antacids, and drugs for peptic ulcers and chronic acid reflux (GERD), such as the proton pump inhibitors."
 date: "2026-02-08"
 ---
 
-**Easy to overlook.**
-Omeprazole inactivates the gastric H^+^/K^+^-ATPase irreversibly, so in dogs the duration of inhibition was set by enzyme turnover after long exposure and by transfer of pumps between active and resting states after short exposure, not by drug elimination [@abeloGastricAcidSecretion2002].
+This group holds antacids and drugs for ulcers in the stomach or duodenum (peptic ulcer) and stomach acid backing up into the esophagus (gastroesophageal reflux disease), among them the histamine H~2~-receptor antagonists and the proton pump inhibitors [@whoccATCDDDIndex2026].
+Proton pump inhibitors are used for gastroesophageal reflux disease, gastric and duodenal ulcers, inflammation with shallow sores in the esophagus (erosive esophagitis) and *Helicobacter pylori* infection [@limaClinicalPharmacogeneticsImplementation2021].
 
-**Mechanistic extrapolation.**
-PBPK has been applied in the reverse direction, asking whether acid suppression changes the [absorption](/docs/concepts/pk/1_absorption/) of a co-medication: it described the lack of an acid-reducing-agent effect for tapentadol, darunavir and saxagliptin and qualitatively predicted reduced erlotinib absorption [@dongApplicationPhysiologicallyBased2020], and predicted a minor pH-dependent interaction for the entrectinib market formulation [@parrottPhysiologicallyBasedAbsorption2020].
+## How do drugs for acid related disorders work?
+
+Stomach acid is made by the H^+^/K^+^-ATPase of the acid-secreting cells in the stomach lining (parietal cells), also called the proton pump.
+
+* **Histamine H~2~-receptor antagonists (H~2~RAs)**, such as famotidine (A02BA03), block histamine H~2~ receptors, and inhibit acid secretion less strongly than the proton pump inhibitors.
+* **Proton pump inhibitors (PPIs)**, such as omeprazole (A02BC01), are prodrugs.
+  They must be activated by acid in the parietal cell, and then inhibit the proton pump irreversibly.
+* **Potassium-competitive acid blockers (P-CABs)** inhibit the proton pump reversibly.
+  Vonoprazan (A02BC08), for example, does not need acid to be activated [@oshimaPotentPotassiumcompetitiveAcid2018].
+
+The WHO classification places the P-CABs in the same level 4 group as the PPIs [@whoccATCDDDIndex2026].
+
+## pH-dependent drug interactions
+
+Raising gastric pH can reduce the [absorption](../../../../concepts/pk/1_absorption/index.qmd) of other oral drugs, and most clinically meaningful interactions of this kind are with weak bases.
+A systematic review found 121 medicines with a clinically meaningful [interaction](../../../../concepts/clinpharm-studies/ddi/index.qmd) with acid-reducing agents: antacids, H~2~RAs and PPIs.
+For 38 of them the interaction depended on gastric pH, and the other 83 interacted through metabolic enzymes, transporters, chelation or urine alkalization [@patelSystematicReviewGastric2020].
+
+In one physiologically based pharmacokinetic (PBPK) study of four weak bases, the models described the absence of an effect of acid-reducing agents for three, and qualitatively predicted the reduced absorption of the fourth, erlotinib (L01EB02) [@dongApplicationPhysiologicallyBased2020].
+
+## Efficacy
+
+The pharmacodynamic endpoint is intragastric pH, monitored continuously over 24 hours and summarized as the percentage of time with pH above 4, the pH holding time ratio.
+The clinical endpoint in erosive esophagitis is the healing rate after 4 or 8 weeks, the proportion of patients healed.
+A model-based meta-analysis related the two, using 82 studies of intragastric pH and 103 studies of healing.
+The P-CABs held pH above 4 longest and had the highest healing rates.
+The predicted probability of a healing rate of at least 90% at 8 weeks was 74% for P-CABs, 17% for PPIs and 0% for H~2~RAs.
+With regular use, the H~2~RAs lose their effect through pharmacological tolerance [@howdenMathematicalModelRelationship2025].
+
+The established PPIs have elimination half-lives of 1 to 1.5 hours [@fockProtonPumpInhibitors2008].
+In a mechanism-based model of omeprazole in dogs, the duration of acid inhibition after long exposure was set by the turnover of the pump enzyme, with a half-life of about 17 hours, and after short exposure by the rate at which pumps moved from the active to the resting state [@abeloGastricAcidSecretion2002].
+
+## Safety
+
+For omeprazole, the most common adverse reactions in adults, with an incidence of at least 2%, are headache, abdominal pain, nausea, diarrhea, vomiting and flatulence.
+Its label also warns of *Clostridium difficile*-associated diarrhea, and, with long-term use, of bone fracture, vitamin B12 deficiency, low blood magnesium (hypomagnesemia) and benign growths in the stomach lining (fundic gland polyps) [@fdaPrilosecOmeprazoleMagnesium2024].
+
+Most PPIs are metabolized mainly by CYP2C19, and CYP2C19 genotype has been linked to PPI exposure, efficacy and adverse effects.
+The Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline recommends a lower dose for patients on chronic PPI therapy whose genotype predicts higher exposure, to reduce the toxicity associated with long-term use, particularly at higher plasma concentrations [@limaClinicalPharmacogeneticsImplementation2021].
 
 ## References
 

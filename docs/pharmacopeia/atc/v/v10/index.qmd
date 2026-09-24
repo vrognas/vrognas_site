@@ -1,11 +1,51 @@
 ---
 title: "V10: Therapeutic radiopharmaceuticals"
-description: "Pharmacometric modeling notes for ATC V10, therapeutic radiopharmaceuticals."
+description: "ATC V10 holds radioactive drugs used as treatment rather than imaging, such as radioactive iodine, targeted cancer treatments and bone pain relievers."
 date: "2026-02-08"
 ---
 
-**Mechanistic extrapolation.**
-PBPK has been applied in radiopharmaceutical therapy to predict time-integrated activity for treatment planning [@klettingPhysiologicallyBasedPharmacokinetic2015; @hardiansyahSensitivityAnalysisPhysiologically2016].
+V10 holds the radiopharmaceuticals used as treatment: anti-inflammatory agents, bone-seeking agents for pain palliation, and other therapeutic radiopharmaceuticals [@whoccATCDDDIndex2026].
+
+## How do therapeutic radiopharmaceuticals work?
+
+A therapeutic radiopharmaceutical delivers radiation with a molecule that either binds preferentially to cancer cells or accumulates in a tissue through a physiological mechanism [@sgourosRadiopharmaceuticalTherapyCancer2020].
+
+* Sodium iodide (^131^I) (V10XA01) is concentrated by thyroid cells and differentiated thyroid cancer cells through the sodium-iodide symporter, and remains the recommended treatment for metastatic differentiated thyroid cancer.
+* Lutetium (^177^Lu) oxodotreotide (V10XX04), also written ^177^Lu-DOTATATE, binds somatostatin receptors and is used for tumors of hormone-producing cells (neuroendocrine tumors).
+* Lutetium (^177^Lu) vipivotide tetraxetan (V10XX05), also written ^177^Lu-PSMA-617, binds prostate-specific membrane antigen (PSMA) in prostate cancer.
+* Radium (^223^Ra) dichloride (V10XX03) is an alpha emitter that acts as a calcium analogue and targets bone metastases [@sgourosRadiopharmaceuticalTherapyCancer2020].
+
+## Absorbed dose
+
+Radiopharmaceuticals are given as an administered activity, and the absorbed dose, the energy absorbed per unit mass of tissue in gray (Gy), can be used to predict the biological response.
+Dosimetry, the estimation of absorbed dose, starts from serial images of the activity in each tumor and organ.
+That activity falls by biological clearance and physical decay together, and the area under the fitted time-activity curve is the time-integrated activity [@sgourosRadiopharmaceuticalTherapyCancer2020].
+
+For patients with few imaging time points, one method fits the time-activity data of all patients together, with some parameters shared, to choose the fitted function [@hardiansyahPopulationBasedMethod2021].
+In one ^177^Lu-PSMA-617 study, dosimetry from a single imaging time point underestimated the lesion absorbed dose by 8% on average compared with multiple time points [@grkovskiLesionAbsorbedDose2025].
+
+Population PK models can also be built directly on imaging data.
+A six-compartment model of ^177^Lu-PSMA-617 in 10 patients described decay-corrected activity in blood, salivary glands, kidneys, liver, tumor and the remaining tissue.
+Uptake into the salivary glands was saturable, with 59% interindividual variability in its maximum binding capacity.
+Tumor uptake rose with tumor volume and varied between treatment cycles [@siebingaPopulationPharmacokineticDosimetry2023].
+
+## Efficacy
+
+In a dosimetry study of ^177^Lu-DOTATATE in neuroendocrine tumors of the gut and pancreas (gastroenteropancreatic), tumor absorbed doses fell from one treatment cycle to the next.
+Tumor absorbed dose was associated with the change in tumor volume three months after the end of treatment, and it predicted survival [@hebertAbsorbedDoseResponse2024].
+
+In 65 patients treated with ^177^Lu-PSMA-617, response was measured as the change in serum prostate-specific antigen (PSA) and in lesion uptake on PSMA positron emission tomography (PET).
+The relationship between mean lesion absorbed dose and response was moderate, with Spearman ρ of −0.33 across patients and −0.30 across lesions.
+Patients whose mean lesion absorbed dose exceeded 7.5 Gy had a better PSA response and a longer biochemical progression-free survival (median 4.1 versus 1.6 months) [@grkovskiLesionAbsorbedDose2025].
+
+The phase 3 trial of radium (^223^Ra) dichloride used overall survival, a time-to-event endpoint, and found a median of 14.9 months against 11.3 months with placebo (hazard ratio 0.70) [@parkerAlphaEmitterRadium2232013].
+
+## Safety
+
+In the ^177^Lu-DOTATATE study, falls in lymphocyte and platelet counts correlated with the absorbed dose to the spleen and bone marrow, while the mean absorbed dose to the kidneys was not correlated with kidney damage (nephrotoxicity) during the study period [@hebertAbsorbedDoseResponse2024].
+In the ^177^Lu-PSMA-617 study, kidney absorbed doses were relatively low, at about 0.28 Gy/GBq, and the estimated GFR had not fallen significantly one year after treatment [@grkovskiLesionAbsorbedDose2025].
+In simulations from the population model, raising the activity from 3 to 6 GBq lowered the salivary gland dose per unit activity from 0.685 to 0.421 Gy/GBq, because uptake there is saturable [@siebingaPopulationPharmacokineticDosimetry2023].
+Radium (^223^Ra) dichloride was associated with low rates of bone marrow suppression (myelosuppression) [@parkerAlphaEmitterRadium2232013].
 
 ## References
 

@@ -1,15 +1,49 @@
 ---
 title: "M01: Antiinflammatory and antirheumatic products"
-description: "ATC M01 antiinflammatory and antirheumatic products for modelers: pain needs a fitted placebo time course; remedication is informative dropout."
+description: "ATC M01 holds anti-inflammatory and antirheumatic drugs, mainly the NSAIDs taken for pain and inflammation, plus a few older rheumatoid arthritis drugs."
 date: "2026-02-08"
 ---
 
-**Pain needs a fitted placebo time course.**
-In oral osteoarthritis trials the WOMAC placebo response is large and reaches 90% of its maximum only after 5 to 7 weeks [@wenPlaceboResponseOral2022].
-In an acute postoperative model, pain relief was fitted as a function of ketorolac concentration (**E~max~**), a subject random effect and time, the last capturing the waxing and waning of placebo [@mandemaPopulationPharmacodynamicModel1996].
+M01 holds the anti-inflammatory and antirheumatic products.
+M01A holds the non-steroidal anti-inflammatory drugs (NSAIDs), and M01C a few specific antirheumatic agents, such as gold preparations and penicillamine.
+The disease-modifying drugs listed in the [rheumatoid arthritis primer](../../../../pathology-primers/autoimmune/rheumatoid-arthritis/index.qmd) all carry ATC codes outside M01 [@whoccATCDDDIndex2026].
 
-**Remedication is informative dropout.**
-Patients remedicate when relief is insufficient, with a probability driven by the observed level of pain relief and rising with time, and ignoring that informative dropout biases the drug effect [@mandemaPopulationPharmacodynamicModel1996; @bjornsson2015dropout].
+## How do NSAIDs work?
+
+NSAIDs are inhibitors of the cyclooxygenase (COX) enzymes.
+There are two isoforms: COX-1 is critical to normal platelet function, and COX-2 mediates the inflammatory response.
+Conventional NSAIDs inhibit both.
+Celecoxib (M01AH01), from the coxib subgroup, inhibits COX-2 but spares COX-1 at therapeutic doses [@leeseEffectsCelecoxibNovel2000].
+
+## Efficacy
+
+The endpoint is pain, and the pain relief NSAIDs give varies markedly, partly because human pain is quantified imprecisely [@grosserCyclooxygenaseInhibitionPain2017].
+
+In a postoperative pain trial of intramuscular ketorolac (M01AB15) in 522 patients, pain relief was recorded on a five-category ordinal scale.
+The population model characterized the distribution of these scores.
+Models for such scores are covered under [ordinal data](../../../../modeling/pkpd/index.qmd#ordinal-data).
+Pain relief depended on ketorolac concentration through an E~max~ model, on time through a waxing and waning placebo effect, and on an individual random effect.
+The effect lagged behind plasma concentration, with an equilibration (k~e0~) half-life of 24 minutes.
+Patients with insufficient relief could take rescue medication, and 288 of the 522 did so within the 6 hours of observation.
+The probability of remedication depended on the observed pain relief and increased with time [@mandemaPopulationPharmacodynamicModel1996].
+
+In a simulation study of informative dropout, which depended on the efficacy variable as remedication does here, leaving the dropout out of the model biased fixed-effect estimates by up to 21% with FOCE-I, although the effect on predictions was small, and a dropout model was needed to simulate realistic trial outcomes [@bjornsson2015dropout].
+
+In osteoarthritis trials, pain can be scored with the pain subscale of the Western Ontario and McMaster Universities Osteoarthritis Index (WOMAC), which also has subscales for stiffness and function.
+In a model-based meta-analysis of 130 placebo-controlled trials of oral treatments, the placebo response reached 90% of its maximum between 5 and 7 weeks.
+The size of the placebo response was associated with the baseline score [@wenPlaceboResponseOral2022].
+
+## Safety
+
+NSAIDs are associated with gastrointestinal and cardiovascular complications [@grosserCyclooxygenaseInhibitionPain2017].
+In a meta-analysis of three case-control studies, the risk of serious upper gastrointestinal bleeding varied twenty-fold between individual NSAIDs, and three- to seven-fold with the dose chosen.
+Ibuprofen (M01AE01) carried the lowest risk of the drugs studied.
+The risk was highest in the first week of use [@lewisDoseResponseRelationshipsIndividual2002].
+
+In a trial in 24 healthy adults, the conventional NSAID naproxen (M01AE02) reduced platelet aggregation and prolonged bleeding time, while celecoxib did not, even at a supratherapeutic dose, consistent with its sparing of COX-1 [@leeseEffectsCelecoxibNovel2000].
+
+Patients with reduced renal blood flow depend on prostaglandin synthesis to maintain renal function, and in them NSAIDs can cause renal abnormalities.
+Fluid retention is the most common renal complication, while high blood potassium (hyperkalemia) and acute deterioration of renal function occur in patients at risk [@wheltonNonsteroidalAntiinflammatoryDrugs1991].
 
 ## References
 

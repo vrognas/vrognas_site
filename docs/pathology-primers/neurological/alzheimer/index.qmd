@@ -11,12 +11,12 @@ date: "2025-03-20"
 ### Disease definition & pathophysiology
 
 Alzheimer’s disease (AD) is a progressive neurodegenerative disorder characterized by cognitive decline, memory loss, behavioral changes, and impaired daily functioning.  
-Pathologically, it is defined by extracellular amyloid-beta plaques, intracellular neurofibrillary tangles (composed of hyperphosphorylated tau protein), and widespread neuronal loss, particularly in the hippocampus and cortex.  
+Pathologically, it is defined by extracellular amyloid-beta plaques, intracellular neurofibrillary tangles (composed of hyperphosphorylated tau protein), and widespread neuronal loss, particularly in the brain’s memory region (hippocampus) and outer layer (cortex).  
 Inflammation, oxidative stress, and cholinergic deficits also significantly contribute to disease pathology.
 
 ### Commonly used Pharmacodynamic (PD) Models
 
-- Disease progression models describing cognitive decline (e.g., using **ADAS-Cog** scores).
+- Disease progression models describing cognitive decline (e.g., using **Alzheimer’s Disease Assessment Scale-Cognitive Subscale (ADAS-Cog)** scores).
 - Indirect-response or turnover models describing amyloid-beta accumulation or clearance.
 - Target engagement models for anti-amyloid antibodies or tau-targeted therapies.
 
@@ -33,7 +33,7 @@ Incidence and prevalence slightly higher in females.
 ### Risk factors & disease progression indicators
 
 Risk factors include advanced age, genetic predisposition (ApoE4 allele), family history, cardiovascular disease, diabetes, traumatic brain injury, and lifestyle factors (low physical and cognitive activity).  
-Disease progression indicated by cognitive decline severity, impairment of daily activities, behavioral disturbances, and biomarker changes (amyloid and tau biomarkers in CSF or imaging).
+Disease progression indicated by cognitive decline severity, impairment of daily activities, behavioral disturbances, and biomarker changes (amyloid and tau biomarkers in cerebrospinal fluid (CSF) or imaging).
 
 ---
 

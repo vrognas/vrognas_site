@@ -1,12 +1,53 @@
 ---
 title: "N01: Anesthetics"
-description: "ATC N01 anesthetics for modelers: anesthesia is the hysteresis case."
+description: "ATC N01 holds the anesthetics: general anesthetics, which cause unconsciousness, and local anesthetics, which numb one part of the body."
 date: "2026-02-08"
 ---
 
-**Anesthesia is the hysteresis case.**
-Processed EEG lags plasma concentration in N01, so the link is an effect site with an equilibration rate constant k~e0~ [@schniderInfluenceAgePropofol1999].
-One effect compartment failed to describe the bispectral index across different propofol infusion rates; a two-compartment effect site succeeded [@bjornssonTwoCompartmentEffectSite2010].
+N01 is split into general anesthetics (N01A) and local anesthetics (N01B) [@whoccATCDDDIndex2026].
+
+## How do anesthetics work?
+
+Among the **general anesthetics**, propofol (N01AX10), an intravenous hypnotic used for sedation and general anesthesia, potentiates the inhibitory neurotransmitter γ-aminobutyric acid (GABA) at the GABA~A~ receptor [@sahinovicClinicalPharmacokineticsPharmacodynamics2018].
+Etomidate (N01AX07) acts on the same receptor as a positive allosteric modulator, enhancing the effect of GABA [@valkEtomidateItsAnalogs2021].
+
+**Local anesthetics** of the amide type, such as lidocaine (N01BB02), bupivacaine (N01BB01) and ropivacaine (N01BB09), are potent sodium channel blockers [@mazoitPharmacokineticsLocalAnaesthetics2004].
+
+## Efficacy
+
+For propofol, the main clinical effect is loss of consciousness, which is hard to quantify.
+Most clinicians consider it a continuum of effects, most of which are binary, present or absent [@sahinovicClinicalPharmacokineticsPharmacodynamics2018].
+A binary endpoint is modeled as a [probability](../../../../modeling/pkpd/index.qmd#binary): for propofol, the probability of being asleep was modeled against steady-state concentration in volunteers aged 25 to 81 years.
+The concentration giving a 50% probability of loss of consciousness fell from 2.35 µg/mL at 25 years to 1.25 µg/mL at 75 years, so older patients are more sensitive [@schniderInfluenceAgePropofol1999].
+
+Several electroencephalogram (EEG)-based methods quantify the depth of anesthesia instead.
+The most used is the bispectral index (BIS), a unitless number from 0 to 100, where 100 means no hypnotic drug effect and 0 means no cerebral electrical activity.
+Most propofol pharmacodynamic studies have used a sigmoid E~max~ model, relating the drug effect to the concentration in a hypothetical effect site rather than directly to the blood concentration.
+The effect site equilibrates with plasma at a rate set by the constant k~e0~, and published values for propofol range from 0.01 to 0.45 min^-1^ [@sahinovicClinicalPharmacokineticsPharmacodynamics2018].
+
+Because k~e0~ estimates had been reported to depend on the rate and duration of administration, one study gave healthy volunteers a 1-minute infusion on one occasion, and the same infusion followed by 29 minutes more on another.
+A standard effect compartment could not describe the delay in BIS for both regimens, while a two-compartment effect site significantly improved the predictions [@bjornssonTwoCompartmentEffectSite2010].
+
+Some of these models run in target-controlled infusion devices, which compute the infusion rate needed to reach a chosen plasma or effect-site concentration.
+Propofol's interactions with other hypnotics tend to be additive, and those with opioids highly synergistic.
+Response surface models describe these combined effects [@sahinovicClinicalPharmacokineticsPharmacodynamics2018].
+
+## Safety
+
+Propofol has a narrow therapeutic margin.
+Its main adverse effects are cardiopulmonary: loss of airway reflexes, slow or shallow breathing (hypoventilation) or even a pause in breathing (apnea), and low blood pressure (hypotension).
+The most common adverse effect is pain on injection.
+Propofol infusion syndrome, with severe acid build-up in the blood (metabolic acidosis), muscle breakdown (rhabdomyolysis), high blood potassium (hyperkalemia) and cardiovascular collapse, is rare but frequently fatal.
+It occurs mostly with prolonged, high-dose infusions in children, and the Diprivan package insert advises against more than 5 mg/kg/h for more than 48 hours [@sahinovicClinicalPharmacokineticsPharmacodynamics2018].
+Etomidate suppresses the outer layer of the adrenal glands (adrenal cortex) by inhibiting the enzyme 11β-hydroxylase, which makes it unsuitable for prolonged infusion and for critically ill patients [@valkEtomidateItsAnalogs2021].
+
+Systemic toxicity after injection of a local anesthetic is infrequent.
+The onset of its central nervous system and cardiovascular effects has been tentatively linked to circulating drug concentrations [@tuckerClinicalPharmacokineticsLocal1979].
+At toxic concentrations, the amide local anesthetics cause severe irregular heart rhythms (arrhythmias) that can lead to cardiac arrest.
+At least at steady state, their toxicity is directly related to the unbound drug concentration.
+They are bound to serum proteins, mainly to alpha~1~-acid glycoprotein (AAG), from 65% for lidocaine to more than 95% for bupivacaine and ropivacaine.
+AAG is an acute phase protein that rises quickly with inflammation, particularly after surgery.
+Neonates and infants have less AAG than adults, so a larger fraction of the drug is unbound [@mazoitPharmacokineticsLocalAnaesthetics2004].
 
 ## References
 

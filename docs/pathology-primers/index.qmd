@@ -9,7 +9,7 @@ Concise disease overviews for pharmacometricians — pathophysiology, biomarkers
 
 ::: {.g-col-12 .g-col-md-6 .index-card}
 [Autoimmune Diseases](autoimmune/giant-cell-arteritis/index.qmd){.card-title}
-GCA, psoriasis, and rheumatoid arthritis.
+Giant cell arteritis (GCA), psoriasis, and rheumatoid arthritis.
 :::
 
 ::: {.g-col-12 .g-col-md-6 .index-card}

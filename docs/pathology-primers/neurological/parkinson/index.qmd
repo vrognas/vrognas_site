@@ -10,13 +10,13 @@ date: "2025-03-20"
 
 ### Disease definition & pathophysiology
 
-Parkinson’s disease (PD) is a progressive neurodegenerative disorder characterized by motor symptoms such as bradykinesia, resting tremor, rigidity, and postural instability. It results primarily from loss of dopamine-producing neurons in the substantia nigra, leading to dopamine deficiency in the basal ganglia. Lewy bodies (aggregates of α-synuclein) are pathologic hallmarks contributing to neuronal dysfunction and death.
+Parkinson’s disease (PD) is a progressive neurodegenerative disorder characterized by motor symptoms such as slowness of movement (bradykinesia), resting tremor, rigidity, and impaired balance (postural instability). It results primarily from loss of dopamine-producing neurons in a small midbrain region (substantia nigra), leading to dopamine deficiency in the deep brain structures that control movement (basal ganglia). Lewy bodies (aggregates of α-synuclein) are pathologic hallmarks contributing to neuronal dysfunction and death.
 
 ### Commonly used Pharmacodynamic (PD) Models
 
 - Indirect response or turnover models describing dopamine depletion and symptomatic relief by dopaminergic agents.
 - Disease progression models, such as the Unified Parkinson’s Disease Rating Scale (**UPDRS**) progression models.
-- Exposure-response models linking levodopa or dopamine agonist concentrations to motor-symptom improvement or dyskinesia development.
+- Exposure-response models linking levodopa or dopamine agonist concentrations to motor-symptom improvement or involuntary movement (dyskinesia) development.
 
 ---
 
@@ -28,7 +28,7 @@ Typically affects individuals older than 60 years, though early-onset PD (<50 
 
 ### Risk factors & disease progression indicators
 
-Risk factors include older age, family history, exposure to neurotoxins, and possibly head trauma. Disease progression indicators include worsening motor symptoms, onset of motor fluctuations (wearing-off phenomena), dyskinesias, and non-motor symptoms such as cognitive decline, depression, and autonomic dysfunction.
+Risk factors include older age, family history, exposure to neurotoxins, and possibly head trauma. Disease progression indicators include worsening motor symptoms, onset of motor fluctuations (wearing-off phenomena), dyskinesias, and non-motor symptoms such as cognitive decline, depression, and problems with automatic body functions (autonomic dysfunction).
 
 ---
 
@@ -46,7 +46,7 @@ Severity often assessed using clinical rating scales, notably the Unified Parkin
 - Moderate: UPDRS motor score ~21--40
 - Severe (advanced): UPDRS motor score >40
 
-Hoehn and Yahr staging is also commonly used, ranging from stage 1 (mild, unilateral involvement) to stage 5 (severe, wheelchair-bound or bedridden).
+Hoehn and Yahr staging is also commonly used, ranging from stage 1 (mild, one-sided involvement) to stage 5 (severe, wheelchair-bound or bedridden).
 
 ---
 

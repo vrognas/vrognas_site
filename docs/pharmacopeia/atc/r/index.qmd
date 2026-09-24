@@ -1,15 +1,10 @@
 ---
 title: "R: Respiratory system"
-description: "ATC group R for modelers: the level 2 map with example drugs, and the inhaled-route modeling notes held at R03."
+description: "ATC group R covers the respiratory system: nose and throat preparations, asthma and COPD drugs, cough and cold remedies, and antihistamines for allergies."
 date: "2026-02-08"
 ---
 
-Drugs acting on the airways, centered on R03 for obstructive airway disease.
-The interesting part for a modeler is the inhaled route, where the target tissue is also the site of administration [@borghardt2018pulmkinetics; @daleyyates2015ics].
-Those modeling notes live with [R03, drugs for obstructive airway diseases](r03/).
-
-In April 1955 Susie Maison asked her father George, president of Riker Laboratories, why her asthma medicine could not come in a spray can like hairspray.
-The first pressurized metered dose inhalers were approved on 9 March 1956 [@steinHistoryTherapeuticAerosols2017].
+Group R holds the drugs for the respiratory system: the nose, the throat and the airways, together with the antihistamines used for allergy.
 
 |  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
@@ -21,6 +16,17 @@ The first pressurized metered dose inhalers were approved on 9 March 1956 [@stei
 | **R07** | Other respiratory system products | leftovers: surfactants, cystic-fibrosis drugs, nitric oxide | Ivacaftor, tezacaftor and elexacaftor (R07AX32) for cystic fibrosis; neonatal surfactant sits under natural phospholipids (R07AA02), which covers poractant alfa and beractant with no substance-specific code |
 
 : ATC R level 2 codes {#tbl-atc-r-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
+
+## Corticosteroids in the nose and lungs
+
+Corticosteroids appear both as nasal sprays in R01 (R01AD) and as inhaled drugs for asthma and chronic obstructive pulmonary disease (COPD) in R03 (R03BA).
+For beclometasone dipropionate (R01AD01 nasal, R03BA01 inhaled), part of a nasal or inhaled dose is swallowed and can be absorbed from the gut.
+In 12 healthy subjects, the bioavailability of its active metabolite was similar after nasal and oral doses, at 44% and 41%.
+With gut absorption blocked by activated charcoal, it was below 1% after a nasal dose and 36% after inhalation.
+Absorption through the nose itself was therefore insignificant [@daleyyates2001bdp].
+
+In a meta-analysis, too little cortisol from the adrenal glands (adrenal insufficiency) was found in 4.2% of patients using nasal corticosteroids (95% CI 0.5 to 28.9%) and in 6.8% of asthma patients using only inhaled corticosteroids [@broersen2015adrenal].
+Delivery to the lung is covered under [R03](r03/index.qmd).
 
 ## References
 

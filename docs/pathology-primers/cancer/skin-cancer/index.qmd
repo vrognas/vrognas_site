@@ -20,7 +20,7 @@ There are **three main types** of skin cancer, depending on which cells have tur
 * Non-melanoma skin cancer (NMSC)
   * **Basal-cell carcinoma (BCC)**
     * Most common (~80% of skin cancers)
-    * Grows slowly, rarely metastasizes
+    * Grows slowly, rarely spreads to other parts of the body (metastasizes)
     * Low mortality
   * **Squamous-cell carcinoma (SCC)**
     * Medium frequency (~20% of skin cancers)
@@ -75,7 +75,7 @@ Cancer of melanocytes in e.g. the deepest skin layer, and also the eyes (i.e. wh
 ## Diagnosis
 
 * Physical examination
-* Biopsy
+* Tissue sample (biopsy)
 
 ### Grades and stages
 

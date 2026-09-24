@@ -1,12 +1,57 @@
 ---
 title: "N03: Antiepileptics"
-description: "ATC N03 antiepileptics for modelers: counts, not concentrations."
+description: "ATC N03 holds the antiepileptics, drugs that prevent seizures, grouped by chemical class, with many newer drugs in a catch-all group."
 date: "2026-02-08"
 ---
 
-**Counts, not concentrations.**
-Daily seizure counts in N03 are overdispersed and depend on the previous day, so negative binomial models with a Markov element beat Poisson [@troconizModellingOverdispersionMarkovian2009].
-Add-on [exposure-response](/docs/modeling/pkpd/) is fitted on seizure rate, not a continuous score [@millerExposureResponseAnalysis2003].
+Antiepileptics, also called antiseizure drugs, prevent seizures, but there is no evidence that they modify the underlying disease [@sillsMechanismsActionCurrently2020].
+
+## How do antiepileptics work?
+
+Antiepileptics damp down the excitability of the brain, by four broad mechanisms [@sillsMechanismsActionCurrently2020]:
+
+1. **Ion channel modulation.** Phenytoin (N03AB02), carbamazepine (N03AF01) and lamotrigine (N03AX09) act on voltage-gated sodium channels, ethosuximide (N03AD01) on calcium channels, and retigabine (N03AX21) on potassium channels.
+2. **Enhanced GABA inhibition.** Benzodiazepines, tiagabine (N03AG06) and vigabatrin (N03AG04) strengthen inhibitory neurotransmission by γ-aminobutyric acid (GABA).
+3. **Reduced glutamate excitation.** Perampanel (N03AX22) weakens excitatory neurotransmission by glutamate.
+4. **Modulated neurotransmitter release.** Levetiracetam (N03AX14) and brivaracetam (N03AX23) act presynaptically, as do gabapentin (N02BF01) and pregabalin (N02BF02).
+
+Lacosamide (N03AX18) is a sodium channel drug of a different kind: instead of affecting fast inactivation, it selectively enhances the slow inactivation of the channel [@cawelloClinicalPharmacokineticPharmacodynamic2015].
+
+## Drug interactions
+
+Some patients with difficult-to-treat epilepsy benefit from a combination of two or more antiepileptics, and almost all patients take other drugs at some point.
+Carbamazepine, phenytoin, phenobarbital (N03AA02) and primidone (N03AA03) induce many cytochrome P450 and glucuronyl transferase enzymes.
+They can drastically reduce the serum concentrations of other drugs metabolized by these enzymes, lamotrigine among them.
+Valproic acid (N03AG01) induces no enzymes, but it inhibits the metabolism of some drugs, most notably phenobarbital and lamotrigine.
+Most newer antiepileptics are less likely to induce or inhibit these enzymes.
+Levetiracetam, gabapentin and pregabalin have not been reported to cause, or be the target of, clinically relevant pharmacokinetic interactions.
+Of the pharmacodynamic interactions, neurotoxic effects appear more likely when antiepileptics sharing the same primary mechanism of action are combined [@peruccaClinicallyRelevantDrug2006].
+
+## Efficacy
+
+Efficacy is measured as the reduction in seizure frequency.
+For lacosamide, the relationship between plasma concentration and this reduction was described by an E~max~ model [@cawelloClinicalPharmacokineticPharmacodynamic2015].
+
+Seizure frequency is count data.
+A Poisson model assumes that the variance equals the mean and that counts in separate intervals are independent.
+Daily seizure counts from 551 patients with treatment-resistant (refractory) partial seizures broke both assumptions.
+They varied more than a Poisson model predicts (overdispersion), and a negative binomial model described them best.
+Letting the parameters depend on whether the previous day had a seizure, a Markov element, improved the fit further [@troconizModellingOverdispersionMarkovian2009].
+
+In an exposure-response analysis of add-on pregabalin in 1042 patients, monthly seizure frequency was modeled as a Poisson process with a baseline, a placebo effect and a drug effect.
+The model split the patients into two subpopulations: 75% had a dose-related decrease in seizure frequency, and 25% had no significant decrease.
+Among the responders, 186 mg per day gave half of the maximal reduction [@millerExposureResponseAnalysis2003].
+
+## Safety
+
+The older antiepileptics phenytoin, carbamazepine and valproic acid have pronounced pharmacokinetic variability between patients and a narrow therapeutic range.
+Their dose has commonly been adjusted to reach a serum concentration within a predefined therapeutic range.
+These ranges must be interpreted with caution, since many patients do best at concentrations below or above them [@johannessenPharmacokineticVariabilityNewer2006].
+For phenytoin, part of the variability comes from variants in the CYP2C9 gene, and the HLA-B\*15:02 allele raises the risk of severe skin reactions (Stevens-Johnson syndrome and toxic epidermal necrolysis) [@karnesClinicalPharmacogeneticsImplementation2021].
+
+Antiepileptics differ in their risk of causing birth defects (teratogenic risk), which also depends on the dose.
+In the EURAP pregnancy registry, major birth defects (congenital malformations) followed 10.3% of pregnancies exposed to valproic acid alone, against 2.8% to 3.0% for levetiracetam, lamotrigine and oxcarbazepine (N03AF02).
+The risk rose with the dose at conception for carbamazepine, lamotrigine, phenobarbital and valproic acid [@tomsonComparativeRiskMajor2018].
 
 ## References
 

@@ -1,14 +1,46 @@
 ---
 title: "D05: Antipsoriatics"
-description: "ATC D05 antipsoriatics for modelers: a bounded score needs a bounded likelihood."
+description: "ATC D05 holds drugs made specifically for psoriasis, such as tar and vitamin D-like creams and vitamin A-like pills. Psoriasis biologics are in L04."
 date: "2026-02-08"
 ---
 
-The disease these drugs treat, and where PASI sits among its biomarkers, is covered in the [psoriasis primer](/docs/pathology-primers/autoimmune/psoriasis/).
+D05 holds drugs used mainly against psoriasis, split into antipsoriatics for topical use (D05A) and for systemic use (D05B) [@whoccATCDDDIndex2026].
+Psoriasis drugs outside D05 include ustekinumab (L04AC05), which is classified under [L04A](../../l/l04/l04a/index.qmd) [@huImprovingCategoricalEndpoint2022; @whoccATCDDDIndex2026].
+The disease itself is covered in the [psoriasis primer](../../../../pathology-primers/autoimmune/psoriasis/index.qmd).
 
-**A bounded score needs a bounded likelihood.**
-PASI has been fitted with a bounded integer model, to respect the discrete and bounded nature of the data [@ooiBoundedIntegerModelbased2023], and with a zero-inflated beta distribution, for the bounded nature and distributional characteristics of the score [@tsamandourasEmployingZeroinflatedBeta2024].
-In one psoriasis analysis, fitting the 6-point physician's global assessment alone carried a substantial structural bias that joint modeling with PASI removed [@huImprovingCategoricalEndpoint2022].
+## How do antipsoriatics work?
+
+**Vitamin D analogues** include calcipotriol (D05AX02), which stimulated the final maturation (terminal differentiation) and inhibited proliferation of cultured human outer-layer skin cells (epidermal keratinocytes) [@kragballeCalcipotriolMC9031990].
+
+**Retinoids** include acitretin (D05BB02), taken by mouth, and tazarotene (D05AX05), applied to the skin.
+Esterases rapidly hydrolyze tazarotene to its active metabolite, tazarotenic acid [@tangliuClinicalPharmacokineticsDrug1999].
+
+**Psoralens**, such as methoxsalen (D05BA02), are inactive unless they are combined with long-wave ultraviolet light (UVA), a treatment called photochemotherapy or PUVA [@dewolffClinicalPharmacokineticsMethoxsalen1986].
+
+## Efficacy
+
+In a systematic review of 37 trials of calcipotriol, efficacy was compared as the percentage change in the Psoriasis Area and Severity Index (PASI) and as the rate of marked improvement or better on patients' and investigators' overall assessments [@ashcroftSystematicReviewComparative2000].
+
+In a phase 3b trial of ustekinumab, PASI was a near-continuous score from 0 to 72 in steps of 0.1, while the primary endpoint was based on the 6-point physician's global assessment (PGA), an ordered categorical score.
+A latent-variable indirect response model of the PGA alone had a substantial structural bias, which was corrected by modeling PGA jointly with PASI [@huImprovingCategoricalEndpoint2022].
+
+For brepocitinib, a zero-inflated beta distribution was used to account for the bounded nature of PASI, and the same model predicted the derived responder rates well: the proportions of patients with an improvement of 75%, 90% and 100% from baseline (PASI75, PASI90 and PASI100) [@tsamandourasEmployingZeroinflatedBeta2024].
+PASI has also been fitted with a bounded integer model, which respects the discrete and bounded nature of the score [@ooiBoundedIntegerModelbased2023].
+Neither ustekinumab nor brepocitinib belongs to D05; they are included here for how they model the endpoint.
+
+For PUVA, sensitivity has been measured as the minimal phototoxic dose of UVA.
+Patients with a high methoxsalen clearance and a low C~max~ usually show less sensitivity to PUVA than low-clearance patients, and frequently a less favorable clinical response [@dewolffClinicalPharmacokineticsMethoxsalen1986].
+
+## Safety
+
+Etretinate (D05BB01) and its active metabolite acitretin are known causes of birth defects (teratogens) [@geigerTeratogenicRiskEtretinate1994].
+In a study of 37 women of childbearing age exposed to acitretin, etretinate was detectable in subcutaneous fat in 83% of those still taking acitretin.
+Acitretin or etretinate could still be found in fat up to 29 months after the women had stopped acitretin, and an undetectable plasma etretinate concentration was a poor predictor of its absence from fat [@sturkenboomInabilityDetectPlasma1994].
+
+In the same systematic review, calcipotriol caused more skin irritation than potent topical corticosteroids, although the irritation rarely led to withdrawal of treatment [@ashcroftSystematicReviewComparative2000].
+
+The systemic bioavailability of topical tazarotene is about 1% on healthy skin, and rises to 5% or less at steady state in psoriasis.
+Its low systemic exposure gives topical tazarotene a low potential for systemic adverse effects [@tangliuClinicalPharmacokineticsDrug1999].
 
 ## References
 

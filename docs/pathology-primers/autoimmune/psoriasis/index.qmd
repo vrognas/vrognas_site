@@ -11,11 +11,11 @@ date: "2025-03-20"
 ### Disease definition & pathophysiology
 
 Psoriasis is a chronic, immune-mediated inflammatory skin disorder.
-It involves rapid proliferation of keratinocytes, dysfunctional epidermal differentiation, and infiltration by immune cells (T-helper cells, dendritic cells, neutrophils).
+It involves rapid proliferation of the main cells of the outer skin layer (keratinocytes), dysfunctional maturation of the outer skin layer (epidermal differentiation), and infiltration by immune cells (T-helper cells, dendritic cells, neutrophils).
 Key inflammatory mediators driving psoriasis include cytokines like TNF-α, IL-17, and IL-23.
 
 ### Commonly used Pharmacodynamic (PD) Models
-- Disease progression models (e.g., turnover models for plaque development and resolution)
+- Disease progression models (e.g., turnover models for raised, scaly skin patch (plaque) development and resolution)
 - Indirect response models (cytokine-driven inflammatory response)
 - Target engagement models (cytokine suppression, receptor occupancy models for biologics)
 
@@ -31,16 +31,16 @@ Key inflammatory mediators driving psoriasis include cytokines like TNF-α, IL-1
 
 - Family history and genetic predisposition (e.g., HLA-Cw6 allele)
 - Environmental triggers: infections, stress, medications, trauma
-- Comorbidities: psoriatic arthritis, cardiovascular disease, metabolic syndrome
+- Co-occurring diseases (comorbidities): joint inflammation linked to psoriasis (psoriatic arthritis), cardiovascular disease, metabolic syndrome
 - Disease progression indicated by extent/severity of skin involvement and responsiveness to initial therapies
 
 ## Diagnosis & biomarkers
 
 ### Key Clinical Biomarkers
 
-- Clinical evaluation of skin lesions (plaque thickness, erythema, scaling)
+- Clinical evaluation of skin lesions (plaque thickness, redness, scaling)
 - Imaging rarely used, except to evaluate psoriatic arthritis (MRI, X-ray)
-- Non-specific inflammation markers (CRP, ESR) sometimes elevated
+- Non-specific inflammation markers (C-reactive protein, erythrocyte sedimentation rate) sometimes elevated
 
 ### Disease Severity Classification
 
@@ -70,7 +70,7 @@ The classes below sit in ATC [D05 Antipsoriatics](../../../pharmacopeia/atc/d/d0
 #### Phototherapy *(moderate disease or resistant cases)*
 
 - UVB therapy, PUVA (psoralen + UVA)  
-**MoA:** Induces apoptosis of activated immune cells, reduces keratinocyte proliferation
+**MoA:** Induces programmed cell death (apoptosis) of activated immune cells, reduces keratinocyte proliferation
 
 #### Systemic treatments (oral) *(moderate-to-severe psoriasis)*
 

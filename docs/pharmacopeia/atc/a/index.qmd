@@ -1,14 +1,16 @@
 ---
 title: "A: Alimentary tract and metabolism"
-description: "ATC group A for modelers: the level 2 map with example drugs, and modeling notes held with A10 (diabetes) and A02 (acid-related disorders)."
+description: "ATC group A covers the alimentary tract, also called the digestive or GI tract, and metabolism: from antacids and laxatives to diabetes drugs and vitamins."
 date: "2026-02-08"
 ---
 
 Drugs acting on the gut, on metabolism and on nutrition, from mouthwashes to insulins.
-Modeling notes live with the subgroups they belong to: [A10, drugs used in diabetes](a10/), and [A02, drugs for acid related disorders](a02/).
 
-In January 1922 a first pancreatic extract given to Leonard Thompson, 14 and ketoacidotic at Toronto General Hospital, left a sterile abscess and barely moved his glycemia.
-Collip's purified extract on 23 January cleared the ketonuria [@vecchioDiscoveryInsulinImportant2018].
+Insulin was first given to a patient in January 1922, at Toronto General Hospital.
+The patient, Leonard Thompson, was 14 years old and seriously ill with diabetes.
+The first injection of pancreatic extract lowered his blood glucose only slightly, had no effect on the buildup of acidic ketones in his blood (ketoacidosis) and left a collection of pus without infection (sterile abscess).
+A second series of injections on 23 January brought his blood glucose down from 520 to 120 mg/dL and cleared the ketones from his urine.
+Part of the credit goes to the biochemist James Collip, who had developed a new extraction and concentration protocol [@vecchioDiscoveryInsulinImportant2018].
 
 |  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |

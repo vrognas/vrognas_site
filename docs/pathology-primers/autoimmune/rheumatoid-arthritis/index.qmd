@@ -5,14 +5,14 @@ date: "2024-12-04"
 
 ## What is RA?
 
-An auto-immune systemic disease.
+An auto-immune whole-body (systemic) disease.
 Requires life-long treatment.
-Individual patients with RA appear to have different pathogenic mechanisms, due to different treatment response.
-Two major "types": seropositive and seronegative, with seropositive presenting more severe symptoms.
+Individual patients with RA appear to have different disease-causing (pathogenic) mechanisms, due to different treatment response.
+Two major "types": positive or negative for RA-linked antibodies in the blood (seropositive and seronegative), with seropositive presenting more severe symptoms.
 
 ### Risk factors
 
-* First-degree relative with RA
+* Parent, sibling or child (first-degree relative) with RA
 * Gene HLA-DR
 * Smoking
 * Overweight
@@ -24,14 +24,14 @@ Two major "types": seropositive and seronegative, with seropositive presenting m
 
 * Age 30-70
 * 70% women
-* Symmetrical polyarthritis of hands and feet.
-* Common to have *morning stiffness* lasting more than 30 minutes.
+* Symmetrical multi-joint inflammation (polyarthritis) of hands and feet.
+* Common to have *morning stiffness* lasting more than 30 minutes.
 
 ## Diagnosis
 
 * Number and location of affected joints
 * Duration of disease >= 6 weeks
-* Acute-phase reactants
+* Blood markers of inflammation (acute-phase reactants)
 * X-ray for bone erosion
 * Serum samples to determine seropositive/seronegative
   * Rheumatiod factor (RF)

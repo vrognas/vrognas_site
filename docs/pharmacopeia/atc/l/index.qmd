@@ -1,14 +1,10 @@
 ---
 title: "L: Antineoplastic and immunomodulating agents"
-description: "ATC group L for modelers: the level 2 map with example drugs, and the antineoplastic modeling notes held at L01."
+description: "ATC group L covers cancer drugs and drugs acting on the immune system: chemotherapy, targeted and hormone therapies, and immune boosters and suppressants."
 date: "2026-02-08"
 ---
 
-Agents used to kill malignant cells and to push the immune system either way, from cytotoxics through targeted small molecules to antibodies and cell products.
-The endpoint that decides the program, survival, reads out late and is linked to exposure only through intermediates such as tumor size [@bender2015pkpd].
-
-On 27 August 1942 a Yale team under Louis Goodman and Alfred Gilman gave intravenous nitrogen mustard, a chemical warfare agent, to a factory worker with lymphosarcoma.
-Ten daily doses left no tumor on biopsy, though it returned by day 49 [@christakisBirthChemotherapyYale2011].
+Group L holds the drugs used against cancer and the drugs that act on the immune system, either stimulating it or suppressing it.
 
 |  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
@@ -19,13 +15,18 @@ Ten daily doses left no tumor on biopsy, though it returned by day 49 [@christak
 
 : ATC L level 2 codes {#tbl-atc-l-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modeling notes
+## Monoclonal antibodies
 
-**Mechanistic extrapolation.**
-PBPK is routine for kinase inhibitors, predicting CYP3A and gastric-pH interactions that reach labels; QSP extrapolates immuno-oncology dosing, notably CD3 bispecific T-cell engagers, from preclinical data [@yoshidaImpactPhysiologicallyBased2017; @bettsTranslationalQuantitativeSystems2019].
+Monoclonal antibodies are found both in [L01](l01/index.qmd), for example the immune checkpoint inhibitors, and in [L04A](l04/l04a/index.qmd), for example the TNF-α and interleukin inhibitors.
 
-**E-R**
-Exposure-response for targeted agents is drug-specific, not class-wide: no efficacy relationship was detectable across the osimertinib dose range [@brown2017osimertinib], while trough concentrations separated progression-free survival for crizotinib and alectinib [@groenland2021alk].
+Some drugs bind their target with such high affinity, and to such an extent, that the binding changes their pharmacokinetics.
+This is called target-mediated drug disposition (TMDD), and it is seen mostly with biologics such as monoclonal antibodies.
+Binding to the target and turnover of the drug-target complex then add to the elimination, and because the number of targets is finite, this elimination saturates and the pharmacokinetics become nonlinear.
+The full TMDD model has many parameters, so simpler approximations, such as the quasi-steady-state and Michaelis-Menten forms, were developed to make fitting it to data feasible [@dua2015tmddtutorial].
+
+For the antibodies approved in rheumatoid arthritis, the volume of distribution is low (3 to 4 L) and the elimination half-life is usually 2 to 3 weeks.
+Their clearance has a linear, non-specific part and a target-mediated part that is often nonlinear.
+The patient's immune system can also form anti-drug antibodies, which speed up the elimination of the antibody [@ternantClinicalPharmacokineticsPharmacodynamics2015].
 
 ## References
 

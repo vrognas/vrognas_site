@@ -10,14 +10,14 @@ date: "2025-03-20"
 
 ### Disease definition & pathophysiology
 
-Diabetes mellitus is a chronic metabolic disorder characterized by hyperglycemia resulting from impaired insulin secretion, insulin action, or both.  
-Two main types exist: Type 1 diabetes (T1DM) involves autoimmune destruction of pancreatic beta-cells, leading to absolute insulin deficiency.  
+Diabetes mellitus is a chronic metabolic disorder characterized by high blood sugar (hyperglycemia) resulting from impaired insulin secretion, insulin action, or both.  
+Two main types exist: Type 1 diabetes (T1DM) involves autoimmune destruction of the insulin-producing cells of the pancreas (pancreatic beta-cells), leading to absolute insulin deficiency.  
 Type 2 diabetes (T2DM) is characterized by insulin resistance combined with progressive beta-cell dysfunction, influenced by genetic, lifestyle, and environmental factors.
 
 ### Commonly used Pharmacodynamic (PD) Models
 
 - Glucose-insulin homeostasis models (minimal model, insulin-glucose feedback models).
-- Disease progression models describing beta-cell function decline over time (HbA1c progression).
+- Disease progression models describing beta-cell function decline over time (glycated hemoglobin (HbA1c) progression).
 - Indirect-response or target-engagement models evaluating insulin secretion or sensitivity.
 
 ---
@@ -26,15 +26,17 @@ Type 2 diabetes (T2DM) is characterized by insulin resistance combined with prog
 
 ### Typical patient population
 
-T1DM commonly presents in childhood or adolescence (<20 years), though adult-onset is possible.  
-T2DM usually appears after age 40 but increasingly occurs earlier due to rising obesity rates.  
-T2DM is more prevalent, accounting for >90% of diabetes cases globally.
+T1DM commonly presents in childhood or adolescence, but it can start at any age.  
+T2DM usually appears in adulthood, but increasingly also in younger people as obesity becomes more common.  
+T2DM is far more common, accounting for about 90--95% of all diabetes [@adaDiagnosisClassificationDiabetes2025].
 
 ### Risk factors & disease progression indicators
 
 Risk factors for T1DM include genetics and autoimmunity.  
-T2DM risk factors include obesity, sedentary lifestyle, poor diet, family history, age, hypertension, and dyslipidemia.  
-Disease progression indicated by rising HbA1c, decreasing beta-cell function (lower insulin secretion), increasing insulin requirements, and presence of diabetes complications (retinopathy, nephropathy, neuropathy).
+T2DM risk factors include obesity, sedentary lifestyle, poor diet, family history, age, high blood pressure, and abnormal blood lipids.  
+Disease progression indicated by rising HbA1c, decreasing beta-cell function (lower insulin secretion), increasing insulin requirements, and presence of diabetes complications (damage to the eyes, kidneys and nerves).
+
+How the progression of type 2 diabetes is separated from drug effects in a model is covered under [drugs used in diabetes](../../pharmacopeia/atc/a/a10/index.qmd).
 
 ---
 
@@ -42,20 +44,17 @@ Disease progression indicated by rising HbA1c, decreasing beta-cell function (lo
 
 ### Key Clinical Biomarkers
 
-Diagnosis relies primarily on blood glucose criteria:
+Diagnosis relies primarily on blood glucose criteria [@adaDiagnosisClassificationDiabetes2025]:
 - Fasting plasma glucose (FPG) ≥126 mg/dL (≥7.0 mmol/L)
 - 2-hour plasma glucose ≥200 mg/dL (≥11.1 mmol/L) after oral glucose tolerance test (OGTT)
 - HbA1c ≥6.5%
 - Random plasma glucose ≥200 mg/dL (≥11.1 mmol/L) with classical symptoms
 
-HbA1c is key for monitoring glycemic control over time.
+HbA1c is key for monitoring blood sugar control (glycemic control) over time.
 
 ### Disease Severity Classification
 
-Severity often described by glycemic control level and presence of complications:
-- Well-controlled: HbA1c <7%
-- Moderately controlled: HbA1c 7--8.5%
-- Poorly controlled: HbA1c >8.5%
+Severity is often described by the level of glycemic control, judged by HbA1c, and by the presence of complications.
 
 ---
 
@@ -73,9 +72,9 @@ All of the classes below sit in ATC [A10 Drugs used in diabetes](../../pharmacop
 #### Insulin *(mandatory in T1DM, second-line or advanced-stage T2DM)*
 
 - **Rapid-acting (lispro A10AB04, aspart A10AB05, glulisine A10AB06), long-acting (glargine A10AE04, detemir A10AE05, degludec A10AE06):**  
-  - **MoA:** Directly reduces blood glucose by stimulating glucose uptake into tissues.
+  - **MoA:** Lowers blood glucose by increasing glucose uptake into tissues and reducing glucose output from the liver.
 
-#### Oral anti-diabetic agents *(first-line in T2DM)*
+#### Non-insulin glucose-lowering drugs *(T2DM)*
 
 - **Biguanides (Metformin, A10BA02):**  
   - **MoA:** Reduces hepatic glucose production, improves insulin sensitivity.
@@ -94,9 +93,9 @@ All of the classes below sit in ATC [A10 Drugs used in diabetes](../../pharmacop
 
 #### Dose Adjustments
 
-Dose adjustments needed based on renal function (especially Metformin, SGLT2 inhibitors, GLP-1 agonists, insulin).  
+Dose adjustments needed based on renal function (especially metformin, SGLT2 inhibitors and insulin).  
 Pediatric insulin dosing tailored by weight, glucose response, and age.  
-Elderly patients often require lower or more cautious dosing due to hypoglycemia risk.
+Elderly patients often require lower or more cautious dosing due to risk of low blood sugar (hypoglycemia).
 
 ### Commonly used PK-models
 

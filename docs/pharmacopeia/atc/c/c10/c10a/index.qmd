@@ -1,6 +1,6 @@
 ---
 title: "C10A: Lipid modifying agents, plain"
-description: "ATC C10A lipid modifying agents, plain: the single-agent level-3 group under C10, containing the statins (C10AA), fibrates, bile acid sequestrants and others."
+description: "ATC C10A holds the lipid modifying agents sold as single-drug products, not combinations: the statins, fibrates, bile acid sequestrants and others."
 date: "2026-09-22"
 ---
 

@@ -1,12 +1,51 @@
 ---
 title: "H03: Thyroid therapy"
-description: "Pharmacometric modeling notes for ATC H03, thyroid therapy."
+description: "ATC H03 holds thyroid therapy: thyroid hormone for an underactive thyroid, antithyroid drugs for an overactive one, and non-radioactive iodine."
 date: "2026-02-08"
 ---
 
-**Also worth knowing.**
-Levothyroxine is treated as a narrow therapeutic index drug, with bioequivalence tightened to 0.90-1.11 [@concordet2019levothyrox; @concordet2020be200].
-Binding globulins shift with pregnancy and oral estrogen, changing unbound fraction [@arafah2001estrogen; @alexander2004pregnancy].
+H03 holds thyroid preparations (H03A), antithyroid preparations (H03B) and iodine therapy (H03C) [@whoccATCDDDIndex2026].
+
+## How do thyroid drugs work?
+
+**Thyroid hormone** replacement is the standard treatment for an underactive thyroid (hypothyroidism), given as levothyroxine sodium (H03AA01).
+It supplies thyroxine (T4), which deiodinase enzymes convert to tri-iodothyronine (T3).
+In a person with a healthy thyroid, about 20% of circulating T3 is secreted directly by the gland, but on levothyroxine alone all of it comes from this conversion [@chaker2017].
+
+**Antithyroid drugs** are used for an overactive thyroid (thyrotoxicosis), and inhibit hormone metabolism inside the gland.
+They include propylthiouracil (H03BA02) and the mercaptoimidazolines carbimazole (H03BB01) and thiamazole (H03BB02), also called methimazole.
+Carbimazole is itself inactive and is completely converted to thiamazole during absorption.
+Both types are concentrated in the thyroid gland, where they act on its iodine metabolism for longer than they can be measured in serum.
+Propylthiouracil also inhibits the conversion of T4 to T3 in peripheral tissues, which thiamazole does not [@kampmannClinicalPharmacokineticsAntithyroid1981].
+
+## Bioequivalence
+
+Levothyroxine is the body's own hormone, so a study of how much of a tablet is absorbed has to separate the dose from the endogenous thyroxine.
+In one pooled analysis of eight trials, healthy men received a single pharmacological dose of 600 to 700 µg in total.
+Simply subtracting each subject's pre-dose thyroxine did poorly.
+Adjusting the total AUC for baseline thyroxine as a covariate did much better, and would have allowed smaller trials or equivalence limits of ±6% [@waltersack2004].
+
+Levothyroxine has a narrow therapeutic index, and for it the European [bioequivalence](../../../../concepts/clinpharm-studies/ba-be/index.qmd) acceptance interval is shortened from 0.80--1.25 to 0.90--1.11.
+The trial of a new formulation of Levothyrox in France used this narrower interval in 204 healthy volunteers, and the two formulations were bioequivalent on average, yet adverse drug reactions were reported in several thousand patients after the switch.
+Reanalyzing the trial data, Concordet and colleagues found that more than 50% of the volunteers were individually outside the bioequivalence range.
+They therefore proposed individual bioequivalence, which also compares the within-subject variances of the formulations and tests for a subject-by-formulation interaction [@concordet2019levothyrox].
+
+## Efficacy
+
+In hypothyroidism, the levothyroxine dose is adjusted for each patient on the thyroid-stimulating hormone (TSH) concentration, a continuous laboratory measurement.
+The treatment targets are a normal TSH and resolution of symptoms, avoiding both under- and overtreatment.
+After therapy starts, TSH is measured again after 4--12 weeks, then every 6 months, and annually once stable.
+An estimated 35--60% of patients on levothyroxine do not reach the TSH target range.
+The dose requirement is changed by some drugs, such as estrogens, and rises in pregnancy, when women with treated hypothyroidism are advised to increase their dose by 30% [@chaker2017].
+
+## Safety
+
+Overtreatment with levothyroxine, meaning treatment-induced subclinical or overt hyperthyroidism, can cause an irregular heart rhythm (atrial fibrillation) and osteoporosis, and should be avoided especially in the elderly and in postmenopausal women.
+Undertreatment carries an increased risk of cardiovascular disease and persistent symptoms [@chaker2017].
+
+A severe loss of white blood cells (agranulocytosis) is a life-threatening adverse reaction to antithyroid drugs.
+In a meta-analysis of five case-control studies, it was associated with the HLA-B\*27:05, HLA-B\*38:02 and HLA-DRB1\*08:03 alleles, especially with carbimazole and thiamazole [@chenAssociationsHLAGenotypes2019].
+In a Taiwanese cohort of 71,379 patients starting antithyroid drugs for hyperthyroidism, carbimazole or thiamazole carried a higher risk of hepatitis than propylthiouracil, increasing with dose, while the risks of acute liver failure and impaired bile flow (cholestasis) were similar [@wangAntithyroidDrugrelatedHepatotoxicity2014].
 
 ## References
 

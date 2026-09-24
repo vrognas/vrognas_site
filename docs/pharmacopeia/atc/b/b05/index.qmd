@@ -1,11 +1,34 @@
 ---
 title: "B05: Blood substitutes and perfusion solutions"
-description: "Pharmacometric modeling notes for ATC B05, blood substitutes and perfusion solutions."
+description: "ATC B05 holds blood substitutes and medical fluids: plasma substitutes, IV solutions and their additives, irrigation fluids, and dialysis solutions."
 date: "2026-02-08"
 ---
 
-**Easy to overlook.**
-Blood substitutes and perfusion solutions have their own tradition, volume kinetics, fitted to hemoglobin-derived plasma dilution [@hahn2019albumin; @balan2025gelofusine].
+This group holds blood products and plasma substitutes, intravenous solutions and their additives, irrigating solutions, and solutions for dialysis across the lining of the abdomen (peritoneal dialysis) and hemodialysis [@whoccATCDDDIndex2026].
+This page covers the fluids infused to expand the circulating blood volume.
+
+## How do blood substitutes and perfusion solutions work?
+
+Infusion fluids differ in how long the infused volume stays in the blood vessels.
+**Crystalloids**, such as electrolyte solutions (B05BB01), distribute from the plasma into the interstitial fluid, and in conscious people their half-life is usually 20 to 40 minutes.
+**Colloids** contain large molecules and stay in the circulation longer, with an intravascular half-life of 2 to 3 hours [@hahnHalflifeInfusionFluids2016].
+
+For hydroxyethyl starch (B05AA07), the volume effect depends on the number of oncotically active molecules in plasma, the molecules that hold water in the circulation, and does not directly mirror the plasma concentration of the starch [@jungheinrichPharmacokineticsHydroxyethylStarch2005].
+
+## Efficacy
+
+The intended effect is expansion of the plasma volume.
+It is estimated from the dilution of blood hemoglobin, sampled every 5 to 10 minutes, together with urine output, and **volume kinetics** applies the pharmacokinetic approach to the infused fluid itself.
+During surgery under general anesthesia with mechanical ventilation, the half-life of crystalloid fluid can reach 3 to 8 hours [@hahnHalflifeInfusionFluids2016].
+
+For the gelatin colloid Gelofusine (B05AA06) during vascular surgery, the plasma volume expanded by at most 706 mL after 800 mL was infused, only 15% of the infused volume distributed outside the blood vessels, and the elimination half-life was 115 minutes.
+Norepinephrine (C01CA03) shortened this half-life in a dose-dependent way [@balan2025gelofusine].
+
+## Safety
+
+In patients with severe sepsis, fluid resuscitation with hydroxyethyl starch 130/0.42 increased 90-day mortality compared with Ringer's acetate, from 43% to 51%.
+It also increased the use of dialysis and other kidney support (renal replacement therapy), from 16% to 22% [@pernerHydroxyethylStarch1302012].
+At high plasma concentrations, hydroxyethyl starch can affect blood coagulation, especially factor VIII and von Willebrand factor [@jungheinrichPharmacokineticsHydroxyethylStarch2005].
 
 ## References
 

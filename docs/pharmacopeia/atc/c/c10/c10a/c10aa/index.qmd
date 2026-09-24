@@ -1,10 +1,60 @@
 ---
 title: "C10AA: HMG CoA reductase inhibitors"
-description: "ATC C10AA HMG CoA reductase inhibitors (statins): competitive inhibition of HMG-CoA reductase to block hepatic cholesterol synthesis."
+description: "ATC C10AA holds the statins, or HMG CoA reductase inhibitors, which lower cholesterol by blocking its production in the liver."
 date: "2026-02-08"
 ---
 
-Statins (or **HMG-CoA reductase inhibitors**) are a class of medications that reduce illness and mortality in people who are at high risk of cardiovascular disease.
+Statins (or **HMG-CoA reductase inhibitors**) are a class of medications that reduce illness and mortality in people who are at high risk of cardiovascular disease [@liaigre2025surrogacy].
 
-Statins act by competitively inhibiting HMG-CoA reductase.
-By inhibiting HMG-CoA reductase, statins block the pathway for synthesizing cholesterol in the liver.
+In 1971, Akira Endo's group at Sankyo in Tokyo began screening culture broths of fungi for inhibitors of HMG-CoA reductase.
+In 1972 they found an active broth of the mold *Penicillium citrinum*, isolated from a rice sample collected at a grain shop in Kyoto.
+In July 1973 they isolated ML-236B from it, the compound known as compactin and the first statin [@endoHistoricalPerspectiveDiscovery2010].
+
+## How do statins work?
+
+Statins act by competitively inhibiting HMG-CoA reductase: they occupy part of the enzyme's binding site for HMG-CoA, which blocks the substrate's access [@istvanStructuralMechanismStatin2001].
+By inhibiting HMG-CoA reductase, statins block the pathway for synthesizing cholesterol in the liver [@igelPharmacology3hydroxy3methylglutarylcoenzymeReductase2002].
+
+HMG-CoA reductase converts HMG-CoA to mevalonate, an early rate-limiting step in cholesterol synthesis.
+With less cholesterol made, the cells express more low-density lipoprotein (LDL) receptors, and take up more LDL cholesterol from the blood [@lennernasPharmacodynamicsPharmacokineticsHMGCoA1997].
+The uptake transporter OATP1B1, encoded by the gene *SLCO1B1*, facilitates the entry of all statins into the liver [@cooperdehoffClinicalPharmacogeneticsImplementation2022].
+
+## Efficacy
+
+The main clinical measure of statin effect is LDL cholesterol in plasma, a continuous variable.
+There is no simple way to measure the inhibition of HMG-CoA reductase itself in human pharmacodynamic studies.
+LDL cholesterol takes 4 to 6 weeks to show a reduction after the start of treatment.
+For these reasons, Lennernäs and Fager considered a dose-effect relationship more appropriate than a concentration-effect relationship for describing statin pharmacodynamics [@lennernasPharmacodynamicsPharmacokineticsHMGCoA1997].
+
+An indirect response model, in which the drug inhibits or stimulates the production or loss of the response, accounts for such delays [@sharma1998indirect].
+One such model was built from 2863 LDL cholesterol values of 378 patients on statins, taken from electronic medical records.
+In it, adding ezetimibe (C10AX09) reduced the LDL synthesis rate by 10.9% [@kakara2014].
+
+The clinical outcomes are cardiovascular events and death, which trials report as risk ratios or hazard ratios.
+An umbrella review of 20 randomized statin trials, with a median follow-up of 4.85 years, found that statins improved all the clinical outcomes studied.
+However, the size of each trial's LDL cholesterol reduction explained little of the difference in its effect on outcomes, with a trial-level R^2^ of 0 to 0.1.
+The authors concluded that LDL cholesterol should not be used as pivotal evidence in drug trials [@liaigre2025surrogacy].
+
+## Safety
+
+Statins are generally well tolerated, but they can cause muscle toxicity, which can lead to severe rhabdomyolysis, a breakdown of muscle tissue.
+The phenotypes of statin-related muscle toxicity include muscle pain (myalgia), muscle disease (myopathy), rhabdomyolysis and muscle damage caused by the immune system (necrotizing autoimmune myopathy) [@alfirevicPhenotypeStandardizationStatininduced2014].
+In placebo-controlled trials in people aged 65 and over, myalgia was no more frequent on a statin than on placebo (odds ratio 1.03) [@iwereMyopathyOlderPeople2015].
+
+The adverse effects of statins may depend partly on how much they act outside the liver, so systemic exposure may be clinically important [@lennernasPharmacodynamicsPharmacokineticsHMGCoA1997].
+Simvastatin (C10AA01), lovastatin (C10AA02) and atorvastatin (C10AA05) are metabolized by CYP3A4.
+Strong CYP3A4 inhibitors greatly increase their plasma concentrations and the risk of muscle toxicity.
+Pravastatin (C10AA03), rosuvastatin (C10AA07) and pitavastatin (C10AA08) are excreted mainly unchanged, and pure CYP3A4 inhibitors do not significantly raise their concentrations.
+Ciclosporin (L04AD01) inhibits OATP1B1, along with CYP3A4 and P-glycoprotein.
+Gemfibrozil (C10AB04) inhibits OATP1B1 and CYP2C8.
+Both raise plasma statin concentrations and the risk of muscle toxicity.
+OATP1B1 inhibitors may also worsen the benefit-risk ratio, by interfering with statin entry into the liver cells where they act [@neuvonenDrugInteractionsLipidlowering2006].
+
+Statin-associated musculoskeletal symptoms affect adherence, and so can impede the long-term effectiveness of treatment.
+Genetic variants in *SLCO1B1*, *ABCG2* and *CYP2C9* alter systemic exposure to statins, which can increase the risk of these symptoms.
+The Clinical Pharmacogenetics Implementation Consortium (CPIC) gives recommendations for statin therapy based on these genotypes [@cooperdehoffClinicalPharmacogeneticsImplementation2022].
+
+## References
+
+::: {#refs}
+:::

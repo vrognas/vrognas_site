@@ -1,11 +1,53 @@
 ---
 title: "M03: Muscle relaxants"
-description: "ATC M03 muscle relaxants for modelers: relaxants are the effect compartment case."
+description: "ATC M03 holds the muscle relaxants, acting at the nerve-muscle junction as in anesthesia, in the brain and spinal cord, or directly on muscle."
 date: "2026-02-08"
 ---
 
-**Relaxants are the effect compartment case.**
-Twitch depression lags plasma concentration, and the hysteresis collapses under an effect compartment, as fitted for d-tubocurarine [@sheinerSimultaneousModelingPharmacokinetics1979].
+ATC divides the muscle relaxants into peripherally acting (M03A), centrally acting (M03B) and directly acting agents (M03C) [@whoccATCDDDIndex2026].
+
+Curare is a South American arrow poison, and tubocurarine (M03AA02) is its most important alkaloid.
+The Canadian anesthetists Griffith and Johnson used a standardized curare extract as a muscle relaxant in surgical anesthesia, and neuromuscular blocking drugs have since become a standard technique in anesthesia [@bowmanNeuromuscularBlock2006].
+
+## How do muscle relaxants work?
+
+The **peripherally acting** agents include the neuromuscular blocking drugs used as muscle relaxants in surgical anesthesia.
+These fall into two categories, depolarizing and nondepolarizing.
+The nondepolarizing drugs are reversible antagonists of the acetylcholine receptor.
+One of them, rocuronium bromide (M03AC09), has a rapid onset that allows it to be used for placing a breathing tube in the windpipe (tracheal intubation).
+Of the depolarizing drugs, only suxamethonium (M03AB01) remains in use, because its rapid onset and brief action are useful for intubation [@bowmanNeuromuscularBlock2006].
+
+The **centrally acting** agent baclofen (M03BX01) is an agonist at GABA-B receptors, and it relaxes muscle stiffness (spasticity) by inhibiting reflexes at the spinal cord [@romitoBaclofenTherapeuticsToxicity2021].
+
+The **directly acting** agent dantrolene (M03CA01) works on skeletal muscle itself, where it depresses the step that turns the muscle's electrical signal into contraction (excitation-contraction coupling).
+The ryanodine receptor, the major calcium release channel of the internal calcium store of skeletal muscle (sarcoplasmic reticulum), has been identified as a dantrolene-binding site, and its inhibition is thought to be fundamental to how dantrolene lowers intracellular calcium [@krauseDantroleneReviewIts2004].
+
+## Efficacy
+
+Neuromuscular block runs from no block to complete paralysis, and Sheiner and colleagues related it to concentration with the sigmoid Hill equation, which can accommodate both extremes.
+Block and plasma concentration are not in equilibrium, so the same model placed the drug effect in a hypothetical effect compartment linked to plasma by a first-order rate constant.
+For d-tubocurarine in seven subjects, that equilibration rate constant was 0.13 per minute [@sheinerSimultaneousModelingPharmacokinetics1979].
+
+Recovery is judged with the **train-of-four (TOF) ratio**, measured at a thumb muscle (adductor pollicis), and a TOF ratio of at least 0.9 is the threshold now used to exclude residual paralysis [@debaeneResidualParalysisPACU2003].
+
+In 12 patients given intrathecal baclofen for severe spasticity, the clinical effect was scored on the Modified Ashworth Scale, and a delayed-effect model predicted it [@heetlaPharmacokineticPharmacodynamicModelIntrathecal2015].
+
+## Safety
+
+Muscle relaxation in anesthesia is a deliberate encroachment on respiration.
+Hepatic or renal disease can profoundly alter the excretion of neuromuscular blocking drugs and prolong the block [@agostonClinicalPharmacokineticsNeuromuscular1992].
+
+**Residual neuromuscular block**, incomplete recovery after surgery, is common: about 40% of patients in the recovery room (postanesthesia care unit) have a TOF ratio below 0.9.
+In volunteer studies, even TOF ratios of 0.7 to 0.9 were associated with impaired throat function and an increased risk of inhaling saliva or stomach contents into the airways (aspiration) and airway obstruction [@murphyResidualNeuromuscularBlock2010].
+Clinical tests such as head lift detect residual block poorly, and quantitative measurement of neuromuscular transmission is the only recommended way to diagnose it [@debaeneResidualParalysisPACU2003].
+
+In loss of nerve supply (denervation), burns, immobilization and several other conditions, acetylcholine receptors spread across the muscle membrane, and their depolarization by suxamethonium can cause lethally high blood potassium (hyperkalemia) [@martynSuccinylcholineinducedHyperkalemiaAcquired2006].
+
+Depolarizing neuromuscular blocking drugs and volatile anesthetics can trigger malignant hyperthermia, a genetic sensitivity of skeletal muscle.
+In 2004, dantrolene was the only drug available for its specific treatment [@krauseDantroleneReviewIts2004].
+
+About 80% of baclofen is cleared by glomerular filtration, and overdose has been reported in patients with renal dysfunction.
+Dose reductions by creatinine clearance have been recommended [@romitoBaclofenTherapeuticsToxicity2021].
 
 ## References
 

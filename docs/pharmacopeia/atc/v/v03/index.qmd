@@ -1,17 +1,50 @@
 ---
 title: "V03: All other therapeutic products"
-description: "ATC V03 all other therapeutic products for modelers: typical structure, reversal agents; reversal can wear off first."
+description: "ATC V03 holds therapeutic products that fit nowhere else, such as antidotes, drugs that protect against chemotherapy toxicity, and medical gases."
 date: "2026-02-08"
 ---
 
-**Typical structure, reversal agents.**
-Sugammadex encapsulates rocuronium and the complex is cleared by the kidney, so clearance of both falls in [renal impairment](/docs/concepts/clinpharm-studies/renal-impairment-studies/) [@staalsReducedClearanceRocuronium2010].
-A population analysis nonetheless found renal function did not affect reversal time [@kleijnPopulationPharmacokineticPharmacodynamic2011].
-The fitted model is complex formation using the *in vitro* dissociation constant, with effect driven by the fall in free rocuronium rather than by an E~max~ on sugammadex [@ploegerPharmacokineticPharmacodynamicModel2009].
+V03 holds the therapeutic products that fit nowhere else in the classification, among them antidotes, iron chelators, drugs for high blood potassium (hyperkalemia) and high blood phosphate (hyperphosphatemia), detoxifying agents for cancer treatment, and medical gases [@whoccATCDDDIndex2026].
+This page is about the antidotes (V03AB), and in particular the agents that reverse the effect of another drug.
 
-**Reversal can wear off first.**
-The short duration of action of naloxone is a pharmacokinetic property, so reversal can wear off while the opioid is still present [@ngaiPharmacokineticsNaloxoneRats1976].
-Judging a reversal dose therefore calls for a mechanistic model linking both drugs to ventilation [@yangMechanisticPharmacokineticPharmacodynamic2024].
+In 2002, Anton Bom and colleagues described a new way to reverse the neuromuscular block caused by rocuronium (M03AC09): encapsulating the relaxant in a cyclodextrin-based synthetic host [@bomNovelConceptReversing2002].
+
+## How do antidotes work?
+
+The reversal agents on this page act in one of two ways.
+
+**Receptor antagonists** compete with the drug at its receptor.
+Naloxone (V03AB15) reverses opioids by competitively displacing them from the μ-opioid receptor [@saariClinicalPharmacokineticsPharmacodynamics2024].
+
+**Binding agents** capture the drug itself.
+Sugammadex (V03AB35) selectively binds steroidal neuromuscular blockers such as rocuronium, and a PK-PD model that used the *in vitro* dissociation constant of the complex supports that reversal follows from the fall in free rocuronium in plasma and at the neuromuscular junction [@ploegerPharmacokineticPharmacodynamicModel2009].
+Idarucizumab (V03AB37) is an antibody fragment; in dabigatran-treated volunteers it reversed the anticoagulant effect of [dabigatran etexilate](../../b/b01/index.qmd) (B01AE07) immediately, completely and lastingly [@glundEffectAgeRenal2016].
+
+## Duration of reversal
+
+Naloxone is eliminated quickly, with a half-life of 60--120 minutes, and a 1 mg intravenous dose acts for about 2 hours.
+How hard an opioid is to reverse also depends on how fast it dissociates from the receptor, and naloxone is less effective against opioids that dissociate slowly, such as buprenorphine (N02AE01) and carfentanil [@saariClinicalPharmacokineticsPharmacodynamics2024].
+
+In rats, naloxone left the brain much faster than morphine (N02AA01), which the authors proposed as the reason for its short duration of action [@ngaiPharmacokineticsNaloxoneRats1976].
+
+## Efficacy
+
+In the clinical studies of sugammadex, reversal of neuromuscular block was measured with train-of-four (TOF) monitoring, and the primary endpoint was the reversal time, from the start of sugammadex to recovery of the TOF ratio to 0.9.
+A population PK-PD model built on eight of these studies found that [renal function](../../../../concepts/clinpharm-studies/renal-impairment-studies/index.qmd) affected the pharmacokinetics of both sugammadex and rocuronium, but in its simulations renal function did not affect the reversal time [@kleijnPopulationPharmacokineticPharmacodynamic2011].
+
+For opioid reversal, the target is restored breathing, not consciousness [@saariClinicalPharmacokineticsPharmacodynamics2024].
+One mechanistic model combines μ-opioid receptor binding kinetics, the pharmacokinetics of agonist and antagonist, and respiratory and circulatory physiology.
+It predicted opioid-induced respiratory depression and cardiac arrest from lack of oxygen (hypoxic cardiac arrest), and was used to compare intramuscular naloxone products [@mannDevelopmentTranslationalModel2022].
+
+For idarucizumab, reversal is read on clotting tests: in the same volunteer study, the diluted thrombin time, ecarin clotting time and activated partial thromboplastin time returned to baseline immediately after the infusion [@glundEffectAgeRenal2016].
+
+## Safety
+
+Naloxone treatment balances restoring breathing against precipitating opioid withdrawal, and doses are titrated to response [@saariClinicalPharmacokineticsPharmacodynamics2024].
+
+Among reports for sugammadex in the WHO pharmacovigilance database, recurrence of neuromuscular blockade, spasm of the vocal cords (laryngospasm), narrowing of the airways (bronchospasm) and a slow heart rate (bradycardia) were reported disproportionately often.
+Fatal cases were more likely in patients with cardiac disorders, especially those over 65 years.
+Most of the common reactions began within half an hour of the dose [@lyuSafetySugammadexReversal2022].
 
 ## References
 

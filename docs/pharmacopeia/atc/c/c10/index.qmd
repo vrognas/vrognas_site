@@ -1,13 +1,63 @@
 ---
 title: "C10: Lipid modifying agents"
-description: "Pharmacometric modeling notes for ATC C10, lipid modifying agents."
+description: "ATC C10 holds the lipid modifying agents, drugs that lower cholesterol and other blood fats, such as statins and fibrates, alone or in combination."
 date: "2026-02-08"
 ---
 
-**Mechanistic extrapolation.**
-PBPK dominates here, predicting OATP1B1 transporter-mediated statin interactions and SLCO1B1 genotype effects on exposure; cardiorenal QSP models extrapolate blood-pressure and renal responses for antihypertensives [@yoshikadoQuantitativeAnalysesHepatic2016; @jameiMechanisticFrameworkVitro2014].
+Lipid modifying agents lower the levels of cholesterol and other fats (lipids) in the blood.
+The group is divided into single-agent products ([C10A](c10a/index.qmd)) and fixed combinations (C10B).
 
-The [statins](c10a/c10aa/) (C10AA) are the chemical subgroup those transporter interactions concern.
+## How do lipid modifying agents work?
+
+**Statins** (C10AA) have their own page: [HMG CoA reductase inhibitors](c10a/c10aa/index.qmd).
+
+**Fibrates** (C10AB), such as fenofibrate (C10AB05), activate the peroxisome proliferator-activated receptor alpha (PPARα).
+They lower the production of very low-density lipoprotein (VLDL), and increase the breakdown of triglyceride-rich particles by lipoprotein lipase.
+They lower plasma triglycerides substantially and raise high-density lipoprotein (HDL) cholesterol, and usually lower low-density lipoprotein (LDL) cholesterol moderately [@staelsMechanismActionFibrates1998].
+
+**Bile acid sequestrants** (C10AC), such as colestyramine (C10AC01), bind bile acids in the gut and divert them from their recycling between the gut and the liver (the enterohepatic circulation).
+The liver then makes more bile acids from cholesterol, and plasma LDL cholesterol falls [@insullClinicalUtilityBile2006].
+
+**Ezetimibe** (C10AX09) inhibits the uptake of dietary and biliary cholesterol from the intestine [@kosoglouEzetimibeReviewIts2005].
+
+**PCSK9 inhibitors** act on proprotein convertase subtilisin/kexin type 9 (PCSK9), a protein that raises plasma LDL cholesterol by reducing the number of LDL receptors on liver cells.
+Evolocumab (C10AX13) is a monoclonal antibody that binds PCSK9.
+At lower concentrations, it is eliminated mainly through saturable binding to PCSK9, which makes its pharmacokinetics nonlinear [@kasichayanulaClinicalPharmacokineticsPharmacodynamics2018].
+Inclisiran (C10AX16) is a small interfering RNA (siRNA) that is taken up into liver cells and directs the breakdown of the messenger RNA for PCSK9, so less PCSK9 is made.
+More LDL receptors are then recycled to the surface of liver cells, and more LDL cholesterol is taken up from the blood.
+Inclisiran is undetectable in plasma by 48 hours after the recommended dose, yet in healthy volunteers a single dose of 300 mg or more kept PCSK9 and LDL cholesterol lowered for 6 months [@lambInclisiranFirstApproval2021].
+
+**Bempedoic acid** (C10AX15) inhibits ATP citrate lyase [@nissen2023clear].
+
+## Efficacy
+
+LDL cholesterol is a prognostic factor for cardiovascular risk.
+Whether it is also a valid surrogate for cardiovascular outcomes, at the level of the trial, is debated.
+For statins, the size of the LDL cholesterol reduction predicted the effect on outcomes poorly across trials; see the [statin page](c10a/c10aa/index.qmd#efficacy) [@liaigre2025surrogacy].
+
+LDL cholesterol is a continuous measurement, and its fall lags behind that of PCSK9: evolocumab suppresses PCSK9 within 4 hours, but at steady state LDL cholesterol is lowest about 1 week after a dose given every 2 weeks [@kasichayanulaClinicalPharmacokineticsPharmacodynamics2018].
+An indirect response model, in which the drug inhibits or stimulates the production or loss of the response, accounts for such delays [@sharma1998indirect].
+Because inclisiran leaves the plasma long before its effect ends, its dose-related LDL cholesterol lowering was described with a kinetic-pharmacodynamic (K-PD) model that included an effect compartment representing the liver [@gosselinTranslationalPopulationPharmacodynamicModeling2023].
+
+Added to statin therapy, evolocumab lowered LDL cholesterol by 59% relative to placebo at 48 weeks, and the hazard ratio for the primary composite cardiovascular endpoint, a time-to-event measure, was 0.85 [@sabatine2017fourier].
+In patients unable or unwilling to take statins because of adverse effects, bempedoic acid lowered LDL cholesterol after 6 months by 21 percentage points more than placebo, and the hazard ratio for major adverse cardiovascular events was 0.87 [@nissen2023clear].
+
+## Safety
+
+The muscle toxicity of statins, and the drug interactions and genotypes that raise its risk, are described on the [statin page](c10a/c10aa/index.qmd#safety).
+
+Fibrates are generally well tolerated, and indigestion (dyspepsia) and abdominal pain are their most common adverse effects.
+They carry a small risk of gallstones (cholelithiasis).
+Combined with a statin, they increase the incidence of muscle inflammation (myositis) and muscle breakdown (rhabdomyolysis) [@zimetbaumEffectsGemfibrozilOther1991].
+
+Bile acid sequestrants are not absorbed from the gut, so they have no systemic drug interactions, but they can interfere with the absorption of some drugs taken with them [@insullClinicalUtilityBile2006].
+Colestyramine lowers the bioavailability of ezetimibe, so the two should be given several hours apart [@kosoglouEzetimibeReviewIts2005].
+
+In the FOURIER outcome trial, adverse events with evolocumab did not differ significantly from placebo, including new-onset diabetes and effects on memory and thinking (neurocognitive events).
+Injection-site reactions were the exception, at 2.1% vs 1.6% [@sabatine2017fourier].
+
+In the CLEAR Outcomes trial, gout (3.1% vs 2.1%) and gallstones (2.2% vs 1.2%) were more common with bempedoic acid than with placebo.
+So were small increases in serum creatinine, uric acid and liver enzymes [@nissen2023clear].
 
 ## References
 

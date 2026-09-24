@@ -1,13 +1,10 @@
 ---
 title: "V: Various"
-description: "ATC group V for modelers: the catch-all letter, effective half-life for radiopharmaceuticals, and notes held at V03, V08 and V10."
+description: "ATC group V is the catch-all: allergens, antidotes, diagnostic agents, contrast media, radiopharmaceuticals, nutrients and surgical dressings."
 date: "2026-02-08"
 ---
 
 ATC group V is the catch-all letter of the classification [@whoccATCDDDIndex2026].
-The notes below cover three of its nine level 2 codes: therapeutic radiopharmaceuticals, reversal agents and contrast media.
-
-In 2002 Anton Bom and colleagues at Organon described a cyclodextrin that reverses rocuronium block by encapsulating the relaxant itself rather than acting on a receptor [@bomNovelConceptReversing2002].
 
 |  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
@@ -23,15 +20,12 @@ In 2002 Anton Bom and colleagues at Organon described a cyclodextrin that revers
 
 : ATC V level 2 codes {#tbl-atc-v-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modeling notes
+## Radiopharmaceuticals for imaging and therapy
 
-**Endpoint.**
-For therapeutic radiopharmaceuticals the driver is a physical quantity, the **absorbed dose** in Gy to tumor and organs at risk, reconstructed from serial post-infusion imaging rather than from a plasma concentration-time curve [@hebertAbsorbedDoseResponse2024].
-In ^177^Lu-PSMA-617 therapy the lesion dose-response relationship is real but only moderate, Spearman rho about -0.3 [@grkovskiLesionAbsorbedDose2025].
-
-**Decay is not clearance (V09, V10).**
-Imaging measures activity, which falls by radioactive decay and by biological clearance together, so what is fitted is an effective half-life [@oliveiraAnalysisResidenceTime2022].
-With few imaging time points the fit is unstable, and population fitting stabilizes the time-integrated activity [@hardiansyahPopulationBasedMethod2021].
+Almost all radionuclides used in radiopharmaceutical therapy (V10) also emit photons that can be imaged, so the biodistribution of the therapeutic agent can be seen without invasive sampling.
+The activity seen on these images falls by radioactive decay as well as by biological clearance, and the effective clearance rate is the sum of the physical decay rate and the biological clearance rate [@sgourosRadiopharmaceuticalTherapyCancer2020].
+In one study of 65 patients with metastatic hormone-resistant (castration-resistant) prostate cancer treated with lutetium (^177^Lu) vipivotide tetraxetan (V10XX05), lesion uptake on the baseline diagnostic positron emission tomography (PET) scan with gallium (^68^Ga) gozetotide (V09IX14), also written ^68^Ga-PSMA-11, correlated strongly with uptake on post-treatment SPECT (Pearson r 0.74 across 1364 lesions) [@grkovskiLesionAbsorbedDose2025].
+How the images are turned into absorbed doses is covered under [V10](v10/index.qmd).
 
 ## References
 

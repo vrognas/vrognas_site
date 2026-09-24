@@ -1,25 +1,55 @@
 ---
 title: "A10: Drugs used in diabetes"
-description: "ATC A10 drugs used in diabetes for modelers: hbA1c is not an E~max~ on concentration; long trials drift; clamp readouts."
+description: "ATC A10 holds the drugs used in diabetes: insulins and their analogues, and other glucose lowering drugs, from the biguanides to the GLP-1 analogues."
 date: "2026-02-08"
 ---
 
-The disease these drugs treat is covered in the [diabetes primer](/docs/pathology-primers/diabetes/).
+The disease these drugs treat is covered in the [diabetes primer](../../../../pathology-primers/diabetes/index.qmd).
 
-**Endpoint.**
-HbA1c, glycated hemoglobin, is the most commonly used biomarker of glycemic management and a surrogate endpoint for anti-diabetic drug approval [@lledogarciaSemimechanisticModelRelationship2013].
+## How do drugs used in diabetes work?
 
-**HbA1c is not an E~max~ on concentration.**
-It accumulates by glycation over the red cell lifespan, so it lags mean glucose and is written as a transformation of the glucose profile, not as a drug effect [@lledogarciaSemimechanisticModelRelationship2013; @hamrenModelsPlasmaGlucose2008].
+The group is split into insulins and their analogues (A10A), blood glucose lowering drugs other than insulins (A10B), and other drugs used in diabetes (A10X) [@whoccATCDDDIndex2026].
 
-**Typical structure.**
-Provocations (OGTT, IVGTT) need the glucose-insulin feedback loop stated explicitly, and integrated models carrying both species have been built for intravenous and for oral provocation data [@silberIntegratedModelGlucose2007; @jauslinIntegratedGlucoseInsulin2007].
+**Insulins** promote the uptake of glucose into muscle and fat, and reduce the output of glucose from the liver [@tanReviewSemimechanisticHbA1c2026].
 
-**Long trials drift.**
-Type 2 diabetes progresses under treatment, so comparing drugs over a year needs disease progression on beta cell function and insulin sensitivity, not a fixed baseline [@dewinterMechanismbasedDiseaseProgression2006].
+The **blood glucose lowering drugs** act at different sites:
 
-**Clamp readouts.**
-Insulin degludec was profiled by the glucose infusion rate of a euglycemic clamp, a [pharmacodynamic](/docs/concepts/pd/) readout: in 65 healthy men, body mass index was inversely correlated with the 24 hour GIR AUC [@liEffectBMIPharmacokinetic2023].
+* The biguanide metformin (A10BA02) reduces glucose output from the liver and increases glucose uptake in muscle.
+* Sulfonylureas, such as gliclazide (A10BB09), increase insulin secretion from the beta cells of the pancreas.
+* Thiazolidinediones, such as pioglitazone (A10BG03), are insulin sensitizers: they increase glucose uptake in muscle, fat and liver, and reduce glucose output from the liver.
+* Dipeptidyl peptidase-4 (DPP-4) inhibitors, such as sitagliptin (A10BH01), stimulate the extra insulin release triggered by gut hormones (incretin effect) by inhibiting the breakdown of glucagon-like peptide-1 (GLP-1).
+* GLP-1 receptor agonists, such as liraglutide (A10BJ02), stimulate the incretin effect by activating GLP-1 receptors.
+* Sodium-glucose cotransporter 2 (SGLT2) inhibitors, such as empagliflozin (A10BK03), block the reabsorption of glucose in the first part of the kidney tubule (proximal tubule) [@tanReviewSemimechanisticHbA1c2026].
+
+## Disease progression
+
+Type 2 diabetes is progressive, with a continuing decline in beta cell function and worsening insulin sensitivity, as described in the [diabetes primer](../../../../pathology-primers/diabetes/index.qmd).
+A mechanism-based disease progression model, built on two phase 3 trials comparing pioglitazone with metformin or gliclazide, described this progression as a loss of beta cell function and insulin sensitivity over time.
+It separated each drug's immediate symptomatic effect, modeled as a step change, from any long-term disease-modifying effect.
+Only pioglitazone improved beta cell function over time [@tanReviewSemimechanisticHbA1c2026].
+
+## Efficacy
+
+The standard endpoint is glycated hemoglobin (HbA1c), a continuous measure and the gold standard for long-term glycemic efficacy, while fasting plasma glucose follows glycemic control in real time.
+HbA1c forms as glucose glycates hemoglobin in red blood cells, which live about 120 days, so it reflects mean glucose over 2 to 3 months, and early-phase studies are often too short for it to reach steady state.
+Semi-mechanistic models link the drug to glucose, and glucose to HbA1c, with indirect response models or with transit compartments that follow the aging red blood cells.
+In a model built on a phase 2 study of tesaglitazar, the red blood cell lifespan was estimated at 135 days [@hamrenModelsPlasmaGlucose2008].
+
+Glucose tolerance tests, given intravenously or orally, are used to estimate insulin sensitivity, insulin secretion and beta cell function.
+An integrated glucose-insulin model, with feedback in both directions between glucose and insulin, was built for intravenous tests in healthy volunteers and patients [@silberIntegratedModelGlucose2007], and then extended with glucose absorption and the incretin effect to describe oral tests [@ajmeraImpactMathematicalModeling2013].
+
+For insulins, the pharmacodynamic gold standard is the glucose infusion rate (GIR) during a test that holds blood glucose at a normal level (euglycemic clamp), which indicates the glucose-lowering effect, as for insulin degludec (A10AE06) [@haahrReviewPharmacologicalProperties2014].
+
+## Safety
+
+Low blood glucose (hypoglycemia) is the most common toxicity of insulin and the sulfonylureas, and both have narrow therapeutic indices [@kleinschwartzTreatmentSulfonylureaInsulin2016].
+Liraglutide acts on insulin and glucagon secretion in a glucose-dependent way, so its risk of hypoglycemia is low.
+Nausea is its most common adverse event, and it is dose-dependent and transient [@jacobsenLiraglutideType22016].
+
+A buildup of lactic acid in the blood (lactic acidosis) is the feared adverse effect of the biguanides, but its incidence with metformin is very low.
+Graham and colleagues suggested keeping the mean plasma concentration of metformin over a dosing interval below 2.5 mg/L to minimize this risk.
+Metformin is excreted unchanged in urine, and its clearance falls approximately in proportion to creatinine clearance.
+They therefore recommend reducing the dose in renal impairment in proportion to the reduced creatinine clearance [@grahamClinicalPharmacokineticsMetformin2011].
 
 ## References
 

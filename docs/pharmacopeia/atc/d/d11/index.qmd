@@ -1,11 +1,49 @@
 ---
 title: "D11: Other dermatological preparations"
-description: "ATC D11 other dermatological preparations for modelers: dropout is informative."
+description: "ATC D11 holds skin preparations that fit nowhere else, such as antiperspirants, medicated shampoos, wart treatments and non-steroid dermatitis treatments."
 date: "2026-02-08"
 ---
 
-**Dropout is informative.**
-Dropout is informative: in a four-state Markov model of EASI the dropout probability was highest in the non-responding category [@okadaContinuousTimeMarkovPopulation2025].
+D11 holds the skin preparations that fit in no other D group: sweat-reducing preparations (antihidrotics), medicated shampoos, male sex hormones (androgens) for topical use, wart and anti-corn preparations, agents for skin inflammation (dermatitis) excluding corticosteroids (D11AH), and other dermatologicals.
+The notes below are about the agents for dermatitis, which include both topical preparations and drugs given by mouth or parenterally [@whoccATCDDDIndex2026].
+
+## How do agents for dermatitis work?
+
+* **Topical calcineurin inhibitors**, tacrolimus (D11AH01) and pimecrolimus (D11AH02), are used as steroid-sparing treatments on the skin [@zhaoSafetyTopicalMedications2023].
+* **Crisaborole** (D11AH06) is a nonsteroidal phosphodiesterase 4 inhibitor, applied as an ointment in mild to moderate eczema (atopic dermatitis) [@purohitPredictorsSystemicExposure2020].
+* **Dupilumab** (D11AH05) is a monoclonal antibody against the interleukin-4 (IL-4) receptor α subunit, and inhibits the signaling of IL-4 and IL-13, two type 2 cytokines [@simpsonTwoPhaseTrials2016].
+* **Nemolizumab** (D11AH12) is a humanized monoclonal antibody that targets the IL-31 receptor α [@fauchetModelinformedDrugDevelopment2026].
+* **Abrocitinib** (D11AH08) is an oral, once-daily inhibitor selective for Janus kinase 1 [@wangEffectsHepaticImpairment2021].
+
+## Efficacy
+
+The nemolizumab analysis scored atopic dermatitis with two investigator-reported measures and one patient-reported measure of itch [@fauchetModelinformedDrugDevelopment2026]:
+
+* The **Eczema Area and Severity Index (EASI)** is an investigator assessment of the extent and severity of disease, from 0 (clear) to 72 (very severe).
+* The **Investigator's Global Assessment (IGA)** grades global severity on an ordinal scale, from 0 (clear) to 4 (severe disease) on the 5-point version, or to 5 (very severe disease) on the 6-point version.
+* The **Peak Pruritus Numerical Rating Scale (PP NRS)** is the patient's own rating of itch, from 0 (no itch) to 10 (worst itch imaginable).
+
+Trials can turn these scores into binary responder endpoints.
+In the two phase 3 trials of dupilumab, the primary outcome was an IGA of 0 or 1 together with a reduction of at least 2 points from baseline at week 16, and the proportion of patients with at least 75% improvement in EASI (EASI-75) was also reported [@simpsonTwoPhaseTrials2016].
+
+In the nemolizumab analysis, each type of score got its own model: EASI and PP NRS were described with turnover models whose output was transformed onto the bounded scale of each score, and IGA with a continuous-time Markov model.
+Nemolizumab exposure decreased with increasing bodyweight, and the simulated median trough at week 16 was 2.51 µg/mL below 90 kg and 1.71 µg/mL at 90 kg or above.
+Even so, the simulated proportions of responders for EASI, PP NRS and IGA were similar in the two weight groups [@fauchetModelinformedDrugDevelopment2026].
+
+For rocatinlimab, an anti-OX40 antibody, EASI was grouped into four categories of improvement from baseline (below 50%, 50 to 75%, 75 to 90%, and 90% or more) and modeled with a four-state continuous-time Markov model.
+In that model the probability of dropout was highest in the category with less than 50% improvement, so dropout depended on the response state [@okadaContinuousTimeMarkovPopulation2025].
+
+In phase 1 studies in healthy subjects, dupilumab lowered circulating total immunoglobulin E (IgE) and thymus- and activation-regulated chemokine (TARC), pharmacodynamic markers that indicated blockade of IL-4 receptor α signaling [@liPharmacokineticsPharmacodynamicsSafety2020].
+
+## Safety
+
+In pediatric trials of tacrolimus, the most frequently reported adverse events were a burning sensation, itching (pruritus) and skin infections.
+Two cohort studies found no significant increase in the risk of cancer (malignancy) with topical calcineurin inhibitors in children [@zhaoSafetyTopicalMedications2023].
+
+Crisaborole reaches the circulation: in a pooled analysis of six studies, systemic exposure at a given ointment dose was 2.5-fold higher in patients with atopic dermatitis or psoriasis than in healthy participants.
+Model predictions indicated that exposure in children aged 2 to 17 years is unlikely to exceed that in adults [@purohitPredictorsSystemicExposure2020].
+
+In the phase 3 trials of dupilumab, injection-site reactions and inflammation of the eye surface (conjunctivitis) were more frequent with dupilumab than with placebo [@simpsonTwoPhaseTrials2016].
 
 ## References
 

@@ -1,11 +1,46 @@
 ---
 title: "H05: Calcium homeostasis"
-description: "Pharmacometric modeling notes for ATC H05, calcium homeostasis."
+description: "ATC H05 holds drugs that keep blood calcium in balance: parathyroid hormone and its analogues, which raise it, and anti-parathyroid agents, which lower it."
 date: "2026-02-08"
 ---
 
-**Mechanistic extrapolation.**
-QSP is the characteristic modality here: multiscale calcium homeostasis and bone remodeling models predict bone mineral density, and FDA used one reviewing rhPTH(1-84) dosing in hypoparathyroidism [@petersonFDAAdvisoryMeeting2015; @riggsPharmacometricsSystemsPharmacology2019].
+H05 holds parathyroid hormones and analogues (H05A) and anti-parathyroid agents (H05B), which include the calcitonins (H05BA) and cinacalcet (H05BX01) [@whoccATCDDDIndex2026].
+
+## How do calcium homeostasis drugs work?
+
+The **parathyroid hormone analogues** teriparatide (H05AA02) and abaloparatide (H05AA04) both bind to and activate the parathyroid hormone (PTH) type 1 receptor.
+Teriparatide is a 34-amino-acid fragment, identical in sequence to the first 34 amino acids of human PTH, while abaloparatide is identical to PTH-related peptide through its first 22 residues.
+Abaloparatide appears to favor a transient, more anabolic configuration of the receptor than teriparatide does.
+The bone-building (osteoanabolic) actions of PTH come directly from its effects on cells of the bone-forming (osteoblast) lineage, and indirectly from stimulating insulin-like growth factor I (IGF-I) synthesis and suppressing sclerostin [@tabaccoOsteoanabolicDualAction2019].
+
+The **calcimimetic** cinacalcet lowers PTH directly.
+The calcium-sensing receptor on the chief cells of the parathyroid gland is the principal regulator of PTH secretion, and cinacalcet increases its sensitivity to extracellular calcium [@europeanmedicinesagencyMimparaEPARProduct2026].
+
+## Efficacy
+
+In osteoporosis, the endpoints are fractures and bone mineral density (BMD).
+Teriparatide and abaloparatide both reduce the risk of spine (vertebral) and non-vertebral fractures.
+They are given for at most 24 months, followed by a drug that slows bone breakdown (an antiresorptive) to maintain the gain in BMD [@tabaccoOsteoanabolicDualAction2019].
+
+Between the dose and BMD sit clinical markers: serum calcium, PTH and bone turnover markers.
+Linking them to BMD motivated a quantitative systems pharmacology (QSP) model of calcium homeostasis and bone remodeling, built around keeping calcium within its narrow physiological range.
+FDA reviewers used an open-source version of this model to evaluate dosing regimens of recombinant human PTH, rhPTH(1-84), which is parathyroid hormone (H05AA03) given to replace the endogenous hormone in an underactive parathyroid (hypoparathyroidism) [@petersonFDAAdvisoryMeeting2015].
+Model-based work in metabolic bone disease ranges from simple pharmacokinetic models to such systems models, with examples from bisphosphonates, denosumab, teriparatide and the sclerostin inhibitors [@riggsPharmacometricsSystemsPharmacology2019].
+
+For cinacalcet in an overactive parathyroid driven by another condition (secondary hyperparathyroidism), the response measured is plasma PTH, which moves inversely with cinacalcet concentration.
+PTH is highest just before the next dose and lowest about 2 to 3 hours after it [@padhiClinicalPharmacokineticPharmacodynamic2009].
+
+## Safety
+
+In patients with normal calcium, teriparatide causes slight, transient rises in serum calcium that peak 4 to 6 hours after the injection and return to baseline by 16 to 24 hours.
+High blood calcium (hypercalcemia) above 2.76 mmol/L is listed as an uncommon adverse reaction.
+The most commonly reported adverse reactions are nausea, pain in limb, headache and dizziness.
+Rats given near-lifetime daily injections developed more bone cancer (osteosarcoma), so treatment should not exceed 24 months.
+No osteosarcomas have been seen in clinical trials or in post-treatment follow-up [@europeanmedicinesagencyForsteoEPARProduct2026].
+For rhPTH(1-84), the FDA reviewers concluded from their simulations that the dose regimen should be further optimized to address safety concerns about too much calcium in the urine (hypercalciuria) [@petersonFDAAdvisoryMeeting2015].
+
+With cinacalcet, serum calcium falls along with PTH, and the most commonly reported adverse reactions are nausea and vomiting.
+Cinacalcet is also a strong inhibitor of CYP2D6 [@europeanmedicinesagencyMimparaEPARProduct2026].
 
 ## References
 

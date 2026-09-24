@@ -1,13 +1,10 @@
 ---
 title: "M: Musculo-skeletal system"
-description: "ATC group M for modelers: four unrelated PD paradigms under one letter, with notes held at M01, M03, M04 and M05."
+description: "ATC group M covers muscles, bones and joints: anti-inflammatory and antirheumatic drugs, muscle relaxants, gout treatments, and drugs for bone diseases."
 date: "2026-02-08"
 ---
 
-Drugs for joint, bone and muscle disease, plus the neuromuscular blockers given under anesthesia [@sheinerSimultaneousModelingPharmacokinetics1979].
-Published models here span a subjective pain score [@mandemaPopulationPharmacodynamicModel1996] and an evoked muscle twitch [@sheinerSimultaneousModelingPharmacokinetics1979].
-
-In 1938 Richard Gill returned from the Amazon with 11 kg of curare, from which Squibb isolated a standardized extract; Harold Griffith and Enid Johnson gave it in the operating room in 1942 [@elsherbiniConnectionHaroldGriffith2024; @griffithUseCurareGeneral1942].
+ATC group M holds drugs for the musculo-skeletal system: anti-inflammatory and antirheumatic products, muscle relaxants, antigout preparations and drugs for bone diseases [@whoccATCDDDIndex2026].
 
 |  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
@@ -16,21 +13,20 @@ In 1938 Richard Gill returned from the Amazon with 11 kg of curare, from which 
 | [**M03**](m03/) | Muscle relaxants |  | Rocuronium bromide (M03AC09) for neuromuscular block / baclofen (M03BX01) for spasticity |
 | [**M04**](m04/) | Antigout preparations |  | Allopurinol (M04AA01) / febuxostat (M04AA03) |
 | [**M05**](m05/) | Drugs for treatment of bone diseases |  | Alendronic acid (M05BA04) / denosumab (M05BX04) |
-| **M09** | Other drugs for disorders of the musculo-skeletal system | leftover bone, joint and muscle drugs | Residual catch-all group, but it now carries real drug-level standards for rare neuromuscular disease: nusinersen (M09AX07) and risdiplam (M09AX10) for spinal muscular atrophy |
+| **M09** | Other drugs for disorders of the musculo-skeletal system | leftover bone, joint and muscle drugs | Nusinersen (M09AX07) and risdiplam (M09AX10), for spinal muscular atrophy |
 
 : ATC M level 2 codes {#tbl-atc-m-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modeling notes
+## Topical products for joint and muscular pain
 
-**Endpoint.**
-Each level 2 code brings its own: WOMAC pain in M01 [@wenPlaceboResponseOral2022], serum urate in M04 [@murakiPopulationPharmacodynamicAnalysis2018], bone markers and density in M05 [@wuQuantitativePredictionBone2021], evoked twitch in M03 [@jiReversalRocuroniumInducedIntense2023].
+Within M02, M02AA holds non-steroidal anti-inflammatory drugs (NSAIDs) for topical use [@whoccATCDDDIndex2026].
+How NSAIDs work, and how their effect on pain is measured, is described on the [M01 page](m01/index.qmd).
 
-**Easy to overlook.**
-For M02 the relevant exposure is local, in skin and synovial fluid, and dermal PBPK is what links measured plasma concentration to that site, so [bioequivalence](/docs/concepts/clinpharm-studies/ba-be/) is argued at the site of action alongside, not instead of, a plasma study [@tsakalozouPhysiologicallyBasedPharmacokinetic2021].
-
-**Mechanistic extrapolation.**
-A multiscale model of calcium homeostasis and bone remodeling [@petersonPhysiologicallyBasedMathematical2010] was extended to predict lumbar spine density under denosumab, including the decline after discontinuation [@petersonPredictingNonlinearChanges2012].
-For M02, dermal PBPK replaced a comparative clinical endpoint study in an FDA generic approval of topical diclofenac gel [@tsakalozouPhysiologicallyBasedPharmacokinetic2021].
+For diclofenac sodium topical gel (M02AA15), the presumed site of action is local, in the skin and the joint fluid (synovial fluid).
+FDA scientists note that showing [bioequivalence](../../../concepts/clinpharm-studies/ba-be/index.qmd) for dermatological products with a comparative clinical endpoint study can be costly, and that the study may not be sensitive enough to detect some formulation differences.
+The US FDA approved a generic diclofenac sodium topical gel on the totality of the evidence, which included an in vivo bioequivalence study with pharmacokinetic endpoints.
+In place of a comparative clinical endpoint study in patients, the evidence included a virtual bioequivalence assessment with dermal physiologically based pharmacokinetic (PBPK) modeling.
+The model related diclofenac exposure in plasma to exposure in skin and synovial fluid, and showed bioequivalence at the presumed site of action [@tsakalozouPhysiologicallyBasedPharmacokinetic2021].
 
 ## References
 

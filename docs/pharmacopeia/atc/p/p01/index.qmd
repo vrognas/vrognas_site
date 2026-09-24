@@ -1,21 +1,80 @@
 ---
 title: "P01: Antiprotozoals"
-description: "ATC P01 antiprotozoals for modelers: pK/PD indices carry over, with caveats; sustained exposure beats peak; combination therapy."
+description: "ATC P01 holds the antiprotozoals, drugs against single-celled parasites: antimalarials and drugs against amoebiasis, leishmaniasis and trypanosomiasis."
 date: "2026-02-08"
 ---
 
-**PK/PD indices carry over, with caveats.**
-Dose-fractionation studies in murine and humanized mouse models identify the governing index [@lakshminarayana2015spiroindolone; @gibhard2024dosefractionation], but these analyses usually work with *total* rather than unbound concentrations, since the compounds are often bound above 99% [@white2013antimalarial].
-Which index wins is compound-specific, not a class property.
+P01 holds the antiprotozoals: agents against amoebiasis and other protozoal diseases (P01A), antimalarials (P01B), and agents against leishmaniasis and trypanosomiasis (P01C) [@whoccATCDDDIndex2026].
+Metronidazole (P01AB01), a nitroimidazole, is used against amoebiasis and giardiasis [@lauClinicalPharmacokineticsMetronidazole1992].
+This page is mostly about the antimalarials.
 
-**Sustained exposure beats peak.**
-For slowly eliminated antimalarials the driver is exposure maintained across a full asexual cycle [@white2013antimalarial; @pica2026antimalarialpkpd].
+Artemisinin (P01BE01) was extracted from the Chinese herb qinghao.
+Tu Youyou found a recipe written by Ge Hong about 1700 years ago that prepared qinghao with cold water, where traditional preparations boiled the herb.
+She switched the extraction solvent from ethanol to ether, which boils at a lower temperature.
+Her sample 191 completely inhibited rodent and monkey malaria on 4 October 1971.
+Tu was awarded the 2015 Nobel Prize in Physiology or Medicine for her contributions to the discovery of artemisinin [@suDiscoveryArtemisininNobel2015].
 
-**Mechanistic extrapolation.**
-PBPK is the established modality, used to extrapolate antimalarial exposure into groups trials rarely reach, young children, pregnancy and breastmilk, and to select doses there [@johnsonDevelopmentPhysiologicallyBased2019; @almondPBPKLedAssessmentAntimalarial2025].
+## How do antimalarials work?
 
-**Combination therapy.**
-Combination therapy pairs a short-acting drug with a long-acting partner [@hastings2014MatchingHalfLives], and the partner's terminal tail is itself a resistance selection pressure [@stepniewska2008WindowSelection].
+The malaria parasite, *Plasmodium*, passes through several stages in the human host, and antimalarial drugs differ in which stages they act on [@white2013antimalarial].
+
+**Artemisinins** (P01BE), such as artesunate (P01BE03), carry an endoperoxide bridge.
+Their action appears to involve decomposition of that bridge by heme, which produces carbon-centered free radicals that alkylate heme and proteins.
+The involvement of heme explains why they are selectively toxic to malaria parasites [@meshnickArtemisininMechanismsAction2002].
+They are exceptionally potent against the asexual blood stages that cause disease, and they also act on the sexual stages that transmit it [@eastmanArtemisininbasedCombinationTherapies2009].
+
+The **quinolines** quinine (P01BC01), chloroquine (P01BA01) and amodiaquine (P01BA06) blocked the spontaneous formation in vitro of β-hematin, the malaria pigment also called hemozoin.
+They are thought to bind hematin and leave it, in its toxic form, in the parasite's food vacuole [@eganQuinolineAntimalarialDrugs1994].
+
+**Primaquine** (P01BA03), an 8-aminoquinoline, acts against the dormant relapsing forms of *P. vivax* and against infectious *P. falciparum* sexual forms (gametocytes) [@howesG6PDDeficiencyPrevalence2012].
+
+## Resistance
+
+*P. falciparum* resistance to chloroquine and to sulfadoxine-pyrimethamine (P01BD51) led to the adoption of artemisinin-based combination therapies (ACTs) as first-line treatment.
+An ACT pairs a short-acting artemisinin derivative with a longer-acting partner drug.
+The combinations raise cure rates and lower the selection pressure for resistance [@eastmanArtemisininbasedCombinationTherapies2009].
+
+Artemisinin resistance has since emerged in *P. falciparum* in western Cambodia, where it shows as slower parasite clearance after artesunate.
+A stage-specific PKPD model attributed it mainly to reduced susceptibility of the young ring stages [@saralamba2011intrahost].
+
+Many antimalarials have terminal elimination half-lives of several days or weeks, so infections acquired after treatment meet falling drug concentrations.
+This opens a **window of selection**, in which newly acquired resistant parasites can establish themselves while sensitive ones cannot.
+Antimalarials have also often first been deployed at doses that were too low, particularly for young children and pregnant women, which may speed the emergence of resistance [@white2013antimalarial].
+
+## Efficacy
+
+Parasite density in blood can be measured serially by microscopy, and at low densities by quantitative polymerase chain reaction (PCR).
+Microscopy cannot count parasites reliably below about 50 per microliter.
+In *P. falciparum* malaria, only the younger parasites circulate, and the more mature ones are held back in small blood vessels (sequestered).
+Killing can be expressed as the parasite reduction ratio (PRR), the fractional reduction in parasite numbers per asexual cycle, which compares parasites at the same stage one cycle apart and so cancels out the effect of sequestration [@white2013antimalarial].
+
+The slope of log parasite density (parasitemia) against time is considered the most robust measure of antimalarial effect.
+An initial lag phase often precedes the steady decline, and the WorldWide Antimalarial Resistance Network (WWARN) parasite clearance estimator detects it before estimating the clearance rate.
+Counts below the detection limit are kept in the calculation rather than excluded [@fleggStandardizingMeasurementParasite2011].
+
+In uncomplicated malaria, the main aim of treatment is cure, a binary outcome for each patient, with treatment failure showing as a return of the original infection (recrudescence).
+Treatments for uncomplicated malaria should aim at a cure rate above 95%.
+With cure rates this high, very large studies are needed to relate pharmacokinetics to treatment outcome.
+Nearly all antimalarials are in their terminal elimination phase by day 7, so the day 7 concentration is a simple surrogate for the remaining exposure.
+Day 7 or day 14 concentrations have been related to cure rates for several slowly eliminated drugs, including lumefantrine (given with artemether, P01BF01) and mefloquine (P01BC02).
+The concentration relevant for blood-stage effects is generally taken to be the unbound concentration in plasma [@white2013antimalarial].
+
+In 266 Thai patients, lumefantrine oral bioavailability was poor in acute malaria and improved markedly with recovery, largely because patients started eating again.
+A normal meal close to dosing increased its bioavailability by 108%.
+The higher-dose regimens gave higher AUCs, longer times above the putative in vivo MIC, and higher cure rates [@ezzet2000LumefantrinePkpd].
+Compare the [index-based approaches for antibacterials](../../j/j01/index.qmd#index-based-approaches).
+
+## Safety
+
+In 16 healthy volunteers, piperaquine, the partner drug in dihydroartemisinin-piperaquine (P01BF05), prolonged the QT interval in a concentration-dependent way.
+A linear model related the QT interval to piperaquine concentration, with an increase of 4.17 ms per 100 ng/mL.
+Simulations from that model suggested that therapeutic doses are unlikely to cause dangerous QT prolongation [@chotsiriPopulationPharmacokineticsElectrocardiographic2017].
+The general approach is described under [concentration-QTc modeling](../../../../modeling/qt/index.qmd).
+
+Primaquine can trigger the breakdown of red blood cells (hemolysis) in patients with glucose-6-phosphate dehydrogenase (G6PD) deficiency.
+G6PD deficiency is widespread in malaria-endemic countries, with an estimated allele frequency of 8% across them [@howesG6PDDeficiencyPrevalence2012].
+
+Artemisinin can be neurotoxic at high doses, but this toxicity has not been found in clinical studies [@meshnickArtemisininMechanismsAction2002].
 
 ## References
 

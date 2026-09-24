@@ -1,15 +1,31 @@
 ---
 title: "L04A: Immunosuppressants"
-description: "Pharmacometric modeling notes for ATC L04A, immunosuppressants."
+description: "ATC L04A, the only group under L04, holds its immune-dampening drugs sorted mostly by what they block, such as calcineurin, TNF and JAK inhibitors."
 date: "2026-02-08"
 ---
+
+L04A holds the immunosuppressants, drugs that dampen the immune response.
+WHO sorts them into level-4 groups, mostly by what they block.
+
+## How do immunosuppressants work?
+
+* **Calcineurin inhibitors** (L04AD) include ciclosporin (L04AD01) and tacrolimus (L04AD02).
+  Tacrolimus binds FK-binding protein 12 in T lymphocytes, and the complex binds calcineurin.
+  This keeps NFAT (nuclear factor of activated T cells) from being dephosphorylated and moving to the nucleus, which ultimately inhibits interleukin-2 production and T-cell activation [@birdwellClinicalPharmacogeneticsImplementation2015].
+* **mTOR inhibitors** (L04AH), such as everolimus (L04AH02), block growth-driven signals in the T-cell response to donor antigens (alloantigen), at a later stage than the calcineurin inhibitors [@kirchnerClinicalPharmacokineticsEverolimus2004].
+* **Mycophenolic acid** (L04AA06) inhibits inosine monophosphate dehydrogenase (IMPDH), which eventually stops T and B lymphocytes from proliferating [@staatzClinicalPharmacokineticsPharmacodynamics2007].
+* **TNF-α inhibitors** (L04AB) act on the cytokine tumor necrosis factor α.
+  Infliximab (L04AB02) and adalimumab (L04AB04) are monoclonal antibodies against it [@ternantClinicalPharmacokineticsPharmacodynamics2015].
+  Etanercept (L04AB01) is a soluble TNF receptor fusion protein [@zhouClinicalPharmacokineticsEtanercept2005].
+* **Interleukin inhibitors** (L04AC) include tocilizumab (L04AC07).
+* **JAK inhibitors** (L04AF) have their own section below.
 
 ## L04AF: Janus-associated kinase (JAK) inhibitors
 
 ### Introduction
 
 Janus Kinase (JAK) inhibitors are a class of drugs that target the Janus Kinase family of enzymes.
-Janus Kinases are a family of cytoplasmic tyrosine kinases that transduce cytokine-mediated signals via the JAK-STAT pathway.
+Janus Kinases are a family of cytoplasmic tyrosine kinases that transduce cytokine-mediated signals via the JAK-STAT pathway [@schwartzJAKInhibitionTherapeutic2017].
 
 The Janus Kinases are:
 
@@ -23,18 +39,62 @@ Janus kinase inhibitors can be classed in several overlapping classes: they are 
 ### Mechanism of action
 
 JAK-inhibitors work by modifying the immune system via cytokine activity inhibition.
-The JAK enzymes interact with the intracellular part of distinct cytokine receptors, and are thus involved in the signaling pathways of multiple pro-inflammatory cytokines, such as IL-2, 4, 7, 9, 13, 15, 17, 21, 23.
+The JAK enzymes interact with the intracellular part of distinct cytokine receptors, and are thus involved in the signaling pathways of multiple pro-inflammatory cytokines, such as IL-2, 4, 7, 9, 13, 15, 21 and 23.
 By inhibiting JAK enzymes, JAK inhibitors can modulate the immune response and reduce inflammation.
-JAK inhibitors are used to treat a variety of autoimmune and inflammatory diseases, including rheumatoid arthritis, psoriasis, and inflammatory bowel disease.
+JAK inhibitors are used to treat a variety of autoimmune and inflammatory diseases, including rheumatoid arthritis, psoriasis, and inflammatory bowel disease [@schwartzJAKInhibitionTherapeutic2017].
 
 
 ### Examples of JAK inhibitors
 
 First generation JAK inhibitors:
 
-* Tofacitinib (JAK1/3 inhibitor)
-* Ruxolitinib (JAK1/2 inhibitor)
+* Tofacitinib (L04AF01, JAK1/3 inhibitor)
+* Ruxolitinib (JAK1/2 inhibitor; WHO classifies it with the antineoplastic JAK inhibitors, L01EJ01)
 
 Second generation JAK inhibitors:
 
-* Upadacitinib (selective for JAK1)
+* Upadacitinib (L04AF03, designed to be selective for JAK1)
+
+## Efficacy
+
+### Transplantation
+
+In kidney transplantation, a low mycophenolic acid AUC has been associated with more biopsy-proven acute rejection.
+Targeting an AUC over 12 hours of 30 to 60 mg·h/L is likely to minimize the risk of acute rejection.
+Limited sampling strategies and Bayesian forecasting can estimate this AUC without a full concentration-time profile [@staatzClinicalPharmacokineticsPharmacodynamics2007].
+
+For tacrolimus, lower exposure has been related to acute rejection.
+It is monitored by whole-blood trough concentrations, which correlate with AUC [@birdwellClinicalPharmacogeneticsImplementation2015].
+
+### Rheumatoid arthritis and psoriasis
+
+The diseases themselves are described in the primers on [rheumatoid arthritis](../../../../../pathology-primers/autoimmune/rheumatoid-arthritis/index.qmd) and [psoriasis](../../../../../pathology-primers/autoimmune/psoriasis/index.qmd).
+
+In the phase 2 and 3 rheumatoid arthritis studies of upadacitinib (L04AF03), efficacy was the proportion of patients reaching an ACR20, ACR50 or ACR70 response (American College of Rheumatology 20%, 50% or 70% improvement), or a DAS28-CRP (Disease Activity Score for 28 joints with C-reactive protein) disease activity threshold.
+These categorical endpoints were described over time with continuous-time Markov models, and the proportion of responders increased with plasma exposure [@naderExposureResponseAnalysesUpadacitinib2020].
+
+In a phase 2a study of brepocitinib in plaque psoriasis, the Psoriasis Area and Severity Index (PASI), a score bounded between 0 and 72, was modeled with a zero-inflated beta distribution to handle its bounds and its observations at 0.
+The model also predicted the derived responder endpoints PASI75, PASI90 and PASI100 (75%, 90% and 100% improvement) [@tsamandourasEmployingZeroinflatedBeta2024].
+
+## Safety
+
+Tacrolimus has a narrow therapeutic index, and higher exposure has been related to toxicity, including kidney damage (nephrotoxicity), hypertension, nervous system toxicity (neurotoxicity) and high blood sugar (hyperglycemia).
+Patients who express CYP3A5 have lower dose-adjusted tacrolimus trough concentrations than non-expressers, and the Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline recommends a 1.5 to 2 times higher starting dose for them [@birdwellClinicalPharmacogeneticsImplementation2015].
+
+Everolimus appears to be less nephrotoxic than ciclosporin and tacrolimus.
+Its adverse effects include high blood triglycerides (hypertriglyceridemia), high blood cholesterol (hypercholesterolemia), opportunistic infections, a low platelet count (thrombocytopenia) and a low white blood cell count (leukopenia).
+Its trough concentration correlates well with AUC and is used for monitoring [@kirchnerClinicalPharmacokineticsEverolimus2004].
+
+For mycophenolic acid, gastrointestinal adverse events may be dose related.
+Leukopenia and anemia have been associated with high exposure in some studies but not in others [@staatzClinicalPharmacokineticsPharmacodynamics2007].
+
+In four phase 3 studies in rheumatoid arthritis, tocilizumab, an antibody against the interleukin-6 receptor, lowered neutrophil and platelet counts, which returned to baseline once the drug was eliminated.
+In a population model, neutrophils were a direct function of the unbound soluble interleukin-6 receptor, and platelets followed a transit-compartment life-span model [@gibianskyLinkingInterleukin6Receptor2012].
+
+In the upadacitinib studies, safety endpoints were modeled with logistic regression, and shallow exposure-response relationships were found for serious infections, grade 3 or worse low lymphocyte count (lymphopenia), and hemoglobin decreases of more than 2 g/dL [@naderExposureResponseAnalysesUpadacitinib2020].
+For the antibodies approved in rheumatoid arthritis, the relationship between concentration and adverse effects is poorly documented [@ternantClinicalPharmacokineticsPharmacodynamics2015].
+
+## References
+
+::: {#refs}
+:::

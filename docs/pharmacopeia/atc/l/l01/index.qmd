@@ -1,32 +1,129 @@
 ---
 title: "L01: Antineoplastic agents"
-description: "ATC L01 antineoplastic agents for modelers: toxicity sets the dose, not efficacy; efficacy is modeled in two steps; antibodies are nonlinear where it matters."
+description: "ATC L01 holds the antineoplastic agents, or cancer drugs: chemotherapy, kinase inhibitors, monoclonal antibodies and cell therapies such as CAR T."
 date: "2026-02-08"
 ---
 
-**Toxicity sets the dose, not efficacy.**
-Dose-limiting toxicity is a binary readout in a short early window [@letourneau2009dose; @yin2024handling].
-For cytotoxics, neutropenia is the continuous alternative, captured by semi-mechanistic myelosuppression models with a proliferating compartment, maturation transit compartments and a feedback term [@friberg2002myelo; @camaradesouza2018transit].
+L01 holds the drugs that treat cancer by killing tumor cells or stopping them from growing.
+It ranges from classical chemotherapy to kinase inhibitors, monoclonal antibodies and genetically modified T cells.
 
-**Efficacy is modeled in two steps.**
-A longitudinal tumor size model (RECIST sum of diameters) balances drug-driven shrinkage against regrowth [@ribba2014review; @stein2008tumor]; quantities derived from it feed a [time-to-event](/docs/modeling/tte/) analysis of survival [@claret2014tgimetrics; @bruno2014evaluation].
-That is what lets early imaging inform an endpoint reading out much later [@claret2009phase3os; @chan2021tgios].
+## How do antineoplastic agents work?
 
-**Antibodies are nonlinear where it matters.**
-Target-mediated drug disposition makes binding itself an elimination pathway that saturates [@mager2001tmdd; @dua2015tmddtutorial], so a model fitted only to the top of the dose range will mislead at the bottom [@gibiansky2008tmddapprox].
-Antibody-drug conjugates add conjugate, total antibody and payload as separate analytes [@li2020adcquant; @khan2025adcbioanalysis].
+**Cytotoxic drugs** are the classical chemotherapy.
 
-**Cell therapies replace PK with cellular kinetics.**
-A living product expands, contracts and persists [@liu2021carkinetics; @stein2019tisacell], and the administered dose is a weak predictor of the exposure that follows [@he2022cartdosing].
+* Cyclophosphamide (L01AA01), an alkylating agent (L01A), is inactive until the liver converts it to 4-hydroxycyclophosphamide, which breaks down to phosphoramide mustard.
+  Phosphoramide mustard alkylates DNA, and a cell's sensitivity depends partly on its ability to repair the alkylated nucleotides [@mooreClinicalPharmacokineticsCyclophosphamide1991].
+* Among the antimetabolites (L01B), fluorouracil (L01BC02) has thymidylate synthase as one of its targets [@ploylearmsaengHowMayAnticancer2006].
+* Among the plant alkaloids and other natural products (L01C), irinotecan (L01CE02) inhibits topoisomerase I.
+  It is converted to an active metabolite, SN-38, which is 100 to 1000 times more active than irinotecan itself [@demanIndividualizationIrinotecanTreatment2018].
 
-**Covariates carrying dosing guidance.**
-DPYD for fluoropyrimidines, TPMT and NUDT15 for thiopurines, UGT1A1 for irinotecan, CYP2D6 for tamoxifen [@kicken2025precision; @chatelut2018smki].
+**Protein kinase inhibitors** (L01E) are targeted small molecules.
+Among them, gefitinib (L01EB01), erlotinib (L01EB02) and lapatinib (L01EH01) selectively inhibit the tyrosine kinases of the human epidermal growth factor receptor (HER) family, and were developed for tumors with defined genetic alterations of these kinases [@schefflerClinicalPharmacokineticsTyrosine2011].
 
-## CAR T cell therapy
+**Monoclonal antibodies** (L01F) include the immune checkpoint inhibitors, which target immune checkpoints, regulatory surface proteins that restrain the immune response, to stimulate the killing of tumor cells by T cells.
+Ipilimumab (L01FX04) is directed against CTLA-4, and nivolumab (L01FF01) and pembrolizumab (L01FF02) against PD-1 [@centanniClinicalPharmacokineticsPharmacodynamics2019].
+Antibody-drug conjugates combine the target specificity of an antibody with a potent small-molecule anticancer drug, the payload.
+Their pharmacokinetics involve several molecular species, such as the conjugate, the total antibody and the unconjugated payload [@li2020adcquant].
 
-![](https://pub.mdpi-res.com/pharmaceutics/pharmaceutics-14-01630/article_deploy/html/images/pharmaceutics-14-01630-g001.png?1659607210)
+**CAR T cells** (L01XL) are T cells genetically modified to express a chimeric antigen receptor (CAR).
+The receptor joins a tumor-targeting part, often derived from a monoclonal antibody, to one or more T-cell signaling sequences.
+Patients receive lymphodepleting chemotherapy before the infusion [@turtleCD19TargetedChimericAntigen2016].
+Tisagenlecleucel (L01XL04), for example, leads to the killing of B cells that carry CD19 [@stein2019tisacell].
 
-Emily Whitehead, the first child treated with CD19-directed CAR T cells for refractory acute lymphoblastic leukemia, entered a durable complete remission [@grupp2013carall].
+::: {#fig-immunotherapy}
+
+![](https://pub.mdpi-res.com/pharmaceutics/pharmaceutics-14-01630/article_deploy/html/images/pharmaceutics-14-01630-g001.png?1659607210){fig-alt="A human figure with a tumor in the abdomen, linked by arrows to an enlarged tumor microenvironment of tumor cells, lymphocytes, antigen-presenting cells, fibroblasts and blood vessels. Around it, five immunotherapies act on the tumor: an antibody, cytokines, a CAR T cell, a virus and a vaccine."}
+
+Types of cancer immunotherapy and the tumor microenvironment they act on: antibodies, cytokines, CAR T cells, viruses and vaccines.
+Figure 1 of [Yang et al. (2022), *Pharmaceutics* 14:1630](https://doi.org/10.3390/pharmaceutics14081630), licensed under CC BY 4.0.
+
+:::
+
+## Resistance
+
+On 27 August 1942, doctors at Yale gave the first dose of intravenous nitrogen mustard, a compound related to mustard gas, to a patient with a cancer of lymphatic tissue (lymphosarcoma).
+After ten daily injections, a biopsy showed no tumor tissue.
+By day 49 the tumors had come back, and a further course gave only a short-lived response [@christakisBirthChemotherapyYale2011].
+
+Tumor growth inhibition models can include a resistance term that makes the drug effect wane over time [@bender2015pkpd].
+
+In an early report of CD19-directed CAR T cells in acute lymphoblastic leukemia, both treated children went into complete remission.
+One relapsed about two months later, with leukemia cells that no longer expressed CD19 [@grupp2013carall].
+
+## Efficacy
+
+### Tumor size and survival
+
+In oncology trials, overall survival is considered the most reliable and preferred endpoint.
+It is a time-to-event endpoint that can take years to mature.
+Tumor size, recorded as the sum of the longest diameters of the tumors chosen for measurement (target lesions), is continuous, and information is lost when it is categorized into response classes.
+Its time course is described with tumor growth inhibition (TGI) models, with a growth rate, a drug-induced kill rate and a term for the waning drug effect.
+Many mixed-effects models of tumor growth and drug effect have been published, and a review compares them [@ribba2014review].
+Metrics derived from these models, such as the change in tumor size at an early week, then enter parametric time-to-event models of overall survival.
+In colorectal cancer, this approach, using the change in tumor size at week 7, predicted survival in a phase 3 trial of capecitabine (L01BC06) from phase 2 data [@bender2015pkpd].
+
+### Exposure-response
+
+For osimertinib (L01EB04), no relationship between exposure and efficacy was found over doses of 20 to 240 mg [@brown2017osimertinib].
+For small-molecule kinase inhibitors, exposure also varies within the same patient over time, which has had much less attention than variability between patients [@chatelut2018smki].
+
+In melanoma, early exposure to nivolumab did not predict survival, but survival was lower in patients with higher clearance.
+In melanoma and non-small cell lung cancer, pembrolizumab exposure was not related to tumor response.
+The clearance of checkpoint inhibitors other than ipilimumab falls over time as the tumor burden declines, so higher exposure can look like the cause of better efficacy when it is really its consequence [@centanniClinicalPharmacokineticsPharmacodynamics2019].
+
+Antibodies and other biologics can show target-mediated drug disposition (TMDD), where binding to the target shapes the drug's own pharmacokinetics.
+The full TMDD model is often overparameterized, and quasi-equilibrium, quasi-steady-state or Michaelis-Menten approximations can replace it [@gibiansky2008tmddapprox].
+
+### CAR T cells
+
+CAR T cells multiply in the body after infusion, so their pharmacokinetics is described as cellular kinetics.
+In a model-based analysis of 217 patients from seven trials, the cellular kinetics had four phases: distribution, expansion, contraction and persistence.
+CAR T cells in patients who responded had a higher proliferation rate and capacity, and a lower contraction rate.
+Within the dose range studied, the dose was only weakly correlated with the cellular kinetics and with response [@liu2021carkinetics].
+For tisagenlecleucel in children and young adults with B-cell acute lymphoblastic leukemia, the estimated doubling time during expansion was 0.78 days and the terminal half-life 220 days [@stein2019tisacell].
+
+## Safety
+
+### Dose finding
+
+For cytotoxic drugs, toxicity has traditionally been the primary endpoint of phase 1 trials.
+These trials escalate the dose while counting dose-limiting toxicities (DLTs), which are defined in the protocol and typically based on toxic effects in the first treatment cycle.
+In the 3+3 design, the dose recommended for phase 2 is the level just below the one at which at least a third of patients had a DLT.
+Some drugs cause late-onset or cumulative toxicities, and designs that use the time to toxicity, such as the time-to-event continual reassessment method, have been proposed for them [@letourneau2009dose].
+
+### Myelosuppression and exposure limits
+
+Reduced blood cell production in the bone marrow (myelosuppression) is the dose-limiting toxicity of cyclophosphamide [@mooreClinicalPharmacokineticsCyclophosphamide1991].
+Neutrophil counts, which are continuous, have been described over time with a model of a drug-sensitive proliferating compartment, three transit compartments for maturation, a compartment of circulating cells, and a feedback term [@friberg2002myelo].
+The model separates system-related parameters from drug-related ones, and has been widely used for neutrophil, white blood cell (leukocyte) and platelet counts [@bender2015pkpd].
+
+For fluorouracil given as a 5-day continuous infusion, the risk of a low white blood cell count (leukopenia), diarrhea, mouth inflammation (stomatitis) and hand-foot syndrome rose above an AUC of 25 to 30 mg·h/L, while tumor response was higher at an AUC of about 30 mg·h/L.
+Its therapeutic window is therefore very narrow [@ploylearmsaengHowMayAnticancer2006].
+
+Myelosuppression is also the dose-limiting toxicity of the anthracyclines, such as doxorubicin (L01DB01).
+They can also cause a cumulative, dose-dependent heart muscle damage (cardiomyopathy) that is irreversible and can be fatal.
+Bolus dosing, rather than continuous infusion, appears to be a risk factor for this cardiomyopathy, which suggests that it depends on peak concentration.
+Leukopenia, in contrast, seems best related to AUC [@danesiPharmacokineticPharmacodynamicRelationships2002].
+
+### Pharmacogenomics
+
+Dihydropyrimidine dehydrogenase (DPD) is the rate-limiting enzyme in the breakdown of fluorouracil, which degrades about 80% of the dose.
+Carriers of decreased-function DPYD variants have a partial DPD deficiency, and a complete deficiency carries a risk of severe or fatal toxicity.
+The Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline uses DPYD genotype to guide the dosing of the fluoropyrimidines fluorouracil and capecitabine [@amstutzClinicalPharmacogeneticsImplementation2018].
+
+For the thiopurines, such as mercaptopurine (L01BB02), reduced-function variants of TPMT and NUDT15 predict severe myelosuppression at standard doses.
+The CPIC guideline adjusts their starting doses by genotype [@maillardClinicalPharmacogeneticsImplementation2026].
+
+For irinotecan, genetic variants in the enzymes that form its inactive metabolites, such as UGT1A, predict part of the toxicity [@demanIndividualizationIrinotecanTreatment2018].
+
+### Targeted and immune therapies
+
+For osimertinib, rash and diarrhea increased linearly with exposure, and the QTcF interval increased linearly with concentration [@brown2017osimertinib].
+
+Immune checkpoint inhibitors cause immune-related adverse events, which arise from immune activation and affect, for example, the skin, the gut and the endocrine glands.
+With ipilimumab, these events were more frequent at 10 than at 3 mg/kg (31% compared with 17%), while with pembrolizumab their incidence was similar at 2 and 10 mg/kg [@centanniClinicalPharmacokineticsPharmacodynamics2019].
+
+CAR T-cell therapy can be complicated by cytokine release syndrome and neurologic toxicity [@turtleCD19TargetedChimericAntigen2016].
 
 ## References
 

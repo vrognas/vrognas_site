@@ -30,7 +30,7 @@ HIV and TB form a lethal combination, each speeding the other's progress.
 *Myobacterium tuberculosis* divides more slowly (~q18h) than most bacteria, making development of antibiotic resistance more likely.
 In addition, the mycolic acids in its cell wall limit the effectiveness of some antibiotics.
 
-**MDR-TB** has been defined as <span class="red-underline">**resistance to rifampicin plus isoniazid**</span>.
+Multidrug-resistant TB (**MDR-TB**) has been defined as <span class="red-underline">**resistance to rifampicin plus isoniazid**</span>.
 
 Extensively drug-resistant TB (**XDR-TB**) describes resistance to at least one fluoroquinolone as well as bedaquiline and/or linezolid and/or a second-line injectable in addition to rifampicin and isoniazid.
 
@@ -70,7 +70,7 @@ About half of all people with TB can be found in 8 countries:
 
 ## Diagnosis
 
-A sputum sample is collected and tested using the **Xpert MTB/RIF Ultra assay** (Cepheid, Sunnyvale, USA).
+A sample of coughed-up mucus (sputum) is collected and tested using the **Xpert MTB/RIF Ultra assay** (Cepheid, Sunnyvale, USA).
 This diagnoses TB and the detects rifampicin resistance.
 
 TB is particularly difficult to diagnose in children.
@@ -79,7 +79,7 @@ TB is particularly difficult to diagnose in children.
 
 Tuberculosis is preventable and curable.
 Treatment is recommended for both TB infection and disease.
-Active pulmonary TB is treated with <span class="red-underline">**several antibiotics for a minimum of 6 months**</span>.
+Active lung (pulmonary) TB is treated with <span class="red-underline">**several antibiotics for a minimum of 6 months**</span>.
 
 The most common antibiotics used are:
 
@@ -122,7 +122,7 @@ Approved 2014 in adults, 2021 in children.
 * f~b~ ≈ 99%
 * Food effect
 * CYP3A4 metabolism
-* Most common adverse events: QTc-prolongation, and hepatotoxicity
+* Most common adverse events: QTc-prolongation, and liver damage (hepatotoxicity)
 
 #### Linezolid (J01XX08)
 

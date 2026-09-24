@@ -1,11 +1,49 @@
 ---
 title: "M05: Drugs for treatment of bone diseases"
-description: "ATC M05 drugs for treatment of bone diseases for modelers: bone markers and density are asynchronous."
+description: "ATC M05 holds drugs for bone diseases such as osteoporosis, all acting on bone structure: bisphosphonates, bone-growth proteins, antibody drugs and others."
 date: "2026-02-08"
 ---
 
-**Bone markers and density are asynchronous.**
-Antiresorptives move serum CTX long before bone mineral density, and an indirect response model bridges the lag, predicting later density gain from one year of data [@wuQuantitativePredictionBone2021].
+All of M05 sits in one subgroup, M05B: drugs affecting bone structure and mineralization [@whoccATCDDDIndex2026].
+
+## How do drugs for bone disease work?
+
+**Bisphosphonates** (M05BA), such as alendronic acid (M05BA04), suppress bone resorption by osteoclasts, the cells that break down bone.
+They are poorly absorbed from the gut.
+About half of the absorbed drug is taken up by the skeleton, and the rest is excreted unchanged in urine.
+They act at the bone surface, where osteoclasts take them up during resorption [@cremersPharmacokineticsPharmacodynamicsBisphosphonates2005].
+
+**Denosumab** (M05BX04) is a fully human IgG2 monoclonal antibody that binds RANKL, the receptor activator of nuclear factor κB ligand, whose inhibition is a treatment target in bone disorders with increased bone resorption.
+The pharmacokinetics of denosumab are nonlinear, probably because of this binding, and a population analysis in healthy subjects and postmenopausal women described them with a [target-mediated drug disposition](../../../../modeling/pk/index.qmd#specific-poppk-models) model [@sutjandraPopulationPharmacokineticMetaanalysis2011].
+
+**Romosozumab** (M05BX06) is a monoclonal antibody that stops sclerostin from inhibiting the maturation and function of osteoblasts, the bone-forming cells.
+In a multiple-dose study in postmenopausal women and men with low bone mass, it raised serum procollagen type I N-terminal propeptide (P1NP) by 66 to 147% and lowered serum C-terminal telopeptide of type I collagen (CTX) by 15 to 50% [@padhiMultipleDosesSclerostin2013].
+
+## Efficacy
+
+The clinical outcome is fracture: daily alendronic acid and risedronic acid (M05BA07) have been shown to reduce the risk of vertebral and non-vertebral fractures.
+Clinically, the primary action of bisphosphonates can be assessed by measuring biochemical markers of bone resorption.
+The pattern of these markers during treatment may predict antifracture efficacy [@cremersPharmacokineticsPharmacodynamicsBisphosphonates2005].
+
+A model-based meta-analysis of 41 trials of five antiresorptive agents described the percent change from baseline in the bone turnover markers CTX and N-terminal telopeptide of type I collagen (NTX) with exponential onset models.
+It linked the marker changes to changes in bone mineral density (BMD) at the spine in the lower back (lumbar spine) and total hip with a multiscale indirect response model, which captured the asynchronous relationship between markers and BMD.
+The model predicted the BMD increase from one year of data [@wuQuantitativePredictionBone2021].
+
+A physiologically based model of calcium homeostasis and bone remodeling, extended with an indirect model from bone markers to lumbar spine BMD, reproduced the nonlinear rise in BMD on denosumab, the decline after stopping and the rise on restarting [@petersonPredictingNonlinearChanges2012].
+
+## Safety
+
+Both antiresorptive and bone-forming drugs have common and rare adverse effects.
+Antiresorptive drugs are given at higher doses in cancer patients, which changes how often adverse effects occur.
+Upper gastrointestinal adverse effects are very common with oral bisphosphonates.
+Death of bone tissue in the jaw (**osteonecrosis of the jaw**) and unusual fractures of the thigh bone (**atypical femoral fractures**) are thought to follow from the antiresorptive mechanism itself, and occur with denosumab as well as with bisphosphonates.
+The risk of atypical femoral fractures appears to rise with the duration of bisphosphonate use [@skjodtSideEffectsDrugs2018].
+
+Osteonecrosis of the jaw is associated with oncology doses of parenteral bisphosphonates and denosumab.
+Its incidence is 1 to 15% in oncology patients, against an estimated 0.001 to 0.01% in patients treated for osteoporosis [@khanDiagnosisManagementOsteonecrosis2014].
+
+Stopping denosumab raises bone turnover above its pre-treatment level and causes rapid bone loss in most patients, and multiple vertebral fractures in some.
+The European Calcified Tissue Society advises starting another antiresorptive treatment 6 months after the last denosumab injection [@tsourdiFractureRiskManagement2020].
 
 ## References
 

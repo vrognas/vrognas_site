@@ -1,14 +1,12 @@
 ---
 title: "D: Dermatologicals"
-description: "ATC group D for modelers: bounded skin severity scores and site-of-action exposure sampled or predicted, with D05, D07 and D11 notes on their own pages."
+description: "ATC group D covers dermatologicals, or skin drugs: antifungals, antibiotics, antiseptics, steroid creams, and treatments for psoriasis, acne and wounds."
 date: "2026-02-08"
 ---
 
-Drugs applied to the skin, and, in D11, antibodies and an oral kinase inhibitor for atopic dermatitis that are given systemically [@whoccATCDDDIndex2026].
-For the topical majority the target tissue is also the site of administration, so plasma reports systemic safety rather than the driver of effect.
-
-In 1962 A. W. McKenzie and R. B. Stoughton published a method for comparing the percutaneous absorption of steroids [@mckenzieMethodComparingPercutaneous1962].
-The skin blanching assay that grew from it is still called the Stoughton-McKenzie assay [@herkenneVivoMethodsAssessment2008], and the FDA accepts it as a surrogate for the bioequivalence of topical glucocorticoids [@alomariUpdateAdvancesChallenges2024].
+Group D holds the dermatologicals, the drugs used for skin disease.
+Most of them are applied to the skin, but D01, D05 and D10 each have a level-3 subgroup for systemic use (D01B, D05B and D10B).
+The agents for skin inflammation (dermatitis) in [D11](d11/) also include drugs given systemically: dupilumab (D11AH05) by injection and abrocitinib (D11AH08) by mouth [@whoccATCDDDIndex2026].
 
 |  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
@@ -26,19 +24,24 @@ The skin blanching assay that grew from it is still called the Stoughton-McKenzi
 
 : ATC D level 2 codes {#tbl-atc-d-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modeling notes
+## Exposure in the skin
 
-**Endpoint.**
-Bounded composite severity scores: PASI in psoriasis [@ooiBoundedIntegerModelbased2023] and EASI in atopic dermatitis [@okadaContinuousTimeMarkovPopulation2025].
+Topical dermatological products are designed to act locally in diseased skin, ideally with minimal systemic uptake.
+Their systemic availability may therefore not reflect the local bioavailability in the skin.
+Topical doses are also small, typically 2 to 5 mg of product per cm^2^, so serum and urine concentrations are often undetectable with conventional assays [@herkenneVivoMethodsAssessment2008].
 
-**Site-of-action exposure is sampled directly or not at all.**
-Dermal open flow microperfusion measures dermal concentrations *in vivo*, and separated [bioequivalent](/docs/concepts/clinpharm-studies/ba-be/) from non-bioequivalent lidocaine and prilocaine products on dermal AUC and C~max~ [@tiffnerCutaneousPharmacokineticsbasedBioequivalence2024].
+Drug in the skin can instead be sampled directly: tape stripping measures the drug in the stratum corneum, the outermost layer of the skin, and microdialysis measures unbound drug in the inner layer of the skin (dermis) [@herkenneVivoMethodsAssessment2008].
 
-**Easy to overlook.**
-The D11 biologics are an ordinary systemic PKPD problem: nemolizumab exposure fell as bodyweight rose, yet simulated EASI, pruritus and IGA response rates were similar above and below 90 kg [@fauchetModelinformedDrugDevelopment2026].
+Dermal open flow microperfusion samples the interstitial fluid of the dermis continuously, and can establish bioequivalence with 20 to 30 healthy participants, far fewer than a comparative clinical endpoint study needs.
+Dermal physiologically based pharmacokinetic (PBPK) models describe skin permeation at or near the site of action.
+In 2019, the FDA approved a generic diclofenac sodium topical gel (M02AA15) for which the applicant used a PBPK model to show bioequivalence [@alomariUpdateAdvancesChallenges2024].
 
-**Mechanistic extrapolation.**
-Dermal PBPK ties formulation and skin physiology to systemic kinetics [@shahDermalPBPKModeling2026], and contributed to an FDA generic approval of topical diclofenac gel within a totality of evidence [@tsakalozouPhysiologicallyBasedPharmacokinetic2021].
+For topical corticosteroids, a pharmacodynamic measure is used instead, the skin blanching (vasoconstriction) assay described under [D07](d07/) [@herkenneVivoMethodsAssessment2008].
+
+## Clinical scores
+
+Efficacy in psoriasis and eczema (atopic dermatitis) is measured with clinical scores, such as the Psoriasis Area and Severity Index (PASI) [@ashcroftSystematicReviewComparative2000] and the Eczema Area and Severity Index (EASI) [@simpsonTwoPhaseTrials2016].
+How these scores are modeled is described under [D05](d05/) and [D11](d11/).
 
 ## References
 

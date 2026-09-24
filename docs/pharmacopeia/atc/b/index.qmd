@@ -1,14 +1,16 @@
 ---
 title: "B: Blood and blood forming organs"
-description: "ATC group B for modelers: laboratory measures as the PD driver, with antithrombotic, antianemic and perfusion-solution notes held at B01, B03 and B05."
+description: "ATC group B covers the blood and the organs that make it: drugs that prevent clots or stop bleeding, anemia treatments, blood substitutes and IV fluids."
 date: "2026-02-08"
 ---
 
 Drugs acting on blood itself and on the organs that make it.
-Antithrombotics (B01) carry an extensive pharmacometric literature [@mueck2014rivaroxaban; @hamberg2010warfarin; @zhou2026milvexian]; the rest of the group is modeled rarely and quite differently.
 
-In February 1933 the farmer Ed Carlson drove 190 miles to Karl Paul Link's laboratory in Madison with a dead heifer, a milk churn of her unclotted blood and mouldy sweet clover hay.
-Six years later Link's group isolated dicoumarol, the parent of warfarin [@ballHistoryWarfarin2025].
+In February 1933 a farmer, Ed Carlson, drove 190 miles with a dead heifer, a milk churn full of her unclotted blood and a pile of moldy straw.
+He was looking for the state veterinarian, and instead found Karl Paul Link's laboratory at the University of Wisconsin in Madison.
+In June 1939 Harold Campbell, one of Link's assistants, isolated the substance later named dicoumarol (B01AA01), a breakdown product of the coumarin in spoiled hay.
+Warfarin (B01AA03) was another of the group's compounds, first marketed as a rodenticide [@ballHistoryWarfarin2025].
+It went on to become one of the most commonly prescribed drugs in history [@wardropStoryDiscoveryHeparin2008].
 
 |  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
@@ -16,15 +18,15 @@ Six years later Link's group isolated dicoumarol, the parent of warfarin [@ballH
 | **B02** | Antihemorrhagics | stop or prevent bleeding | Tranexamic acid (B02AA02) / phytomenadione (B02BA01) |
 | [**B03**](b03/) | Antianemic preparations |  | Ferrous sulfate (B03AA07) / cyanocobalamin (B03BA01); parenteral iron carries only the group code B03AC, with no level 5 substance |
 | [**B05**](b05/) | Blood substitutes and perfusion solutions | intravenous fluids, nutrition, dialysis and irrigation solutions | No single INN to name: ATC codes solution classes, not substances. Crystalloid resuscitation fluid sits at electrolytes (B05BB01) and dextrose infusion at carbohydrates (B05BA03) |
-| **B06** | Other hematological agents | leftover blood drugs: angioedema, sickle cell | Lanadelumab (B06AC05) / icatibant (B06AC02) |
+| **B06** | Other hematological agents | leftover blood drugs: attacks of deep swelling (angioedema), sickle cell | Lanadelumab (B06AC05) / icatibant (B06AC02) |
 
 : ATC B level 2 codes {#tbl-atc-b-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modeling notes
+## Measuring the effect
 
-**Endpoint.**
-The PD driver is typically a laboratory measure: clotting time, anti-Xa activity, factor activity, hemoglobin [@byon2019apixaban; @wong2025efanesoctocog; @chanu2020epoetin].
-Clinical events are carried separately, in exposure-response or [time-to-event](/docs/modeling/tte/) analyses [@nyberg2016edoxaban; @leil2014apixaban].
+For the antithrombotic apixaban (B01AF02, see [B01](b01/index.qmd)), the effect is measured as anti-factor Xa activity, a continuous laboratory value that rises linearly with plasma concentration [@byon2019apixaban].
+For the drugs that stimulate red blood cell production (erythropoiesis-stimulating agents), such as darbepoetin alfa (B03XA02, see [B03](b03/index.qmd)), it is hemoglobin, another continuous laboratory value, on which the dose is titrated [@maharModelInformedDrug2026].
+For factor VIII replacement in hemophilia A (coagulation factor VIII, B02BD02), the population PK model of efanesoctocog alfa was fitted to factor VIII activity, and bleeding episodes were modeled as [repeated time-to-event](../../../modeling/tte/index.qmd) data, with a hazard that depended on factor VIII activity [@wong2025efanesoctocog].
 
 ## References
 

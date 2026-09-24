@@ -1,14 +1,55 @@
 ---
 title: "N05: Psycholeptics"
-description: "ATC N05 psycholeptics for modelers: dropout is informative."
+description: "ATC N05 holds the psycholeptics, the calming drugs: antipsychotics, anxiolytics for anxiety, and hypnotics and sedatives for sleep."
 date: "2026-02-08"
 ---
 
-The main indication for these drugs is covered in the [schizophrenia primer](/docs/pathology-primers/neurological/schizophrenia/).
+N05 holds the antipsychotics (N05A), the anxiolytics (N05B), and the hypnotics and sedatives (N05C) [@whoccATCDDDIndex2026].
+Schizophrenia, the disease in most of the antipsychotic studies below, is described in the [schizophrenia primer](../../../../pathology-primers/neurological/schizophrenia/index.qmd).
 
-**Dropout is informative.**
-Dropout probability rises with a high observed PANSS score, so the dropout hazard is modeled jointly with the score as a [time-to-event](/docs/modeling/tte/) process [@pillareddyModellingSimulationPositive2012].
-Ignoring it biases parameter estimates, though simulation put that bias relatively low; the model matters most for realistic trial simulation [@bjornsson2015dropout].
+## How do psycholeptics work?
+
+**Antipsychotics** block dopamine D~2~ receptors, and the receptor occupancy can be measured in patients with positron emission tomography (PET).
+In structures deep in the brain (basal ganglia), clinical doses of classical antipsychotics, such as haloperidol (N05AD01), occupied 70% to 89% of D~2~ receptors, while clozapine (N05AH02) occupied 38% to 63% [@fardePositronEmissionTomographic1992].
+
+**Benzodiazepines**, such as diazepam (N05BA01) and lorazepam (N05BA06), are used as anxiolytics and hypnotics, and also as anticonvulsants, muscle relaxants and anesthetics [@laderBenzodiazepineHarmHow2014].
+Like the benzodiazepines, the hypnotics zolpidem (N05CF02), zopiclone (N05CF01) and zaleplon (N05CF03) act at the GABA receptor complex, but they appear to be more selective for certain receptor subunits [@droverComparativePharmacokineticsPharmacodynamics2004].
+
+## Placebo response and dropout
+
+In a pooled analysis of placebo arms from 16 schizophrenia trials with 1436 patients, the time course of the Positive and Negative Syndrome Scale (PANSS) score was best described by a Weibull model or an indirect response model.
+The probability of dropping out was associated with a high observed PANSS score.
+Dropout was modeled as a hazard in a [time-to-event](../../../../modeling/tte/index.qmd) model, fitted jointly with the PANSS model, and exponential, Weibull and Gompertz hazards described it equally well [@pillareddyModellingSimulationPositive2012].
+
+In a simulation study of informative dropout, where dropout depended on the efficacy variable being measured, ignoring it biased parameter estimates by up to 21% with the FOCE-I estimation method, against less than 5% with a dropout model in the base scenario.
+Even without a dropout model, the bias translated into only small effects on predictions of the efficacy variable, but the dropout model was crucial for simulating realistic trial outcomes [@bjornsson2015dropout].
+
+## Efficacy
+
+Disease severity in schizophrenia trials is scored on rating scales such as the PANSS, which has 30 items, each rated by a psychiatrist from 1 (absent) to 7 (extreme), in positive, negative and general subscales.
+An analysis of three 6-week trials of paliperidone (N05AX13) used [item response theory](../../../../modeling/pkpd/index.qmd#ordinal-data) (IRT) instead, because analyzing the total score as continuous data discards information and violates the numerical nature of the scale.
+IRT models each item as ordered categorical data, driven by an unobserved disease severity.
+The model described the placebo and drug effects at the item, subscale and total score levels, and 41.5% of the patients had dropped out by the end of the trials [@krekelsItemResponseTheory2017].
+
+D~2~ receptor occupancy has also been used as a biomarker linking dose to efficacy.
+A model connecting antipsychotic dose, pharmacokinetics, D~2~ occupancy, PANSS response and drug-induced movement disorders (extrapyramidal symptoms) on the Simpson-Angus Scale was used to choose doses of asenapine (N05AH05) for its phase II and III trials [@degreefDopamineD2Occupancy2011].
+
+For benzodiazepines in healthy volunteers, the most consistent biomarkers were saccadic peak velocity, a continuous eye-movement measure, and visual analogue scales of alertness.
+A dose-response for temazepam (N05CD07) on saccadic peak velocity gave dose equivalents for seven benzodiazepines, which correlated with their lowest recommended maintenance doses [@devisserBiomarkersEffectsBenzodiazepines2003].
+
+## Safety
+
+Extrapyramidal symptoms, the movement disorders caused by antipsychotics, are related to D~2~ occupancy: patients with acute extrapyramidal syndromes had a higher D~2~ occupancy than those without [@fardePositronEmissionTomographic1992].
+
+In a network meta-analysis of 212 trials, antipsychotics differed substantially in side effects.
+Against placebo, the odds ratio for extrapyramidal side effects ranged from 0.30 for clozapine to 4.76 for haloperidol.
+Weight gain was greatest with olanzapine (N05AH03), and prolactin increase greatest with paliperidone.
+[QTc prolongation](../../../../concepts/clinpharm-studies/qt/index.qmd) and sedation also differed between drugs, and the results challenge the usual split into first- and second-generation antipsychotics [@leuchtComparativeEfficacyTolerability2013].
+
+The adverse effects of benzodiazepines are sedation, and cognitive and psychomotor impairment, which can compromise complex skills such as driving.
+Perhaps a third of those who have used them for more than 6 months have withdrawal symptoms when they try to stop.
+Benzodiazepines are also drugs of abuse, alone or together with opioids and stimulants [@laderBenzodiazepineHarmHow2014].
+Zolpidem and zopiclone are eliminated more slowly than zaleplon, which can cause residual sedation after a bedtime dose [@droverComparativePharmacokineticsPharmacodynamics2004].
 
 ## References
 

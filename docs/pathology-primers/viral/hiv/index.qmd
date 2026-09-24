@@ -73,7 +73,7 @@ People who have had a recent high-risk exposure and test negative can have a fur
 HIV can be prevented and treated with **antiretroviral therapy (ART)**.
 
 Resistance-associated mutations (RAMs) can rapidly be selected when there is selection pressure, such as too low a concentration of antiviral drugs.
-Often, resistance to drugs in a specific ARV class results in cross-resistance to other drugs in that same class.
+Often, resistance to drugs in a specific antiretroviral (ARV) class results in cross-resistance to other drugs in that same class.
 
 One predictor of HIV-1 disease progression is the level of HIV-1 RNA in the blood (i.e., viral load).
 **The aim of treatment of HIV-1 infection is, therefore, to suppress and subsequently maintain the HIV-1 viral load to levels that are at least below the limit of detection of most commonly used assays (50 copies/mL of blood)**.

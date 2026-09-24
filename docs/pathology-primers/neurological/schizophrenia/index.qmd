@@ -11,7 +11,7 @@ date: "2025-03-20"
 ### Disease definition & pathophysiology
 
 Schizophrenia is a chronic neuropsychiatric disorder characterized by altered perception of reality, cognitive dysfunction, and impaired emotional regulation.
-Pathophysiology involves dysregulated dopamine neurotransmission, particularly hyperactivity in mesolimbic pathways (causing positive symptoms) and hypoactivity in mesocortical pathways (causing negative and cognitive symptoms).
+Pathophysiology involves dysregulated dopamine neurotransmission, particularly hyperactivity in mesolimbic pathways (causing symptoms such as hallucinations and delusions (positive symptoms)) and hypoactivity in mesocortical pathways (causing loss of motivation and emotional expression (negative symptoms) and cognitive symptoms).
 Glutamate and serotonin dysregulation are also involved.
 
 ### Commonly used Pharmacodynamic (PD) Models
@@ -41,7 +41,7 @@ Indicators of disease progression include severity of positive and negative symp
 
 ### Key Clinical Biomarkers
 
-Diagnosis is primarily clinical, based on symptom presentation and patient history (DSM-5 criteria).
+Diagnosis is primarily clinical, based on symptom presentation and patient history (Diagnostic and Statistical Manual of Mental Disorders (DSM-5) criteria).
 Biomarkers are limited, but neuroimaging (MRI, PET) may show structural brain changes or altered dopamine receptor activity.
 No specific laboratory tests currently exist for schizophrenia diagnosis.
 
@@ -69,7 +69,7 @@ Antipsychotics sit in ATC [N05 Psycholeptics](../../../pharmacopeia/atc/n/n05/in
 
 Examples include Haloperidol (N05AD01), Chlorpromazine (N05AA01).
 
-**MoA:** Strong dopamine D2 receptor antagonism reduces positive symptoms but carries high risk of extrapyramidal side effects.
+**MoA:** Strong dopamine D2 receptor antagonism reduces positive symptoms but carries high risk of movement-disorder (extrapyramidal) side effects.
 
 #### Second-generation (atypical) antipsychotics *(current first-line treatment)*
 

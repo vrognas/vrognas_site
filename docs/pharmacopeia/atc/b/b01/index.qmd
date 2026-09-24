@@ -1,22 +1,55 @@
 ---
 title: "B01: Antithrombotic agents"
-description: "ATC B01 antithrombotic agents for modelers: delayed effect is the default; benefit-risk is asymmetric."
+description: "ATC B01 holds the antithrombotic agents, drugs that prevent or dissolve blood clots: anticoagulants, platelet inhibitors and clot-dissolving enzymes."
 date: "2026-02-08"
 ---
 
-**Delayed effect is the default.**
-Vitamin K antagonists suppress synthesis of clotting factors [@holford1986warfarin], and irreversible antiplatelet agents outlast the drug [@jiang2015clopidogrel], so effect follows the turnover of a protein or cell pool rather than plasma concentration.
-Turnover and indirect response models are the natural starting point [@dayneka1993indirect; @ooi2017joint].
+Antithrombotic agents either stop blood clots from forming, or dissolve clots that have already formed.
 
-**The exception worth knowing.**
-Direct oral anticoagulants inhibit an existing enzyme, so their effect on clotting assays tracks concentration with little delay and direct models are what is actually fitted [@mueck2014rivaroxaban; @stangier2007dabigatran; @parasrampuria2016edoxaban].
+## How do antithrombotics work?
 
-**Benefit-risk is asymmetric.**
-Exposure-response detects the bleeding limb far more reliably than the efficacy limb, which is often flat across the range studied [@nyberg2016edoxaban; @roshammar2017ticagrelor].
-Covariates that raise exposure (renal function, body size, age, P-glycoprotein and CYP3A inhibitors) move bleeding first, which is why dose-reduction criteria are written in exactly those terms [@terrier2022doacpopk; @lin2025fxaage].
+The group splits into three kinds of drug, each acting on a different part of clotting.
 
-**Mechanistic extrapolation.**
-QSP models of the coagulation network, built from literature kinetics, are well established for predicting how anticoagulants shift thrombin generation and INR, extrapolating efficacy and bleeding risk across doses [@wajimaComprehensiveModelHumoral2009; @burghausEvaluationEfficacySafety2011].
+**Anticoagulants** slow down the chain of enzyme reactions that forms a clot (coagulation cascade).
+
+* Warfarin (B01AA03), a vitamin K antagonist, suppresses the synthesis of clotting factors [@holford1986warfarin].
+* Heparins, such as heparin (B01AB01) and enoxaparin (B01AB05), act as cofactors for the body's own inhibitors of coagulation, antithrombin and heparin cofactor II [@freedmanPharmacodynamicsClinicalIndications1992].
+* The direct oral anticoagulants inhibit a single clotting enzyme directly.
+  Dabigatran etexilate (B01AE07) inhibits thrombin [@stangier2007dabigatran], and apixaban (B01AF02) inhibits factor Xa [@byon2019apixaban].
+
+**Platelet aggregation inhibitors** stop platelets from clumping together.
+Acetylsalicylic acid (aspirin, B01AC06) works by inhibiting the production of thromboxane A~2~ in platelets, while the P2Y~12~ antagonists, such as clopidogrel (B01AC04) and ticagrelor (B01AC24), dampen the platelets' response to adenosine diphosphate (ADP) [@warnerAntiplateletTherapyCyclooxygenase2011].
+
+**Enzymes** dissolve clots that have already formed.
+Alteplase (B01AD02) is tissue plasminogen activator, and tenecteplase (B01AD11) is a variant engineered from it [@tanswellPharmacokineticsPharmacodynamicsTenecteplase2002].
+
+## Efficacy
+
+For warfarin, the effect is measured with a coagulation test that gives continuous values, the prothrombin time [@holford1986warfarin].
+For apixaban, anti-factor Xa activity rises linearly with plasma concentration, and it changes more, and varies less, than traditional clotting tests such as the international normalized ratio (INR) [@byon2019apixaban].
+In an exposure-response analysis of ticagrelor in 20,942 patients with a prior heart attack (myocardial infarction), the hazard of cardiovascular death, myocardial infarction or stroke was related to individual ticagrelor exposure rather than dose [@roshammar2017ticagrelor].
+
+For warfarin, the effect follows the turnover of the clotting factors rather than the plasma concentration.
+The existing factors have to be cleared first, so at a constant warfarin concentration the effect takes about 3 days to stabilize.
+Models of warfarin therefore combine a pharmacodynamic model for the inhibition of clotting factor synthesis with a model for the synthesis and degradation of the clotting factors.
+An E~max~ model is preferred on theoretical grounds, but it has not clearly performed better than linear, log-linear or power models [@holford1986warfarin].
+A joint model of the vitamin K-dependent clotting factors and anticoagulation proteins linked an inhibitory E~max~ model to a turnover model for these proteins [@ooi2017joint].
+Clopidogrel binds the P2Y~12~ receptor irreversibly, so platelet reactivity recovers slowly and the effect outlasts the drug [@jiang2015clopidogrel].
+Indirect response models, in which the drug acts on the production or the loss of the response, describe effects that lag concentration in this way [@dayneka1993indirect].
+
+Dabigatran and apixaban behave differently.
+They inhibit their target enzyme directly, and their effect on clotting tests follows plasma concentration with little delay [@stangier2007dabigatran; @byon2019apixaban].
+
+## Safety
+
+For edoxaban in blood clots in the veins (venous thromboembolism), recurrence fell as concentration rose, but no significant exposure-response relationship was found for clinically relevant bleeding [@nyberg2016edoxaban].
+
+Higher plasma concentrations of the direct oral anticoagulants have been associated with more bleeding.
+In a systematic review of their population PK models, renal function was the main covariate on clearance for all four, while age and inhibitors of P-glycoprotein or CYP3A4/5 were found in fewer models, and body weight rarely [@terrier2022doacpopk].
+For ticagrelor after myocardial infarction, predicted efficacy was similar at 60 and 90 mg, while predicted major bleeding rose slightly [@roshammar2017ticagrelor].
+
+Heparins are associated with a low platelet count (thrombocytopenia) and with raised liver enzymes (transaminases).
+In a small subset of patients the thrombocytopenia is severe, and it generally resolves when the drug is withdrawn [@freedmanPharmacodynamicsClinicalIndications1992].
 
 ## References
 

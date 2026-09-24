@@ -1,56 +1,62 @@
 ---
 title: "C: Cardiovascular system"
-description: "ATC group C for modelers: blood pressure and LDL as continuous surrogates, indirect response models, counter-regulation, and baseline as a trap."
+description: "ATC group C covers the heart and blood vessels: drugs for heart failure and arrhythmias, blood pressure drugs, diuretics, and cholesterol lowering drugs."
 date: "2026-02-08"
 ---
 
-Drugs acting on the heart, the blood vessels and circulating lipids.
-The large classes are developed against continuous biomarkers, blood pressure and LDL cholesterol [@kim2017fimasartan; @jadhav2023bempedoic], which is what makes dense exposure-response work practical here.
-
-In July 1973, after screening thousands of fungal broths at Sankyo in Tokyo, Akira Endo isolated the first statin, ML-236B, from a *Penicillium citrinum* strain found on rice from a Kyoto grain shop [@endoHistoricalPerspectiveDiscovery2010].
+Group C holds the drugs that act on the heart and the blood vessels, together with the drugs that lower cholesterol and other lipids in the blood.
 
 |  | Description | In plain terms | Example drug |
 | ---: | :--- | :--- | :--- |
 | **C01** | Cardiac therapy | drugs acting directly on the heart | Amiodarone (C01BD01) / digoxin (C01AA05) |
-| **C02** | Antihypertensives |  | Methyldopa (C02AB01), still standard in pregnancy / doxazosin (C02CA04), add-on in resistant hypertension. Note most first-line antihypertensives now sit in C03, C07, C08 and C09, not here. |
+| **C02** | Antihypertensives |  | Methyldopa (C02AB01), doxazosin (C02CA04). Most other blood pressure drugs sit in C03, C07, C08 and C09. |
 | **C03** | Diuretics |  | Furosemide (C03CA01) / spironolactone (C03DA01) |
-| **C04** | Peripheral vasodilators | widen arteries in the arms and legs | Largely obsolete group; naftidrofuryl (C04AX21) is the only agent still guideline-recommended, for intermittent claudication. Pentoxifylline (C04AD03) is used but evidence is weak. |
-| **C05** | Vasoprotectives | for hemorrhoids, varicose veins, fragile capillaries | Symptomatic only, with no single agent to name. The commonest are topical hydrocortisone (C05AA01) for hemorrhoids and oral diosmin (C05CA03) for chronic venous disease. |
+| **C04** | Peripheral vasodilators | widen arteries in the arms and legs | Naftidrofuryl (C04AX21), pentoxifylline (C04AD03). |
+| **C05** | Vasoprotectives | for hemorrhoids, varicose veins, fragile capillaries | Topical hydrocortisone (C05AA01) for hemorrhoids; diosmin (C05CA03), a capillary stabilizing agent. |
 | **C07** | Beta blocking agents |  | Bisoprolol (C07AB07) / metoprolol (C07AB02) |
 | **C08** | Calcium channel blockers |  | Amlodipine (C08CA01) / diltiazem (C08DB01) |
-| **C09** | Agents acting on the renin-angiotensin system | blood-pressure hormone system: ACE inhibitors, ARBs | Ramipril (C09AA05) / candesartan (C09CA06) |
+| **C09** | Agents acting on the renin-angiotensin system | blood-pressure hormone system: angiotensin-converting enzyme (ACE) inhibitors, angiotensin receptor blockers (ARBs) | Ramipril (C09AA05) / candesartan (C09CA06) |
 | [**C10**](c10/) | Lipid modifying agents | cholesterol- and triglyceride-lowering drugs | Atorvastatin (C10AA05) / rosuvastatin (C10AA07) |
 
 : ATC C level 2 codes {#tbl-atc-c-lvl-2 tbl-colwidths="[9, 29, 26, 36]"}
 
-## Modeling notes
+## Blood pressure
 
-**Endpoint.**
-Continuous surrogates measured repeatedly: blood pressure, LDL cholesterol [@bdwg2001biomarkers; @liaigre2025surrogacy].
-Both lag plasma concentration, because the drug acts on the turnover of the measured quantity [@sharma1998indirect; @nicolas2019alirocumab].
+For the antihypertensives in C02, C03, C07, C08 and C09, efficacy is measured as the fall in blood pressure [@johnston1992doseresponse].
+Cardiovascular outcomes, such as stroke and heart attack (myocardial infarction), are clinical events, analyzed as time to event [@holfordTimeEventTutorial2013].
 
-**Typical structure.**
-Indirect response models [@dayneka1993indirect; @jusko1994physiologic], near-universal for LDL [@kakara2014; @faltaos2006] and common for blood pressure.
-Effect-compartment models only where the delay is genuinely short, as for the acute heart rate effect of a beta blocker [@francheteau1993; @belz1988].
+Blood pressure is a continuous measurement, and a monitor worn during daily life (ambulatory monitor) can repeat it many times over 24 hours.
+In a population analysis of moxonidine (C02AC05), the 24-hour profiles of one of its two studies held 74 to 99 measurements each.
+Two cosine terms described the circadian rhythm in the baseline, and this baseline model was combined with an E~max~ model for the drug effect, with an effect compartment for the delay [@hempel1998].
 
-**Counter-regulation (C02, C03, C09).**
-Baroreflex activation, renin release and renal sodium handling push back against blood pressure effects [@sica2007], which is why feedback and tolerance terms appear in antihypertensive models [@brynne2001].
+In patients with heart failure given moxonidine, the effects on systolic blood pressure and heart rate lagged behind the plasma concentration, and were also described with an effect compartment.
+The concentration giving half the maximal effect (EC~50~) rose over the 12 weeks of treatment [@brynne2001].
 
-**Baseline is the trap.**
-Blood pressure has a circadian rhythm, large measurement error and regression to the mean on enrolment [@hempel1998; @sumner1988], and placebo arms show genuine falls [@preston2000placebo; @patel2015placebo].
-How baseline is handled changes bias and precision in the estimated drug effect, and normalising each observation by its own baseline is the worst common option [@dansirikul2008; @sun1999].
+Francheteau and colleagues built a closed-loop model of cardiovascular regulation, in which a control variable representing mainly the pressure-sensing reflex of the arteries (baroreceptor reflex) responds to changes in mean arterial pressure.
+In it, the calcium channel blocker nicardipine (C08CA04) lowered the resistance of the blood vessels to flow (total peripheral resistance).
+Together with the feedback loop, this described the time course of both the blood flow pumped by the heart (cardiac output) and mean arterial pressure after intravenous infusion in healthy volunteers [@francheteau1993].
 
-**Covariates worth pre-specifying.**
-Renal function for diuretics and renally cleared renin-angiotensin agents [@hammarlund1989furosemide; @elungjensen2003enalapril], CYP2D6 for metoprolol and flecainide [@meloche2020cyp2d6; @thomas2020metoprolol], SLCO1B1 for statins [@turkmen2022slco1b1].
-A data-driven search is underpowered at realistic dataset sizes [@ribbing2004covariate; @sanghavi2024covariate].
+### Baseline and placebo
 
-**Safety.**
-A concentration-QTc analysis is expected under ICH E14 for essentially every new drug, as a separate pre-specified analysis [@garnett2018cqtc; @darpo2015iqcsrc] (see [C-QTc modeling](/docs/modeling/qt/)).
-Class-matched effects such as hypotension and bradycardia are exaggerated on-target pharmacology, and keep climbing after the efficacy curve flattens [@johnston1992doseresponse; @overgaard2015er].
+In 255 subjects given placebo or one of five types of antihypertensive drug, the fall in systolic blood pressure correlated with the initial blood pressure in every group.
+In the subset analyzed with concentration-effect models, the sensitivity to the drug also correlated with the initial blood pressure [@sumner1988].
 
-**Approval rests on the surrogate.**
-Approval often rests on the surrogate, with the outcome trial reporting years later [@sabatine2017fourier; @nissen2023clear].
-The pharmacometric job is linking biomarker change to event hazard [@holford2013tte; @zhudenkov2022joint], and handling the adherence and dropout endemic to chronic outpatient dosing [@vrijens2014adherence; @bjornsson2015dropout].
+Across the placebo arms of 52 trials in non-resistant hypertension, systolic blood pressure fell by 5.9 mm Hg.
+The fall was larger in trials with a higher baseline blood pressure [@patel2015placebo].
+
+## Dose finding
+
+Several antihypertensive drugs were introduced at doses that were too high, among them most thiazide diuretics, propranolol (C07AA05), atenolol (C07AB03) and captopril (C09AA01).
+These doses usually came from studies that raised the dose at regular intervals until the desired effect or unacceptable adverse effects appeared.
+The starting doses were often too high, and the intervals between dose steps too short.
+In many cases the high doses caused unnecessary adverse effects, such as the biochemical effects of thiazide diuretics, and taste disturbances and a shortage of neutrophil white blood cells (neutropenia) with captopril.
+Johnston recommended parallel-group designs with single doses, and with enough statistical power to separate the upper and lower ends of the dose-response curve [@johnston1992doseresponse].
+Good practices for exposure-response analyses of clinical endpoints, which support such dose decisions, are set out in a tutorial [@overgaardEstablishingGoodPractices2015].
+
+## Covariates
+
+For furosemide (C03CA01), a review compares pharmacokinetics and pharmacodynamics in health and in a range of diseases [@hammarlund1989furosemide].
+When covariates are selected stepwise and only the statistically significant ones are kept, the covariate model risks selection bias, and correlated covariates add to it and cost power [@ribbing2004covariate].
 
 ## References
 

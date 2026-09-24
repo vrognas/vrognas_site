@@ -1,35 +1,67 @@
 ---
 title: "R03: Drugs for obstructive airway diseases"
-description: "ATC R03 drugs for obstructive airway diseases for modelers: the dose splits before you model anything; plasma is a poor surrogate for local effect; isolating the lung dose."
+description: "ATC R03 holds drugs for asthma, COPD and other obstructive airway diseases: inhaled bronchodilators and steroids, and drugs taken by mouth or injected."
 date: "2026-02-08"
 ---
 
-**The dose splits before you model anything.**
-Part deposits in the lung and is absorbed without first pass; the **swallowed fraction** goes to the gut and is subject to it [@donnelly2001budesonide; @daleyyates2001bdp].
-Plasma concentration is the sum of two inputs with different rates and bioavailabilities [@borghardt2016olodaterol; @hochhaus2021fpdpi] (see [absorption](/docs/concepts/pk/1_absorption/)).
+R03 holds the drugs for asthma, chronic obstructive pulmonary disease (COPD) and other diseases that narrow the airways.
+WHO splits them into inhaled groups (R03A and R03B) and systemic groups (R03C and R03D).
 
-**Plasma is a poor surrogate for local effect.**
-It tracks systemic safety, adrenal suppression for corticosteroids and tremor for beta-2 agonists, far better than it tracks bronchodilation [@daleyyates2015ics; @whaleSystemicBronchodilatorEffects2008].
-Modern inhaled corticosteroids are designed to widen that gap through near-complete first-pass removal of the swallowed fraction [@daleyyates2015ics; @borghardt2015pharmacometric].
+In April 1955, Susie Maison asked her father George Maison, president of Riker Laboratories, why her asthma medicine could not come in a spray can like hair spray.
+Her question led to the development of the pressurized metered dose inhaler.
+The first two products were approved on 9 March 1956 [@steinHistoryTherapeuticAerosols2017].
 
-**Isolating the lung dose.**
-A charcoal block prevents gut absorption and is the established way to measure the pulmonary portion [@vanhaarstReviewDrugDevelopment2019; @chrystynMethodsIdentifyDrug2001].
-It is redundant for corticosteroids whose swallowed fraction is already non-bioavailable.
+## How do drugs for obstructive airway diseases work?
 
-**Endpoint.**
-FEV1, strongly baseline-dependent, so models use change from baseline with an explicit placebo component [@wu2011fev1lama; @yang2022mbmaasthma], plus a circadian term when spirometry is serial.
-Bronchodilator dose-response on FEV1 saturates early and is noisy [@blake2008albuterolpd], which is why methacholine challenge is used to separate closely spaced doses [@hendeles2015pdbioequivalence].
+**Bronchodilators** include the β~2~-agonists (R03AC), such as salbutamol (R03AC02) and formoterol (R03AC13), and the muscarinic antagonists (R03BB), such as tiotropium bromide (R03BB04).
+The long-acting forms of both relax human airway smooth muscle [@cazzolaDualBronchodilationTreatment2022].
+Muscarinic antagonists act against acetylcholine, which constricts airway smooth muscle through muscarinic M~3~ receptors [@lipworthEmergingRoleLong2014].
 
-**Corticosteroid effect is not concentration-driven.**
-It builds over repeated dosing, so the model needs a time-course component rather than a direct link [@back2020budesonideformoterol; @musuamba2015copdprogression].
-The registrational endpoint is often exacerbation rate, an over-dispersed count [@llanospaez2023jointmbma; @chia2019benralizumaber].
+**Inhaled corticosteroids** (R03BA), such as budesonide (R03BA02) and fluticasone (R03BA05), act against inflammation locally in the airways.
+Their topical anti-inflammatory activity is driven by binding to the glucocorticoid receptor [@daleyyates2015ics].
+Fixed combinations of a β~2~-agonist and a corticosteroid, such as formoterol and budesonide (R03AK07), are in R03AK.
 
-**Mechanistic extrapolation.**
-Lung PBPK is established here, predicting regional deposition, dissolution and local versus systemic exposure for inhaled drugs whose plasma levels cannot report airway concentration, and supporting inhaled bioequivalence [@bogerSystemsPharmacologyApproach2016; @millerPhysiologicallyBasedPharmacokinetic2021].
+**Monoclonal antibodies** in R03DX include mepolizumab (R03DX09), which binds interleukin-5 and keeps it from binding to its receptor on a type of white blood cell (eosinophils) [@smithPharmacokineticsPharmacodynamicsMepolizumab2011].
 
-**Device variability.**
-The device is a major source of exposure variability that oral and intravenous drugs do not have [@borghardt2015pharmacometric].
-The same molecule from different devices can differ roughly two-fold in pulmonary bioavailability [@usmani2017inhaledbe], and airway obstruction itself alters deposition, so the most obstructed patients may receive the least drug [@mortimer2006airflow; @borghardt2016olodaterolpatients].
+## Delivery to the lung
+
+Inhalation delivers a drug directly to the lung, which gives high concentrations there and low concentrations in the blood.
+Particles that deposit in the mouth and throat are swallowed, and the fraction that reaches the lung depends on particle size, inhalation flow, the device and the disease.
+In the conducting airways, the mucus moved by tiny beating hairs (mucociliary clearance) carries undissolved particles up to the throat, where they are also swallowed.
+Dissolved drug is absorbed quickly from the air sacs (alveoli) and slowly from the conducting airways.
+In asthma and COPD, deposition is more central, and the pulmonary absorption of olodaterol (R03AC19) was slower in patients than in healthy volunteers [@borghardt2018pulmkinetics].
+
+How much of the swallowed part reaches the blood depends on the molecule: fluticasone propionate, fluticasone furoate (R03BA09), mometasone furoate (R03BA07) and ciclesonide (R03BA08) have high first-pass metabolism and negligible oral bioavailability, while budesonide and beclometasone dipropionate (R03BA01) have significant oral bioavailability [@daleyyates2015ics].
+
+Published pharmacokinetic models of inhaled drugs range from physiologically based models of these pulmonary processes to empirical models derived from clinical data, and relating plasma pharmacokinetics to the effect in the lung remains a challenge [@borghardt2015pharmacometric].
+
+In the EU, bioequivalence of inhaled products is shown stepwise: in vitro comparisons first, then pharmacokinetic studies of lung and systemic bioavailability, and clinical endpoint studies only if those criteria are not met.
+Pharmacokinetic studies are more sensitive than clinical endpoint studies to small differences in deposition and absorption [@usmani2017inhaledbe].
+
+## Efficacy
+
+### Lung function and exacerbations
+
+COPD trials record lung function as trough FEV~1~, the forced expiratory volume in the first second, which is continuous, and count flare-ups (exacerbations), which they report as an annual rate.
+In a model-based meta-analysis of 298 such trials, FEV~1~ was described with a baseline, a linear disease progression of about 32 mL per year, a placebo effect, and drug effects with an E~max~ dose-response where the data allowed.
+The same analysis linked the drug effects on FEV~1~ to the annual rate of moderate or severe exacerbations [@llanospaez2023jointmbma].
+A population model has also predicted disease progression, treatment response and dropout together in COPD [@musuamba2015copdprogression].
+When counts vary more than a Poisson model allows, which is called overdispersion, the negative binomial model is the main alternative [@planModelingSimulationCount2014].
+
+### Eosinophils
+
+For mepolizumab, the fall in blood eosinophil count was described with an indirect response model, with a maximal decrease of about 85% from baseline and a half-maximal inhibitory concentration of about 0.45 µg/mL [@smithPharmacokineticsPharmacodynamicsMepolizumab2011].
+
+## Safety
+
+The class-related adverse effects of inhaled corticosteroids include hoarseness, a yeast infection (candidiasis) of the mouth and throat, reduced cortisol production by the adrenal glands (adrenal suppression), growth retardation in children, decreased bone mineral density, cataract, glaucoma and, in COPD, pneumonia.
+Suppression of cortisol secretion is the most sensitive and easily monitored biomarker of their systemic effects.
+One way to express their therapeutic index is the daily dose that suppresses cortisol by 20%, divided by the therapeutic dose.
+Their systemic exposure is lower in more severe asthma, when lung function is lower [@daleyyates2015ics].
+In a meta-analysis of corticosteroid users with asthma, too little cortisol from the adrenal glands (adrenal insufficiency) became more common with higher doses (from 2.4% at low to 21.5% at high doses) and with longer use (from 1.4% under 28 days to 27.4% over a year) [@broersen2015adrenal].
+
+Both long-acting β~2~-agonists and long-acting muscarinic antagonists can affect the cardiovascular system.
+Their fixed-dose combinations have had an acceptable cardiovascular safety profile in the COPD populations of randomized trials [@cazzolaDualBronchodilationTreatment2022].
 
 ## References
 

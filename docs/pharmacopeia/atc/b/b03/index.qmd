@@ -1,12 +1,39 @@
 ---
 title: "B03: Antianemic preparations"
-description: "ATC B03 antianemic preparations for modelers: longest delays in the group."
+description: "ATC B03 holds treatments for anemia, a shortage of red blood cells: iron, vitamin B12 and folic acid, and drugs that boost red blood cell production."
 date: "2026-02-08"
 ---
 
-**Longest delays in the group.**
-Erythropoiesis-stimulating agents act on precursors, so hemoglobin is separated from exposure by maturation and red cell lifespan [@uehlinger1992epo; @ramakrishnan2004epo].
-Lifespan models with an explicit endogenous baseline and feedback are standard [@krzyzanski2008lifespan; @olssongisleskog2007epo].
+Antianemic preparations treat anemia, a shortage of red blood cells or hemoglobin.
+The group holds iron preparations (B03A), vitamin B12 and folic acid (B03B), and other antianemic preparations (B03X), which include the erythropoiesis-stimulating agents [@whoccATCDDDIndex2026].
+
+## How do antianemic preparations work?
+
+**Iron preparations** treat iron deficiency, given by mouth, as with ferrous sulfate (B03AA07), or intravenously, as with ferric carboxymaltose (group B03AC) [@tolkienFerrousSulfateSupplementation2015; @schaeferHypophosphataemiaTreatmentIron2021].
+
+**Erythropoiesis-stimulating agents (ESAs)** are recombinant forms or analogues of erythropoietin, such as epoetin alfa (erythropoietin, B03XA01) and darbepoetin alfa (B03XA02).
+They bind to and activate the erythropoietin receptor, and stimulate red blood cell production in the bone marrow [@maharModelInformedDrug2026].
+
+**HIF prolyl hydroxylase inhibitors**, such as daprodustat (B03XA07), are oral drugs that act further upstream.
+Inhibiting the prolyl hydroxylases lets hypoxia-inducible factor (HIF) build up, which increases the expression of erythropoietin and of genes for iron metabolism and use [@maharModelInformedDrug2026].
+
+## Efficacy
+
+For the ESAs and the HIF prolyl hydroxylase inhibitors, the efficacy endpoint is the hemoglobin concentration, a continuous value on which the dose is titrated.
+The hemoglobin response lags behind the drug, because immature red blood cells (reticulocytes) must first be produced and mature into red blood cells, and the long red cell lifespan makes effects lag and persist after a dose change, so turnover models are needed to describe it.
+In lifespan-based indirect response models, cells are produced at a constant rate, survive for a set lifespan and are then lost, and a drug can change that lifespan [@krzyzanski2008lifespan].
+For daprodustat, whose half-life is 1 to 4 hours while the hemoglobin response takes weeks to months, a longitudinal dose-hemoglobin model used 12 transit compartments for red cell production and lifespan, and estimated the lifespan at 82 days in patients with chronic kidney disease.
+This model, together with population PK and clinical trial simulations, guided the phase III dose selection and individualized dosing [@maharModelInformedDrug2026].
+
+## Safety
+
+The dose is titrated to keep hemoglobin in a narrow target range, 10 to 11.5 g/dL in the Kidney Disease: Improving Global Outcomes (KDIGO) guideline, and in the daprodustat phase III program a hemoglobin above the range was a safety endpoint [@maharModelInformedDrug2026].
+
+In a trial in 4038 patients with type 2 diabetes, chronic kidney disease and anemia, darbepoetin alfa given to reach a hemoglobin of about 13 g/dL did not reduce the risk of death or a cardiovascular event, or of death or end-stage renal disease, compared with placebo.
+It nearly doubled the risk of stroke, with a hazard ratio of 1.92 [@pfefferTrialDarbepoetinAlfa2009].
+
+Oral ferrous sulfate increased gastrointestinal side effects compared with placebo, with an odds ratio of 2.32 across 20 placebo-controlled trials [@tolkienFerrousSulfateSupplementation2015].
+Across 42 trials, low blood phosphate (hypophosphatemia) occurred in 47% of patients after intravenous ferric carboxymaltose and in 4% after iron isomaltoside (group B03AC) [@schaeferHypophosphataemiaTreatmentIron2021].
 
 ## References
 
